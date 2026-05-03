@@ -1,0 +1,56 @@
+{
+  "personId": "john_harper",
+  "personName": "John Harper",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "dublin-fulton-pennsylvania-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "dublin-fulton-pennsylvania",
+      "badge": "Birth Place",
+      "name": "Dublin, Fulton, Pennsylvania",
+      "relevance": "",
+      "featured": true,
+      "lat": 40.058446,
+      "lng": -77.9443328,
+      "wikimedia": {
+        "fileTitle": "File:1940 Census Enumeration District Maps - Pennsylvania - Fulton County - Dublin - ED 29-5 - NARA - 5837529.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/1940_Census_Enumeration_District_Maps_-_Pennsylvania_-_Fulton_County_-_Dublin_-_ED_29-5_-_NARA_-_5837529.jpg/960px-1940_Census_Enumeration_District_Maps_-_Pennsylvania_-_Fulton_County_-_Dublin_-_ED_29-5_-_NARA_-_5837529.jpg",
+        "attribution": "Unknown authorUnknown author or not provided",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=40.058446,-77.9443328",
+        "embedUrl": "https://maps.google.com/maps?q=40.058446,-77.9443328&z=12&output=embed"
+      },
+      "year": "1690"
+    },
+    {
+      "id": "lancaster-pennsylvania-death",
+      "type": "town",
+      "canonicalPlaceId": "lancaster-pennsylvania",
+      "badge": "Death",
+      "name": "Lancaster, Pennsylvania",
+      "relevance": "",
+      "featured": false,
+      "lat": 40.0379958,
+      "lng": -76.3056707,
+      "wikipedia": {
+        "title": "Lancaster, Pennsylvania",
+        "url": "https://en.wikipedia.org/wiki/Lancaster%2C_Pennsylvania",
+        "summary": "Lancaster is a city in Lancaster County, Pennsylvania, United States, and its county seat. With a population of 58,039 at the 2020 census, it is the eighth-most populous city in the state. It is a core city within South Central Pennsylvania, with 552,984 residents in the Lancaster metropolitan area."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Lancaster Pennsylvania downtown.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Lancaster_Pennsylvania_downtown.jpg/960px-Lancaster_Pennsylvania_downtown.jpg",
+        "attribution": "Randolph Carney",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=40.0379958,-76.3056707",
+        "embedUrl": "https://maps.google.com/maps?q=40.0379958,-76.3056707&z=12&output=embed"
+      },
+      "year": "1775"
+    }
+  ]
+}

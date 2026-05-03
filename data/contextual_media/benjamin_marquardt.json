@@ -1,0 +1,34 @@
+{
+  "personId": "benjamin_marquardt",
+  "personName": "Benjamin Marquardt",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "wurtemberg-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "wurtemberg",
+      "badge": "Birth Place",
+      "name": "Wurtemberg",
+      "relevance": "",
+      "featured": true,
+      "lat": 48.53775,
+      "lng": 9.041169,
+      "wikipedia": {
+        "title": "W\u00fcrttemberg",
+        "url": "https://en.wikipedia.org/wiki/W%C3%BCrttemberg",
+        "summary": "W\u00fcrttemberg is a historical German territory roughly corresponding to the cultural and linguistic region of Swabia. The main town of the region is Stuttgart."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Wurtemberg commander cross.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Wurtemberg_commander_cross.jpg/960px-Wurtemberg_commander_cross.jpg",
+        "attribution": "Le.monde.de.pierrefonds",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=48.53775,9.041169",
+        "embedUrl": "https://maps.google.com/maps?q=48.53775,9.041169&z=12&output=embed"
+      },
+      "year": "1840"
+    }
+  ]
+}

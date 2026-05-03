@@ -1,0 +1,51 @@
+{
+  "personId": "rena_gage",
+  "personName": "Rena V Gage",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "silver-creek-township-cass-michigan-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "silver-creek-township-cass-michigan",
+      "badge": "Birth Place",
+      "name": "Silver Creek Township, Cass, Michigan",
+      "relevance": "",
+      "featured": true,
+      "lat": 42.0346134,
+      "lng": -86.1652296,
+      "wikimedia": {
+        "fileTitle": "File:Silver Creek Township, MI location.png",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Silver_Creek_Township%2C_MI_location.png/960px-Silver_Creek_Township%2C_MI_location.png",
+        "attribution": "Notorious4life (talk) (Uploads)",
+        "license": "CC0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=42.0346134,-86.1652296",
+        "embedUrl": "https://maps.google.com/maps?q=42.0346134,-86.1652296&z=12&output=embed"
+      },
+      "year": "1860"
+    },
+    {
+      "id": "hartford-township-van-buren-michigan-death",
+      "type": "town",
+      "canonicalPlaceId": "hartford-township-van-buren-michigan",
+      "badge": "Death",
+      "name": "Hartford Township, Van Buren, Michigan",
+      "relevance": "",
+      "featured": false,
+      "lat": 42.200532,
+      "lng": -86.1326889,
+      "wikimedia": {
+        "fileTitle": "File:Van Buren County Michigan 1906 Hartford Township.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Van_Buren_County_Michigan_1906_Hartford_Township.jpg/960px-Van_Buren_County_Michigan_1906_Hartford_Township.jpg",
+        "attribution": "Compiled from official records and local inspection by W.H. Goss, County Surveyor. Drawn by M.K. Orton.",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=42.200532,-86.1326889",
+        "embedUrl": "https://maps.google.com/maps?q=42.200532,-86.1326889&z=12&output=embed"
+      },
+      "year": "1941"
+    }
+  ]
+}

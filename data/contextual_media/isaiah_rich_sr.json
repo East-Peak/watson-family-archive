@@ -1,0 +1,51 @@
+{
+  "personId": "isaiah_rich_sr",
+  "personName": "Isaiah Rich Sr.",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "bucks-pennsylvania-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "bucks-pennsylvania",
+      "badge": "Birth Place",
+      "name": "Bucks, Pennsylvania",
+      "relevance": "",
+      "featured": true,
+      "lat": 40.3451668,
+      "lng": -75.1263909,
+      "wikimedia": {
+        "fileTitle": "File:Old Bucks County, Pennsylvania, Courthouse 1906.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Old_Bucks_County%2C_Pennsylvania%2C_Courthouse_1906.jpg/960px-Old_Bucks_County%2C_Pennsylvania%2C_Courthouse_1906.jpg",
+        "attribution": "Unknown authorUnknown author",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=40.3451668,-75.1263909",
+        "embedUrl": "https://maps.google.com/maps?q=40.3451668,-75.1263909&z=12&output=embed"
+      },
+      "year": "1737"
+    },
+    {
+      "id": "henry-kentucky-death",
+      "type": "town",
+      "canonicalPlaceId": "henry-kentucky",
+      "badge": "Death",
+      "name": "Henry, Kentucky",
+      "relevance": "",
+      "featured": false,
+      "lat": 38.447983,
+      "lng": -85.1191168,
+      "wikimedia": {
+        "fileTitle": "File:Henry County, Kentucky courthouse.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Henry_County%2C_Kentucky_courthouse.jpg/960px-Henry_County%2C_Kentucky_courthouse.jpg",
+        "attribution": "W.marsh",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=38.447983,-85.1191168",
+        "embedUrl": "https://maps.google.com/maps?q=38.447983,-85.1191168&z=12&output=embed"
+      },
+      "year": "1798"
+    }
+  ]
+}

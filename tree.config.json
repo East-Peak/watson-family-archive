@@ -1,0 +1,16 @@
+{
+  "tree": {
+    "name": "Watson Family Tree",
+    "rootPerson": "john_stuart_watson",
+    "id": "family-tree"
+  },
+  "paths": {
+    "nodesDir": "data/verified_nodes",
+    "placesFile": "data/places.json",
+    "placeAliasesFile": "data/place-aliases.json",
+    "contextualMediaDir": "data/contextual_media",
+    "activityFeedFile": "data/activity_feed.json",
+    "recordsDir": "data/records",
+    "enrichmentAuditFile": "data/enrichment_audit.json"
+  }
+}

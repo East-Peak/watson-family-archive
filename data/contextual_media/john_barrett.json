@@ -1,0 +1,110 @@
+{
+  "personId": "john_barrett",
+  "personName": "John Foly Barrett",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "england-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "england",
+      "badge": "Birth Place",
+      "name": "England",
+      "relevance": "",
+      "featured": true,
+      "lat": 52.5310214,
+      "lng": -1.2649062,
+      "wikipedia": {
+        "title": "England",
+        "url": "https://en.wikipedia.org/wiki/England",
+        "summary": "England is a country that is part of the United Kingdom. It is located on the island of Great Britain, of which it covers about 62%, and more than 100 smaller adjacent islands. England shares a land border with Scotland to the north and another land border with Wales to the west, and is surrounded b"
+      },
+      "wikimedia": {
+        "fileTitle": "File:England satellite image.png",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b1/England_satellite_image.png",
+        "attribution": "Jacques Descloitres, MODIS Land Rapid Response Team, NASA/GSFC",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=52.5310214,-1.2649062",
+        "embedUrl": "https://maps.google.com/maps?q=52.5310214,-1.2649062&z=12&output=embed"
+      },
+      "year": "1880"
+    },
+    {
+      "id": "new-bedford-ma-death",
+      "type": "town",
+      "canonicalPlaceId": "new-bedford-ma",
+      "badge": "Death",
+      "name": "New Bedford, MA",
+      "relevance": "",
+      "featured": false,
+      "lat": 41.6362152,
+      "lng": -70.934205,
+      "wikipedia": {
+        "title": "New Bedford, Massachusetts",
+        "url": "https://en.wikipedia.org/wiki/New_Bedford%2C_Massachusetts",
+        "summary": "New Bedford is a city in Bristol County, Massachusetts, United States. It is located on the Acushnet River in what is known as the South Coast region, abutting Buzzards Bay. At the 2020 census, New Bedford had a population of 101,079, making it the state's ninth-largest city and the largest of the S"
+      },
+      "wikimedia": {
+        "fileTitle": "File:New Bedford, Massachusetts-view from harbor.jpeg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fc/New_Bedford%2C_Massachusetts-view_from_harbor.jpeg",
+        "attribution": "C. Pesch; original uploader was Kevin Saff at en.wikipedia",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=41.6362152,-70.934205",
+        "embedUrl": "https://maps.google.com/maps?q=41.6362152,-70.934205&z=12&output=embed"
+      },
+      "year": "1970"
+    },
+    {
+      "id": "ramsbottom-lancashire-residence",
+      "type": "town",
+      "canonicalPlaceId": "ramsbottom-lancashire",
+      "badge": "Residence",
+      "name": "Ramsbottom, Lancashire",
+      "relevance": "",
+      "featured": false,
+      "lat": 53.7851173,
+      "lng": -2.3932308,
+      "wikimedia": {
+        "fileTitle": "File:Kay Brow, Ramsbottom, Lancashire - geograph.org.uk - 2478629.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Kay_Brow%2C_Ramsbottom%2C_Lancashire_-_geograph.org.uk_-_2478629.jpg/960px-Kay_Brow%2C_Ramsbottom%2C_Lancashire_-_geograph.org.uk_-_2478629.jpg",
+        "attribution": "Robert Wade",
+        "license": "CC BY-SA 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=53.7851173,-2.3932308",
+        "embedUrl": "https://maps.google.com/maps?q=53.7851173,-2.3932308&z=12&output=embed"
+      },
+      "year": "1901"
+    },
+    {
+      "id": "massachusetts-residence",
+      "type": "town",
+      "canonicalPlaceId": "massachusetts",
+      "badge": "Residence",
+      "name": "Massachusetts",
+      "relevance": "",
+      "featured": false,
+      "lat": 42.3788774,
+      "lng": -72.032366,
+      "wikipedia": {
+        "title": "Massachusetts",
+        "url": "https://en.wikipedia.org/wiki/Massachusetts",
+        "summary": "Massachusetts, officially the Commonwealth of Massachusetts, is a state in the New England region of the Northeastern United States. It borders the Atlantic Ocean and the Gulf of Maine to its east, Connecticut and Rhode Island to its south, New Hampshire and Vermont to its north, and New York to its"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Harvard Yard in autumn, Boston, Massachusetts, 2015.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Harvard_Yard_in_autumn%2C_Boston%2C_Massachusetts%2C_2015.jpg/960px-Harvard_Yard_in_autumn%2C_Boston%2C_Massachusetts%2C_2015.jpg",
+        "attribution": "Nina R from Africa",
+        "license": "CC BY 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=42.3788774,-72.032366",
+        "embedUrl": "https://maps.google.com/maps?q=42.3788774,-72.032366&z=12&output=embed"
+      },
+      "year": "1916"
+    }
+  ]
+}

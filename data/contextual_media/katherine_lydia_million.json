@@ -1,0 +1,56 @@
+{
+  "personId": "katherine_lydia_million",
+  "personName": "Katherine Lydia Million",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "caernarfonshire-wales-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "caernarfonshire-wales",
+      "badge": "Birth Place",
+      "name": "Caernarfonshire, Wales",
+      "relevance": "",
+      "featured": true,
+      "lat": 53.2907066,
+      "lng": -3.8430032,
+      "wikimedia": {
+        "fileTitle": "File:Water-driven woollen mill near Pen-y-groes, Caernarfonshire (1483250).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Water-driven_woollen_mill_near_Pen-y-groes%2C_Caernarfonshire_%281483250%29.jpg/960px-Water-driven_woollen_mill_near_Pen-y-groes%2C_Caernarfonshire_%281483250%29.jpg",
+        "attribution": "Geoff Charles",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=53.2907066,-3.8430032",
+        "embedUrl": "https://maps.google.com/maps?q=53.2907066,-3.8430032&z=12&output=embed"
+      },
+      "year": "1610"
+    },
+    {
+      "id": "middlesex-death",
+      "type": "town",
+      "canonicalPlaceId": "middlesex",
+      "badge": "Death",
+      "name": "Middlesex",
+      "relevance": "",
+      "featured": false,
+      "lat": 51.5460558,
+      "lng": -0.2537791,
+      "wikipedia": {
+        "title": "Middlesex",
+        "url": "https://en.wikipedia.org/wiki/Middlesex",
+        "summary": "Middlesex is one of the historic counties of England. It ceased to be an administrative county in 1965 following the passing of the London Government Act 1963. The historic county boundaries largely follow three rivers: the Thames in the south, the Lea to the east and the Colne to the west, with a l"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Middlesex-Morden-1695.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Middlesex-Morden-1695.jpg/960px-Middlesex-Morden-1695.jpg",
+        "attribution": "Robert Morden",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=51.5460558,-0.2537791",
+        "embedUrl": "https://maps.google.com/maps?q=51.5460558,-0.2537791&z=12&output=embed"
+      },
+      "year": "1643"
+    }
+  ]
+}

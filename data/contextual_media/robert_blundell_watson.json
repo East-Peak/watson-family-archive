@@ -1,0 +1,56 @@
+{
+  "personId": "robert_blundell_watson",
+  "personName": "Robert Blundell Watson",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "cleveland-cuyahoga-ohio-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "cleveland-cuyahoga-ohio",
+      "badge": "Birth Place",
+      "name": "Cleveland, Cuyahoga, Ohio",
+      "relevance": "",
+      "featured": true,
+      "lat": 41.4996574,
+      "lng": -81.6936772,
+      "wikipedia": {
+        "title": "Cleveland",
+        "url": "https://en.wikipedia.org/wiki/Cleveland",
+        "summary": "Cleveland is a city in the U.S. state of Ohio and the county seat of Cuyahoga County. Located along the southern shore of Lake Erie, it is situated across the lake from Ontario, Canada, and is approximately 60 miles west of the Ohio\u2013Pennsylvania state line. Cleveland is the most populous city on Lak"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Cleveland Population, 1940-2020.png",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Cleveland_Population%2C_1940-2020.png/960px-Cleveland_Population%2C_1940-2020.png",
+        "attribution": "SamuelSThomas",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=41.4996574,-81.6936772",
+        "embedUrl": "https://maps.google.com/maps?q=41.4996574,-81.6936772&z=12&output=embed"
+      },
+      "year": "1898"
+    },
+    {
+      "id": "upper-darby-delaware-county-pennsylvania-death",
+      "type": "town",
+      "canonicalPlaceId": "upper-darby-delaware-county-pennsylvania",
+      "badge": "Death",
+      "name": "Upper Darby, Delaware County, Pennsylvania",
+      "relevance": "",
+      "featured": false,
+      "lat": 39.9284459,
+      "lng": -75.2737955,
+      "wikimedia": {
+        "fileTitle": "File:Upper darby, Delaware County, Pennsylvania.png",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Upper_darby%2C_Delaware_County%2C_Pennsylvania.png",
+        "attribution": "originally US census bureau, modified by Ram-Man, modified again by Astrokey44 to make this locator.",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=39.9284459,-75.2737955",
+        "embedUrl": "https://maps.google.com/maps?q=39.9284459,-75.2737955&z=12&output=embed"
+      },
+      "year": "1975"
+    }
+  ]
+}

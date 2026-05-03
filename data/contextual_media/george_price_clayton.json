@@ -1,0 +1,34 @@
+{
+  "personId": "george_price_clayton",
+  "personName": "George Price Clayton Sr.",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "pendleton-kentucky-marriage",
+      "type": "building",
+      "canonicalPlaceId": "pendleton-kentucky",
+      "badge": "Marriage",
+      "name": "Pendleton, Kentucky",
+      "relevance": "",
+      "featured": true,
+      "lat": 38.6914606,
+      "lng": -84.3689142,
+      "wikipedia": {
+        "title": "Pendleton, Kentucky",
+        "url": "https://en.wikipedia.org/wiki/Pendleton%2C_Kentucky",
+        "summary": "Pendleton is an unincorporated community in Henry County, Kentucky, United States. The community is located along Kentucky Route 153 7.5 miles (12.1\u00a0km) west-northwest of New Castle. Pendleton has a post office with ZIP code 40055."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Pendleton County, Kentucky Courthouse.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Pendleton_County%2C_Kentucky_Courthouse.jpg",
+        "attribution": "W.marsh",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=38.6914606,-84.3689142",
+        "embedUrl": "https://maps.google.com/maps?q=38.6914606,-84.3689142&z=12&output=embed"
+      },
+      "year": "1822"
+    }
+  ]
+}

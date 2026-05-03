@@ -1,0 +1,61 @@
+{
+  "personId": "ralph_campbell",
+  "personName": "Ralph Campbell",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "south-carolina-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "south-carolina",
+      "badge": "Birth Place",
+      "name": "South Carolina",
+      "relevance": "",
+      "featured": true,
+      "lat": 33.6874388,
+      "lng": -80.4363743,
+      "wikipedia": {
+        "title": "South Carolina",
+        "url": "https://en.wikipedia.org/wiki/South_Carolina",
+        "summary": "South Carolina is a state in the Southeastern, South Atlantic and Deep South regions of the United States. It borders North Carolina to the north and northeast, the Atlantic Ocean to the southeast, and Georgia to the west and south across the Savannah River. Along with North Carolina, it makes up th"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Greetings from South Carolina 01.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Greetings_from_South_Carolina_01.jpg/960px-Greetings_from_South_Carolina_01.jpg",
+        "attribution": "Tichnor Brothers, Inc., Boston",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=33.6874388,-80.4363743",
+        "embedUrl": "https://maps.google.com/maps?q=33.6874388,-80.4363743&z=12&output=embed"
+      },
+      "year": "1770"
+    },
+    {
+      "id": "montgomery-indiana-death",
+      "type": "town",
+      "canonicalPlaceId": "montgomery-indiana",
+      "badge": "Death",
+      "name": "Montgomery, Indiana",
+      "relevance": "",
+      "featured": false,
+      "lat": 40.0361447,
+      "lng": -86.9007083,
+      "wikipedia": {
+        "title": "Montgomery, Indiana",
+        "url": "https://en.wikipedia.org/wiki/Montgomery%2C_Indiana",
+        "summary": "Montgomery is a town in Barr Township, Daviess County, Indiana, United States. The population was 792 at the 2020 census."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Montgomery Indiana Catholic church.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Montgomery_Indiana_Catholic_church.jpg/960px-Montgomery_Indiana_Catholic_church.jpg",
+        "attribution": "Charles Edward",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=40.0361447,-86.9007083",
+        "embedUrl": "https://maps.google.com/maps?q=40.0361447,-86.9007083&z=12&output=embed"
+      },
+      "year": "1841"
+    }
+  ]
+}

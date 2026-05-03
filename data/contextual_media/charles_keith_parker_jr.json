@@ -1,0 +1,61 @@
+{
+  "personId": "charles_keith_parker_jr",
+  "personName": "Charles Keith Parker Jr.",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "richmond-california-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "richmond-california",
+      "badge": "Birth Place",
+      "name": "Richmond, California",
+      "relevance": "",
+      "featured": true,
+      "lat": 37.9357576,
+      "lng": -122.347748,
+      "wikipedia": {
+        "title": "Richmond, California",
+        "url": "https://en.wikipedia.org/wiki/Richmond%2C_California",
+        "summary": "Richmond is a city in western Contra Costa County, California, United States. The city was incorporated on August 3, 1905, and has a city council. Located in the San Francisco Bay Area's East Bay region, Richmond borders San Pablo, Albany, El Cerrito and Pinole in addition to the unincorporated comm"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Richmond California aerial view with bridge.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Richmond_California_aerial_view_with_bridge.jpg/960px-Richmond_California_aerial_view_with_bridge.jpg",
+        "attribution": "U.S. Army Corps of Engineers, photographer not specified or unknown",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=37.9357576,-122.347748",
+        "embedUrl": "https://maps.google.com/maps?q=37.9357576,-122.347748&z=12&output=embed"
+      },
+      "year": "1921"
+    },
+    {
+      "id": "berkeley-ca-death",
+      "type": "town",
+      "canonicalPlaceId": "berkeley-ca",
+      "badge": "Death",
+      "name": "Berkeley, CA",
+      "relevance": "",
+      "featured": false,
+      "lat": 37.8708393,
+      "lng": -122.272863,
+      "wikipedia": {
+        "title": "Berkeley, California",
+        "url": "https://en.wikipedia.org/wiki/Berkeley%2C_California",
+        "summary": "Berkeley is a city on the eastern shore of San Francisco Bay in northern Alameda County, California, United States. It is named after the 18th-century Anglo-Irish bishop and philosopher George Berkeley. It borders the cities of Oakland and Emeryville to the south and the city of Albany and the uninc"
+      },
+      "wikimedia": {
+        "fileTitle": "File:3009. HEARST HALL UNIVERSITY OF CALIFORNIA BERKELEY CALIFORNIA (23603966761).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/3009._HEARST_HALL_UNIVERSITY_OF_CALIFORNIA_BERKELEY_CALIFORNIA_%2823603966761%29.jpg/960px-3009._HEARST_HALL_UNIVERSITY_OF_CALIFORNIA_BERKELEY_CALIFORNIA_%2823603966761%29.jpg",
+        "attribution": "Britton and Rey, Lithographers, San Francisco, CA",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=37.8708393,-122.272863",
+        "embedUrl": "https://maps.google.com/maps?q=37.8708393,-122.272863&z=12&output=embed"
+      },
+      "year": "1996"
+    }
+  ]
+}

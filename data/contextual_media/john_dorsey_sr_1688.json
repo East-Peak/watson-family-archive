@@ -1,0 +1,51 @@
+{
+  "personId": "john_dorsey_sr_1688",
+  "personName": "John Dorsey Sr.",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "anne-arundel-md-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "anne-arundel-md",
+      "badge": "Birth Place",
+      "name": "Anne Arundel, MD",
+      "relevance": "",
+      "featured": true,
+      "lat": 38.9722583,
+      "lng": -76.573454,
+      "wikimedia": {
+        "fileTitle": "File:PRIMROSE HILL, ANNAPOLIS, ANNE ARUNDEL COUNTY, MD.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/PRIMROSE_HILL%2C_ANNAPOLIS%2C_ANNE_ARUNDEL_COUNTY%2C_MD.jpg/960px-PRIMROSE_HILL%2C_ANNAPOLIS%2C_ANNE_ARUNDEL_COUNTY%2C_MD.jpg",
+        "attribution": "JERRYE &amp; ROY KLOTZ, M.D.",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=38.9722583,-76.573454",
+        "embedUrl": "https://maps.google.com/maps?q=38.9722583,-76.573454&z=12&output=embed"
+      },
+      "year": "1688"
+    },
+    {
+      "id": "annapolis-anne-arundel-maryland-marriage",
+      "type": "building",
+      "canonicalPlaceId": "annapolis-anne-arundel-maryland",
+      "badge": "Marriage",
+      "name": "Annapolis, Anne Arundel, Maryland",
+      "relevance": "",
+      "featured": false,
+      "lat": 38.9786401,
+      "lng": -76.492786,
+      "wikimedia": {
+        "fileTitle": "File:Whitehall, Saint Margarets Road, Annapolis (Anne Arundel County, Maryland).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Whitehall%2C_Saint_Margarets_Road%2C_Annapolis_%28Anne_Arundel_County%2C_Maryland%29.jpg",
+        "attribution": "E. H. Pickering, Photographer",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=38.9786401,-76.492786",
+        "embedUrl": "https://maps.google.com/maps?q=38.9786401,-76.492786&z=12&output=embed"
+      },
+      "year": "1708"
+    }
+  ]
+}

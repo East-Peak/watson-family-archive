@@ -1,0 +1,115 @@
+{
+  "personId": "joseph_c_meadows",
+  "personName": "Joseph Carl Meadows",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "sedan-kansas-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "sedan-kansas",
+      "badge": "Birth Place",
+      "name": "Sedan, Kansas",
+      "relevance": "",
+      "featured": true,
+      "lat": 37.1267196,
+      "lng": -96.1869361,
+      "wikipedia": {
+        "title": "Sedan, Kansas",
+        "url": "https://en.wikipedia.org/wiki/Sedan%2C_Kansas",
+        "summary": "Sedan is the county seat of and the largest city in Chautauqua County, Kansas, United States. As of the 2020 census, the population of the city was 1,000."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Sedan, Kansas.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Sedan%2C_Kansas.jpg/960px-Sedan%2C_Kansas.jpg",
+        "attribution": "Michael Adams",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=37.1267196,-96.1869361",
+        "embedUrl": "https://maps.google.com/maps?q=37.1267196,-96.1869361&z=12&output=embed"
+      },
+      "year": "1889"
+    },
+    {
+      "id": "cowley-kansas-death",
+      "type": "town",
+      "canonicalPlaceId": "cowley-kansas",
+      "badge": "Death",
+      "name": "Cowley, Kansas",
+      "relevance": "",
+      "featured": false,
+      "lat": 37.2413155,
+      "lng": -96.8675685,
+      "wikimedia": {
+        "fileTitle": "File:Cowley County National Bank Building.JPG",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Cowley_County_National_Bank_Building.JPG/960px-Cowley_County_National_Bank_Building.JPG",
+        "attribution": "Jeffrey Beall",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=37.2413155,-96.8675685",
+        "embedUrl": "https://maps.google.com/maps?q=37.2413155,-96.8675685&z=12&output=embed"
+      },
+      "year": "1975"
+    },
+    {
+      "id": "winfield-cowley-kansas-marriage",
+      "type": "building",
+      "canonicalPlaceId": "winfield-cowley-kansas",
+      "badge": "Marriage",
+      "name": "Winfield, Cowley, Kansas",
+      "relevance": "",
+      "featured": false,
+      "lat": 37.2397486,
+      "lng": -96.9955919,
+      "wikimedia": {
+        "fileTitle": "File:Opera House, Winfield, Kansas.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Opera_House%2C_Winfield%2C_Kansas.jpg/960px-Opera_House%2C_Winfield%2C_Kansas.jpg",
+        "attribution": "Unknown",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=37.2397486,-96.9955919",
+        "embedUrl": "https://maps.google.com/maps?q=37.2397486,-96.9955919&z=12&output=embed"
+      },
+      "year": "1942"
+    },
+    {
+      "id": "kansas-residence",
+      "type": "town",
+      "canonicalPlaceId": "kansas",
+      "badge": "Residence",
+      "name": "Kansas",
+      "relevance": "",
+      "featured": false,
+      "lat": 38.27312,
+      "lng": -98.5821872,
+      "wikipedia": {
+        "title": "Kansas",
+        "url": "https://en.wikipedia.org/wiki/Kansas",
+        "summary": "Kansas is a landlocked state in the Midwestern region of the United States. It borders Nebraska to the north; Colorado to the west; Oklahoma to the south; and Missouri to the east. Kansas is named after the Kansas River, in turn named after the Kansa people. Its capital is Topeka, and its most popul"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Crops Kansas AST 20010624.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Crops_Kansas_AST_20010624.jpg/960px-Crops_Kansas_AST_20010624.jpg",
+        "attribution": "NASA",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=38.27312,-98.5821872",
+        "embedUrl": "https://maps.google.com/maps?q=38.27312,-98.5821872&z=12&output=embed"
+      },
+      "year": "1891"
+    },
+    {
+      "id": "winfield-cowley-kansas-affiliate-publication-598909-residence",
+      "type": "town",
+      "canonicalPlaceId": "winfield-cowley-kansas-affiliate-publication-598909",
+      "badge": "Residence",
+      "name": "Winfield, Cowley, Kansas. Affiliate publication: 598909",
+      "relevance": "",
+      "featured": false,
+      "year": "1920"
+    }
+  ]
+}

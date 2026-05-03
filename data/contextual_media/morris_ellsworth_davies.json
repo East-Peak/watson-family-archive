@@ -1,0 +1,60 @@
+{
+  "personId": "morris_ellsworth_davies",
+  "personName": "Morris Ellsworth Davies",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "rhiwlas-north-wales-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "rhiwlas-north-wales",
+      "badge": "Birth Place",
+      "name": "Rhiwlas, North Wales",
+      "relevance": "",
+      "featured": true,
+      "year": "1834"
+    },
+    {
+      "id": "hitchcock-county-nebraska-death",
+      "type": "town",
+      "canonicalPlaceId": "hitchcock-county-nebraska",
+      "badge": "Death",
+      "name": "Hitchcock County, Nebraska",
+      "relevance": "",
+      "featured": false,
+      "lat": 40.1659573,
+      "lng": -101.0387468,
+      "wikipedia": {
+        "title": "Hitchcock County, Nebraska",
+        "url": "https://en.wikipedia.org/wiki/Hitchcock_County%2C_Nebraska",
+        "summary": "Hitchcock County is a county in the U.S. state of Nebraska. As of the 2020 United States census, the population was 2,616. Its county seat is Trenton."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Hitchcock County (Nebraska) courthouse cornerstone.JPG",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Hitchcock_County_%28Nebraska%29_courthouse_cornerstone.JPG/960px-Hitchcock_County_%28Nebraska%29_courthouse_cornerstone.JPG",
+        "attribution": "Ammodramus",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=40.1659573,-101.0387468",
+        "embedUrl": "https://maps.google.com/maps?q=40.1659573,-101.0387468&z=12&output=embed"
+      },
+      "year": "1907"
+    },
+    {
+      "id": "rosefield-cemetery-hitchcock-county-nebraska-usa-residence",
+      "type": "town",
+      "canonicalPlaceId": "rosefield-cemetery-hitchcock-county-nebraska-usa",
+      "badge": "Residence",
+      "name": "Rosefield Cemetery, Hitchcock County, Nebraska, USA",
+      "relevance": "",
+      "featured": false,
+      "lat": 40.1298781,
+      "lng": -101.0978728,
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=40.1298781,-101.0978728",
+        "embedUrl": "https://maps.google.com/maps?q=40.1298781,-101.0978728&z=12&output=embed"
+      },
+      "year": "1907"
+    }
+  ]
+}

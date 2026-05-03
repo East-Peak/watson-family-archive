@@ -1,0 +1,56 @@
+{
+  "personId": "george_w_martin",
+  "personName": "George Woodman Martin",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "new-hampshire-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "new-hampshire",
+      "badge": "Birth Place",
+      "name": "New Hampshire",
+      "relevance": "",
+      "featured": true,
+      "lat": 43.4849133,
+      "lng": -71.6553992,
+      "wikipedia": {
+        "title": "New Hampshire",
+        "url": "https://en.wikipedia.org/wiki/New_Hampshire",
+        "summary": "New Hampshire is a state in the New England region of the Northeastern United States. It borders Massachusetts to the south, Vermont to the west, Maine and the Gulf of Maine to the east, and the Canadian province of Quebec to the north. Of the 50 U.S. states, New Hampshire is the seventh-smallest by"
+      },
+      "wikimedia": {
+        "fileTitle": "File:US-Colonial (NH-179)-New Hampshire-29 Apr 1780 OBV.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/US-Colonial_%28NH-179%29-New_Hampshire-29_Apr_1780_OBV.jpg/960px-US-Colonial_%28NH-179%29-New_Hampshire-29_Apr_1780_OBV.jpg",
+        "attribution": "National Museum of American History",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.4849133,-71.6553992",
+        "embedUrl": "https://maps.google.com/maps?q=43.4849133,-71.6553992&z=12&output=embed"
+      },
+      "year": "1855"
+    },
+    {
+      "id": "newbury-orange-vermont-residence",
+      "type": "town",
+      "canonicalPlaceId": "newbury-orange-vermont",
+      "badge": "Residence",
+      "name": "Newbury, Orange, Vermont",
+      "relevance": "",
+      "featured": false,
+      "lat": 44.0792316,
+      "lng": -72.0584234,
+      "wikimedia": {
+        "fileTitle": "File:Newbury Village Store, Newbury, Vermont.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Newbury_Village_Store%2C_Newbury%2C_Vermont.jpg/960px-Newbury_Village_Store%2C_Newbury%2C_Vermont.jpg",
+        "attribution": "redjar",
+        "license": "CC BY-SA 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=44.0792316,-72.0584234",
+        "embedUrl": "https://maps.google.com/maps?q=44.0792316,-72.0584234&z=12&output=embed"
+      },
+      "year": "1860"
+    }
+  ]
+}

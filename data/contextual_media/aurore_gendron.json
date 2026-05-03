@@ -1,0 +1,61 @@
+{
+  "personId": "aurore_gendron",
+  "personName": "Aurore Gendron",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "minnesota-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "minnesota",
+      "badge": "Birth Place",
+      "name": "Minnesota",
+      "relevance": "",
+      "featured": true,
+      "lat": 45.9896587,
+      "lng": -94.6113288,
+      "wikipedia": {
+        "title": "Minnesota",
+        "url": "https://en.wikipedia.org/wiki/Minnesota",
+        "summary": "Minnesota is a state in the Upper Midwestern region of the United States. It is bordered by the Canadian provinces of Manitoba and Ontario to the north and east and by the U.S. states of Wisconsin to the east, Iowa to the south, and North Dakota and South Dakota to the west. The northeast corner has"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Minnesota Welcomes You sign.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Minnesota_Welcomes_You_sign.jpg/960px-Minnesota_Welcomes_You_sign.jpg",
+        "attribution": "Lorie Shaull",
+        "license": "CC BY-SA 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=45.9896587,-94.6113288",
+        "embedUrl": "https://maps.google.com/maps?q=45.9896587,-94.6113288&z=12&output=embed"
+      },
+      "year": "1899"
+    },
+    {
+      "id": "yakima-washington-death",
+      "type": "town",
+      "canonicalPlaceId": "yakima-washington",
+      "badge": "Death",
+      "name": "Yakima, Washington",
+      "relevance": "",
+      "featured": false,
+      "lat": 46.601557,
+      "lng": -120.510842,
+      "wikipedia": {
+        "title": "Yakima, Washington",
+        "url": "https://en.wikipedia.org/wiki/Yakima%2C_Washington",
+        "summary": "Yakima is a city in and the county seat of Yakima County, Washington, United States, and the state's 11th most populous city. As of the 2020 census, the city had a total population of 96,968 and a metropolitan population of 256,728. The unincorporated suburban areas of West Valley and Terrace Height"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Greetings from Yakima, Washington - Large Letter Postcard (5348419927).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Greetings_from_Yakima%2C_Washington_-_Large_Letter_Postcard_%285348419927%29.jpg/960px-Greetings_from_Yakima%2C_Washington_-_Large_Letter_Postcard_%285348419927%29.jpg",
+        "attribution": "Steve Shook from Moscow, Idaho, USA",
+        "license": "CC BY 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=46.601557,-120.510842",
+        "embedUrl": "https://maps.google.com/maps?q=46.601557,-120.510842&z=12&output=embed"
+      },
+      "year": "1974"
+    }
+  ]
+}

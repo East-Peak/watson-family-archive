@@ -1,0 +1,100 @@
+{
+  "personId": "julia_a_slater",
+  "personName": "Julia A. Slater",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "indiana-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "indiana",
+      "badge": "Birth Place",
+      "name": "Indiana",
+      "relevance": "",
+      "featured": true,
+      "lat": 40.3270127,
+      "lng": -86.1746933,
+      "wikipedia": {
+        "title": "Indiana",
+        "url": "https://en.wikipedia.org/wiki/Indiana",
+        "summary": "Indiana is a state in the Midwestern region of the United States. It borders Lake Michigan to the northwest, Michigan to the north and northeast, Ohio to the east, the Ohio River and Kentucky to the south and southeast, and the Wabash River and Illinois to the west. Nicknamed \"the Hoosier State\", In"
+      },
+      "wikimedia": {
+        "fileTitle": "File:1816-1836 Executive Proceedings of the State of Indiana - DPLA - ca11da83da20123f7baab2a57c187403 (page 303).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/1816-1836_Executive_Proceedings_of_the_State_of_Indiana_-_DPLA_-_ca11da83da20123f7baab2a57c187403_%28page_303%29.jpg/960px-1816-1836_Executive_Proceedings_of_the_State_of_Indiana_-_DPLA_-_ca11da83da20123f7baab2a57c187403_%28page_303%29.jpg",
+        "attribution": "Riker, Dorothy Lois, 1904; Indiana. Governor",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=40.3270127,-86.1746933",
+        "embedUrl": "https://maps.google.com/maps?q=40.3270127,-86.1746933&z=12&output=embed"
+      },
+      "year": "1853"
+    },
+    {
+      "id": "cedar-mahaska-iowa-residence",
+      "type": "town",
+      "canonicalPlaceId": "cedar-mahaska-iowa",
+      "badge": "Residence",
+      "name": "Cedar, Mahaska, Iowa",
+      "relevance": "",
+      "featured": false,
+      "lat": 41.2122326,
+      "lng": -92.525745,
+      "wikimedia": {
+        "fileTitle": "File:Cedar Iowa.JPG",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Cedar_Iowa.JPG/960px-Cedar_Iowa.JPG",
+        "attribution": "Bill Whittaker (talk)",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=41.2122326,-92.525745",
+        "embedUrl": "https://maps.google.com/maps?q=41.2122326,-92.525745&z=12&output=embed"
+      },
+      "year": "1880"
+    },
+    {
+      "id": "mount-ayr-ringgold-iowa-residence",
+      "type": "town",
+      "canonicalPlaceId": "mount-ayr-ringgold-iowa",
+      "badge": "Residence",
+      "name": "Mount Ayr, Ringgold, Iowa",
+      "relevance": "",
+      "featured": false,
+      "lat": 40.7145873,
+      "lng": -94.2381367,
+      "wikimedia": {
+        "fileTitle": "File:Ringgold County Jail in Mount Ayr, Iowa in 2017.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Ringgold_County_Jail_in_Mount_Ayr%2C_Iowa_in_2017.jpg/960px-Ringgold_County_Jail_in_Mount_Ayr%2C_Iowa_in_2017.jpg",
+        "attribution": "Mclarenj",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=40.7145873,-94.2381367",
+        "embedUrl": "https://maps.google.com/maps?q=40.7145873,-94.2381367&z=12&output=embed"
+      },
+      "year": "1900"
+    },
+    {
+      "id": "ottumwa-wapello-iowa-residence",
+      "type": "town",
+      "canonicalPlaceId": "ottumwa-wapello-iowa",
+      "badge": "Residence",
+      "name": "Ottumwa, Wapello, Iowa",
+      "relevance": "",
+      "featured": false,
+      "lat": 41.0195659,
+      "lng": -92.4116886,
+      "wikimedia": {
+        "fileTitle": "File:Greetings from Ottumwa, Iowa - Large Letter Postcard (4237393882).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Greetings_from_Ottumwa%2C_Iowa_-_Large_Letter_Postcard_%284237393882%29.jpg/960px-Greetings_from_Ottumwa%2C_Iowa_-_Large_Letter_Postcard_%284237393882%29.jpg",
+        "attribution": "Steve Shook from Moscow, Idaho, USA",
+        "license": "CC BY 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=41.0195659,-92.4116886",
+        "embedUrl": "https://maps.google.com/maps?q=41.0195659,-92.4116886&z=12&output=embed"
+      },
+      "year": "1920"
+    }
+  ]
+}

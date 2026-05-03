@@ -1,0 +1,83 @@
+{
+  "personId": "ellen_tapsfield",
+  "personName": "Ellen Tapsfield",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "london-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "london",
+      "badge": "Birth Place",
+      "name": "London",
+      "relevance": "",
+      "featured": true,
+      "lat": 51.5074456,
+      "lng": -0.1277653,
+      "wikipedia": {
+        "title": "London",
+        "url": "https://en.wikipedia.org/wiki/London",
+        "summary": "London is the capital and largest city of both England and the United Kingdom, with a population of 9.1 million people in 2024. Its wider metropolitan area is the largest in Western Europe, with a population of 15.1\u00a0million. London stands on the River Thames in southeast England, at the head of a 50"
+      },
+      "wikimedia": {
+        "fileTitle": "File:London , Kodachrome by Chalmers Butterfield edit.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/London_%2C_Kodachrome_by_Chalmers_Butterfield_edit.jpg/960px-London_%2C_Kodachrome_by_Chalmers_Butterfield_edit.jpg",
+        "attribution": "Chalmers Butterfield",
+        "license": "CC BY 2.5"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=51.5074456,-0.1277653",
+        "embedUrl": "https://maps.google.com/maps?q=51.5074456,-0.1277653&z=12&output=embed"
+      },
+      "year": "1877"
+    },
+    {
+      "id": "kent-england-death",
+      "type": "town",
+      "canonicalPlaceId": "kent-england",
+      "badge": "Death",
+      "name": "Kent, England",
+      "relevance": "",
+      "featured": false,
+      "lat": 51.2070749,
+      "lng": 0.7210362,
+      "wikipedia": {
+        "title": "Kent",
+        "url": "https://en.wikipedia.org/wiki/Kent",
+        "summary": "Kent is a ceremonial county in South East England. It is bordered by Essex across the Thames Estuary to the north, the Strait of Dover to the south-east, East Sussex to the south-west, Surrey to the west, and Greater London to the north-west."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Bluewater Shopping Centre, Kent, England Crop - April 2009.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Bluewater_Shopping_Centre%2C_Kent%2C_England_Crop_-_April_2009.jpg/960px-Bluewater_Shopping_Centre%2C_Kent%2C_England_Crop_-_April_2009.jpg",
+        "attribution": "Diliff",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=51.2070749,0.7210362",
+        "embedUrl": "https://maps.google.com/maps?q=51.2070749,0.7210362&z=12&output=embed"
+      },
+      "year": "1946"
+    },
+    {
+      "id": "st-saviour-southwark-london-surrey-residence",
+      "type": "town",
+      "canonicalPlaceId": "st-saviour-southwark-london-surrey",
+      "badge": "Residence",
+      "name": "St Saviour Southwark, London, Surrey",
+      "relevance": "",
+      "featured": false,
+      "lat": 51.4244496,
+      "lng": -0.5642561,
+      "wikimedia": {
+        "fileTitle": "File:South View of London Street, Dockhead in the Water Side Division of the Parish of St Mary Magdalen Bermondsey, Surrey with the Adjacent Plan RMG PY2191.tiff",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/South_View_of_London_Street%2C_Dockhead_in_the_Water_Side_Division_of_the_Parish_of_St_Mary_Magdalen_Bermondsey%2C_Surrey_with_the_Adjacent_Plan_RMG_PY2191.tiff/lossy-page1-960px-South_View_of_London_Street%2C_Dockhead_in_the_Water_Side_Division_of_the_Parish_of_St_Mary_Magdalen_Bermondsey%2C_Surrey_with_the_Adjacent_Plan_RMG_PY2191.tiff.jpg",
+        "attribution": "Robert Blemmell Schnebbelie; Robert Wilkinson; Wise",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=51.4244496,-0.5642561",
+        "embedUrl": "https://maps.google.com/maps?q=51.4244496,-0.5642561&z=12&output=embed"
+      },
+      "year": "1881"
+    }
+  ]
+}

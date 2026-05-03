@@ -1,0 +1,105 @@
+{
+  "personId": "maude_moore",
+  "personName": "Maude Moore",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "red-creek-new-york-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "red-creek-new-york",
+      "badge": "Birth Place",
+      "name": "Red Creek, New York",
+      "relevance": "",
+      "featured": true,
+      "lat": 43.247289,
+      "lng": -76.723564,
+      "wikipedia": {
+        "title": "Red Creek, New York",
+        "url": "https://en.wikipedia.org/wiki/Red_Creek%2C_New_York",
+        "summary": "Red Creek is a village in Wayne County, New York, United States. The population was 495 at the 2020 census."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Stoddard Creek near Bridal Falls, Allegany State Park, New York - 20220519.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Stoddard_Creek_near_Bridal_Falls%2C_Allegany_State_Park%2C_New_York_-_20220519.jpg/960px-Stoddard_Creek_near_Bridal_Falls%2C_Allegany_State_Park%2C_New_York_-_20220519.jpg",
+        "attribution": "Andre Carrotflower",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.247289,-76.723564",
+        "embedUrl": "https://maps.google.com/maps?q=43.247289,-76.723564&z=12&output=embed"
+      },
+      "year": "1880"
+    },
+    {
+      "id": "buffalo-new-york-death",
+      "type": "town",
+      "canonicalPlaceId": "buffalo-new-york",
+      "badge": "Death",
+      "name": "Buffalo, New York",
+      "relevance": "",
+      "featured": false,
+      "lat": 42.8864163,
+      "lng": -78.8781493,
+      "wikipedia": {
+        "title": "Buffalo, New York",
+        "url": "https://en.wikipedia.org/wiki/Buffalo%2C_New_York",
+        "summary": "Buffalo is a city in the U.S. state of New York. It lies in Western New York at the eastern end of Lake Erie and at the head of the Niagara River on the Canada\u2013United States border. It is the second-most populous city in New York, with a population of 278,349 at the 2020 census. The Buffalo\u2013Niagara "
+      },
+      "wikimedia": {
+        "fileTitle": "File:Phyllis Wheatley Club, Buffalo, New York LOC.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Phyllis_Wheatley_Club%2C_Buffalo%2C_New_York_LOC.jpg",
+        "attribution": "Unknown authorUnknown author",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=42.8864163,-78.8781493",
+        "embedUrl": "https://maps.google.com/maps?q=42.8864163,-78.8781493&z=12&output=embed"
+      },
+      "year": "1905"
+    },
+    {
+      "id": "new-york-residence",
+      "type": "town",
+      "canonicalPlaceId": "new-york",
+      "badge": "Residence",
+      "name": "New York",
+      "relevance": "",
+      "featured": false,
+      "lat": 40.7127281,
+      "lng": -74.0060152,
+      "wikimedia": {
+        "fileTitle": "File:Long Island City New York May 2015 panorama 3.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Long_Island_City_New_York_May_2015_panorama_3.jpg/960px-Long_Island_City_New_York_May_2015_panorama_3.jpg",
+        "attribution": "King of Hearts",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=40.7127281,-74.0060152",
+        "embedUrl": "https://maps.google.com/maps?q=40.7127281,-74.0060152&z=12&output=embed"
+      },
+      "year": "1880"
+    },
+    {
+      "id": "conquest-cayuga-new-york-residence",
+      "type": "town",
+      "canonicalPlaceId": "conquest-cayuga-new-york",
+      "badge": "Residence",
+      "name": "Conquest, Cayuga, New York",
+      "relevance": "",
+      "featured": false,
+      "lat": 43.121177,
+      "lng": -76.648003,
+      "wikimedia": {
+        "fileTitle": "File:Chrysler Conquest TSi (20824400690).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Chrysler_Conquest_TSi_%2820824400690%29.jpg/960px-Chrysler_Conquest_TSi_%2820824400690%29.jpg",
+        "attribution": "ilikewaffles11",
+        "license": "CC BY 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.121177,-76.648003",
+        "embedUrl": "https://maps.google.com/maps?q=43.121177,-76.648003&z=12&output=embed"
+      },
+      "year": "1905"
+    }
+  ]
+}

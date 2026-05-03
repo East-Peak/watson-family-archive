@@ -1,0 +1,83 @@
+{
+  "personId": "charles_jackson",
+  "personName": "Charles Jackson",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "middlesex-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "middlesex",
+      "badge": "Birth Place",
+      "name": "Middlesex",
+      "relevance": "",
+      "featured": true,
+      "lat": 51.5460558,
+      "lng": -0.2537791,
+      "wikipedia": {
+        "title": "Middlesex",
+        "url": "https://en.wikipedia.org/wiki/Middlesex",
+        "summary": "Middlesex is one of the historic counties of England. It ceased to be an administrative county in 1965 following the passing of the London Government Act 1963. The historic county boundaries largely follow three rivers: the Thames in the south, the Lea to the east and the Colne to the west, with a l"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Middlesex-Morden-1695.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Middlesex-Morden-1695.jpg/960px-Middlesex-Morden-1695.jpg",
+        "attribution": "Robert Morden",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=51.5460558,-0.2537791",
+        "embedUrl": "https://maps.google.com/maps?q=51.5460558,-0.2537791&z=12&output=embed"
+      },
+      "year": "1830"
+    },
+    {
+      "id": "seattle-king-county-washington-death",
+      "type": "town",
+      "canonicalPlaceId": "seattle-king-county-washington",
+      "badge": "Death",
+      "name": "Seattle, King County, Washington",
+      "relevance": "",
+      "featured": false,
+      "lat": 47.6038321,
+      "lng": -122.330062,
+      "wikimedia": {
+        "fileTitle": "File:Seattle - King County Courthouse and King County Administration Building 01.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Seattle_-_King_County_Courthouse_and_King_County_Administration_Building_01.jpg/960px-Seattle_-_King_County_Courthouse_and_King_County_Administration_Building_01.jpg",
+        "attribution": "Joe Mabel",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=47.6038321,-122.330062",
+        "embedUrl": "https://maps.google.com/maps?q=47.6038321,-122.330062&z=12&output=embed"
+      },
+      "year": "1908"
+    },
+    {
+      "id": "surrey-england-residence",
+      "type": "town",
+      "canonicalPlaceId": "surrey-england",
+      "badge": "Residence",
+      "name": "Surrey, England",
+      "relevance": "",
+      "featured": false,
+      "lat": 51.2715316,
+      "lng": -0.3414524,
+      "wikipedia": {
+        "title": "Surrey",
+        "url": "https://en.wikipedia.org/wiki/Surrey",
+        "summary": "Surrey is a ceremonial county in South East England. It is bordered by Greater London to the northeast, Kent to the east, East and West Sussex to the south, and Hampshire and Berkshire to the west. The largest settlement is Woking."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Charlwood Pavilion at Charlwood, Surrey, England 01.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Charlwood_Pavilion_at_Charlwood%2C_Surrey%2C_England_01.jpg/960px-Charlwood_Pavilion_at_Charlwood%2C_Surrey%2C_England_01.jpg",
+        "attribution": "Acabashi",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=51.2715316,-0.3414524",
+        "embedUrl": "https://maps.google.com/maps?q=51.2715316,-0.3414524&z=12&output=embed"
+      },
+      "year": "1851"
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "personId": "john_charles_lindsay",
+  "personName": "John Charles Lindsay",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "baltimore-county-maryland-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "baltimore-county-maryland",
+      "badge": "Birth Place",
+      "name": "Baltimore County, Maryland",
+      "relevance": "",
+      "featured": true,
+      "lat": 39.4445243,
+      "lng": -76.6483482,
+      "wikipedia": {
+        "title": "Baltimore County, Maryland",
+        "url": "https://en.wikipedia.org/wiki/Baltimore_County%2C_Maryland",
+        "summary": "Baltimore County is the third-most populous county in the U.S. state of Maryland. The county is part of the Central Maryland region of the state. Baltimore County partly surrounds but does not include the independent city of Baltimore. It is part of the Northeast megalopolis, which stretches from No"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Baltimore County, Maryland LOC 81690004.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Baltimore_County%2C_Maryland_LOC_81690004.jpg/960px-Baltimore_County%2C_Maryland_LOC_81690004.jpg",
+        "attribution": "United States. Soil Conservation Service; Geological Survey (U.S.)",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=39.4445243,-76.6483482",
+        "embedUrl": "https://maps.google.com/maps?q=39.4445243,-76.6483482&z=12&output=embed"
+      },
+      "year": "1759"
+    },
+    {
+      "id": "hancock-county-kentucky-death",
+      "type": "town",
+      "canonicalPlaceId": "hancock-county-kentucky",
+      "badge": "Death",
+      "name": "Hancock County, Kentucky",
+      "relevance": "",
+      "featured": false,
+      "lat": 37.8189002,
+      "lng": -86.7532261,
+      "wikipedia": {
+        "title": "Hancock County, Kentucky",
+        "url": "https://en.wikipedia.org/wiki/Hancock_County%2C_Kentucky",
+        "summary": "Hancock County is a county located in the U.S. state of Kentucky. As of the 2020 census, the population was 9,095. Its county seat is in the city of Hawesville located in the Northern part of the county, and its largest city of Lewisport is located in the Northwestern part of the county."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Hancock County, Kentucky courthouse.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Hancock_County%2C_Kentucky_courthouse.jpg/960px-Hancock_County%2C_Kentucky_courthouse.jpg",
+        "attribution": "W.marsh",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=37.8189002,-86.7532261",
+        "embedUrl": "https://maps.google.com/maps?q=37.8189002,-86.7532261&z=12&output=embed"
+      },
+      "year": "1838"
+    }
+  ]
+}

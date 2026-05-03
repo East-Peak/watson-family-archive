@@ -1,0 +1,225 @@
+{
+  "personId": "william_watson_bolton",
+  "personName": "William Watson",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "scotland-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "scotland",
+      "badge": "Birth Place",
+      "name": "Scotland",
+      "relevance": "",
+      "featured": true,
+      "lat": 56.7861112,
+      "lng": -4.1140518,
+      "wikipedia": {
+        "title": "Scotland",
+        "url": "https://en.wikipedia.org/wiki/Scotland",
+        "summary": "Scotland is a country that is part of the United Kingdom. It contains nearly one-third of the United Kingdom's land area, consisting of the northern part of the island of Great Britain and more than 790 adjacent islands, principally in the archipelagos of the Hebrides and the Northern Isles. In 2022"
+      },
+      "wikimedia": {
+        "fileTitle": "File:J.H. Muerer House, Scotland, TX Picture 2218.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/J.H._Muerer_House%2C_Scotland%2C_TX_Picture_2218.jpg/960px-J.H._Muerer_House%2C_Scotland%2C_TX_Picture_2218.jpg",
+        "attribution": "Billy Hathorn at en.wikipedia",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=56.7861112,-4.1140518",
+        "embedUrl": "https://maps.google.com/maps?q=56.7861112,-4.1140518&z=12&output=embed"
+      },
+      "year": "1799"
+    },
+    {
+      "id": "bolton-lancashire-england-death",
+      "type": "town",
+      "canonicalPlaceId": "bolton-lancashire-england",
+      "badge": "Death",
+      "name": "Bolton, Lancashire, England",
+      "relevance": "",
+      "featured": false,
+      "lat": 54.1066832,
+      "lng": -2.8028352,
+      "wikimedia": {
+        "fileTitle": "File:Bolton-By-Bowland, Lancashire (NeilClifton) Aug2005.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/5/55/Bolton-By-Bowland%2C_Lancashire_%28NeilClifton%29_Aug2005.jpg",
+        "attribution": "Dr Neil Clifton",
+        "license": "CC BY-SA 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=54.1066832,-2.8028352",
+        "embedUrl": "https://maps.google.com/maps?q=54.1066832,-2.8028352&z=12&output=embed"
+      },
+      "year": "1878"
+    },
+    {
+      "id": "ramsbottom-lancashire-residence",
+      "type": "town",
+      "canonicalPlaceId": "ramsbottom-lancashire",
+      "badge": "Residence",
+      "name": "Ramsbottom, Lancashire",
+      "relevance": "",
+      "featured": false,
+      "lat": 53.7851173,
+      "lng": -2.3932308,
+      "wikimedia": {
+        "fileTitle": "File:Kay Brow, Ramsbottom, Lancashire - geograph.org.uk - 2478629.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Kay_Brow%2C_Ramsbottom%2C_Lancashire_-_geograph.org.uk_-_2478629.jpg/960px-Kay_Brow%2C_Ramsbottom%2C_Lancashire_-_geograph.org.uk_-_2478629.jpg",
+        "attribution": "Robert Wade",
+        "license": "CC BY-SA 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=53.7851173,-2.3932308",
+        "embedUrl": "https://maps.google.com/maps?q=53.7851173,-2.3932308&z=12&output=embed"
+      },
+      "year": "1841"
+    },
+    {
+      "id": "little-bolton-lancashire-residence",
+      "type": "town",
+      "canonicalPlaceId": "little-bolton-lancashire",
+      "badge": "Residence",
+      "name": "Little Bolton, Lancashire",
+      "relevance": "",
+      "featured": false,
+      "year": "1861"
+    },
+    {
+      "id": "lancashire-residence",
+      "type": "town",
+      "canonicalPlaceId": "lancashire",
+      "badge": "Residence",
+      "name": "Lancashire",
+      "relevance": "",
+      "featured": false,
+      "lat": 53.8611712,
+      "lng": -2.5650945,
+      "wikipedia": {
+        "title": "Lancashire",
+        "url": "https://en.wikipedia.org/wiki/Lancashire",
+        "summary": "Lancashire is a ceremonial county in North West England. It is bordered by Cumbria to the north, North Yorkshire and West Yorkshire to the east, Greater Manchester and Merseyside to the south, and the Irish Sea to the west. The largest settlement is the city of Preston."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Lancashire 1610 Speed Hondius - Restoration.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Lancashire_1610_Speed_Hondius_-_Restoration.jpg/960px-Lancashire_1610_Speed_Hondius_-_Restoration.jpg",
+        "attribution": "Jodocus Hondius, engraved by John Speed, and restored by Adam Cuerden\n\n\n\n\n\n\nThis  is a retouched picture, which means that it has been digitally altered from its original version. Modifications: Dirt cleaned up, levels adjusted, rotated..",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=53.8611712,-2.5650945",
+        "embedUrl": "https://maps.google.com/maps?q=53.8611712,-2.5650945&z=12&output=embed"
+      },
+      "year": "1878"
+    },
+    {
+      "id": "south-chester-delaware-pa-residence",
+      "type": "town",
+      "canonicalPlaceId": "south-chester-delaware-pa",
+      "badge": "Residence",
+      "name": "South Chester, Delaware, PA",
+      "relevance": "",
+      "featured": false,
+      "lat": 39.8384468,
+      "lng": -75.3829752,
+      "wikimedia": {
+        "fileTitle": "File:SOUTH ELEVATION - Delaware County Electric Company, Chester Station, Delaware River at South end of Ward Street, Chester, Delaware County, PA HAER PA,23-CHES,2-3.tif",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/SOUTH_ELEVATION_-_Delaware_County_Electric_Company%2C_Chester_Station%2C_Delaware_River_at_South_end_of_Ward_Street%2C_Chester%2C_Delaware_County%2C_PA_HAER_PA%2C23-CHES%2C2-3.tif/lossy-page1-960px-thumbnail.tif.jpg",
+        "attribution": "Jack Boucher",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=39.8384468,-75.3829752",
+        "embedUrl": "https://maps.google.com/maps?q=39.8384468,-75.3829752&z=12&output=embed"
+      },
+      "year": "1880"
+    },
+    {
+      "id": "mt-pleasant-sanpete-ut-residence",
+      "type": "town",
+      "canonicalPlaceId": "mt-pleasant-sanpete-ut",
+      "badge": "Residence",
+      "name": "Mt Pleasant, Sanpete, UT",
+      "relevance": "",
+      "featured": false,
+      "lat": 39.5469073,
+      "lng": -111.455465,
+      "wikimedia": {
+        "fileTitle": "File:Mount Pleasant Utah.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Mount_Pleasant_Utah.jpg/960px-Mount_Pleasant_Utah.jpg",
+        "attribution": null,
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=39.5469073,-111.455465",
+        "embedUrl": "https://maps.google.com/maps?q=39.5469073,-111.455465&z=12&output=embed"
+      },
+      "year": "1900"
+    },
+    {
+      "id": "sangamon-macon-il-residence",
+      "type": "town",
+      "canonicalPlaceId": "sangamon-macon-il",
+      "badge": "Residence",
+      "name": "Sangamon, Macon, IL",
+      "relevance": "",
+      "featured": false,
+      "lat": 39.866703,
+      "lng": -88.8559084,
+      "wikimedia": {
+        "fileTitle": "File:Stevens Creek flowing into the Sangamon River in Macon County, IL.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Stevens_Creek_flowing_into_the_Sangamon_River_in_Macon_County%2C_IL.jpg/960px-Stevens_Creek_flowing_into_the_Sangamon_River_in_Macon_County%2C_IL.jpg",
+        "attribution": "J. Pinta (Redline2200)",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=39.866703,-88.8559084",
+        "embedUrl": "https://maps.google.com/maps?q=39.866703,-88.8559084&z=12&output=embed"
+      },
+      "year": "1920"
+    },
+    {
+      "id": "rutherford-bergen-nj-residence",
+      "type": "town",
+      "canonicalPlaceId": "rutherford-bergen-nj",
+      "badge": "Residence",
+      "name": "Rutherford, Bergen, NJ",
+      "relevance": "",
+      "featured": false,
+      "lat": 40.826489,
+      "lng": -74.1068091,
+      "wikimedia": {
+        "fileTitle": "File:WILLIAM CARLOS WILLIAMS HOUSE, RUTHERFORD, BERGEN COUNTY, NJ (cropped).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/WILLIAM_CARLOS_WILLIAMS_HOUSE%2C_RUTHERFORD%2C_BERGEN_COUNTY%2C_NJ_%28cropped%29.jpg/960px-WILLIAM_CARLOS_WILLIAMS_HOUSE%2C_RUTHERFORD%2C_BERGEN_COUNTY%2C_NJ_%28cropped%29.jpg",
+        "attribution": "JERRYE &amp; ROY KLOTZ M.D.",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=40.826489,-74.1068091",
+        "embedUrl": "https://maps.google.com/maps?q=40.826489,-74.1068091&z=12&output=embed"
+      },
+      "year": "1930"
+    },
+    {
+      "id": "ironwood-gogebic-mi-residence",
+      "type": "town",
+      "canonicalPlaceId": "ironwood-gogebic-mi",
+      "badge": "Residence",
+      "name": "Ironwood, Gogebic, MI",
+      "relevance": "",
+      "featured": false,
+      "lat": 46.4555673,
+      "lng": -90.1684371,
+      "wikimedia": {
+        "fileTitle": "File:Ironwood-Suffolk-1910.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Ironwood-Suffolk-1910.jpg/960px-Ironwood-Suffolk-1910.jpg",
+        "attribution": "Unknown authorUnknown author",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=46.4555673,-90.1684371",
+        "embedUrl": "https://maps.google.com/maps?q=46.4555673,-90.1684371&z=12&output=embed"
+      },
+      "year": "1950"
+    }
+  ]
+}

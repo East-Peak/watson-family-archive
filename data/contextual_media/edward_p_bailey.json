@@ -1,0 +1,78 @@
+{
+  "personId": "edward_p_bailey",
+  "personName": "Edward P Bailey",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "kilmore-victoria-australia-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "kilmore-victoria-australia",
+      "badge": "Birth Place",
+      "name": "Kilmore, Victoria, Australia",
+      "relevance": "",
+      "featured": true,
+      "lat": -37.2922688,
+      "lng": 144.9510311,
+      "wikimedia": {
+        "fileTitle": "File:Kilmore Court House Hotel & Colonial Bank of Australia Blue Plaque.JPG",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Kilmore_Court_House_Hotel_%26_Colonial_Bank_of_Australia_Blue_Plaque.JPG/960px-Kilmore_Court_House_Hotel_%26_Colonial_Bank_of_Australia_Blue_Plaque.JPG",
+        "attribution": "Mattinbgn (talk\u00a0\u00b7 contribs)",
+        "license": "CC BY 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=-37.2922688,144.9510311",
+        "embedUrl": "https://maps.google.com/maps?q=-37.2922688,144.9510311&z=12&output=embed"
+      },
+      "year": "1867"
+    },
+    {
+      "id": "australia-residence",
+      "type": "town",
+      "canonicalPlaceId": "australia",
+      "badge": "Residence",
+      "name": "Australia",
+      "relevance": "",
+      "featured": false,
+      "lat": -24.7761086,
+      "lng": 134.755,
+      "wikipedia": {
+        "title": "Australia",
+        "url": "https://en.wikipedia.org/wiki/Australia",
+        "summary": "Australia, officially the Commonwealth of Australia, is a country comprising the mainland of the Australian continent, the island of Tasmania and numerous smaller islands. It has a total area of 7,688,287\u00a0km2 (2,968,464\u00a0sq\u00a0mi), making it the sixth-largest country in the world and the largest in Ocea"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Australia satellite plane.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Australia_satellite_plane.jpg/960px-Australia_satellite_plane.jpg",
+        "attribution": "Reto St\u00f6ckl / NASA Goddard Space Flight Center",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=-24.7761086,134.755",
+        "embedUrl": "https://maps.google.com/maps?q=-24.7761086,134.755&z=12&output=embed"
+      },
+      "year": "1868"
+    },
+    {
+      "id": "forest-lawn-memorial-park-long-beach-los-angeles-california-residence",
+      "type": "town",
+      "canonicalPlaceId": "forest-lawn-memorial-park-long-beach-los-angeles-california",
+      "badge": "Residence",
+      "name": "Forest Lawn Memorial Park, Long Beach, Los Angeles, California",
+      "relevance": "",
+      "featured": false,
+      "lat": 33.8431244,
+      "lng": -118.1694878,
+      "wikimedia": {
+        "fileTitle": "File:Forest Lawn Memorial Park, Glendale, Los Angeles, California.JPG",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Forest_Lawn_Memorial_Park%2C_Glendale%2C_Los_Angeles%2C_California.JPG/960px-Forest_Lawn_Memorial_Park%2C_Glendale%2C_Los_Angeles%2C_California.JPG",
+        "attribution": "Arkivet, Thorvaldsens Museum",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=33.8431244,-118.1694878",
+        "embedUrl": "https://maps.google.com/maps?q=33.8431244,-118.1694878&z=12&output=embed"
+      },
+      "year": "1951"
+    }
+  ]
+}

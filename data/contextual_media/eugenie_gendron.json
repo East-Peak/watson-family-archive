@@ -1,0 +1,83 @@
+{
+  "personId": "eugenie_gendron",
+  "personName": "Eugenie Gendron",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "saint-timoth-e-quebec-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "saint-timoth-e-quebec",
+      "badge": "Birth Place",
+      "name": "Saint-Timoth\u00e9e, Quebec",
+      "relevance": "",
+      "featured": true,
+      "lat": 45.2898118,
+      "lng": -74.0416901,
+      "wikipedia": {
+        "title": "Saint-Timoth\u00e9e, Quebec",
+        "url": "https://en.wikipedia.org/wiki/Saint-Timoth%C3%A9e%2C_Quebec",
+        "summary": "Saint-Timoth\u00e9e is a former city located in the Mont\u00e9r\u00e9gie region of Quebec, Canada, on \u00cele-de-Salaberry in the St. Lawrence River. It occupied the middle third and largest area of the island, which is part of the Hochelaga Archipelago. The municipality is flanked by the cities of Beauharnois to the "
+      },
+      "wikimedia": {
+        "fileTitle": "File:\u00c9glise de Saint-Timoth\u00e9e - cimeti\u00e8re - 2.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/%C3%89glise_de_Saint-Timoth%C3%A9e_-_cimeti%C3%A8re_-_2.jpg/960px-%C3%89glise_de_Saint-Timoth%C3%A9e_-_cimeti%C3%A8re_-_2.jpg",
+        "attribution": "Cantons-de-l'Est",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=45.2898118,-74.0416901",
+        "embedUrl": "https://maps.google.com/maps?q=45.2898118,-74.0416901&z=12&output=embed"
+      },
+      "year": "1874"
+    },
+    {
+      "id": "yakima-washington-death",
+      "type": "town",
+      "canonicalPlaceId": "yakima-washington",
+      "badge": "Death",
+      "name": "Yakima, Washington",
+      "relevance": "",
+      "featured": false,
+      "lat": 46.601557,
+      "lng": -120.510842,
+      "wikipedia": {
+        "title": "Yakima, Washington",
+        "url": "https://en.wikipedia.org/wiki/Yakima%2C_Washington",
+        "summary": "Yakima is a city in and the county seat of Yakima County, Washington, United States, and the state's 11th most populous city. As of the 2020 census, the city had a total population of 96,968 and a metropolitan population of 256,728. The unincorporated suburban areas of West Valley and Terrace Height"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Greetings from Yakima, Washington - Large Letter Postcard (5348419927).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Greetings_from_Yakima%2C_Washington_-_Large_Letter_Postcard_%285348419927%29.jpg/960px-Greetings_from_Yakima%2C_Washington_-_Large_Letter_Postcard_%285348419927%29.jpg",
+        "attribution": "Steve Shook from Moscow, Idaho, USA",
+        "license": "CC BY 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=46.601557,-120.510842",
+        "embedUrl": "https://maps.google.com/maps?q=46.601557,-120.510842&z=12&output=embed"
+      },
+      "year": "1951"
+    },
+    {
+      "id": "canada-eng-residence",
+      "type": "town",
+      "canonicalPlaceId": "canada-eng",
+      "badge": "Residence",
+      "name": "Canada Eng",
+      "relevance": "",
+      "featured": false,
+      "lat": 50.9625195,
+      "lng": -1.5884921,
+      "wikimedia": {
+        "fileTitle": "File:Centerm at night as seen from Canada Place.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Centerm_at_night_as_seen_from_Canada_Place.jpg/960px-Centerm_at_night_as_seen_from_Canada_Place.jpg",
+        "attribution": "Dllu",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=50.9625195,-1.5884921",
+        "embedUrl": "https://maps.google.com/maps?q=50.9625195,-1.5884921&z=12&output=embed"
+      },
+      "year": "1875"
+    }
+  ]
+}

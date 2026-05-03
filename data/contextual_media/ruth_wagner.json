@@ -1,0 +1,82 @@
+{
+  "personId": "ruth_wagner",
+  "personName": "Ruth Wagner",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "minnesota-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "minnesota",
+      "badge": "Birth Place",
+      "name": "Minnesota",
+      "relevance": "",
+      "featured": true,
+      "lat": 45.9896587,
+      "lng": -94.6113288,
+      "wikipedia": {
+        "title": "Minnesota",
+        "url": "https://en.wikipedia.org/wiki/Minnesota",
+        "summary": "Minnesota is a state in the Upper Midwestern region of the United States. It is bordered by the Canadian provinces of Manitoba and Ontario to the north and east and by the U.S. states of Wisconsin to the east, Iowa to the south, and North Dakota and South Dakota to the west. The northeast corner has"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Minnesota Welcomes You sign.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Minnesota_Welcomes_You_sign.jpg/960px-Minnesota_Welcomes_You_sign.jpg",
+        "attribution": "Lorie Shaull",
+        "license": "CC BY-SA 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=45.9896587,-94.6113288",
+        "embedUrl": "https://maps.google.com/maps?q=45.9896587,-94.6113288&z=12&output=embed"
+      },
+      "year": "1894"
+    },
+    {
+      "id": "milwaukee-wi-marriage",
+      "type": "building",
+      "canonicalPlaceId": "milwaukee-wi",
+      "badge": "Marriage",
+      "name": "Milwaukee, WI",
+      "relevance": "",
+      "featured": false,
+      "lat": 43.0386475,
+      "lng": -87.9090751,
+      "wikipedia": {
+        "title": "Milwaukee",
+        "url": "https://en.wikipedia.org/wiki/Milwaukee",
+        "summary": "Milwaukee is the most populous city in the U.S. state of Wisconsin. It is located on the western shore of Lake Michigan at the confluence of the Milwaukee, Menomonee, and Kinnickinnic Rivers. Milwaukee is the 31st-most populous city in the United States and the fifth-most populous city in the Midwes"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Men loading hardware into new GMC Model T truck Milwaukee WI 1936.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Men_loading_hardware_into_new_GMC_Model_T_truck_Milwaukee_WI_1936.jpg",
+        "attribution": "New York Public Library",
+        "license": "No restrictions"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.0386475,-87.9090751",
+        "embedUrl": "https://maps.google.com/maps?q=43.0386475,-87.9090751&z=12&output=embed"
+      }
+    },
+    {
+      "id": "north-milwaukee-wi-residence",
+      "type": "town",
+      "canonicalPlaceId": "north-milwaukee-wi",
+      "badge": "Residence",
+      "name": "North Milwaukee, WI",
+      "relevance": "",
+      "featured": false,
+      "lat": 43.1114067,
+      "lng": -87.9564739,
+      "wikimedia": {
+        "fileTitle": "File:North Old World 3rd Street, Milwaukee, WI.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/North_Old_World_3rd_Street%2C_Milwaukee%2C_WI.jpg/960px-North_Old_World_3rd_Street%2C_Milwaukee%2C_WI.jpg",
+        "attribution": "Gnome70",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.1114067,-87.9564739",
+        "embedUrl": "https://maps.google.com/maps?q=43.1114067,-87.9564739&z=12&output=embed"
+      },
+      "year": "1910"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "personId": "thomas_greenberry",
+  "personName": "Thomas Greenberry",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "lincolnshire-england-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "lincolnshire-england",
+      "badge": "Birth Place",
+      "name": "Lincolnshire, England",
+      "relevance": "",
+      "featured": true,
+      "lat": 53.1823034,
+      "lng": -0.2031209,
+      "wikipedia": {
+        "title": "Lincolnshire",
+        "url": "https://en.wikipedia.org/wiki/Lincolnshire",
+        "summary": "Lincolnshire is a ceremonial county in the East Midlands and Yorkshire and the Humber regions of England. It is bordered by the East Riding of Yorkshire across the Humber estuary to the north, the North Sea to the east, Norfolk, Cambridgeshire, Northamptonshire and Rutland to the south, and Leiceste"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Lincoln Cathedral Nave 1, Lincolnshire, UK - Diliff.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Lincoln_Cathedral_Nave_1%2C_Lincolnshire%2C_UK_-_Diliff.jpg/960px-Lincoln_Cathedral_Nave_1%2C_Lincolnshire%2C_UK_-_Diliff.jpg",
+        "attribution": "Diliff",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=53.1823034,-0.2031209",
+        "embedUrl": "https://maps.google.com/maps?q=53.1823034,-0.2031209&z=12&output=embed"
+      },
+      "year": "1569"
+    },
+    {
+      "id": "corby-lincolnshire-england-death",
+      "type": "town",
+      "canonicalPlaceId": "corby-lincolnshire-england",
+      "badge": "Death",
+      "name": "Corby, Lincolnshire, England",
+      "relevance": "",
+      "featured": false,
+      "lat": 52.813391,
+      "lng": -0.5197684,
+      "wikimedia": {
+        "fileTitle": "File:Willoughby Memorial Library at Corby Glen, near Bourne, Lincolnshire - geograph.org.uk - 4310577.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Willoughby_Memorial_Library_at_Corby_Glen%2C_near_Bourne%2C_Lincolnshire_-_geograph.org.uk_-_4310577.jpg/960px-Willoughby_Memorial_Library_at_Corby_Glen%2C_near_Bourne%2C_Lincolnshire_-_geograph.org.uk_-_4310577.jpg",
+        "attribution": "Rex Needle",
+        "license": "CC BY-SA 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=52.813391,-0.5197684",
+        "embedUrl": "https://maps.google.com/maps?q=52.813391,-0.5197684&z=12&output=embed"
+      },
+      "year": "1613"
+    }
+  ]
+}

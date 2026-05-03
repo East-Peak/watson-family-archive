@@ -1,0 +1,56 @@
+{
+  "personId": "mildred_martin",
+  "personName": "Mildred Louise Martin",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "alameda-california-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "alameda-california",
+      "badge": "Birth Place",
+      "name": "Alameda, California",
+      "relevance": "",
+      "featured": true,
+      "lat": 37.6090291,
+      "lng": -121.899142,
+      "wikipedia": {
+        "title": "Alameda, California",
+        "url": "https://en.wikipedia.org/wiki/Alameda%2C_California",
+        "summary": "Alameda is a city in Alameda County, California, United States, located in the East Bay region of the Bay Area. The city is built on an informal archipelago in San Francisco Bay, consisting of Alameda Island, Bay Farm Island and Coast Guard Island, along with other smaller islands. As of the 2020 ce"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Alameda City Hall (Alameda, CA) 2.JPG",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Alameda_City_Hall_%28Alameda%2C_CA%29_2.JPG/960px-Alameda_City_Hall_%28Alameda%2C_CA%29_2.JPG",
+        "attribution": "Sanfranman59",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=37.6090291,-121.899142",
+        "embedUrl": "https://maps.google.com/maps?q=37.6090291,-121.899142&z=12&output=embed"
+      },
+      "year": "1910"
+    },
+    {
+      "id": "san-mateo-san-mateo-california-death",
+      "type": "town",
+      "canonicalPlaceId": "san-mateo-san-mateo-california",
+      "badge": "Death",
+      "name": "San Mateo, San Mateo, California",
+      "relevance": "",
+      "featured": false,
+      "lat": 37.5629997,
+      "lng": -122.3253265,
+      "wikimedia": {
+        "fileTitle": "File:Bay Trail San Mateo May 2011.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Bay_Trail_San_Mateo_May_2011.jpg/960px-Bay_Trail_San_Mateo_May_2011.jpg",
+        "attribution": "King of Hearts",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=37.5629997,-122.3253265",
+        "embedUrl": "https://maps.google.com/maps?q=37.5629997,-122.3253265&z=12&output=embed"
+      },
+      "year": "1983"
+    }
+  ]
+}

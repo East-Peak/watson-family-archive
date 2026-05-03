@@ -1,0 +1,66 @@
+{
+  "personId": "thomas_barrett",
+  "personName": "Thomas Barrett",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "ramsbottom-lancashire-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "ramsbottom-lancashire",
+      "badge": "Birth Place",
+      "name": "Ramsbottom, Lancashire",
+      "relevance": "",
+      "featured": true,
+      "lat": 53.7851173,
+      "lng": -2.3932308,
+      "wikimedia": {
+        "fileTitle": "File:Kay Brow, Ramsbottom, Lancashire - geograph.org.uk - 2478629.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Kay_Brow%2C_Ramsbottom%2C_Lancashire_-_geograph.org.uk_-_2478629.jpg/960px-Kay_Brow%2C_Ramsbottom%2C_Lancashire_-_geograph.org.uk_-_2478629.jpg",
+        "attribution": "Robert Wade",
+        "license": "CC BY-SA 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=53.7851173,-2.3932308",
+        "embedUrl": "https://maps.google.com/maps?q=53.7851173,-2.3932308&z=12&output=embed"
+      },
+      "year": "1856"
+    },
+    {
+      "id": "jefferson-county-alabama-death",
+      "type": "town",
+      "canonicalPlaceId": "jefferson-county-alabama",
+      "badge": "Death",
+      "name": "Jefferson County, Alabama",
+      "relevance": "",
+      "featured": false,
+      "lat": 33.5228184,
+      "lng": -86.9164513,
+      "wikipedia": {
+        "title": "Jefferson County, Alabama",
+        "url": "https://en.wikipedia.org/wiki/Jefferson_County%2C_Alabama",
+        "summary": "Jefferson County is the most populous county in the U.S. state of Alabama, located in the central portion of the state. As of the 2020 census, its population was 674,721. Its county seat is Birmingham. Its rapid growth as an industrial city in the 20th century, based on heavy manufacturing in steel "
+      },
+      "wikimedia": {
+        "fileTitle": "File:Yardman on mine railroad, Jefferson County, Alabama, 1937.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Yardman_on_mine_railroad%2C_Jefferson_County%2C_Alabama%2C_1937.jpg/960px-Yardman_on_mine_railroad%2C_Jefferson_County%2C_Alabama%2C_1937.jpg",
+        "attribution": "Arthur Rothstein",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=33.5228184,-86.9164513",
+        "embedUrl": "https://maps.google.com/maps?q=33.5228184,-86.9164513&z=12&output=embed"
+      },
+      "year": "1917"
+    },
+    {
+      "id": "tottington-lower-end-lancashire-residence",
+      "type": "town",
+      "canonicalPlaceId": "tottington-lower-end-lancashire",
+      "badge": "Residence",
+      "name": "Tottington Lower End, Lancashire",
+      "relevance": "",
+      "featured": false,
+      "year": "1891"
+    }
+  ]
+}

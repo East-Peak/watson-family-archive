@@ -1,0 +1,29 @@
+{
+  "personId": "eveline_watson",
+  "personName": "Eveline Watson",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "northwich-cheshire-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "northwich-cheshire",
+      "badge": "Birth Place",
+      "name": "Northwich, Cheshire",
+      "relevance": "",
+      "featured": true,
+      "lat": 53.2602539,
+      "lng": -2.5145104,
+      "wikimedia": {
+        "fileTitle": "File:Chemical works near Northwich, Cheshire - geograph.org.uk - 2588136.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/4/43/Chemical_works_near_Northwich%2C_Cheshire_-_geograph.org.uk_-_2588136.jpg",
+        "attribution": "Roger  Kidd",
+        "license": "CC BY-SA 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=53.2602539,-2.5145104",
+        "embedUrl": "https://maps.google.com/maps?q=53.2602539,-2.5145104&z=12&output=embed"
+      },
+      "year": "1875"
+    }
+  ]
+}

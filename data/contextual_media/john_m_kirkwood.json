@@ -1,0 +1,105 @@
+{
+  "personId": "john_m_kirkwood",
+  "personName": "John Miller Kirkwood",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "south-fork-delaware-iowa-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "south-fork-delaware-iowa",
+      "badge": "Birth Place",
+      "name": "South Fork, Delaware, Iowa",
+      "relevance": "",
+      "featured": true,
+      "lat": 42.5982908,
+      "lng": -91.6143354,
+      "wikimedia": {
+        "fileTitle": "File:The history of Delaware county, Iowa, containing a history of its county, its cities, towns etc., a biographical directory of its citizens, war record of its volunteers .. (IA historyofdelawar01west).pdf",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/The_history_of_Delaware_county%2C_Iowa%2C_containing_a_history_of_its_county%2C_its_cities%2C_towns_etc.%2C_a_biographical_directory_of_its_citizens%2C_war_record_of_its_volunteers_.._%28IA_historyofdelawar01west%29.pdf/page1-795px-thumbnail.pdf.jpg",
+        "attribution": "Western historical company, Chicago, pub. [from old catalog]",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=42.5982908,-91.6143354",
+        "embedUrl": "https://maps.google.com/maps?q=42.5982908,-91.6143354&z=12&output=embed"
+      },
+      "year": "1876"
+    },
+    {
+      "id": "wichita-kansas-death",
+      "type": "town",
+      "canonicalPlaceId": "wichita-kansas",
+      "badge": "Death",
+      "name": "Wichita, Kansas",
+      "relevance": "",
+      "featured": false,
+      "lat": 37.6922361,
+      "lng": -97.3375448,
+      "wikipedia": {
+        "title": "Wichita, Kansas",
+        "url": "https://en.wikipedia.org/wiki/Wichita%2C_Kansas",
+        "summary": "Wichita is the most populous city in the U.S. state of Kansas and the county seat of Sedgwick County. As of the 2020 census, the population of the city was 397,532, and the Wichita metropolitan area had a population of 647,610. It is located in south-central Kansas along the Arkansas River."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Petroleum Building, Wichita, Kansas 01.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Petroleum_Building%2C_Wichita%2C_Kansas_01.jpg/960px-Petroleum_Building%2C_Wichita%2C_Kansas_01.jpg",
+        "attribution": "Myotus",
+        "license": "CC BY 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=37.6922361,-97.3375448",
+        "embedUrl": "https://maps.google.com/maps?q=37.6922361,-97.3375448&z=12&output=embed"
+      },
+      "year": "1957"
+    },
+    {
+      "id": "los-angeles-ca-marriage",
+      "type": "building",
+      "canonicalPlaceId": "los-angeles-ca",
+      "badge": "Marriage",
+      "name": "Los Angeles, CA",
+      "relevance": "",
+      "featured": false,
+      "lat": 34.0536909,
+      "lng": -118.242766,
+      "wikipedia": {
+        "title": "Los Angeles",
+        "url": "https://en.wikipedia.org/wiki/Los_Angeles",
+        "summary": "Los Angeles is the most populous city in the U.S. state of California, and the commercial, financial, and cultural center of Southern California. With an estimated 3.88 million residents within the city limits as of 2024, it is the second-most populous city in the United States, behind New York City"
+      },
+      "wikimedia": {
+        "fileTitle": "File:USS Los Angeles (CA-135) in the Far East, 13 October 1952 (NH 97386).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/USS_Los_Angeles_%28CA-135%29_in_the_Far_East%2C_13_October_1952_%28NH_97386%29.jpg/960px-USS_Los_Angeles_%28CA-135%29_in_the_Far_East%2C_13_October_1952_%28NH_97386%29.jpg",
+        "attribution": "Unknown authorUnknown author",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=34.0536909,-118.242766",
+        "embedUrl": "https://maps.google.com/maps?q=34.0536909,-118.242766&z=12&output=embed"
+      },
+      "year": "1903"
+    },
+    {
+      "id": "old-mission-cemetery-wichita-sedgwick-kansas-residence",
+      "type": "town",
+      "canonicalPlaceId": "old-mission-cemetery-wichita-sedgwick-kansas",
+      "badge": "Residence",
+      "name": "Old Mission Cemetery, Wichita, Sedgwick, Kansas",
+      "relevance": "",
+      "featured": false,
+      "lat": 37.7252769,
+      "lng": -97.2967064,
+      "wikimedia": {
+        "fileTitle": "File:Songs of the Southwest; (IA songsofsouthwest00pric).pdf",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Songs_of_the_Southwest%3B_%28IA_songsofsouthwest00pric%29.pdf/page1-706px-Songs_of_the_Southwest%3B_%28IA_songsofsouthwest00pric%29.pdf.jpg",
+        "attribution": "Price, Theodore F",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=37.7252769,-97.2967064",
+        "embedUrl": "https://maps.google.com/maps?q=37.7252769,-97.2967064&z=12&output=embed"
+      },
+      "year": "1957"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "personId": "john_boteler",
+  "personName": "John Philip Boteler",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "brantfield-hertfordshire-england-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "brantfield-hertfordshire-england",
+      "badge": "Birth Place",
+      "name": "Brantfield, Hertfordshire, England",
+      "relevance": "",
+      "featured": true,
+      "lat": 51.8400523,
+      "lng": -0.0978552,
+      "wikimedia": {
+        "fileTitle": "File:Genealogical memoirs of the extinct family of Chester of Chicheley their ancestors and descendants (IA genealogicalmemo01wate 0).pdf",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Genealogical_memoirs_of_the_extinct_family_of_Chester_of_Chicheley_their_ancestors_and_descendants_%28IA_genealogicalmemo01wate_0%29.pdf/page1-960px-Genealogical_memoirs_of_the_extinct_family_of_Chester_of_Chicheley_their_ancestors_and_descendants_%28IA_genealogicalmemo01wate_0%29.pdf.jpg",
+        "attribution": "Waters, Robert Edmond Chester, 1828-",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=51.8400523,-0.0978552",
+        "embedUrl": "https://maps.google.com/maps?q=51.8400523,-0.0978552&z=12&output=embed"
+      },
+      "year": "1514"
+    },
+    {
+      "id": "lamer-hertfordshire-england-death",
+      "type": "town",
+      "canonicalPlaceId": "lamer-hertfordshire-england",
+      "badge": "Death",
+      "name": "Lamer, Hertfordshire, England",
+      "relevance": "",
+      "featured": false,
+      "lat": 51.8283753,
+      "lng": -0.2863227,
+      "wikimedia": {
+        "fileTitle": "File:Lamer Lane, Blackmore End - geograph.org.uk - 4499597.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Lamer_Lane%2C_Blackmore_End_-_geograph.org.uk_-_4499597.jpg/960px-Lamer_Lane%2C_Blackmore_End_-_geograph.org.uk_-_4499597.jpg",
+        "attribution": "David Howard",
+        "license": "CC BY-SA 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=51.8283753,-0.2863227",
+        "embedUrl": "https://maps.google.com/maps?q=51.8283753,-0.2863227&z=12&output=embed"
+      },
+      "year": "1576"
+    }
+  ]
+}

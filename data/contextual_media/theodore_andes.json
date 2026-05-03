@@ -1,0 +1,110 @@
+{
+  "personId": "theodore_andes",
+  "personName": "Theodore Roosevelt Clarence Andes",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "maroa-illinois-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "maroa-illinois",
+      "badge": "Birth Place",
+      "name": "Maroa, Illinois",
+      "relevance": "",
+      "featured": true,
+      "lat": 40.0364257,
+      "lng": -88.957026,
+      "wikipedia": {
+        "title": "Maroa, Illinois",
+        "url": "https://en.wikipedia.org/wiki/Maroa%2C_Illinois",
+        "summary": "Maroa is a city in Macon County, Illinois, United States. Its population was 1,577 at the 2020 census, down from 1,801 in 2010. It is included in the Decatur, Illinois Metropolitan Statistical Area."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Illinois Central Depot in Maroa, IIllinos, Nov. 1981 -- Amazing (31975244371).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Illinois_Central_Depot_in_Maroa%2C_IIllinos%2C_Nov._1981_--_Amazing_%2831975244371%29.jpg/960px-Illinois_Central_Depot_in_Maroa%2C_IIllinos%2C_Nov._1981_--_Amazing_%2831975244371%29.jpg",
+        "attribution": "Marty Bernard from U.S.A.",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=40.0364257,-88.957026",
+        "embedUrl": "https://maps.google.com/maps?q=40.0364257,-88.957026&z=12&output=embed"
+      },
+      "year": "1917"
+    },
+    {
+      "id": "san-mateo-california-death",
+      "type": "town",
+      "canonicalPlaceId": "san-mateo-california",
+      "badge": "Death",
+      "name": "San Mateo, California",
+      "relevance": "",
+      "featured": false,
+      "lat": 37.496904,
+      "lng": -122.3330573,
+      "wikipedia": {
+        "title": "San Mateo, California",
+        "url": "https://en.wikipedia.org/wiki/San_Mateo%2C_California",
+        "summary": "San Mateo is the most populous city in San Mateo County, California, United States, on the San Francisco Peninsula. It is part of the San Francisco Bay Area metropolitan region, and is located about 20 miles (32\u00a0km) south of San Francisco. San Mateo borders Burlingame to the north, Hillsborough to t"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Bay Trail San Mateo May 2011.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Bay_Trail_San_Mateo_May_2011.jpg/960px-Bay_Trail_San_Mateo_May_2011.jpg",
+        "attribution": "King of Hearts",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=37.496904,-122.3330573",
+        "embedUrl": "https://maps.google.com/maps?q=37.496904,-122.3330573&z=12&output=embed"
+      },
+      "year": "1997"
+    },
+    {
+      "id": "decatur-illinois-residence",
+      "type": "town",
+      "canonicalPlaceId": "decatur-illinois",
+      "badge": "Residence",
+      "name": "Decatur, Illinois",
+      "relevance": "",
+      "featured": false,
+      "lat": 39.8454163,
+      "lng": -88.9524151,
+      "wikipedia": {
+        "title": "Decatur, Illinois",
+        "url": "https://en.wikipedia.org/wiki/Decatur%2C_Illinois",
+        "summary": "Decatur is the largest city in Macon County, Illinois, United States, and its county seat. The city was founded in 1829 and is situated along the Sangamon River and Lake Decatur in Central Illinois. As of the 2020 census, it had a population of 70,522. It is the 17th-most populous city in Illinois a"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Decatur Illinois banner.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Decatur_Illinois_banner.jpg/960px-Decatur_Illinois_banner.jpg",
+        "attribution": "ZcarstvnzAuthor of original photo: n9qhf",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=39.8454163,-88.9524151",
+        "embedUrl": "https://maps.google.com/maps?q=39.8454163,-88.9524151&z=12&output=embed"
+      },
+      "year": "1920"
+    },
+    {
+      "id": "texas-dewitt-illinois-residence",
+      "type": "town",
+      "canonicalPlaceId": "texas-dewitt-illinois",
+      "badge": "Residence",
+      "name": "Texas, DeWitt, Illinois",
+      "relevance": "",
+      "featured": false,
+      "lat": 40.095408,
+      "lng": -88.9791276,
+      "wikimedia": {
+        "fileTitle": "File:De Witt County Illinois.png",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/3/35/De_Witt_County_Illinois.png",
+        "attribution": null,
+        "license": "CC BY 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=40.095408,-88.9791276",
+        "embedUrl": "https://maps.google.com/maps?q=40.095408,-88.9791276&z=12&output=embed"
+      },
+      "year": "1930"
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "personId": "john_drayton_slater",
+  "personName": "John Drayton Slater",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "newberry-district-south-carolina-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "newberry-district-south-carolina",
+      "badge": "Birth Place",
+      "name": "Newberry District, South Carolina",
+      "relevance": "",
+      "featured": true,
+      "lat": 34.2760245,
+      "lng": -81.6194053,
+      "wikimedia": {
+        "fileTitle": "File:Newberry Historic District 1.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Newberry_Historic_District_1.jpg/960px-Newberry_Historic_District_1.jpg",
+        "attribution": "LASHLEY",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=34.2760245,-81.6194053",
+        "embedUrl": "https://maps.google.com/maps?q=34.2760245,-81.6194053&z=12&output=embed"
+      },
+      "year": "1819"
+    },
+    {
+      "id": "lebanon-linn-county-oregon-death",
+      "type": "town",
+      "canonicalPlaceId": "lebanon-linn-county-oregon",
+      "badge": "Death",
+      "name": "Lebanon, Linn County, Oregon",
+      "relevance": "",
+      "featured": false,
+      "lat": 44.5363364,
+      "lng": -122.9072329,
+      "wikimedia": {
+        "fileTitle": "File:Lebanon Dam (Linn County, Oregon scenic images) (linnDA0139).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Lebanon_Dam_%28Linn_County%2C_Oregon_scenic_images%29_%28linnDA0139%29.jpg",
+        "attribution": "Gary Halvorson, Oregon State Archives",
+        "license": "Attribution"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=44.5363364,-122.9072329",
+        "embedUrl": "https://maps.google.com/maps?q=44.5363364,-122.9072329&z=12&output=embed"
+      },
+      "year": "1894"
+    },
+    {
+      "id": "unmarked-grave-residence",
+      "type": "town",
+      "canonicalPlaceId": "unmarked-grave",
+      "badge": "Residence",
+      "name": "unmarked grave",
+      "relevance": "",
+      "featured": false,
+      "lat": -8.1062087,
+      "lng": 114.0580099,
+      "wikipedia": {
+        "title": "Unmarked grave",
+        "url": "https://en.wikipedia.org/wiki/Unmarked_grave",
+        "summary": "An unmarked grave is one that lacks a marker, headstone, or nameplate indicating that a body is buried there. It may also include burials that previously had identification but which are no longer identifiable due to weather damage, neglect, disturbance or otherwise. However, in cultures that mark b"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Unmarked grave 02.JPG",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Unmarked_grave_02.JPG/960px-Unmarked_grave_02.JPG",
+        "attribution": "Silar",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=-8.1062087,114.0580099",
+        "embedUrl": "https://maps.google.com/maps?q=-8.1062087,114.0580099&z=12&output=embed"
+      },
+      "year": "1894"
+    }
+  ]
+}

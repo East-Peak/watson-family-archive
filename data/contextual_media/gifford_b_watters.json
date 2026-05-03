@@ -1,0 +1,29 @@
+{
+  "personId": "gifford_b_watters",
+  "personName": "Gifford B. Watters",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "orange-florida-death",
+      "type": "town",
+      "canonicalPlaceId": "orange-florida",
+      "badge": "Death",
+      "name": "Orange, Florida",
+      "relevance": "",
+      "featured": true,
+      "lat": 28.495156,
+      "lng": -81.3111658,
+      "wikimedia": {
+        "fileTitle": "File:Orange Groves in Orlando, Florida.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Orange_Groves_in_Orlando%2C_Florida.jpg",
+        "attribution": "E. C. Kropp Co.,",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=28.495156,-81.3111658",
+        "embedUrl": "https://maps.google.com/maps?q=28.495156,-81.3111658&z=12&output=embed"
+      },
+      "year": "1945"
+    }
+  ]
+}

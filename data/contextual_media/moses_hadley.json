@@ -1,0 +1,51 @@
+{
+  "personId": "moses_hadley",
+  "personName": "Moses Lawrence Hadley",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "yonkers-westchester-new-york-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "yonkers-westchester-new-york",
+      "badge": "Birth Place",
+      "name": "Yonkers, Westchester, New York",
+      "relevance": "",
+      "featured": true,
+      "lat": 40.9312099,
+      "lng": -73.8987469,
+      "wikimedia": {
+        "fileTitle": "File:Yonkers School 22 jeh.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Yonkers_School_22_jeh.jpg/960px-Yonkers_School_22_jeh.jpg",
+        "attribution": "Jim.henderson",
+        "license": "CC BY 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=40.9312099,-73.8987469",
+        "embedUrl": "https://maps.google.com/maps?q=40.9312099,-73.8987469&z=12&output=embed"
+      },
+      "year": "1772"
+    },
+    {
+      "id": "woodville-wilkinson-mississippi-death",
+      "type": "town",
+      "canonicalPlaceId": "woodville-wilkinson-mississippi",
+      "badge": "Death",
+      "name": "Woodville, Wilkinson, Mississippi",
+      "relevance": "",
+      "featured": false,
+      "lat": 31.1026366,
+      "lng": -91.2990512,
+      "wikimedia": {
+        "fileTitle": "File:Beth Israel - Beth Israel Cemetery, Woodville (Wilkinson County), Mississippi.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Beth_Israel_-_Beth_Israel_Cemetery%2C_Woodville_%28Wilkinson_County%29%2C_Mississippi.jpg/960px-Beth_Israel_-_Beth_Israel_Cemetery%2C_Woodville_%28Wilkinson_County%29%2C_Mississippi.jpg",
+        "attribution": "NatalieMaynor from Jackson, Mississippi, USA",
+        "license": "CC BY 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=31.1026366,-91.2990512",
+        "embedUrl": "https://maps.google.com/maps?q=31.1026366,-91.2990512&z=12&output=embed"
+      },
+      "year": "1818"
+    }
+  ]
+}

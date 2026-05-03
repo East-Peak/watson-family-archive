@@ -1,0 +1,132 @@
+{
+  "personId": "alexander_franklin_beebe",
+  "personName": "Alexander Franklin Beebe",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "greene-new-york-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "greene-new-york",
+      "badge": "Birth Place",
+      "name": "Greene, New York",
+      "relevance": "",
+      "featured": true,
+      "lat": 42.3292408,
+      "lng": -75.7699147,
+      "wikipedia": {
+        "title": "Greene, New York",
+        "url": "https://en.wikipedia.org/wiki/Greene%2C_New_York",
+        "summary": "Greene is a town in Chenango County, New York, United States. The population was 5,604 at the 2010 census. The town is named after General Nathanael Greene. It is located in the southwestern corner of the county and contains a village, also named Greene. The town and village are northeast of Bingham"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Greene, New York 012409 142.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Greene%2C_New_York_012409_142.jpg/960px-Greene%2C_New_York_012409_142.jpg",
+        "attribution": "Dougtone",
+        "license": "CC BY-SA 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=42.3292408,-75.7699147",
+        "embedUrl": "https://maps.google.com/maps?q=42.3292408,-75.7699147&z=12&output=embed"
+      },
+      "year": "1839"
+    },
+    {
+      "id": "le-ray-jefferson-new-york-death",
+      "type": "town",
+      "canonicalPlaceId": "le-ray-jefferson-new-york",
+      "badge": "Death",
+      "name": "Le Ray, Jefferson, New York",
+      "relevance": "",
+      "featured": false,
+      "lat": 44.0748838,
+      "lng": -75.7883264,
+      "wikimedia": {
+        "fileTitle": "File:Genealogical and family history of the county of Jefferson, New York; (IA genealogicalfami02oake).pdf",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Genealogical_and_family_history_of_the_county_of_Jefferson%2C_New_York%3B_%28IA_genealogicalfami02oake%29.pdf/page1-804px-Genealogical_and_family_history_of_the_county_of_Jefferson%2C_New_York%3B_%28IA_genealogicalfami02oake%29.pdf.jpg",
+        "attribution": "Oakes, Rensselaer Allston, 1835-1904, [from old catalog] ed\nLewis publishing co., Chicago, pub. [from old catalog]",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=44.0748838,-75.7883264",
+        "embedUrl": "https://maps.google.com/maps?q=44.0748838,-75.7883264&z=12&output=embed"
+      },
+      "year": "1937"
+    },
+    {
+      "id": "red-creek-new-york-marriage",
+      "type": "building",
+      "canonicalPlaceId": "red-creek-new-york",
+      "badge": "Marriage",
+      "name": "Red Creek, New York",
+      "relevance": "",
+      "featured": false,
+      "lat": 43.247289,
+      "lng": -76.723564,
+      "wikipedia": {
+        "title": "Red Creek, New York",
+        "url": "https://en.wikipedia.org/wiki/Red_Creek%2C_New_York",
+        "summary": "Red Creek is a village in Wayne County, New York, United States. The population was 495 at the 2020 census."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Stoddard Creek near Bridal Falls, Allegany State Park, New York - 20220519.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Stoddard_Creek_near_Bridal_Falls%2C_Allegany_State_Park%2C_New_York_-_20220519.jpg/960px-Stoddard_Creek_near_Bridal_Falls%2C_Allegany_State_Park%2C_New_York_-_20220519.jpg",
+        "attribution": "Andre Carrotflower",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.247289,-76.723564",
+        "embedUrl": "https://maps.google.com/maps?q=43.247289,-76.723564&z=12&output=embed"
+      },
+      "year": "1882"
+    },
+    {
+      "id": "cayuga-new-york-marriage",
+      "type": "building",
+      "canonicalPlaceId": "cayuga-new-york",
+      "badge": "Marriage",
+      "name": "Cayuga, New York",
+      "relevance": "",
+      "featured": false,
+      "lat": 42.8093409,
+      "lng": -76.5700777,
+      "wikipedia": {
+        "title": "Cayuga, New York",
+        "url": "https://en.wikipedia.org/wiki/Cayuga%2C_New_York",
+        "summary": "Cayuga is a village in Cayuga County, New York, United States. As of the 2020 census, Cayuga had a population of 472. The village derives its name from the indigenous Cayuga people and the lake named after them."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Cayuga County, New York - 4368885389.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Cayuga_County%2C_New_York_-_4368885389.jpg",
+        "attribution": "Dougtone",
+        "license": "CC BY-SA 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=42.8093409,-76.5700777",
+        "embedUrl": "https://maps.google.com/maps?q=42.8093409,-76.5700777&z=12&output=embed"
+      },
+      "year": "1913"
+    },
+    {
+      "id": "colosse-mexico-oswego-new-york-residence",
+      "type": "town",
+      "canonicalPlaceId": "colosse-mexico-oswego-new-york",
+      "badge": "Residence",
+      "name": "Colosse, Mexico, Oswego, New York",
+      "relevance": "",
+      "featured": false,
+      "lat": 43.4203473,
+      "lng": -76.1588146,
+      "wikimedia": {
+        "fileTitle": "File:1940 Census Enumeration District Descriptions - New York - Oswego County - ED 38-29, ED 38-30, ED 38-31, ED 38-32, ED 38-33 - NARA - 5854479.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/1940_Census_Enumeration_District_Descriptions_-_New_York_-_Oswego_County_-_ED_38-29%2C_ED_38-30%2C_ED_38-31%2C_ED_38-32%2C_ED_38-33_-_NARA_-_5854479.jpg/960px-1940_Census_Enumeration_District_Descriptions_-_New_York_-_Oswego_County_-_ED_38-29%2C_ED_38-30%2C_ED_38-31%2C_ED_38-32%2C_ED_38-33_-_NARA_-_5854479.jpg",
+        "attribution": "Unknown authorUnknown author or not provided",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.4203473,-76.1588146",
+        "embedUrl": "https://maps.google.com/maps?q=43.4203473,-76.1588146&z=12&output=embed"
+      },
+      "year": "1937"
+    }
+  ]
+}

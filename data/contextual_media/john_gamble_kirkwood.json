@@ -1,0 +1,83 @@
+{
+  "personId": "john_gamble_kirkwood",
+  "personName": "John Gamble Kirkwood",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "gotebo-kiowa-county-oklahoma-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "gotebo-kiowa-county-oklahoma",
+      "badge": "Birth Place",
+      "name": "Gotebo, Kiowa County, Oklahoma",
+      "relevance": "",
+      "featured": true,
+      "lat": 35.0684118,
+      "lng": -98.8702646,
+      "wikimedia": {
+        "fileTitle": "File:Plat book of Kiowa County, Oklahoma - containing maps of villages, cities and townships of the county and of the state, United States and world - also portraits of representative citizens, old LOC 2008622014-37.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Plat_book_of_Kiowa_County%2C_Oklahoma_-_containing_maps_of_villages%2C_cities_and_townships_of_the_county_and_of_the_state%2C_United_States_and_world_-_also_portraits_of_representative_citizens%2C_old_LOC_2008622014-37.jpg/960px-thumbnail.jpg",
+        "attribution": "Wangersheim, W. (William); Wangersheim, W.",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=35.0684118,-98.8702646",
+        "embedUrl": "https://maps.google.com/maps?q=35.0684118,-98.8702646&z=12&output=embed"
+      },
+      "year": "1907"
+    },
+    {
+      "id": "new-haven-connecticut-death",
+      "type": "town",
+      "canonicalPlaceId": "new-haven-connecticut",
+      "badge": "Death",
+      "name": "New Haven, Connecticut",
+      "relevance": "",
+      "featured": false,
+      "lat": 41.3082138,
+      "lng": -72.9250518,
+      "wikipedia": {
+        "title": "New Haven, Connecticut",
+        "url": "https://en.wikipedia.org/wiki/New_Haven%2C_Connecticut",
+        "summary": "New Haven is a city in the U.S. state of Connecticut. It is located on New Haven Harbor on the northern shore of Long Island Sound. With a population of 134,023 at the 2020 census, it is the third-most populous city in Connecticut and the largest in the South Central Connecticut Planning Region, wit"
+      },
+      "wikimedia": {
+        "fileTitle": "File:New Haven, Connecticut - 6524772497.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/New_Haven%2C_Connecticut_-_6524772497.jpg/960px-New_Haven%2C_Connecticut_-_6524772497.jpg",
+        "attribution": "Dougtone",
+        "license": "CC BY-SA 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=41.3082138,-72.9250518",
+        "embedUrl": "https://maps.google.com/maps?q=41.3082138,-72.9250518&z=12&output=embed"
+      },
+      "year": "1959"
+    },
+    {
+      "id": "los-angeles-ca-marriage",
+      "type": "building",
+      "canonicalPlaceId": "los-angeles-ca",
+      "badge": "Marriage",
+      "name": "Los Angeles, CA",
+      "relevance": "",
+      "featured": false,
+      "lat": 34.0536909,
+      "lng": -118.242766,
+      "wikipedia": {
+        "title": "Los Angeles",
+        "url": "https://en.wikipedia.org/wiki/Los_Angeles",
+        "summary": "Los Angeles is the most populous city in the U.S. state of California, and the commercial, financial, and cultural center of Southern California. With an estimated 3.88 million residents within the city limits as of 2024, it is the second-most populous city in the United States, behind New York City"
+      },
+      "wikimedia": {
+        "fileTitle": "File:USS Los Angeles (CA-135) in the Far East, 13 October 1952 (NH 97386).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/USS_Los_Angeles_%28CA-135%29_in_the_Far_East%2C_13_October_1952_%28NH_97386%29.jpg/960px-USS_Los_Angeles_%28CA-135%29_in_the_Far_East%2C_13_October_1952_%28NH_97386%29.jpg",
+        "attribution": "Unknown authorUnknown author",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=34.0536909,-118.242766",
+        "embedUrl": "https://maps.google.com/maps?q=34.0536909,-118.242766&z=12&output=embed"
+      },
+      "year": "1930"
+    }
+  ]
+}

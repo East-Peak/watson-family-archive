@@ -1,0 +1,88 @@
+{
+  "personId": "laures_m_owen",
+  "personName": "Laures M Owen",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "wisconsin-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "wisconsin",
+      "badge": "Birth Place",
+      "name": "Wisconsin",
+      "relevance": "",
+      "featured": true,
+      "lat": 44.4308975,
+      "lng": -89.6884637,
+      "wikipedia": {
+        "title": "Wisconsin",
+        "url": "https://en.wikipedia.org/wiki/Wisconsin",
+        "summary": "Wisconsin is a state in the Upper Midwest and Great Lakes regions of the United States. It borders Minnesota to the west, Iowa to the southwest, Illinois to the south, Lake Michigan to the east, Michigan to the northeast, and Lake Superior to the north. With a population of about 6 million and an ar"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Beaver Dam, Wisconsin Downtown.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Beaver_Dam%2C_Wisconsin_Downtown.jpg/960px-Beaver_Dam%2C_Wisconsin_Downtown.jpg",
+        "attribution": "Downspec",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=44.4308975,-89.6884637",
+        "embedUrl": "https://maps.google.com/maps?q=44.4308975,-89.6884637&z=12&output=embed"
+      },
+      "year": "1901"
+    },
+    {
+      "id": "los-angeles-county-california-death",
+      "type": "town",
+      "canonicalPlaceId": "los-angeles-county-california",
+      "badge": "Death",
+      "name": "Los Angeles County, California",
+      "relevance": "",
+      "featured": false,
+      "lat": 34.3155072,
+      "lng": -118.209681,
+      "wikipedia": {
+        "title": "Los Angeles County, California",
+        "url": "https://en.wikipedia.org/wiki/Los_Angeles_County%2C_California",
+        "summary": "Los Angeles County, sometimes abbreviated as LA County, is the most populous county in the United States, with 9,757,179 residents estimated in 2024. Its population is greater than that of 40 individual U.S. states. Comprising 88 incorporated cities and 101 unincorporated areas within a total area o"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Los Angeles (California, USA), South Olive Street -- 2012 -- 5280.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Los_Angeles_%28California%2C_USA%29%2C_South_Olive_Street_--_2012_--_5280.jpg/960px-Los_Angeles_%28California%2C_USA%29%2C_South_Olive_Street_--_2012_--_5280.jpg",
+        "attribution": "Dietmar Rabich",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=34.3155072,-118.209681",
+        "embedUrl": "https://maps.google.com/maps?q=34.3155072,-118.209681&z=12&output=embed"
+      },
+      "year": "1963"
+    },
+    {
+      "id": "madison-wi-marriage",
+      "type": "building",
+      "canonicalPlaceId": "madison-wi",
+      "badge": "Marriage",
+      "name": "Madison, WI",
+      "relevance": "",
+      "featured": false,
+      "lat": 43.07469,
+      "lng": -89.3841663,
+      "wikipedia": {
+        "title": "Madison, Wisconsin",
+        "url": "https://en.wikipedia.org/wiki/Madison%2C_Wisconsin",
+        "summary": "Madison is the capital of the U.S. state of Wisconsin. It is the second-most populous city in the state, with a population of 269,840 at the 2020 census. The Madison metropolitan area has an estimated 708,000 residents. With a downtown centrally located on an isthmus between Lakes Mendota and Monona"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Cycling Madison Wisconsin 1096.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Cycling_Madison_Wisconsin_1096.jpg/960px-Cycling_Madison_Wisconsin_1096.jpg",
+        "attribution": "Dori",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.07469,-89.3841663",
+        "embedUrl": "https://maps.google.com/maps?q=43.07469,-89.3841663&z=12&output=embed"
+      },
+      "year": "1923"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "personId": "wilhelmine_mueller",
+  "personName": "Wilhelmine Friedrieke Mueller",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "hoff-kreis-greifenberg-pommern-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "hoff-kreis-greifenberg-pommern",
+      "badge": "Birth Place",
+      "name": "Hoff, Kreis Greifenberg, Pommern",
+      "relevance": "",
+      "featured": true,
+      "year": "1827"
+    },
+    {
+      "id": "armstrong-emmet-iowa-death",
+      "type": "town",
+      "canonicalPlaceId": "armstrong-emmet-iowa",
+      "badge": "Death",
+      "name": "Armstrong, Emmet, Iowa",
+      "relevance": "",
+      "featured": false,
+      "lat": 43.3961637,
+      "lng": -94.4801383,
+      "wikimedia": {
+        "fileTitle": "File:IAMap-doton-Armstrong.PNG",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/9/99/IAMap-doton-Armstrong.PNG",
+        "attribution": "The original uploader was Seth Ilys at English Wikipedia.",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.3961637,-94.4801383",
+        "embedUrl": "https://maps.google.com/maps?q=43.3961637,-94.4801383&z=12&output=embed"
+      },
+      "year": "1900"
+    }
+  ]
+}

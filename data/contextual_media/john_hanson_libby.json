@@ -1,0 +1,29 @@
+{
+  "personId": "john_hanson_libby",
+  "personName": "John Hanson Libby",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "columbia-coos-new-hampshire-marriage",
+      "type": "building",
+      "canonicalPlaceId": "columbia-coos-new-hampshire",
+      "badge": "Marriage",
+      "name": "Columbia, Coos, New Hampshire",
+      "relevance": "",
+      "featured": true,
+      "lat": 44.8763918,
+      "lng": -71.5145869,
+      "wikimedia": {
+        "fileTitle": "File:Coos-Columbia-NH.png",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Coos-Columbia-NH.png",
+        "attribution": "Andrew Sawyer",
+        "license": "CC BY 2.5"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=44.8763918,-71.5145869",
+        "embedUrl": "https://maps.google.com/maps?q=44.8763918,-71.5145869&z=12&output=embed"
+      },
+      "year": "1850"
+    }
+  ]
+}

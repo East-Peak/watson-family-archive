@@ -1,0 +1,29 @@
+{
+  "personId": "john_granger",
+  "personName": "John Granger",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "ontario-wayne-new-york-marriage",
+      "type": "building",
+      "canonicalPlaceId": "ontario-wayne-new-york",
+      "badge": "Marriage",
+      "name": "Ontario, Wayne, New York",
+      "relevance": "",
+      "featured": true,
+      "lat": 43.2208968,
+      "lng": -77.2830421,
+      "wikimedia": {
+        "fileTitle": "File:NY104 East - NY350 South Signs - Ontario Center (42054151384).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/NY104_East_-_NY350_South_Signs_-_Ontario_Center_%2842054151384%29.jpg/960px-NY104_East_-_NY350_South_Signs_-_Ontario_Center_%2842054151384%29.jpg",
+        "attribution": "formulanone from Huntsville, United States",
+        "license": "CC BY-SA 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.2208968,-77.2830421",
+        "embedUrl": "https://maps.google.com/maps?q=43.2208968,-77.2830421&z=12&output=embed"
+      },
+      "year": "1835"
+    }
+  ]
+}

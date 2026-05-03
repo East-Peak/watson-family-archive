@@ -1,0 +1,83 @@
+{
+  "personId": "elizabeth_jane_smith",
+  "personName": "Elizabeth Jane Smith",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "tennessee-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "tennessee",
+      "badge": "Birth Place",
+      "name": "Tennessee",
+      "relevance": "",
+      "featured": true,
+      "lat": 35.7730076,
+      "lng": -86.2820081,
+      "wikipedia": {
+        "title": "Tennessee",
+        "url": "https://en.wikipedia.org/wiki/Tennessee",
+        "summary": "Tennessee, officially the State of Tennessee, is a landlocked state in the Southeastern region of the United States. It borders Kentucky to the north, Virginia to the northeast, North Carolina to the east, Georgia, Alabama, and Mississippi to the south, Arkansas to the southwest, and Missouri to the"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Mountaintop Tennessee 3.png",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Mountaintop_Tennessee_3.png",
+        "attribution": "Roastedbeanz1",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=35.7730076,-86.2820081",
+        "embedUrl": "https://maps.google.com/maps?q=35.7730076,-86.2820081&z=12&output=embed"
+      },
+      "year": "1852"
+    },
+    {
+      "id": "los-angeles-ca-death",
+      "type": "town",
+      "canonicalPlaceId": "los-angeles-ca",
+      "badge": "Death",
+      "name": "Los Angeles, CA",
+      "relevance": "",
+      "featured": false,
+      "lat": 34.0536909,
+      "lng": -118.242766,
+      "wikipedia": {
+        "title": "Los Angeles",
+        "url": "https://en.wikipedia.org/wiki/Los_Angeles",
+        "summary": "Los Angeles is the most populous city in the U.S. state of California, and the commercial, financial, and cultural center of Southern California. With an estimated 3.88 million residents within the city limits as of 2024, it is the second-most populous city in the United States, behind New York City"
+      },
+      "wikimedia": {
+        "fileTitle": "File:USS Los Angeles (CA-135) in the Far East, 13 October 1952 (NH 97386).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/USS_Los_Angeles_%28CA-135%29_in_the_Far_East%2C_13_October_1952_%28NH_97386%29.jpg/960px-USS_Los_Angeles_%28CA-135%29_in_the_Far_East%2C_13_October_1952_%28NH_97386%29.jpg",
+        "attribution": "Unknown authorUnknown author",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=34.0536909,-118.242766",
+        "embedUrl": "https://maps.google.com/maps?q=34.0536909,-118.242766&z=12&output=embed"
+      },
+      "year": "1955"
+    },
+    {
+      "id": "forest-lawn-memorial-park-glendale-ca-residence",
+      "type": "town",
+      "canonicalPlaceId": "forest-lawn-memorial-park-glendale-ca",
+      "badge": "Residence",
+      "name": "Forest Lawn Memorial Park, Glendale, CA",
+      "relevance": "",
+      "featured": false,
+      "lat": 34.1245374,
+      "lng": -118.2454971,
+      "wikimedia": {
+        "fileTitle": "File:2013 - View N from East of the Great Mausoleum, Forest Lawn Memorial Park, Glendale, CA - panoramio.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/2013_-_View_N_from_East_of_the_Great_Mausoleum%2C_Forest_Lawn_Memorial_Park%2C_Glendale%2C_CA_-_panoramio.jpg/960px-2013_-_View_N_from_East_of_the_Great_Mausoleum%2C_Forest_Lawn_Memorial_Park%2C_Glendale%2C_CA_-_panoramio.jpg",
+        "attribution": "Chris English",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=34.1245374,-118.2454971",
+        "embedUrl": "https://maps.google.com/maps?q=34.1245374,-118.2454971&z=12&output=embed"
+      },
+      "year": "1955"
+    }
+  ]
+}

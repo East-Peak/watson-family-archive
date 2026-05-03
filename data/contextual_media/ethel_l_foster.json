@@ -1,0 +1,55 @@
+{
+  "personId": "ethel_l_foster",
+  "personName": "Ethel L Foster",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "new-haven-connecticut-death",
+      "type": "town",
+      "canonicalPlaceId": "new-haven-connecticut",
+      "badge": "Death",
+      "name": "New Haven, Connecticut",
+      "relevance": "",
+      "featured": true,
+      "lat": 41.3082138,
+      "lng": -72.9250518,
+      "wikipedia": {
+        "title": "New Haven, Connecticut",
+        "url": "https://en.wikipedia.org/wiki/New_Haven%2C_Connecticut",
+        "summary": "New Haven is a city in the U.S. state of Connecticut. It is located on New Haven Harbor on the northern shore of Long Island Sound. With a population of 134,023 at the 2020 census, it is the third-most populous city in Connecticut and the largest in the South Central Connecticut Planning Region, wit"
+      },
+      "wikimedia": {
+        "fileTitle": "File:New Haven, Connecticut - 6524772497.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/New_Haven%2C_Connecticut_-_6524772497.jpg/960px-New_Haven%2C_Connecticut_-_6524772497.jpg",
+        "attribution": "Dougtone",
+        "license": "CC BY-SA 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=41.3082138,-72.9250518",
+        "embedUrl": "https://maps.google.com/maps?q=41.3082138,-72.9250518&z=12&output=embed"
+      },
+      "year": "1963"
+    },
+    {
+      "id": "victory-new-york-marriage",
+      "type": "building",
+      "canonicalPlaceId": "victory-new-york",
+      "badge": "Marriage",
+      "name": "Victory, New York",
+      "relevance": "",
+      "featured": false,
+      "lat": 43.091857,
+      "lng": -73.5917582,
+      "wikimedia": {
+        "fileTitle": "File:1940 Census Enumeration District Descriptions - New York - Cayuga County - ED 6-82, ED 6-83 - NARA - 5851539.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/1940_Census_Enumeration_District_Descriptions_-_New_York_-_Cayuga_County_-_ED_6-82%2C_ED_6-83_-_NARA_-_5851539.jpg/960px-1940_Census_Enumeration_District_Descriptions_-_New_York_-_Cayuga_County_-_ED_6-82%2C_ED_6-83_-_NARA_-_5851539.jpg",
+        "attribution": "Unknown authorUnknown author or not provided",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.091857,-73.5917582",
+        "embedUrl": "https://maps.google.com/maps?q=43.091857,-73.5917582&z=12&output=embed"
+      }
+    }
+  ]
+}

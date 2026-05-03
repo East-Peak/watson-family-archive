@@ -1,0 +1,34 @@
+{
+  "personId": "minerva_reed",
+  "personName": "Minerva Reed",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "vermont-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "vermont",
+      "badge": "Birth Place",
+      "name": "Vermont",
+      "relevance": "",
+      "featured": true,
+      "lat": 44.5990718,
+      "lng": -72.5002608,
+      "wikipedia": {
+        "title": "Vermont",
+        "url": "https://en.wikipedia.org/wiki/Vermont",
+        "summary": "Vermont is a state in the New England region of the Northeastern United States. It borders Massachusetts to the south, New Hampshire to the east, New York to the west, and the Canadian province of Quebec to the north. According to the most recent U.S. census estimates, the state has an estimated pop"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Londonderry Vermont October 2021 005.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Londonderry_Vermont_October_2021_005.jpg/960px-Londonderry_Vermont_October_2021_005.jpg",
+        "attribution": "King of Hearts",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=44.5990718,-72.5002608",
+        "embedUrl": "https://maps.google.com/maps?q=44.5990718,-72.5002608&z=12&output=embed"
+      },
+      "year": "1817"
+    }
+  ]
+}

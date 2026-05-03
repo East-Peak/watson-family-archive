@@ -1,0 +1,34 @@
+{
+  "personId": "mathew_h_green",
+  "personName": "Mathew H Green",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "northampton-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "northampton",
+      "badge": "Birth Place",
+      "name": "Northampton",
+      "relevance": "",
+      "featured": true,
+      "lat": 52.2343297,
+      "lng": -0.9028043,
+      "wikipedia": {
+        "title": "Northampton",
+        "url": "https://en.wikipedia.org/wiki/Northampton",
+        "summary": "Northampton is a town and civil parish in Northamptonshire, England. It is the county town of Northamptonshire and the administrative centre of the unitary authority of West Northamptonshire. The town is situated on the River Nene, 60 miles (97\u00a0km) north-west of London and 50 miles (80\u00a0km) south-eas"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Northampton massachusetts main street 20040912.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/8/85/Northampton_massachusetts_main_street_20040912.jpg",
+        "attribution": null,
+        "license": "CC BY-SA 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=52.2343297,-0.9028043",
+        "embedUrl": "https://maps.google.com/maps?q=52.2343297,-0.9028043&z=12&output=embed"
+      },
+      "year": "1865"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "personId": "robert_eads_hutchinson",
+  "personName": "Robert Eads Hutchinson",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "covington-campbell-county-kentucky-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "covington-campbell-county-kentucky",
+      "badge": "Birth Place",
+      "name": "Covington, Campbell County, Kentucky",
+      "relevance": "",
+      "featured": true,
+      "lat": 39.064892,
+      "lng": -84.4855886,
+      "wikimedia": {
+        "fileTitle": "File:Campbell County Courthouse, Alexandria, KY (50227307812).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Campbell_County_Courthouse%2C_Alexandria%2C_KY_%2850227307812%29.jpg/960px-Campbell_County_Courthouse%2C_Alexandria%2C_KY_%2850227307812%29.jpg",
+        "attribution": "Warren LeMay from Covington, KY, United States",
+        "license": "CC0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=39.064892,-84.4855886",
+        "embedUrl": "https://maps.google.com/maps?q=39.064892,-84.4855886&z=12&output=embed"
+      },
+      "year": "1817"
+    },
+    {
+      "id": "lineville-wayne-iowa-death",
+      "type": "town",
+      "canonicalPlaceId": "lineville-wayne-iowa",
+      "badge": "Death",
+      "name": "Lineville, Wayne, Iowa",
+      "relevance": "",
+      "featured": false,
+      "lat": 40.5810627,
+      "lng": -93.5241178,
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=40.5810627,-93.5241178",
+        "embedUrl": "https://maps.google.com/maps?q=40.5810627,-93.5241178&z=12&output=embed"
+      },
+      "year": "1892"
+    }
+  ]
+}

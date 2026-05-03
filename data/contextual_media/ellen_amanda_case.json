@@ -1,0 +1,29 @@
+{
+  "personId": "ellen_amanda_case",
+  "personName": "Ellen Amanda Case",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "north-saint-joseph-s-cemetery-malone-franklin-new-york-residence",
+      "type": "town",
+      "canonicalPlaceId": "north-saint-joseph-s-cemetery-malone-franklin-new-york",
+      "badge": "Residence",
+      "name": "North Saint Joseph's Cemetery, Malone, Franklin, New York",
+      "relevance": "",
+      "featured": true,
+      "lat": 44.5599139,
+      "lng": -74.3273735,
+      "wikimedia": {
+        "fileTitle": "File:Early American plays, 1714-1830; a compilation of the titles of plays and dramatic poems written by authors born in or residing in North America previous to 1830 (IA aez2347.0001.001.umich.edu).pdf",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Early_American_plays%2C_1714-1830%3B_a_compilation_of_the_titles_of_plays_and_dramatic_poems_written_by_authors_born_in_or_residing_in_North_America_previous_to_1830_%28IA_aez2347.0001.001.umich.edu%29.pdf/page1-910px-thumbnail.pdf.jpg",
+        "attribution": "Wegelin, Oscar, 1876-1970",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=44.5599139,-74.3273735",
+        "embedUrl": "https://maps.google.com/maps?q=44.5599139,-74.3273735&z=12&output=embed"
+      },
+      "year": "1930"
+    }
+  ]
+}

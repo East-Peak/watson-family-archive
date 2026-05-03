@@ -1,0 +1,29 @@
+{
+  "personId": "ruth_adalaid_case",
+  "personName": "Ruth Adalaid Case",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "peru-clinton-new-york-residence",
+      "type": "town",
+      "canonicalPlaceId": "peru-clinton-new-york",
+      "badge": "Residence",
+      "name": "Peru, Clinton, New York",
+      "relevance": "",
+      "featured": true,
+      "lat": 44.578486,
+      "lng": -73.527031,
+      "wikimedia": {
+        "fileTitle": "File:Quaker records, Peru, Clinton Co., New York (IA quakerrecordsper00fros).pdf",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Quaker_records%2C_Peru%2C_Clinton_Co.%2C_New_York_%28IA_quakerrecordsper00fros%29.pdf/page1-960px-Quaker_records%2C_Peru%2C_Clinton_Co.%2C_New_York_%28IA_quakerrecordsper00fros%29.pdf.jpg",
+        "attribution": "Frost, Josephine C\nSociety of Friends. Peru Monthly Meeting",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=44.578486,-73.527031",
+        "embedUrl": "https://maps.google.com/maps?q=44.578486,-73.527031&z=12&output=embed"
+      },
+      "year": "1940"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "personId": "anne_robert",
+  "personName": "Anne Grimball Robert",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "st-james-parish-craven-county-south-carolina-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "st-james-parish-craven-county-south-carolina",
+      "badge": "Birth Place",
+      "name": "St James Parish, Craven county, South Carolina",
+      "relevance": "",
+      "featured": true,
+      "lat": 35.1286144,
+      "lng": -77.0546444,
+      "wikimedia": {
+        "fileTitle": "File:The annals and parish register of St. Thomas and St. Denis Parish, in South Carolina, from 1680-1884 (IA annalsparishregi00sttho).pdf",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/The_annals_and_parish_register_of_St._Thomas_and_St._Denis_Parish%2C_in_South_Carolina%2C_from_1680-1884_%28IA_annalsparishregi00sttho%29.pdf/page1-722px-The_annals_and_parish_register_of_St._Thomas_and_St._Denis_Parish%2C_in_South_Carolina%2C_from_1680-1884_%28IA_annalsparishregi00sttho%29.pdf.jpg",
+        "attribution": "St. Thomas and St. Denis Parish, South Carolina. [from old catalog]\nClute, Robert F",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=35.1286144,-77.0546444",
+        "embedUrl": "https://maps.google.com/maps?q=35.1286144,-77.0546444&z=12&output=embed"
+      },
+      "year": "1770"
+    }
+  ]
+}

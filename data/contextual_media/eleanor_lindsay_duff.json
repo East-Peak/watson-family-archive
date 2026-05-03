@@ -1,0 +1,83 @@
+{
+  "personId": "eleanor_lindsay_duff",
+  "personName": "Eleanor Lindsay Duff",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "lawrence-county-missouri-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "lawrence-county-missouri",
+      "badge": "Birth Place",
+      "name": "Lawrence County, Missouri",
+      "relevance": "",
+      "featured": true,
+      "lat": 37.1036975,
+      "lng": -93.8535681,
+      "wikipedia": {
+        "title": "Lawrence County, Missouri",
+        "url": "https://en.wikipedia.org/wiki/Lawrence_County%2C_Missouri",
+        "summary": "Lawrence County is located in the southwest portion of the U.S. state of Missouri, in the area of the Ozarks. As of the 2020 census, the population was 38,001. Its county seat is Mount Vernon. The county was organized in 1845 and named for James Lawrence, a naval officer from the War of 1812 known f"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Lawrence County MO Courthouse 20151022-120.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Lawrence_County_MO_Courthouse_20151022-120.jpg/960px-Lawrence_County_MO_Courthouse_20151022-120.jpg",
+        "attribution": "Kbh3rd",
+        "license": "CC BY 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=37.1036975,-93.8535681",
+        "embedUrl": "https://maps.google.com/maps?q=37.1036975,-93.8535681&z=12&output=embed"
+      },
+      "year": "1873"
+    },
+    {
+      "id": "kern-county-california-death",
+      "type": "town",
+      "canonicalPlaceId": "kern-county-california",
+      "badge": "Death",
+      "name": "Kern County, California",
+      "relevance": "",
+      "featured": false,
+      "lat": 35.3145701,
+      "lng": -118.753822,
+      "wikipedia": {
+        "title": "Kern County, California",
+        "url": "https://en.wikipedia.org/wiki/Kern_County%2C_California",
+        "summary": "Kern County is located in the U.S. state of California. As of the 2020 census, the population was 909,235. Its county seat is Bakersfield."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Kern County, California, United States (CAPELLA C02 SP GEO HH 20210106050228 20210106050252).tiff",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Kern_County%2C_California%2C_United_States_%28CAPELLA_C02_SP_GEO_HH_20210106050228_20210106050252%29.tiff/lossy-page1-960px-Kern_County%2C_California%2C_United_States_%28CAPELLA_C02_SP_GEO_HH_20210106050228_20210106050252%29.tiff.jpg",
+        "attribution": "Capella Space",
+        "license": "CC BY 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=35.3145701,-118.753822",
+        "embedUrl": "https://maps.google.com/maps?q=35.3145701,-118.753822&z=12&output=embed"
+      },
+      "year": "1950"
+    },
+    {
+      "id": "rose-hills-memorial-park-whittier-ca-residence",
+      "type": "town",
+      "canonicalPlaceId": "rose-hills-memorial-park-whittier-ca",
+      "badge": "Residence",
+      "name": "Rose Hills Memorial Park, Whittier, CA",
+      "relevance": "",
+      "featured": false,
+      "lat": 33.9749136,
+      "lng": -118.0338664,
+      "wikimedia": {
+        "fileTitle": "File:Henry T Nicholas-Steve Ipsen-Justice for Homicide Victims Memorial-marsys law for all.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Henry_T_Nicholas-Steve_Ipsen-Justice_for_Homicide_Victims_Memorial-marsys_law_for_all.jpg/960px-Henry_T_Nicholas-Steve_Ipsen-Justice_for_Homicide_Victims_Memorial-marsys_law_for_all.jpg",
+        "attribution": "Dstringer71",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=33.9749136,-118.0338664",
+        "embedUrl": "https://maps.google.com/maps?q=33.9749136,-118.0338664&z=12&output=embed"
+      },
+      "year": "1950"
+    }
+  ]
+}

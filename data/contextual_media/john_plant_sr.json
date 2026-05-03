@@ -1,0 +1,61 @@
+{
+  "personId": "john_plant_sr",
+  "personName": "John Plant",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "england-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "england",
+      "badge": "Birth Place",
+      "name": "England",
+      "relevance": "",
+      "featured": true,
+      "lat": 52.5310214,
+      "lng": -1.2649062,
+      "wikipedia": {
+        "title": "England",
+        "url": "https://en.wikipedia.org/wiki/England",
+        "summary": "England is a country that is part of the United Kingdom. It is located on the island of Great Britain, of which it covers about 62%, and more than 100 smaller adjacent islands. England shares a land border with Scotland to the north and another land border with Wales to the west, and is surrounded b"
+      },
+      "wikimedia": {
+        "fileTitle": "File:England satellite image.png",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b1/England_satellite_image.png",
+        "attribution": "Jacques Descloitres, MODIS Land Rapid Response Team, NASA/GSFC",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=52.5310214,-1.2649062",
+        "embedUrl": "https://maps.google.com/maps?q=52.5310214,-1.2649062&z=12&output=embed"
+      },
+      "year": "1650"
+    },
+    {
+      "id": "branford-connecticut-death",
+      "type": "town",
+      "canonicalPlaceId": "branford-connecticut",
+      "badge": "Death",
+      "name": "Branford, Connecticut",
+      "relevance": "",
+      "featured": false,
+      "lat": 41.2795414,
+      "lng": -72.8150989,
+      "wikipedia": {
+        "title": "Branford, Connecticut",
+        "url": "https://en.wikipedia.org/wiki/Branford%2C_Connecticut",
+        "summary": "Branford is a shoreline town located on Long Island Sound in New Haven County, Connecticut, United States, about 6 miles (10\u00a0km) east of downtown New Haven. The town is part of the South Central Connecticut Planning Region. Branford borders East Haven to the west, Guilford to the east, and North Bra"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Branford, Connecticut town hall and courthouse.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Branford%2C_Connecticut_town_hall_and_courthouse.jpg/960px-Branford%2C_Connecticut_town_hall_and_courthouse.jpg",
+        "attribution": "Kenneth Zirkel",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=41.2795414,-72.8150989",
+        "embedUrl": "https://maps.google.com/maps?q=41.2795414,-72.8150989&z=12&output=embed"
+      },
+      "year": "1691"
+    }
+  ]
+}

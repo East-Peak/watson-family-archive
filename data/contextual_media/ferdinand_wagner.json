@@ -1,0 +1,121 @@
+{
+  "personId": "ferdinand_wagner",
+  "personName": "Ferdinand Wagner",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "alt-lietzegoerike-brandenburg-prussia-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "alt-lietzegoerike-brandenburg-prussia",
+      "badge": "Birth Place",
+      "name": "Alt Lietzegoerike, Brandenburg, Prussia",
+      "relevance": "",
+      "featured": true,
+      "lat": 52.02248,
+      "lng": 13.1039308,
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=52.02248,13.1039308",
+        "embedUrl": "https://maps.google.com/maps?q=52.02248,13.1039308&z=12&output=embed"
+      },
+      "year": "1827"
+    },
+    {
+      "id": "watertown-jefferson-wisconsin-death",
+      "type": "town",
+      "canonicalPlaceId": "watertown-jefferson-wisconsin",
+      "badge": "Death",
+      "name": "Watertown, Jefferson, Wisconsin",
+      "relevance": "",
+      "featured": false,
+      "lat": 43.194335,
+      "lng": -88.7241822,
+      "wikimedia": {
+        "fileTitle": "File:Watertown, Jefferson Co., Wisconsin 1867. LOC 73694555.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Watertown%2C_Jefferson_Co.%2C_Wisconsin_1867._LOC_73694555.jpg/960px-Watertown%2C_Jefferson_Co.%2C_Wisconsin_1867._LOC_73694555.jpg",
+        "attribution": "Ruger, A.; Chicago Lithographing Co.",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.194335,-88.7241822",
+        "embedUrl": "https://maps.google.com/maps?q=43.194335,-88.7241822&z=12&output=embed"
+      },
+      "year": "1904"
+    },
+    {
+      "id": "prussia-residence",
+      "type": "town",
+      "canonicalPlaceId": "prussia",
+      "badge": "Residence",
+      "name": "Prussia",
+      "relevance": "",
+      "featured": false,
+      "lat": 41.3738765,
+      "lng": -94.506357,
+      "wikipedia": {
+        "title": "Prussia",
+        "url": "https://en.wikipedia.org/wiki/Prussia",
+        "summary": "Prussia was a German state centred on the North European Plain. It originated from the 1525 secularization act of the Prussian part of the State of the Teutonic Order. For centuries, the House of Hohenzollern ruled Prussia, expanding its size with the Prussian Army. Prussia, with its capital at K\u00f6ni"
+      },
+      "wikimedia": {
+        "fileTitle": "File:C. 1890 Prussia (1415-1890).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/C._1890_Prussia_%281415-1890%29.jpg/960px-C._1890_Prussia_%281415-1890%29.jpg",
+        "attribution": "Alexander Keith Johnston",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=41.3738765,-94.506357",
+        "embedUrl": "https://maps.google.com/maps?q=41.3738765,-94.506357&z=12&output=embed"
+      },
+      "year": "1827"
+    },
+    {
+      "id": "germany-residence",
+      "type": "town",
+      "canonicalPlaceId": "germany",
+      "badge": "Residence",
+      "name": "Germany",
+      "relevance": "",
+      "featured": false,
+      "lat": 51.1638175,
+      "lng": 10.4478313,
+      "wikipedia": {
+        "title": "Germany",
+        "url": "https://en.wikipedia.org/wiki/Germany",
+        "summary": "Germany, officially the Federal Republic of Germany, is a country in Western and Central Europe. It lies between the Baltic Sea and the North Sea to the north with the Alps to the south. Its sixteen constituent states have a total population of over 82 million, making it the most populous member sta"
+      },
+      "wikimedia": {
+        "fileTitle": "File:SonyCenterAtNight.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/SonyCenterAtNight.jpg/960px-SonyCenterAtNight.jpg",
+        "attribution": "Andreas Tille",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=51.1638175,10.4478313",
+        "embedUrl": "https://maps.google.com/maps?q=51.1638175,10.4478313&z=12&output=embed"
+      },
+      "year": "1828"
+    },
+    {
+      "id": "lebanon-dodge-wi-residence",
+      "type": "town",
+      "canonicalPlaceId": "lebanon-dodge-wi",
+      "badge": "Residence",
+      "name": "Lebanon, Dodge, WI",
+      "relevance": "",
+      "featured": false,
+      "lat": 43.2400321,
+      "lng": -88.5959276,
+      "wikimedia": {
+        "fileTitle": "File:LebanonWisconsinFireDepartment.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/LebanonWisconsinFireDepartment.jpg/960px-LebanonWisconsinFireDepartment.jpg",
+        "attribution": "Royalbroil",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.2400321,-88.5959276",
+        "embedUrl": "https://maps.google.com/maps?q=43.2400321,-88.5959276&z=12&output=embed"
+      },
+      "year": "1850"
+    }
+  ]
+}

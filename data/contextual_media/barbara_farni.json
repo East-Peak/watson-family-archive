@@ -1,0 +1,51 @@
+{
+  "personId": "barbara_farni",
+  "personName": "Barbara Farni",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "steffisburg-bern-switzerland-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "steffisburg-bern-switzerland",
+      "badge": "Birth Place",
+      "name": "Steffisburg, Bern, Switzerland",
+      "relevance": "",
+      "featured": true,
+      "lat": 46.7774738,
+      "lng": 7.6354195,
+      "wikimedia": {
+        "fileTitle": "File:Steffisburg blick.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Steffisburg_blick.jpg/960px-Steffisburg_blick.jpg",
+        "attribution": "Clark park at de.wikipedia",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=46.7774738,7.6354195",
+        "embedUrl": "https://maps.google.com/maps?q=46.7774738,7.6354195&z=12&output=embed"
+      },
+      "year": "1631"
+    },
+    {
+      "id": "bern-bern-switzerland-death",
+      "type": "town",
+      "canonicalPlaceId": "bern-bern-switzerland",
+      "badge": "Death",
+      "name": "Bern, Bern, Switzerland",
+      "relevance": "",
+      "featured": false,
+      "lat": 46.9484742,
+      "lng": 7.4521749,
+      "wikimedia": {
+        "fileTitle": "File:Aare river in Bern.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Aare_river_in_Bern.jpg/960px-Aare_river_in_Bern.jpg",
+        "attribution": "Paranoid",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=46.9484742,7.4521749",
+        "embedUrl": "https://maps.google.com/maps?q=46.9484742,7.4521749&z=12&output=embed"
+      },
+      "year": "1695"
+    }
+  ]
+}

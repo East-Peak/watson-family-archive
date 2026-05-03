@@ -1,0 +1,29 @@
+{
+  "personId": "william_fry_iv",
+  "personName": "William Samuel John Fry IV",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "bristol-somerset-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "bristol-somerset",
+      "badge": "Birth Place",
+      "name": "Bristol, Somerset",
+      "relevance": "",
+      "featured": true,
+      "lat": 41.7695463,
+      "lng": -71.128656,
+      "wikimedia": {
+        "fileTitle": "File:Stockland Bristol from the east - geograph.org.uk - 95684.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Stockland_Bristol_from_the_east_-_geograph.org.uk_-_95684.jpg",
+        "attribution": "Martin Southwood",
+        "license": "CC BY-SA 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=41.7695463,-71.128656",
+        "embedUrl": "https://maps.google.com/maps?q=41.7695463,-71.128656&z=12&output=embed"
+      },
+      "year": "1723"
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "personId": "william_million",
+  "personName": "William Million",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "middlesex-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "middlesex",
+      "badge": "Birth Place",
+      "name": "Middlesex",
+      "relevance": "",
+      "featured": true,
+      "lat": 51.5460558,
+      "lng": -0.2537791,
+      "wikipedia": {
+        "title": "Middlesex",
+        "url": "https://en.wikipedia.org/wiki/Middlesex",
+        "summary": "Middlesex is one of the historic counties of England. It ceased to be an administrative county in 1965 following the passing of the London Government Act 1963. The historic county boundaries largely follow three rivers: the Thames in the south, the Lea to the east and the Colne to the west, with a l"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Middlesex-Morden-1695.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Middlesex-Morden-1695.jpg/960px-Middlesex-Morden-1695.jpg",
+        "attribution": "Robert Morden",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=51.5460558,-0.2537791",
+        "embedUrl": "https://maps.google.com/maps?q=51.5460558,-0.2537791&z=12&output=embed"
+      },
+      "year": "1600"
+    },
+    {
+      "id": "northampton-county-virginia-death",
+      "type": "town",
+      "canonicalPlaceId": "northampton-county-virginia",
+      "badge": "Death",
+      "name": "Northampton County, Virginia",
+      "relevance": "",
+      "featured": false,
+      "lat": 37.3688433,
+      "lng": -75.9265679,
+      "wikipedia": {
+        "title": "Northampton County, Virginia",
+        "url": "https://en.wikipedia.org/wiki/Northampton_County%2C_Virginia",
+        "summary": "Northampton County is a county located in the Commonwealth of Virginia. As of the 2020 census, the population was 12,282. Its county seat is Eastville. Northampton and Accomack Counties are a part of the larger Eastern Shore of Virginia."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Old Birds' Nest Tavern, Marionville vicinity, Northampton County, Virginia. People on porch.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Old_Birds%27_Nest_Tavern%2C_Marionville_vicinity%2C_Northampton_County%2C_Virginia._People_on_porch.jpg",
+        "attribution": "Johnston, Frances Benjamin, 1864-1952, photographer",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=37.3688433,-75.9265679",
+        "embedUrl": "https://maps.google.com/maps?q=37.3688433,-75.9265679&z=12&output=embed"
+      },
+      "year": "1643"
+    }
+  ]
+}

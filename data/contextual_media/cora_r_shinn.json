@@ -1,0 +1,105 @@
+{
+  "personId": "cora_r_shinn",
+  "personName": "Cora R Shinn",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "illinois-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "illinois",
+      "badge": "Birth Place",
+      "name": "Illinois",
+      "relevance": "",
+      "featured": true,
+      "lat": 40.0796606,
+      "lng": -89.4337288,
+      "wikipedia": {
+        "title": "Illinois",
+        "url": "https://en.wikipedia.org/wiki/Illinois",
+        "summary": "Illinois is a state in the Midwestern region of the United States. It borders on Lake Michigan to its northeast, the Mississippi River to its west, and the Wabash and Ohio rivers to its south. Of the fifty U.S. states, Illinois has the fifth-largest gross domestic product (GDP), the sixth-largest po"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Skyline de Chicago desde el centro, Illinois, Estados Unidos, 2012-10-20, DD 06.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Skyline_de_Chicago_desde_el_centro%2C_Illinois%2C_Estados_Unidos%2C_2012-10-20%2C_DD_06.jpg/960px-Skyline_de_Chicago_desde_el_centro%2C_Illinois%2C_Estados_Unidos%2C_2012-10-20%2C_DD_06.jpg",
+        "attribution": "Diego Delso",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=40.0796606,-89.4337288",
+        "embedUrl": "https://maps.google.com/maps?q=40.0796606,-89.4337288&z=12&output=embed"
+      },
+      "year": "1859"
+    },
+    {
+      "id": "whitley-moultrie-il-residence",
+      "type": "town",
+      "canonicalPlaceId": "whitley-moultrie-il",
+      "badge": "Residence",
+      "name": "Whitley, Moultrie, IL",
+      "relevance": "",
+      "featured": false,
+      "lat": 39.5410828,
+      "lng": -88.6270141,
+      "wikimedia": {
+        "fileTitle": "File:1940 Census Enumeration District Descriptions - Illinois - Moultrie County - ED 70-16, ED 70-17 - NARA - 5848184.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/1940_Census_Enumeration_District_Descriptions_-_Illinois_-_Moultrie_County_-_ED_70-16%2C_ED_70-17_-_NARA_-_5848184.jpg/960px-1940_Census_Enumeration_District_Descriptions_-_Illinois_-_Moultrie_County_-_ED_70-16%2C_ED_70-17_-_NARA_-_5848184.jpg",
+        "attribution": "Unknown authorUnknown author or not provided",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=39.5410828,-88.6270141",
+        "embedUrl": "https://maps.google.com/maps?q=39.5410828,-88.6270141&z=12&output=embed"
+      },
+      "year": "1880"
+    },
+    {
+      "id": "tulare-ca-residence",
+      "type": "town",
+      "canonicalPlaceId": "tulare-ca",
+      "badge": "Residence",
+      "name": "Tulare, CA",
+      "relevance": "",
+      "featured": false,
+      "lat": 36.2516475,
+      "lng": -118.852583,
+      "wikipedia": {
+        "title": "Tulare, California",
+        "url": "https://en.wikipedia.org/wiki/Tulare%2C_California",
+        "summary": "Tulare is a city in Tulare County, California, United States. The population was 68,875 per the 2020 census. It is located in the heart of the San Joaquin Valley, 8\u00a0mi (13\u00a0km) south of Visalia and 60\u00a0mi (97\u00a0km) north of Bakersfield. The city is named after the Tulare Lake, once the largest freshwate"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Santa Fe R.R. Depot, Tulare, California.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Santa_Fe_R.R._Depot%2C_Tulare%2C_California.jpg/960px-Santa_Fe_R.R._Depot%2C_Tulare%2C_California.jpg",
+        "attribution": "Published by Edward H. Mitchell",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=36.2516475,-118.852583",
+        "embedUrl": "https://maps.google.com/maps?q=36.2516475,-118.852583&z=12&output=embed"
+      },
+      "year": "1920"
+    },
+    {
+      "id": "beverly-hills-los-angeles-ca-residence",
+      "type": "town",
+      "canonicalPlaceId": "beverly-hills-los-angeles-ca",
+      "badge": "Residence",
+      "name": "Beverly Hills, Los Angeles, CA",
+      "relevance": "",
+      "featured": false,
+      "lat": 34.0696501,
+      "lng": -118.3963062,
+      "wikimedia": {
+        "fileTitle": "File:Beverly Hills, Los Angeles - CA - shopping.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Beverly_Hills%2C_Los_Angeles_-_CA_-_shopping.jpg/960px-Beverly_Hills%2C_Los_Angeles_-_CA_-_shopping.jpg",
+        "attribution": "Sidvics",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=34.0696501,-118.3963062",
+        "embedUrl": "https://maps.google.com/maps?q=34.0696501,-118.3963062&z=12&output=embed"
+      },
+      "year": "1930"
+    }
+  ]
+}

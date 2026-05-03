@@ -1,0 +1,29 @@
+{
+  "personId": "john_donahoe",
+  "personName": "John Donahoe",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "our-lady-of-the-lake-cemetery-king-ferry-cayuga-new-york-residence",
+      "type": "town",
+      "canonicalPlaceId": "our-lady-of-the-lake-cemetery-king-ferry-cayuga-new-york",
+      "badge": "Residence",
+      "name": "Our Lady of the Lake Cemetery, King Ferry, Cayuga, New York",
+      "relevance": "",
+      "featured": true,
+      "lat": 42.6660431,
+      "lng": -76.6226474,
+      "wikimedia": {
+        "fileTitle": "File:The travellers' hand book for the state of New-York and the province of Canada, with maps, &c (IA travellershandbo01tann).pdf",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/The_travellers%27_hand_book_for_the_state_of_New-York_and_the_province_of_Canada%2C_with_maps%2C_%26c_%28IA_travellershandbo01tann%29.pdf/page1-533px-The_travellers%27_hand_book_for_the_state_of_New-York_and_the_province_of_Canada%2C_with_maps%2C_%26c_%28IA_travellershandbo01tann%29.pdf.jpg",
+        "attribution": "Tanner, Henry Schenck, 1786-1858",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=42.6660431,-76.6226474",
+        "embedUrl": "https://maps.google.com/maps?q=42.6660431,-76.6226474&z=12&output=embed"
+      },
+      "year": "1892"
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "personId": "harry_jenkins_jr",
+  "personName": "Harry Jenkins Jr",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "pennsylvania-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "pennsylvania",
+      "badge": "Birth Place",
+      "name": "Pennsylvania",
+      "relevance": "",
+      "featured": true,
+      "lat": 40.9699889,
+      "lng": -77.7278831,
+      "wikipedia": {
+        "title": "Pennsylvania",
+        "url": "https://en.wikipedia.org/wiki/Pennsylvania",
+        "summary": "Pennsylvania, officially the Commonwealth of Pennsylvania, is a state located in the Mid-Atlantic, Northeastern, Appalachian, and Great Lakes regions of the United States. It borders Delaware to its southeast, Maryland to its south, forming the Mason-Dixon Line, West Virginia to its southwest, Ohio "
+      },
+      "wikimedia": {
+        "fileTitle": "File:Pennsylvania Winter Sunset.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Pennsylvania_Winter_Sunset.jpg/960px-Pennsylvania_Winter_Sunset.jpg",
+        "attribution": "Andrew Crouthamel",
+        "license": "CC BY-SA 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=40.9699889,-77.7278831",
+        "embedUrl": "https://maps.google.com/maps?q=40.9699889,-77.7278831&z=12&output=embed"
+      },
+      "year": "1914"
+    },
+    {
+      "id": "montgomery-county-pennsylvania-residence",
+      "type": "town",
+      "canonicalPlaceId": "montgomery-county-pennsylvania",
+      "badge": "Residence",
+      "name": "Montgomery County, Pennsylvania",
+      "relevance": "",
+      "featured": false,
+      "lat": 40.2154361,
+      "lng": -75.3702305,
+      "wikipedia": {
+        "title": "Montgomery County, Pennsylvania",
+        "url": "https://en.wikipedia.org/wiki/Montgomery_County%2C_Pennsylvania",
+        "summary": "Montgomery County, colloquially referred to as Montco, is in the Commonwealth of Pennsylvania. As of the 2020 census, the population of the county was 856,553, making it the third-most populous county in Pennsylvania after Philadelphia and Allegheny counties and the most populous county in Pennsylva"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Montgomery County Courthouse Pennsylvania - Douglas Muth.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Montgomery_County_Courthouse_Pennsylvania_-_Douglas_Muth.jpg/960px-Montgomery_County_Courthouse_Pennsylvania_-_Douglas_Muth.jpg",
+        "attribution": "Douglas Muth",
+        "license": "CC BY-SA 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=40.2154361,-75.3702305",
+        "embedUrl": "https://maps.google.com/maps?q=40.2154361,-75.3702305&z=12&output=embed"
+      },
+      "year": "1989"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "personId": "mary_warfield_howard",
+  "personName": "Mary Warfield",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "anne-arundel-md-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "anne-arundel-md",
+      "badge": "Birth Place",
+      "name": "Anne Arundel, MD",
+      "relevance": "",
+      "featured": true,
+      "lat": 38.9722583,
+      "lng": -76.573454,
+      "wikimedia": {
+        "fileTitle": "File:PRIMROSE HILL, ANNAPOLIS, ANNE ARUNDEL COUNTY, MD.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/PRIMROSE_HILL%2C_ANNAPOLIS%2C_ANNE_ARUNDEL_COUNTY%2C_MD.jpg/960px-PRIMROSE_HILL%2C_ANNAPOLIS%2C_ANNE_ARUNDEL_COUNTY%2C_MD.jpg",
+        "attribution": "JERRYE &amp; ROY KLOTZ, M.D.",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=38.9722583,-76.573454",
+        "embedUrl": "https://maps.google.com/maps?q=38.9722583,-76.573454&z=12&output=embed"
+      },
+      "year": "1675"
+    },
+    {
+      "id": "anne-arundel-county-province-of-maryland-marriage",
+      "type": "building",
+      "canonicalPlaceId": "anne-arundel-county-province-of-maryland",
+      "badge": "Marriage",
+      "name": "Anne Arundel County, Province of Maryland",
+      "relevance": "",
+      "featured": false,
+      "year": "1695"
+    }
+  ]
+}

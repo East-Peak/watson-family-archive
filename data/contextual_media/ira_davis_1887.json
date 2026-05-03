@@ -1,0 +1,34 @@
+{
+  "personId": "ira_davis_1887",
+  "personName": "Ira Davis",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "redlands-california-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "redlands-california",
+      "badge": "Birth Place",
+      "name": "Redlands, California",
+      "relevance": "",
+      "featured": true,
+      "lat": 34.0550328,
+      "lng": -117.1827445,
+      "wikipedia": {
+        "title": "Redlands, California",
+        "url": "https://en.wikipedia.org/wiki/Redlands%2C_California",
+        "summary": "Redlands is a city in San Bernardino County, California, United States. As of the 2020 census, the city had a population of 73,168, up from 68,747 at the 2010 census. The city is located approximately 70 miles (110\u00a0km) northwest of Indio and 63 miles (101\u00a0km) east of Los Angeles."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Redlands, California, from Smiley's Heights (NBY 1550).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Redlands%2C_California%2C_from_Smiley%27s_Heights_%28NBY_1550%29.jpg",
+        "attribution": "Unknown authorUnknown author",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=34.0550328,-117.1827445",
+        "embedUrl": "https://maps.google.com/maps?q=34.0550328,-117.1827445&z=12&output=embed"
+      },
+      "year": "1887"
+    }
+  ]
+}

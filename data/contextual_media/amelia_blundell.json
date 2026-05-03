@@ -1,0 +1,34 @@
+{
+  "personId": "amelia_blundell",
+  "personName": "Amelia Blundell",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "lancashire-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "lancashire",
+      "badge": "Birth Place",
+      "name": "Lancashire",
+      "relevance": "",
+      "featured": true,
+      "lat": 53.8611712,
+      "lng": -2.5650945,
+      "wikipedia": {
+        "title": "Lancashire",
+        "url": "https://en.wikipedia.org/wiki/Lancashire",
+        "summary": "Lancashire is a ceremonial county in North West England. It is bordered by Cumbria to the north, North Yorkshire and West Yorkshire to the east, Greater Manchester and Merseyside to the south, and the Irish Sea to the west. The largest settlement is the city of Preston."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Lancashire 1610 Speed Hondius - Restoration.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Lancashire_1610_Speed_Hondius_-_Restoration.jpg/960px-Lancashire_1610_Speed_Hondius_-_Restoration.jpg",
+        "attribution": "Jodocus Hondius, engraved by John Speed, and restored by Adam Cuerden\n\n\n\n\n\n\nThis  is a retouched picture, which means that it has been digitally altered from its original version. Modifications: Dirt cleaned up, levels adjusted, rotated..",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=53.8611712,-2.5650945",
+        "embedUrl": "https://maps.google.com/maps?q=53.8611712,-2.5650945&z=12&output=embed"
+      },
+      "year": "1811"
+    }
+  ]
+}

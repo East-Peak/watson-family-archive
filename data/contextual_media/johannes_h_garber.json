@@ -1,0 +1,51 @@
+{
+  "personId": "johannes_h_garber",
+  "personName": "Johannes H. Garber",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "amsoldingen-bern-switzerland-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "amsoldingen-bern-switzerland",
+      "badge": "Birth Place",
+      "name": "Amsoldingen, Bern, Switzerland",
+      "relevance": "",
+      "featured": true,
+      "lat": 46.7280729,
+      "lng": 7.5814651,
+      "wikimedia": {
+        "fileTitle": "File:SchlossAmsoldingen 6354.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/SchlossAmsoldingen_6354.jpg/960px-SchlossAmsoldingen_6354.jpg",
+        "attribution": "Mike Lehmann, Mike Switzerland 15:28, 15 October 2006 (UTC)",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=46.7280729,7.5814651",
+        "embedUrl": "https://maps.google.com/maps?q=46.7280729,7.5814651&z=12&output=embed"
+      },
+      "year": "1717"
+    },
+    {
+      "id": "forestville-shenandoah-county-virginia-death",
+      "type": "town",
+      "canonicalPlaceId": "forestville-shenandoah-county-virginia",
+      "badge": "Death",
+      "name": "Forestville, Shenandoah County, Virginia",
+      "relevance": "",
+      "featured": false,
+      "lat": 38.715247,
+      "lng": -78.7217562,
+      "wikimedia": {
+        "fileTitle": "File:2016-07-19 10 54 16 View south along Virginia State Route 42 (Senedo Road) just south of Qucksburg Road (Virginia State Secondary Route 767) and Middle Road (Virginia State Secondary Route 614) in Forestville, Shenandoah County, Virginia.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/2016-07-19_10_54_16_View_south_along_Virginia_State_Route_42_%28Senedo_Road%29_just_south_of_Qucksburg_Road_%28Virginia_State_Secondary_Route_767%29_and_Middle_Road_%28Virginia_State_Secondary_Route_614%29_in_Forestville%2C_Shenandoah_County%2C_Virginia.jpg/960px-thumbnail.jpg",
+        "attribution": "Famartin",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=38.715247,-78.7217562",
+        "embedUrl": "https://maps.google.com/maps?q=38.715247,-78.7217562&z=12&output=embed"
+      },
+      "year": "1787"
+    }
+  ]
+}

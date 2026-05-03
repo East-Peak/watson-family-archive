@@ -1,0 +1,29 @@
+{
+  "personId": "anna_maria_slack",
+  "personName": "Anna Maria Slack",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "pinconning-bay-michigan-marriage",
+      "type": "building",
+      "canonicalPlaceId": "pinconning-bay-michigan",
+      "badge": "Marriage",
+      "name": "Pinconning, Bay, Michigan",
+      "relevance": "",
+      "featured": true,
+      "lat": 43.853633,
+      "lng": -83.964987,
+      "wikimedia": {
+        "fileTitle": "File:MIMap-doton-Pinconning.PNG",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/5/54/MIMap-doton-Pinconning.PNG",
+        "attribution": "The original uploader was Seth Ilys at English Wikipedia.",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.853633,-83.964987",
+        "embedUrl": "https://maps.google.com/maps?q=43.853633,-83.964987&z=12&output=embed"
+      },
+      "year": "1890"
+    }
+  ]
+}

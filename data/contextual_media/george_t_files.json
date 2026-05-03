@@ -1,0 +1,56 @@
+{
+  "personId": "george_t_files",
+  "personName": "George T Files",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "iowa-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "iowa",
+      "badge": "Birth Place",
+      "name": "Iowa",
+      "relevance": "",
+      "featured": true,
+      "lat": 41.9216734,
+      "lng": -93.3122705,
+      "wikipedia": {
+        "title": "Iowa",
+        "url": "https://en.wikipedia.org/wiki/Iowa",
+        "summary": "Iowa is a landlocked state in the upper Midwestern region of the United States. It borders the Mississippi River to the east and the Missouri River and Big Sioux River to the west; Wisconsin to the northeast, Illinois to the east and southeast, Missouri to the south, Nebraska to the west, South Dako"
+      },
+      "wikimedia": {
+        "fileTitle": "File:High Trestle Trail Bridge, Madrid, Iowa, United States (Unsplash F9o7u-CnDJk).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/High_Trestle_Trail_Bridge%2C_Madrid%2C_Iowa%2C_United_States_%28Unsplash_F9o7u-CnDJk%29.jpg/960px-High_Trestle_Trail_Bridge%2C_Madrid%2C_Iowa%2C_United_States_%28Unsplash_F9o7u-CnDJk%29.jpg",
+        "attribution": "Tony Webster tonywebster",
+        "license": "CC0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=41.9216734,-93.3122705",
+        "embedUrl": "https://maps.google.com/maps?q=41.9216734,-93.3122705&z=12&output=embed"
+      },
+      "year": "1861"
+    },
+    {
+      "id": "walla-walla-walla-walla-county-wa-death",
+      "type": "town",
+      "canonicalPlaceId": "walla-walla-walla-walla-county-wa",
+      "badge": "Death",
+      "name": "Walla Walla, Walla Walla County, Wa.",
+      "relevance": "",
+      "featured": false,
+      "lat": 46.0667277,
+      "lng": -118.339345,
+      "wikimedia": {
+        "fileTitle": "File:Ransom Clark Cabin, Walla Walla, Walla Walla County, WA HABS WASH,36-WAL.V,1-1.tif",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Ransom_Clark_Cabin%2C_Walla_Walla%2C_Walla_Walla_County%2C_WA_HABS_WASH%2C36-WAL.V%2C1-1.tif/lossy-page1-960px-Ransom_Clark_Cabin%2C_Walla_Walla%2C_Walla_Walla_County%2C_WA_HABS_WASH%2C36-WAL.V%2C1-1.tif.jpg",
+        "attribution": null,
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=46.0667277,-118.339345",
+        "embedUrl": "https://maps.google.com/maps?q=46.0667277,-118.339345&z=12&output=embed"
+      },
+      "year": "1940"
+    }
+  ]
+}

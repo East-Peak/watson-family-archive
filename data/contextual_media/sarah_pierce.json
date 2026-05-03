@@ -1,0 +1,61 @@
+{
+  "personId": "sarah_pierce",
+  "personName": "Sarah Pierce",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "england-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "england",
+      "badge": "Birth Place",
+      "name": "England",
+      "relevance": "",
+      "featured": true,
+      "lat": 52.5310214,
+      "lng": -1.2649062,
+      "wikipedia": {
+        "title": "England",
+        "url": "https://en.wikipedia.org/wiki/England",
+        "summary": "England is a country that is part of the United Kingdom. It is located on the island of Great Britain, of which it covers about 62%, and more than 100 smaller adjacent islands. England shares a land border with Scotland to the north and another land border with Wales to the west, and is surrounded b"
+      },
+      "wikimedia": {
+        "fileTitle": "File:England satellite image.png",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b1/England_satellite_image.png",
+        "attribution": "Jacques Descloitres, MODIS Land Rapid Response Team, NASA/GSFC",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=52.5310214,-1.2649062",
+        "embedUrl": "https://maps.google.com/maps?q=52.5310214,-1.2649062&z=12&output=embed"
+      },
+      "year": "1785"
+    },
+    {
+      "id": "prince-edward-county-ontario-canada-death",
+      "type": "town",
+      "canonicalPlaceId": "prince-edward-county-ontario-canada",
+      "badge": "Death",
+      "name": "Prince Edward County, Ontario, Canada",
+      "relevance": "",
+      "featured": false,
+      "lat": 44.031827,
+      "lng": -77.246933,
+      "wikipedia": {
+        "title": "Prince Edward County, Ontario",
+        "url": "https://en.wikipedia.org/wiki/Prince_Edward_County%2C_Ontario",
+        "summary": "Prince Edward County (PEC) is a single-tier municipality in southern Ontario, Canada. Its coastline on Lake Ontario\u2019s northeastern shore is known for Sandbanks Provincial Park, sand beaches, and limestone cliffs. The Regent Theatre, a restored Edwardian Opera House, sits at the heart of the town of "
+      },
+      "wikimedia": {
+        "fileTitle": "File:Lake Ontario - Prince Edward County.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Lake_Ontario_-_Prince_Edward_County.jpg/960px-Lake_Ontario_-_Prince_Edward_County.jpg",
+        "attribution": "The Cosmonaut",
+        "license": "CC BY-SA 2.5 ca"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=44.031827,-77.246933",
+        "embedUrl": "https://maps.google.com/maps?q=44.031827,-77.246933&z=12&output=embed"
+      },
+      "year": "1868"
+    }
+  ]
+}

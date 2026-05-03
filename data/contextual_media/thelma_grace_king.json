@@ -1,0 +1,27 @@
+{
+  "personId": "thelma_grace_king",
+  "personName": "Thelma Grace King",
+  "generatedAt": "2026-03-22T21:00:47.123Z",
+  "items": [
+    {
+      "id": "illinois-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "illinois",
+      "badge": "Birth Place",
+      "name": "Illinois",
+      "relevance": "",
+      "featured": true,
+      "year": "1911"
+    },
+    {
+      "id": "moro-bay-ca-death",
+      "type": "town",
+      "canonicalPlaceId": "moro-bay-ca",
+      "badge": "Death",
+      "name": "Morro Bay, California",
+      "relevance": "",
+      "featured": false,
+      "year": "2002"
+    }
+  ]
+}

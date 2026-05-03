@@ -1,0 +1,51 @@
+{
+  "personId": "edward_randolph",
+  "personName": "Edward Randolph",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "augusta-richmond-georgia-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "augusta-richmond-georgia",
+      "badge": "Birth Place",
+      "name": "Augusta, Richmond, Georgia",
+      "relevance": "",
+      "featured": true,
+      "lat": 33.4709714,
+      "lng": -81.9748429,
+      "wikimedia": {
+        "fileTitle": "File:Augusta Georgia Broad Street Lamar Building.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Augusta_Georgia_Broad_Street_Lamar_Building.jpg/960px-Augusta_Georgia_Broad_Street_Lamar_Building.jpg",
+        "attribution": "Sir Mildred Pierce",
+        "license": "CC BY 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=33.4709714,-81.9748429",
+        "embedUrl": "https://maps.google.com/maps?q=33.4709714,-81.9748429&z=12&output=embed"
+      },
+      "year": "1773"
+    },
+    {
+      "id": "pinckneyville-wilkinson-mississippi-death",
+      "type": "town",
+      "canonicalPlaceId": "pinckneyville-wilkinson-mississippi",
+      "badge": "Death",
+      "name": "Pinckneyville, Wilkinson, Mississippi",
+      "relevance": "",
+      "featured": false,
+      "lat": 31.0160096,
+      "lng": -91.4809494,
+      "wikimedia": {
+        "fileTitle": "File:Pinckneyville Community Hospital.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Pinckneyville_Community_Hospital.jpg/960px-Pinckneyville_Community_Hospital.jpg",
+        "attribution": "Nyttend",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=31.0160096,-91.4809494",
+        "embedUrl": "https://maps.google.com/maps?q=31.0160096,-91.4809494&z=12&output=embed"
+      },
+      "year": "1841"
+    }
+  ]
+}

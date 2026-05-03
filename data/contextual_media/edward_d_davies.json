@@ -1,0 +1,66 @@
+{
+  "personId": "edward_d_davies",
+  "personName": "Edward D. Davies",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "rhiwlas-north-wales-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "rhiwlas-north-wales",
+      "badge": "Birth Place",
+      "name": "Rhiwlas, North Wales",
+      "relevance": "",
+      "featured": true,
+      "year": "1831"
+    },
+    {
+      "id": "mount-pleasant-township-racine-county-wisconsin-death",
+      "type": "town",
+      "canonicalPlaceId": "mount-pleasant-township-racine-county-wisconsin",
+      "badge": "Death",
+      "name": "Mount Pleasant Township, Racine County, Wisconsin",
+      "relevance": "",
+      "featured": false,
+      "lat": 42.7303792,
+      "lng": -87.6803497,
+      "wikimedia": {
+        "fileTitle": "File:Pike River, Village of Mount Pleasant, Racine County, Wisconsin, section 206, Detailed PRoject Report (DPR), ecosystem restoration - USACE-p16021coll7-893.pdf",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Pike_River%2C_Village_of_Mount_Pleasant%2C_Racine_County%2C_Wisconsin%2C_section_206%2C_Detailed_PRoject_Report_%28DPR%29%2C_ecosystem_restoration_-_USACE-p16021coll7-893.pdf/page1-960px-Pike_River%2C_Village_of_Mount_Pleasant%2C_Racine_County%2C_Wisconsin%2C_section_206%2C_Detailed_PRoject_Report_%28DPR%29%2C_ecosystem_restoration_-_USACE-p16021coll7-893.pdf.jpg",
+        "attribution": "United States. Army. Corps of Engineers. Detroit District",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=42.7303792,-87.6803497",
+        "embedUrl": "https://maps.google.com/maps?q=42.7303792,-87.6803497&z=12&output=embed"
+      },
+      "year": "1912"
+    },
+    {
+      "id": "racine-wisconsin-residence",
+      "type": "town",
+      "canonicalPlaceId": "racine-wisconsin",
+      "badge": "Residence",
+      "name": "Racine, Wisconsin",
+      "relevance": "",
+      "featured": false,
+      "lat": 42.7313756,
+      "lng": -87.7834769,
+      "wikipedia": {
+        "title": "Racine, Wisconsin",
+        "url": "https://en.wikipedia.org/wiki/Racine%2C_Wisconsin",
+        "summary": "Racine is a city in Racine County, Wisconsin, United States, and its county seat. It is located on the shore of Lake Michigan at the mouth of the Root River, 22 miles (35\u00a0km) south of Milwaukee and 60 miles (97\u00a0km) north of Chicago. It is the fifth-most populous city in Wisconsin, with a population "
+      },
+      "wikimedia": {
+        "fileTitle": "File:Wind Point Lighthouse; Racine, Wisconsin; June 6, 2012.JPG",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Wind_Point_Lighthouse%3B_Racine%2C_Wisconsin%3B_June_6%2C_2012.JPG/960px-Wind_Point_Lighthouse%3B_Racine%2C_Wisconsin%3B_June_6%2C_2012.JPG",
+        "attribution": "Stephen Matthew Milligan",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=42.7313756,-87.7834769",
+        "embedUrl": "https://maps.google.com/maps?q=42.7313756,-87.7834769&z=12&output=embed"
+      },
+      "year": "1912"
+    }
+  ]
+}

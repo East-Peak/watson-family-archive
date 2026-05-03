@@ -1,0 +1,110 @@
+{
+  "personId": "margaret_macconnell",
+  "personName": "Margaret MacConnell",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "glasgow-scotland-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "glasgow-scotland",
+      "badge": "Birth Place",
+      "name": "Glasgow, Scotland",
+      "relevance": "",
+      "featured": true,
+      "lat": 55.861155,
+      "lng": -4.2501687,
+      "wikipedia": {
+        "title": "Glasgow",
+        "url": "https://en.wikipedia.org/wiki/Glasgow",
+        "summary": "Glasgow is the most populous city in Scotland, located on the banks of the River Clyde in west central Scotland. It is the third-most populous city in the United Kingdom and the 27th-most populous city in Europe, and comprises 23 wards which represent the areas within the city boundaries. Glasgow is"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Cross on the Pollokshields Church, Glasgow, Scotland.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Cross_on_the_Pollokshields_Church%2C_Glasgow%2C_Scotland.jpg/960px-Cross_on_the_Pollokshields_Church%2C_Glasgow%2C_Scotland.jpg",
+        "attribution": "Michal Klajban",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=55.861155,-4.2501687",
+        "embedUrl": "https://maps.google.com/maps?q=55.861155,-4.2501687&z=12&output=embed"
+      },
+      "year": "1822"
+    },
+    {
+      "id": "fox-lake-wisconsin-death",
+      "type": "town",
+      "canonicalPlaceId": "fox-lake-wisconsin",
+      "badge": "Death",
+      "name": "Fox Lake, Wisconsin",
+      "relevance": "",
+      "featured": false,
+      "lat": 43.565543,
+      "lng": -88.9064984,
+      "wikipedia": {
+        "title": "Fox Lake, Wisconsin",
+        "url": "https://en.wikipedia.org/wiki/Fox_Lake%2C_Wisconsin",
+        "summary": "Fox Lake is a city in Dodge County, Wisconsin, United States. The population was 1,604 at the 2020 census. The city is located within the Town of Fox Lake."
+      },
+      "wikimedia": {
+        "fileTitle": "File:FoxLakeWisconsinDowntown1.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/FoxLakeWisconsinDowntown1.jpg/960px-FoxLakeWisconsinDowntown1.jpg",
+        "attribution": "Royalbroil",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.565543,-88.9064984",
+        "embedUrl": "https://maps.google.com/maps?q=43.565543,-88.9064984&z=12&output=embed"
+      },
+      "year": "1864"
+    },
+    {
+      "id": "utica-oneida-new-york-marriage",
+      "type": "building",
+      "canonicalPlaceId": "utica-oneida-new-york",
+      "badge": "Marriage",
+      "name": "Utica, Oneida, New York",
+      "relevance": "",
+      "featured": false,
+      "lat": 43.1009031,
+      "lng": -75.2326641,
+      "wikimedia": {
+        "fileTitle": "File:Oneida County Court House, Utica, New York.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Oneida_County_Court_House%2C_Utica%2C_New_York.jpg/960px-Oneida_County_Court_House%2C_Utica%2C_New_York.jpg",
+        "attribution": "Boston Public Library",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.1009031,-75.2326641",
+        "embedUrl": "https://maps.google.com/maps?q=43.1009031,-75.2326641&z=12&output=embed"
+      },
+      "year": "1852"
+    },
+    {
+      "id": "dodge-wisconsin-residence",
+      "type": "town",
+      "canonicalPlaceId": "dodge-wisconsin",
+      "badge": "Residence",
+      "name": "Dodge, Wisconsin",
+      "relevance": "",
+      "featured": false,
+      "lat": 43.413614,
+      "lng": -88.7177834,
+      "wikipedia": {
+        "title": "Dodge, Wisconsin",
+        "url": "https://en.wikipedia.org/wiki/Dodge%2C_Wisconsin",
+        "summary": "Dodge is a town in Trempealeau County, Wisconsin, United States. The population was 414 at the 2000 census. The census-designated place of Dodge is located in the town. The unincorporated community of Pine Creek is also located in the town."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Horicon Marsh, Dodge, Wisconsin, U.S.A.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Horicon_Marsh%2C_Dodge%2C_Wisconsin%2C_U.S.A.jpg/960px-Horicon_Marsh%2C_Dodge%2C_Wisconsin%2C_U.S.A.jpg",
+        "attribution": "IIP Photo Archive",
+        "license": "CC BY-SA 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.413614,-88.7177834",
+        "embedUrl": "https://maps.google.com/maps?q=43.413614,-88.7177834&z=12&output=embed"
+      },
+      "year": "1864"
+    }
+  ]
+}

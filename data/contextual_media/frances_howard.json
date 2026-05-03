@@ -1,0 +1,34 @@
+{
+  "personId": "frances_howard",
+  "personName": "Frances Howard",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "oneida-new-york-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "oneida-new-york",
+      "badge": "Birth Place",
+      "name": "Oneida, New York",
+      "relevance": "",
+      "featured": true,
+      "lat": 43.2144051,
+      "lng": -75.4039155,
+      "wikipedia": {
+        "title": "Oneida, New York",
+        "url": "https://en.wikipedia.org/wiki/Oneida%2C_New_York",
+        "summary": "Oneida is a city in Madison County in the U.S. state of New York. It is located west of Oneida Castle and east of Wampsville. The population was 10,329 at the 2020 census, down from 11,390 in 2010. The city, like both Oneida County and the nearby silver and china maker, was named for the Oneida peop"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Byrne Dairy Oneida New York November 2018.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Byrne_Dairy_Oneida_New_York_November_2018.jpg/960px-Byrne_Dairy_Oneida_New_York_November_2018.jpg",
+        "attribution": "Crazyblocks",
+        "license": "CC0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.2144051,-75.4039155",
+        "embedUrl": "https://maps.google.com/maps?q=43.2144051,-75.4039155&z=12&output=embed"
+      },
+      "year": "1847"
+    }
+  ]
+}

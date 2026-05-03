@@ -1,0 +1,34 @@
+{
+  "personId": "dinah_ore",
+  "personName": "Dinah Ore",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "devonshire-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "devonshire",
+      "badge": "Birth Place",
+      "name": "Devonshire",
+      "relevance": "",
+      "featured": true,
+      "lat": 50.7241405,
+      "lng": -3.6607788,
+      "wikipedia": {
+        "title": "Devon",
+        "url": "https://en.wikipedia.org/wiki/Devon",
+        "summary": "Devon is a ceremonial county in South West England. It is bordered by the Bristol Channel to the north, Somerset and Dorset to the east, the English Channel to the south, and Cornwall to the west. The city of Plymouth is the largest settlement."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Devonshire Lodge (Low-Martin House), Windsor, Ontario, 2025-08-31 01.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Devonshire_Lodge_%28Low-Martin_House%29%2C_Windsor%2C_Ontario%2C_2025-08-31_01.jpg/960px-Devonshire_Lodge_%28Low-Martin_House%29%2C_Windsor%2C_Ontario%2C_2025-08-31_01.jpg",
+        "attribution": "Chris Woodrich",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=50.7241405,-3.6607788",
+        "embedUrl": "https://maps.google.com/maps?q=50.7241405,-3.6607788&z=12&output=embed"
+      },
+      "year": "1807"
+    }
+  ]
+}

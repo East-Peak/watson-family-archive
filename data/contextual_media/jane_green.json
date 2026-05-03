@@ -1,0 +1,29 @@
+{
+  "personId": "jane_green",
+  "personName": "Jane Green",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "gillingham-dorset-england-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "gillingham-dorset-england",
+      "badge": "Birth Place",
+      "name": "Gillingham, Dorset, England",
+      "relevance": "",
+      "featured": true,
+      "lat": 51.0385367,
+      "lng": -2.2766784,
+      "wikimedia": {
+        "fileTitle": "File:Gillingham (Dorset) Sewage Treatment Works - geograph.org.uk - 3474536.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Gillingham_%28Dorset%29_Sewage_Treatment_Works_-_geograph.org.uk_-_3474536.jpg",
+        "attribution": "Derek Harper",
+        "license": "CC BY-SA 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=51.0385367,-2.2766784",
+        "embedUrl": "https://maps.google.com/maps?q=51.0385367,-2.2766784&z=12&output=embed"
+      },
+      "year": "1819"
+    }
+  ]
+}

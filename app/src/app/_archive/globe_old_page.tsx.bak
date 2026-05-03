@@ -1,0 +1,161 @@
+'use client';
+
+import dynamic from 'next/dynamic';
+import Link from 'next/link';
+import { useSearchParams, useRouter } from 'next/navigation';
+import { useEffect, useState, Suspense } from 'react';
+import { JourneyStop } from '@/components/JourneyPlayer';
+
+// Dynamically import Globe to avoid SSR issues with WebGL
+const Globe = dynamic(() => import('@/components/Globe'), {
+  ssr: false,
+  loading: () => (
+    <div className="flex items-center justify-center h-screen bg-black">
+      <div className="text-white/60 text-lg">Loading globe...</div>
+    </div>
+  ),
+});
+
+interface JourneyModeData {
+  personId: string;
+  personName: string;
+  birthYear: number | null;
+  deathYear: number | null;
+  stops: JourneyStop[];
+}
+
+interface Individual {
+  id: string;
+  fullName: string;
+  birthYear: number | null;
+  deathYear: number | null;
+}
+
+interface Journey {
+  year: number | null;
+  place: string;
+  city: string | null;
+  state: string | null;
+  country: string | null;
+  lat: number | null;
+  lng: number | null;
+  source: string | null;
+  occupation: string | null;
+}
+
+function GlobePageContent() {
+  const searchParams = useSearchParams();
+  const router = useRouter();
+  const journeyPersonId = searchParams.get('journey');
+
+  const [journeyMode, setJourneyMode] = useState<JourneyModeData | null>(null);
+  const [loading, setLoading] = useState(!!journeyPersonId);
+
+  // Load journey data if journey param is present
+  useEffect(() => {
+    if (!journeyPersonId) {
+      setJourneyMode(null);
+      setLoading(false);
+      return;
+    }
+
+    async function loadJourneyData() {
+      try {
+        const [individualsRes, journeysRes] = await Promise.all([
+          fetch('/data/individuals.json'),
+          fetch('/data/journeys.json'),
+        ]);
+
+        const individuals: Individual[] = await individualsRes.json();
+        const journeys: Record<string, Journey[]> = await journeysRes.json();
+
+        const person = individuals.find((p) => p.id === journeyPersonId);
+        const personJourney = journeyPersonId ? journeys[journeyPersonId] : undefined;
+
+        if (person && personJourney && personJourney.length > 0) {
+          // Filter to only stops with coordinates
+          const stopsWithCoords = personJourney.filter(
+            (stop) => stop.lat !== null && stop.lng !== null
+          );
+
+          if (stopsWithCoords.length > 0) {
+            setJourneyMode({
+              personId: person.id,
+              personName: person.fullName,
+              birthYear: person.birthYear,
+              deathYear: person.deathYear,
+              stops: stopsWithCoords as JourneyStop[],
+            });
+          }
+        }
+      } catch (err) {
+        console.error('Failed to load journey data:', err);
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    loadJourneyData();
+  }, [journeyPersonId]);
+
+  const handleJourneyClose = () => {
+    setJourneyMode(null);
+    // Remove journey param from URL
+    router.push('/globe');
+  };
+
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center h-screen bg-black">
+        <div className="text-white/60 text-lg">Loading journey...</div>
+      </div>
+    );
+  }
+
+  return (
+    <main className="h-screen w-screen overflow-hidden bg-black relative">
+      {/* Back to home - hide during journey mode */}
+      {!journeyMode && (
+        <Link
+          href="/"
+          className="absolute top-4 left-4 z-50 flex items-center gap-2 text-white/60 hover:text-white transition-colors bg-black/50 backdrop-blur-sm px-4 py-2 rounded-lg"
+        >
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+          </svg>
+          Home
+        </Link>
+      )}
+
+      {/* Back to person - show during journey mode */}
+      {journeyMode && (
+        <Link
+          href={`/person/${journeyMode.personId}`}
+          className="absolute top-4 left-4 z-50 flex items-center gap-2 text-white/60 hover:text-white transition-colors bg-black/50 backdrop-blur-sm px-4 py-2 rounded-lg"
+        >
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+          </svg>
+          Back to Profile
+        </Link>
+      )}
+
+      <Globe
+        journeyMode={journeyMode}
+        onJourneyClose={handleJourneyClose}
+      />
+    </main>
+  );
+}
+
+export default function GlobePage() {
+  return (
+    <Suspense fallback={
+      <div className="flex items-center justify-center h-screen bg-black">
+        <div className="text-white/60 text-lg">Loading globe...</div>
+      </div>
+    }>
+      <GlobePageContent />
+    </Suspense>
+  );
+}

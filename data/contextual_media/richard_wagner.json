@@ -1,0 +1,78 @@
+{
+  "personId": "richard_wagner",
+  "personName": "Richard Wagner",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "wisconsin-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "wisconsin",
+      "badge": "Birth Place",
+      "name": "Wisconsin",
+      "relevance": "",
+      "featured": true,
+      "lat": 44.4308975,
+      "lng": -89.6884637,
+      "wikipedia": {
+        "title": "Wisconsin",
+        "url": "https://en.wikipedia.org/wiki/Wisconsin",
+        "summary": "Wisconsin is a state in the Upper Midwest and Great Lakes regions of the United States. It borders Minnesota to the west, Iowa to the southwest, Illinois to the south, Lake Michigan to the east, Michigan to the northeast, and Lake Superior to the north. With a population of about 6 million and an ar"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Beaver Dam, Wisconsin Downtown.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Beaver_Dam%2C_Wisconsin_Downtown.jpg/960px-Beaver_Dam%2C_Wisconsin_Downtown.jpg",
+        "attribution": "Downspec",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=44.4308975,-89.6884637",
+        "embedUrl": "https://maps.google.com/maps?q=44.4308975,-89.6884637&z=12&output=embed"
+      },
+      "year": "1868"
+    },
+    {
+      "id": "lebanon-dodge-wi-residence",
+      "type": "town",
+      "canonicalPlaceId": "lebanon-dodge-wi",
+      "badge": "Residence",
+      "name": "Lebanon, Dodge, WI",
+      "relevance": "",
+      "featured": false,
+      "lat": 43.2400321,
+      "lng": -88.5959276,
+      "wikimedia": {
+        "fileTitle": "File:LebanonWisconsinFireDepartment.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/LebanonWisconsinFireDepartment.jpg/960px-LebanonWisconsinFireDepartment.jpg",
+        "attribution": "Royalbroil",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.2400321,-88.5959276",
+        "embedUrl": "https://maps.google.com/maps?q=43.2400321,-88.5959276&z=12&output=embed"
+      },
+      "year": "1870"
+    },
+    {
+      "id": "union-cemetery-sumner-jefferson-wisconsin-residence",
+      "type": "town",
+      "canonicalPlaceId": "union-cemetery-sumner-jefferson-wisconsin",
+      "badge": "Residence",
+      "name": "Union Cemetery, Sumner, Jefferson, Wisconsin",
+      "relevance": "",
+      "featured": false,
+      "lat": 42.9337514,
+      "lng": -88.9089091,
+      "wikimedia": {
+        "fileTitle": "File:The history of Jefferson county, Wisconsin, containing ... biographical sketches .. (IA historyofjeffers00west).pdf",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/The_history_of_Jefferson_county%2C_Wisconsin%2C_containing_..._biographical_sketches_.._%28IA_historyofjeffers00west%29.pdf/page1-960px-The_history_of_Jefferson_county%2C_Wisconsin%2C_containing_..._biographical_sketches_.._%28IA_historyofjeffers00west%29.pdf.jpg",
+        "attribution": "Western historical company, Chicago, pub. [from old catalog]",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=42.9337514,-88.9089091",
+        "embedUrl": "https://maps.google.com/maps?q=42.9337514,-88.9089091&z=12&output=embed"
+      },
+      "year": "1942"
+    }
+  ]
+}

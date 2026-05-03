@@ -1,0 +1,56 @@
+{
+  "personId": "james_smith",
+  "personName": "James Smith",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "virginia-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "virginia",
+      "badge": "Birth Place",
+      "name": "Virginia",
+      "relevance": "",
+      "featured": true,
+      "lat": 37.1232245,
+      "lng": -78.4927721,
+      "wikipedia": {
+        "title": "Virginia",
+        "url": "https://en.wikipedia.org/wiki/Virginia",
+        "summary": "Virginia, officially the Commonwealth of Virginia, is a state in the Southeastern and Mid-Atlantic regions of the United States between the Atlantic Coast and the Appalachian Mountains. It borders Kentucky to the west, Tennessee to the south-west, North Carolina to the south, West Virginia to the no"
+      },
+      "wikimedia": {
+        "fileTitle": "File:George Charles Beresford - Virginia Woolf in 1902 - Restoration.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/George_Charles_Beresford_-_Virginia_Woolf_in_1902_-_Restoration.jpg/960px-George_Charles_Beresford_-_Virginia_Woolf_in_1902_-_Restoration.jpg",
+        "attribution": "George Charles Beresford / Adam Cuerden",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=37.1232245,-78.4927721",
+        "embedUrl": "https://maps.google.com/maps?q=37.1232245,-78.4927721&z=12&output=embed"
+      },
+      "year": "1805"
+    },
+    {
+      "id": "lebanon-van-buren-iowa-death",
+      "type": "town",
+      "canonicalPlaceId": "lebanon-van-buren-iowa",
+      "badge": "Death",
+      "name": "Lebanon, Van Buren, Iowa",
+      "relevance": "",
+      "featured": false,
+      "lat": 40.7258595,
+      "lng": -92.082399,
+      "wikimedia": {
+        "fileTitle": "File:2014-07-18-Mt-Lebanon-Cemetery-Soffel-01.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/2014-07-18-Mt-Lebanon-Cemetery-Soffel-01.jpg/960px-2014-07-18-Mt-Lebanon-Cemetery-Soffel-01.jpg",
+        "attribution": "Cbaile19",
+        "license": "CC0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=40.7258595,-92.082399",
+        "embedUrl": "https://maps.google.com/maps?q=40.7258595,-92.082399&z=12&output=embed"
+      },
+      "year": "1884"
+    }
+  ]
+}

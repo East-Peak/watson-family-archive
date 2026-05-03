@@ -1,0 +1,93 @@
+{
+  "personId": "hattie_gorney",
+  "personName": "Harriet M Gorney",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "chicago-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "chicago",
+      "badge": "Birth Place",
+      "name": "Chicago",
+      "relevance": "",
+      "featured": true,
+      "lat": 41.8755616,
+      "lng": -87.6244212,
+      "wikipedia": {
+        "title": "Chicago",
+        "url": "https://en.wikipedia.org/wiki/Chicago",
+        "summary": "Chicago is the most populous city in the U.S. state of Illinois and in the Midwestern United States. Located on the western shore of Lake Michigan, it is the third-most populous city in the United States, with a population of 2.74 million at the 2020 census. The Chicago metropolitan area has 9.41 mi"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Chicago Union Station 1943.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Chicago_Union_Station_1943.jpg/960px-Chicago_Union_Station_1943.jpg",
+        "attribution": "Jack Delano",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=41.8755616,-87.6244212",
+        "embedUrl": "https://maps.google.com/maps?q=41.8755616,-87.6244212&z=12&output=embed"
+      },
+      "year": "1910"
+    },
+    {
+      "id": "cook-county-death",
+      "type": "town",
+      "canonicalPlaceId": "cook-county",
+      "badge": "Death",
+      "name": "Cook County",
+      "relevance": "",
+      "featured": false,
+      "lat": 41.8197385,
+      "lng": -87.756525,
+      "wikipedia": {
+        "title": "Cook County, Illinois",
+        "url": "https://en.wikipedia.org/wiki/Cook_County%2C_Illinois",
+        "summary": "Cook County is the most populous county in the U.S. state of Illinois and the second-most-populous county in the United States, after Los Angeles County, California. More than 40 percent of all residents of Illinois live within Cook County. As of 2020, the population was 5,275,541. The county seat i"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Cook County Probate Judge 1946.png",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Cook_County_Probate_Judge_1946.png",
+        "attribution": "John M Wolfson",
+        "license": "CC0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=41.8197385,-87.756525",
+        "embedUrl": "https://maps.google.com/maps?q=41.8197385,-87.756525&z=12&output=embed"
+      },
+      "year": "1986"
+    },
+    {
+      "id": "cook-county-area-residence",
+      "type": "town",
+      "canonicalPlaceId": "cook-county-area",
+      "badge": "Residence",
+      "name": "Cook County area",
+      "relevance": "",
+      "featured": false,
+      "lat": 52.6719691,
+      "lng": -8.5547969,
+      "wikimedia": {
+        "fileTitle": "File:Cook County Court House and City Hall 1855.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Cook_County_Court_House_and_City_Hall_1855.jpg",
+        "attribution": "Alexander Hesler",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=52.6719691,-8.5547969",
+        "embedUrl": "https://maps.google.com/maps?q=52.6719691,-8.5547969&z=12&output=embed"
+      },
+      "year": "1986"
+    },
+    {
+      "id": "saint-adalbert-catholic-cemetery-niles-residence",
+      "type": "town",
+      "canonicalPlaceId": "saint-adalbert-catholic-cemetery-niles",
+      "badge": "Residence",
+      "name": "Saint Adalbert Catholic Cemetery, Niles",
+      "relevance": "",
+      "featured": false,
+      "year": "1986"
+    }
+  ]
+}

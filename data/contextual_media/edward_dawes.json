@@ -1,0 +1,29 @@
+{
+  "personId": "edward_dawes",
+  "personName": "Edward Dawes",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "crete-saline-county-nebraska-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "crete-saline-county-nebraska",
+      "badge": "Birth Place",
+      "name": "Crete, Saline County, Nebraska",
+      "relevance": "",
+      "featured": true,
+      "lat": 40.628143,
+      "lng": -96.961372,
+      "wikimedia": {
+        "fileTitle": "File:2022-09-11 16 11 12 Aerial view southeast down the Big Blue River from Milford in southeastern Seward County, Nebraska (foreground) to Crete in northeastern Saline County, Nebraska.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/2022-09-11_16_11_12_Aerial_view_southeast_down_the_Big_Blue_River_from_Milford_in_southeastern_Seward_County%2C_Nebraska_%28foreground%29_to_Crete_in_northeastern_Saline_County%2C_Nebraska.jpg/960px-thumbnail.jpg",
+        "attribution": "Famartin",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=40.628143,-96.961372",
+        "embedUrl": "https://maps.google.com/maps?q=40.628143,-96.961372&z=12&output=embed"
+      },
+      "year": "1891"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "personId": "emilie_gnewuch",
+  "personName": "Emilie Mathilda Louise Gnewuch",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "lebanon-dodge-wi-marriage",
+      "type": "building",
+      "canonicalPlaceId": "lebanon-dodge-wi",
+      "badge": "Marriage",
+      "name": "Lebanon, Dodge, WI",
+      "relevance": "",
+      "featured": true,
+      "lat": 43.2400321,
+      "lng": -88.5959276,
+      "wikimedia": {
+        "fileTitle": "File:LebanonWisconsinFireDepartment.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/LebanonWisconsinFireDepartment.jpg/960px-LebanonWisconsinFireDepartment.jpg",
+        "attribution": "Royalbroil",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.2400321,-88.5959276",
+        "embedUrl": "https://maps.google.com/maps?q=43.2400321,-88.5959276&z=12&output=embed"
+      },
+      "year": "1885"
+    }
+  ]
+}

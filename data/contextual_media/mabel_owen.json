@@ -1,0 +1,56 @@
+{
+  "personId": "mabel_owen",
+  "personName": "Mabel Owen",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "wisconsin-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "wisconsin",
+      "badge": "Birth Place",
+      "name": "Wisconsin",
+      "relevance": "",
+      "featured": true,
+      "lat": 44.4308975,
+      "lng": -89.6884637,
+      "wikipedia": {
+        "title": "Wisconsin",
+        "url": "https://en.wikipedia.org/wiki/Wisconsin",
+        "summary": "Wisconsin is a state in the Upper Midwest and Great Lakes regions of the United States. It borders Minnesota to the west, Iowa to the southwest, Illinois to the south, Lake Michigan to the east, Michigan to the northeast, and Lake Superior to the north. With a population of about 6 million and an ar"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Beaver Dam, Wisconsin Downtown.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Beaver_Dam%2C_Wisconsin_Downtown.jpg/960px-Beaver_Dam%2C_Wisconsin_Downtown.jpg",
+        "attribution": "Downspec",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=44.4308975,-89.6884637",
+        "embedUrl": "https://maps.google.com/maps?q=44.4308975,-89.6884637&z=12&output=embed"
+      },
+      "year": "1874"
+    },
+    {
+      "id": "trenton-pierce-wi-residence",
+      "type": "town",
+      "canonicalPlaceId": "trenton-pierce-wi",
+      "badge": "Residence",
+      "name": "Trenton, Pierce, WI",
+      "relevance": "",
+      "featured": false,
+      "lat": 44.6038564,
+      "lng": -92.5649141,
+      "wikimedia": {
+        "fileTitle": "File:Trenton Town Hall in Pierce County, Wisconsin.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Trenton_Town_Hall_in_Pierce_County%2C_Wisconsin.jpg/960px-Trenton_Town_Hall_in_Pierce_County%2C_Wisconsin.jpg",
+        "attribution": "Wikideas1",
+        "license": "CC0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=44.6038564,-92.5649141",
+        "embedUrl": "https://maps.google.com/maps?q=44.6038564,-92.5649141&z=12&output=embed"
+      },
+      "year": "1880"
+    }
+  ]
+}

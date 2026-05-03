@@ -1,0 +1,83 @@
+{
+  "personId": "mary_e_moore",
+  "personName": "Mary E. Moore",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "gorham-new-york-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "gorham-new-york",
+      "badge": "Birth Place",
+      "name": "Gorham, New York",
+      "relevance": "",
+      "featured": true,
+      "lat": 42.7989556,
+      "lng": -77.1316402,
+      "wikipedia": {
+        "title": "Gorham, New York",
+        "url": "https://en.wikipedia.org/wiki/Gorham%2C_New_York",
+        "summary": "Gorham is a town in Ontario County, New York, United States. The population was 4,130 at the 2020 census. The town is named after Nathaniel Gorham."
+      },
+      "wikimedia": {
+        "fileTitle": "File:NY 247 northbound in Gorham.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/NY_247_northbound_in_Gorham.jpg/960px-NY_247_northbound_in_Gorham.jpg",
+        "attribution": "Adam Moss",
+        "license": "CC BY-SA 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=42.7989556,-77.1316402",
+        "embedUrl": "https://maps.google.com/maps?q=42.7989556,-77.1316402&z=12&output=embed"
+      },
+      "year": "1865"
+    },
+    {
+      "id": "orlando-orange-florida-death",
+      "type": "town",
+      "canonicalPlaceId": "orlando-orange-florida",
+      "badge": "Death",
+      "name": "Orlando, Orange, Florida",
+      "relevance": "",
+      "featured": false,
+      "lat": 28.5421218,
+      "lng": -81.379045,
+      "wikimedia": {
+        "fileTitle": "File:Mission BBQ in Orlando (Florida).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Mission_BBQ_in_Orlando_%28Florida%29.jpg/960px-Mission_BBQ_in_Orlando_%28Florida%29.jpg",
+        "attribution": "Olga Ernst",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=28.5421218,-81.379045",
+        "embedUrl": "https://maps.google.com/maps?q=28.5421218,-81.379045&z=12&output=embed"
+      },
+      "year": "1938"
+    },
+    {
+      "id": "cremation-residence",
+      "type": "town",
+      "canonicalPlaceId": "cremation",
+      "badge": "Residence",
+      "name": "Cremation",
+      "relevance": "",
+      "featured": false,
+      "lat": 41.4645436,
+      "lng": -72.4939771,
+      "wikipedia": {
+        "title": "Cremation",
+        "url": "https://en.wikipedia.org/wiki/Cremation",
+        "summary": "Cremation is a method of final disposition of a corpse through burning."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Ubud Cremation 4.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Ubud_Cremation_4.jpg/960px-Ubud_Cremation_4.jpg",
+        "attribution": "No machine-readable author provided. Davenbelle~commonswiki assumed (based on copyright claims).",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=41.4645436,-72.4939771",
+        "embedUrl": "https://maps.google.com/maps?q=41.4645436,-72.4939771&z=12&output=embed"
+      },
+      "year": "1938"
+    }
+  ]
+}

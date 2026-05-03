@@ -1,0 +1,81 @@
+{
+  "personId": "tyringham_norwood",
+  "personName": "Tyringham Norwood",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "astwood-buckinghamshire-england-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "astwood-buckinghamshire-england",
+      "badge": "Birth Place",
+      "name": "Astwood, Buckinghamshire, England",
+      "relevance": "",
+      "featured": true,
+      "lat": 51.840894,
+      "lng": -0.8998074,
+      "wikimedia": {
+        "fileTitle": "File:Astwood Church - geograph.org.uk - 276601.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/2/29/Astwood_Church_-_geograph.org.uk_-_276601.jpg",
+        "attribution": "Richard Schmidt",
+        "license": "CC BY-SA 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=51.840894,-0.8998074",
+        "embedUrl": "https://maps.google.com/maps?q=51.840894,-0.8998074&z=12&output=embed"
+      },
+      "year": "1575"
+    },
+    {
+      "id": "astwood-buckinghamshire-residence",
+      "type": "town",
+      "canonicalPlaceId": "astwood-buckinghamshire",
+      "badge": "Residence",
+      "name": "Astwood, Buckinghamshire",
+      "relevance": "",
+      "featured": false,
+      "year": "1598"
+    },
+    {
+      "id": "brantfield-hertfordshire-residence",
+      "type": "town",
+      "canonicalPlaceId": "brantfield-hertfordshire",
+      "badge": "Residence",
+      "name": "Brantfield, Hertfordshire",
+      "relevance": "",
+      "featured": false,
+      "year": "1609"
+    },
+    {
+      "id": "wykeham-lincolnshire-residence",
+      "type": "town",
+      "canonicalPlaceId": "wykeham-lincolnshire",
+      "badge": "Residence",
+      "name": "Wykeham, Lincolnshire",
+      "relevance": "",
+      "featured": false,
+      "lat": 52.8191946,
+      "lng": -0.1096407,
+      "wikimedia": {
+        "fileTitle": "File:Wykeham Chapel - geograph.org.uk - 184064.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Wykeham_Chapel_-_geograph.org.uk_-_184064.jpg",
+        "attribution": "Kate Jewell",
+        "license": "CC BY-SA 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=52.8191946,-0.1096407",
+        "embedUrl": "https://maps.google.com/maps?q=52.8191946,-0.1096407&z=12&output=embed"
+      },
+      "year": "1625"
+    },
+    {
+      "id": "wykeham-chapel-lincolnshire-residence",
+      "type": "town",
+      "canonicalPlaceId": "wykeham-chapel-lincolnshire",
+      "badge": "Residence",
+      "name": "Wykeham Chapel, Lincolnshire",
+      "relevance": "",
+      "featured": false,
+      "year": "1629"
+    }
+  ]
+}

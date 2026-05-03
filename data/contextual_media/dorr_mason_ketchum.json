@@ -1,0 +1,56 @@
+{
+  "personId": "dorr_mason_ketchum",
+  "personName": "Dorr Mason Ketchum",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "red-creek-new-york-marriage",
+      "type": "building",
+      "canonicalPlaceId": "red-creek-new-york",
+      "badge": "Marriage",
+      "name": "Red Creek, New York",
+      "relevance": "",
+      "featured": true,
+      "lat": 43.247289,
+      "lng": -76.723564,
+      "wikipedia": {
+        "title": "Red Creek, New York",
+        "url": "https://en.wikipedia.org/wiki/Red_Creek%2C_New_York",
+        "summary": "Red Creek is a village in Wayne County, New York, United States. The population was 495 at the 2020 census."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Stoddard Creek near Bridal Falls, Allegany State Park, New York - 20220519.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Stoddard_Creek_near_Bridal_Falls%2C_Allegany_State_Park%2C_New_York_-_20220519.jpg/960px-Stoddard_Creek_near_Bridal_Falls%2C_Allegany_State_Park%2C_New_York_-_20220519.jpg",
+        "attribution": "Andre Carrotflower",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.247289,-76.723564",
+        "embedUrl": "https://maps.google.com/maps?q=43.247289,-76.723564&z=12&output=embed"
+      },
+      "year": "1903"
+    },
+    {
+      "id": "conquest-cayuga-new-york-residence",
+      "type": "town",
+      "canonicalPlaceId": "conquest-cayuga-new-york",
+      "badge": "Residence",
+      "name": "Conquest, Cayuga, New York",
+      "relevance": "",
+      "featured": false,
+      "lat": 43.121177,
+      "lng": -76.648003,
+      "wikimedia": {
+        "fileTitle": "File:Chrysler Conquest TSi (20824400690).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Chrysler_Conquest_TSi_%2820824400690%29.jpg/960px-Chrysler_Conquest_TSi_%2820824400690%29.jpg",
+        "attribution": "ilikewaffles11",
+        "license": "CC BY 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.121177,-76.648003",
+        "embedUrl": "https://maps.google.com/maps?q=43.121177,-76.648003&z=12&output=embed"
+      },
+      "year": "1949"
+    }
+  ]
+}

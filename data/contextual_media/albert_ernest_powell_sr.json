@@ -1,0 +1,181 @@
+{
+  "personId": "albert_ernest_powell_sr",
+  "personName": "Albert Ernest Powell Sr.",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "london-middlesex-ontario-canada-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "london-middlesex-ontario-canada",
+      "badge": "Birth Place",
+      "name": "London, Middlesex, Ontario, Canada",
+      "relevance": "",
+      "featured": true,
+      "lat": 43.0766721,
+      "lng": -81.3077098,
+      "wikimedia": {
+        "fileTitle": "File:The Founding of London, Middlesex County Court House, London, Ontario (21798979226).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/The_Founding_of_London%2C_Middlesex_County_Court_House%2C_London%2C_Ontario_%2821798979226%29.jpg/960px-The_Founding_of_London%2C_Middlesex_County_Court_House%2C_London%2C_Ontario_%2821798979226%29.jpg",
+        "attribution": "Ken Lund from Reno, Nevada, USA",
+        "license": "CC BY-SA 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.0766721,-81.3077098",
+        "embedUrl": "https://maps.google.com/maps?q=43.0766721,-81.3077098&z=12&output=embed"
+      },
+      "year": "1869"
+    },
+    {
+      "id": "united-states-death",
+      "type": "town",
+      "canonicalPlaceId": "united-states",
+      "badge": "Death",
+      "name": "United States",
+      "relevance": "",
+      "featured": false,
+      "lat": 39.7837304,
+      "lng": -100.445882,
+      "wikipedia": {
+        "title": "United States",
+        "url": "https://en.wikipedia.org/wiki/United_States",
+        "summary": "The United States of America (USA), also known as the United States (U.S.) or America, is a country primarily located in North America. It is a federal republic of 50 states and a federal capital district, Washington, D.C. The 48 contiguous states border Canada to the north and Mexico to the south, "
+      },
+      "wikimedia": {
+        "fileTitle": "File:United States Declaration of Independence.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/United_States_Declaration_of_Independence.jpg/960px-United_States_Declaration_of_Independence.jpg",
+        "attribution": "original: w:Second Continental Congress; reproduction: William Stone",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=39.7837304,-100.445882",
+        "embedUrl": "https://maps.google.com/maps?q=39.7837304,-100.445882&z=12&output=embed"
+      },
+      "year": "1959"
+    },
+    {
+      "id": "silver-bow-montana-residence",
+      "type": "town",
+      "canonicalPlaceId": "silver-bow-montana",
+      "badge": "Residence",
+      "name": "Silver Bow, Montana",
+      "relevance": "",
+      "featured": false,
+      "lat": 45.9009106,
+      "lng": -112.6788845,
+      "wikipedia": {
+        "title": "Silver Bow, Butte",
+        "url": "https://en.wikipedia.org/wiki/Silver_Bow%2C_Butte",
+        "summary": "\n\nSilver Bow is a neighborhood in Butte, Montana, United States. It lies near the interchange of Interstate 15 and Interstate 90, near Rocker. It is the location of a major rail junction on the BNSF Railway. Silver Bow is at Exit 119 off I-15, near the Port of Montana. It is well known locally as th"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Silver Bow County Courthouse, Granite Street and Montana Street, Butte, MT.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Silver_Bow_County_Courthouse%2C_Granite_Street_and_Montana_Street%2C_Butte%2C_MT.jpg/960px-Silver_Bow_County_Courthouse%2C_Granite_Street_and_Montana_Street%2C_Butte%2C_MT.jpg",
+        "attribution": "w_lemay",
+        "license": "CC BY-SA 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=45.9009106,-112.6788845",
+        "embedUrl": "https://maps.google.com/maps?q=45.9009106,-112.6788845&z=12&output=embed"
+      },
+      "year": "1900"
+    },
+    {
+      "id": "big-bend-rusk-wisconsin-residence",
+      "type": "town",
+      "canonicalPlaceId": "big-bend-rusk-wisconsin",
+      "badge": "Residence",
+      "name": "Big Bend, Rusk, Wisconsin",
+      "relevance": "",
+      "featured": false,
+      "lat": 45.3506329,
+      "lng": -91.3581816,
+      "wikimedia": {
+        "fileTitle": "File:Big Bend National Park.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Big_Bend_National_Park.jpg/960px-Big_Bend_National_Park.jpg",
+        "attribution": "Jesse Allen and Robert Simmon",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=45.3506329,-91.3581816",
+        "embedUrl": "https://maps.google.com/maps?q=45.3506329,-91.3581816&z=12&output=embed"
+      },
+      "year": "1910"
+    },
+    {
+      "id": "north-milwaukee-wi-residence",
+      "type": "town",
+      "canonicalPlaceId": "north-milwaukee-wi",
+      "badge": "Residence",
+      "name": "North Milwaukee, WI",
+      "relevance": "",
+      "featured": false,
+      "lat": 43.1114067,
+      "lng": -87.9564739,
+      "wikimedia": {
+        "fileTitle": "File:North Old World 3rd Street, Milwaukee, WI.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/North_Old_World_3rd_Street%2C_Milwaukee%2C_WI.jpg/960px-North_Old_World_3rd_Street%2C_Milwaukee%2C_WI.jpg",
+        "attribution": "Gnome70",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.1114067,-87.9564739",
+        "embedUrl": "https://maps.google.com/maps?q=43.1114067,-87.9564739&z=12&output=embed"
+      },
+      "year": "1930"
+    },
+    {
+      "id": "south-pasadena-ca-residence",
+      "type": "town",
+      "canonicalPlaceId": "south-pasadena-ca",
+      "badge": "Residence",
+      "name": "South Pasadena, CA",
+      "relevance": "",
+      "featured": false,
+      "lat": 34.1133062,
+      "lng": -118.1478291,
+      "wikipedia": {
+        "title": "South Pasadena, California",
+        "url": "https://en.wikipedia.org/wiki/South_Pasadena%2C_California",
+        "summary": "South Pasadena is a city in Los Angeles County, California, United States. As of the 2020 census, it had a population of 26,943, up from 25,619 at the 2010 census."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Southpasadena ca cityhall.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Southpasadena_ca_cityhall.jpg/960px-Southpasadena_ca_cityhall.jpg",
+        "attribution": "The original uploader was Geographer at English Wikipedia.",
+        "license": "CC BY 2.5"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=34.1133062,-118.1478291",
+        "embedUrl": "https://maps.google.com/maps?q=34.1133062,-118.1478291&z=12&output=embed"
+      },
+      "year": "1940"
+    },
+    {
+      "id": "los-angeles-ca-residence",
+      "type": "town",
+      "canonicalPlaceId": "los-angeles-ca",
+      "badge": "Residence",
+      "name": "Los Angeles, CA",
+      "relevance": "",
+      "featured": false,
+      "lat": 34.0536909,
+      "lng": -118.242766,
+      "wikipedia": {
+        "title": "Los Angeles",
+        "url": "https://en.wikipedia.org/wiki/Los_Angeles",
+        "summary": "Los Angeles is the most populous city in the U.S. state of California, and the commercial, financial, and cultural center of Southern California. With an estimated 3.88 million residents within the city limits as of 2024, it is the second-most populous city in the United States, behind New York City"
+      },
+      "wikimedia": {
+        "fileTitle": "File:USS Los Angeles (CA-135) in the Far East, 13 October 1952 (NH 97386).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/USS_Los_Angeles_%28CA-135%29_in_the_Far_East%2C_13_October_1952_%28NH_97386%29.jpg/960px-USS_Los_Angeles_%28CA-135%29_in_the_Far_East%2C_13_October_1952_%28NH_97386%29.jpg",
+        "attribution": "Unknown authorUnknown author",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=34.0536909,-118.242766",
+        "embedUrl": "https://maps.google.com/maps?q=34.0536909,-118.242766&z=12&output=embed"
+      },
+      "year": "1950"
+    }
+  ]
+}

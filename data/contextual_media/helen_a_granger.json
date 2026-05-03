@@ -1,0 +1,29 @@
+{
+  "personId": "helen_a_granger",
+  "personName": "Helen A Granger",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "north-scriba-oswego-new-york-residence",
+      "type": "town",
+      "canonicalPlaceId": "north-scriba-oswego-new-york",
+      "badge": "Residence",
+      "name": "North Scriba, Oswego, New York",
+      "relevance": "",
+      "featured": true,
+      "lat": 43.4886704,
+      "lng": -76.3855073,
+      "wikimedia": {
+        "fileTitle": "File:... History of Oswego County, New York (1877) (14578033158).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/..._History_of_Oswego_County%2C_New_York_%281877%29_%2814578033158%29.jpg/960px-..._History_of_Oswego_County%2C_New_York_%281877%29_%2814578033158%29.jpg",
+        "attribution": "Johnson, Crisfield",
+        "license": "No restrictions"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.4886704,-76.3855073",
+        "embedUrl": "https://maps.google.com/maps?q=43.4886704,-76.3855073&z=12&output=embed"
+      },
+      "year": "1877"
+    }
+  ]
+}

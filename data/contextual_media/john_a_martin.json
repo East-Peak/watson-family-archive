@@ -1,0 +1,78 @@
+{
+  "personId": "john_a_martin",
+  "personName": "John A Martin",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "new-hampshire-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "new-hampshire",
+      "badge": "Birth Place",
+      "name": "New Hampshire",
+      "relevance": "",
+      "featured": true,
+      "lat": 43.4849133,
+      "lng": -71.6553992,
+      "wikipedia": {
+        "title": "New Hampshire",
+        "url": "https://en.wikipedia.org/wiki/New_Hampshire",
+        "summary": "New Hampshire is a state in the New England region of the Northeastern United States. It borders Massachusetts to the south, Vermont to the west, Maine and the Gulf of Maine to the east, and the Canadian province of Quebec to the north. Of the 50 U.S. states, New Hampshire is the seventh-smallest by"
+      },
+      "wikimedia": {
+        "fileTitle": "File:US-Colonial (NH-179)-New Hampshire-29 Apr 1780 OBV.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/US-Colonial_%28NH-179%29-New_Hampshire-29_Apr_1780_OBV.jpg/960px-US-Colonial_%28NH-179%29-New_Hampshire-29_Apr_1780_OBV.jpg",
+        "attribution": "National Museum of American History",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.4849133,-71.6553992",
+        "embedUrl": "https://maps.google.com/maps?q=43.4849133,-71.6553992&z=12&output=embed"
+      },
+      "year": "1818"
+    },
+    {
+      "id": "monroe-grafton-new-hampshire-residence",
+      "type": "town",
+      "canonicalPlaceId": "monroe-grafton-new-hampshire",
+      "badge": "Residence",
+      "name": "Monroe, Grafton, New Hampshire",
+      "relevance": "",
+      "featured": false,
+      "lat": 44.2610074,
+      "lng": -72.05495,
+      "wikimedia": {
+        "fileTitle": "File:Grafton-Monroe-NH.png",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Grafton-Monroe-NH.png",
+        "attribution": "Andrew Sawyer",
+        "license": "CC BY 2.5"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=44.2610074,-72.05495",
+        "embedUrl": "https://maps.google.com/maps?q=44.2610074,-72.05495&z=12&output=embed"
+      },
+      "year": "1860"
+    },
+    {
+      "id": "hardin-hardin-iowa-residence",
+      "type": "town",
+      "canonicalPlaceId": "hardin-hardin-iowa",
+      "badge": "Residence",
+      "name": "Hardin, Hardin, Iowa",
+      "relevance": "",
+      "featured": false,
+      "lat": 42.5207924,
+      "lng": -93.2647595,
+      "wikimedia": {
+        "fileTitle": "File:Hardin County, Iowa, 1902.png",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/8/87/Hardin_County%2C_Iowa%2C_1902.png",
+        "attribution": "George Cram and Co.",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=42.5207924,-93.2647595",
+        "embedUrl": "https://maps.google.com/maps?q=42.5207924,-93.2647595&z=12&output=embed"
+      },
+      "year": "1880"
+    }
+  ]
+}

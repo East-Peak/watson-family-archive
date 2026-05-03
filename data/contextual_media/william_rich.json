@@ -1,0 +1,17 @@
+{
+  "personId": "william_rich",
+  "personName": "William Rich",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "talbot-province-of-maryland-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "talbot-province-of-maryland",
+      "badge": "Birth Place",
+      "name": "Talbot, Province of Maryland",
+      "relevance": "",
+      "featured": true,
+      "year": "1660"
+    }
+  ]
+}

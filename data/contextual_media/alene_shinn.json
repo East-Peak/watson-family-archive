@@ -1,0 +1,61 @@
+{
+  "personId": "alene_shinn",
+  "personName": "Alene Shinn",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "texas-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "texas",
+      "badge": "Birth Place",
+      "name": "Texas",
+      "relevance": "",
+      "featured": true,
+      "lat": 31.2638905,
+      "lng": -98.5456116,
+      "wikipedia": {
+        "title": "Texas",
+        "url": "https://en.wikipedia.org/wiki/Texas",
+        "summary": "Texas is the most populous state in the Southern United States. It borders Louisiana to the east, Arkansas to the northeast, Oklahoma to the north, New Mexico to the west, and an international border with the Mexican states of Chihuahua, Coahuila, Nuevo Le\u00f3n, and Tamaulipas to the south and southwes"
+      },
+      "wikimedia": {
+        "fileTitle": "File:University of North Texas September 2015 40 (pedestrian bridge).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/University_of_North_Texas_September_2015_40_%28pedestrian_bridge%29.jpg/960px-University_of_North_Texas_September_2015_40_%28pedestrian_bridge%29.jpg",
+        "attribution": "Michael Barera",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=31.2638905,-98.5456116",
+        "embedUrl": "https://maps.google.com/maps?q=31.2638905,-98.5456116&z=12&output=embed"
+      },
+      "year": "1896"
+    },
+    {
+      "id": "lubbock-texas-death",
+      "type": "town",
+      "canonicalPlaceId": "lubbock-texas",
+      "badge": "Death",
+      "name": "Lubbock, Texas",
+      "relevance": "",
+      "featured": false,
+      "lat": 33.5855677,
+      "lng": -101.8470215,
+      "wikipedia": {
+        "title": "Lubbock, Texas",
+        "url": "https://en.wikipedia.org/wiki/Lubbock%2C_Texas",
+        "summary": "Lubbock is a city in the U.S. state of Texas and the county seat of Lubbock County. With a population of 257,141\tat the 2020 census, Lubbock is the 10th-most populous city in Texas and the 84th-most populous in the United States. The city is in the northwestern part of the state, in the Great Plains"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Lubbock Texas Churches.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Lubbock_Texas_Churches.jpg/960px-Lubbock_Texas_Churches.jpg",
+        "attribution": "N Con",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=33.5855677,-101.8470215",
+        "embedUrl": "https://maps.google.com/maps?q=33.5855677,-101.8470215&z=12&output=embed"
+      },
+      "year": "1983"
+    }
+  ]
+}

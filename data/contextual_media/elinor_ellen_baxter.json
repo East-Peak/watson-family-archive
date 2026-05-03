@@ -1,0 +1,44 @@
+{
+  "personId": "elinor_ellen_baxter",
+  "personName": "Elinor \"Ellen\" Baxter",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "llanfair-caereinion-dre-jaldury-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "llanfair-caereinion-dre-jaldury",
+      "badge": "Birth Place",
+      "name": "Llanfair Caereinion, \"Dre Jaldury\"",
+      "relevance": "",
+      "featured": true,
+      "year": "1834"
+    },
+    {
+      "id": "minneapolis-death",
+      "type": "town",
+      "canonicalPlaceId": "minneapolis",
+      "badge": "Death",
+      "name": "Minneapolis",
+      "relevance": "",
+      "featured": false,
+      "lat": 44.9772995,
+      "lng": -93.2654692,
+      "wikipedia": {
+        "title": "Minneapolis",
+        "url": "https://en.wikipedia.org/wiki/Minneapolis",
+        "summary": "Minneapolis is a city in Hennepin County, Minnesota, United States, and its county seat. With a population of 429,954 as of the 2020 census, it is the state's most populous city. Located in the state's center near the eastern border, it occupies both banks of the Upper Mississippi River and adjoins "
+      },
+      "wikimedia": {
+        "fileTitle": "File:Downtown minneapolis kansas 2009.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Downtown_minneapolis_kansas_2009.jpg/960px-Downtown_minneapolis_kansas_2009.jpg",
+        "attribution": "shannonpatric17",
+        "license": "CC BY 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=44.9772995,-93.2654692",
+        "embedUrl": "https://maps.google.com/maps?q=44.9772995,-93.2654692&z=12&output=embed"
+      },
+      "year": "1901"
+    }
+  ]
+}

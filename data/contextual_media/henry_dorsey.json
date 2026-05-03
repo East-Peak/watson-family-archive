@@ -1,0 +1,61 @@
+{
+  "personId": "henry_dorsey",
+  "personName": "Henry Dorsey",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "baltimore-county-maryland-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "baltimore-county-maryland",
+      "badge": "Birth Place",
+      "name": "Baltimore County, Maryland",
+      "relevance": "",
+      "featured": true,
+      "lat": 39.4445243,
+      "lng": -76.6483482,
+      "wikipedia": {
+        "title": "Baltimore County, Maryland",
+        "url": "https://en.wikipedia.org/wiki/Baltimore_County%2C_Maryland",
+        "summary": "Baltimore County is the third-most populous county in the U.S. state of Maryland. The county is part of the Central Maryland region of the state. Baltimore County partly surrounds but does not include the independent city of Baltimore. It is part of the Northeast megalopolis, which stretches from No"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Baltimore County, Maryland LOC 81690004.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Baltimore_County%2C_Maryland_LOC_81690004.jpg/960px-Baltimore_County%2C_Maryland_LOC_81690004.jpg",
+        "attribution": "United States. Soil Conservation Service; Geological Survey (U.S.)",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=39.4445243,-76.6483482",
+        "embedUrl": "https://maps.google.com/maps?q=39.4445243,-76.6483482&z=12&output=embed"
+      },
+      "year": "1745"
+    },
+    {
+      "id": "maryland-death",
+      "type": "town",
+      "canonicalPlaceId": "maryland",
+      "badge": "Death",
+      "name": "Maryland",
+      "relevance": "",
+      "featured": false,
+      "lat": 39.5162401,
+      "lng": -76.9382069,
+      "wikipedia": {
+        "title": "Maryland",
+        "url": "https://en.wikipedia.org/wiki/Maryland",
+        "summary": "Maryland is a state in the Mid-Atlantic and Southern regions of the United States. It borders Virginia to its south, West Virginia to its west, Pennsylvania to its north, and Delaware to its east, as well as with the Atlantic Ocean to its east, and the national capital and federal district of Washin"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Deep Creek Lake Maryland Panoramic View.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/1/18/Deep_Creek_Lake_Maryland_Panoramic_View.jpg",
+        "attribution": "Maryland Office of Tourism Development",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=39.5162401,-76.9382069",
+        "embedUrl": "https://maps.google.com/maps?q=39.5162401,-76.9382069&z=12&output=embed"
+      },
+      "year": "1808"
+    }
+  ]
+}

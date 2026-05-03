@@ -1,0 +1,56 @@
+{
+  "personId": "robert_eble",
+  "personName": "Robert Eble",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "new-jersey-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "new-jersey",
+      "badge": "Birth Place",
+      "name": "New Jersey",
+      "relevance": "",
+      "featured": true,
+      "lat": 40.0757384,
+      "lng": -74.4041622,
+      "wikipedia": {
+        "title": "New Jersey",
+        "url": "https://en.wikipedia.org/wiki/New_Jersey",
+        "summary": "New Jersey is a state located in both the Mid-Atlantic and Northeastern regions of the United States. Located at the geographic hub of the heavily urbanized Northeast megalopolis, it is bordered to the northwest, north, and northeast by New York State; on its east, southeast, and south by the Atlant"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Lower Manhattan from Jersey City September 2020 panorama.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Lower_Manhattan_from_Jersey_City_September_2020_panorama.jpg/960px-Lower_Manhattan_from_Jersey_City_September_2020_panorama.jpg",
+        "attribution": "King of Hearts",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=40.0757384,-74.4041622",
+        "embedUrl": "https://maps.google.com/maps?q=40.0757384,-74.4041622&z=12&output=embed"
+      },
+      "year": "1871"
+    },
+    {
+      "id": "leverington-cemetery-roxborough-pennsylvania-residence",
+      "type": "town",
+      "canonicalPlaceId": "leverington-cemetery-roxborough-pennsylvania",
+      "badge": "Residence",
+      "name": "Leverington Cemetery, Roxborough, Pennsylvania",
+      "relevance": "",
+      "featured": false,
+      "lat": 40.0306496,
+      "lng": -75.2135556,
+      "wikimedia": {
+        "fileTitle": "File:Birds Eye View of Manayunk, Wissahickon, Roxborough from West Laurel Hill Cemetery, Philadelphia, Pennsylvania.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Birds_Eye_View_of_Manayunk%2C_Wissahickon%2C_Roxborough_from_West_Laurel_Hill_Cemetery%2C_Philadelphia%2C_Pennsylvania.jpg/960px-Birds_Eye_View_of_Manayunk%2C_Wissahickon%2C_Roxborough_from_West_Laurel_Hill_Cemetery%2C_Philadelphia%2C_Pennsylvania.jpg",
+        "attribution": "Fowler, T. M, and Fowler &amp; Kelly",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=40.0306496,-75.2135556",
+        "embedUrl": "https://maps.google.com/maps?q=40.0306496,-75.2135556&z=12&output=embed"
+      },
+      "year": "1908"
+    }
+  ]
+}

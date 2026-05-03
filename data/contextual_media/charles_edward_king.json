@@ -1,0 +1,56 @@
+{
+  "personId": "charles_edward_king",
+  "personName": "Charles Edward King",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "pixley-township-clay-county-il-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "pixley-township-clay-county-il",
+      "badge": "Birth Place",
+      "name": "Pixley Township, Clay County, IL",
+      "relevance": "",
+      "featured": true,
+      "lat": 38.7340694,
+      "lng": -88.4910693,
+      "wikimedia": {
+        "fileTitle": "File:1940 Census Enumeration District Descriptions - Illinois - Clay County - ED 13-12, ED 13-13, ED 13-14, ED 13-15, ED 13-16, ED 13-17, ED 13-18 - NARA - 5846178.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/1940_Census_Enumeration_District_Descriptions_-_Illinois_-_Clay_County_-_ED_13-12%2C_ED_13-13%2C_ED_13-14%2C_ED_13-15%2C_ED_13-16%2C_ED_13-17%2C_ED_13-18_-_NARA_-_5846178.jpg/960px-thumbnail.jpg",
+        "attribution": "Unknown authorUnknown author or not provided",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=38.7340694,-88.4910693",
+        "embedUrl": "https://maps.google.com/maps?q=38.7340694,-88.4910693&z=12&output=embed"
+      },
+      "year": "1884"
+    },
+    {
+      "id": "sangamon-illinois-residence",
+      "type": "town",
+      "canonicalPlaceId": "sangamon-illinois",
+      "badge": "Residence",
+      "name": "Sangamon, Illinois",
+      "relevance": "",
+      "featured": false,
+      "lat": 39.7623668,
+      "lng": -89.6454905,
+      "wikipedia": {
+        "title": "Sangamon, Illinois",
+        "url": "https://en.wikipedia.org/wiki/Sangamon%2C_Illinois",
+        "summary": "Sangamon is an unincorporated community in Oakley Township, Macon County, Illinois, United States. Sangamon is located along the Norfolk Southern Railway, 5.5 miles (8.9\u00a0km) east-northeast of downtown Decatur."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Sangamon County Illinois 1839.png",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/0/06/Sangamon_County_Illinois_1839.png",
+        "attribution": "Illinois_Locator_Map.PNG: US Census, Ruhrfisch\nderivative work: Fishal (talk)",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=39.7623668,-89.6454905",
+        "embedUrl": "https://maps.google.com/maps?q=39.7623668,-89.6454905&z=12&output=embed"
+      },
+      "year": "1920"
+    }
+  ]
+}

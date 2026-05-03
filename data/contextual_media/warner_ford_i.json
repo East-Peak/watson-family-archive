@@ -1,0 +1,93 @@
+{
+  "personId": "warner_ford_i",
+  "personName": "Warner Ford I",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "westmoreland-virginia-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "westmoreland-virginia",
+      "badge": "Birth Place",
+      "name": "Westmoreland, Virginia",
+      "relevance": "",
+      "featured": true,
+      "lat": 38.1153203,
+      "lng": -76.7567355,
+      "wikipedia": {
+        "title": "Westmoreland, Virginia",
+        "url": "https://en.wikipedia.org/wiki/Westmoreland%2C_Virginia",
+        "summary": "\n\nWestmoreland is an unincorporated community in Westmoreland County, in the U. S. state of Virginia."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Nomini Hall Westmoreland County Virginia.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/b/be/Nomini_Hall_Westmoreland_County_Virginia.jpg",
+        "attribution": "R. E. Collins",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=38.1153203,-76.7567355",
+        "embedUrl": "https://maps.google.com/maps?q=38.1153203,-76.7567355&z=12&output=embed"
+      },
+      "year": "1711"
+    },
+    {
+      "id": "stafford-culpeper-county-virginia-death",
+      "type": "town",
+      "canonicalPlaceId": "stafford-culpeper-county-virginia",
+      "badge": "Death",
+      "name": "Stafford/Culpeper County, Virginia",
+      "relevance": "",
+      "featured": false,
+      "year": "1753"
+    },
+    {
+      "id": "stafford-virginia-marriage",
+      "type": "building",
+      "canonicalPlaceId": "stafford-virginia",
+      "badge": "Marriage",
+      "name": "Stafford, Virginia",
+      "relevance": "",
+      "featured": false,
+      "lat": 38.4167265,
+      "lng": -77.4579783,
+      "wikipedia": {
+        "title": "Stafford, Virginia",
+        "url": "https://en.wikipedia.org/wiki/Stafford%2C_Virginia",
+        "summary": "Stafford, also known as Stafford Courthouse, is a census-designated place in and the county seat of Stafford County, Virginia, United States. The population was 5,370 as of the 2020 census. It lies 10 miles (16\u00a0km) north of Fredericksburg, approximately 40 miles (64\u00a0km) south of Washington, D.C., an"
+      },
+      "wikimedia": {
+        "fileTitle": "File:2019-07-22 15 52 14 View east across Stafford Courthouse towards the Aquia Creek and the Potomac River in eastern Stafford County, Virginia from an airplane heading for Washington Dulles International Airport.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/2019-07-22_15_52_14_View_east_across_Stafford_Courthouse_towards_the_Aquia_Creek_and_the_Potomac_River_in_eastern_Stafford_County%2C_Virginia_from_an_airplane_heading_for_Washington_Dulles_International_Airport.jpg/960px-thumbnail.jpg",
+        "attribution": "Famartin",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=38.4167265,-77.4579783",
+        "embedUrl": "https://maps.google.com/maps?q=38.4167265,-77.4579783&z=12&output=embed"
+      },
+      "year": "1740"
+    },
+    {
+      "id": "henry-kentucky-residence",
+      "type": "town",
+      "canonicalPlaceId": "henry-kentucky",
+      "badge": "Residence",
+      "name": "Henry, Kentucky",
+      "relevance": "",
+      "featured": false,
+      "lat": 38.447983,
+      "lng": -85.1191168,
+      "wikimedia": {
+        "fileTitle": "File:Henry County, Kentucky courthouse.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Henry_County%2C_Kentucky_courthouse.jpg/960px-Henry_County%2C_Kentucky_courthouse.jpg",
+        "attribution": "W.marsh",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=38.447983,-85.1191168",
+        "embedUrl": "https://maps.google.com/maps?q=38.447983,-85.1191168&z=12&output=embed"
+      },
+      "year": "1753"
+    }
+  ]
+}

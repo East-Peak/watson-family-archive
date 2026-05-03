@@ -1,0 +1,105 @@
+{
+  "personId": "alice_elizabeth_davis",
+  "personName": "Alice Elizabeth Davis",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "south-bend-blue-earth-mn-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "south-bend-blue-earth-mn",
+      "badge": "Birth Place",
+      "name": "South Bend, Blue Earth, MN",
+      "relevance": "",
+      "featured": true,
+      "lat": 44.1465861,
+      "lng": -94.0849391,
+      "wikimedia": {
+        "fileTitle": "File:Congregational Church, South Bend Township, Minnesota - DPLA - 646ad372b93ae047dff4a3cce91322d7.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Congregational_Church%2C_South_Bend_Township%2C_Minnesota_-_DPLA_-_646ad372b93ae047dff4a3cce91322d7.jpg/960px-Congregational_Church%2C_South_Bend_Township%2C_Minnesota_-_DPLA_-_646ad372b93ae047dff4a3cce91322d7.jpg",
+        "attribution": null,
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=44.1465861,-94.0849391",
+        "embedUrl": "https://maps.google.com/maps?q=44.1465861,-94.0849391&z=12&output=embed"
+      },
+      "year": "1864"
+    },
+    {
+      "id": "honolulu-hawaii-death",
+      "type": "town",
+      "canonicalPlaceId": "honolulu-hawaii",
+      "badge": "Death",
+      "name": "Honolulu, Hawaii",
+      "relevance": "",
+      "featured": false,
+      "lat": 21.304547,
+      "lng": -157.855676,
+      "wikipedia": {
+        "title": "Honolulu",
+        "url": "https://en.wikipedia.org/wiki/Honolulu",
+        "summary": "Honolulu is the capital and most populous city of the U.S. state of Hawaii, located in the Pacific Ocean. It is the county seat of the consolidated City and County of Honolulu, situated along the southeast coast of the island of O\u02bbahu. The population of Honolulu was 350,964 at the 2020 census, dropp"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Honolulu, Hawaii at night - 4 June 2020.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Honolulu%2C_Hawaii_at_night_-_4_June_2020.jpg/960px-Honolulu%2C_Hawaii_at_night_-_4_June_2020.jpg",
+        "attribution": "Sharon Hahn Darlin",
+        "license": "CC BY 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=21.304547,-157.855676",
+        "embedUrl": "https://maps.google.com/maps?q=21.304547,-157.855676&z=12&output=embed"
+      },
+      "year": "1943"
+    },
+    {
+      "id": "oakland-alameda-california-residence",
+      "type": "town",
+      "canonicalPlaceId": "oakland-alameda-california",
+      "badge": "Residence",
+      "name": "Oakland, Alameda, California",
+      "relevance": "",
+      "featured": false,
+      "lat": 37.8044557,
+      "lng": -122.271356,
+      "wikimedia": {
+        "fileTitle": "File:Alameda and Oakland.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Alameda_and_Oakland.jpg/960px-Alameda_and_Oakland.jpg",
+        "attribution": "Martin Mbuthia",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=37.8044557,-122.271356",
+        "embedUrl": "https://maps.google.com/maps?q=37.8044557,-122.271356&z=12&output=embed"
+      },
+      "year": "1910"
+    },
+    {
+      "id": "berkeley-ca-residence",
+      "type": "town",
+      "canonicalPlaceId": "berkeley-ca",
+      "badge": "Residence",
+      "name": "Berkeley, CA",
+      "relevance": "",
+      "featured": false,
+      "lat": 37.8708393,
+      "lng": -122.272863,
+      "wikipedia": {
+        "title": "Berkeley, California",
+        "url": "https://en.wikipedia.org/wiki/Berkeley%2C_California",
+        "summary": "Berkeley is a city on the eastern shore of San Francisco Bay in northern Alameda County, California, United States. It is named after the 18th-century Anglo-Irish bishop and philosopher George Berkeley. It borders the cities of Oakland and Emeryville to the south and the city of Albany and the uninc"
+      },
+      "wikimedia": {
+        "fileTitle": "File:3009. HEARST HALL UNIVERSITY OF CALIFORNIA BERKELEY CALIFORNIA (23603966761).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/3009._HEARST_HALL_UNIVERSITY_OF_CALIFORNIA_BERKELEY_CALIFORNIA_%2823603966761%29.jpg/960px-3009._HEARST_HALL_UNIVERSITY_OF_CALIFORNIA_BERKELEY_CALIFORNIA_%2823603966761%29.jpg",
+        "attribution": "Britton and Rey, Lithographers, San Francisco, CA",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=37.8708393,-122.272863",
+        "embedUrl": "https://maps.google.com/maps?q=37.8708393,-122.272863&z=12&output=embed"
+      },
+      "year": "1930"
+    }
+  ]
+}

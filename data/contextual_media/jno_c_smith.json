@@ -1,0 +1,34 @@
+{
+  "personId": "jno_c_smith",
+  "personName": "Jno C Smith",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "tennessee-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "tennessee",
+      "badge": "Birth Place",
+      "name": "Tennessee",
+      "relevance": "",
+      "featured": true,
+      "lat": 35.7730076,
+      "lng": -86.2820081,
+      "wikipedia": {
+        "title": "Tennessee",
+        "url": "https://en.wikipedia.org/wiki/Tennessee",
+        "summary": "Tennessee, officially the State of Tennessee, is a landlocked state in the Southeastern region of the United States. It borders Kentucky to the north, Virginia to the northeast, North Carolina to the east, Georgia, Alabama, and Mississippi to the south, Arkansas to the southwest, and Missouri to the"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Mountaintop Tennessee 3.png",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Mountaintop_Tennessee_3.png",
+        "attribution": "Roastedbeanz1",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=35.7730076,-86.2820081",
+        "embedUrl": "https://maps.google.com/maps?q=35.7730076,-86.2820081&z=12&output=embed"
+      },
+      "year": "1845"
+    }
+  ]
+}

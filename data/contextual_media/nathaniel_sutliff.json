@@ -1,0 +1,39 @@
+{
+  "personId": "nathaniel_sutliff",
+  "personName": "Nathaniel Sutliff",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "scituate-plymouth-massachusetts-bay-colony-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "scituate-plymouth-massachusetts-bay-colony",
+      "badge": "Birth Place",
+      "name": "Scituate, Plymouth, Massachusetts Bay Colony",
+      "relevance": "",
+      "featured": true,
+      "lat": 41.9356893,
+      "lng": -70.6144906,
+      "wikimedia": {
+        "fileTitle": "File:Records of the colony of New Plymouth, in New England - printed by order of the legislature of the Commonwealth of Massachusetts (IA cu31924070695196).pdf",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Records_of_the_colony_of_New_Plymouth%2C_in_New_England_-_printed_by_order_of_the_legislature_of_the_Commonwealth_of_Massachusetts_%28IA_cu31924070695196%29.pdf/page1-960px-Records_of_the_colony_of_New_Plymouth%2C_in_New_England_-_printed_by_order_of_the_legislature_of_the_Commonwealth_of_Massachusetts_%28IA_cu31924070695196%29.pdf.jpg",
+        "attribution": "New Plymouth Colony\nShurtleff, Nathaniel Bradstreet, 1810-1874\nPulsifer, David, 1802-1894",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=41.9356893,-70.6144906",
+        "embedUrl": "https://maps.google.com/maps?q=41.9356893,-70.6144906&z=12&output=embed"
+      },
+      "year": "1638"
+    },
+    {
+      "id": "deerfield-franklin-massachusetts-bay-colony-death",
+      "type": "town",
+      "canonicalPlaceId": "deerfield-franklin-massachusetts-bay-colony",
+      "badge": "Death",
+      "name": "Deerfield, Franklin, Massachusetts Bay Colony",
+      "relevance": "",
+      "featured": false,
+      "year": "1676"
+    }
+  ]
+}

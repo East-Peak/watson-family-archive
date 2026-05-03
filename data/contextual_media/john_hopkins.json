@@ -1,0 +1,61 @@
+{
+  "personId": "john_hopkins",
+  "personName": "John Hopkins",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "bristol-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "bristol",
+      "badge": "Birth Place",
+      "name": "Bristol",
+      "relevance": "",
+      "featured": true,
+      "lat": 51.4538022,
+      "lng": -2.5972985,
+      "wikipedia": {
+        "title": "Bristol",
+        "url": "https://en.wikipedia.org/wiki/Bristol",
+        "summary": "Bristol is a city and ceremonial county in South West England. It is located on the River Avon, and bordered by Gloucestershire to the north and Somerset to the south with a short coastline on the Bristol Channel to the west. The county includes the majority of the Bristol conurbation, however, the "
+      },
+      "wikimedia": {
+        "fileTitle": "File:Bristol QC.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Bristol_QC.jpg/960px-Bristol_QC.jpg",
+        "attribution": "P199",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=51.4538022,-2.5972985",
+        "embedUrl": "https://maps.google.com/maps?q=51.4538022,-2.5972985&z=12&output=embed"
+      },
+      "year": "1640"
+    },
+    {
+      "id": "england-residence",
+      "type": "town",
+      "canonicalPlaceId": "england",
+      "badge": "Residence",
+      "name": "England",
+      "relevance": "",
+      "featured": false,
+      "lat": 52.5310214,
+      "lng": -1.2649062,
+      "wikipedia": {
+        "title": "England",
+        "url": "https://en.wikipedia.org/wiki/England",
+        "summary": "England is a country that is part of the United Kingdom. It is located on the island of Great Britain, of which it covers about 62%, and more than 100 smaller adjacent islands. England shares a land border with Scotland to the north and another land border with Wales to the west, and is surrounded b"
+      },
+      "wikimedia": {
+        "fileTitle": "File:England satellite image.png",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b1/England_satellite_image.png",
+        "attribution": "Jacques Descloitres, MODIS Land Rapid Response Team, NASA/GSFC",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=52.5310214,-1.2649062",
+        "embedUrl": "https://maps.google.com/maps?q=52.5310214,-1.2649062&z=12&output=embed"
+      },
+      "year": "1669"
+    }
+  ]
+}

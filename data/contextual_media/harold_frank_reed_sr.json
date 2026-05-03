@@ -1,0 +1,34 @@
+{
+  "personId": "harold_frank_reed_sr",
+  "personName": "Harold Frank Reed Sr",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "michigan-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "michigan",
+      "badge": "Birth Place",
+      "name": "Michigan",
+      "relevance": "",
+      "featured": true,
+      "lat": 43.6211955,
+      "lng": -84.6824346,
+      "wikipedia": {
+        "title": "Michigan",
+        "url": "https://en.wikipedia.org/wiki/Michigan",
+        "summary": "Michigan is a peninsular state in the Great Lakes region of the Upper Midwestern United States. It shares water and land boundaries with Minnesota to the northwest, Wisconsin to the west, Indiana and Illinois to the southwest, Ohio to the southeast, and the Canadian province of Ontario to the east, "
+      },
+      "wikimedia": {
+        "fileTitle": "File:Lenawee County Courthouse Adrian Michigan.JPG",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Lenawee_County_Courthouse_Adrian_Michigan.JPG/960px-Lenawee_County_Courthouse_Adrian_Michigan.JPG",
+        "attribution": "Dwight Burdette",
+        "license": "CC BY 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.6211955,-84.6824346",
+        "embedUrl": "https://maps.google.com/maps?q=43.6211955,-84.6824346&z=12&output=embed"
+      },
+      "year": "1886"
+    }
+  ]
+}

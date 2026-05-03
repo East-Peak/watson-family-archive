@@ -1,0 +1,56 @@
+{
+  "personId": "alice_ollis",
+  "personName": "Alice Ollis",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "bitton-gloucestershire-england-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "bitton-gloucestershire-england",
+      "badge": "Birth Place",
+      "name": "Bitton, Gloucestershire, England",
+      "relevance": "",
+      "featured": true,
+      "lat": 51.4352177,
+      "lng": -2.4406753,
+      "wikimedia": {
+        "fileTitle": "File:Bitton railway station, Gloucestershire (geograph 5723732).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Bitton_railway_station%2C_Gloucestershire_%28geograph_5723732%29.jpg/960px-Bitton_railway_station%2C_Gloucestershire_%28geograph_5723732%29.jpg",
+        "attribution": "Nigel Thompson",
+        "license": "CC BY-SA 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=51.4352177,-2.4406753",
+        "embedUrl": "https://maps.google.com/maps?q=51.4352177,-2.4406753&z=12&output=embed"
+      },
+      "year": "1806"
+    },
+    {
+      "id": "london-death",
+      "type": "town",
+      "canonicalPlaceId": "london",
+      "badge": "Death",
+      "name": "London",
+      "relevance": "",
+      "featured": false,
+      "lat": 51.5074456,
+      "lng": -0.1277653,
+      "wikipedia": {
+        "title": "London",
+        "url": "https://en.wikipedia.org/wiki/London",
+        "summary": "London is the capital and largest city of both England and the United Kingdom, with a population of 9.1 million people in 2024. Its wider metropolitan area is the largest in Western Europe, with a population of 15.1\u00a0million. London stands on the River Thames in southeast England, at the head of a 50"
+      },
+      "wikimedia": {
+        "fileTitle": "File:London , Kodachrome by Chalmers Butterfield edit.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/London_%2C_Kodachrome_by_Chalmers_Butterfield_edit.jpg/960px-London_%2C_Kodachrome_by_Chalmers_Butterfield_edit.jpg",
+        "attribution": "Chalmers Butterfield",
+        "license": "CC BY 2.5"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=51.5074456,-0.1277653",
+        "embedUrl": "https://maps.google.com/maps?q=51.5074456,-0.1277653&z=12&output=embed"
+      },
+      "year": "1869"
+    }
+  ]
+}

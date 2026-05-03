@@ -1,0 +1,38 @@
+{
+  "personId": "hannah_plimpton",
+  "personName": "Hannah Plimpton",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "dedham-suffolk-massachusetts-bay-colony-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "dedham-suffolk-massachusetts-bay-colony",
+      "badge": "Birth Place",
+      "name": "Dedham, Suffolk, Massachusetts Bay Colony",
+      "relevance": "",
+      "featured": true,
+      "year": "1645"
+    },
+    {
+      "id": "branford-new-haven-connecticut-colony-death",
+      "type": "town",
+      "canonicalPlaceId": "branford-new-haven-connecticut-colony",
+      "badge": "Death",
+      "name": "Branford, New Haven, Connecticut Colony",
+      "relevance": "",
+      "featured": false,
+      "lat": 41.4280593,
+      "lng": -72.8374656,
+      "wikimedia": {
+        "fileTitle": "File:Papers of the New Haven Colony Historical Society, v9.djvu",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Papers_of_the_New_Haven_Colony_Historical_Society%2C_v9.djvu/page1-960px-Papers_of_the_New_Haven_Colony_Historical_Society%2C_v9.djvu.jpg",
+        "attribution": "Various",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=41.4280593,-72.8374656",
+        "embedUrl": "https://maps.google.com/maps?q=41.4280593,-72.8374656&z=12&output=embed"
+      }
+    }
+  ]
+}

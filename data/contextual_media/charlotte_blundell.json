@@ -1,0 +1,34 @@
+{
+  "personId": "charlotte_blundell",
+  "personName": "Charlotte Blundell",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "burnley-lancashire-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "burnley-lancashire",
+      "badge": "Birth Place",
+      "name": "Burnley, Lancashire",
+      "relevance": "",
+      "featured": true,
+      "lat": 53.7907262,
+      "lng": -2.2439196,
+      "wikipedia": {
+        "title": "Burnley",
+        "url": "https://en.wikipedia.org/wiki/Burnley",
+        "summary": "Burnley is a town and the administrative centre of the wider Borough of Burnley in Lancashire, England, with a 2021 population of 78,266. It is 21 miles (34\u00a0km) north of Manchester and 20 miles (32\u00a0km) east of Preston, at the confluence of the River Calder and River Brun."
+      },
+      "wikimedia": {
+        "fileTitle": "File:The 'Old Red Lion', Burnley, Lancashire - geograph.org.uk - 545717.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d1/The_%27Old_Red_Lion%27%2C_Burnley%2C_Lancashire_-_geograph.org.uk_-_545717.jpg",
+        "attribution": "Dr Neil Clifton",
+        "license": "CC BY-SA 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=53.7907262,-2.2439196",
+        "embedUrl": "https://maps.google.com/maps?q=53.7907262,-2.2439196&z=12&output=embed"
+      },
+      "year": "1838"
+    }
+  ]
+}

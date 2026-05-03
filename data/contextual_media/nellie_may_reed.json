@@ -1,0 +1,77 @@
+{
+  "personId": "nellie_may_reed",
+  "personName": "Nellie May Reed",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "peru-clinton-new-york-death",
+      "type": "town",
+      "canonicalPlaceId": "peru-clinton-new-york",
+      "badge": "Death",
+      "name": "Peru, Clinton, New York",
+      "relevance": "",
+      "featured": true,
+      "lat": 44.578486,
+      "lng": -73.527031,
+      "wikimedia": {
+        "fileTitle": "File:Quaker records, Peru, Clinton Co., New York (IA quakerrecordsper00fros).pdf",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Quaker_records%2C_Peru%2C_Clinton_Co.%2C_New_York_%28IA_quakerrecordsper00fros%29.pdf/page1-960px-Quaker_records%2C_Peru%2C_Clinton_Co.%2C_New_York_%28IA_quakerrecordsper00fros%29.pdf.jpg",
+        "attribution": "Frost, Josephine C\nSociety of Friends. Peru Monthly Meeting",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=44.578486,-73.527031",
+        "embedUrl": "https://maps.google.com/maps?q=44.578486,-73.527031&z=12&output=embed"
+      },
+      "year": "1947"
+    },
+    {
+      "id": "jay-new-york-marriage",
+      "type": "building",
+      "canonicalPlaceId": "jay-new-york",
+      "badge": "Marriage",
+      "name": "Jay, New York",
+      "relevance": "",
+      "featured": false,
+      "lat": 44.375159,
+      "lng": -73.728218,
+      "wikipedia": {
+        "title": "Jay, New York",
+        "url": "https://en.wikipedia.org/wiki/Jay%2C_New_York",
+        "summary": "Jay is a town in Essex County, New York, United States. The population was 2,506 at the 2010 census. The town is named after John Jay, governor of New York when the town was formed."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Fort Jay New York September 2016 001.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Fort_Jay_New_York_September_2016_001.jpg/960px-Fort_Jay_New_York_September_2016_001.jpg",
+        "attribution": "King of Hearts",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=44.375159,-73.728218",
+        "embedUrl": "https://maps.google.com/maps?q=44.375159,-73.728218&z=12&output=embed"
+      }
+    },
+    {
+      "id": "clintonville-old-cemetery-clintonville-clinton-new-york-residence",
+      "type": "town",
+      "canonicalPlaceId": "clintonville-old-cemetery-clintonville-clinton-new-york",
+      "badge": "Residence",
+      "name": "Clintonville Old Cemetery, Clintonville, Clinton, New York",
+      "relevance": "",
+      "featured": false,
+      "lat": 44.7278943,
+      "lng": -73.6686982,
+      "wikimedia": {
+        "fileTitle": "File:Otsego County, New York; geographical and historical, from the earliest settlement to the present time, with county and township maps from original drawings (IA otsegocountynewy00baco).pdf",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Otsego_County%2C_New_York%3B_geographical_and_historical%2C_from_the_earliest_settlement_to_the_present_time%2C_with_county_and_township_maps_from_original_drawings_%28IA_otsegocountynewy00baco%29.pdf/page1-829px-thumbnail.pdf.jpg",
+        "attribution": "Bacon, Edwin F[axon], 1832- [from old catalog]",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=44.7278943,-73.6686982",
+        "embedUrl": "https://maps.google.com/maps?q=44.7278943,-73.6686982&z=12&output=embed"
+      },
+      "year": "1947"
+    }
+  ]
+}

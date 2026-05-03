@@ -1,0 +1,110 @@
+{
+  "personId": "elbert_c_andes",
+  "personName": "Elbert C Andes",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "kentucky-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "kentucky",
+      "badge": "Birth Place",
+      "name": "Kentucky",
+      "relevance": "",
+      "featured": true,
+      "lat": 37.5726028,
+      "lng": -85.1551411,
+      "wikipedia": {
+        "title": "Kentucky",
+        "url": "https://en.wikipedia.org/wiki/Kentucky",
+        "summary": "Kentucky, officially the Commonwealth of Kentucky, is a landlocked state in the Southeastern region of the United States. It borders Illinois, Indiana, and Ohio to the north, West Virginia to the northeast, Virginia to the east, Tennessee to the south, and Missouri to the west. Its northern border i"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Kentucky Scenic Byway signage on Kentucky Route 63 in Temple Hill, Kentucky.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Kentucky_Scenic_Byway_signage_on_Kentucky_Route_63_in_Temple_Hill%2C_Kentucky.jpg",
+        "attribution": "K-Johnson 127",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=37.5726028,-85.1551411",
+        "embedUrl": "https://maps.google.com/maps?q=37.5726028,-85.1551411&z=12&output=embed"
+      },
+      "year": "1903"
+    },
+    {
+      "id": "los-angeles-ca-death",
+      "type": "town",
+      "canonicalPlaceId": "los-angeles-ca",
+      "badge": "Death",
+      "name": "Los Angeles, CA",
+      "relevance": "",
+      "featured": false,
+      "lat": 34.0536909,
+      "lng": -118.242766,
+      "wikipedia": {
+        "title": "Los Angeles",
+        "url": "https://en.wikipedia.org/wiki/Los_Angeles",
+        "summary": "Los Angeles is the most populous city in the U.S. state of California, and the commercial, financial, and cultural center of Southern California. With an estimated 3.88 million residents within the city limits as of 2024, it is the second-most populous city in the United States, behind New York City"
+      },
+      "wikimedia": {
+        "fileTitle": "File:USS Los Angeles (CA-135) in the Far East, 13 October 1952 (NH 97386).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/USS_Los_Angeles_%28CA-135%29_in_the_Far_East%2C_13_October_1952_%28NH_97386%29.jpg/960px-USS_Los_Angeles_%28CA-135%29_in_the_Far_East%2C_13_October_1952_%28NH_97386%29.jpg",
+        "attribution": "Unknown authorUnknown author",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=34.0536909,-118.242766",
+        "embedUrl": "https://maps.google.com/maps?q=34.0536909,-118.242766&z=12&output=embed"
+      },
+      "year": "1969"
+    },
+    {
+      "id": "waynesville-dewitt-county-il-residence",
+      "type": "town",
+      "canonicalPlaceId": "waynesville-dewitt-county-il",
+      "badge": "Residence",
+      "name": "Waynesville, DeWitt County, IL",
+      "relevance": "",
+      "featured": false,
+      "lat": 40.2389277,
+      "lng": -89.1231418,
+      "wikimedia": {
+        "fileTitle": "File:Old Waynesville High School, Waynesville, NC (31774431267).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Old_Waynesville_High_School%2C_Waynesville%2C_NC_%2831774431267%29.jpg/960px-Old_Waynesville_High_School%2C_Waynesville%2C_NC_%2831774431267%29.jpg",
+        "attribution": "Warren LeMay from Cincinnati, OH, United States",
+        "license": "CC0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=40.2389277,-89.1231418",
+        "embedUrl": "https://maps.google.com/maps?q=40.2389277,-89.1231418&z=12&output=embed"
+      },
+      "year": "1910"
+    },
+    {
+      "id": "decatur-illinois-residence",
+      "type": "town",
+      "canonicalPlaceId": "decatur-illinois",
+      "badge": "Residence",
+      "name": "Decatur, Illinois",
+      "relevance": "",
+      "featured": false,
+      "lat": 39.8454163,
+      "lng": -88.9524151,
+      "wikipedia": {
+        "title": "Decatur, Illinois",
+        "url": "https://en.wikipedia.org/wiki/Decatur%2C_Illinois",
+        "summary": "Decatur is the largest city in Macon County, Illinois, United States, and its county seat. The city was founded in 1829 and is situated along the Sangamon River and Lake Decatur in Central Illinois. As of the 2020 census, it had a population of 70,522. It is the 17th-most populous city in Illinois a"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Decatur Illinois banner.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Decatur_Illinois_banner.jpg/960px-Decatur_Illinois_banner.jpg",
+        "attribution": "ZcarstvnzAuthor of original photo: n9qhf",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=39.8454163,-88.9524151",
+        "embedUrl": "https://maps.google.com/maps?q=39.8454163,-88.9524151&z=12&output=embed"
+      },
+      "year": "1920"
+    }
+  ]
+}

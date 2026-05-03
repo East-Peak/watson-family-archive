@@ -1,0 +1,34 @@
+{
+  "personId": "nancy_watson",
+  "personName": "Nancy Watson",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "scotland-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "scotland",
+      "badge": "Birth Place",
+      "name": "Scotland",
+      "relevance": "",
+      "featured": true,
+      "lat": 56.7861112,
+      "lng": -4.1140518,
+      "wikipedia": {
+        "title": "Scotland",
+        "url": "https://en.wikipedia.org/wiki/Scotland",
+        "summary": "Scotland is a country that is part of the United Kingdom. It contains nearly one-third of the United Kingdom's land area, consisting of the northern part of the island of Great Britain and more than 790 adjacent islands, principally in the archipelagos of the Hebrides and the Northern Isles. In 2022"
+      },
+      "wikimedia": {
+        "fileTitle": "File:J.H. Muerer House, Scotland, TX Picture 2218.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/J.H._Muerer_House%2C_Scotland%2C_TX_Picture_2218.jpg/960px-J.H._Muerer_House%2C_Scotland%2C_TX_Picture_2218.jpg",
+        "attribution": "Billy Hathorn at en.wikipedia",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=56.7861112,-4.1140518",
+        "embedUrl": "https://maps.google.com/maps?q=56.7861112,-4.1140518&z=12&output=embed"
+      },
+      "year": "1769"
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "personId": "adalaid_hunter",
+  "personName": "Adalaid Hunter",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "pennsylvania-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "pennsylvania",
+      "badge": "Birth Place",
+      "name": "Pennsylvania",
+      "relevance": "",
+      "featured": true,
+      "lat": 40.9699889,
+      "lng": -77.7278831,
+      "wikipedia": {
+        "title": "Pennsylvania",
+        "url": "https://en.wikipedia.org/wiki/Pennsylvania",
+        "summary": "Pennsylvania, officially the Commonwealth of Pennsylvania, is a state located in the Mid-Atlantic, Northeastern, Appalachian, and Great Lakes regions of the United States. It borders Delaware to its southeast, Maryland to its south, forming the Mason-Dixon Line, West Virginia to its southwest, Ohio "
+      },
+      "wikimedia": {
+        "fileTitle": "File:Pennsylvania Winter Sunset.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Pennsylvania_Winter_Sunset.jpg/960px-Pennsylvania_Winter_Sunset.jpg",
+        "attribution": "Andrew Crouthamel",
+        "license": "CC BY-SA 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=40.9699889,-77.7278831",
+        "embedUrl": "https://maps.google.com/maps?q=40.9699889,-77.7278831&z=12&output=embed"
+      },
+      "year": "1855"
+    },
+    {
+      "id": "diamond-bluff-pierce-wi-residence",
+      "type": "town",
+      "canonicalPlaceId": "diamond-bluff-pierce-wi",
+      "badge": "Residence",
+      "name": "Diamond Bluff, Pierce, WI",
+      "relevance": "",
+      "featured": false,
+      "lat": 44.6505213,
+      "lng": -92.6296223,
+      "wikimedia": {
+        "fileTitle": "File:WIMap-doton-Diamond Bluff.png",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3d/WIMap-doton-Diamond_Bluff.png",
+        "attribution": "The original uploader was Bumm13 at English Wikipedia.",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=44.6505213,-92.6296223",
+        "embedUrl": "https://maps.google.com/maps?q=44.6505213,-92.6296223&z=12&output=embed"
+      },
+      "year": "1860"
+    },
+    {
+      "id": "philadelphia-residence",
+      "type": "town",
+      "canonicalPlaceId": "philadelphia",
+      "badge": "Residence",
+      "name": "Philadelphia",
+      "relevance": "",
+      "featured": false,
+      "lat": 39.9527237,
+      "lng": -75.1635262,
+      "wikipedia": {
+        "title": "Philadelphia",
+        "url": "https://en.wikipedia.org/wiki/Philadelphia",
+        "summary": "Philadelphia, colloquially referred to as Philly, is the most populous city in the U.S. state of Pennsylvania. It is the sixth-most populous city in the United States, with a population of 1.6 million at the 2020 census. The Philadelphia metropolitan area has 6.33 million residents and is the nation"
+      },
+      "wikimedia": {
+        "fileTitle": "File:City of Philadelphia from the top.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/City_of_Philadelphia_from_the_top.jpg/960px-City_of_Philadelphia_from_the_top.jpg",
+        "attribution": "Ginevrajocosa88",
+        "license": "CC0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=39.9527237,-75.1635262",
+        "embedUrl": "https://maps.google.com/maps?q=39.9527237,-75.1635262&z=12&output=embed"
+      },
+      "year": "1880"
+    },
+    {
+      "id": "philadelphia-ward-26-pa-residence",
+      "type": "town",
+      "canonicalPlaceId": "philadelphia-ward-26-pa",
+      "badge": "Residence",
+      "name": "Philadelphia, Ward 26, PA",
+      "relevance": "",
+      "featured": false,
+      "lat": -41.8279505,
+      "lng": 174.1356831,
+      "wikimedia": {
+        "fileTitle": "File:Philadelphia fashions fall and winter 1847 by Samuel A. Ward and Asahel F. Ward, no. 62 Walnut St., c1847. (4679164835).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Philadelphia_fashions_fall_and_winter_1847_by_Samuel_A._Ward_and_Asahel_F._Ward%2C_no._62_Walnut_St.%2C_c1847._%284679164835%29.jpg/960px-Philadelphia_fashions_fall_and_winter_1847_by_Samuel_A._Ward_and_Asahel_F._Ward%2C_no._62_Walnut_St.%2C_c1847._%284679164835%29.jpg",
+        "attribution": "Library Company of Philadelphia",
+        "license": "No restrictions"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=-41.8279505,174.1356831",
+        "embedUrl": "https://maps.google.com/maps?q=-41.8279505,174.1356831&z=12&output=embed"
+      },
+      "year": "1910"
+    }
+  ]
+}

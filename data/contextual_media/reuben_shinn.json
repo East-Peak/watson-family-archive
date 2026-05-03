@@ -1,0 +1,56 @@
+{
+  "personId": "reuben_shinn",
+  "personName": "Reuben Bates Shinn",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "shinnston-harrison-west-virginia-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "shinnston-harrison-west-virginia",
+      "badge": "Birth Place",
+      "name": "Shinnston, Harrison, West Virginia",
+      "relevance": "",
+      "featured": true,
+      "lat": 39.3953654,
+      "lng": -80.3008402,
+      "wikimedia": {
+        "fileTitle": "File:Shinnston West Virginia.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Shinnston_West_Virginia.jpg/960px-Shinnston_West_Virginia.jpg",
+        "attribution": "Tim Kiser (w:User:Malepheasant)",
+        "license": "CC BY-SA 2.5"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=39.3953654,-80.3008402",
+        "embedUrl": "https://maps.google.com/maps?q=39.3953654,-80.3008402&z=12&output=embed"
+      },
+      "year": "1801"
+    },
+    {
+      "id": "washington-ohio-death",
+      "type": "town",
+      "canonicalPlaceId": "washington-ohio",
+      "badge": "Death",
+      "name": "Washington, Ohio",
+      "relevance": "",
+      "featured": false,
+      "lat": 39.4782641,
+      "lng": -81.5488945,
+      "wikipedia": {
+        "title": "Washington Court House, Ohio",
+        "url": "https://en.wikipedia.org/wiki/Washington_Court_House%2C_Ohio",
+        "summary": "Washington Court House is a city in Fayette County, Ohio, United States, and its county seat. The population was 14,401 at the 2020 census. The area was initially settled by Virginia veterans of the American Revolution, who received the land from the government as payment for their service in the wa"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Washington Courthouse Ohio.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/8/89/Washington_Courthouse_Ohio.jpg",
+        "attribution": "Bwsmith84 (talk)",
+        "license": "CC BY 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=39.4782641,-81.5488945",
+        "embedUrl": "https://maps.google.com/maps?q=39.4782641,-81.5488945&z=12&output=embed"
+      },
+      "year": "1894"
+    }
+  ]
+}

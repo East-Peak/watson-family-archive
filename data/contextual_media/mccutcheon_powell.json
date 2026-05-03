@@ -1,0 +1,61 @@
+{
+  "personId": "mccutcheon_powell",
+  "personName": "McCutcheon Powell",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "montana-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "montana",
+      "badge": "Birth Place",
+      "name": "Montana",
+      "relevance": "",
+      "featured": true,
+      "lat": 47.3752671,
+      "lng": -109.638757,
+      "wikipedia": {
+        "title": "Montana",
+        "url": "https://en.wikipedia.org/wiki/Montana",
+        "summary": "Montana is a landlocked state in the Mountain West subregion of the Western United States. It is bordered by Idaho to the west, North Dakota to the east, South Dakota to the southeast, Wyoming to the south, and the Canadian provinces of Alberta, British Columbia, and Saskatchewan to the north. It is"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Greetings from Montana, The Treasure State - Large Letter Postcard (4524258511).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Greetings_from_Montana%2C_The_Treasure_State_-_Large_Letter_Postcard_%284524258511%29.jpg/960px-Greetings_from_Montana%2C_The_Treasure_State_-_Large_Letter_Postcard_%284524258511%29.jpg",
+        "attribution": "Steve Shook from Moscow, Idaho, USA",
+        "license": "CC BY 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=47.3752671,-109.638757",
+        "embedUrl": "https://maps.google.com/maps?q=47.3752671,-109.638757&z=12&output=embed"
+      },
+      "year": "1902"
+    },
+    {
+      "id": "milwaukee-wi-death",
+      "type": "town",
+      "canonicalPlaceId": "milwaukee-wi",
+      "badge": "Death",
+      "name": "Milwaukee, WI",
+      "relevance": "",
+      "featured": false,
+      "lat": 43.0386475,
+      "lng": -87.9090751,
+      "wikipedia": {
+        "title": "Milwaukee",
+        "url": "https://en.wikipedia.org/wiki/Milwaukee",
+        "summary": "Milwaukee is the most populous city in the U.S. state of Wisconsin. It is located on the western shore of Lake Michigan at the confluence of the Milwaukee, Menomonee, and Kinnickinnic Rivers. Milwaukee is the 31st-most populous city in the United States and the fifth-most populous city in the Midwes"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Men loading hardware into new GMC Model T truck Milwaukee WI 1936.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Men_loading_hardware_into_new_GMC_Model_T_truck_Milwaukee_WI_1936.jpg",
+        "attribution": "New York Public Library",
+        "license": "No restrictions"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.0386475,-87.9090751",
+        "embedUrl": "https://maps.google.com/maps?q=43.0386475,-87.9090751&z=12&output=embed"
+      },
+      "year": "1969"
+    }
+  ]
+}

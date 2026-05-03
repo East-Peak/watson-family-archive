@@ -1,0 +1,27 @@
+{
+  "personId": "sarah_westfall",
+  "personName": "Sarah Westfall",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "all-hallows-anne-arundel-province-of-maryland-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "all-hallows-anne-arundel-province-of-maryland",
+      "badge": "Birth Place",
+      "name": "All Hallows, Anne Arundel, Province of Maryland",
+      "relevance": "",
+      "featured": true,
+      "year": "1680"
+    },
+    {
+      "id": "anne-arundel-province-of-maryland-death",
+      "type": "town",
+      "canonicalPlaceId": "anne-arundel-province-of-maryland",
+      "badge": "Death",
+      "name": "Anne Arundel, Province of Maryland",
+      "relevance": "",
+      "featured": false,
+      "year": "1716"
+    }
+  ]
+}

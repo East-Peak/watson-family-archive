@@ -1,0 +1,110 @@
+{
+  "personId": "gwen_davis",
+  "personName": "Gwen Davis",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "san-bernardino-california-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "san-bernardino-california",
+      "badge": "Birth Place",
+      "name": "San Bernardino, California",
+      "relevance": "",
+      "featured": true,
+      "lat": 34.8253019,
+      "lng": -116.0833144,
+      "wikipedia": {
+        "title": "San Bernardino, California",
+        "url": "https://en.wikipedia.org/wiki/San_Bernardino%2C_California",
+        "summary": "San Bernardino is a city in and the county seat of San Bernardino County, California, United States. Located in the Inland Empire region of Southern California, the city had a population of 222,101 in the 2020 census, making it the 18th-most populous city in California. The Riverside\u2013San Bernardino "
+      },
+      "wikimedia": {
+        "fileTitle": "File:Downtown San Bernardino.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Downtown_San_Bernardino.jpg",
+        "attribution": "House10902 (talk).",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=34.8253019,-116.0833144",
+        "embedUrl": "https://maps.google.com/maps?q=34.8253019,-116.0833144&z=12&output=embed"
+      },
+      "year": "1893"
+    },
+    {
+      "id": "redlands-california-death",
+      "type": "town",
+      "canonicalPlaceId": "redlands-california",
+      "badge": "Death",
+      "name": "Redlands, California",
+      "relevance": "",
+      "featured": false,
+      "lat": 34.0550328,
+      "lng": -117.1827445,
+      "wikipedia": {
+        "title": "Redlands, California",
+        "url": "https://en.wikipedia.org/wiki/Redlands%2C_California",
+        "summary": "Redlands is a city in San Bernardino County, California, United States. As of the 2020 census, the city had a population of 73,168, up from 68,747 at the 2010 census. The city is located approximately 70 miles (110\u00a0km) northwest of Indio and 63 miles (101\u00a0km) east of Los Angeles."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Redlands, California, from Smiley's Heights (NBY 1550).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Redlands%2C_California%2C_from_Smiley%27s_Heights_%28NBY_1550%29.jpg",
+        "attribution": "Unknown authorUnknown author",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=34.0550328,-117.1827445",
+        "embedUrl": "https://maps.google.com/maps?q=34.0550328,-117.1827445&z=12&output=embed"
+      },
+      "year": "1980"
+    },
+    {
+      "id": "portage-columbia-wisconsin-marriage",
+      "type": "building",
+      "canonicalPlaceId": "portage-columbia-wisconsin",
+      "badge": "Marriage",
+      "name": "Portage, Columbia, Wisconsin",
+      "relevance": "",
+      "featured": false,
+      "lat": 43.539494,
+      "lng": -89.461334,
+      "wikimedia": {
+        "fileTitle": "File:Bird's eye view of the city of Portage, Columbia Co., Wisconsin 1868. LOC 73694548.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Bird%27s_eye_view_of_the_city_of_Portage%2C_Columbia_Co.%2C_Wisconsin_1868._LOC_73694548.jpg/960px-Bird%27s_eye_view_of_the_city_of_Portage%2C_Columbia_Co.%2C_Wisconsin_1868._LOC_73694548.jpg",
+        "attribution": "Ruger, A.; Chicago Lithographing Co.",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.539494,-89.461334",
+        "embedUrl": "https://maps.google.com/maps?q=43.539494,-89.461334&z=12&output=embed"
+      },
+      "year": "1883"
+    },
+    {
+      "id": "california-residence",
+      "type": "town",
+      "canonicalPlaceId": "california",
+      "badge": "Residence",
+      "name": "California",
+      "relevance": "",
+      "featured": false,
+      "lat": 36.7014631,
+      "lng": -118.755997,
+      "wikipedia": {
+        "title": "California",
+        "url": "https://en.wikipedia.org/wiki/California",
+        "summary": "California is a state in the Western United States that lies on the Pacific Coast. It borders Oregon to the north, Nevada and Arizona to the east, and shares an international border with the Mexican state of Baja California to the south. With almost 40\u00a0million residents across an area of 163,696 squ"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Los Angeles (California, USA), South Olive Street -- 2012 -- 4847.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Los_Angeles_%28California%2C_USA%29%2C_South_Olive_Street_--_2012_--_4847.jpg/960px-Los_Angeles_%28California%2C_USA%29%2C_South_Olive_Street_--_2012_--_4847.jpg",
+        "attribution": "Dietmar Rabich",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=36.7014631,-118.755997",
+        "embedUrl": "https://maps.google.com/maps?q=36.7014631,-118.755997&z=12&output=embed"
+      },
+      "year": "1980"
+    }
+  ]
+}

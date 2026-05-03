@@ -1,0 +1,39 @@
+{
+  "personId": "ann_davies",
+  "personName": "Ann Davies",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "rhiwlas-north-wales-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "rhiwlas-north-wales",
+      "badge": "Birth Place",
+      "name": "Rhiwlas, North Wales",
+      "relevance": "",
+      "featured": true,
+      "year": "1832"
+    },
+    {
+      "id": "hampton-franklin-ia-death",
+      "type": "town",
+      "canonicalPlaceId": "hampton-franklin-ia",
+      "badge": "Death",
+      "name": "Hampton, Franklin, IA",
+      "relevance": "",
+      "featured": false,
+      "lat": 42.7424776,
+      "lng": -93.2080861,
+      "wikimedia": {
+        "fileTitle": "File:IAMap-doton-Hampton.PNG",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ed/IAMap-doton-Hampton.PNG",
+        "attribution": "The original uploader was Seth Ilys at English Wikipedia.",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=42.7424776,-93.2080861",
+        "embedUrl": "https://maps.google.com/maps?q=42.7424776,-93.2080861&z=12&output=embed"
+      },
+      "year": "1923"
+    }
+  ]
+}

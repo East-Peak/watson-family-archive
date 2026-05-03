@@ -1,0 +1,44 @@
+{
+  "personId": "janice_elizabeth_slater",
+  "personName": "Janice Elizabeth Slater",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "los-angeles-county-california-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "los-angeles-county-california",
+      "badge": "Birth Place",
+      "name": "Los Angeles County, California",
+      "relevance": "",
+      "featured": true,
+      "lat": 34.3155072,
+      "lng": -118.209681,
+      "wikipedia": {
+        "title": "Los Angeles County, California",
+        "url": "https://en.wikipedia.org/wiki/Los_Angeles_County%2C_California",
+        "summary": "Los Angeles County, sometimes abbreviated as LA County, is the most populous county in the United States, with 9,757,179 residents estimated in 2024. Its population is greater than that of 40 individual U.S. states. Comprising 88 incorporated cities and 101 unincorporated areas within a total area o"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Los Angeles (California, USA), South Olive Street -- 2012 -- 5280.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Los_Angeles_%28California%2C_USA%29%2C_South_Olive_Street_--_2012_--_5280.jpg/960px-Los_Angeles_%28California%2C_USA%29%2C_South_Olive_Street_--_2012_--_5280.jpg",
+        "attribution": "Dietmar Rabich",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=34.3155072,-118.209681",
+        "embedUrl": "https://maps.google.com/maps?q=34.3155072,-118.209681&z=12&output=embed"
+      },
+      "year": "1924"
+    },
+    {
+      "id": "forest-lawn-memorial-park-in-glendale-residence",
+      "type": "town",
+      "canonicalPlaceId": "forest-lawn-memorial-park-in-glendale",
+      "badge": "Residence",
+      "name": "Forest Lawn Memorial Park in Glendale",
+      "relevance": "",
+      "featured": false,
+      "year": "2016"
+    }
+  ]
+}

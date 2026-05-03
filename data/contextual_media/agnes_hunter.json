@@ -1,0 +1,56 @@
+{
+  "personId": "agnes_hunter",
+  "personName": "Agnes Hunter",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "pennsylvania-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "pennsylvania",
+      "badge": "Birth Place",
+      "name": "Pennsylvania",
+      "relevance": "",
+      "featured": true,
+      "lat": 40.9699889,
+      "lng": -77.7278831,
+      "wikipedia": {
+        "title": "Pennsylvania",
+        "url": "https://en.wikipedia.org/wiki/Pennsylvania",
+        "summary": "Pennsylvania, officially the Commonwealth of Pennsylvania, is a state located in the Mid-Atlantic, Northeastern, Appalachian, and Great Lakes regions of the United States. It borders Delaware to its southeast, Maryland to its south, forming the Mason-Dixon Line, West Virginia to its southwest, Ohio "
+      },
+      "wikimedia": {
+        "fileTitle": "File:Pennsylvania Winter Sunset.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Pennsylvania_Winter_Sunset.jpg/960px-Pennsylvania_Winter_Sunset.jpg",
+        "attribution": "Andrew Crouthamel",
+        "license": "CC BY-SA 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=40.9699889,-77.7278831",
+        "embedUrl": "https://maps.google.com/maps?q=40.9699889,-77.7278831&z=12&output=embed"
+      },
+      "year": "1846"
+    },
+    {
+      "id": "woodcock-crawford-pa-residence",
+      "type": "town",
+      "canonicalPlaceId": "woodcock-crawford-pa",
+      "badge": "Residence",
+      "name": "Woodcock, Crawford, PA",
+      "relevance": "",
+      "featured": false,
+      "lat": 41.7547787,
+      "lng": -80.0856119,
+      "wikimedia": {
+        "fileTitle": "File:Historic American Buildings Survey, William J. Bulger, Photographer, 1937 EXTERIOR (WEST ELEVATION). - Methodist Church, Woodcock, Crawford County, PA HABS PA,20-WOOD,2-1.tif",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Historic_American_Buildings_Survey%2C_William_J._Bulger%2C_Photographer%2C_1937_EXTERIOR_%28WEST_ELEVATION%29._-_Methodist_Church%2C_Woodcock%2C_Crawford_County%2C_PA_HABS_PA%2C20-WOOD%2C2-1.tif/lossy-page1-960px-thumbnail.tif.jpg",
+        "attribution": null,
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=41.7547787,-80.0856119",
+        "embedUrl": "https://maps.google.com/maps?q=41.7547787,-80.0856119&z=12&output=embed"
+      },
+      "year": "1850"
+    }
+  ]
+}

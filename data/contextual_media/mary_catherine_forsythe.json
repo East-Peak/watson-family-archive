@@ -1,0 +1,56 @@
+{
+  "personId": "mary_catherine_forsythe",
+  "personName": "Mary Catherine Forsythe",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "pepin-county-wisconsin-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "pepin-county-wisconsin",
+      "badge": "Birth Place",
+      "name": "Pepin County, Wisconsin",
+      "relevance": "",
+      "featured": true,
+      "lat": 44.6351571,
+      "lng": -92.0101928,
+      "wikipedia": {
+        "title": "Pepin County, Wisconsin",
+        "url": "https://en.wikipedia.org/wiki/Pepin_County%2C_Wisconsin",
+        "summary": "Pepin County is a county in the U.S. state of Wisconsin. As of the 2020 census, the population was 7,318, making it the fourth-least populous county in Wisconsin; it is also the smallest county in Wisconsin by area. Its county seat is Durand."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Lima Town Hall in Pepin County, Wisconsin.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Lima_Town_Hall_in_Pepin_County%2C_Wisconsin.jpg/960px-Lima_Town_Hall_in_Pepin_County%2C_Wisconsin.jpg",
+        "attribution": "Wikideas1",
+        "license": "CC0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=44.6351571,-92.0101928",
+        "embedUrl": "https://maps.google.com/maps?q=44.6351571,-92.0101928&z=12&output=embed"
+      },
+      "year": "1860"
+    },
+    {
+      "id": "bay-city-bay-michigan-death",
+      "type": "town",
+      "canonicalPlaceId": "bay-city-bay-michigan",
+      "badge": "Death",
+      "name": "Bay City, Bay, Michigan",
+      "relevance": "",
+      "featured": false,
+      "lat": 43.5962107,
+      "lng": -83.8881711,
+      "wikimedia": {
+        "fileTitle": "File:Michigan Central Station, Bay City, Michigan.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Michigan_Central_Station%2C_Bay_City%2C_Michigan.jpg/960px-Michigan_Central_Station%2C_Bay_City%2C_Michigan.jpg",
+        "attribution": "Photographer, and color artist not provided",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.5962107,-83.8881711",
+        "embedUrl": "https://maps.google.com/maps?q=43.5962107,-83.8881711&z=12&output=embed"
+      },
+      "year": "1947"
+    }
+  ]
+}

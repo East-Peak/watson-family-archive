@@ -1,0 +1,56 @@
+{
+  "personId": "rosamond_colley",
+  "personName": "Rosamond Colley",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "kentucky-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "kentucky",
+      "badge": "Birth Place",
+      "name": "Kentucky",
+      "relevance": "",
+      "featured": true,
+      "lat": 37.5726028,
+      "lng": -85.1551411,
+      "wikipedia": {
+        "title": "Kentucky",
+        "url": "https://en.wikipedia.org/wiki/Kentucky",
+        "summary": "Kentucky, officially the Commonwealth of Kentucky, is a landlocked state in the Southeastern region of the United States. It borders Illinois, Indiana, and Ohio to the north, West Virginia to the northeast, Virginia to the east, Tennessee to the south, and Missouri to the west. Its northern border i"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Kentucky Scenic Byway signage on Kentucky Route 63 in Temple Hill, Kentucky.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Kentucky_Scenic_Byway_signage_on_Kentucky_Route_63_in_Temple_Hill%2C_Kentucky.jpg",
+        "attribution": "K-Johnson 127",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=37.5726028,-85.1551411",
+        "embedUrl": "https://maps.google.com/maps?q=37.5726028,-85.1551411&z=12&output=embed"
+      },
+      "year": "1920"
+    },
+    {
+      "id": "louisville-jefferson-kentucky-residence",
+      "type": "town",
+      "canonicalPlaceId": "louisville-jefferson-kentucky",
+      "badge": "Residence",
+      "name": "Louisville, Jefferson, Kentucky",
+      "relevance": "",
+      "featured": false,
+      "lat": 38.2542376,
+      "lng": -85.759407,
+      "wikimedia": {
+        "fileTitle": "File:Thomas Jefferson statue by Moses Jacob Ezekiel (Louisville, Kentucky).png",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Thomas_Jefferson_statue_by_Moses_Jacob_Ezekiel_%28Louisville%2C_Kentucky%29.png",
+        "attribution": "R.J. Haight",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=38.2542376,-85.759407",
+        "embedUrl": "https://maps.google.com/maps?q=38.2542376,-85.759407&z=12&output=embed"
+      },
+      "year": "2005"
+    }
+  ]
+}

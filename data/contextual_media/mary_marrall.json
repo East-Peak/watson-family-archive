@@ -1,0 +1,29 @@
+{
+  "personId": "mary_marrall",
+  "personName": "Mary Marrall",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "east-malling-kent-england-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "east-malling-kent-england",
+      "badge": "Birth Place",
+      "name": "East Malling, Kent, England",
+      "relevance": "",
+      "featured": true,
+      "lat": 51.2856713,
+      "lng": 0.4403595,
+      "wikimedia": {
+        "fileTitle": "File:East Malling railway station, Kent - geograph.org.uk - 3814182.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/East_Malling_railway_station%2C_Kent_-_geograph.org.uk_-_3814182.jpg/960px-East_Malling_railway_station%2C_Kent_-_geograph.org.uk_-_3814182.jpg",
+        "attribution": "Nigel Thompson",
+        "license": "CC BY-SA 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=51.2856713,0.4403595",
+        "embedUrl": "https://maps.google.com/maps?q=51.2856713,0.4403595&z=12&output=embed"
+      },
+      "year": "1775"
+    }
+  ]
+}

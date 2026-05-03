@@ -1,0 +1,73 @@
+{
+  "personId": "gov_nicholas_greenberry",
+  "personName": "Nicholas Greenberry",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "corby-lincolnshire-england-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "corby-lincolnshire-england",
+      "badge": "Birth Place",
+      "name": "Corby, Lincolnshire, England",
+      "relevance": "",
+      "featured": true,
+      "lat": 52.813391,
+      "lng": -0.5197684,
+      "wikimedia": {
+        "fileTitle": "File:Willoughby Memorial Library at Corby Glen, near Bourne, Lincolnshire - geograph.org.uk - 4310577.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Willoughby_Memorial_Library_at_Corby_Glen%2C_near_Bourne%2C_Lincolnshire_-_geograph.org.uk_-_4310577.jpg/960px-Willoughby_Memorial_Library_at_Corby_Glen%2C_near_Bourne%2C_Lincolnshire_-_geograph.org.uk_-_4310577.jpg",
+        "attribution": "Rex Needle",
+        "license": "CC BY-SA 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=52.813391,-0.5197684",
+        "embedUrl": "https://maps.google.com/maps?q=52.813391,-0.5197684&z=12&output=embed"
+      },
+      "year": "1640"
+    },
+    {
+      "id": "anne-arundel-md-death",
+      "type": "town",
+      "canonicalPlaceId": "anne-arundel-md",
+      "badge": "Death",
+      "name": "Anne Arundel, MD",
+      "relevance": "",
+      "featured": false,
+      "lat": 38.9722583,
+      "lng": -76.573454,
+      "wikimedia": {
+        "fileTitle": "File:PRIMROSE HILL, ANNAPOLIS, ANNE ARUNDEL COUNTY, MD.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/PRIMROSE_HILL%2C_ANNAPOLIS%2C_ANNE_ARUNDEL_COUNTY%2C_MD.jpg/960px-PRIMROSE_HILL%2C_ANNAPOLIS%2C_ANNE_ARUNDEL_COUNTY%2C_MD.jpg",
+        "attribution": "JERRYE &amp; ROY KLOTZ, M.D.",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=38.9722583,-76.573454",
+        "embedUrl": "https://maps.google.com/maps?q=38.9722583,-76.573454&z=12&output=embed"
+      },
+      "year": "1697"
+    },
+    {
+      "id": "annapolis-anne-arundel-maryland-residence",
+      "type": "town",
+      "canonicalPlaceId": "annapolis-anne-arundel-maryland",
+      "badge": "Residence",
+      "name": "Annapolis, Anne Arundel, Maryland",
+      "relevance": "",
+      "featured": false,
+      "lat": 38.9786401,
+      "lng": -76.492786,
+      "wikimedia": {
+        "fileTitle": "File:Whitehall, Saint Margarets Road, Annapolis (Anne Arundel County, Maryland).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Whitehall%2C_Saint_Margarets_Road%2C_Annapolis_%28Anne_Arundel_County%2C_Maryland%29.jpg",
+        "attribution": "E. H. Pickering, Photographer",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=38.9786401,-76.492786",
+        "embedUrl": "https://maps.google.com/maps?q=38.9786401,-76.492786&z=12&output=embed"
+      },
+      "year": "1697"
+    }
+  ]
+}

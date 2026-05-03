@@ -1,0 +1,61 @@
+{
+  "personId": "ida_gamble",
+  "personName": "Ida Gamble",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "yankton-south-dakota-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "yankton-south-dakota",
+      "badge": "Birth Place",
+      "name": "Yankton, South Dakota",
+      "relevance": "",
+      "featured": true,
+      "lat": 42.8712938,
+      "lng": -97.3967011,
+      "wikipedia": {
+        "title": "Yankton, South Dakota",
+        "url": "https://en.wikipedia.org/wiki/Yankton%2C_South_Dakota",
+        "summary": "Yankton is a city in and the county seat of Yankton County, South Dakota, United States. It became a city in 1889."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Milwaukee Public Museum November 2022 078 (A Prairie River- Near Yankton, South Dakota).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Milwaukee_Public_Museum_November_2022_078_%28A_Prairie_River-_Near_Yankton%2C_South_Dakota%29.jpg/960px-Milwaukee_Public_Museum_November_2022_078_%28A_Prairie_River-_Near_Yankton%2C_South_Dakota%29.jpg",
+        "attribution": "Michael Barera",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=42.8712938,-97.3967011",
+        "embedUrl": "https://maps.google.com/maps?q=42.8712938,-97.3967011&z=12&output=embed"
+      },
+      "year": "1884"
+    },
+    {
+      "id": "los-angeles-ca-death",
+      "type": "town",
+      "canonicalPlaceId": "los-angeles-ca",
+      "badge": "Death",
+      "name": "Los Angeles, CA",
+      "relevance": "",
+      "featured": false,
+      "lat": 34.0536909,
+      "lng": -118.242766,
+      "wikipedia": {
+        "title": "Los Angeles",
+        "url": "https://en.wikipedia.org/wiki/Los_Angeles",
+        "summary": "Los Angeles is the most populous city in the U.S. state of California, and the commercial, financial, and cultural center of Southern California. With an estimated 3.88 million residents within the city limits as of 2024, it is the second-most populous city in the United States, behind New York City"
+      },
+      "wikimedia": {
+        "fileTitle": "File:USS Los Angeles (CA-135) in the Far East, 13 October 1952 (NH 97386).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/USS_Los_Angeles_%28CA-135%29_in_the_Far_East%2C_13_October_1952_%28NH_97386%29.jpg/960px-USS_Los_Angeles_%28CA-135%29_in_the_Far_East%2C_13_October_1952_%28NH_97386%29.jpg",
+        "attribution": "Unknown authorUnknown author",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=34.0536909,-118.242766",
+        "embedUrl": "https://maps.google.com/maps?q=34.0536909,-118.242766&z=12&output=embed"
+      },
+      "year": "1955"
+    }
+  ]
+}

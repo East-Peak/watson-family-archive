@@ -1,0 +1,29 @@
+{
+  "personId": "nicholas_greenberry_sr",
+  "personName": "Nicholas Greenberry Sr.",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "corby-lincolnshire-england-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "corby-lincolnshire-england",
+      "badge": "Birth Place",
+      "name": "Corby, Lincolnshire, England",
+      "relevance": "",
+      "featured": true,
+      "lat": 52.813391,
+      "lng": -0.5197684,
+      "wikimedia": {
+        "fileTitle": "File:Willoughby Memorial Library at Corby Glen, near Bourne, Lincolnshire - geograph.org.uk - 4310577.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Willoughby_Memorial_Library_at_Corby_Glen%2C_near_Bourne%2C_Lincolnshire_-_geograph.org.uk_-_4310577.jpg/960px-Willoughby_Memorial_Library_at_Corby_Glen%2C_near_Bourne%2C_Lincolnshire_-_geograph.org.uk_-_4310577.jpg",
+        "attribution": "Rex Needle",
+        "license": "CC BY-SA 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=52.813391,-0.5197684",
+        "embedUrl": "https://maps.google.com/maps?q=52.813391,-0.5197684&z=12&output=embed"
+      },
+      "year": "1608"
+    }
+  ]
+}

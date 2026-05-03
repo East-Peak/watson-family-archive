@@ -1,0 +1,34 @@
+{
+  "personId": "george_w_foster",
+  "personName": "George W. Foster",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "stoddard-new-hampshire-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "stoddard-new-hampshire",
+      "badge": "Birth Place",
+      "name": "Stoddard, New Hampshire",
+      "relevance": "",
+      "featured": true,
+      "lat": 43.078919,
+      "lng": -72.114944,
+      "wikipedia": {
+        "title": "Stoddard, New Hampshire",
+        "url": "https://en.wikipedia.org/wiki/Stoddard%2C_New_Hampshire",
+        "summary": "Stoddard is a town in Cheshire County, New Hampshire, United States. The population was 1,374 at the 2020 census, up from 1,232 at the 2010 census."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Highland Lake (Stoddard, New Hampshire).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Highland_Lake_%28Stoddard%2C_New_Hampshire%29.jpg/960px-Highland_Lake_%28Stoddard%2C_New_Hampshire%29.jpg",
+        "attribution": "Mazurj at English Wikipedia",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.078919,-72.114944",
+        "embedUrl": "https://maps.google.com/maps?q=43.078919,-72.114944&z=12&output=embed"
+      },
+      "year": "1796"
+    }
+  ]
+}

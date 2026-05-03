@@ -1,0 +1,56 @@
+{
+  "personId": "elizabeth_betsy_eads",
+  "personName": "Elizabeth \"Betsy\" Eads",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "chestertown-kent-county-md-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "chestertown-kent-county-md",
+      "badge": "Birth Place",
+      "name": "Chestertown, Kent County, MD",
+      "relevance": "",
+      "featured": true,
+      "lat": 39.2089986,
+      "lng": -76.0666126,
+      "wikimedia": {
+        "fileTitle": "File:LAURETUM, CHESTERTOWN, KENT COUNTY, MD.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/LAURETUM%2C_CHESTERTOWN%2C_KENT_COUNTY%2C_MD.jpg/960px-LAURETUM%2C_CHESTERTOWN%2C_KENT_COUNTY%2C_MD.jpg",
+        "attribution": "JERRYE &amp; ROY KLOTZ, M.D.",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=39.2089986,-76.0666126",
+        "embedUrl": "https://maps.google.com/maps?q=39.2089986,-76.0666126&z=12&output=embed"
+      },
+      "year": "1788"
+    },
+    {
+      "id": "harrison-township-hamilton-county-ohio-death",
+      "type": "town",
+      "canonicalPlaceId": "harrison-township-hamilton-county-ohio",
+      "badge": "Death",
+      "name": "Harrison Township, Hamilton County, Ohio",
+      "relevance": "",
+      "featured": false,
+      "lat": 39.2617224,
+      "lng": -84.7922424,
+      "wikipedia": {
+        "title": "Harrison Township, Hamilton County, Ohio",
+        "url": "https://en.wikipedia.org/wiki/Harrison_Township%2C_Hamilton_County%2C_Ohio",
+        "summary": "Harrison Township is one of the twelve townships of Hamilton County, Ohio, United States. The 2020 census found 14,288 people in the township."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Ohio welcome sign (2019).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Ohio_welcome_sign_%282019%29.jpg/960px-Ohio_welcome_sign_%282019%29.jpg",
+        "attribution": "EEJCC",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=39.2617224,-84.7922424",
+        "embedUrl": "https://maps.google.com/maps?q=39.2617224,-84.7922424&z=12&output=embed"
+      },
+      "year": "1870"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "personId": "mary_hallett",
+  "personName": "Mary Hallett",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "england-or-caribbean-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "england-or-caribbean",
+      "badge": "Birth Place",
+      "name": "England or Caribbean",
+      "relevance": "",
+      "featured": true,
+      "year": "1640"
+    },
+    {
+      "id": "barbados-death",
+      "type": "town",
+      "canonicalPlaceId": "barbados",
+      "badge": "Death",
+      "name": "Barbados",
+      "relevance": "",
+      "featured": false,
+      "lat": 13.1500331,
+      "lng": -59.5250305,
+      "wikipedia": {
+        "title": "Barbados",
+        "url": "https://en.wikipedia.org/wiki/Barbados",
+        "summary": "Barbados is an island country in the Caribbean located in the Atlantic Ocean. It is part of the Lesser Antilles of the West Indies and the easternmost island of the Caribbean region. It lies on the boundary of the South American and Caribbean plates. Its capital and largest city is Bridgetown."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Barbados (50).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Barbados_%2850%29.jpg/960px-Barbados_%2850%29.jpg",
+        "attribution": "Patdoy at en.wikipedia",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=13.1500331,-59.5250305",
+        "embedUrl": "https://maps.google.com/maps?q=13.1500331,-59.5250305&z=12&output=embed"
+      },
+      "year": "1701"
+    }
+  ]
+}

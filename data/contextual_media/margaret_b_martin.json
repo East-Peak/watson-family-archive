@@ -1,0 +1,83 @@
+{
+  "personId": "margaret_b_martin",
+  "personName": "Margaret B Brickels Martin",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "waukesha-waukesha-wi-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "waukesha-waukesha-wi",
+      "badge": "Birth Place",
+      "name": "Waukesha, Waukesha, WI",
+      "relevance": "",
+      "featured": true,
+      "lat": 43.0115598,
+      "lng": -88.2316352,
+      "wikimedia": {
+        "fileTitle": "File:Waukesha, WI - 25878873363.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Waukesha%2C_WI_-_25878873363.jpg/960px-Waukesha%2C_WI_-_25878873363.jpg",
+        "attribution": "pasa47",
+        "license": "CC BY 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.0115598,-88.2316352",
+        "embedUrl": "https://maps.google.com/maps?q=43.0115598,-88.2316352&z=12&output=embed"
+      },
+      "year": "1892"
+    },
+    {
+      "id": "los-angeles-county-california-death",
+      "type": "town",
+      "canonicalPlaceId": "los-angeles-county-california",
+      "badge": "Death",
+      "name": "Los Angeles County, California",
+      "relevance": "",
+      "featured": false,
+      "lat": 34.3155072,
+      "lng": -118.209681,
+      "wikipedia": {
+        "title": "Los Angeles County, California",
+        "url": "https://en.wikipedia.org/wiki/Los_Angeles_County%2C_California",
+        "summary": "Los Angeles County, sometimes abbreviated as LA County, is the most populous county in the United States, with 9,757,179 residents estimated in 2024. Its population is greater than that of 40 individual U.S. states. Comprising 88 incorporated cities and 101 unincorporated areas within a total area o"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Los Angeles (California, USA), South Olive Street -- 2012 -- 5280.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Los_Angeles_%28California%2C_USA%29%2C_South_Olive_Street_--_2012_--_5280.jpg/960px-Los_Angeles_%28California%2C_USA%29%2C_South_Olive_Street_--_2012_--_5280.jpg",
+        "attribution": "Dietmar Rabich",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=34.3155072,-118.209681",
+        "embedUrl": "https://maps.google.com/maps?q=34.3155072,-118.209681&z=12&output=embed"
+      },
+      "year": "1972"
+    },
+    {
+      "id": "south-pasadena-ca-residence",
+      "type": "town",
+      "canonicalPlaceId": "south-pasadena-ca",
+      "badge": "Residence",
+      "name": "South Pasadena, CA",
+      "relevance": "",
+      "featured": false,
+      "lat": 34.1133062,
+      "lng": -118.1478291,
+      "wikipedia": {
+        "title": "South Pasadena, California",
+        "url": "https://en.wikipedia.org/wiki/South_Pasadena%2C_California",
+        "summary": "South Pasadena is a city in Los Angeles County, California, United States. As of the 2020 census, it had a population of 26,943, up from 25,619 at the 2010 census."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Southpasadena ca cityhall.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Southpasadena_ca_cityhall.jpg/960px-Southpasadena_ca_cityhall.jpg",
+        "attribution": "The original uploader was Geographer at English Wikipedia.",
+        "license": "CC BY 2.5"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=34.1133062,-118.1478291",
+        "embedUrl": "https://maps.google.com/maps?q=34.1133062,-118.1478291&z=12&output=embed"
+      },
+      "year": "1972"
+    }
+  ]
+}

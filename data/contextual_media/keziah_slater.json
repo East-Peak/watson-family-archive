@@ -1,0 +1,82 @@
+{
+  "personId": "keziah_slater",
+  "personName": "Keziah Slater",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "ohio-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "ohio",
+      "badge": "Birth Place",
+      "name": "Ohio",
+      "relevance": "",
+      "featured": true,
+      "lat": 40.2253569,
+      "lng": -82.6881395,
+      "wikipedia": {
+        "title": "Ohio",
+        "url": "https://en.wikipedia.org/wiki/Ohio",
+        "summary": "Ohio is a state in the Midwestern region of the United States. It borders the Canadian province of Ontario to the north, Pennsylvania to the east, West Virginia to the southeast, Kentucky to the southwest, Indiana to the west, and Michigan to the northwest. Of the 50 U.S. states, it is the 34th-larg"
+      },
+      "wikimedia": {
+        "fileTitle": "File:State of Ohio waste characterization study - DPLA - 5ed3375f579555cb4eca42f08202fc02.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/State_of_Ohio_waste_characterization_study_-_DPLA_-_5ed3375f579555cb4eca42f08202fc02.jpg/960px-State_of_Ohio_waste_characterization_study_-_DPLA_-_5ed3375f579555cb4eca42f08202fc02.jpg",
+        "attribution": "Engineering Solutions &amp; Design, Inc",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=40.2253569,-82.6881395",
+        "embedUrl": "https://maps.google.com/maps?q=40.2253569,-82.6881395&z=12&output=embed"
+      },
+      "year": "1837"
+    },
+    {
+      "id": "walla-walla-washington-death",
+      "type": "town",
+      "canonicalPlaceId": "walla-walla-washington",
+      "badge": "Death",
+      "name": "Walla Walla, Washington",
+      "relevance": "",
+      "featured": false,
+      "lat": 46.2055155,
+      "lng": -118.5174284,
+      "wikipedia": {
+        "title": "Walla Walla, Washington",
+        "url": "https://en.wikipedia.org/wiki/Walla_Walla%2C_Washington",
+        "summary": "Walla Walla is a city in and the county seat of Walla Walla County, Washington, United States. It had a population of 34,060 at the 2020 census, estimated to have decreased to 33,339 as of 2023. The combined population of the city and its two suburbs, the town of College Place and unincorporated Wal"
+      },
+      "wikimedia": {
+        "fileTitle": "File:German Congregational Church, Germantown, Walla Walla, Washington, 1882.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/d/df/German_Congregational_Church%2C_Germantown%2C_Walla_Walla%2C_Washington%2C_1882.jpg",
+        "attribution": "Walla Walla 2020",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=46.2055155,-118.5174284",
+        "embedUrl": "https://maps.google.com/maps?q=46.2055155,-118.5174284&z=12&output=embed"
+      },
+      "year": "1921"
+    },
+    {
+      "id": "walla-walla-walla-walla-county-wa-marriage",
+      "type": "building",
+      "canonicalPlaceId": "walla-walla-walla-walla-county-wa",
+      "badge": "Marriage",
+      "name": "Walla Walla, Walla Walla County, Wa.",
+      "relevance": "",
+      "featured": false,
+      "lat": 46.0667277,
+      "lng": -118.339345,
+      "wikimedia": {
+        "fileTitle": "File:Ransom Clark Cabin, Walla Walla, Walla Walla County, WA HABS WASH,36-WAL.V,1-1.tif",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Ransom_Clark_Cabin%2C_Walla_Walla%2C_Walla_Walla_County%2C_WA_HABS_WASH%2C36-WAL.V%2C1-1.tif/lossy-page1-960px-Ransom_Clark_Cabin%2C_Walla_Walla%2C_Walla_Walla_County%2C_WA_HABS_WASH%2C36-WAL.V%2C1-1.tif.jpg",
+        "attribution": null,
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=46.0667277,-118.339345",
+        "embedUrl": "https://maps.google.com/maps?q=46.0667277,-118.339345&z=12&output=embed"
+      }
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "personId": "auguste_wegner_gohr",
+  "personName": "Sophie Emilie Auguste Wilhelmine Wegner",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "karnitz-kreis-greifenberg-pommern-prussia-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "karnitz-kreis-greifenberg-pommern-prussia",
+      "badge": "Birth Place",
+      "name": "Karnitz, Kreis Greifenberg, Pommern, Prussia",
+      "relevance": "",
+      "featured": true,
+      "year": "1863"
+    },
+    {
+      "id": "idaho-falls-idaho-death",
+      "type": "town",
+      "canonicalPlaceId": "idaho-falls-idaho",
+      "badge": "Death",
+      "name": "Idaho Falls, Idaho",
+      "relevance": "",
+      "featured": false,
+      "lat": 43.4887907,
+      "lng": -112.03628,
+      "wikipedia": {
+        "title": "Idaho Falls, Idaho",
+        "url": "https://en.wikipedia.org/wiki/Idaho_Falls%2C_Idaho",
+        "summary": "Idaho Falls is the fourth most populous city in Idaho and the county seat of Bonneville County. It is the state's most populous city outside the Boise metropolitan area. As of the 2020 census, the population of Idaho Falls was 64,818. In the 2010 census, the population of Idaho Falls was 56,813, wit"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Idaho Falls Temple.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Idaho_Falls_Temple.jpg/960px-Idaho_Falls_Temple.jpg",
+        "attribution": "Photo by Merrill Humberg, Taken 11/25/2006. Wikipedia uploader was Twunchy at en.wikipedia",
+        "license": "CC BY 2.5"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.4887907,-112.03628",
+        "embedUrl": "https://maps.google.com/maps?q=43.4887907,-112.03628&z=12&output=embed"
+      },
+      "year": "1942"
+    },
+    {
+      "id": "lotts-creek-kossuth-county-iowa-marriage",
+      "type": "building",
+      "canonicalPlaceId": "lotts-creek-kossuth-county-iowa",
+      "badge": "Marriage",
+      "name": "Lotts Creek, Kossuth County, Iowa",
+      "relevance": "",
+      "featured": false,
+      "lat": 42.9380572,
+      "lng": -94.355223,
+      "wikimedia": {
+        "fileTitle": "File:1940 Census Enumeration District Descriptions - Iowa - Kossuth County - ED 55-28, ED 55-29, ED 55-30, ED 55-31, ED 55-32, ED 55-33, ED 55-34, ED 55-35 - NARA - 5845043.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/1940_Census_Enumeration_District_Descriptions_-_Iowa_-_Kossuth_County_-_ED_55-28%2C_ED_55-29%2C_ED_55-30%2C_ED_55-31%2C_ED_55-32%2C_ED_55-33%2C_ED_55-34%2C_ED_55-35_-_NARA_-_5845043.jpg/960px-thumbnail.jpg",
+        "attribution": "Unknown authorUnknown author or not provided",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=42.9380572,-94.355223",
+        "embedUrl": "https://maps.google.com/maps?q=42.9380572,-94.355223&z=12&output=embed"
+      },
+      "year": "1884"
+    },
+    {
+      "id": "annis-idaho-residence",
+      "type": "town",
+      "canonicalPlaceId": "annis-idaho",
+      "badge": "Residence",
+      "name": "Annis, Idaho",
+      "relevance": "",
+      "featured": false,
+      "lat": 43.7282443,
+      "lng": -111.9360799,
+      "wikipedia": {
+        "title": "Annis, Idaho",
+        "url": "https://en.wikipedia.org/wiki/Annis%2C_Idaho",
+        "summary": "Annis is an unincorporated community in Jefferson County, Idaho, United States. Annis is 4 miles (6.4\u00a0km) north-northeast of Rigby."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Francesca-annis-trailer.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Francesca-annis-trailer.jpg",
+        "attribution": "Francesca Annis in trailer for \"Flipper's New Adventure\" (1964)",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.7282443,-111.9360799",
+        "embedUrl": "https://maps.google.com/maps?q=43.7282443,-111.9360799&z=12&output=embed"
+      },
+      "year": "1942"
+    }
+  ]
+}

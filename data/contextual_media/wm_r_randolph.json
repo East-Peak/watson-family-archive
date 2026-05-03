@@ -1,0 +1,83 @@
+{
+  "personId": "wm_r_randolph",
+  "personName": "Wm R Randolph",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "illinois-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "illinois",
+      "badge": "Birth Place",
+      "name": "Illinois",
+      "relevance": "",
+      "featured": true,
+      "lat": 40.0796606,
+      "lng": -89.4337288,
+      "wikipedia": {
+        "title": "Illinois",
+        "url": "https://en.wikipedia.org/wiki/Illinois",
+        "summary": "Illinois is a state in the Midwestern region of the United States. It borders on Lake Michigan to its northeast, the Mississippi River to its west, and the Wabash and Ohio rivers to its south. Of the fifty U.S. states, Illinois has the fifth-largest gross domestic product (GDP), the sixth-largest po"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Skyline de Chicago desde el centro, Illinois, Estados Unidos, 2012-10-20, DD 06.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Skyline_de_Chicago_desde_el_centro%2C_Illinois%2C_Estados_Unidos%2C_2012-10-20%2C_DD_06.jpg/960px-Skyline_de_Chicago_desde_el_centro%2C_Illinois%2C_Estados_Unidos%2C_2012-10-20%2C_DD_06.jpg",
+        "attribution": "Diego Delso",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=40.0796606,-89.4337288",
+        "embedUrl": "https://maps.google.com/maps?q=40.0796606,-89.4337288&z=12&output=embed"
+      },
+      "year": "1856"
+    },
+    {
+      "id": "moultrie-county-illinois-residence",
+      "type": "town",
+      "canonicalPlaceId": "moultrie-county-illinois",
+      "badge": "Residence",
+      "name": "Moultrie County, Illinois",
+      "relevance": "",
+      "featured": false,
+      "lat": 39.6391442,
+      "lng": -88.6087498,
+      "wikipedia": {
+        "title": "Moultrie County, Illinois",
+        "url": "https://en.wikipedia.org/wiki/Moultrie_County%2C_Illinois",
+        "summary": "Moultrie County is a county in the U.S. state of Illinois. According to the 2020 United States census, its population was 14,526. Its county seat is Sullivan. The name is pronounced as in \"mole tree\", unlike the pronunciation of its namesake, the South Carolinian Revolutionary War hero William Moult"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Moultrie County Illinois 1843.png",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Moultrie_County_Illinois_1843.png",
+        "attribution": "Illinois_Locator_Map.PNG: US Census, Ruhrfisch\nderivative work: Fishal (talk)",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=39.6391442,-88.6087498",
+        "embedUrl": "https://maps.google.com/maps?q=39.6391442,-88.6087498&z=12&output=embed"
+      },
+      "year": "1860"
+    },
+    {
+      "id": "atwood-douglas-illinois-residence",
+      "type": "town",
+      "canonicalPlaceId": "atwood-douglas-illinois",
+      "badge": "Residence",
+      "name": "Atwood, Douglas, Illinois",
+      "relevance": "",
+      "featured": false,
+      "lat": 39.7994772,
+      "lng": -88.4622789,
+      "wikimedia": {
+        "fileTitle": "File:Atwood Illinois Post Office.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Atwood_Illinois_Post_Office.jpg/960px-Atwood_Illinois_Post_Office.jpg",
+        "attribution": "Dual Freq",
+        "license": "CC BY 2.5"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=39.7994772,-88.4622789",
+        "embedUrl": "https://maps.google.com/maps?q=39.7994772,-88.4622789&z=12&output=embed"
+      },
+      "year": "1900"
+    }
+  ]
+}

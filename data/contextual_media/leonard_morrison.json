@@ -1,0 +1,33 @@
+{
+  "personId": "leonard_morrison",
+  "personName": "Leonard Morrison",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "confirmed-not-found-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "confirmed-not-found",
+      "badge": "Birth Place",
+      "name": "confirmed - NOT FOUND",
+      "relevance": "",
+      "featured": true,
+      "year": "1921"
+    },
+    {
+      "id": "foulkeways-at-gwynedd-pennsylvania-death",
+      "type": "town",
+      "canonicalPlaceId": "foulkeways-at-gwynedd-pennsylvania",
+      "badge": "Death",
+      "name": "Foulkeways at Gwynedd, Pennsylvania",
+      "relevance": "",
+      "featured": false,
+      "lat": 40.2018571,
+      "lng": -75.2505397,
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=40.2018571,-75.2505397",
+        "embedUrl": "https://maps.google.com/maps?q=40.2018571,-75.2505397&z=12&output=embed"
+      },
+      "year": "2010"
+    }
+  ]
+}

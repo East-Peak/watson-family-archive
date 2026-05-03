@@ -1,0 +1,34 @@
+{
+  "personId": "paula_wagner",
+  "personName": "Paula Wagner",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "south-dakota-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "south-dakota",
+      "badge": "Birth Place",
+      "name": "South Dakota",
+      "relevance": "",
+      "featured": true,
+      "lat": 44.6471761,
+      "lng": -100.348761,
+      "wikipedia": {
+        "title": "South Dakota",
+        "url": "https://en.wikipedia.org/wiki/South_Dakota",
+        "summary": "South Dakota is a landlocked state in the Upper Midwest, North Central region of the United States. It is also part of the Great Plains. South Dakota is named after the Dakota Sioux tribe, which comprises a large portion of the population and has historically dominated the territory. South Dakota is"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Dust Bowl - Dallas, South Dakota 1936.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Dust_Bowl_-_Dallas%2C_South_Dakota_1936.jpg/960px-Dust_Bowl_-_Dallas%2C_South_Dakota_1936.jpg",
+        "attribution": "Sloan (?)",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=44.6471761,-100.348761",
+        "embedUrl": "https://maps.google.com/maps?q=44.6471761,-100.348761&z=12&output=embed"
+      },
+      "year": "1893"
+    }
+  ]
+}

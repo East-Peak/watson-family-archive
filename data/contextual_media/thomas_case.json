@@ -1,0 +1,51 @@
+{
+  "personId": "thomas_case",
+  "personName": "Thomas Case",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "south-plattsburgh-clinton-new-york-death",
+      "type": "town",
+      "canonicalPlaceId": "south-plattsburgh-clinton-new-york",
+      "badge": "Death",
+      "name": "South Plattsburgh, Clinton, New York",
+      "relevance": "",
+      "featured": true,
+      "lat": 44.6364332,
+      "lng": -73.487913,
+      "wikimedia": {
+        "fileTitle": "File:NORTH (SIDE) AND WEST (FRONT) ELEVATIONS OF BUILDING. VIEW TO SOUTH - Plattsburgh Air Force Base, Elementary School, New York Road, Plattsburgh, Clinton County, NY HAER NY-326-BO-3.tif",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/NORTH_%28SIDE%29_AND_WEST_%28FRONT%29_ELEVATIONS_OF_BUILDING._VIEW_TO_SOUTH_-_Plattsburgh_Air_Force_Base%2C_Elementary_School%2C_New_York_Road%2C_Plattsburgh%2C_Clinton_County%2C_NY_HAER_NY-326-BO-3.tif/lossy-page1-960px-thumbnail.tif.jpg",
+        "attribution": "Fraser, Clayton B., creator",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=44.6364332,-73.487913",
+        "embedUrl": "https://maps.google.com/maps?q=44.6364332,-73.487913&z=12&output=embed"
+      },
+      "year": "1876"
+    },
+    {
+      "id": "south-hero-grand-isle-vermont-marriage",
+      "type": "building",
+      "canonicalPlaceId": "south-hero-grand-isle-vermont",
+      "badge": "Marriage",
+      "name": "South Hero, Grand Isle, Vermont",
+      "relevance": "",
+      "featured": false,
+      "lat": 44.64843,
+      "lng": -73.3005593,
+      "wikimedia": {
+        "fileTitle": "File:Island House, South side of U.S. Route 2 at intersection of road to Allen's Point, South Hero, Grand Isle County, VT HABS VT,7-HEROS,1-1.tif",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Island_House%2C_South_side_of_U.S._Route_2_at_intersection_of_road_to_Allen%27s_Point%2C_South_Hero%2C_Grand_Isle_County%2C_VT_HABS_VT%2C7-HEROS%2C1-1.tif/lossy-page1-960px-Island_House%2C_South_side_of_U.S._Route_2_at_intersection_of_road_to_Allen%27s_Point%2C_South_Hero%2C_Grand_Isle_County%2C_VT_HABS_VT%2C7-HEROS%2C1-1.tif.jpg",
+        "attribution": null,
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=44.64843,-73.3005593",
+        "embedUrl": "https://maps.google.com/maps?q=44.64843,-73.3005593&z=12&output=embed"
+      },
+      "year": "1833"
+    }
+  ]
+}

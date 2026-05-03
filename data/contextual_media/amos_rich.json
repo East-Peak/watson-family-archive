@@ -1,0 +1,51 @@
+{
+  "personId": "amos_rich",
+  "personName": "Amos Rich",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "henry-kentucky-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "henry-kentucky",
+      "badge": "Birth Place",
+      "name": "Henry, Kentucky",
+      "relevance": "",
+      "featured": true,
+      "lat": 38.447983,
+      "lng": -85.1191168,
+      "wikimedia": {
+        "fileTitle": "File:Henry County, Kentucky courthouse.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Henry_County%2C_Kentucky_courthouse.jpg/960px-Henry_County%2C_Kentucky_courthouse.jpg",
+        "attribution": "W.marsh",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=38.447983,-85.1191168",
+        "embedUrl": "https://maps.google.com/maps?q=38.447983,-85.1191168&z=12&output=embed"
+      },
+      "year": "1798"
+    },
+    {
+      "id": "crawford-illinois-death",
+      "type": "town",
+      "canonicalPlaceId": "crawford-illinois",
+      "badge": "Death",
+      "name": "Crawford, Illinois",
+      "relevance": "",
+      "featured": false,
+      "lat": 39.0131644,
+      "lng": -87.7291001,
+      "wikimedia": {
+        "fileTitle": "File:Crawford County Illinois 1816.png",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/1/18/Crawford_County_Illinois_1816.png",
+        "attribution": "Illinois_Locator_Map.PNG: US Census, Ruhrfisch\nderivative work: Fishal (talk)",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=39.0131644,-87.7291001",
+        "embedUrl": "https://maps.google.com/maps?q=39.0131644,-87.7291001&z=12&output=embed"
+      },
+      "year": "1857"
+    }
+  ]
+}

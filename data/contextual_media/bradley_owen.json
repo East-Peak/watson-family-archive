@@ -1,0 +1,73 @@
+{
+  "personId": "bradley_owen",
+  "personName": "Bradley Owen",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "new-york-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "new-york",
+      "badge": "Birth Place",
+      "name": "New York",
+      "relevance": "",
+      "featured": true,
+      "lat": 40.7127281,
+      "lng": -74.0060152,
+      "wikimedia": {
+        "fileTitle": "File:Long Island City New York May 2015 panorama 3.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Long_Island_City_New_York_May_2015_panorama_3.jpg/960px-Long_Island_City_New_York_May_2015_panorama_3.jpg",
+        "attribution": "King of Hearts",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=40.7127281,-74.0060152",
+        "embedUrl": "https://maps.google.com/maps?q=40.7127281,-74.0060152&z=12&output=embed"
+      },
+      "year": "1833"
+    },
+    {
+      "id": "waukesha-waukesha-wi-residence",
+      "type": "town",
+      "canonicalPlaceId": "waukesha-waukesha-wi",
+      "badge": "Residence",
+      "name": "Waukesha, Waukesha, WI",
+      "relevance": "",
+      "featured": false,
+      "lat": 43.0115598,
+      "lng": -88.2316352,
+      "wikimedia": {
+        "fileTitle": "File:Waukesha, WI - 25878873363.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Waukesha%2C_WI_-_25878873363.jpg/960px-Waukesha%2C_WI_-_25878873363.jpg",
+        "attribution": "pasa47",
+        "license": "CC BY 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.0115598,-88.2316352",
+        "embedUrl": "https://maps.google.com/maps?q=43.0115598,-88.2316352&z=12&output=embed"
+      },
+      "year": "1860"
+    },
+    {
+      "id": "trenton-pierce-wi-residence",
+      "type": "town",
+      "canonicalPlaceId": "trenton-pierce-wi",
+      "badge": "Residence",
+      "name": "Trenton, Pierce, WI",
+      "relevance": "",
+      "featured": false,
+      "lat": 44.6038564,
+      "lng": -92.5649141,
+      "wikimedia": {
+        "fileTitle": "File:Trenton Town Hall in Pierce County, Wisconsin.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Trenton_Town_Hall_in_Pierce_County%2C_Wisconsin.jpg/960px-Trenton_Town_Hall_in_Pierce_County%2C_Wisconsin.jpg",
+        "attribution": "Wikideas1",
+        "license": "CC0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=44.6038564,-92.5649141",
+        "embedUrl": "https://maps.google.com/maps?q=44.6038564,-92.5649141&z=12&output=embed"
+      },
+      "year": "1880"
+    }
+  ]
+}

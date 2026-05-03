@@ -1,0 +1,51 @@
+{
+  "personId": "anna_rich",
+  "personName": "Anna Rich",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "bucks-pennsylvania-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "bucks-pennsylvania",
+      "badge": "Birth Place",
+      "name": "Bucks, Pennsylvania",
+      "relevance": "",
+      "featured": true,
+      "lat": 40.3451668,
+      "lng": -75.1263909,
+      "wikimedia": {
+        "fileTitle": "File:Old Bucks County, Pennsylvania, Courthouse 1906.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Old_Bucks_County%2C_Pennsylvania%2C_Courthouse_1906.jpg/960px-Old_Bucks_County%2C_Pennsylvania%2C_Courthouse_1906.jpg",
+        "attribution": "Unknown authorUnknown author",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=40.3451668,-75.1263909",
+        "embedUrl": "https://maps.google.com/maps?q=40.3451668,-75.1263909&z=12&output=embed"
+      },
+      "year": "1778"
+    },
+    {
+      "id": "crawford-illinois-death",
+      "type": "town",
+      "canonicalPlaceId": "crawford-illinois",
+      "badge": "Death",
+      "name": "Crawford, Illinois",
+      "relevance": "",
+      "featured": false,
+      "lat": 39.0131644,
+      "lng": -87.7291001,
+      "wikimedia": {
+        "fileTitle": "File:Crawford County Illinois 1816.png",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/1/18/Crawford_County_Illinois_1816.png",
+        "attribution": "Illinois_Locator_Map.PNG: US Census, Ruhrfisch\nderivative work: Fishal (talk)",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=39.0131644,-87.7291001",
+        "embedUrl": "https://maps.google.com/maps?q=39.0131644,-87.7291001&z=12&output=embed"
+      },
+      "year": "1850"
+    }
+  ]
+}

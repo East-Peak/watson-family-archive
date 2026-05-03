@@ -1,0 +1,115 @@
+{
+  "personId": "john_stuart_watson",
+  "personName": "John Stuart Watson",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "cheshire-england-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "cheshire-england",
+      "badge": "Birth Place",
+      "name": "Cheshire, England",
+      "relevance": "",
+      "featured": true,
+      "lat": 53.2141028,
+      "lng": -2.4717701,
+      "wikipedia": {
+        "title": "Cheshire",
+        "url": "https://en.wikipedia.org/wiki/Cheshire",
+        "summary": "Cheshire is a ceremonial county in North West England. It is bordered by Merseyside to the north-west, Greater Manchester to the north-east, Derbyshire to the east, Staffordshire to the south-east, and Shropshire to the south; to the west it is bordered by the Welsh counties of Flintshire and Wrexha"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Chester Cathedral Cloister, Cheshire, UK - Diliff.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Chester_Cathedral_Cloister%2C_Cheshire%2C_UK_-_Diliff.jpg/960px-Chester_Cathedral_Cloister%2C_Cheshire%2C_UK_-_Diliff.jpg",
+        "attribution": "Diliff",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=53.2141028,-2.4717701",
+        "embedUrl": "https://maps.google.com/maps?q=53.2141028,-2.4717701&z=12&output=embed"
+      },
+      "year": "1892"
+    },
+    {
+      "id": "los-angeles-ca-death",
+      "type": "town",
+      "canonicalPlaceId": "los-angeles-ca",
+      "badge": "Death",
+      "name": "Los Angeles, CA",
+      "relevance": "",
+      "featured": false,
+      "lat": 34.0536909,
+      "lng": -118.242766,
+      "wikipedia": {
+        "title": "Los Angeles",
+        "url": "https://en.wikipedia.org/wiki/Los_Angeles",
+        "summary": "Los Angeles is the most populous city in the U.S. state of California, and the commercial, financial, and cultural center of Southern California. With an estimated 3.88 million residents within the city limits as of 2024, it is the second-most populous city in the United States, behind New York City"
+      },
+      "wikimedia": {
+        "fileTitle": "File:USS Los Angeles (CA-135) in the Far East, 13 October 1952 (NH 97386).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/USS_Los_Angeles_%28CA-135%29_in_the_Far_East%2C_13_October_1952_%28NH_97386%29.jpg/960px-USS_Los_Angeles_%28CA-135%29_in_the_Far_East%2C_13_October_1952_%28NH_97386%29.jpg",
+        "attribution": "Unknown authorUnknown author",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=34.0536909,-118.242766",
+        "embedUrl": "https://maps.google.com/maps?q=34.0536909,-118.242766&z=12&output=embed"
+      },
+      "year": "1957"
+    },
+    {
+      "id": "long-beach-california-marriage",
+      "type": "building",
+      "canonicalPlaceId": "long-beach-california",
+      "badge": "Marriage",
+      "name": "Long Beach, California",
+      "relevance": "",
+      "featured": false,
+      "lat": 33.7690164,
+      "lng": -118.191604,
+      "wikipedia": {
+        "title": "Long Beach, California",
+        "url": "https://en.wikipedia.org/wiki/Long_Beach%2C_California",
+        "summary": "Long Beach is a coastal city in southeastern Los Angeles County, California, United States. It is the 44th-most populous city in the United States, with a population of 451,307 as of 2022. A charter city, Long Beach is the 7th-most populous city in California, the 2nd-most populous city in Los Angel"
+      },
+      "wikimedia": {
+        "fileTitle": "File:555 Steakhouse restaurant in Long Beach, California.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/555_Steakhouse_restaurant_in_Long_Beach%2C_California.jpg/960px-555_Steakhouse_restaurant_in_Long_Beach%2C_California.jpg",
+        "attribution": "Nixols",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=33.7690164,-118.191604",
+        "embedUrl": "https://maps.google.com/maps?q=33.7690164,-118.191604&z=12&output=embed"
+      },
+      "year": "1924"
+    },
+    {
+      "id": "south-pasadena-ca-residence",
+      "type": "town",
+      "canonicalPlaceId": "south-pasadena-ca",
+      "badge": "Residence",
+      "name": "South Pasadena, CA",
+      "relevance": "",
+      "featured": false,
+      "lat": 34.1133062,
+      "lng": -118.1478291,
+      "wikipedia": {
+        "title": "South Pasadena, California",
+        "url": "https://en.wikipedia.org/wiki/South_Pasadena%2C_California",
+        "summary": "South Pasadena is a city in Los Angeles County, California, United States. As of the 2020 census, it had a population of 26,943, up from 25,619 at the 2010 census."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Southpasadena ca cityhall.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Southpasadena_ca_cityhall.jpg/960px-Southpasadena_ca_cityhall.jpg",
+        "attribution": "The original uploader was Geographer at English Wikipedia.",
+        "license": "CC BY 2.5"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=34.1133062,-118.1478291",
+        "embedUrl": "https://maps.google.com/maps?q=34.1133062,-118.1478291&z=12&output=embed"
+      },
+      "year": "1957"
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "personId": "jennie_e_roberts",
+  "personName": "Jennie E. Roberts",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "cambria-columbia-county-wisconsin-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "cambria-columbia-county-wisconsin",
+      "badge": "Birth Place",
+      "name": "Cambria, Columbia County, Wisconsin",
+      "relevance": "",
+      "featured": true,
+      "lat": 43.5432656,
+      "lng": -89.1084756,
+      "wikimedia": {
+        "fileTitle": "File:WIS146 looking north from County P Cambria.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/WIS146_looking_north_from_County_P_Cambria.jpg/960px-WIS146_looking_north_from_County_P_Cambria.jpg",
+        "attribution": "Royalbroil",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.5432656,-89.1084756",
+        "embedUrl": "https://maps.google.com/maps?q=43.5432656,-89.1084756&z=12&output=embed"
+      },
+      "year": "1863"
+    },
+    {
+      "id": "portage-columbia-wisconsin-marriage",
+      "type": "building",
+      "canonicalPlaceId": "portage-columbia-wisconsin",
+      "badge": "Marriage",
+      "name": "Portage, Columbia, Wisconsin",
+      "relevance": "",
+      "featured": false,
+      "lat": 43.539494,
+      "lng": -89.461334,
+      "wikimedia": {
+        "fileTitle": "File:Bird's eye view of the city of Portage, Columbia Co., Wisconsin 1868. LOC 73694548.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Bird%27s_eye_view_of_the_city_of_Portage%2C_Columbia_Co.%2C_Wisconsin_1868._LOC_73694548.jpg/960px-Bird%27s_eye_view_of_the_city_of_Portage%2C_Columbia_Co.%2C_Wisconsin_1868._LOC_73694548.jpg",
+        "attribution": "Ruger, A.; Chicago Lithographing Co.",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.539494,-89.461334",
+        "embedUrl": "https://maps.google.com/maps?q=43.539494,-89.461334&z=12&output=embed"
+      },
+      "year": "1883"
+    },
+    {
+      "id": "inglewood-ca-residence",
+      "type": "town",
+      "canonicalPlaceId": "inglewood-ca",
+      "badge": "Residence",
+      "name": "Inglewood, CA",
+      "relevance": "",
+      "featured": false,
+      "lat": 33.9562003,
+      "lng": -118.353132,
+      "wikipedia": {
+        "title": "Inglewood, California",
+        "url": "https://en.wikipedia.org/wiki/Inglewood%2C_California",
+        "summary": "Inglewood is a city in southwestern Los Angeles County, California, United States, in the Greater Los Angeles metropolitan area. As of the 2020 U.S. census, the city had a population of 107,762. It is in the South Bay region of Los Angeles County, near Los Angeles International Airport. The Inglewoo"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Inglewood, California (14331288447).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Inglewood%2C_California_%2814331288447%29.jpg/960px-Inglewood%2C_California_%2814331288447%29.jpg",
+        "attribution": "Ken Lund from Reno, Nevada, USA",
+        "license": "CC BY-SA 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=33.9562003,-118.353132",
+        "embedUrl": "https://maps.google.com/maps?q=33.9562003,-118.353132&z=12&output=embed"
+      },
+      "year": "1928"
+    }
+  ]
+}

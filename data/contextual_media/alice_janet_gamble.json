@@ -1,0 +1,56 @@
+{
+  "personId": "alice_janet_gamble",
+  "personName": "Alice Janet Gamble",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "yankton-dakota-territory-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "yankton-dakota-territory",
+      "badge": "Birth Place",
+      "name": "Yankton, Dakota Territory",
+      "relevance": "",
+      "featured": true,
+      "lat": 43.007272,
+      "lng": -97.5171292,
+      "wikimedia": {
+        "fileTitle": "File:Dakota Territory Capitol Replica Yankton.JPG",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Dakota_Territory_Capitol_Replica_Yankton.JPG/960px-Dakota_Territory_Capitol_Replica_Yankton.JPG",
+        "attribution": "Anderc99",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.007272,-97.5171292",
+        "embedUrl": "https://maps.google.com/maps?q=43.007272,-97.5171292&z=12&output=embed"
+      },
+      "year": "1879"
+    },
+    {
+      "id": "los-angeles-ca-death",
+      "type": "town",
+      "canonicalPlaceId": "los-angeles-ca",
+      "badge": "Death",
+      "name": "Los Angeles, CA",
+      "relevance": "",
+      "featured": false,
+      "lat": 34.0536909,
+      "lng": -118.242766,
+      "wikipedia": {
+        "title": "Los Angeles",
+        "url": "https://en.wikipedia.org/wiki/Los_Angeles",
+        "summary": "Los Angeles is the most populous city in the U.S. state of California, and the commercial, financial, and cultural center of Southern California. With an estimated 3.88 million residents within the city limits as of 2024, it is the second-most populous city in the United States, behind New York City"
+      },
+      "wikimedia": {
+        "fileTitle": "File:USS Los Angeles (CA-135) in the Far East, 13 October 1952 (NH 97386).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/USS_Los_Angeles_%28CA-135%29_in_the_Far_East%2C_13_October_1952_%28NH_97386%29.jpg/960px-USS_Los_Angeles_%28CA-135%29_in_the_Far_East%2C_13_October_1952_%28NH_97386%29.jpg",
+        "attribution": "Unknown authorUnknown author",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=34.0536909,-118.242766",
+        "embedUrl": "https://maps.google.com/maps?q=34.0536909,-118.242766&z=12&output=embed"
+      },
+      "year": "1962"
+    }
+  ]
+}

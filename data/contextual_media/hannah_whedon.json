@@ -1,0 +1,33 @@
+{
+  "personId": "hannah_whedon",
+  "personName": "Hannah Whedon",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "branford-connecticut-death",
+      "type": "town",
+      "canonicalPlaceId": "branford-connecticut",
+      "badge": "Death",
+      "name": "Branford, Connecticut",
+      "relevance": "",
+      "featured": true,
+      "lat": 41.2795414,
+      "lng": -72.8150989,
+      "wikipedia": {
+        "title": "Branford, Connecticut",
+        "url": "https://en.wikipedia.org/wiki/Branford%2C_Connecticut",
+        "summary": "Branford is a shoreline town located on Long Island Sound in New Haven County, Connecticut, United States, about 6 miles (10\u00a0km) east of downtown New Haven. The town is part of the South Central Connecticut Planning Region. Branford borders East Haven to the west, Guilford to the east, and North Bra"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Branford, Connecticut town hall and courthouse.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Branford%2C_Connecticut_town_hall_and_courthouse.jpg/960px-Branford%2C_Connecticut_town_hall_and_courthouse.jpg",
+        "attribution": "Kenneth Zirkel",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=41.2795414,-72.8150989",
+        "embedUrl": "https://maps.google.com/maps?q=41.2795414,-72.8150989&z=12&output=embed"
+      }
+    }
+  ]
+}

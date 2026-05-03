@@ -1,0 +1,66 @@
+{
+  "personId": "cornelius_howard_sr",
+  "personName": "Cornelius Howard Sr.",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "lower-norfolk-county-virginia-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "lower-norfolk-county-virginia",
+      "badge": "Birth Place",
+      "name": "Lower Norfolk County, Virginia",
+      "relevance": "",
+      "featured": true,
+      "year": "1643"
+    },
+    {
+      "id": "anne-arundel-md-death",
+      "type": "town",
+      "canonicalPlaceId": "anne-arundel-md",
+      "badge": "Death",
+      "name": "Anne Arundel, MD",
+      "relevance": "",
+      "featured": false,
+      "lat": 38.9722583,
+      "lng": -76.573454,
+      "wikimedia": {
+        "fileTitle": "File:PRIMROSE HILL, ANNAPOLIS, ANNE ARUNDEL COUNTY, MD.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/PRIMROSE_HILL%2C_ANNAPOLIS%2C_ANNE_ARUNDEL_COUNTY%2C_MD.jpg/960px-PRIMROSE_HILL%2C_ANNAPOLIS%2C_ANNE_ARUNDEL_COUNTY%2C_MD.jpg",
+        "attribution": "JERRYE &amp; ROY KLOTZ, M.D.",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=38.9722583,-76.573454",
+        "embedUrl": "https://maps.google.com/maps?q=38.9722583,-76.573454&z=12&output=embed"
+      },
+      "year": "1680"
+    },
+    {
+      "id": "province-of-maryland-marriage",
+      "type": "building",
+      "canonicalPlaceId": "province-of-maryland",
+      "badge": "Marriage",
+      "name": "Province of Maryland",
+      "relevance": "",
+      "featured": false,
+      "lat": 16.3960012,
+      "lng": 120.3302895,
+      "wikipedia": {
+        "title": "Province of Maryland",
+        "url": "https://en.wikipedia.org/wiki/Province_of_Maryland",
+        "summary": "The Province of Maryland was an English and later British colony in North America from 1634 until 1776, when the province was one of the Thirteen Colonies that joined in supporting the American Revolution against Great Britain. In 1781, Maryland was the 13th signatory to the Articles of Confederatio"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Maryland, 1633 to 1776; being an account of the main currents in the political and religious development of Maryland as a proprietary province .. (IA maryland1633to1700schorich).pdf",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Maryland%2C_1633_to_1776%3B_being_an_account_of_the_main_currents_in_the_political_and_religious_development_of_Maryland_as_a_proprietary_province_.._%28IA_maryland1633to1700schorich%29.pdf/page1-906px-thumbnail.pdf.jpg",
+        "attribution": "Schoenfeld, Rudolf Emil",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=16.3960012,120.3302895",
+        "embedUrl": "https://maps.google.com/maps?q=16.3960012,120.3302895&z=12&output=embed"
+      },
+      "year": "1662"
+    }
+  ]
+}

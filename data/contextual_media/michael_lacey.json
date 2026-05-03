@@ -1,0 +1,34 @@
+{
+  "personId": "michael_lacey",
+  "personName": "Michael Lacey",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "ireland-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "ireland",
+      "badge": "Birth Place",
+      "name": "Ireland",
+      "relevance": "",
+      "featured": true,
+      "lat": 52.865196,
+      "lng": -7.9794599,
+      "wikipedia": {
+        "title": "Ireland",
+        "url": "https://en.wikipedia.org/wiki/Ireland",
+        "summary": "Ireland is an island in the North Atlantic Ocean, in Northwestern Europe. Geopolitically, the island is divided between the Republic of Ireland and Northern Ireland. It is separated from Great Britain to its east by the North Channel, the Irish Sea, and St George's Channel. Ireland is the second-lar"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Ireland (MODIS).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Ireland_%28MODIS%29.jpg/960px-Ireland_%28MODIS%29.jpg",
+        "attribution": "Jeff Schmaltz",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=52.865196,-7.9794599",
+        "embedUrl": "https://maps.google.com/maps?q=52.865196,-7.9794599&z=12&output=embed"
+      },
+      "year": "1855"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "personId": "edward_lancaster",
+  "personName": "Edward Lancaster",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "dacre-cumberland-england-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "dacre-cumberland-england",
+      "badge": "Birth Place",
+      "name": "Dacre, Cumberland, England",
+      "relevance": "",
+      "featured": true,
+      "lat": 54.9965268,
+      "lng": -2.8165389,
+      "wikimedia": {
+        "fileTitle": "File:Dacre.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Dacre.jpg",
+        "attribution": "Humphrey Bolton",
+        "license": "CC BY-SA 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=54.9965268,-2.8165389",
+        "embedUrl": "https://maps.google.com/maps?q=54.9965268,-2.8165389&z=12&output=embed"
+      },
+      "year": "1615"
+    }
+  ]
+}

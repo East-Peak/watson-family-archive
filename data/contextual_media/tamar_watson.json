@@ -1,0 +1,56 @@
+{
+  "personId": "tamar_watson",
+  "personName": "Tamar Watson",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "polstead-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "polstead",
+      "badge": "Birth Place",
+      "name": "Polstead",
+      "relevance": "",
+      "featured": true,
+      "lat": 52.0067906,
+      "lng": 0.9002964,
+      "wikipedia": {
+        "title": "Polstead",
+        "url": "https://en.wikipedia.org/wiki/Polstead",
+        "summary": "Polstead is a village and civil parish in the Babergh district of Suffolk, England. The village lies 3 miles (4.8\u00a0km) northeast of Nayland, 5 miles (8\u00a0km) southwest of Hadleigh and 9 miles (14\u00a0km) north of Colchester. It is situated on a small tributary stream of the River Stour. In 2011 the parish "
+      },
+      "wikimedia": {
+        "fileTitle": "File:Field in between Polstead and Polstead Heath - geograph.org.uk - 3864615.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/4/43/Field_in_between_Polstead_and_Polstead_Heath_-_geograph.org.uk_-_3864615.jpg",
+        "attribution": "Hamish Griffin",
+        "license": "CC BY-SA 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=52.0067906,0.9002964",
+        "embedUrl": "https://maps.google.com/maps?q=52.0067906,0.9002964&z=12&output=embed"
+      },
+      "year": "1834"
+    },
+    {
+      "id": "east-retford-nottinghamshire-england-death",
+      "type": "town",
+      "canonicalPlaceId": "east-retford-nottinghamshire-england",
+      "badge": "Death",
+      "name": "East Retford, Nottinghamshire, England",
+      "relevance": "",
+      "featured": false,
+      "lat": 53.3231315,
+      "lng": -0.9424879,
+      "wikimedia": {
+        "fileTitle": "File:Retford railway station MMB 11.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Retford_railway_station_MMB_11.jpg/960px-Retford_railway_station_MMB_11.jpg",
+        "attribution": "mattbuck (category)",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=53.3231315,-0.9424879",
+        "embedUrl": "https://maps.google.com/maps?q=53.3231315,-0.9424879&z=12&output=embed"
+      },
+      "year": "1911"
+    }
+  ]
+}

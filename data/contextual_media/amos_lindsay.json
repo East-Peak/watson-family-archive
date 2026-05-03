@@ -1,0 +1,29 @@
+{
+  "personId": "amos_lindsay",
+  "personName": "Amos Lindsay",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "crawford-illinois-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "crawford-illinois",
+      "badge": "Birth Place",
+      "name": "Crawford, Illinois",
+      "relevance": "",
+      "featured": true,
+      "lat": 39.0131644,
+      "lng": -87.7291001,
+      "wikimedia": {
+        "fileTitle": "File:Crawford County Illinois 1816.png",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/1/18/Crawford_County_Illinois_1816.png",
+        "attribution": "Illinois_Locator_Map.PNG: US Census, Ruhrfisch\nderivative work: Fishal (talk)",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=39.0131644,-87.7291001",
+        "embedUrl": "https://maps.google.com/maps?q=39.0131644,-87.7291001&z=12&output=embed"
+      },
+      "year": "1844"
+    }
+  ]
+}

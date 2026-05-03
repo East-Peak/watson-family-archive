@@ -1,0 +1,34 @@
+{
+  "personId": "angelique_sauve",
+  "personName": "Ang\u00e9lique Sauv\u00e9",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "saint-timoth-e-quebec-marriage",
+      "type": "building",
+      "canonicalPlaceId": "saint-timoth-e-quebec",
+      "badge": "Marriage",
+      "name": "Saint-Timoth\u00e9e, Quebec",
+      "relevance": "",
+      "featured": true,
+      "lat": 45.2898118,
+      "lng": -74.0416901,
+      "wikipedia": {
+        "title": "Saint-Timoth\u00e9e, Quebec",
+        "url": "https://en.wikipedia.org/wiki/Saint-Timoth%C3%A9e%2C_Quebec",
+        "summary": "Saint-Timoth\u00e9e is a former city located in the Mont\u00e9r\u00e9gie region of Quebec, Canada, on \u00cele-de-Salaberry in the St. Lawrence River. It occupied the middle third and largest area of the island, which is part of the Hochelaga Archipelago. The municipality is flanked by the cities of Beauharnois to the "
+      },
+      "wikimedia": {
+        "fileTitle": "File:\u00c9glise de Saint-Timoth\u00e9e - cimeti\u00e8re - 2.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/%C3%89glise_de_Saint-Timoth%C3%A9e_-_cimeti%C3%A8re_-_2.jpg/960px-%C3%89glise_de_Saint-Timoth%C3%A9e_-_cimeti%C3%A8re_-_2.jpg",
+        "attribution": "Cantons-de-l'Est",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=45.2898118,-74.0416901",
+        "embedUrl": "https://maps.google.com/maps?q=45.2898118,-74.0416901&z=12&output=embed"
+      },
+      "year": "1862"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "personId": "bridget_oconnell",
+  "personName": "Bridget Louise O'Connell",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "macroom-cork-ireland-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "macroom-cork-ireland",
+      "badge": "Birth Place",
+      "name": "Macroom, Cork, Ireland",
+      "relevance": "",
+      "featured": true,
+      "lat": 51.9049705,
+      "lng": -8.9599195,
+      "wikimedia": {
+        "fileTitle": "File:Cork-Macroom railway bridge (geograph 2426317).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Cork-Macroom_railway_bridge_%28geograph_2426317%29.jpg/960px-Cork-Macroom_railway_bridge_%28geograph_2426317%29.jpg",
+        "attribution": "Aidan Lynch",
+        "license": "CC BY-SA 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=51.9049705,-8.9599195",
+        "embedUrl": "https://maps.google.com/maps?q=51.9049705,-8.9599195&z=12&output=embed"
+      },
+      "year": "1884"
+    },
+    {
+      "id": "san-francisco-california-death",
+      "type": "town",
+      "canonicalPlaceId": "san-francisco-california",
+      "badge": "Death",
+      "name": "San Francisco, California",
+      "relevance": "",
+      "featured": false,
+      "lat": 37.7879363,
+      "lng": -122.4075201,
+      "wikipedia": {
+        "title": "San Francisco",
+        "url": "https://en.wikipedia.org/wiki/San_Francisco",
+        "summary": "San Francisco, officially the City and County of San Francisco, is the fourth-most populous city in California and the 17th-most populous in the United States, with a population of 827,526 in 2024. Among U.S. cities with a population of 300,000 or more, San Francisco is ranked first by per capita in"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Calidris alba at Ocean Beach, San Francisco, California - 20101116.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Calidris_alba_at_Ocean_Beach%2C_San_Francisco%2C_California_-_20101116.jpg/960px-Calidris_alba_at_Ocean_Beach%2C_San_Francisco%2C_California_-_20101116.jpg",
+        "attribution": "Brocken Inaglory",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=37.7879363,-122.4075201",
+        "embedUrl": "https://maps.google.com/maps?q=37.7879363,-122.4075201&z=12&output=embed"
+      },
+      "year": "1916"
+    }
+  ]
+}

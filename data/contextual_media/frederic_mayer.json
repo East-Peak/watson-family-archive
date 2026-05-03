@@ -1,0 +1,83 @@
+{
+  "personId": "frederic_mayer",
+  "personName": "Frederic Mayer",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "kansas-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "kansas",
+      "badge": "Birth Place",
+      "name": "Kansas",
+      "relevance": "",
+      "featured": true,
+      "lat": 38.27312,
+      "lng": -98.5821872,
+      "wikipedia": {
+        "title": "Kansas",
+        "url": "https://en.wikipedia.org/wiki/Kansas",
+        "summary": "Kansas is a landlocked state in the Midwestern region of the United States. It borders Nebraska to the north; Colorado to the west; Oklahoma to the south; and Missouri to the east. Kansas is named after the Kansas River, in turn named after the Kansa people. Its capital is Topeka, and its most popul"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Crops Kansas AST 20010624.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Crops_Kansas_AST_20010624.jpg/960px-Crops_Kansas_AST_20010624.jpg",
+        "attribution": "NASA",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=38.27312,-98.5821872",
+        "embedUrl": "https://maps.google.com/maps?q=38.27312,-98.5821872&z=12&output=embed"
+      },
+      "year": "1870"
+    },
+    {
+      "id": "san-mateo-california-death",
+      "type": "town",
+      "canonicalPlaceId": "san-mateo-california",
+      "badge": "Death",
+      "name": "San Mateo, California",
+      "relevance": "",
+      "featured": false,
+      "lat": 37.496904,
+      "lng": -122.3330573,
+      "wikipedia": {
+        "title": "San Mateo, California",
+        "url": "https://en.wikipedia.org/wiki/San_Mateo%2C_California",
+        "summary": "San Mateo is the most populous city in San Mateo County, California, United States, on the San Francisco Peninsula. It is part of the San Francisco Bay Area metropolitan region, and is located about 20 miles (32\u00a0km) south of San Francisco. San Mateo borders Burlingame to the north, Hillsborough to t"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Bay Trail San Mateo May 2011.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Bay_Trail_San_Mateo_May_2011.jpg/960px-Bay_Trail_San_Mateo_May_2011.jpg",
+        "attribution": "King of Hearts",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=37.496904,-122.3330573",
+        "embedUrl": "https://maps.google.com/maps?q=37.496904,-122.3330573&z=12&output=embed"
+      },
+      "year": "1955"
+    },
+    {
+      "id": "rio-vista-cemetery-rio-vista-solano-county-california-residence",
+      "type": "town",
+      "canonicalPlaceId": "rio-vista-cemetery-rio-vista-solano-county-california",
+      "badge": "Residence",
+      "name": "Rio Vista Cemetery, Rio Vista, Solano County, California",
+      "relevance": "",
+      "featured": false,
+      "lat": 38.2218938,
+      "lng": -121.9163555,
+      "wikimedia": {
+        "fileTitle": "File:History of Solano County...and histories of its cities, towns...etc. .. (IA historyofsolanoc01munr).pdf",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/History_of_Solano_County...and_histories_of_its_cities%2C_towns...etc._.._%28IA_historyofsolanoc01munr%29.pdf/page1-685px-History_of_Solano_County...and_histories_of_its_cities%2C_towns...etc._.._%28IA_historyofsolanoc01munr%29.pdf.jpg",
+        "attribution": "Munro-Fraser, J.P",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=38.2218938,-121.9163555",
+        "embedUrl": "https://maps.google.com/maps?q=38.2218938,-121.9163555&z=12&output=embed"
+      },
+      "year": "1955"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "personId": "john_george_smiser",
+  "personName": "John George Smiser",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "york-colony-of-virginia-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "york-colony-of-virginia",
+      "badge": "Birth Place",
+      "name": "York, Colony of Virginia",
+      "relevance": "",
+      "featured": true,
+      "year": "1769"
+    },
+    {
+      "id": "cynthiana-harrison-kentucky-death",
+      "type": "town",
+      "canonicalPlaceId": "cynthiana-harrison-kentucky",
+      "badge": "Death",
+      "name": "Cynthiana, Harrison, Kentucky",
+      "relevance": "",
+      "featured": false,
+      "lat": 38.3903526,
+      "lng": -84.2941013,
+      "wikimedia": {
+        "fileTitle": "File:Cynthiana KY USA.JPG",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Cynthiana_KY_USA.JPG/960px-Cynthiana_KY_USA.JPG",
+        "attribution": "Ed!(talk)(Hall of Fame)",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=38.3903526,-84.2941013",
+        "embedUrl": "https://maps.google.com/maps?q=38.3903526,-84.2941013&z=12&output=embed"
+      },
+      "year": "1856"
+    }
+  ]
+}

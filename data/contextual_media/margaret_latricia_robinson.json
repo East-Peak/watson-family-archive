@@ -1,0 +1,45 @@
+{
+  "personId": "margaret_latricia_robinson",
+  "personName": "Margaret Latricia Robinson",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "evergreen-memorial-cemetery-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "evergreen-memorial-cemetery",
+      "badge": "Birth Place",
+      "name": "Evergreen Memorial Cemetery",
+      "relevance": "",
+      "featured": true,
+      "lat": 40.4693211,
+      "lng": -88.9887991,
+      "wikimedia": {
+        "fileTitle": "File:Veterans Memorial Cemetery, Evergreen Washelli Memorial Park 01.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Veterans_Memorial_Cemetery%2C_Evergreen_Washelli_Memorial_Park_01.jpg/960px-Veterans_Memorial_Cemetery%2C_Evergreen_Washelli_Memorial_Park_01.jpg",
+        "attribution": "Joe Mabel",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=40.4693211,-88.9887991",
+        "embedUrl": "https://maps.google.com/maps?q=40.4693211,-88.9887991&z=12&output=embed"
+      },
+      "year": "1871"
+    },
+    {
+      "id": "springfield-hampden-county-massachusetts-death",
+      "type": "town",
+      "canonicalPlaceId": "springfield-hampden-county-massachusetts",
+      "badge": "Death",
+      "name": "Springfield, Hampden County, Massachusetts",
+      "relevance": "",
+      "featured": false,
+      "lat": 42.1018764,
+      "lng": -72.5886727,
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=42.1018764,-72.5886727",
+        "embedUrl": "https://maps.google.com/maps?q=42.1018764,-72.5886727&z=12&output=embed"
+      },
+      "year": "1948"
+    }
+  ]
+}

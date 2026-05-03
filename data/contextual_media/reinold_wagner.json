@@ -1,0 +1,50 @@
+{
+  "personId": "reinold_wagner",
+  "personName": "Reinold Wagner",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "wisconsin-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "wisconsin",
+      "badge": "Birth Place",
+      "name": "Wisconsin",
+      "relevance": "",
+      "featured": true,
+      "lat": 44.4308975,
+      "lng": -89.6884637,
+      "wikipedia": {
+        "title": "Wisconsin",
+        "url": "https://en.wikipedia.org/wiki/Wisconsin",
+        "summary": "Wisconsin is a state in the Upper Midwest and Great Lakes regions of the United States. It borders Minnesota to the west, Iowa to the southwest, Illinois to the south, Lake Michigan to the east, Michigan to the northeast, and Lake Superior to the north. With a population of about 6 million and an ar"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Beaver Dam, Wisconsin Downtown.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Beaver_Dam%2C_Wisconsin_Downtown.jpg/960px-Beaver_Dam%2C_Wisconsin_Downtown.jpg",
+        "attribution": "Downspec",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=44.4308975,-89.6884637",
+        "embedUrl": "https://maps.google.com/maps?q=44.4308975,-89.6884637&z=12&output=embed"
+      },
+      "year": "1898"
+    },
+    {
+      "id": "riverside-cemetery-peshtigo-marinette-wisconsin-residence",
+      "type": "town",
+      "canonicalPlaceId": "riverside-cemetery-peshtigo-marinette-wisconsin",
+      "badge": "Residence",
+      "name": "Riverside Cemetery, Peshtigo, Marinette, Wisconsin",
+      "relevance": "",
+      "featured": false,
+      "lat": 45.0642079,
+      "lng": -87.7424866,
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=45.0642079,-87.7424866",
+        "embedUrl": "https://maps.google.com/maps?q=45.0642079,-87.7424866&z=12&output=embed"
+      },
+      "year": "1949"
+    }
+  ]
+}

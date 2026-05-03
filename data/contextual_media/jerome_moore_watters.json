@@ -1,0 +1,34 @@
+{
+  "personId": "jerome_moore_watters",
+  "personName": "Jerome Moore Watters",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "essex-new-jersey-death",
+      "type": "town",
+      "canonicalPlaceId": "essex-new-jersey",
+      "badge": "Death",
+      "name": "Essex, New Jersey",
+      "relevance": "",
+      "featured": true,
+      "lat": 40.7913922,
+      "lng": -74.2479444,
+      "wikipedia": {
+        "title": "Essex County, New Jersey",
+        "url": "https://en.wikipedia.org/wiki/Essex_County%2C_New_Jersey",
+        "summary": "Essex County is located in the northeastern part of the U.S. state of New Jersey, and is one of the centrally located counties in the New York metropolitan area. As of the 2020 census, the county was the state's second-most populous county, with a population of 863,728, its highest decennial count s"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Essex county courthouse.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Essex_county_courthouse.jpg/960px-Essex_county_courthouse.jpg",
+        "attribution": "Ken Lund",
+        "license": "CC BY-SA 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=40.7913922,-74.2479444",
+        "embedUrl": "https://maps.google.com/maps?q=40.7913922,-74.2479444&z=12&output=embed"
+      },
+      "year": "1979"
+    }
+  ]
+}

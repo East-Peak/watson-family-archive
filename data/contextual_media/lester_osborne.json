@@ -1,0 +1,29 @@
+{
+  "personId": "lester_osborne",
+  "personName": "Lester Eugene Osborne",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "hamilton-township-van-buren-michigan-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "hamilton-township-van-buren-michigan",
+      "badge": "Birth Place",
+      "name": "Hamilton Township, Van Buren, Michigan",
+      "relevance": "",
+      "featured": true,
+      "lat": 42.1136786,
+      "lng": -86.0501558,
+      "wikimedia": {
+        "fileTitle": "File:Van Buren County Michigan 1906 Hamilton Township.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Van_Buren_County_Michigan_1906_Hamilton_Township.jpg/960px-Van_Buren_County_Michigan_1906_Hamilton_Township.jpg",
+        "attribution": "Compiled from official records and local inspection by W.H. Goss, County Surveyor. Drawn by M.K. Orton.",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=42.1136786,-86.0501558",
+        "embedUrl": "https://maps.google.com/maps?q=42.1136786,-86.0501558&z=12&output=embed"
+      },
+      "year": "1854"
+    }
+  ]
+}

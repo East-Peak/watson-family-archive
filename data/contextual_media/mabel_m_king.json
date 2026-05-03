@@ -1,0 +1,110 @@
+{
+  "personId": "mabel_m_king",
+  "personName": "Mabel M Dexheimer",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "illinois-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "illinois",
+      "badge": "Birth Place",
+      "name": "Illinois",
+      "relevance": "",
+      "featured": true,
+      "lat": 40.0796606,
+      "lng": -89.4337288,
+      "wikipedia": {
+        "title": "Illinois",
+        "url": "https://en.wikipedia.org/wiki/Illinois",
+        "summary": "Illinois is a state in the Midwestern region of the United States. It borders on Lake Michigan to its northeast, the Mississippi River to its west, and the Wabash and Ohio rivers to its south. Of the fifty U.S. states, Illinois has the fifth-largest gross domestic product (GDP), the sixth-largest po"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Skyline de Chicago desde el centro, Illinois, Estados Unidos, 2012-10-20, DD 06.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Skyline_de_Chicago_desde_el_centro%2C_Illinois%2C_Estados_Unidos%2C_2012-10-20%2C_DD_06.jpg/960px-Skyline_de_Chicago_desde_el_centro%2C_Illinois%2C_Estados_Unidos%2C_2012-10-20%2C_DD_06.jpg",
+        "attribution": "Diego Delso",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=40.0796606,-89.4337288",
+        "embedUrl": "https://maps.google.com/maps?q=40.0796606,-89.4337288&z=12&output=embed"
+      },
+      "year": "1888"
+    },
+    {
+      "id": "cook-county-death",
+      "type": "town",
+      "canonicalPlaceId": "cook-county",
+      "badge": "Death",
+      "name": "Cook County",
+      "relevance": "",
+      "featured": false,
+      "lat": 41.8197385,
+      "lng": -87.756525,
+      "wikipedia": {
+        "title": "Cook County, Illinois",
+        "url": "https://en.wikipedia.org/wiki/Cook_County%2C_Illinois",
+        "summary": "Cook County is the most populous county in the U.S. state of Illinois and the second-most-populous county in the United States, after Los Angeles County, California. More than 40 percent of all residents of Illinois live within Cook County. As of 2020, the population was 5,275,541. The county seat i"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Cook County Probate Judge 1946.png",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Cook_County_Probate_Judge_1946.png",
+        "attribution": "John M Wolfson",
+        "license": "CC0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=41.8197385,-87.756525",
+        "embedUrl": "https://maps.google.com/maps?q=41.8197385,-87.756525&z=12&output=embed"
+      },
+      "year": "1967"
+    },
+    {
+      "id": "sangamon-illinois-residence",
+      "type": "town",
+      "canonicalPlaceId": "sangamon-illinois",
+      "badge": "Residence",
+      "name": "Sangamon, Illinois",
+      "relevance": "",
+      "featured": false,
+      "lat": 39.7623668,
+      "lng": -89.6454905,
+      "wikipedia": {
+        "title": "Sangamon, Illinois",
+        "url": "https://en.wikipedia.org/wiki/Sangamon%2C_Illinois",
+        "summary": "Sangamon is an unincorporated community in Oakley Township, Macon County, Illinois, United States. Sangamon is located along the Norfolk Southern Railway, 5.5 miles (8.9\u00a0km) east-northeast of downtown Decatur."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Sangamon County Illinois 1839.png",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/0/06/Sangamon_County_Illinois_1839.png",
+        "attribution": "Illinois_Locator_Map.PNG: US Census, Ruhrfisch\nderivative work: Fishal (talk)",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=39.7623668,-89.6454905",
+        "embedUrl": "https://maps.google.com/maps?q=39.7623668,-89.6454905&z=12&output=embed"
+      },
+      "year": "1910"
+    },
+    {
+      "id": "medina-township-peoria-il-residence",
+      "type": "town",
+      "canonicalPlaceId": "medina-township-peoria-il",
+      "badge": "Residence",
+      "name": "Medina Township, Peoria, IL",
+      "relevance": "",
+      "featured": false,
+      "lat": 40.8072884,
+      "lng": -89.5662022,
+      "wikimedia": {
+        "fileTitle": "File:1940 Census Enumeration District Descriptions - Illinois - Peoria County - ED 72-16A, ED 72-16B, ED 72-17, ED 72-18A, ED 72-18B, ED 72-19, ED 72-20, ED 72-21, ED 72-22, ED 72-23 - NARA - 5848197.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/1940_Census_Enumeration_District_Descriptions_-_Illinois_-_Peoria_County_-_ED_72-16A%2C_ED_72-16B%2C_ED_72-17%2C_ED_72-18A%2C_ED_72-18B%2C_ED_72-19%2C_ED_72-20%2C_ED_72-21%2C_ED_72-22%2C_ED_72-23_-_NARA_-_5848197.jpg/960px-thumbnail.jpg",
+        "attribution": "Unknown authorUnknown author or not provided",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=40.8072884,-89.5662022",
+        "embedUrl": "https://maps.google.com/maps?q=40.8072884,-89.5662022&z=12&output=embed"
+      },
+      "year": "1950"
+    }
+  ]
+}

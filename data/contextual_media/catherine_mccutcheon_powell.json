@@ -1,0 +1,39 @@
+{
+  "personId": "catherine_mccutcheon_powell",
+  "personName": "Catherine McCutcheon",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "london-middlesex-ontario-canada-death",
+      "type": "town",
+      "canonicalPlaceId": "london-middlesex-ontario-canada",
+      "badge": "Death",
+      "name": "London, Middlesex, Ontario, Canada",
+      "relevance": "",
+      "featured": true,
+      "lat": 43.0766721,
+      "lng": -81.3077098,
+      "wikimedia": {
+        "fileTitle": "File:The Founding of London, Middlesex County Court House, London, Ontario (21798979226).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/The_Founding_of_London%2C_Middlesex_County_Court_House%2C_London%2C_Ontario_%2821798979226%29.jpg/960px-The_Founding_of_London%2C_Middlesex_County_Court_House%2C_London%2C_Ontario_%2821798979226%29.jpg",
+        "attribution": "Ken Lund from Reno, Nevada, USA",
+        "license": "CC BY-SA 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.0766721,-81.3077098",
+        "embedUrl": "https://maps.google.com/maps?q=43.0766721,-81.3077098&z=12&output=embed"
+      },
+      "year": "1891"
+    },
+    {
+      "id": "london-middlesex-canada-west-marriage",
+      "type": "building",
+      "canonicalPlaceId": "london-middlesex-canada-west",
+      "badge": "Marriage",
+      "name": "London, Middlesex, Canada West",
+      "relevance": "",
+      "featured": false,
+      "year": "1850"
+    }
+  ]
+}

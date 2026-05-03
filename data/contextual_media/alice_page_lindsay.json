@@ -1,0 +1,44 @@
+{
+  "personId": "alice_page_lindsay",
+  "personName": "Alice Page",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "prince-george-s-county-maryland-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "prince-george-s-county-maryland",
+      "badge": "Birth Place",
+      "name": "Prince George's County, Maryland",
+      "relevance": "",
+      "featured": true,
+      "lat": 38.803929,
+      "lng": -76.8518695,
+      "wikipedia": {
+        "title": "Prince George's County, Maryland",
+        "url": "https://en.wikipedia.org/wiki/Prince_George's_County%2C_Maryland",
+        "summary": "Prince George's County is located in the U.S. state of Maryland bordering the eastern portion of Washington, D.C. As of the 2020 U.S. census, the population was 967,201, making it the second-most populous county in Maryland, behind neighboring Montgomery County. The 2020 census counted an increase o"
+      },
+      "wikimedia": {
+        "fileTitle": "File:P.G. County, Maryland Infobox Montage 1.png",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/8/83/P.G._County%2C_Maryland_Infobox_Montage_1.png",
+        "attribution": "Illegitimate Barrister\n\nBen Schumin - File:Prince Georges Plaza station.jpg\nBen Schumin - File:Boulevard at the Capital Centre.jpg\nAndrew Bossi - File:MD725 at MD717 02.JPG\nKen Lund - File:Exit 9, Andrews AFB, I-295 NB (2853558846).jpg\nTheodore J. Hull - File:Adelphi Sign.jpg\nSallicio - File:PGcourthouse1.JPG\nFlugKerl2 - File:Patuxent Square Laurel MD.jpg",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=38.803929,-76.8518695",
+        "embedUrl": "https://maps.google.com/maps?q=38.803929,-76.8518695&z=12&output=embed"
+      },
+      "year": "1700"
+    },
+    {
+      "id": "baltimore-colony-of-maryland-death",
+      "type": "town",
+      "canonicalPlaceId": "baltimore-colony-of-maryland",
+      "badge": "Death",
+      "name": "Baltimore, Colony of Maryland",
+      "relevance": "",
+      "featured": false,
+      "year": "1739"
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "personId": "matthew_howard_sr",
+  "personName": "Matthew Howard",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "england-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "england",
+      "badge": "Birth Place",
+      "name": "England",
+      "relevance": "",
+      "featured": true,
+      "lat": 52.5310214,
+      "lng": -1.2649062,
+      "wikipedia": {
+        "title": "England",
+        "url": "https://en.wikipedia.org/wiki/England",
+        "summary": "England is a country that is part of the United Kingdom. It is located on the island of Great Britain, of which it covers about 62%, and more than 100 smaller adjacent islands. England shares a land border with Scotland to the north and another land border with Wales to the west, and is surrounded b"
+      },
+      "wikimedia": {
+        "fileTitle": "File:England satellite image.png",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b1/England_satellite_image.png",
+        "attribution": "Jacques Descloitres, MODIS Land Rapid Response Team, NASA/GSFC",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=52.5310214,-1.2649062",
+        "embedUrl": "https://maps.google.com/maps?q=52.5310214,-1.2649062&z=12&output=embed"
+      },
+      "year": "1609"
+    },
+    {
+      "id": "virginia-colony-death",
+      "type": "town",
+      "canonicalPlaceId": "virginia-colony",
+      "badge": "Death",
+      "name": "Virginia Colony",
+      "relevance": "",
+      "featured": false,
+      "lat": 34.2877801,
+      "lng": -118.8584293,
+      "wikipedia": {
+        "title": "Colony of Virginia",
+        "url": "https://en.wikipedia.org/wiki/Colony_of_Virginia",
+        "summary": "The Colony of Virginia was a British colonial settlement in North America from 1606 to 1776. The first effort to create an English settlement in the area was chartered in 1584 and established in 1585; the resulting Roanoke Colony lasted for three attempts totaling six years. In 1590, the colony was "
+      },
+      "wikimedia": {
+        "fileTitle": "File:History of the First Discovery of Virginia 1747.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ec/History_of_the_First_Discovery_of_Virginia_1747.jpg",
+        "attribution": "William Parks",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=34.2877801,-118.8584293",
+        "embedUrl": "https://maps.google.com/maps?q=34.2877801,-118.8584293&z=12&output=embed"
+      },
+      "year": "1658"
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "personId": "joseph_prendergast",
+  "personName": "Joseph Samuel Prendergast",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "chula-vista-san-diego-county-california-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "chula-vista-san-diego-county-california",
+      "badge": "Birth Place",
+      "name": "Chula Vista, San Diego County, California",
+      "relevance": "",
+      "featured": true,
+      "lat": 32.6400541,
+      "lng": -117.084195,
+      "wikimedia": {
+        "fileTitle": "File:Discovery Park, Chula Vista, CA.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Discovery_Park%2C_Chula_Vista%2C_CA.jpg",
+        "attribution": "City of Chula Vista, CA",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=32.6400541,-117.084195",
+        "embedUrl": "https://maps.google.com/maps?q=32.6400541,-117.084195&z=12&output=embed"
+      },
+      "year": "1892"
+    },
+    {
+      "id": "redlands-california-death",
+      "type": "town",
+      "canonicalPlaceId": "redlands-california",
+      "badge": "Death",
+      "name": "Redlands, California",
+      "relevance": "",
+      "featured": false,
+      "lat": 34.0550328,
+      "lng": -117.1827445,
+      "wikipedia": {
+        "title": "Redlands, California",
+        "url": "https://en.wikipedia.org/wiki/Redlands%2C_California",
+        "summary": "Redlands is a city in San Bernardino County, California, United States. As of the 2020 census, the city had a population of 73,168, up from 68,747 at the 2010 census. The city is located approximately 70 miles (110\u00a0km) northwest of Indio and 63 miles (101\u00a0km) east of Los Angeles."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Redlands, California, from Smiley's Heights (NBY 1550).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Redlands%2C_California%2C_from_Smiley%27s_Heights_%28NBY_1550%29.jpg",
+        "attribution": "Unknown authorUnknown author",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=34.0550328,-117.1827445",
+        "embedUrl": "https://maps.google.com/maps?q=34.0550328,-117.1827445&z=12&output=embed"
+      },
+      "year": "1974"
+    },
+    {
+      "id": "san-bernardino-california-residence",
+      "type": "town",
+      "canonicalPlaceId": "san-bernardino-california",
+      "badge": "Residence",
+      "name": "San Bernardino, California",
+      "relevance": "",
+      "featured": false,
+      "lat": 34.8253019,
+      "lng": -116.0833144,
+      "wikipedia": {
+        "title": "San Bernardino, California",
+        "url": "https://en.wikipedia.org/wiki/San_Bernardino%2C_California",
+        "summary": "San Bernardino is a city in and the county seat of San Bernardino County, California, United States. Located in the Inland Empire region of Southern California, the city had a population of 222,101 in the 2020 census, making it the 18th-most populous city in California. The Riverside\u2013San Bernardino "
+      },
+      "wikimedia": {
+        "fileTitle": "File:Downtown San Bernardino.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Downtown_San_Bernardino.jpg",
+        "attribution": "House10902 (talk).",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=34.8253019,-116.0833144",
+        "embedUrl": "https://maps.google.com/maps?q=34.8253019,-116.0833144&z=12&output=embed"
+      },
+      "year": "1974"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "personId": "robert_goldsborough_sr",
+  "personName": "Robert Goldsborough",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "blandford-dorset-england-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "blandford-dorset-england",
+      "badge": "Birth Place",
+      "name": "Blandford, Dorset, England",
+      "relevance": "",
+      "featured": true,
+      "lat": 50.8560049,
+      "lng": -2.1651766,
+      "wikimedia": {
+        "fileTitle": "File:Road to Blandford Forum, Dorset - geograph.org.uk - 2921802.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Road_to_Blandford_Forum%2C_Dorset_-_geograph.org.uk_-_2921802.jpg/960px-Road_to_Blandford_Forum%2C_Dorset_-_geograph.org.uk_-_2921802.jpg",
+        "attribution": "Christine Matthews",
+        "license": "CC BY-SA 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=50.8560049,-2.1651766",
+        "embedUrl": "https://maps.google.com/maps?q=50.8560049,-2.1651766&z=12&output=embed"
+      },
+      "year": "1660"
+    },
+    {
+      "id": "talbot-maryland-death",
+      "type": "town",
+      "canonicalPlaceId": "talbot-maryland",
+      "badge": "Death",
+      "name": "Talbot, Maryland",
+      "relevance": "",
+      "featured": false,
+      "lat": 38.7542065,
+      "lng": -76.1919824,
+      "wikimedia": {
+        "fileTitle": "File:Reverend Daniel Maynadier grave at Whitemarsh Cemetery, Talbot County, Maryland - Sarah Stierch - A.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/8/82/Reverend_Daniel_Maynadier_grave_at_Whitemarsh_Cemetery%2C_Talbot_County%2C_Maryland_-_Sarah_Stierch_-_A.jpg",
+        "attribution": "Sarah Stierch",
+        "license": "CC BY 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=38.7542065,-76.1919824",
+        "embedUrl": "https://maps.google.com/maps?q=38.7542065,-76.1919824&z=12&output=embed"
+      },
+      "year": "1746"
+    }
+  ]
+}

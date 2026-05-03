@@ -1,0 +1,50 @@
+{
+  "personId": "rebecca_charlton",
+  "personName": "Rebecca Charlton",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "butler-county-ohio-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "butler-county-ohio",
+      "badge": "Birth Place",
+      "name": "Butler County, Ohio",
+      "relevance": "",
+      "featured": true,
+      "lat": 39.4233043,
+      "lng": -84.5936897,
+      "wikipedia": {
+        "title": "Butler County, Ohio",
+        "url": "https://en.wikipedia.org/wiki/Butler_County%2C_Ohio",
+        "summary": "Butler County is a county located in the southwestern part of the U.S. state of Ohio. As of the 2020 census, the population was 390,357, making it the seventh-most populous county in Ohio. Its county seat and most populous city is Hamilton. It is named for General Richard Butler, who died in 1791 du"
+      },
+      "wikimedia": {
+        "fileTitle": "File:ButlerCountyOhioCourthouse.JPG",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/ButlerCountyOhioCourthouse.JPG/960px-ButlerCountyOhioCourthouse.JPG",
+        "attribution": "Photo by Greg Hume (Greg5030)",
+        "license": "CC BY 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=39.4233043,-84.5936897",
+        "embedUrl": "https://maps.google.com/maps?q=39.4233043,-84.5936897&z=12&output=embed"
+      },
+      "year": "1820"
+    },
+    {
+      "id": "lineville-wayne-iowa-death",
+      "type": "town",
+      "canonicalPlaceId": "lineville-wayne-iowa",
+      "badge": "Death",
+      "name": "Lineville, Wayne, Iowa",
+      "relevance": "",
+      "featured": false,
+      "lat": 40.5810627,
+      "lng": -93.5241178,
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=40.5810627,-93.5241178",
+        "embedUrl": "https://maps.google.com/maps?q=40.5810627,-93.5241178&z=12&output=embed"
+      },
+      "year": "1886"
+    }
+  ]
+}

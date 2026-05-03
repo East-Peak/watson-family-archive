@@ -1,0 +1,61 @@
+{
+  "personId": "nellie_m_keeler",
+  "personName": "Nellie M Keeler",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "new-hampshire-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "new-hampshire",
+      "badge": "Birth Place",
+      "name": "New Hampshire",
+      "relevance": "",
+      "featured": true,
+      "lat": 43.4849133,
+      "lng": -71.6553992,
+      "wikipedia": {
+        "title": "New Hampshire",
+        "url": "https://en.wikipedia.org/wiki/New_Hampshire",
+        "summary": "New Hampshire is a state in the New England region of the Northeastern United States. It borders Massachusetts to the south, Vermont to the west, Maine and the Gulf of Maine to the east, and the Canadian province of Quebec to the north. Of the 50 U.S. states, New Hampshire is the seventh-smallest by"
+      },
+      "wikimedia": {
+        "fileTitle": "File:US-Colonial (NH-179)-New Hampshire-29 Apr 1780 OBV.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/US-Colonial_%28NH-179%29-New_Hampshire-29_Apr_1780_OBV.jpg/960px-US-Colonial_%28NH-179%29-New_Hampshire-29_Apr_1780_OBV.jpg",
+        "attribution": "National Museum of American History",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.4849133,-71.6553992",
+        "embedUrl": "https://maps.google.com/maps?q=43.4849133,-71.6553992&z=12&output=embed"
+      },
+      "year": "1869"
+    },
+    {
+      "id": "boston-massachusetts-marriage",
+      "type": "building",
+      "canonicalPlaceId": "boston-massachusetts",
+      "badge": "Marriage",
+      "name": "Boston, Massachusetts",
+      "relevance": "",
+      "featured": false,
+      "lat": 42.3588336,
+      "lng": -71.0578303,
+      "wikipedia": {
+        "title": "Boston",
+        "url": "https://en.wikipedia.org/wiki/Boston",
+        "summary": "Boston is the capital and most populous city of the U.S. state of Massachusetts. It serves as a cultural and financial center of New England, a region of the Northeastern United States. Boston has an area of 48.4\u00a0sq\u00a0mi (125\u00a0km2) and a population of 675,647 as of the 2020 census, making it the third-"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Harvard Yard in autumn, Boston, Massachusetts, 2015.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Harvard_Yard_in_autumn%2C_Boston%2C_Massachusetts%2C_2015.jpg/960px-Harvard_Yard_in_autumn%2C_Boston%2C_Massachusetts%2C_2015.jpg",
+        "attribution": "Nina R from Africa",
+        "license": "CC BY 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=42.3588336,-71.0578303",
+        "embedUrl": "https://maps.google.com/maps?q=42.3588336,-71.0578303&z=12&output=embed"
+      },
+      "year": "1899"
+    }
+  ]
+}

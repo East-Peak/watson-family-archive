@@ -1,0 +1,110 @@
+{
+  "personId": "thomas_andes",
+  "personName": "Thomas Andes",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "illinois-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "illinois",
+      "badge": "Birth Place",
+      "name": "Illinois",
+      "relevance": "",
+      "featured": true,
+      "lat": 40.0796606,
+      "lng": -89.4337288,
+      "wikipedia": {
+        "title": "Illinois",
+        "url": "https://en.wikipedia.org/wiki/Illinois",
+        "summary": "Illinois is a state in the Midwestern region of the United States. It borders on Lake Michigan to its northeast, the Mississippi River to its west, and the Wabash and Ohio rivers to its south. Of the fifty U.S. states, Illinois has the fifth-largest gross domestic product (GDP), the sixth-largest po"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Skyline de Chicago desde el centro, Illinois, Estados Unidos, 2012-10-20, DD 06.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Skyline_de_Chicago_desde_el_centro%2C_Illinois%2C_Estados_Unidos%2C_2012-10-20%2C_DD_06.jpg/960px-Skyline_de_Chicago_desde_el_centro%2C_Illinois%2C_Estados_Unidos%2C_2012-10-20%2C_DD_06.jpg",
+        "attribution": "Diego Delso",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=40.0796606,-89.4337288",
+        "embedUrl": "https://maps.google.com/maps?q=40.0796606,-89.4337288&z=12&output=embed"
+      },
+      "year": "1905"
+    },
+    {
+      "id": "bureau-illinois-death",
+      "type": "town",
+      "canonicalPlaceId": "bureau-illinois",
+      "badge": "Death",
+      "name": "Bureau, Illinois",
+      "relevance": "",
+      "featured": false,
+      "lat": 41.4016294,
+      "lng": -89.5341179,
+      "wikipedia": {
+        "title": "Bureau Junction, Illinois",
+        "url": "https://en.wikipedia.org/wiki/Bureau_Junction%2C_Illinois",
+        "summary": "Bureau Junction, usually called Bureau, is a village in Bureau County, Illinois, United States. The population was 281 at the 2020 census. The village name is shown as both \"Bureau Junction\" and \"Bureau\" on federal maps, and is commonly called \"Bureau\", including by phone companies and the United St"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Rural Bureau County, Illinois (68817213).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Rural_Bureau_County%2C_Illinois_%2868817213%29.jpg/960px-Rural_Bureau_County%2C_Illinois_%2868817213%29.jpg",
+        "attribution": "Ken Lund from Reno, Nevada, USA",
+        "license": "CC BY-SA 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=41.4016294,-89.5341179",
+        "embedUrl": "https://maps.google.com/maps?q=41.4016294,-89.5341179&z=12&output=embed"
+      },
+      "year": "1982"
+    },
+    {
+      "id": "waynesville-dewitt-county-il-residence",
+      "type": "town",
+      "canonicalPlaceId": "waynesville-dewitt-county-il",
+      "badge": "Residence",
+      "name": "Waynesville, DeWitt County, IL",
+      "relevance": "",
+      "featured": false,
+      "lat": 40.2389277,
+      "lng": -89.1231418,
+      "wikimedia": {
+        "fileTitle": "File:Old Waynesville High School, Waynesville, NC (31774431267).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Old_Waynesville_High_School%2C_Waynesville%2C_NC_%2831774431267%29.jpg/960px-Old_Waynesville_High_School%2C_Waynesville%2C_NC_%2831774431267%29.jpg",
+        "attribution": "Warren LeMay from Cincinnati, OH, United States",
+        "license": "CC0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=40.2389277,-89.1231418",
+        "embedUrl": "https://maps.google.com/maps?q=40.2389277,-89.1231418&z=12&output=embed"
+      },
+      "year": "1910"
+    },
+    {
+      "id": "decatur-illinois-residence",
+      "type": "town",
+      "canonicalPlaceId": "decatur-illinois",
+      "badge": "Residence",
+      "name": "Decatur, Illinois",
+      "relevance": "",
+      "featured": false,
+      "lat": 39.8454163,
+      "lng": -88.9524151,
+      "wikipedia": {
+        "title": "Decatur, Illinois",
+        "url": "https://en.wikipedia.org/wiki/Decatur%2C_Illinois",
+        "summary": "Decatur is the largest city in Macon County, Illinois, United States, and its county seat. The city was founded in 1829 and is situated along the Sangamon River and Lake Decatur in Central Illinois. As of the 2020 census, it had a population of 70,522. It is the 17th-most populous city in Illinois a"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Decatur Illinois banner.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Decatur_Illinois_banner.jpg/960px-Decatur_Illinois_banner.jpg",
+        "attribution": "ZcarstvnzAuthor of original photo: n9qhf",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=39.8454163,-88.9524151",
+        "embedUrl": "https://maps.google.com/maps?q=39.8454163,-88.9524151&z=12&output=embed"
+      },
+      "year": "1920"
+    }
+  ]
+}

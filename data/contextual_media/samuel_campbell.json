@@ -1,0 +1,56 @@
+{
+  "personId": "samuel_campbell",
+  "personName": "Samuel Campbell",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "union-newberry-south-carolina-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "union-newberry-south-carolina",
+      "badge": "Birth Place",
+      "name": "Union, Newberry, South Carolina",
+      "relevance": "",
+      "featured": true,
+      "lat": 34.2685778,
+      "lng": -81.5316744,
+      "wikimedia": {
+        "fileTitle": "File:Newberry - Union Station.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Newberry_-_Union_Station.jpg/960px-Newberry_-_Union_Station.jpg",
+        "attribution": "The Albertype Co.",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=34.2685778,-81.5316744",
+        "embedUrl": "https://maps.google.com/maps?q=34.2685778,-81.5316744&z=12&output=embed"
+      },
+      "year": "1751"
+    },
+    {
+      "id": "verified-death",
+      "type": "town",
+      "canonicalPlaceId": "verified",
+      "badge": "Death",
+      "name": "verified",
+      "relevance": "",
+      "featured": false,
+      "lat": 38.9151175,
+      "lng": -77.0188503,
+      "wikipedia": {
+        "title": "Verified",
+        "url": "https://en.wikipedia.org/wiki/Verified",
+        "summary": "Verified is a United Nations project to improve access to accurate information. In the project the United Nations seeks to organize a network of millions of online volunteers to curate and fact check information online. Verified has held a social media campaigns using hashtags to raise awareness abo"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Verified-account.png",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Verified-account.png",
+        "attribution": "Twitter",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=38.9151175,-77.0188503",
+        "embedUrl": "https://maps.google.com/maps?q=38.9151175,-77.0188503&z=12&output=embed"
+      },
+      "year": "1775"
+    }
+  ]
+}

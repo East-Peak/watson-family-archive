@@ -1,0 +1,61 @@
+{
+  "personId": "hazel_helen_mayer",
+  "personName": "Hazel Helen Mayer",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "colorado-springs-colorado-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "colorado-springs-colorado",
+      "badge": "Birth Place",
+      "name": "Colorado Springs, Colorado",
+      "relevance": "",
+      "featured": true,
+      "lat": 38.8339578,
+      "lng": -104.825348,
+      "wikipedia": {
+        "title": "Colorado Springs, Colorado",
+        "url": "https://en.wikipedia.org/wiki/Colorado_Springs%2C_Colorado",
+        "summary": "Colorado Springs is the home rule city that is the county seat of, and the most populous city in, El Paso County, Colorado, United States. The city had a population of 478,961 at the 2020 census, a 15.02% increase since 2010. Colorado Springs is the second-most populous city and most extensive city "
+      },
+      "wikimedia": {
+        "fileTitle": "File:Colorado Springs Hot Air Balloon Competition.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Colorado_Springs_Hot_Air_Balloon_Competition.jpg/960px-Colorado_Springs_Hot_Air_Balloon_Competition.jpg",
+        "attribution": "DarlArthurS",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=38.8339578,-104.825348",
+        "embedUrl": "https://maps.google.com/maps?q=38.8339578,-104.825348&z=12&output=embed"
+      },
+      "year": "1900"
+    },
+    {
+      "id": "south-pasadena-ca-death",
+      "type": "town",
+      "canonicalPlaceId": "south-pasadena-ca",
+      "badge": "Death",
+      "name": "South Pasadena, CA",
+      "relevance": "",
+      "featured": false,
+      "lat": 34.1133062,
+      "lng": -118.1478291,
+      "wikipedia": {
+        "title": "South Pasadena, California",
+        "url": "https://en.wikipedia.org/wiki/South_Pasadena%2C_California",
+        "summary": "South Pasadena is a city in Los Angeles County, California, United States. As of the 2020 census, it had a population of 26,943, up from 25,619 at the 2010 census."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Southpasadena ca cityhall.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Southpasadena_ca_cityhall.jpg/960px-Southpasadena_ca_cityhall.jpg",
+        "attribution": "The original uploader was Geographer at English Wikipedia.",
+        "license": "CC BY 2.5"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=34.1133062,-118.1478291",
+        "embedUrl": "https://maps.google.com/maps?q=34.1133062,-118.1478291&z=12&output=embed"
+      },
+      "year": "1967"
+    }
+  ]
+}

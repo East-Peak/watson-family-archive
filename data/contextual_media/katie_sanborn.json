@@ -1,0 +1,61 @@
+{
+  "personId": "katie_sanborn",
+  "personName": "Katie Sanborn",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "new-hampshire-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "new-hampshire",
+      "badge": "Birth Place",
+      "name": "New Hampshire",
+      "relevance": "",
+      "featured": true,
+      "lat": 43.4849133,
+      "lng": -71.6553992,
+      "wikipedia": {
+        "title": "New Hampshire",
+        "url": "https://en.wikipedia.org/wiki/New_Hampshire",
+        "summary": "New Hampshire is a state in the New England region of the Northeastern United States. It borders Massachusetts to the south, Vermont to the west, Maine and the Gulf of Maine to the east, and the Canadian province of Quebec to the north. Of the 50 U.S. states, New Hampshire is the seventh-smallest by"
+      },
+      "wikimedia": {
+        "fileTitle": "File:US-Colonial (NH-179)-New Hampshire-29 Apr 1780 OBV.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/US-Colonial_%28NH-179%29-New_Hampshire-29_Apr_1780_OBV.jpg/960px-US-Colonial_%28NH-179%29-New_Hampshire-29_Apr_1780_OBV.jpg",
+        "attribution": "National Museum of American History",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.4849133,-71.6553992",
+        "embedUrl": "https://maps.google.com/maps?q=43.4849133,-71.6553992&z=12&output=embed"
+      },
+      "year": "1867"
+    },
+    {
+      "id": "san-bernardino-california-death",
+      "type": "town",
+      "canonicalPlaceId": "san-bernardino-california",
+      "badge": "Death",
+      "name": "San Bernardino, California",
+      "relevance": "",
+      "featured": false,
+      "lat": 34.8253019,
+      "lng": -116.0833144,
+      "wikipedia": {
+        "title": "San Bernardino, California",
+        "url": "https://en.wikipedia.org/wiki/San_Bernardino%2C_California",
+        "summary": "San Bernardino is a city in and the county seat of San Bernardino County, California, United States. Located in the Inland Empire region of Southern California, the city had a population of 222,101 in the 2020 census, making it the 18th-most populous city in California. The Riverside\u2013San Bernardino "
+      },
+      "wikimedia": {
+        "fileTitle": "File:Downtown San Bernardino.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Downtown_San_Bernardino.jpg",
+        "attribution": "House10902 (talk).",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=34.8253019,-116.0833144",
+        "embedUrl": "https://maps.google.com/maps?q=34.8253019,-116.0833144&z=12&output=embed"
+      },
+      "year": "1945"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "personId": "walter_cadwalader",
+  "personName": "Walter Cadwalader",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "ohio-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "ohio",
+      "badge": "Birth Place",
+      "name": "Ohio",
+      "relevance": "",
+      "featured": true,
+      "lat": 40.2253569,
+      "lng": -82.6881395,
+      "wikipedia": {
+        "title": "Ohio",
+        "url": "https://en.wikipedia.org/wiki/Ohio",
+        "summary": "Ohio is a state in the Midwestern region of the United States. It borders the Canadian province of Ontario to the north, Pennsylvania to the east, West Virginia to the southeast, Kentucky to the southwest, Indiana to the west, and Michigan to the northwest. Of the 50 U.S. states, it is the 34th-larg"
+      },
+      "wikimedia": {
+        "fileTitle": "File:State of Ohio waste characterization study - DPLA - 5ed3375f579555cb4eca42f08202fc02.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/State_of_Ohio_waste_characterization_study_-_DPLA_-_5ed3375f579555cb4eca42f08202fc02.jpg/960px-State_of_Ohio_waste_characterization_study_-_DPLA_-_5ed3375f579555cb4eca42f08202fc02.jpg",
+        "attribution": "Engineering Solutions &amp; Design, Inc",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=40.2253569,-82.6881395",
+        "embedUrl": "https://maps.google.com/maps?q=40.2253569,-82.6881395&z=12&output=embed"
+      },
+      "year": "1877"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "personId": "elmer_moldenhauer",
+  "personName": "Elmer Moldenhauer",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "wisconsin-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "wisconsin",
+      "badge": "Birth Place",
+      "name": "Wisconsin",
+      "relevance": "",
+      "featured": true,
+      "lat": 44.4308975,
+      "lng": -89.6884637,
+      "wikipedia": {
+        "title": "Wisconsin",
+        "url": "https://en.wikipedia.org/wiki/Wisconsin",
+        "summary": "Wisconsin is a state in the Upper Midwest and Great Lakes regions of the United States. It borders Minnesota to the west, Iowa to the southwest, Illinois to the south, Lake Michigan to the east, Michigan to the northeast, and Lake Superior to the north. With a population of about 6 million and an ar"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Beaver Dam, Wisconsin Downtown.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Beaver_Dam%2C_Wisconsin_Downtown.jpg/960px-Beaver_Dam%2C_Wisconsin_Downtown.jpg",
+        "attribution": "Downspec",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=44.4308975,-89.6884637",
+        "embedUrl": "https://maps.google.com/maps?q=44.4308975,-89.6884637&z=12&output=embed"
+      },
+      "year": "1907"
+    },
+    {
+      "id": "iron-ridge-dodge-wisconsin-death",
+      "type": "town",
+      "canonicalPlaceId": "iron-ridge-dodge-wisconsin",
+      "badge": "Death",
+      "name": "Iron Ridge, Dodge, Wisconsin",
+      "relevance": "",
+      "featured": false,
+      "lat": 43.3982704,
+      "lng": -88.5315746,
+      "wikimedia": {
+        "fileTitle": "File:Mueller House, County Trunk AP, Iron Ridge, Dodge County, WI HABS WIS,14-IRON.V,1- (sheet 2 of 4).tif",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Mueller_House%2C_County_Trunk_AP%2C_Iron_Ridge%2C_Dodge_County%2C_WI_HABS_WIS%2C14-IRON.V%2C1-_%28sheet_2_of_4%29.tif/lossy-page1-960px-Mueller_House%2C_County_Trunk_AP%2C_Iron_Ridge%2C_Dodge_County%2C_WI_HABS_WIS%2C14-IRON.V%2C1-_%28sheet_2_of_4%29.tif.jpg",
+        "attribution": "Related names:\n\nErchman  (?), William",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.3982704,-88.5315746",
+        "embedUrl": "https://maps.google.com/maps?q=43.3982704,-88.5315746&z=12&output=embed"
+      },
+      "year": "1983"
+    }
+  ]
+}

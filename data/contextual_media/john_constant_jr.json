@@ -1,0 +1,51 @@
+{
+  "personId": "john_constant_jr",
+  "personName": "John Constant Jr.",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "frederick-virginia-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "frederick-virginia",
+      "badge": "Birth Place",
+      "name": "Frederick, Virginia",
+      "relevance": "",
+      "featured": true,
+      "lat": 39.2127031,
+      "lng": -78.279166,
+      "wikimedia": {
+        "fileTitle": "File:Old Frederick County Courthouse (Virginia) - rear view.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Old_Frederick_County_Courthouse_%28Virginia%29_-_rear_view.jpg/960px-Old_Frederick_County_Courthouse_%28Virginia%29_-_rear_view.jpg",
+        "attribution": "APK",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=39.2127031,-78.279166",
+        "embedUrl": "https://maps.google.com/maps?q=39.2127031,-78.279166&z=12&output=embed"
+      },
+      "year": "1750"
+    },
+    {
+      "id": "bourbon-kentucky-death",
+      "type": "town",
+      "canonicalPlaceId": "bourbon-kentucky",
+      "badge": "Death",
+      "name": "Bourbon, Kentucky",
+      "relevance": "",
+      "featured": false,
+      "lat": 38.1944867,
+      "lng": -84.2046611,
+      "wikimedia": {
+        "fileTitle": "File:Bourbon county, kentucky courthouse.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Bourbon_county%2C_kentucky_courthouse.jpg/960px-Bourbon_county%2C_kentucky_courthouse.jpg",
+        "attribution": "W.marsh",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=38.1944867,-84.2046611",
+        "embedUrl": "https://maps.google.com/maps?q=38.1944867,-84.2046611&z=12&output=embed"
+      },
+      "year": "1788"
+    }
+  ]
+}

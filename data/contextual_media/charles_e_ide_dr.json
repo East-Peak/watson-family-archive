@@ -1,0 +1,105 @@
+{
+  "personId": "charles_e_ide_dr",
+  "personName": "Charles E. Ide",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "hopkinton-middlesex-massachusetts-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "hopkinton-middlesex-massachusetts",
+      "badge": "Birth Place",
+      "name": "Hopkinton, Middlesex, Massachusetts",
+      "relevance": "",
+      "featured": true,
+      "lat": 42.2288875,
+      "lng": -71.5196439,
+      "wikimedia": {
+        "fileTitle": "File:Hopkinton MA Town Hall 1.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Hopkinton_MA_Town_Hall_1.jpg/960px-Hopkinton_MA_Town_Hall_1.jpg",
+        "attribution": "Pvmoutside",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=42.2288875,-71.5196439",
+        "embedUrl": "https://maps.google.com/maps?q=42.2288875,-71.5196439&z=12&output=embed"
+      },
+      "year": "1874"
+    },
+    {
+      "id": "milwaukee-wi-death",
+      "type": "town",
+      "canonicalPlaceId": "milwaukee-wi",
+      "badge": "Death",
+      "name": "Milwaukee, WI",
+      "relevance": "",
+      "featured": false,
+      "lat": 43.0386475,
+      "lng": -87.9090751,
+      "wikipedia": {
+        "title": "Milwaukee",
+        "url": "https://en.wikipedia.org/wiki/Milwaukee",
+        "summary": "Milwaukee is the most populous city in the U.S. state of Wisconsin. It is located on the western shore of Lake Michigan at the confluence of the Milwaukee, Menomonee, and Kinnickinnic Rivers. Milwaukee is the 31st-most populous city in the United States and the fifth-most populous city in the Midwes"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Men loading hardware into new GMC Model T truck Milwaukee WI 1936.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Men_loading_hardware_into_new_GMC_Model_T_truck_Milwaukee_WI_1936.jpg",
+        "attribution": "New York Public Library",
+        "license": "No restrictions"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.0386475,-87.9090751",
+        "embedUrl": "https://maps.google.com/maps?q=43.0386475,-87.9090751&z=12&output=embed"
+      },
+      "year": "1931"
+    },
+    {
+      "id": "redlands-california-marriage",
+      "type": "building",
+      "canonicalPlaceId": "redlands-california",
+      "badge": "Marriage",
+      "name": "Redlands, California",
+      "relevance": "",
+      "featured": false,
+      "lat": 34.0550328,
+      "lng": -117.1827445,
+      "wikipedia": {
+        "title": "Redlands, California",
+        "url": "https://en.wikipedia.org/wiki/Redlands%2C_California",
+        "summary": "Redlands is a city in San Bernardino County, California, United States. As of the 2020 census, the city had a population of 73,168, up from 68,747 at the 2010 census. The city is located approximately 70 miles (110\u00a0km) northwest of Indio and 63 miles (101\u00a0km) east of Los Angeles."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Redlands, California, from Smiley's Heights (NBY 1550).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Redlands%2C_California%2C_from_Smiley%27s_Heights_%28NBY_1550%29.jpg",
+        "attribution": "Unknown authorUnknown author",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=34.0550328,-117.1827445",
+        "embedUrl": "https://maps.google.com/maps?q=34.0550328,-117.1827445&z=12&output=embed"
+      },
+      "year": "1907"
+    },
+    {
+      "id": "forest-home-cemetery-milwaukee-wisconsin-residence",
+      "type": "town",
+      "canonicalPlaceId": "forest-home-cemetery-milwaukee-wisconsin",
+      "badge": "Residence",
+      "name": "Forest Home Cemetery, Milwaukee, Wisconsin",
+      "relevance": "",
+      "featured": false,
+      "lat": 42.9994347,
+      "lng": -87.9431975,
+      "wikimedia": {
+        "fileTitle": "File:Forest Home Cemetery February 2025 08 (Chapel Gardens).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Forest_Home_Cemetery_February_2025_08_%28Chapel_Gardens%29.jpg/960px-Forest_Home_Cemetery_February_2025_08_%28Chapel_Gardens%29.jpg",
+        "attribution": "Michael Barera",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=42.9994347,-87.9431975",
+        "embedUrl": "https://maps.google.com/maps?q=42.9994347,-87.9431975&z=12&output=embed"
+      },
+      "year": "1931"
+    }
+  ]
+}

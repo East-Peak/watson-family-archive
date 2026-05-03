@@ -1,0 +1,88 @@
+{
+  "personId": "bertha_andes",
+  "personName": "Bertha Agnes Andes",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "kentucky-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "kentucky",
+      "badge": "Birth Place",
+      "name": "Kentucky",
+      "relevance": "",
+      "featured": true,
+      "lat": 37.5726028,
+      "lng": -85.1551411,
+      "wikipedia": {
+        "title": "Kentucky",
+        "url": "https://en.wikipedia.org/wiki/Kentucky",
+        "summary": "Kentucky, officially the Commonwealth of Kentucky, is a landlocked state in the Southeastern region of the United States. It borders Illinois, Indiana, and Ohio to the north, West Virginia to the northeast, Virginia to the east, Tennessee to the south, and Missouri to the west. Its northern border i"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Kentucky Scenic Byway signage on Kentucky Route 63 in Temple Hill, Kentucky.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Kentucky_Scenic_Byway_signage_on_Kentucky_Route_63_in_Temple_Hill%2C_Kentucky.jpg",
+        "attribution": "K-Johnson 127",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=37.5726028,-85.1551411",
+        "embedUrl": "https://maps.google.com/maps?q=37.5726028,-85.1551411&z=12&output=embed"
+      },
+      "year": "1892"
+    },
+    {
+      "id": "laurel-county-kentucky-residence",
+      "type": "town",
+      "canonicalPlaceId": "laurel-county-kentucky",
+      "badge": "Residence",
+      "name": "Laurel County, Kentucky",
+      "relevance": "",
+      "featured": false,
+      "lat": 37.1000973,
+      "lng": -84.1148273,
+      "wikipedia": {
+        "title": "Laurel County, Kentucky",
+        "url": "https://en.wikipedia.org/wiki/Laurel_County%2C_Kentucky",
+        "summary": "Laurel County is a county located in the southeastern portion of the U.S. state of Kentucky. As of the 2020 census, the population was 62,613. Its county seat is London. After a special election in January 2016 alcohol sales are permitted only in the city limits of London. The ordinance went into ef"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Laurel County Kentucky Courthouse.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Laurel_County_Kentucky_Courthouse.jpg/960px-Laurel_County_Kentucky_Courthouse.jpg",
+        "attribution": "W.marsh",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=37.1000973,-84.1148273",
+        "embedUrl": "https://maps.google.com/maps?q=37.1000973,-84.1148273&z=12&output=embed"
+      },
+      "year": "1900"
+    },
+    {
+      "id": "illinois-residence",
+      "type": "town",
+      "canonicalPlaceId": "illinois",
+      "badge": "Residence",
+      "name": "Illinois",
+      "relevance": "",
+      "featured": false,
+      "lat": 40.0796606,
+      "lng": -89.4337288,
+      "wikipedia": {
+        "title": "Illinois",
+        "url": "https://en.wikipedia.org/wiki/Illinois",
+        "summary": "Illinois is a state in the Midwestern region of the United States. It borders on Lake Michigan to its northeast, the Mississippi River to its west, and the Wabash and Ohio rivers to its south. Of the fifty U.S. states, Illinois has the fifth-largest gross domestic product (GDP), the sixth-largest po"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Skyline de Chicago desde el centro, Illinois, Estados Unidos, 2012-10-20, DD 06.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Skyline_de_Chicago_desde_el_centro%2C_Illinois%2C_Estados_Unidos%2C_2012-10-20%2C_DD_06.jpg/960px-Skyline_de_Chicago_desde_el_centro%2C_Illinois%2C_Estados_Unidos%2C_2012-10-20%2C_DD_06.jpg",
+        "attribution": "Diego Delso",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=40.0796606,-89.4337288",
+        "embedUrl": "https://maps.google.com/maps?q=40.0796606,-89.4337288&z=12&output=embed"
+      },
+      "year": "1910"
+    }
+  ]
+}

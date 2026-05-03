@@ -1,0 +1,34 @@
+{
+  "personId": "ann_jenkins",
+  "personName": "Ann Jenkins",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "pennsylvania-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "pennsylvania",
+      "badge": "Birth Place",
+      "name": "Pennsylvania",
+      "relevance": "",
+      "featured": true,
+      "lat": 40.9699889,
+      "lng": -77.7278831,
+      "wikipedia": {
+        "title": "Pennsylvania",
+        "url": "https://en.wikipedia.org/wiki/Pennsylvania",
+        "summary": "Pennsylvania, officially the Commonwealth of Pennsylvania, is a state located in the Mid-Atlantic, Northeastern, Appalachian, and Great Lakes regions of the United States. It borders Delaware to its southeast, Maryland to its south, forming the Mason-Dixon Line, West Virginia to its southwest, Ohio "
+      },
+      "wikimedia": {
+        "fileTitle": "File:Pennsylvania Winter Sunset.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Pennsylvania_Winter_Sunset.jpg/960px-Pennsylvania_Winter_Sunset.jpg",
+        "attribution": "Andrew Crouthamel",
+        "license": "CC BY-SA 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=40.9699889,-77.7278831",
+        "embedUrl": "https://maps.google.com/maps?q=40.9699889,-77.7278831&z=12&output=embed"
+      },
+      "year": "1858"
+    }
+  ]
+}

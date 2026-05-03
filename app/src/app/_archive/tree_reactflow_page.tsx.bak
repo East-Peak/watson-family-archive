@@ -1,0 +1,116 @@
+'use client';
+
+import { Suspense, useState, useCallback } from 'react';
+import { useSearchParams, useRouter } from 'next/navigation';
+import { useFocusPerson } from '@/hooks/useFocusPerson';
+import {
+  TreeProvider,
+  TreeToolbar,
+  TreeViewport,
+  TreeLanding,
+} from '@/components/PremiumTree';
+import type { ViewMode } from '@/components/PremiumTree';
+
+function TreePageContent() {
+  const searchParams = useSearchParams();
+  const router = useRouter();
+  const { focusPerson, setFocusPerson, clearFocusPerson, isLoaded } = useFocusPerson();
+
+  // URL params
+  const focusParam = searchParams.get('focus');
+  const viewModeParam = searchParams.get('viewMode') as ViewMode | null;
+
+  // State to force showing landing (when user wants to change focus)
+  const [showLanding, setShowLanding] = useState(false);
+
+  // Determine initial focus: URL > localStorage > none
+  const initialFocus = focusParam || focusPerson?.id || null;
+
+  // Determine initial view mode: URL > default (pedigree)
+  const initialViewMode: ViewMode = viewModeParam || 'pedigree';
+
+  // Handle person selection from landing page
+  const handleSelectPerson = useCallback((personId: string, personName: string) => {
+    // Save to localStorage
+    setFocusPerson({ id: personId, name: personName });
+
+    // Update URL
+    const url = new URL(window.location.href);
+    url.searchParams.set('focus', personId);
+    router.replace(url.pathname + url.search);
+
+    // Hide landing page
+    setShowLanding(false);
+  }, [setFocusPerson, router]);
+
+  // Handle "View full tree" from landing
+  const handleViewFullTree = useCallback(() => {
+    // Don't set a specific focus, just show full tree
+    clearFocusPerson();
+
+    // Navigate to tree with full view mode
+    router.replace('/tree?viewMode=full');
+    setShowLanding(false);
+  }, [clearFocusPerson, router]);
+
+  // Handle user wanting to change focus (from toolbar chip)
+  const handleChangeFocus = useCallback(() => {
+    setShowLanding(true);
+  }, []);
+
+  // Don't render until localStorage is loaded to prevent hydration issues
+  if (!isLoaded) {
+    return (
+      <div className="min-h-screen bg-[#f5f0e6] flex items-center justify-center">
+        <div className="text-gray-500">Loading...</div>
+      </div>
+    );
+  }
+
+  // Show landing page if:
+  // 1. No focus person (URL or localStorage) and not viewing full tree
+  // 2. User explicitly requested to change focus
+  const shouldShowLanding =
+    showLanding || (!initialFocus && viewModeParam !== 'full');
+
+  if (shouldShowLanding) {
+    return (
+      <TreeLanding
+        onSelectPerson={handleSelectPerson}
+        onViewFullTree={handleViewFullTree}
+      />
+    );
+  }
+
+  // For "full" view mode without a focus, use a default person
+  // This allows viewing the entire tree without a specific focus
+  const effectiveFocus = initialFocus || 'p415569206'; // Stuart Watson as fallback
+
+  return (
+    <TreeProvider
+      initialFocusPersonId={effectiveFocus}
+      initialViewMode={initialViewMode}
+    >
+      <TreeToolbar
+        showViewMode={true}
+        showViewingAs={true}
+        onChangeFocus={handleChangeFocus}
+      />
+      <TreeViewport treeId="watson-family-tree" />
+    </TreeProvider>
+  );
+}
+
+export default function TreePage() {
+  return (
+    <Suspense
+      fallback={
+        <div className="min-h-screen bg-[#f5f0e6] flex items-center justify-center">
+          <div className="text-gray-500">Loading family tree...</div>
+        </div>
+      }
+    >
+      <TreePageContent />
+    </Suspense>
+  );
+}

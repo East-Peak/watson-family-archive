@@ -1,0 +1,73 @@
+{
+  "personId": "iva_elizabeth_cortright",
+  "personName": "Iva Elizabeth Cortright",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "new-york-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "new-york",
+      "badge": "Birth Place",
+      "name": "New York",
+      "relevance": "",
+      "featured": true,
+      "lat": 40.7127281,
+      "lng": -74.0060152,
+      "wikimedia": {
+        "fileTitle": "File:Long Island City New York May 2015 panorama 3.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Long_Island_City_New_York_May_2015_panorama_3.jpg/960px-Long_Island_City_New_York_May_2015_panorama_3.jpg",
+        "attribution": "King of Hearts",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=40.7127281,-74.0060152",
+        "embedUrl": "https://maps.google.com/maps?q=40.7127281,-74.0060152&z=12&output=embed"
+      },
+      "year": "1893"
+    },
+    {
+      "id": "orange-florida-death",
+      "type": "town",
+      "canonicalPlaceId": "orange-florida",
+      "badge": "Death",
+      "name": "Orange, Florida",
+      "relevance": "",
+      "featured": false,
+      "lat": 28.495156,
+      "lng": -81.3111658,
+      "wikimedia": {
+        "fileTitle": "File:Orange Groves in Orlando, Florida.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Orange_Groves_in_Orlando%2C_Florida.jpg",
+        "attribution": "E. C. Kropp Co.,",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=28.495156,-81.3111658",
+        "embedUrl": "https://maps.google.com/maps?q=28.495156,-81.3111658&z=12&output=embed"
+      },
+      "year": "1981"
+    },
+    {
+      "id": "glen-haven-memorial-park-cemetery-winter-park-orange-florida-residence",
+      "type": "town",
+      "canonicalPlaceId": "glen-haven-memorial-park-cemetery-winter-park-orange-florida",
+      "badge": "Residence",
+      "name": "Glen Haven Memorial Park Cemetery, Winter Park, Orange, Florida",
+      "relevance": "",
+      "featured": false,
+      "lat": 28.6198425,
+      "lng": -81.3303957,
+      "wikimedia": {
+        "fileTitle": "File:Weekly List 1985-09-20.pdf",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Weekly_List_1985-09-20.pdf/page1-960px-Weekly_List_1985-09-20.pdf.jpg",
+        "attribution": "National Park Service",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=28.6198425,-81.3303957",
+        "embedUrl": "https://maps.google.com/maps?q=28.6198425,-81.3303957&z=12&output=embed"
+      },
+      "year": "1981"
+    }
+  ]
+}

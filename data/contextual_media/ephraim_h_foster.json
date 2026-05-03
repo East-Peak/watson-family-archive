@@ -1,0 +1,61 @@
+{
+  "personId": "ephraim_h_foster",
+  "personName": "Ephraim H Foster",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "cayuga-new-york-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "cayuga-new-york",
+      "badge": "Birth Place",
+      "name": "Cayuga, New York",
+      "relevance": "",
+      "featured": true,
+      "lat": 42.8093409,
+      "lng": -76.5700777,
+      "wikipedia": {
+        "title": "Cayuga, New York",
+        "url": "https://en.wikipedia.org/wiki/Cayuga%2C_New_York",
+        "summary": "Cayuga is a village in Cayuga County, New York, United States. As of the 2020 census, Cayuga had a population of 472. The village derives its name from the indigenous Cayuga people and the lake named after them."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Cayuga County, New York - 4368885389.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Cayuga_County%2C_New_York_-_4368885389.jpg",
+        "attribution": "Dougtone",
+        "license": "CC BY-SA 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=42.8093409,-76.5700777",
+        "embedUrl": "https://maps.google.com/maps?q=42.8093409,-76.5700777&z=12&output=embed"
+      },
+      "year": "1833"
+    },
+    {
+      "id": "red-creek-new-york-residence",
+      "type": "town",
+      "canonicalPlaceId": "red-creek-new-york",
+      "badge": "Residence",
+      "name": "Red Creek, New York",
+      "relevance": "",
+      "featured": false,
+      "lat": 43.247289,
+      "lng": -76.723564,
+      "wikipedia": {
+        "title": "Red Creek, New York",
+        "url": "https://en.wikipedia.org/wiki/Red_Creek%2C_New_York",
+        "summary": "Red Creek is a village in Wayne County, New York, United States. The population was 495 at the 2020 census."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Stoddard Creek near Bridal Falls, Allegany State Park, New York - 20220519.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Stoddard_Creek_near_Bridal_Falls%2C_Allegany_State_Park%2C_New_York_-_20220519.jpg/960px-Stoddard_Creek_near_Bridal_Falls%2C_Allegany_State_Park%2C_New_York_-_20220519.jpg",
+        "attribution": "Andre Carrotflower",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.247289,-76.723564",
+        "embedUrl": "https://maps.google.com/maps?q=43.247289,-76.723564&z=12&output=embed"
+      },
+      "year": "1877"
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "personId": "guy_marion_martin_jr",
+  "personName": "Guy Marion Martin Jr.",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "california-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "california",
+      "badge": "Birth Place",
+      "name": "California",
+      "relevance": "",
+      "featured": true,
+      "lat": 36.7014631,
+      "lng": -118.755997,
+      "wikipedia": {
+        "title": "California",
+        "url": "https://en.wikipedia.org/wiki/California",
+        "summary": "California is a state in the Western United States that lies on the Pacific Coast. It borders Oregon to the north, Nevada and Arizona to the east, and shares an international border with the Mexican state of Baja California to the south. With almost 40\u00a0million residents across an area of 163,696 squ"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Los Angeles (California, USA), South Olive Street -- 2012 -- 4847.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Los_Angeles_%28California%2C_USA%29%2C_South_Olive_Street_--_2012_--_4847.jpg/960px-Los_Angeles_%28California%2C_USA%29%2C_South_Olive_Street_--_2012_--_4847.jpg",
+        "attribution": "Dietmar Rabich",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=36.7014631,-118.755997",
+        "embedUrl": "https://maps.google.com/maps?q=36.7014631,-118.755997&z=12&output=embed"
+      },
+      "year": "1916"
+    },
+    {
+      "id": "santa-barbara-santa-barbara-county-california-death",
+      "type": "town",
+      "canonicalPlaceId": "santa-barbara-santa-barbara-county-california",
+      "badge": "Death",
+      "name": "Santa Barbara, Santa Barbara County, California",
+      "relevance": "",
+      "featured": false,
+      "lat": 34.4221319,
+      "lng": -119.702667,
+      "wikimedia": {
+        "fileTitle": "File:Postcard of Santa Barbara, California.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Postcard_of_Santa_Barbara%2C_California.jpg/960px-Postcard_of_Santa_Barbara%2C_California.jpg",
+        "attribution": "Michael Rieder",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=34.4221319,-119.702667",
+        "embedUrl": "https://maps.google.com/maps?q=34.4221319,-119.702667&z=12&output=embed"
+      },
+      "year": "2000"
+    },
+    {
+      "id": "altadena-los-angeles-county-california-united-states-of-america-residence",
+      "type": "town",
+      "canonicalPlaceId": "altadena-los-angeles-county-california-united-states-of-america",
+      "badge": "Residence",
+      "name": "Altadena, Los Angeles County, California, United States of America",
+      "relevance": "",
+      "featured": false,
+      "lat": 34.1928193,
+      "lng": -118.1374663,
+      "wikimedia": {
+        "fileTitle": "File:The city and county of Los Angeles in southern California (IA citycountyoflosa11broo).pdf",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/The_city_and_county_of_Los_Angeles_in_southern_California_%28IA_citycountyoflosa11broo%29.pdf/page1-710px-The_city_and_county_of_Los_Angeles_in_southern_California_%28IA_citycountyoflosa11broo%29.pdf.jpg",
+        "attribution": "Brook, Harry Ellington",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=34.1928193,-118.1374663",
+        "embedUrl": "https://maps.google.com/maps?q=34.1928193,-118.1374663&z=12&output=embed"
+      },
+      "year": "2000"
+    }
+  ]
+}

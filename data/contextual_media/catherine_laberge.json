@@ -1,0 +1,29 @@
+{
+  "personId": "catherine_laberge",
+  "personName": "Catherine Laberge",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "ile-perrot-quebec-marriage",
+      "type": "building",
+      "canonicalPlaceId": "ile-perrot-quebec",
+      "badge": "Marriage",
+      "name": "Ile Perrot, Quebec",
+      "relevance": "",
+      "featured": true,
+      "lat": 45.3961336,
+      "lng": -73.9651703,
+      "wikimedia": {
+        "fileTitle": "File:Moulin \u00e0 vent d'Arvor-Vack (Ile Perrot).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Moulin_%C3%A0_vent_d%27Arvor-Vack_%28Ile_Perrot%29.jpg/960px-Moulin_%C3%A0_vent_d%27Arvor-Vack_%28Ile_Perrot%29.jpg",
+        "attribution": "Ren\u00e9 Beaudoin",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=45.3961336,-73.9651703",
+        "embedUrl": "https://maps.google.com/maps?q=45.3961336,-73.9651703&z=12&output=embed"
+      },
+      "year": "1820"
+    }
+  ]
+}

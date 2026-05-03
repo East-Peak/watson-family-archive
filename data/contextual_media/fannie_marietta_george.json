@@ -1,0 +1,78 @@
+{
+  "personId": "fannie_marietta_george",
+  "personName": "Fannie Marietta George",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "colosse-mexico-oswego-new-york-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "colosse-mexico-oswego-new-york",
+      "badge": "Birth Place",
+      "name": "Colosse, Mexico, Oswego, New York",
+      "relevance": "",
+      "featured": true,
+      "lat": 43.4203473,
+      "lng": -76.1588146,
+      "wikimedia": {
+        "fileTitle": "File:1940 Census Enumeration District Descriptions - New York - Oswego County - ED 38-29, ED 38-30, ED 38-31, ED 38-32, ED 38-33 - NARA - 5854479.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/1940_Census_Enumeration_District_Descriptions_-_New_York_-_Oswego_County_-_ED_38-29%2C_ED_38-30%2C_ED_38-31%2C_ED_38-32%2C_ED_38-33_-_NARA_-_5854479.jpg/960px-1940_Census_Enumeration_District_Descriptions_-_New_York_-_Oswego_County_-_ED_38-29%2C_ED_38-30%2C_ED_38-31%2C_ED_38-32%2C_ED_38-33_-_NARA_-_5854479.jpg",
+        "attribution": "Unknown authorUnknown author or not provided",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.4203473,-76.1588146",
+        "embedUrl": "https://maps.google.com/maps?q=43.4203473,-76.1588146&z=12&output=embed"
+      },
+      "year": "1892"
+    },
+    {
+      "id": "red-creek-new-york-death",
+      "type": "town",
+      "canonicalPlaceId": "red-creek-new-york",
+      "badge": "Death",
+      "name": "Red Creek, New York",
+      "relevance": "",
+      "featured": false,
+      "lat": 43.247289,
+      "lng": -76.723564,
+      "wikipedia": {
+        "title": "Red Creek, New York",
+        "url": "https://en.wikipedia.org/wiki/Red_Creek%2C_New_York",
+        "summary": "Red Creek is a village in Wayne County, New York, United States. The population was 495 at the 2020 census."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Stoddard Creek near Bridal Falls, Allegany State Park, New York - 20220519.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Stoddard_Creek_near_Bridal_Falls%2C_Allegany_State_Park%2C_New_York_-_20220519.jpg/960px-Stoddard_Creek_near_Bridal_Falls%2C_Allegany_State_Park%2C_New_York_-_20220519.jpg",
+        "attribution": "Andre Carrotflower",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.247289,-76.723564",
+        "embedUrl": "https://maps.google.com/maps?q=43.247289,-76.723564&z=12&output=embed"
+      },
+      "year": "1960"
+    },
+    {
+      "id": "southside-cemetery-red-creek-wayne-new-york-residence",
+      "type": "town",
+      "canonicalPlaceId": "southside-cemetery-red-creek-wayne-new-york",
+      "badge": "Residence",
+      "name": "Southside Cemetery, Red Creek, Wayne, New York",
+      "relevance": "",
+      "featured": false,
+      "lat": 43.1500557,
+      "lng": -77.0377603,
+      "wikimedia": {
+        "fileTitle": "File:Hill Directory Co.'s (Incorporated) New Bern, N.C., City Directory (1920-1921) - DPLA - f4ed471a814d4ea1fced2a095458670d.pdf",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Hill_Directory_Co.%27s_%28Incorporated%29_New_Bern%2C_N.C.%2C_City_Directory_%281920-1921%29_-_DPLA_-_f4ed471a814d4ea1fced2a095458670d.pdf/page1-841px-Hill_Directory_Co.%27s_%28Incorporated%29_New_Bern%2C_N.C.%2C_City_Directory_%281920-1921%29_-_DPLA_-_f4ed471a814d4ea1fced2a095458670d.pdf.jpg",
+        "attribution": "Hill Directory Company",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.1500557,-77.0377603",
+        "embedUrl": "https://maps.google.com/maps?q=43.1500557,-77.0377603&z=12&output=embed"
+      },
+      "year": "1960"
+    }
+  ]
+}

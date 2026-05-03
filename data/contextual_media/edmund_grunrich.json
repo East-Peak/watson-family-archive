@@ -1,0 +1,56 @@
+{
+  "personId": "edmund_grunrich",
+  "personName": "Edmund Grunrich (Edmund Gnewuch)",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "wisconsin-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "wisconsin",
+      "badge": "Birth Place",
+      "name": "Wisconsin",
+      "relevance": "",
+      "featured": true,
+      "lat": 44.4308975,
+      "lng": -89.6884637,
+      "wikipedia": {
+        "title": "Wisconsin",
+        "url": "https://en.wikipedia.org/wiki/Wisconsin",
+        "summary": "Wisconsin is a state in the Upper Midwest and Great Lakes regions of the United States. It borders Minnesota to the west, Iowa to the southwest, Illinois to the south, Lake Michigan to the east, Michigan to the northeast, and Lake Superior to the north. With a population of about 6 million and an ar"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Beaver Dam, Wisconsin Downtown.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Beaver_Dam%2C_Wisconsin_Downtown.jpg/960px-Beaver_Dam%2C_Wisconsin_Downtown.jpg",
+        "attribution": "Downspec",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=44.4308975,-89.6884637",
+        "embedUrl": "https://maps.google.com/maps?q=44.4308975,-89.6884637&z=12&output=embed"
+      },
+      "year": "1894"
+    },
+    {
+      "id": "dodge-trempealeau-wisconsin-residence",
+      "type": "town",
+      "canonicalPlaceId": "dodge-trempealeau-wisconsin",
+      "badge": "Residence",
+      "name": "Dodge, Trempealeau, Wisconsin",
+      "relevance": "",
+      "featured": false,
+      "lat": 44.1171841,
+      "lng": -91.5064662,
+      "wikimedia": {
+        "fileTitle": "File:Pine Creek, Trempealeau, Wisconsin.png",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Pine_Creek%2C_Trempealeau%2C_Wisconsin.png/960px-Pine_Creek%2C_Trempealeau%2C_Wisconsin.png",
+        "attribution": "Lreski166",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=44.1171841,-91.5064662",
+        "embedUrl": "https://maps.google.com/maps?q=44.1171841,-91.5064662&z=12&output=embed"
+      },
+      "year": "1920"
+    }
+  ]
+}

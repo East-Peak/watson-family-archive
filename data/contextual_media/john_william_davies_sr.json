@@ -1,0 +1,105 @@
+{
+  "personId": "john_william_davies_sr",
+  "personName": "John William Davies Sr.",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "montgomeryshire-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "montgomeryshire",
+      "badge": "Birth Place",
+      "name": "Montgomeryshire",
+      "relevance": "",
+      "featured": true,
+      "lat": 52.6152731,
+      "lng": -3.4649973,
+      "wikipedia": {
+        "title": "Montgomeryshire",
+        "url": "https://en.wikipedia.org/wiki/Montgomeryshire",
+        "summary": "Montgomeryshire was one of the thirteen counties of Wales that existed from 1536 until their abolition in 1974, later becoming a district of Powys from 1974 to 1996. It was named after its county town, Montgomery, which in turn was named after one of William the Conqueror's main counsellors, Roger d"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Cyfronydd, Montgomeryshire. The Seat of Pryce Jones Esqr.jpeg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Cyfronydd%2C_Montgomeryshire._The_Seat_of_Pryce_Jones_Esqr.jpeg",
+        "attribution": "Greenwood, C. J., 19th. cent, lithographer\n\nShaw, I., artist.",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=52.6152731,-3.4649973",
+        "embedUrl": "https://maps.google.com/maps?q=52.6152731,-3.4649973&z=12&output=embed"
+      },
+      "year": "1822"
+    },
+    {
+      "id": "colton-san-bernardino-california-death",
+      "type": "town",
+      "canonicalPlaceId": "colton-san-bernardino-california",
+      "badge": "Death",
+      "name": "Colton, San Bernardino, California",
+      "relevance": "",
+      "featured": false,
+      "lat": 34.0739016,
+      "lng": -117.3136547,
+      "wikimedia": {
+        "fileTitle": "File:Colton California Aerial (50637134478).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Colton_California_Aerial_%2850637134478%29.jpg/960px-Colton_California_Aerial_%2850637134478%29.jpg",
+        "attribution": "formulanone",
+        "license": "CC BY-SA 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=34.0739016,-117.3136547",
+        "embedUrl": "https://maps.google.com/maps?q=34.0739016,-117.3136547&z=12&output=embed"
+      },
+      "year": "1887"
+    },
+    {
+      "id": "utica-oneida-new-york-marriage",
+      "type": "building",
+      "canonicalPlaceId": "utica-oneida-new-york",
+      "badge": "Marriage",
+      "name": "Utica, Oneida, New York",
+      "relevance": "",
+      "featured": false,
+      "lat": 43.1009031,
+      "lng": -75.2326641,
+      "wikimedia": {
+        "fileTitle": "File:Oneida County Court House, Utica, New York.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Oneida_County_Court_House%2C_Utica%2C_New_York.jpg/960px-Oneida_County_Court_House%2C_Utica%2C_New_York.jpg",
+        "attribution": "Boston Public Library",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.1009031,-75.2326641",
+        "embedUrl": "https://maps.google.com/maps?q=43.1009031,-75.2326641&z=12&output=embed"
+      },
+      "year": "1852"
+    },
+    {
+      "id": "san-bernardino-california-residence",
+      "type": "town",
+      "canonicalPlaceId": "san-bernardino-california",
+      "badge": "Residence",
+      "name": "San Bernardino, California",
+      "relevance": "",
+      "featured": false,
+      "lat": 34.8253019,
+      "lng": -116.0833144,
+      "wikipedia": {
+        "title": "San Bernardino, California",
+        "url": "https://en.wikipedia.org/wiki/San_Bernardino%2C_California",
+        "summary": "San Bernardino is a city in and the county seat of San Bernardino County, California, United States. Located in the Inland Empire region of Southern California, the city had a population of 222,101 in the 2020 census, making it the 18th-most populous city in California. The Riverside\u2013San Bernardino "
+      },
+      "wikimedia": {
+        "fileTitle": "File:Downtown San Bernardino.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Downtown_San_Bernardino.jpg",
+        "attribution": "House10902 (talk).",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=34.8253019,-116.0833144",
+        "embedUrl": "https://maps.google.com/maps?q=34.8253019,-116.0833144&z=12&output=embed"
+      },
+      "year": "1887"
+    }
+  ]
+}

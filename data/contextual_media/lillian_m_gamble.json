@@ -1,0 +1,61 @@
+{
+  "personId": "lillian_m_gamble",
+  "personName": "Lillian M Gamble",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "yankton-county-south-dakota-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "yankton-county-south-dakota",
+      "badge": "Birth Place",
+      "name": "Yankton County, South Dakota",
+      "relevance": "",
+      "featured": true,
+      "lat": 43.0115255,
+      "lng": -97.3967561,
+      "wikipedia": {
+        "title": "Yankton County, South Dakota",
+        "url": "https://en.wikipedia.org/wiki/Yankton_County%2C_South_Dakota",
+        "summary": "Yankton County is a county in the U.S. state of South Dakota. As of the 2020 census, the population was 23,310, making it the 9th most populous county in South Dakota. Its county seat is Yankton. Yankton County comprises the Yankton, SD Micropolitan Statistical Area."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Index to Aerial Photography of Yankton County, South Dakota 4 - DPLA - 3b55c21b1200203820f186d7e40bccc5.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Index_to_Aerial_Photography_of_Yankton_County%2C_South_Dakota_4_-_DPLA_-_3b55c21b1200203820f186d7e40bccc5.jpg/960px-Index_to_Aerial_Photography_of_Yankton_County%2C_South_Dakota_4_-_DPLA_-_3b55c21b1200203820f186d7e40bccc5.jpg",
+        "attribution": "Department of Agriculture. Commodity Stabilization Service. Aerial Photography Field Office. ca. 1953-1961",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.0115255,-97.3967561",
+        "embedUrl": "https://maps.google.com/maps?q=43.0115255,-97.3967561&z=12&output=embed"
+      },
+      "year": "1878"
+    },
+    {
+      "id": "los-angeles-ca-death",
+      "type": "town",
+      "canonicalPlaceId": "los-angeles-ca",
+      "badge": "Death",
+      "name": "Los Angeles, CA",
+      "relevance": "",
+      "featured": false,
+      "lat": 34.0536909,
+      "lng": -118.242766,
+      "wikipedia": {
+        "title": "Los Angeles",
+        "url": "https://en.wikipedia.org/wiki/Los_Angeles",
+        "summary": "Los Angeles is the most populous city in the U.S. state of California, and the commercial, financial, and cultural center of Southern California. With an estimated 3.88 million residents within the city limits as of 2024, it is the second-most populous city in the United States, behind New York City"
+      },
+      "wikimedia": {
+        "fileTitle": "File:USS Los Angeles (CA-135) in the Far East, 13 October 1952 (NH 97386).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/USS_Los_Angeles_%28CA-135%29_in_the_Far_East%2C_13_October_1952_%28NH_97386%29.jpg/960px-USS_Los_Angeles_%28CA-135%29_in_the_Far_East%2C_13_October_1952_%28NH_97386%29.jpg",
+        "attribution": "Unknown authorUnknown author",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=34.0536909,-118.242766",
+        "embedUrl": "https://maps.google.com/maps?q=34.0536909,-118.242766&z=12&output=embed"
+      },
+      "year": "1948"
+    }
+  ]
+}

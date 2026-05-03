@@ -1,0 +1,56 @@
+{
+  "personId": "antone_eble",
+  "personName": "Antone Eble",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "baden-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "baden",
+      "badge": "Birth Place",
+      "name": "Baden",
+      "relevance": "",
+      "featured": true,
+      "lat": 48.0076713,
+      "lng": 16.2343693,
+      "wikipedia": {
+        "title": "Baden",
+        "url": "https://en.wikipedia.org/wiki/Baden",
+        "summary": "Baden is a historical territory in southern Germany. In earlier times it was considered to be on both sides of the Upper Rhine, but since the Napoleonic Wars, it has been considered only East of the Rhine."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Baden-Baden 10-2015 img24 Stiftskirche.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Baden-Baden_10-2015_img24_Stiftskirche.jpg/960px-Baden-Baden_10-2015_img24_Stiftskirche.jpg",
+        "attribution": "A.Savin",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=48.0076713,16.2343693",
+        "embedUrl": "https://maps.google.com/maps?q=48.0076713,16.2343693&z=12&output=embed"
+      },
+      "year": "1833"
+    },
+    {
+      "id": "egg-harbor-city-atlantic-new-jersey-death",
+      "type": "town",
+      "canonicalPlaceId": "egg-harbor-city-atlantic-new-jersey",
+      "badge": "Death",
+      "name": "Egg Harbor City, Atlantic, New Jersey",
+      "relevance": "",
+      "featured": false,
+      "lat": 39.5287282,
+      "lng": -74.6479364,
+      "wikimedia": {
+        "fileTitle": "File:Egg Harbor Comm Bank NJ.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Egg_Harbor_Comm_Bank_NJ.jpg/960px-Egg_Harbor_Comm_Bank_NJ.jpg",
+        "attribution": "Smallbones",
+        "license": "CC0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=39.5287282,-74.6479364",
+        "embedUrl": "https://maps.google.com/maps?q=39.5287282,-74.6479364&z=12&output=embed"
+      },
+      "year": "1897"
+    }
+  ]
+}

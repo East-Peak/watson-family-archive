@@ -1,0 +1,88 @@
+{
+  "personId": "ralph_campbell_slater",
+  "personName": "Ralph Campbell Slater",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "ohio-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "ohio",
+      "badge": "Birth Place",
+      "name": "Ohio",
+      "relevance": "",
+      "featured": true,
+      "lat": 40.2253569,
+      "lng": -82.6881395,
+      "wikipedia": {
+        "title": "Ohio",
+        "url": "https://en.wikipedia.org/wiki/Ohio",
+        "summary": "Ohio is a state in the Midwestern region of the United States. It borders the Canadian province of Ontario to the north, Pennsylvania to the east, West Virginia to the southeast, Kentucky to the southwest, Indiana to the west, and Michigan to the northwest. Of the 50 U.S. states, it is the 34th-larg"
+      },
+      "wikimedia": {
+        "fileTitle": "File:State of Ohio waste characterization study - DPLA - 5ed3375f579555cb4eca42f08202fc02.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/State_of_Ohio_waste_characterization_study_-_DPLA_-_5ed3375f579555cb4eca42f08202fc02.jpg/960px-State_of_Ohio_waste_characterization_study_-_DPLA_-_5ed3375f579555cb4eca42f08202fc02.jpg",
+        "attribution": "Engineering Solutions &amp; Design, Inc",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=40.2253569,-82.6881395",
+        "embedUrl": "https://maps.google.com/maps?q=40.2253569,-82.6881395&z=12&output=embed"
+      },
+      "year": "1823"
+    },
+    {
+      "id": "delaware-township-hamilton-county-indiana-death",
+      "type": "town",
+      "canonicalPlaceId": "delaware-township-hamilton-county-indiana",
+      "badge": "Death",
+      "name": "Delaware Township, Hamilton County, Indiana",
+      "relevance": "",
+      "featured": false,
+      "lat": 39.9803818,
+      "lng": -86.0093522,
+      "wikipedia": {
+        "title": "Delaware Township, Hamilton County, Indiana",
+        "url": "https://en.wikipedia.org/wiki/Delaware_Township%2C_Hamilton_County%2C_Indiana",
+        "summary": "Delaware Township is one of nine townships in Hamilton County, Indiana, United States. As of the 2020 census, its population was 34,723."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Hamilton Township Schoolhouse No. 4.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Hamilton_Township_Schoolhouse_No._4.jpg/960px-Hamilton_Township_Schoolhouse_No._4.jpg",
+        "attribution": "Nyttend",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=39.9803818,-86.0093522",
+        "embedUrl": "https://maps.google.com/maps?q=39.9803818,-86.0093522&z=12&output=embed"
+      },
+      "year": "1908"
+    },
+    {
+      "id": "hamilton-indiana-residence",
+      "type": "town",
+      "canonicalPlaceId": "hamilton-indiana",
+      "badge": "Residence",
+      "name": "Hamilton, Indiana",
+      "relevance": "",
+      "featured": false,
+      "lat": 40.0749813,
+      "lng": -86.0498885,
+      "wikipedia": {
+        "title": "Hamilton, Indiana",
+        "url": "https://en.wikipedia.org/wiki/Hamilton%2C_Indiana",
+        "summary": "Hamilton is a town located on the border of Steuben County, Indiana and DeKalb County, Indiana. In Steuben County, it is in Otsego Township, and in DeKalb County it is in Franklin Township. The population was 1,529 at the 2020 census."
+      },
+      "wikimedia": {
+        "fileTitle": "File:History of Hamilton County, Indiana - DPLA - 7edea355885fc080b02e7b257afa09ad (page 232).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/History_of_Hamilton_County%2C_Indiana_-_DPLA_-_7edea355885fc080b02e7b257afa09ad_%28page_232%29.jpg/960px-History_of_Hamilton_County%2C_Indiana_-_DPLA_-_7edea355885fc080b02e7b257afa09ad_%28page_232%29.jpg",
+        "attribution": "Haines, John F., 1856-1938",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=40.0749813,-86.0498885",
+        "embedUrl": "https://maps.google.com/maps?q=40.0749813,-86.0498885&z=12&output=embed"
+      },
+      "year": "1908"
+    }
+  ]
+}

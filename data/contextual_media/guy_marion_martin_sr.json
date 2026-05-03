@@ -1,0 +1,60 @@
+{
+  "personId": "guy_marion_martin_sr",
+  "personName": "Guy Marion Martin Sr.",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "douglas-converse-county-wyoming-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "douglas-converse-county-wyoming",
+      "badge": "Birth Place",
+      "name": "Douglas, Converse County, Wyoming",
+      "relevance": "",
+      "featured": true,
+      "lat": 42.7595708,
+      "lng": -105.382624,
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=42.7595708,-105.382624",
+        "embedUrl": "https://maps.google.com/maps?q=42.7595708,-105.382624&z=12&output=embed"
+      },
+      "year": "1887"
+    },
+    {
+      "id": "los-angeles-ca-death",
+      "type": "town",
+      "canonicalPlaceId": "los-angeles-ca",
+      "badge": "Death",
+      "name": "Los Angeles, CA",
+      "relevance": "",
+      "featured": false,
+      "lat": 34.0536909,
+      "lng": -118.242766,
+      "wikipedia": {
+        "title": "Los Angeles",
+        "url": "https://en.wikipedia.org/wiki/Los_Angeles",
+        "summary": "Los Angeles is the most populous city in the U.S. state of California, and the commercial, financial, and cultural center of Southern California. With an estimated 3.88 million residents within the city limits as of 2024, it is the second-most populous city in the United States, behind New York City"
+      },
+      "wikimedia": {
+        "fileTitle": "File:USS Los Angeles (CA-135) in the Far East, 13 October 1952 (NH 97386).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/USS_Los_Angeles_%28CA-135%29_in_the_Far_East%2C_13_October_1952_%28NH_97386%29.jpg/960px-USS_Los_Angeles_%28CA-135%29_in_the_Far_East%2C_13_October_1952_%28NH_97386%29.jpg",
+        "attribution": "Unknown authorUnknown author",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=34.0536909,-118.242766",
+        "embedUrl": "https://maps.google.com/maps?q=34.0536909,-118.242766&z=12&output=embed"
+      },
+      "year": "1962"
+    },
+    {
+      "id": "find-a-grave-187483137-residence",
+      "type": "town",
+      "canonicalPlaceId": "find-a-grave-187483137",
+      "badge": "Residence",
+      "name": "Find A Grave #187483137",
+      "relevance": "",
+      "featured": false,
+      "year": "1962"
+    }
+  ]
+}

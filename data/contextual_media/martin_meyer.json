@@ -1,0 +1,17 @@
+{
+  "personId": "martin_meyer",
+  "personName": "Martin Meyer",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "brod-k-nigreich-b-hmen-heiliges-r-misches-reich-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "brod-k-nigreich-b-hmen-heiliges-r-misches-reich",
+      "badge": "Birth Place",
+      "name": "Brod, K\u00f6nigreich B\u00f6hmen, Heiliges R\u00f6misches Reich",
+      "relevance": "",
+      "featured": true,
+      "year": "1799"
+    }
+  ]
+}

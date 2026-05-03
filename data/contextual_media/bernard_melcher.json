@@ -1,0 +1,51 @@
+{
+  "personId": "bernard_melcher",
+  "personName": "Bernard Otto Melcher",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "brown-south-dakota-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "brown-south-dakota",
+      "badge": "Birth Place",
+      "name": "Brown, South Dakota",
+      "relevance": "",
+      "featured": true,
+      "lat": 45.5832968,
+      "lng": -98.3674786,
+      "wikimedia": {
+        "fileTitle": "File:Brown County Courthouse (South Dakota).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Brown_County_Courthouse_%28South_Dakota%29.jpg/960px-Brown_County_Courthouse_%28South_Dakota%29.jpg",
+        "attribution": "WeaponizingArchitecture",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=45.5832968,-98.3674786",
+        "embedUrl": "https://maps.google.com/maps?q=45.5832968,-98.3674786&z=12&output=embed"
+      },
+      "year": "1893"
+    },
+    {
+      "id": "aberdeen-brown-south-dakota-death",
+      "type": "town",
+      "canonicalPlaceId": "aberdeen-brown-south-dakota",
+      "badge": "Death",
+      "name": "Aberdeen, Brown, South Dakota",
+      "relevance": "",
+      "featured": false,
+      "lat": 45.4649805,
+      "lng": -98.487813,
+      "wikimedia": {
+        "fileTitle": "File:Aberdeen, South Dakota 1910.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Aberdeen%2C_South_Dakota_1910.jpg/960px-Aberdeen%2C_South_Dakota_1910.jpg",
+        "attribution": "N. A. Brothers",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=45.4649805,-98.487813",
+        "embedUrl": "https://maps.google.com/maps?q=45.4649805,-98.487813&z=12&output=embed"
+      },
+      "year": "1958"
+    }
+  ]
+}

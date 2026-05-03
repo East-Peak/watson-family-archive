@@ -1,0 +1,34 @@
+{
+  "personId": "regnia_gendron",
+  "personName": "Regnia Gendron",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "canada-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "canada",
+      "badge": "Birth Place",
+      "name": "Canada",
+      "relevance": "",
+      "featured": true,
+      "lat": 61.0666922,
+      "lng": -107.991707,
+      "wikipedia": {
+        "title": "Canada",
+        "url": "https://en.wikipedia.org/wiki/Canada",
+        "summary": "Canada is a country in North America. Its ten provinces and three territories extend from the Atlantic Ocean to the Pacific Ocean and northward into the Arctic Ocean, making it the second-largest country by total area, with the longest coastline of any country. Its border with the United States is t"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Canada BMNG.png",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Canada_BMNG.png/960px-Canada_BMNG.png",
+        "attribution": null,
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=61.0666922,-107.991707",
+        "embedUrl": "https://maps.google.com/maps?q=61.0666922,-107.991707&z=12&output=embed"
+      },
+      "year": "1874"
+    }
+  ]
+}

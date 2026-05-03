@@ -1,0 +1,51 @@
+{
+  "personId": "ruth_ann_foster",
+  "personName": "Ruth Ann Foster",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "auburn-cayuga-new-york-death",
+      "type": "town",
+      "canonicalPlaceId": "auburn-cayuga-new-york",
+      "badge": "Death",
+      "name": "Auburn, Cayuga, New York",
+      "relevance": "",
+      "featured": true,
+      "lat": 42.9320202,
+      "lng": -76.5672029,
+      "wikimedia": {
+        "fileTitle": "File:Auburn, New York 050309 1186.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Auburn%2C_New_York_050309_1186.jpg/960px-Auburn%2C_New_York_050309_1186.jpg",
+        "attribution": "Dougtone",
+        "license": "CC BY-SA 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=42.9320202,-76.5672029",
+        "embedUrl": "https://maps.google.com/maps?q=42.9320202,-76.5672029&z=12&output=embed"
+      },
+      "year": "1955"
+    },
+    {
+      "id": "victory-cayuga-new-york-residence",
+      "type": "town",
+      "canonicalPlaceId": "victory-cayuga-new-york",
+      "badge": "Residence",
+      "name": "Victory, Cayuga, New York",
+      "relevance": "",
+      "featured": false,
+      "lat": 43.197289,
+      "lng": -76.654393,
+      "wikimedia": {
+        "fileTitle": "File:NY370 East - Victory NY Sign (42756736492).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/NY370_East_-_Victory_NY_Sign_%2842756736492%29.jpg/960px-NY370_East_-_Victory_NY_Sign_%2842756736492%29.jpg",
+        "attribution": "formulanone from Huntsville, United States",
+        "license": "CC BY-SA 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.197289,-76.654393",
+        "embedUrl": "https://maps.google.com/maps?q=43.197289,-76.654393&z=12&output=embed"
+      },
+      "year": "1955"
+    }
+  ]
+}

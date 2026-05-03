@@ -1,0 +1,51 @@
+{
+  "personId": "isaac_f_reed",
+  "personName": "Isaac F Reed",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "new-york-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "new-york",
+      "badge": "Birth Place",
+      "name": "New York",
+      "relevance": "",
+      "featured": true,
+      "lat": 40.7127281,
+      "lng": -74.0060152,
+      "wikimedia": {
+        "fileTitle": "File:Long Island City New York May 2015 panorama 3.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Long_Island_City_New_York_May_2015_panorama_3.jpg/960px-Long_Island_City_New_York_May_2015_panorama_3.jpg",
+        "attribution": "King of Hearts",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=40.7127281,-74.0060152",
+        "embedUrl": "https://maps.google.com/maps?q=40.7127281,-74.0060152&z=12&output=embed"
+      },
+      "year": "1861"
+    },
+    {
+      "id": "nankin-township-wayne-michigan-death",
+      "type": "town",
+      "canonicalPlaceId": "nankin-township-wayne-michigan",
+      "badge": "Death",
+      "name": "Nankin Township, Wayne, Michigan",
+      "relevance": "",
+      "featured": false,
+      "lat": 42.2682408,
+      "lng": -83.2844172,
+      "wikimedia": {
+        "fileTitle": "File:Detailed official atlas of Wayne County, Michigan - containing general maps of Wayne County and city of Detroit, general township maps ... - also detail plats of all recorded subdivisions and LOC 2008622019-28.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Detailed_official_atlas_of_Wayne_County%2C_Michigan_-_containing_general_maps_of_Wayne_County_and_city_of_Detroit%2C_general_township_maps_..._-_also_detail_plats_of_all_recorded_subdivisions_and_LOC_2008622019-28.jpg/960px-thumbnail.jpg",
+        "attribution": "Sauer, Wm. C.",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=42.2682408,-83.2844172",
+        "embedUrl": "https://maps.google.com/maps?q=42.2682408,-83.2844172&z=12&output=embed"
+      },
+      "year": "1937"
+    }
+  ]
+}

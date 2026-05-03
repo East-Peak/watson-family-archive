@@ -1,0 +1,56 @@
+{
+  "personId": "ann_dawson",
+  "personName": "Ann Dawson",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "bedfordshire-england-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "bedfordshire-england",
+      "badge": "Birth Place",
+      "name": "Bedfordshire, England",
+      "relevance": "",
+      "featured": true,
+      "lat": 52.0640034,
+      "lng": -0.4111138,
+      "wikipedia": {
+        "title": "Bedfordshire",
+        "url": "https://en.wikipedia.org/wiki/Bedfordshire",
+        "summary": "Bedfordshire is a ceremonial county in the East of England. It is bordered by Northamptonshire to the north, Cambridgeshire to the north-east, Hertfordshire to the south-east and south, and Buckinghamshire to the west. The largest settlement is Luton."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Clophill, Bedfordshire, England. c.1700 listed cottages.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Clophill%2C_Bedfordshire%2C_England._c.1700_listed_cottages.jpg/960px-Clophill%2C_Bedfordshire%2C_England._c.1700_listed_cottages.jpg",
+        "attribution": "Unknown authorUnknown author",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=52.0640034,-0.4111138",
+        "embedUrl": "https://maps.google.com/maps?q=52.0640034,-0.4111138&z=12&output=embed"
+      },
+      "year": "1647"
+    },
+    {
+      "id": "northumberland-virginia-death",
+      "type": "town",
+      "canonicalPlaceId": "northumberland-virginia",
+      "badge": "Death",
+      "name": "Northumberland, Virginia",
+      "relevance": "",
+      "featured": false,
+      "lat": 37.9314992,
+      "lng": -76.4836686,
+      "wikimedia": {
+        "fileTitle": "File:Northumberland House and Mantua, Virginia Historical Marker No. JT-12, Claraville, Virginia (14486109955).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Northumberland_House_and_Mantua%2C_Virginia_Historical_Marker_No._JT-12%2C_Claraville%2C_Virginia_%2814486109955%29.jpg/960px-Northumberland_House_and_Mantua%2C_Virginia_Historical_Marker_No._JT-12%2C_Claraville%2C_Virginia_%2814486109955%29.jpg",
+        "attribution": "Ken Lund from Reno, Nevada, USA",
+        "license": "CC BY-SA 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=37.9314992,-76.4836686",
+        "embedUrl": "https://maps.google.com/maps?q=37.9314992,-76.4836686&z=12&output=embed"
+      },
+      "year": "1684"
+    }
+  ]
+}

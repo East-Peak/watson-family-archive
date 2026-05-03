@@ -1,0 +1,56 @@
+{
+  "personId": "charles_greenberry",
+  "personName": "Charles Greenberry",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "london-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "london",
+      "badge": "Birth Place",
+      "name": "London",
+      "relevance": "",
+      "featured": true,
+      "lat": 51.5074456,
+      "lng": -0.1277653,
+      "wikipedia": {
+        "title": "London",
+        "url": "https://en.wikipedia.org/wiki/London",
+        "summary": "London is the capital and largest city of both England and the United Kingdom, with a population of 9.1 million people in 2024. Its wider metropolitan area is the largest in Western Europe, with a population of 15.1\u00a0million. London stands on the River Thames in southeast England, at the head of a 50"
+      },
+      "wikimedia": {
+        "fileTitle": "File:London , Kodachrome by Chalmers Butterfield edit.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/London_%2C_Kodachrome_by_Chalmers_Butterfield_edit.jpg/960px-London_%2C_Kodachrome_by_Chalmers_Butterfield_edit.jpg",
+        "attribution": "Chalmers Butterfield",
+        "license": "CC BY 2.5"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=51.5074456,-0.1277653",
+        "embedUrl": "https://maps.google.com/maps?q=51.5074456,-0.1277653&z=12&output=embed"
+      },
+      "year": "1672"
+    },
+    {
+      "id": "anne-arundel-md-death",
+      "type": "town",
+      "canonicalPlaceId": "anne-arundel-md",
+      "badge": "Death",
+      "name": "Anne Arundel, MD",
+      "relevance": "",
+      "featured": false,
+      "lat": 38.9722583,
+      "lng": -76.573454,
+      "wikimedia": {
+        "fileTitle": "File:PRIMROSE HILL, ANNAPOLIS, ANNE ARUNDEL COUNTY, MD.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/PRIMROSE_HILL%2C_ANNAPOLIS%2C_ANNE_ARUNDEL_COUNTY%2C_MD.jpg/960px-PRIMROSE_HILL%2C_ANNAPOLIS%2C_ANNE_ARUNDEL_COUNTY%2C_MD.jpg",
+        "attribution": "JERRYE &amp; ROY KLOTZ, M.D.",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=38.9722583,-76.573454",
+        "embedUrl": "https://maps.google.com/maps?q=38.9722583,-76.573454&z=12&output=embed"
+      },
+      "year": "1713"
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "personId": "sarah_lindsey",
+  "personName": "Sarah Lindsey",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "illinois-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "illinois",
+      "badge": "Birth Place",
+      "name": "Illinois",
+      "relevance": "",
+      "featured": true,
+      "lat": 40.0796606,
+      "lng": -89.4337288,
+      "wikipedia": {
+        "title": "Illinois",
+        "url": "https://en.wikipedia.org/wiki/Illinois",
+        "summary": "Illinois is a state in the Midwestern region of the United States. It borders on Lake Michigan to its northeast, the Mississippi River to its west, and the Wabash and Ohio rivers to its south. Of the fifty U.S. states, Illinois has the fifth-largest gross domestic product (GDP), the sixth-largest po"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Skyline de Chicago desde el centro, Illinois, Estados Unidos, 2012-10-20, DD 06.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Skyline_de_Chicago_desde_el_centro%2C_Illinois%2C_Estados_Unidos%2C_2012-10-20%2C_DD_06.jpg/960px-Skyline_de_Chicago_desde_el_centro%2C_Illinois%2C_Estados_Unidos%2C_2012-10-20%2C_DD_06.jpg",
+        "attribution": "Diego Delso",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=40.0796606,-89.4337288",
+        "embedUrl": "https://maps.google.com/maps?q=40.0796606,-89.4337288&z=12&output=embed"
+      },
+      "year": "1848"
+    },
+    {
+      "id": "crawford-illinois-marriage",
+      "type": "building",
+      "canonicalPlaceId": "crawford-illinois",
+      "badge": "Marriage",
+      "name": "Crawford, Illinois",
+      "relevance": "",
+      "featured": false,
+      "lat": 39.0131644,
+      "lng": -87.7291001,
+      "wikimedia": {
+        "fileTitle": "File:Crawford County Illinois 1816.png",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/1/18/Crawford_County_Illinois_1816.png",
+        "attribution": "Illinois_Locator_Map.PNG: US Census, Ruhrfisch\nderivative work: Fishal (talk)",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=39.0131644,-87.7291001",
+        "embedUrl": "https://maps.google.com/maps?q=39.0131644,-87.7291001&z=12&output=embed"
+      },
+      "year": "1867"
+    },
+    {
+      "id": "wichita-kansas-residence",
+      "type": "town",
+      "canonicalPlaceId": "wichita-kansas",
+      "badge": "Residence",
+      "name": "Wichita, Kansas",
+      "relevance": "",
+      "featured": false,
+      "lat": 37.6922361,
+      "lng": -97.3375448,
+      "wikipedia": {
+        "title": "Wichita, Kansas",
+        "url": "https://en.wikipedia.org/wiki/Wichita%2C_Kansas",
+        "summary": "Wichita is the most populous city in the U.S. state of Kansas and the county seat of Sedgwick County. As of the 2020 census, the population of the city was 397,532, and the Wichita metropolitan area had a population of 647,610. It is located in south-central Kansas along the Arkansas River."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Petroleum Building, Wichita, Kansas 01.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Petroleum_Building%2C_Wichita%2C_Kansas_01.jpg/960px-Petroleum_Building%2C_Wichita%2C_Kansas_01.jpg",
+        "attribution": "Myotus",
+        "license": "CC BY 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=37.6922361,-97.3375448",
+        "embedUrl": "https://maps.google.com/maps?q=37.6922361,-97.3375448&z=12&output=embed"
+      },
+      "year": "1923"
+    }
+  ]
+}

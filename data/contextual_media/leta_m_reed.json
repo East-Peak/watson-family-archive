@@ -1,0 +1,82 @@
+{
+  "personId": "leta_m_reed",
+  "personName": "Leta M. Reed",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "michigan-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "michigan",
+      "badge": "Birth Place",
+      "name": "Michigan",
+      "relevance": "",
+      "featured": true,
+      "lat": 43.6211955,
+      "lng": -84.6824346,
+      "wikipedia": {
+        "title": "Michigan",
+        "url": "https://en.wikipedia.org/wiki/Michigan",
+        "summary": "Michigan is a peninsular state in the Great Lakes region of the Upper Midwestern United States. It shares water and land boundaries with Minnesota to the northwest, Wisconsin to the west, Indiana and Illinois to the southwest, Ohio to the southeast, and the Canadian province of Ontario to the east, "
+      },
+      "wikimedia": {
+        "fileTitle": "File:Lenawee County Courthouse Adrian Michigan.JPG",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Lenawee_County_Courthouse_Adrian_Michigan.JPG/960px-Lenawee_County_Courthouse_Adrian_Michigan.JPG",
+        "attribution": "Dwight Burdette",
+        "license": "CC BY 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.6211955,-84.6824346",
+        "embedUrl": "https://maps.google.com/maps?q=43.6211955,-84.6824346&z=12&output=embed"
+      },
+      "year": "1898"
+    },
+    {
+      "id": "ventura-california-death",
+      "type": "town",
+      "canonicalPlaceId": "ventura-california",
+      "badge": "Death",
+      "name": "Ventura, California",
+      "relevance": "",
+      "featured": false,
+      "lat": 34.4458248,
+      "lng": -119.0779359,
+      "wikipedia": {
+        "title": "Ventura, California",
+        "url": "https://en.wikipedia.org/wiki/Ventura%2C_California",
+        "summary": "Ventura, officially the City of San Buenaventura, is a city in and the county seat of Ventura County, California, United States. It is a coastal city located northwest of Los Angeles. The population was 110,763 at the 2020 United States census. Ventura is a popular tourist destination, owing to its "
+      },
+      "wikimedia": {
+        "fileTitle": "File:Ventura California Aerial Photo D Ramey Logan.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Ventura_California_Aerial_Photo_D_Ramey_Logan.jpg/960px-Ventura_California_Aerial_Photo_D_Ramey_Logan.jpg",
+        "attribution": "Don Ramey Logan",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=34.4458248,-119.0779359",
+        "embedUrl": "https://maps.google.com/maps?q=34.4458248,-119.0779359&z=12&output=embed"
+      },
+      "year": "1967"
+    },
+    {
+      "id": "bay-city-bay-michigan-marriage",
+      "type": "building",
+      "canonicalPlaceId": "bay-city-bay-michigan",
+      "badge": "Marriage",
+      "name": "Bay City, Bay, Michigan",
+      "relevance": "",
+      "featured": false,
+      "lat": 43.5962107,
+      "lng": -83.8881711,
+      "wikimedia": {
+        "fileTitle": "File:Michigan Central Station, Bay City, Michigan.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Michigan_Central_Station%2C_Bay_City%2C_Michigan.jpg/960px-Michigan_Central_Station%2C_Bay_City%2C_Michigan.jpg",
+        "attribution": "Photographer, and color artist not provided",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.5962107,-83.8881711",
+        "embedUrl": "https://maps.google.com/maps?q=43.5962107,-83.8881711&z=12&output=embed"
+      }
+    }
+  ]
+}

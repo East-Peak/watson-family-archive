@@ -1,0 +1,39 @@
+{
+  "personId": "edward_dorsey_immigrant",
+  "personName": "Edward Dorsey",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "possibly-middlesex-england-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "possibly-middlesex-england",
+      "badge": "Birth Place",
+      "name": "Possibly Middlesex, England",
+      "relevance": "",
+      "featured": true,
+      "year": "1619"
+    },
+    {
+      "id": "drowned-near-isle-of-kent-chesapeake-bay-maryland-death",
+      "type": "town",
+      "canonicalPlaceId": "drowned-near-isle-of-kent-chesapeake-bay-maryland",
+      "badge": "Death",
+      "name": "Drowned near Isle of Kent, Chesapeake Bay, Maryland",
+      "relevance": "",
+      "featured": false,
+      "lat": 38.2280573,
+      "lng": -76.2629345,
+      "wikimedia": {
+        "fileTitle": "File:Claiborne the rebel. A romance of Maryland (IA claibornerebelro00carp).pdf",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Claiborne_the_rebel._A_romance_of_Maryland_%28IA_claibornerebelro00carp%29.pdf/page1-960px-Claiborne_the_rebel._A_romance_of_Maryland_%28IA_claibornerebelro00carp%29.pdf.jpg",
+        "attribution": "Carpenter, W. H. (William Henry), 1813-1899",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=38.2280573,-76.2629345",
+        "embedUrl": "https://maps.google.com/maps?q=38.2280573,-76.2629345&z=12&output=embed"
+      },
+      "year": "1659"
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "personId": "fred_ludwig",
+  "personName": "Fred Ludwig",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "verified-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "verified",
+      "badge": "Birth Place",
+      "name": "verified",
+      "relevance": "",
+      "featured": true,
+      "lat": 38.9151175,
+      "lng": -77.0188503,
+      "wikipedia": {
+        "title": "Verified",
+        "url": "https://en.wikipedia.org/wiki/Verified",
+        "summary": "Verified is a United Nations project to improve access to accurate information. In the project the United Nations seeks to organize a network of millions of online volunteers to curate and fact check information online. Verified has held a social media campaigns using hashtags to raise awareness abo"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Verified-account.png",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Verified-account.png",
+        "attribution": "Twitter",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=38.9151175,-77.0188503",
+        "embedUrl": "https://maps.google.com/maps?q=38.9151175,-77.0188503&z=12&output=embed"
+      },
+      "year": "1888"
+    },
+    {
+      "id": "coleman-marinette-wisconsin-marriage",
+      "type": "building",
+      "canonicalPlaceId": "coleman-marinette-wisconsin",
+      "badge": "Marriage",
+      "name": "Coleman, Marinette, Wisconsin",
+      "relevance": "",
+      "featured": false,
+      "lat": 45.0649843,
+      "lng": -88.0342701,
+      "wikimedia": {
+        "fileTitle": "File:ColemanWisconsinDowntown.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/ColemanWisconsinDowntown.jpg/960px-ColemanWisconsinDowntown.jpg",
+        "attribution": "Royalbroil",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=45.0649843,-88.0342701",
+        "embedUrl": "https://maps.google.com/maps?q=45.0649843,-88.0342701&z=12&output=embed"
+      }
+    },
+    {
+      "id": "trinity-evangelical-lutheran-church-cemetery-residence",
+      "type": "town",
+      "canonicalPlaceId": "trinity-evangelical-lutheran-church-cemetery",
+      "badge": "Residence",
+      "name": "Trinity Evangelical Lutheran Church Cemetery",
+      "relevance": "",
+      "featured": false,
+      "lat": 40.5087001,
+      "lng": -80.0711612,
+      "wikimedia": {
+        "fileTitle": "File:Trinity Cemetery at The Evangelical Lutheran Church of the Trinity.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Trinity_Cemetery_at_The_Evangelical_Lutheran_Church_of_the_Trinity.jpg/960px-Trinity_Cemetery_at_The_Evangelical_Lutheran_Church_of_the_Trinity.jpg",
+        "attribution": "Nick-philly",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=40.5087001,-80.0711612",
+        "embedUrl": "https://maps.google.com/maps?q=40.5087001,-80.0711612&z=12&output=embed"
+      },
+      "year": "1947"
+    }
+  ]
+}

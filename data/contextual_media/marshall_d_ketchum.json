@@ -1,0 +1,83 @@
+{
+  "personId": "marshall_d_ketchum",
+  "personName": "Marshall D. Ketchum",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "buffalo-new-york-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "buffalo-new-york",
+      "badge": "Birth Place",
+      "name": "Buffalo, New York",
+      "relevance": "",
+      "featured": true,
+      "lat": 42.8864163,
+      "lng": -78.8781493,
+      "wikipedia": {
+        "title": "Buffalo, New York",
+        "url": "https://en.wikipedia.org/wiki/Buffalo%2C_New_York",
+        "summary": "Buffalo is a city in the U.S. state of New York. It lies in Western New York at the eastern end of Lake Erie and at the head of the Niagara River on the Canada\u2013United States border. It is the second-most populous city in New York, with a population of 278,349 at the 2020 census. The Buffalo\u2013Niagara "
+      },
+      "wikimedia": {
+        "fileTitle": "File:Phyllis Wheatley Club, Buffalo, New York LOC.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Phyllis_Wheatley_Club%2C_Buffalo%2C_New_York_LOC.jpg",
+        "attribution": "Unknown authorUnknown author",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=42.8864163,-78.8781493",
+        "embedUrl": "https://maps.google.com/maps?q=42.8864163,-78.8781493&z=12&output=embed"
+      },
+      "year": "1905"
+    },
+    {
+      "id": "chicago-death",
+      "type": "town",
+      "canonicalPlaceId": "chicago",
+      "badge": "Death",
+      "name": "Chicago",
+      "relevance": "",
+      "featured": false,
+      "lat": 41.8755616,
+      "lng": -87.6244212,
+      "wikipedia": {
+        "title": "Chicago",
+        "url": "https://en.wikipedia.org/wiki/Chicago",
+        "summary": "Chicago is the most populous city in the U.S. state of Illinois and in the Midwestern United States. Located on the western shore of Lake Michigan, it is the third-most populous city in the United States, with a population of 2.74 million at the 2020 census. The Chicago metropolitan area has 9.41 mi"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Chicago Union Station 1943.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Chicago_Union_Station_1943.jpg/960px-Chicago_Union_Station_1943.jpg",
+        "attribution": "Jack Delano",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=41.8755616,-87.6244212",
+        "embedUrl": "https://maps.google.com/maps?q=41.8755616,-87.6244212&z=12&output=embed"
+      },
+      "year": "1989"
+    },
+    {
+      "id": "new-york-residence",
+      "type": "town",
+      "canonicalPlaceId": "new-york",
+      "badge": "Residence",
+      "name": "New York",
+      "relevance": "",
+      "featured": false,
+      "lat": 40.7127281,
+      "lng": -74.0060152,
+      "wikimedia": {
+        "fileTitle": "File:Long Island City New York May 2015 panorama 3.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Long_Island_City_New_York_May_2015_panorama_3.jpg/960px-Long_Island_City_New_York_May_2015_panorama_3.jpg",
+        "attribution": "King of Hearts",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=40.7127281,-74.0060152",
+        "embedUrl": "https://maps.google.com/maps?q=40.7127281,-74.0060152&z=12&output=embed"
+      },
+      "year": "1903"
+    }
+  ]
+}

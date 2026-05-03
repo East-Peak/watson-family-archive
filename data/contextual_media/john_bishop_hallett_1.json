@@ -1,0 +1,29 @@
+{
+  "personId": "john_bishop_hallett_1",
+  "personName": "John Bishop Hallett 1",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "lyme-regis-dorset-england-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "lyme-regis-dorset-england",
+      "badge": "Birth Place",
+      "name": "Lyme Regis, Dorset, England",
+      "relevance": "",
+      "featured": true,
+      "lat": 50.7252897,
+      "lng": -2.934559,
+      "wikimedia": {
+        "fileTitle": "File:Ammonite lamp post at dusk, Lyme Regis.JPG",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Ammonite_lamp_post_at_dusk%2C_Lyme_Regis.JPG/960px-Ammonite_lamp_post_at_dusk%2C_Lyme_Regis.JPG",
+        "attribution": "MichaelMaggs",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=50.7252897,-2.934559",
+        "embedUrl": "https://maps.google.com/maps?q=50.7252897,-2.934559&z=12&output=embed"
+      },
+      "year": "1623"
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "personId": "myrtle_e_meadows",
+  "personName": "Myrtle E Meadows",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "chautauqua-county-kansas-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "chautauqua-county-kansas",
+      "badge": "Birth Place",
+      "name": "Chautauqua County, Kansas",
+      "relevance": "",
+      "featured": true,
+      "lat": 37.146335,
+      "lng": -96.2656966,
+      "wikipedia": {
+        "title": "Chautauqua County, Kansas",
+        "url": "https://en.wikipedia.org/wiki/Chautauqua_County%2C_Kansas",
+        "summary": "Chautauqua County is a county located in Southeast Kansas, United States. Its county seat and most populous city is Sedan. As of the 2020 census, the county population was 3,379. The county is named for Chautauqua County, New York, the birthplace of Edward Jaquins, a Kansas politician who was instru"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Chautauqua County, KS Courthouse.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Chautauqua_County%2C_KS_Courthouse.jpg/960px-Chautauqua_County%2C_KS_Courthouse.jpg",
+        "attribution": "Dylan Edwards",
+        "license": "CC BY 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=37.146335,-96.2656966",
+        "embedUrl": "https://maps.google.com/maps?q=37.146335,-96.2656966&z=12&output=embed"
+      },
+      "year": "1884"
+    },
+    {
+      "id": "pawnee-oklahoma-marriage",
+      "type": "building",
+      "canonicalPlaceId": "pawnee-oklahoma",
+      "badge": "Marriage",
+      "name": "Pawnee, Oklahoma",
+      "relevance": "",
+      "featured": false,
+      "lat": 36.3151645,
+      "lng": -96.7200995,
+      "wikipedia": {
+        "title": "Pawnee, Oklahoma",
+        "url": "https://en.wikipedia.org/wiki/Pawnee%2C_Oklahoma",
+        "summary": "Pawnee is a city in and the county seat of Pawnee County, Oklahoma, United States. The town is northeast of Stillwater at the junction of U.S. Route 64 and State Highway 18."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Pawnee Bill Museum Entrance, Pawnee, Oklahoma.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Pawnee_Bill_Museum_Entrance%2C_Pawnee%2C_Oklahoma.jpg/960px-Pawnee_Bill_Museum_Entrance%2C_Pawnee%2C_Oklahoma.jpg",
+        "attribution": "Smallboy944",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=36.3151645,-96.7200995",
+        "embedUrl": "https://maps.google.com/maps?q=36.3151645,-96.7200995&z=12&output=embed"
+      },
+      "year": "1950"
+    },
+    {
+      "id": "kansas-residence",
+      "type": "town",
+      "canonicalPlaceId": "kansas",
+      "badge": "Residence",
+      "name": "Kansas",
+      "relevance": "",
+      "featured": false,
+      "lat": 38.27312,
+      "lng": -98.5821872,
+      "wikipedia": {
+        "title": "Kansas",
+        "url": "https://en.wikipedia.org/wiki/Kansas",
+        "summary": "Kansas is a landlocked state in the Midwestern region of the United States. It borders Nebraska to the north; Colorado to the west; Oklahoma to the south; and Missouri to the east. Kansas is named after the Kansas River, in turn named after the Kansa people. Its capital is Topeka, and its most popul"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Crops Kansas AST 20010624.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Crops_Kansas_AST_20010624.jpg/960px-Crops_Kansas_AST_20010624.jpg",
+        "attribution": "NASA",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=38.27312,-98.5821872",
+        "embedUrl": "https://maps.google.com/maps?q=38.27312,-98.5821872&z=12&output=embed"
+      },
+      "year": "1885"
+    }
+  ]
+}

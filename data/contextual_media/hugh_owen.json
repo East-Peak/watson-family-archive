@@ -1,0 +1,56 @@
+{
+  "personId": "hugh_owen",
+  "personName": "Hugh Owen",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "montgomeryshire-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "montgomeryshire",
+      "badge": "Birth Place",
+      "name": "Montgomeryshire",
+      "relevance": "",
+      "featured": true,
+      "lat": 52.6152731,
+      "lng": -3.4649973,
+      "wikipedia": {
+        "title": "Montgomeryshire",
+        "url": "https://en.wikipedia.org/wiki/Montgomeryshire",
+        "summary": "Montgomeryshire was one of the thirteen counties of Wales that existed from 1536 until their abolition in 1974, later becoming a district of Powys from 1974 to 1996. It was named after its county town, Montgomery, which in turn was named after one of William the Conqueror's main counsellors, Roger d"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Cyfronydd, Montgomeryshire. The Seat of Pryce Jones Esqr.jpeg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Cyfronydd%2C_Montgomeryshire._The_Seat_of_Pryce_Jones_Esqr.jpeg",
+        "attribution": "Greenwood, C. J., 19th. cent, lithographer\n\nShaw, I., artist.",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=52.6152731,-3.4649973",
+        "embedUrl": "https://maps.google.com/maps?q=52.6152731,-3.4649973&z=12&output=embed"
+      },
+      "year": "1826"
+    },
+    {
+      "id": "haverfordwest-pembrokeshire-wales-death",
+      "type": "town",
+      "canonicalPlaceId": "haverfordwest-pembrokeshire-wales",
+      "badge": "Death",
+      "name": "Haverfordwest, Pembrokeshire, Wales",
+      "relevance": "",
+      "featured": false,
+      "lat": 51.8021275,
+      "lng": -4.9684249,
+      "wikimedia": {
+        "fileTitle": "File:Old Bridge, Haverfordwest, Pembrokeshire - geograph.org.uk - 4526297.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Old_Bridge%2C_Haverfordwest%2C_Pembrokeshire_-_geograph.org.uk_-_4526297.jpg/960px-Old_Bridge%2C_Haverfordwest%2C_Pembrokeshire_-_geograph.org.uk_-_4526297.jpg",
+        "attribution": "Jeff Gogarty",
+        "license": "CC BY-SA 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=51.8021275,-4.9684249",
+        "embedUrl": "https://maps.google.com/maps?q=51.8021275,-4.9684249&z=12&output=embed"
+      },
+      "year": "1909"
+    }
+  ]
+}

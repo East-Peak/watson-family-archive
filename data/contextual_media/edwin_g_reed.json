@@ -1,0 +1,83 @@
+{
+  "personId": "edwin_g_reed",
+  "personName": "Edwin G. Reed",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "upper-jay-new-york-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "upper-jay-new-york",
+      "badge": "Birth Place",
+      "name": "Upper Jay, New York",
+      "relevance": "",
+      "featured": true,
+      "lat": 44.3364359,
+      "lng": -73.7756963,
+      "wikipedia": {
+        "title": "Jay, New York",
+        "url": "https://en.wikipedia.org/wiki/Jay%2C_New_York",
+        "summary": "Jay is a town in Essex County, New York, United States. The population was 2,506 at the 2010 census. The town is named after John Jay, governor of New York when the town was formed."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Upper Falls of the Yellowstone, by Haynes, F. Jay (Frank Jay), 1853-1921.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/9/98/Upper_Falls_of_the_Yellowstone%2C_by_Haynes%2C_F._Jay_%28Frank_Jay%29%2C_1853-1921.jpg",
+        "attribution": "Haynes, F. Jay (Frank Jay), 1853-1921 -- Photographer",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=44.3364359,-73.7756963",
+        "embedUrl": "https://maps.google.com/maps?q=44.3364359,-73.7756963&z=12&output=embed"
+      },
+      "year": "1848"
+    },
+    {
+      "id": "lasalle-county-illinois-death",
+      "type": "town",
+      "canonicalPlaceId": "lasalle-county-illinois",
+      "badge": "Death",
+      "name": "LaSalle County, Illinois",
+      "relevance": "",
+      "featured": false,
+      "lat": 41.3474892,
+      "lng": -88.9011861,
+      "wikipedia": {
+        "title": "LaSalle County, Illinois",
+        "url": "https://en.wikipedia.org/wiki/LaSalle_County%2C_Illinois",
+        "summary": "LaSalle County is a county located within the Fox Valley and Illinois River Valley regions of the U.S. state of Illinois. As of the 2020 Census, it had a population of 109,658. Its county seat and largest city is Ottawa. LaSalle County is part of the Ottawa, IL Micropolitan Statistical Area of North"
+      },
+      "wikimedia": {
+        "fileTitle": "File:LaSalle County Nuclear Generating Station, Near Ottawa, Illinois (7981646921).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/LaSalle_County_Nuclear_Generating_Station%2C_Near_Ottawa%2C_Illinois_%287981646921%29.jpg/960px-LaSalle_County_Nuclear_Generating_Station%2C_Near_Ottawa%2C_Illinois_%287981646921%29.jpg",
+        "attribution": "Ken Lund from Reno, Nevada, USA",
+        "license": "CC BY-SA 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=41.3474892,-88.9011861",
+        "embedUrl": "https://maps.google.com/maps?q=41.3474892,-88.9011861&z=12&output=embed"
+      },
+      "year": "1926"
+    },
+    {
+      "id": "date-5-dec-1926-residence",
+      "type": "town",
+      "canonicalPlaceId": "date-5-dec-1926",
+      "badge": "Residence",
+      "name": "date: 5 Dec 1926",
+      "relevance": "",
+      "featured": false,
+      "lat": -38.1122368,
+      "lng": 145.7660023,
+      "wikimedia": {
+        "fileTitle": "File:The Sea Beast (1926) - 5.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/The_Sea_Beast_%281926%29_-_5.jpg/960px-The_Sea_Beast_%281926%29_-_5.jpg",
+        "attribution": "Warner Bros.",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=-38.1122368,145.7660023",
+        "embedUrl": "https://maps.google.com/maps?q=-38.1122368,145.7660023&z=12&output=embed"
+      },
+      "year": "1926"
+    }
+  ]
+}

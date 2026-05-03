@@ -1,0 +1,61 @@
+{
+  "personId": "hiram_cadwallader",
+  "personName": "Hiram Cadwallader",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "ohio-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "ohio",
+      "badge": "Birth Place",
+      "name": "Ohio",
+      "relevance": "",
+      "featured": true,
+      "lat": 40.2253569,
+      "lng": -82.6881395,
+      "wikipedia": {
+        "title": "Ohio",
+        "url": "https://en.wikipedia.org/wiki/Ohio",
+        "summary": "Ohio is a state in the Midwestern region of the United States. It borders the Canadian province of Ontario to the north, Pennsylvania to the east, West Virginia to the southeast, Kentucky to the southwest, Indiana to the west, and Michigan to the northwest. Of the 50 U.S. states, it is the 34th-larg"
+      },
+      "wikimedia": {
+        "fileTitle": "File:State of Ohio waste characterization study - DPLA - 5ed3375f579555cb4eca42f08202fc02.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/State_of_Ohio_waste_characterization_study_-_DPLA_-_5ed3375f579555cb4eca42f08202fc02.jpg/960px-State_of_Ohio_waste_characterization_study_-_DPLA_-_5ed3375f579555cb4eca42f08202fc02.jpg",
+        "attribution": "Engineering Solutions &amp; Design, Inc",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=40.2253569,-82.6881395",
+        "embedUrl": "https://maps.google.com/maps?q=40.2253569,-82.6881395&z=12&output=embed"
+      },
+      "year": "1840"
+    },
+    {
+      "id": "indiana-residence",
+      "type": "town",
+      "canonicalPlaceId": "indiana",
+      "badge": "Residence",
+      "name": "Indiana",
+      "relevance": "",
+      "featured": false,
+      "lat": 40.3270127,
+      "lng": -86.1746933,
+      "wikipedia": {
+        "title": "Indiana",
+        "url": "https://en.wikipedia.org/wiki/Indiana",
+        "summary": "Indiana is a state in the Midwestern region of the United States. It borders Lake Michigan to the northwest, Michigan to the north and northeast, Ohio to the east, the Ohio River and Kentucky to the south and southeast, and the Wabash River and Illinois to the west. Nicknamed \"the Hoosier State\", In"
+      },
+      "wikimedia": {
+        "fileTitle": "File:1816-1836 Executive Proceedings of the State of Indiana - DPLA - ca11da83da20123f7baab2a57c187403 (page 303).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/1816-1836_Executive_Proceedings_of_the_State_of_Indiana_-_DPLA_-_ca11da83da20123f7baab2a57c187403_%28page_303%29.jpg/960px-1816-1836_Executive_Proceedings_of_the_State_of_Indiana_-_DPLA_-_ca11da83da20123f7baab2a57c187403_%28page_303%29.jpg",
+        "attribution": "Riker, Dorothy Lois, 1904; Indiana. Governor",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=40.3270127,-86.1746933",
+        "embedUrl": "https://maps.google.com/maps?q=40.3270127,-86.1746933&z=12&output=embed"
+      },
+      "year": "1840"
+    }
+  ]
+}

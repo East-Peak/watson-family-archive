@@ -1,0 +1,55 @@
+{
+  "personId": "john_tolson_lindsay",
+  "personName": "John Tolson Lindsay",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "indiana-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "indiana",
+      "badge": "Birth Place",
+      "name": "Indiana",
+      "relevance": "",
+      "featured": true,
+      "lat": 40.3270127,
+      "lng": -86.1746933,
+      "wikipedia": {
+        "title": "Indiana",
+        "url": "https://en.wikipedia.org/wiki/Indiana",
+        "summary": "Indiana is a state in the Midwestern region of the United States. It borders Lake Michigan to the northwest, Michigan to the north and northeast, Ohio to the east, the Ohio River and Kentucky to the south and southeast, and the Wabash River and Illinois to the west. Nicknamed \"the Hoosier State\", In"
+      },
+      "wikimedia": {
+        "fileTitle": "File:1816-1836 Executive Proceedings of the State of Indiana - DPLA - ca11da83da20123f7baab2a57c187403 (page 303).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/1816-1836_Executive_Proceedings_of_the_State_of_Indiana_-_DPLA_-_ca11da83da20123f7baab2a57c187403_%28page_303%29.jpg/960px-1816-1836_Executive_Proceedings_of_the_State_of_Indiana_-_DPLA_-_ca11da83da20123f7baab2a57c187403_%28page_303%29.jpg",
+        "attribution": "Riker, Dorothy Lois, 1904; Indiana. Governor",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=40.3270127,-86.1746933",
+        "embedUrl": "https://maps.google.com/maps?q=40.3270127,-86.1746933&z=12&output=embed"
+      },
+      "year": "1825"
+    },
+    {
+      "id": "crawford-illinois-marriage",
+      "type": "building",
+      "canonicalPlaceId": "crawford-illinois",
+      "badge": "Marriage",
+      "name": "Crawford, Illinois",
+      "relevance": "",
+      "featured": false,
+      "lat": 39.0131644,
+      "lng": -87.7291001,
+      "wikimedia": {
+        "fileTitle": "File:Crawford County Illinois 1816.png",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/1/18/Crawford_County_Illinois_1816.png",
+        "attribution": "Illinois_Locator_Map.PNG: US Census, Ruhrfisch\nderivative work: Fishal (talk)",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=39.0131644,-87.7291001",
+        "embedUrl": "https://maps.google.com/maps?q=39.0131644,-87.7291001&z=12&output=embed"
+      }
+    }
+  ]
+}

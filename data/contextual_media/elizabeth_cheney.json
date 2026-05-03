@@ -1,0 +1,34 @@
+{
+  "personId": "elizabeth_cheney",
+  "personName": "Elizabeth Cheney",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "wayne-ohio-marriage",
+      "type": "building",
+      "canonicalPlaceId": "wayne-ohio",
+      "badge": "Marriage",
+      "name": "Wayne, Ohio",
+      "relevance": "",
+      "featured": true,
+      "lat": 40.8615819,
+      "lng": -81.9034617,
+      "wikipedia": {
+        "title": "Wayne, Ohio",
+        "url": "https://en.wikipedia.org/wiki/Wayne%2C_Ohio",
+        "summary": "Wayne is a village in Wood County, Ohio, United States. The population was 841 at the 2020 census."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Sterling, Wayne County, Ohio, 1911 - DPLA - 8928148503e42e12bd1583fb3d78cd35.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Sterling%2C_Wayne_County%2C_Ohio%2C_1911_-_DPLA_-_8928148503e42e12bd1583fb3d78cd35.jpg/960px-Sterling%2C_Wayne_County%2C_Ohio%2C_1911_-_DPLA_-_8928148503e42e12bd1583fb3d78cd35.jpg",
+        "attribution": null,
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=40.8615819,-81.9034617",
+        "embedUrl": "https://maps.google.com/maps?q=40.8615819,-81.9034617&z=12&output=embed"
+      },
+      "year": "1835"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "personId": "idora_mayer",
+  "personName": "Idora Mayer",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "wea-miami-county-kansas-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "wea-miami-county-kansas",
+      "badge": "Birth Place",
+      "name": "Wea, Miami County, Kansas",
+      "relevance": "",
+      "featured": true,
+      "lat": 38.7150817,
+      "lng": -94.6675534,
+      "wikimedia": {
+        "fileTitle": "File:1940 Census Enumeration District Descriptions - Kansas - Miami County - ED 61-18, ED 61-19, ED 61-20, ED 61-21, ED 61-22, ED 61-23, ED 61-24, ED 61-25 - NARA - 5861746.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/1940_Census_Enumeration_District_Descriptions_-_Kansas_-_Miami_County_-_ED_61-18%2C_ED_61-19%2C_ED_61-20%2C_ED_61-21%2C_ED_61-22%2C_ED_61-23%2C_ED_61-24%2C_ED_61-25_-_NARA_-_5861746.jpg/960px-thumbnail.jpg",
+        "attribution": "Unknown authorUnknown author or not provided",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=38.7150817,-94.6675534",
+        "embedUrl": "https://maps.google.com/maps?q=38.7150817,-94.6675534&z=12&output=embed"
+      },
+      "year": "1863"
+    },
+    {
+      "id": "cherokee-county-kansas-death",
+      "type": "town",
+      "canonicalPlaceId": "cherokee-county-kansas",
+      "badge": "Death",
+      "name": "Cherokee County, Kansas",
+      "relevance": "",
+      "featured": false,
+      "lat": 37.1718068,
+      "lng": -94.8482069,
+      "wikipedia": {
+        "title": "Cherokee County, Kansas",
+        "url": "https://en.wikipedia.org/wiki/Cherokee_County%2C_Kansas",
+        "summary": "Cherokee County is a U.S. county located in Southeast Kansas. Its county seat is Columbus, and its most populous city is Baxter Springs. As of the 2020 census, the county population was 19,362. The county was named for the Cherokee tribe. Cherokee County is considered part of the Joplin, Missouri, m"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Habitat in Cherokee County, Kansas (6774973272).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Habitat_in_Cherokee_County%2C_Kansas_%286774973272%29.jpg/960px-Habitat_in_Cherokee_County%2C_Kansas_%286774973272%29.jpg",
+        "attribution": "USFWS Mountain Prairie",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=37.1718068,-94.8482069",
+        "embedUrl": "https://maps.google.com/maps?q=37.1718068,-94.8482069&z=12&output=embed"
+      },
+      "year": "1934"
+    }
+  ]
+}

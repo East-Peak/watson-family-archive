@@ -1,0 +1,56 @@
+{
+  "personId": "john_million_ii",
+  "personName": "John Million II",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "northampton-county-virginia-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "northampton-county-virginia",
+      "badge": "Birth Place",
+      "name": "Northampton County, Virginia",
+      "relevance": "",
+      "featured": true,
+      "lat": 37.3688433,
+      "lng": -75.9265679,
+      "wikipedia": {
+        "title": "Northampton County, Virginia",
+        "url": "https://en.wikipedia.org/wiki/Northampton_County%2C_Virginia",
+        "summary": "Northampton County is a county located in the Commonwealth of Virginia. As of the 2020 census, the population was 12,282. Its county seat is Eastville. Northampton and Accomack Counties are a part of the larger Eastern Shore of Virginia."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Old Birds' Nest Tavern, Marionville vicinity, Northampton County, Virginia. People on porch.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Old_Birds%27_Nest_Tavern%2C_Marionville_vicinity%2C_Northampton_County%2C_Virginia._People_on_porch.jpg",
+        "attribution": "Johnston, Frances Benjamin, 1864-1952, photographer",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=37.3688433,-75.9265679",
+        "embedUrl": "https://maps.google.com/maps?q=37.3688433,-75.9265679&z=12&output=embed"
+      },
+      "year": "1673"
+    },
+    {
+      "id": "northumberland-virginia-death",
+      "type": "town",
+      "canonicalPlaceId": "northumberland-virginia",
+      "badge": "Death",
+      "name": "Northumberland, Virginia",
+      "relevance": "",
+      "featured": false,
+      "lat": 37.9314992,
+      "lng": -76.4836686,
+      "wikimedia": {
+        "fileTitle": "File:Northumberland House and Mantua, Virginia Historical Marker No. JT-12, Claraville, Virginia (14486109955).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Northumberland_House_and_Mantua%2C_Virginia_Historical_Marker_No._JT-12%2C_Claraville%2C_Virginia_%2814486109955%29.jpg/960px-Northumberland_House_and_Mantua%2C_Virginia_Historical_Marker_No._JT-12%2C_Claraville%2C_Virginia_%2814486109955%29.jpg",
+        "attribution": "Ken Lund from Reno, Nevada, USA",
+        "license": "CC BY-SA 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=37.9314992,-76.4836686",
+        "embedUrl": "https://maps.google.com/maps?q=37.9314992,-76.4836686&z=12&output=embed"
+      },
+      "year": "1717"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "personId": "frederic_dayton",
+  "personName": "Frederic Dayton",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "westchester-new-york-colony-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "westchester-new-york-colony",
+      "badge": "Birth Place",
+      "name": "Westchester, New York Colony",
+      "relevance": "",
+      "featured": true,
+      "lat": 40.9301794,
+      "lng": -73.7454338,
+      "wikimedia": {
+        "fileTitle": "File:History of Westchester county - New York, including Morrisania, Kings Bridge, and West Farms, which have been annexed to New York City - (1886) (14779376724).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/History_of_Westchester_county_-_New_York%2C_including_Morrisania%2C_Kings_Bridge%2C_and_West_Farms%2C_which_have_been_annexed_to_New_York_City_-_%281886%29_%2814779376724%29.jpg/960px-thumbnail.jpg",
+        "attribution": "Scharf, J. Thomas (John Thomas), 1843-1898,",
+        "license": "No restrictions"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=40.9301794,-73.7454338",
+        "embedUrl": "https://maps.google.com/maps?q=40.9301794,-73.7454338&z=12&output=embed"
+      },
+      "year": "1757"
+    },
+    {
+      "id": "pittstown-rensselaer-new-york-death",
+      "type": "town",
+      "canonicalPlaceId": "pittstown-rensselaer-new-york",
+      "badge": "Death",
+      "name": "Pittstown, Rensselaer, New York",
+      "relevance": "",
+      "featured": false,
+      "lat": 42.8350778,
+      "lng": -73.485114,
+      "wikimedia": {
+        "fileTitle": "File:Pittstown Rensselaer NY.png",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/0/06/Pittstown_Rensselaer_NY.png",
+        "attribution": "Schzmo",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=42.8350778,-73.485114",
+        "embedUrl": "https://maps.google.com/maps?q=42.8350778,-73.485114&z=12&output=embed"
+      },
+      "year": "1838"
+    }
+  ]
+}

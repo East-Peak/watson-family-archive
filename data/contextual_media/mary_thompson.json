@@ -1,0 +1,55 @@
+{
+  "personId": "mary_thompson",
+  "personName": "Mary Thompson",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "victory-cayuga-new-york-marriage",
+      "type": "building",
+      "canonicalPlaceId": "victory-cayuga-new-york",
+      "badge": "Marriage",
+      "name": "Victory, Cayuga, New York",
+      "relevance": "",
+      "featured": true,
+      "lat": 43.197289,
+      "lng": -76.654393,
+      "wikimedia": {
+        "fileTitle": "File:NY370 East - Victory NY Sign (42756736492).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/NY370_East_-_Victory_NY_Sign_%2842756736492%29.jpg/960px-NY370_East_-_Victory_NY_Sign_%2842756736492%29.jpg",
+        "attribution": "formulanone from Huntsville, United States",
+        "license": "CC BY-SA 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.197289,-76.654393",
+        "embedUrl": "https://maps.google.com/maps?q=43.197289,-76.654393&z=12&output=embed"
+      }
+    },
+    {
+      "id": "red-creek-new-york-residence",
+      "type": "town",
+      "canonicalPlaceId": "red-creek-new-york",
+      "badge": "Residence",
+      "name": "Red Creek, New York",
+      "relevance": "",
+      "featured": false,
+      "lat": 43.247289,
+      "lng": -76.723564,
+      "wikipedia": {
+        "title": "Red Creek, New York",
+        "url": "https://en.wikipedia.org/wiki/Red_Creek%2C_New_York",
+        "summary": "Red Creek is a village in Wayne County, New York, United States. The population was 495 at the 2020 census."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Stoddard Creek near Bridal Falls, Allegany State Park, New York - 20220519.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Stoddard_Creek_near_Bridal_Falls%2C_Allegany_State_Park%2C_New_York_-_20220519.jpg/960px-Stoddard_Creek_near_Bridal_Falls%2C_Allegany_State_Park%2C_New_York_-_20220519.jpg",
+        "attribution": "Andre Carrotflower",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.247289,-76.723564",
+        "embedUrl": "https://maps.google.com/maps?q=43.247289,-76.723564&z=12&output=embed"
+      },
+      "year": "1881"
+    }
+  ]
+}

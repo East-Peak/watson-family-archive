@@ -1,0 +1,39 @@
+{
+  "personId": "vernea_leupp",
+  "personName": "Vernea Leupp",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "beggingen-schaffhausen-die-schweiz-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "beggingen-schaffhausen-die-schweiz",
+      "badge": "Birth Place",
+      "name": "Beggingen, Schaffhausen, die Schweiz",
+      "relevance": "",
+      "featured": true,
+      "year": "1639"
+    },
+    {
+      "id": "roethenbach-bern-switzerland-death",
+      "type": "town",
+      "canonicalPlaceId": "roethenbach-bern-switzerland",
+      "badge": "Death",
+      "name": "Roethenbach, Bern, Switzerland",
+      "relevance": "",
+      "featured": false,
+      "lat": 46.8536951,
+      "lng": 7.7435504,
+      "wikimedia": {
+        "fileTitle": "File:Rambachbr\u00fccke \u00fcber den Rambach, R\u00f6thenbach im Emmental BE 20210929-jag9889.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Rambachbr%C3%BCcke_%C3%BCber_den_Rambach%2C_R%C3%B6thenbach_im_Emmental_BE_20210929-jag9889.jpg/960px-Rambachbr%C3%BCcke_%C3%BCber_den_Rambach%2C_R%C3%B6thenbach_im_Emmental_BE_20210929-jag9889.jpg",
+        "attribution": "Jag9889",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=46.8536951,7.7435504",
+        "embedUrl": "https://maps.google.com/maps?q=46.8536951,7.7435504&z=12&output=embed"
+      },
+      "year": "1735"
+    }
+  ]
+}

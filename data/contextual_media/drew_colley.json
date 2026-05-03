@@ -1,0 +1,78 @@
+{
+  "personId": "drew_colley",
+  "personName": "Andrew Jackson Colley",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "kentucky-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "kentucky",
+      "badge": "Birth Place",
+      "name": "Kentucky",
+      "relevance": "",
+      "featured": true,
+      "lat": 37.5726028,
+      "lng": -85.1551411,
+      "wikipedia": {
+        "title": "Kentucky",
+        "url": "https://en.wikipedia.org/wiki/Kentucky",
+        "summary": "Kentucky, officially the Commonwealth of Kentucky, is a landlocked state in the Southeastern region of the United States. It borders Illinois, Indiana, and Ohio to the north, West Virginia to the northeast, Virginia to the east, Tennessee to the south, and Missouri to the west. Its northern border i"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Kentucky Scenic Byway signage on Kentucky Route 63 in Temple Hill, Kentucky.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Kentucky_Scenic_Byway_signage_on_Kentucky_Route_63_in_Temple_Hill%2C_Kentucky.jpg",
+        "attribution": "K-Johnson 127",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=37.5726028,-85.1551411",
+        "embedUrl": "https://maps.google.com/maps?q=37.5726028,-85.1551411&z=12&output=embed"
+      },
+      "year": "1826"
+    },
+    {
+      "id": "graves-kentucky-death",
+      "type": "town",
+      "canonicalPlaceId": "graves-kentucky",
+      "badge": "Death",
+      "name": "Graves, Kentucky",
+      "relevance": "",
+      "featured": false,
+      "lat": 36.7244966,
+      "lng": -88.6569094,
+      "wikimedia": {
+        "fileTitle": "File:Dublin, Graves County, Kentucky.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Dublin%2C_Graves_County%2C_Kentucky.jpg/960px-Dublin%2C_Graves_County%2C_Kentucky.jpg",
+        "attribution": "Unknown photographer",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=36.7244966,-88.6569094",
+        "embedUrl": "https://maps.google.com/maps?q=36.7244966,-88.6569094&z=12&output=embed"
+      },
+      "year": "1899"
+    },
+    {
+      "id": "cuba-graves-kentucky-residence",
+      "type": "town",
+      "canonicalPlaceId": "cuba-graves-kentucky",
+      "badge": "Residence",
+      "name": "Cuba, Graves, Kentucky",
+      "relevance": "",
+      "featured": false,
+      "lat": 36.5850582,
+      "lng": -88.6292168,
+      "wikimedia": {
+        "fileTitle": "File:Havana - Cuba - Man giving a V sign - 1326.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Havana_-_Cuba_-_Man_giving_a_V_sign_-_1326.jpg/960px-Havana_-_Cuba_-_Man_giving_a_V_sign_-_1326.jpg",
+        "attribution": "Jorge Royan",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=36.5850582,-88.6292168",
+        "embedUrl": "https://maps.google.com/maps?q=36.5850582,-88.6292168&z=12&output=embed"
+      },
+      "year": "1870"
+    }
+  ]
+}

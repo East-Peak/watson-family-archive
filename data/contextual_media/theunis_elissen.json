@@ -1,0 +1,56 @@
+{
+  "personId": "theunis_elissen",
+  "personName": "Theunis Elissen",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "bunschoten-utrecht-nederland-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "bunschoten-utrecht-nederland",
+      "badge": "Birth Place",
+      "name": "Bunschoten, Utrecht, Nederland",
+      "relevance": "",
+      "featured": true,
+      "lat": 52.2391743,
+      "lng": 5.3734101,
+      "wikimedia": {
+        "fileTitle": "File:Bunschoten, Gemeenteatlas van Nederland.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Bunschoten%2C_Gemeenteatlas_van_Nederland.jpg/960px-Bunschoten%2C_Gemeenteatlas_van_Nederland.jpg",
+        "attribution": "Jacob Kuyper",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=52.2391743,5.3734101",
+        "embedUrl": "https://maps.google.com/maps?q=52.2391743,5.3734101&z=12&output=embed"
+      },
+      "year": "1643"
+    },
+    {
+      "id": "kingston-new-york-death",
+      "type": "town",
+      "canonicalPlaceId": "kingston-new-york",
+      "badge": "Death",
+      "name": "Kingston, New York",
+      "relevance": "",
+      "featured": false,
+      "lat": 41.9287812,
+      "lng": -74.0023825,
+      "wikipedia": {
+        "title": "Kingston, New York",
+        "url": "https://en.wikipedia.org/wiki/Kingston%2C_New_York",
+        "summary": "Kingston is a city in and the county seat of Ulster County, New York, United States. The population was 24,069 at the 2020 census, while the Kingston metropolitan statistical area had 177,749 residents. It is at the confluence of Rondout Creek and the Hudson River, 91 miles (146\u00a0km) north of New Yor"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Kingston New York Wikivoyage banner.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Kingston_New_York_Wikivoyage_banner.jpg/960px-Kingston_New_York_Wikivoyage_banner.jpg",
+        "attribution": "Andre Carrotflower",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=41.9287812,-74.0023825",
+        "embedUrl": "https://maps.google.com/maps?q=41.9287812,-74.0023825&z=12&output=embed"
+      },
+      "year": "1728"
+    }
+  ]
+}

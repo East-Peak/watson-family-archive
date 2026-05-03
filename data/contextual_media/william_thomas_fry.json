@@ -1,0 +1,56 @@
+{
+  "personId": "william_thomas_fry",
+  "personName": "William Thomas Fry",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "bristol-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "bristol",
+      "badge": "Birth Place",
+      "name": "Bristol",
+      "relevance": "",
+      "featured": true,
+      "lat": 51.4538022,
+      "lng": -2.5972985,
+      "wikipedia": {
+        "title": "Bristol",
+        "url": "https://en.wikipedia.org/wiki/Bristol",
+        "summary": "Bristol is a city and ceremonial county in South West England. It is located on the River Avon, and bordered by Gloucestershire to the north and Somerset to the south with a short coastline on the Bristol Channel to the west. The county includes the majority of the Bristol conurbation, however, the "
+      },
+      "wikimedia": {
+        "fileTitle": "File:Bristol QC.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Bristol_QC.jpg/960px-Bristol_QC.jpg",
+        "attribution": "P199",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=51.4538022,-2.5972985",
+        "embedUrl": "https://maps.google.com/maps?q=51.4538022,-2.5972985&z=12&output=embed"
+      },
+      "year": "1692"
+    },
+    {
+      "id": "bristol-gloucester-england-death",
+      "type": "town",
+      "canonicalPlaceId": "bristol-gloucester-england",
+      "badge": "Death",
+      "name": "Bristol Gloucester, England",
+      "relevance": "",
+      "featured": false,
+      "lat": 51.8527674,
+      "lng": -2.2553694,
+      "wikimedia": {
+        "fileTitle": "File:Bishopston, Bristol, England, UK.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/2/26/Bishopston%2C_Bristol%2C_England%2C_UK.jpg",
+        "attribution": "Steinsky",
+        "license": "CC BY-SA 2.5"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=51.8527674,-2.2553694",
+        "embedUrl": "https://maps.google.com/maps?q=51.8527674,-2.2553694&z=12&output=embed"
+      },
+      "year": "1745"
+    }
+  ]
+}

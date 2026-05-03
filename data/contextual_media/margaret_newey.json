@@ -1,0 +1,34 @@
+{
+  "personId": "margaret_newey",
+  "personName": "Margaret Newey",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "worcestershire-england-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "worcestershire-england",
+      "badge": "Birth Place",
+      "name": "Worcestershire, England",
+      "relevance": "",
+      "featured": true,
+      "lat": 52.2109495,
+      "lng": -2.1569555,
+      "wikipedia": {
+        "title": "Worcestershire",
+        "url": "https://en.wikipedia.org/wiki/Worcestershire",
+        "summary": "Worcestershire is a ceremonial county in the West Midlands of England. It is bordered by Shropshire, Staffordshire, and the West Midlands county to the north, Warwickshire to the east, Gloucestershire to the south, and Herefordshire to the west. The city of Worcester is the largest settlement."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Worcester Cathedral Nave, Worcestershire, UK - Diliff.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Worcester_Cathedral_Nave%2C_Worcestershire%2C_UK_-_Diliff.jpg/960px-Worcester_Cathedral_Nave%2C_Worcestershire%2C_UK_-_Diliff.jpg",
+        "attribution": "Diliff",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=52.2109495,-2.1569555",
+        "embedUrl": "https://maps.google.com/maps?q=52.2109495,-2.1569555&z=12&output=embed"
+      },
+      "year": "1663"
+    }
+  ]
+}

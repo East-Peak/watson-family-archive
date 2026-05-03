@@ -1,0 +1,77 @@
+{
+  "personId": "ella_shinn",
+  "personName": "Ella Shinn",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "ohio-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "ohio",
+      "badge": "Birth Place",
+      "name": "Ohio",
+      "relevance": "",
+      "featured": true,
+      "lat": 40.2253569,
+      "lng": -82.6881395,
+      "wikipedia": {
+        "title": "Ohio",
+        "url": "https://en.wikipedia.org/wiki/Ohio",
+        "summary": "Ohio is a state in the Midwestern region of the United States. It borders the Canadian province of Ontario to the north, Pennsylvania to the east, West Virginia to the southeast, Kentucky to the southwest, Indiana to the west, and Michigan to the northwest. Of the 50 U.S. states, it is the 34th-larg"
+      },
+      "wikimedia": {
+        "fileTitle": "File:State of Ohio waste characterization study - DPLA - 5ed3375f579555cb4eca42f08202fc02.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/State_of_Ohio_waste_characterization_study_-_DPLA_-_5ed3375f579555cb4eca42f08202fc02.jpg/960px-State_of_Ohio_waste_characterization_study_-_DPLA_-_5ed3375f579555cb4eca42f08202fc02.jpg",
+        "attribution": "Engineering Solutions &amp; Design, Inc",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=40.2253569,-82.6881395",
+        "embedUrl": "https://maps.google.com/maps?q=40.2253569,-82.6881395&z=12&output=embed"
+      },
+      "year": "1853"
+    },
+    {
+      "id": "jackson-township-clermont-oh-marriage",
+      "type": "building",
+      "canonicalPlaceId": "jackson-township-clermont-oh",
+      "badge": "Marriage",
+      "name": "Jackson Township, Clermont, OH",
+      "relevance": "",
+      "featured": false,
+      "lat": 39.1377644,
+      "lng": -84.0481729,
+      "wikimedia": {
+        "fileTitle": "File:1940 Census Enumeration District Descriptions - Ohio - Clermont County - ED 13-6, ED 13-7, ED 13-8, ED 13-9, ED 13-10, ED 13-11 - NARA - 5875261.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/1940_Census_Enumeration_District_Descriptions_-_Ohio_-_Clermont_County_-_ED_13-6%2C_ED_13-7%2C_ED_13-8%2C_ED_13-9%2C_ED_13-10%2C_ED_13-11_-_NARA_-_5875261.jpg/960px-1940_Census_Enumeration_District_Descriptions_-_Ohio_-_Clermont_County_-_ED_13-6%2C_ED_13-7%2C_ED_13-8%2C_ED_13-9%2C_ED_13-10%2C_ED_13-11_-_NARA_-_5875261.jpg",
+        "attribution": "Unknown authorUnknown author or not provided",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=39.1377644,-84.0481729",
+        "embedUrl": "https://maps.google.com/maps?q=39.1377644,-84.0481729&z=12&output=embed"
+      }
+    },
+    {
+      "id": "bolivar-benton-indiana-residence",
+      "type": "town",
+      "canonicalPlaceId": "bolivar-benton-indiana",
+      "badge": "Residence",
+      "name": "Bolivar, Benton, Indiana",
+      "relevance": "",
+      "featured": false,
+      "lat": 40.6034281,
+      "lng": -87.3235164,
+      "wikimedia": {
+        "fileTitle": "File:Progress of education in Benton County, Indiana, with an explanation of the Indiana school system and the duties of school officers, patrons and pupils; (IA progressofeducat01mckn).pdf",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Progress_of_education_in_Benton_County%2C_Indiana%2C_with_an_explanation_of_the_Indiana_school_system_and_the_duties_of_school_officers%2C_patrons_and_pupils%3B_%28IA_progressofeducat01mckn%29.pdf/page1-779px-thumbnail.pdf.jpg",
+        "attribution": "McKnight, Levi Adolphus, 1846- [from old catalog]",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=40.6034281,-87.3235164",
+        "embedUrl": "https://maps.google.com/maps?q=40.6034281,-87.3235164&z=12&output=embed"
+      },
+      "year": "1900"
+    }
+  ]
+}

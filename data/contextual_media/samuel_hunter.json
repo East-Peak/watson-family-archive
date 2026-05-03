@@ -1,0 +1,56 @@
+{
+  "personId": "samuel_hunter",
+  "personName": "Samuel Hunter",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "wisconsin-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "wisconsin",
+      "badge": "Birth Place",
+      "name": "Wisconsin",
+      "relevance": "",
+      "featured": true,
+      "lat": 44.4308975,
+      "lng": -89.6884637,
+      "wikipedia": {
+        "title": "Wisconsin",
+        "url": "https://en.wikipedia.org/wiki/Wisconsin",
+        "summary": "Wisconsin is a state in the Upper Midwest and Great Lakes regions of the United States. It borders Minnesota to the west, Iowa to the southwest, Illinois to the south, Lake Michigan to the east, Michigan to the northeast, and Lake Superior to the north. With a population of about 6 million and an ar"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Beaver Dam, Wisconsin Downtown.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Beaver_Dam%2C_Wisconsin_Downtown.jpg/960px-Beaver_Dam%2C_Wisconsin_Downtown.jpg",
+        "attribution": "Downspec",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=44.4308975,-89.6884637",
+        "embedUrl": "https://maps.google.com/maps?q=44.4308975,-89.6884637&z=12&output=embed"
+      },
+      "year": "1859"
+    },
+    {
+      "id": "ellington-township-quincy-adams-illinois-death",
+      "type": "town",
+      "canonicalPlaceId": "ellington-township-quincy-adams-illinois",
+      "badge": "Death",
+      "name": "Ellington Township, Quincy, Adams, Illinois",
+      "relevance": "",
+      "featured": false,
+      "lat": 39.9787786,
+      "lng": -91.2110065,
+      "wikimedia": {
+        "fileTitle": "File:1940 Census Enumeration District Descriptions - Illinois - Adams County - ED 1-10, ED 1-11, ED 1-12, ED 1-13, ED 1-14, ED 1-15, ED 1-74 - NARA - 5846084.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/1940_Census_Enumeration_District_Descriptions_-_Illinois_-_Adams_County_-_ED_1-10%2C_ED_1-11%2C_ED_1-12%2C_ED_1-13%2C_ED_1-14%2C_ED_1-15%2C_ED_1-74_-_NARA_-_5846084.jpg/960px-1940_Census_Enumeration_District_Descriptions_-_Illinois_-_Adams_County_-_ED_1-10%2C_ED_1-11%2C_ED_1-12%2C_ED_1-13%2C_ED_1-14%2C_ED_1-15%2C_ED_1-74_-_NARA_-_5846084.jpg",
+        "attribution": "Unknown authorUnknown author or not provided",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=39.9787786,-91.2110065",
+        "embedUrl": "https://maps.google.com/maps?q=39.9787786,-91.2110065&z=12&output=embed"
+      },
+      "year": "1861"
+    }
+  ]
+}

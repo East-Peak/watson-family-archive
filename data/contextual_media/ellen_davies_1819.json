@@ -1,0 +1,39 @@
+{
+  "personId": "ellen_davies_1819",
+  "personName": "Ellen Davies",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "dinas-mawddwy-merionethshire-wales-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "dinas-mawddwy-merionethshire-wales",
+      "badge": "Birth Place",
+      "name": "Dinas Mawddwy, Merionethshire, Wales",
+      "relevance": "",
+      "featured": true,
+      "lat": 52.79398,
+      "lng": -3.8749545,
+      "wikimedia": {
+        "fileTitle": "File:Plas Dinas, Mawddwy, Merionethshire 08.jpeg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/4/41/Plas_Dinas%2C_Mawddwy%2C_Merionethshire_08.jpeg",
+        "attribution": "Thomas Nicholls",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=52.79398,-3.8749545",
+        "embedUrl": "https://maps.google.com/maps?q=52.79398,-3.8749545&z=12&output=embed"
+      },
+      "year": "1819"
+    },
+    {
+      "id": "unmarked-grave-or-small-cemetery-residence",
+      "type": "town",
+      "canonicalPlaceId": "unmarked-grave-or-small-cemetery",
+      "badge": "Residence",
+      "name": "unmarked grave or small cemetery",
+      "relevance": "",
+      "featured": false,
+      "year": "1883"
+    }
+  ]
+}

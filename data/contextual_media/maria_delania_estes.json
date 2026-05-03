@@ -1,0 +1,56 @@
+{
+  "personId": "maria_delania_estes",
+  "personName": "Maria Delania Estes",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "rhode-island-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "rhode-island",
+      "badge": "Birth Place",
+      "name": "Rhode Island",
+      "relevance": "",
+      "featured": true,
+      "lat": 41.7962409,
+      "lng": -71.5992372,
+      "wikipedia": {
+        "title": "Rhode Island",
+        "url": "https://en.wikipedia.org/wiki/Rhode_Island",
+        "summary": "Rhode Island is a state in the New England region of the Northeastern United States. It borders Connecticut to its west; Massachusetts to its north and east; and the Atlantic Ocean to its south via Rhode Island Sound and Block Island Sound; and shares a small maritime border with New York, east of L"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Warwick (Rhode Island, USA), Ford GT -- 2006 -- 1.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Warwick_%28Rhode_Island%2C_USA%29%2C_Ford_GT_--_2006_--_1.jpg/960px-Warwick_%28Rhode_Island%2C_USA%29%2C_Ford_GT_--_2006_--_1.jpg",
+        "attribution": "Dietmar Rabich",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=41.7962409,-71.5992372",
+        "embedUrl": "https://maps.google.com/maps?q=41.7962409,-71.5992372&z=12&output=embed"
+      },
+      "year": "1795"
+    },
+    {
+      "id": "victory-cayuga-new-york-death",
+      "type": "town",
+      "canonicalPlaceId": "victory-cayuga-new-york",
+      "badge": "Death",
+      "name": "Victory, Cayuga, New York",
+      "relevance": "",
+      "featured": false,
+      "lat": 43.197289,
+      "lng": -76.654393,
+      "wikimedia": {
+        "fileTitle": "File:NY370 East - Victory NY Sign (42756736492).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/NY370_East_-_Victory_NY_Sign_%2842756736492%29.jpg/960px-NY370_East_-_Victory_NY_Sign_%2842756736492%29.jpg",
+        "attribution": "formulanone from Huntsville, United States",
+        "license": "CC BY-SA 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.197289,-76.654393",
+        "embedUrl": "https://maps.google.com/maps?q=43.197289,-76.654393&z=12&output=embed"
+      },
+      "year": "1874"
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "personId": "philip_norwood",
+  "personName": "Philip Norwood",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "england-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "england",
+      "badge": "Birth Place",
+      "name": "England",
+      "relevance": "",
+      "featured": true,
+      "lat": 52.5310214,
+      "lng": -1.2649062,
+      "wikipedia": {
+        "title": "England",
+        "url": "https://en.wikipedia.org/wiki/England",
+        "summary": "England is a country that is part of the United Kingdom. It is located on the island of Great Britain, of which it covers about 62%, and more than 100 smaller adjacent islands. England shares a land border with Scotland to the north and another land border with Wales to the west, and is surrounded b"
+      },
+      "wikimedia": {
+        "fileTitle": "File:England satellite image.png",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b1/England_satellite_image.png",
+        "attribution": "Jacques Descloitres, MODIS Land Rapid Response Team, NASA/GSFC",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=52.5310214,-1.2649062",
+        "embedUrl": "https://maps.google.com/maps?q=52.5310214,-1.2649062&z=12&output=embed"
+      },
+      "year": "1638"
+    },
+    {
+      "id": "maryland-death",
+      "type": "town",
+      "canonicalPlaceId": "maryland",
+      "badge": "Death",
+      "name": "Maryland",
+      "relevance": "",
+      "featured": false,
+      "lat": 39.5162401,
+      "lng": -76.9382069,
+      "wikipedia": {
+        "title": "Maryland",
+        "url": "https://en.wikipedia.org/wiki/Maryland",
+        "summary": "Maryland is a state in the Mid-Atlantic and Southern regions of the United States. It borders Virginia to its south, West Virginia to its west, Pennsylvania to its north, and Delaware to its east, as well as with the Atlantic Ocean to its east, and the national capital and federal district of Washin"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Deep Creek Lake Maryland Panoramic View.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/1/18/Deep_Creek_Lake_Maryland_Panoramic_View.jpg",
+        "attribution": "Maryland Office of Tourism Development",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=39.5162401,-76.9382069",
+        "embedUrl": "https://maps.google.com/maps?q=39.5162401,-76.9382069&z=12&output=embed"
+      },
+      "year": "1733"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "personId": "johann_jacob_mueller",
+  "personName": "Johann Jacob Mueller",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "vorderweidenthal-pfalz-heiliges-r-misches-reich-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "vorderweidenthal-pfalz-heiliges-r-misches-reich",
+      "badge": "Birth Place",
+      "name": "Vorderweidenthal, Pfalz, Heiliges R\u00f6misches Reich",
+      "relevance": "",
+      "featured": true,
+      "year": "1704"
+    }
+  ]
+}

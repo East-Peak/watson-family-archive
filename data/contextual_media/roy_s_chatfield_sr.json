@@ -1,0 +1,56 @@
+{
+  "personId": "roy_s_chatfield_sr",
+  "personName": "Roy S Chatfield Sr.",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "lisle-dupage-illinois-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "lisle-dupage-illinois",
+      "badge": "Birth Place",
+      "name": "Lisle, DuPage, Illinois",
+      "relevance": "",
+      "featured": true,
+      "lat": 41.801159,
+      "lng": -88.0747687,
+      "wikimedia": {
+        "fileTitle": "File:Hyatt Lisle (DuPage County, IL) (2511846432).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/2/27/Hyatt_Lisle_%28DuPage_County%2C_IL%29_%282511846432%29.jpg",
+        "attribution": "DiscoverDuPage",
+        "license": "CC BY 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=41.801159,-88.0747687",
+        "embedUrl": "https://maps.google.com/maps?q=41.801159,-88.0747687&z=12&output=embed"
+      },
+      "year": "1875"
+    },
+    {
+      "id": "illinois-residence",
+      "type": "town",
+      "canonicalPlaceId": "illinois",
+      "badge": "Residence",
+      "name": "Illinois",
+      "relevance": "",
+      "featured": false,
+      "lat": 40.0796606,
+      "lng": -89.4337288,
+      "wikipedia": {
+        "title": "Illinois",
+        "url": "https://en.wikipedia.org/wiki/Illinois",
+        "summary": "Illinois is a state in the Midwestern region of the United States. It borders on Lake Michigan to its northeast, the Mississippi River to its west, and the Wabash and Ohio rivers to its south. Of the fifty U.S. states, Illinois has the fifth-largest gross domestic product (GDP), the sixth-largest po"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Skyline de Chicago desde el centro, Illinois, Estados Unidos, 2012-10-20, DD 06.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Skyline_de_Chicago_desde_el_centro%2C_Illinois%2C_Estados_Unidos%2C_2012-10-20%2C_DD_06.jpg/960px-Skyline_de_Chicago_desde_el_centro%2C_Illinois%2C_Estados_Unidos%2C_2012-10-20%2C_DD_06.jpg",
+        "attribution": "Diego Delso",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=40.0796606,-89.4337288",
+        "embedUrl": "https://maps.google.com/maps?q=40.0796606,-89.4337288&z=12&output=embed"
+      },
+      "year": "1875"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "personId": "albert_deforest",
+  "personName": "Albert Deforest",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "wolcott-wayne-new-york-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "wolcott-wayne-new-york",
+      "badge": "Birth Place",
+      "name": "Wolcott, Wayne, New York",
+      "relevance": "",
+      "featured": true,
+      "lat": 43.220622,
+      "lng": -76.814958,
+      "wikimedia": {
+        "fileTitle": "File:Wolcott, New York - 4095891464.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Wolcott%2C_New_York_-_4095891464.jpg/960px-Wolcott%2C_New_York_-_4095891464.jpg",
+        "attribution": "Dougtone",
+        "license": "CC BY-SA 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.220622,-76.814958",
+        "embedUrl": "https://maps.google.com/maps?q=43.220622,-76.814958&z=12&output=embed"
+      },
+      "year": "1878"
+    }
+  ]
+}

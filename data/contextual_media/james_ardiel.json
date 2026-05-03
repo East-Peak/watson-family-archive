@@ -1,0 +1,29 @@
+{
+  "personId": "james_ardiel",
+  "personName": "James Ardiel",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "tipperary-ireland-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "tipperary-ireland",
+      "badge": "Birth Place",
+      "name": "Tipperary, Ireland",
+      "relevance": "",
+      "featured": true,
+      "lat": 52.4734839,
+      "lng": -8.1614446,
+      "wikimedia": {
+        "fileTitle": "File:Tipperary Main Street.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/4/46/Tipperary_Main_Street.jpg",
+        "attribution": "Graham Horn",
+        "license": "CC BY-SA 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=52.4734839,-8.1614446",
+        "embedUrl": "https://maps.google.com/maps?q=52.4734839,-8.1614446&z=12&output=embed"
+      },
+      "year": "1810"
+    }
+  ]
+}

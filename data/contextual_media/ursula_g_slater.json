@@ -1,0 +1,78 @@
+{
+  "personId": "ursula_g_slater",
+  "personName": "Ursula G. Slater",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "iowa-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "iowa",
+      "badge": "Birth Place",
+      "name": "Iowa",
+      "relevance": "",
+      "featured": true,
+      "lat": 41.9216734,
+      "lng": -93.3122705,
+      "wikipedia": {
+        "title": "Iowa",
+        "url": "https://en.wikipedia.org/wiki/Iowa",
+        "summary": "Iowa is a landlocked state in the upper Midwestern region of the United States. It borders the Mississippi River to the east and the Missouri River and Big Sioux River to the west; Wisconsin to the northeast, Illinois to the east and southeast, Missouri to the south, Nebraska to the west, South Dako"
+      },
+      "wikimedia": {
+        "fileTitle": "File:High Trestle Trail Bridge, Madrid, Iowa, United States (Unsplash F9o7u-CnDJk).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/High_Trestle_Trail_Bridge%2C_Madrid%2C_Iowa%2C_United_States_%28Unsplash_F9o7u-CnDJk%29.jpg/960px-High_Trestle_Trail_Bridge%2C_Madrid%2C_Iowa%2C_United_States_%28Unsplash_F9o7u-CnDJk%29.jpg",
+        "attribution": "Tony Webster tonywebster",
+        "license": "CC0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=41.9216734,-93.3122705",
+        "embedUrl": "https://maps.google.com/maps?q=41.9216734,-93.3122705&z=12&output=embed"
+      },
+      "year": "1855"
+    },
+    {
+      "id": "kirkville-wapello-iowa-death",
+      "type": "town",
+      "canonicalPlaceId": "kirkville-wapello-iowa",
+      "badge": "Death",
+      "name": "Kirkville, Wapello, Iowa",
+      "relevance": "",
+      "featured": false,
+      "lat": 41.1454288,
+      "lng": -92.5037462,
+      "wikimedia": {
+        "fileTitle": "File:KirkvilleIowaCityHall.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/KirkvilleIowaCityHall.jpg/960px-KirkvilleIowaCityHall.jpg",
+        "attribution": "PopePompus",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=41.1454288,-92.5037462",
+        "embedUrl": "https://maps.google.com/maps?q=41.1454288,-92.5037462&z=12&output=embed"
+      },
+      "year": "1923"
+    },
+    {
+      "id": "ottumwa-wapello-iowa-residence",
+      "type": "town",
+      "canonicalPlaceId": "ottumwa-wapello-iowa",
+      "badge": "Residence",
+      "name": "Ottumwa, Wapello, Iowa",
+      "relevance": "",
+      "featured": false,
+      "lat": 41.0195659,
+      "lng": -92.4116886,
+      "wikimedia": {
+        "fileTitle": "File:Greetings from Ottumwa, Iowa - Large Letter Postcard (4237393882).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Greetings_from_Ottumwa%2C_Iowa_-_Large_Letter_Postcard_%284237393882%29.jpg/960px-Greetings_from_Ottumwa%2C_Iowa_-_Large_Letter_Postcard_%284237393882%29.jpg",
+        "attribution": "Steve Shook from Moscow, Idaho, USA",
+        "license": "CC BY 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=41.0195659,-92.4116886",
+        "embedUrl": "https://maps.google.com/maps?q=41.0195659,-92.4116886&z=12&output=embed"
+      },
+      "year": "1900"
+    }
+  ]
+}

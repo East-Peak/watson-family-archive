@@ -1,0 +1,88 @@
+{
+  "personId": "hector_menalause_powell",
+  "personName": "Hector Menalause Powell",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "montana-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "montana",
+      "badge": "Birth Place",
+      "name": "Montana",
+      "relevance": "",
+      "featured": true,
+      "lat": 47.3752671,
+      "lng": -109.638757,
+      "wikipedia": {
+        "title": "Montana",
+        "url": "https://en.wikipedia.org/wiki/Montana",
+        "summary": "Montana is a landlocked state in the Mountain West subregion of the Western United States. It is bordered by Idaho to the west, North Dakota to the east, South Dakota to the southeast, Wyoming to the south, and the Canadian provinces of Alberta, British Columbia, and Saskatchewan to the north. It is"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Greetings from Montana, The Treasure State - Large Letter Postcard (4524258511).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Greetings_from_Montana%2C_The_Treasure_State_-_Large_Letter_Postcard_%284524258511%29.jpg/960px-Greetings_from_Montana%2C_The_Treasure_State_-_Large_Letter_Postcard_%284524258511%29.jpg",
+        "attribution": "Steve Shook from Moscow, Idaho, USA",
+        "license": "CC BY 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=47.3752671,-109.638757",
+        "embedUrl": "https://maps.google.com/maps?q=47.3752671,-109.638757&z=12&output=embed"
+      },
+      "year": "1899"
+    },
+    {
+      "id": "los-angeles-county-california-death",
+      "type": "town",
+      "canonicalPlaceId": "los-angeles-county-california",
+      "badge": "Death",
+      "name": "Los Angeles County, California",
+      "relevance": "",
+      "featured": false,
+      "lat": 34.3155072,
+      "lng": -118.209681,
+      "wikipedia": {
+        "title": "Los Angeles County, California",
+        "url": "https://en.wikipedia.org/wiki/Los_Angeles_County%2C_California",
+        "summary": "Los Angeles County, sometimes abbreviated as LA County, is the most populous county in the United States, with 9,757,179 residents estimated in 2024. Its population is greater than that of 40 individual U.S. states. Comprising 88 incorporated cities and 101 unincorporated areas within a total area o"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Los Angeles (California, USA), South Olive Street -- 2012 -- 5280.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Los_Angeles_%28California%2C_USA%29%2C_South_Olive_Street_--_2012_--_5280.jpg/960px-Los_Angeles_%28California%2C_USA%29%2C_South_Olive_Street_--_2012_--_5280.jpg",
+        "attribution": "Dietmar Rabich",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=34.3155072,-118.209681",
+        "embedUrl": "https://maps.google.com/maps?q=34.3155072,-118.209681&z=12&output=embed"
+      },
+      "year": "1987"
+    },
+    {
+      "id": "madison-wi-marriage",
+      "type": "building",
+      "canonicalPlaceId": "madison-wi",
+      "badge": "Marriage",
+      "name": "Madison, WI",
+      "relevance": "",
+      "featured": false,
+      "lat": 43.07469,
+      "lng": -89.3841663,
+      "wikipedia": {
+        "title": "Madison, Wisconsin",
+        "url": "https://en.wikipedia.org/wiki/Madison%2C_Wisconsin",
+        "summary": "Madison is the capital of the U.S. state of Wisconsin. It is the second-most populous city in the state, with a population of 269,840 at the 2020 census. The Madison metropolitan area has an estimated 708,000 residents. With a downtown centrally located on an isthmus between Lakes Mendota and Monona"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Cycling Madison Wisconsin 1096.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Cycling_Madison_Wisconsin_1096.jpg/960px-Cycling_Madison_Wisconsin_1096.jpg",
+        "attribution": "Dori",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.07469,-89.3841663",
+        "embedUrl": "https://maps.google.com/maps?q=43.07469,-89.3841663&z=12&output=embed"
+      },
+      "year": "1923"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "personId": "alexander_emil_gohr_twin",
+  "personName": "Alexander Emil Gohr (twin?)",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "bremin-kreis-schwetz-west-prussia-prussia-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "bremin-kreis-schwetz-west-prussia-prussia",
+      "badge": "Birth Place",
+      "name": "Bremin, Kreis Schwetz, West Prussia, Prussia",
+      "relevance": "",
+      "featured": true,
+      "lat": 40.0913384,
+      "lng": -75.3698158,
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=40.0913384,-75.3698158",
+        "embedUrl": "https://maps.google.com/maps?q=40.0913384,-75.3698158&z=12&output=embed"
+      },
+      "year": "1850"
+    },
+    {
+      "id": "gohr-ranch-madison-county-id-death",
+      "type": "town",
+      "canonicalPlaceId": "gohr-ranch-madison-county-id",
+      "badge": "Death",
+      "name": "Gohr Ranch, Madison County, ID",
+      "relevance": "",
+      "featured": false,
+      "lat": 43.7740801,
+      "lng": -111.6304151,
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.7740801,-111.6304151",
+        "embedUrl": "https://maps.google.com/maps?q=43.7740801,-111.6304151&z=12&output=embed"
+      },
+      "year": "1918"
+    }
+  ]
+}

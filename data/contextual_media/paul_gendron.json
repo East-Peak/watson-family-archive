@@ -1,0 +1,29 @@
+{
+  "personId": "paul_gendron",
+  "personName": "Paul Gendron",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "canada-eng-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "canada-eng",
+      "badge": "Birth Place",
+      "name": "Canada Eng",
+      "relevance": "",
+      "featured": true,
+      "lat": 50.9625195,
+      "lng": -1.5884921,
+      "wikimedia": {
+        "fileTitle": "File:Centerm at night as seen from Canada Place.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Centerm_at_night_as_seen_from_Canada_Place.jpg/960px-Centerm_at_night_as_seen_from_Canada_Place.jpg",
+        "attribution": "Dllu",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=50.9625195,-1.5884921",
+        "embedUrl": "https://maps.google.com/maps?q=50.9625195,-1.5884921&z=12&output=embed"
+      },
+      "year": "1835"
+    }
+  ]
+}

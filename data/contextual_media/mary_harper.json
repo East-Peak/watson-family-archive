@@ -1,0 +1,39 @@
+{
+  "personId": "mary_harper",
+  "personName": "Mary Harper",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "berks-province-of-pennsylvania-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "berks-province-of-pennsylvania",
+      "badge": "Birth Place",
+      "name": "Berks, Province of Pennsylvania",
+      "relevance": "",
+      "featured": true,
+      "year": "1755"
+    },
+    {
+      "id": "henry-kentucky-death",
+      "type": "town",
+      "canonicalPlaceId": "henry-kentucky",
+      "badge": "Death",
+      "name": "Henry, Kentucky",
+      "relevance": "",
+      "featured": false,
+      "lat": 38.447983,
+      "lng": -85.1191168,
+      "wikimedia": {
+        "fileTitle": "File:Henry County, Kentucky courthouse.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Henry_County%2C_Kentucky_courthouse.jpg/960px-Henry_County%2C_Kentucky_courthouse.jpg",
+        "attribution": "W.marsh",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=38.447983,-85.1191168",
+        "embedUrl": "https://maps.google.com/maps?q=38.447983,-85.1191168&z=12&output=embed"
+      },
+      "year": "1810"
+    }
+  ]
+}

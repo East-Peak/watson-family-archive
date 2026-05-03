@@ -1,0 +1,127 @@
+{
+  "personId": "walter_cecil_owen",
+  "personName": "Walter Cecil Owen",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "trenton-near-trenton-prairie-pierce-county-wisconsin-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "trenton-near-trenton-prairie-pierce-county-wisconsin",
+      "badge": "Birth Place",
+      "name": "Trenton (near Trenton Prairie), Pierce County, Wisconsin",
+      "relevance": "",
+      "featured": true,
+      "lat": 44.7186568,
+      "lng": -92.3786114,
+      "wikimedia": {
+        "fileTitle": "File:Transactions of the Wisconsin Academy of Sciences, Arts, and Letters (IA transacti434419541955wisc).pdf",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Transactions_of_the_Wisconsin_Academy_of_Sciences%2C_Arts%2C_and_Letters_%28IA_transacti434419541955wisc%29.pdf/page1-825px-Transactions_of_the_Wisconsin_Academy_of_Sciences%2C_Arts%2C_and_Letters_%28IA_transacti434419541955wisc%29.pdf.jpg",
+        "attribution": "Wisconsin Academy of Sciences, Arts, and Letters",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=44.7186568,-92.3786114",
+        "embedUrl": "https://maps.google.com/maps?q=44.7186568,-92.3786114&z=12&output=embed"
+      },
+      "year": "1868"
+    },
+    {
+      "id": "saint-petersburg-florida-death",
+      "type": "town",
+      "canonicalPlaceId": "saint-petersburg-florida",
+      "badge": "Death",
+      "name": "Saint Petersburg, Florida",
+      "relevance": "",
+      "featured": false,
+      "lat": 27.7712264,
+      "lng": -82.6340259,
+      "wikipedia": {
+        "title": "St. Petersburg, Florida",
+        "url": "https://en.wikipedia.org/wiki/St._Petersburg%2C_Florida",
+        "summary": "St. Petersburg is a city in Pinellas County, Florida, United States. As of the 2020 census, the population was 258,308, making it the fifth-most populous city in Florida and the most populous city in the state that is not a county seat. It is the second-most populous city in the Tampa Bay area, whic"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Clarke and the Himselfs - Saint Petersburg Florida State Theatre, 2015.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Clarke_and_the_Himselfs_-_Saint_Petersburg_Florida_State_Theatre%2C_2015.jpg/960px-Clarke_and_the_Himselfs_-_Saint_Petersburg_Florida_State_Theatre%2C_2015.jpg",
+        "attribution": "Distinguished Reflections",
+        "license": "CC BY 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=27.7712264,-82.6340259",
+        "embedUrl": "https://maps.google.com/maps?q=27.7712264,-82.6340259&z=12&output=embed"
+      },
+      "year": "1934"
+    },
+    {
+      "id": "maiden-rock-cemetery-marriage",
+      "type": "building",
+      "canonicalPlaceId": "maiden-rock-cemetery",
+      "badge": "Marriage",
+      "name": "Maiden Rock Cemetery",
+      "relevance": "",
+      "featured": false,
+      "lat": 44.5716285,
+      "lng": -92.321158,
+      "wikimedia": {
+        "fileTitle": "File:The Woodlawn cemetery in North Chelsea and Malden .. (IA woodlawncemetery00full).pdf",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/The_Woodlawn_cemetery_in_North_Chelsea_and_Malden_.._%28IA_woodlawncemetery00full%29.pdf/page1-693px-The_Woodlawn_cemetery_in_North_Chelsea_and_Malden_.._%28IA_woodlawncemetery00full%29.pdf.jpg",
+        "attribution": "[Fuller, Henry Weld], 1810-1889. [from old catalog]",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=44.5716285,-92.321158",
+        "embedUrl": "https://maps.google.com/maps?q=44.5716285,-92.321158&z=12&output=embed"
+      },
+      "year": "1891"
+    },
+    {
+      "id": "springfield-corners-dane-wisconsin-residence",
+      "type": "town",
+      "canonicalPlaceId": "springfield-corners-dane-wisconsin",
+      "badge": "Residence",
+      "name": "Springfield Corners, Dane, Wisconsin",
+      "relevance": "",
+      "featured": false,
+      "lat": 43.1920223,
+      "lng": -89.5657147,
+      "wikimedia": {
+        "fileTitle": "File:Springfield Corners Wisconsin Sign.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Springfield_Corners_Wisconsin_Sign.jpg/960px-Springfield_Corners_Wisconsin_Sign.jpg",
+        "attribution": "Royalbroil",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.1920223,-89.5657147",
+        "embedUrl": "https://maps.google.com/maps?q=43.1920223,-89.5657147&z=12&output=embed"
+      },
+      "year": "1920"
+    },
+    {
+      "id": "madison-wi-residence",
+      "type": "town",
+      "canonicalPlaceId": "madison-wi",
+      "badge": "Residence",
+      "name": "Madison, WI",
+      "relevance": "",
+      "featured": false,
+      "lat": 43.07469,
+      "lng": -89.3841663,
+      "wikipedia": {
+        "title": "Madison, Wisconsin",
+        "url": "https://en.wikipedia.org/wiki/Madison%2C_Wisconsin",
+        "summary": "Madison is the capital of the U.S. state of Wisconsin. It is the second-most populous city in the state, with a population of 269,840 at the 2020 census. The Madison metropolitan area has an estimated 708,000 residents. With a downtown centrally located on an isthmus between Lakes Mendota and Monona"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Cycling Madison Wisconsin 1096.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Cycling_Madison_Wisconsin_1096.jpg/960px-Cycling_Madison_Wisconsin_1096.jpg",
+        "attribution": "Dori",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.07469,-89.3841663",
+        "embedUrl": "https://maps.google.com/maps?q=43.07469,-89.3841663&z=12&output=embed"
+      },
+      "year": "1934"
+    }
+  ]
+}

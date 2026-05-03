@@ -1,0 +1,29 @@
+{
+  "personId": "edward_bennett_sr",
+  "personName": "Edward Bennett",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "northumberland-virginia-death",
+      "type": "town",
+      "canonicalPlaceId": "northumberland-virginia",
+      "badge": "Death",
+      "name": "Northumberland, Virginia",
+      "relevance": "",
+      "featured": true,
+      "lat": 37.9314992,
+      "lng": -76.4836686,
+      "wikimedia": {
+        "fileTitle": "File:Northumberland House and Mantua, Virginia Historical Marker No. JT-12, Claraville, Virginia (14486109955).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Northumberland_House_and_Mantua%2C_Virginia_Historical_Marker_No._JT-12%2C_Claraville%2C_Virginia_%2814486109955%29.jpg/960px-Northumberland_House_and_Mantua%2C_Virginia_Historical_Marker_No._JT-12%2C_Claraville%2C_Virginia_%2814486109955%29.jpg",
+        "attribution": "Ken Lund from Reno, Nevada, USA",
+        "license": "CC BY-SA 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=37.9314992,-76.4836686",
+        "embedUrl": "https://maps.google.com/maps?q=37.9314992,-76.4836686&z=12&output=embed"
+      },
+      "year": "1725"
+    }
+  ]
+}

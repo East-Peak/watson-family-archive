@@ -1,0 +1,56 @@
+{
+  "personId": "edith_may_hutchinson",
+  "personName": "Edith May Hutchinson",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "colton-san-bernardino-california-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "colton-san-bernardino-california",
+      "badge": "Birth Place",
+      "name": "Colton, San Bernardino, California",
+      "relevance": "",
+      "featured": true,
+      "lat": 34.0739016,
+      "lng": -117.3136547,
+      "wikimedia": {
+        "fileTitle": "File:Colton California Aerial (50637134478).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Colton_California_Aerial_%2850637134478%29.jpg/960px-Colton_California_Aerial_%2850637134478%29.jpg",
+        "attribution": "formulanone",
+        "license": "CC BY-SA 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=34.0739016,-117.3136547",
+        "embedUrl": "https://maps.google.com/maps?q=34.0739016,-117.3136547&z=12&output=embed"
+      },
+      "year": "1891"
+    },
+    {
+      "id": "san-bernardino-california-death",
+      "type": "town",
+      "canonicalPlaceId": "san-bernardino-california",
+      "badge": "Death",
+      "name": "San Bernardino, California",
+      "relevance": "",
+      "featured": false,
+      "lat": 34.8253019,
+      "lng": -116.0833144,
+      "wikipedia": {
+        "title": "San Bernardino, California",
+        "url": "https://en.wikipedia.org/wiki/San_Bernardino%2C_California",
+        "summary": "San Bernardino is a city in and the county seat of San Bernardino County, California, United States. Located in the Inland Empire region of Southern California, the city had a population of 222,101 in the 2020 census, making it the 18th-most populous city in California. The Riverside\u2013San Bernardino "
+      },
+      "wikimedia": {
+        "fileTitle": "File:Downtown San Bernardino.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Downtown_San_Bernardino.jpg",
+        "attribution": "House10902 (talk).",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=34.8253019,-116.0833144",
+        "embedUrl": "https://maps.google.com/maps?q=34.8253019,-116.0833144&z=12&output=embed"
+      },
+      "year": "1985"
+    }
+  ]
+}

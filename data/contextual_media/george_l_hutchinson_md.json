@@ -1,0 +1,83 @@
+{
+  "personId": "george_l_hutchinson_md",
+  "personName": "George L. Hutchinson M.D.",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "linn-county-iowa-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "linn-county-iowa",
+      "badge": "Birth Place",
+      "name": "Linn County, Iowa",
+      "relevance": "",
+      "featured": true,
+      "lat": 42.0631825,
+      "lng": -91.6037932,
+      "wikipedia": {
+        "title": "Linn County, Iowa",
+        "url": "https://en.wikipedia.org/wiki/Linn_County%2C_Iowa",
+        "summary": "Linn County is a county located in the U.S. state of Iowa. As of the 2020 census, the population was 230,299, and was estimated to be 231,762 in 2024, making it the second-most populous county in Iowa. The county seat and the largest city is Cedar Rapids. Linn County is named in honor of Senator Lew"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Linn County, Iowa - 1902 Cram's Modern Atlas.png",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Linn_County%2C_Iowa_-_1902_Cram%27s_Modern_Atlas.png",
+        "attribution": "George F. Cram and Company, 1902",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=42.0631825,-91.6037932",
+        "embedUrl": "https://maps.google.com/maps?q=42.0631825,-91.6037932&z=12&output=embed"
+      },
+      "year": "1859"
+    },
+    {
+      "id": "los-angeles-ca-death",
+      "type": "town",
+      "canonicalPlaceId": "los-angeles-ca",
+      "badge": "Death",
+      "name": "Los Angeles, CA",
+      "relevance": "",
+      "featured": false,
+      "lat": 34.0536909,
+      "lng": -118.242766,
+      "wikipedia": {
+        "title": "Los Angeles",
+        "url": "https://en.wikipedia.org/wiki/Los_Angeles",
+        "summary": "Los Angeles is the most populous city in the U.S. state of California, and the commercial, financial, and cultural center of Southern California. With an estimated 3.88 million residents within the city limits as of 2024, it is the second-most populous city in the United States, behind New York City"
+      },
+      "wikimedia": {
+        "fileTitle": "File:USS Los Angeles (CA-135) in the Far East, 13 October 1952 (NH 97386).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/USS_Los_Angeles_%28CA-135%29_in_the_Far_East%2C_13_October_1952_%28NH_97386%29.jpg/960px-USS_Los_Angeles_%28CA-135%29_in_the_Far_East%2C_13_October_1952_%28NH_97386%29.jpg",
+        "attribution": "Unknown authorUnknown author",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=34.0536909,-118.242766",
+        "embedUrl": "https://maps.google.com/maps?q=34.0536909,-118.242766&z=12&output=embed"
+      },
+      "year": "1921"
+    },
+    {
+      "id": "colton-san-bernardino-california-marriage",
+      "type": "building",
+      "canonicalPlaceId": "colton-san-bernardino-california",
+      "badge": "Marriage",
+      "name": "Colton, San Bernardino, California",
+      "relevance": "",
+      "featured": false,
+      "lat": 34.0739016,
+      "lng": -117.3136547,
+      "wikimedia": {
+        "fileTitle": "File:Colton California Aerial (50637134478).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Colton_California_Aerial_%2850637134478%29.jpg/960px-Colton_California_Aerial_%2850637134478%29.jpg",
+        "attribution": "formulanone",
+        "license": "CC BY-SA 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=34.0739016,-117.3136547",
+        "embedUrl": "https://maps.google.com/maps?q=34.0739016,-117.3136547&z=12&output=embed"
+      },
+      "year": "1888"
+    }
+  ]
+}

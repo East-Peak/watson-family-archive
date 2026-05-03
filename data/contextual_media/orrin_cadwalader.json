@@ -1,0 +1,83 @@
+{
+  "personId": "orrin_cadwalader",
+  "personName": "Orrin Cadwalader",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "fostoria-ohio-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "fostoria-ohio",
+      "badge": "Birth Place",
+      "name": "Fostoria, Ohio",
+      "relevance": "",
+      "featured": true,
+      "lat": 41.1574297,
+      "lng": -83.4141061,
+      "wikipedia": {
+        "title": "Fostoria, Ohio",
+        "url": "https://en.wikipedia.org/wiki/Fostoria%2C_Ohio",
+        "summary": "Fostoria is a city located at the convergence of Hancock, Seneca, and Wood counties in the northwestern part of the U.S. state of Ohio. The population was 13,046 at the 2020 Census, slightly down from 13,441 at the 2010 Census. It is approximately 40 miles (64\u00a0km) south of Toledo and 90 miles (140\u00a0k"
+      },
+      "wikimedia": {
+        "fileTitle": "File:St Wendelin's Catholic School & Church, Fostoria, Ohio - DPLA - 4109f636618f58d0829ee2e9287b4c0f (page 1).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/St_Wendelin%27s_Catholic_School_%26_Church%2C_Fostoria%2C_Ohio_-_DPLA_-_4109f636618f58d0829ee2e9287b4c0f_%28page_1%29.jpg/960px-St_Wendelin%27s_Catholic_School_%26_Church%2C_Fostoria%2C_Ohio_-_DPLA_-_4109f636618f58d0829ee2e9287b4c0f_%28page_1%29.jpg",
+        "attribution": null,
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=41.1574297,-83.4141061",
+        "embedUrl": "https://maps.google.com/maps?q=41.1574297,-83.4141061&z=12&output=embed"
+      },
+      "year": "1837"
+    },
+    {
+      "id": "tarpon-springs-pinellas-florida-death",
+      "type": "town",
+      "canonicalPlaceId": "tarpon-springs-pinellas-florida",
+      "badge": "Death",
+      "name": "Tarpon Springs, Pinellas, Florida",
+      "relevance": "",
+      "featured": false,
+      "lat": 28.1470965,
+      "lng": -82.756367,
+      "wikimedia": {
+        "fileTitle": "File:Greetings from Tarpon Springs, Florida - Large Letter Postcard (8465703227).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Greetings_from_Tarpon_Springs%2C_Florida_-_Large_Letter_Postcard_%288465703227%29.jpg/960px-Greetings_from_Tarpon_Springs%2C_Florida_-_Large_Letter_Postcard_%288465703227%29.jpg",
+        "attribution": "Steve Shook from Moscow, Idaho, USA",
+        "license": "CC BY 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=28.1470965,-82.756367",
+        "embedUrl": "https://maps.google.com/maps?q=28.1470965,-82.756367&z=12&output=embed"
+      },
+      "year": "1917"
+    },
+    {
+      "id": "ohio-residence",
+      "type": "town",
+      "canonicalPlaceId": "ohio",
+      "badge": "Residence",
+      "name": "Ohio",
+      "relevance": "",
+      "featured": false,
+      "lat": 40.2253569,
+      "lng": -82.6881395,
+      "wikipedia": {
+        "title": "Ohio",
+        "url": "https://en.wikipedia.org/wiki/Ohio",
+        "summary": "Ohio is a state in the Midwestern region of the United States. It borders the Canadian province of Ontario to the north, Pennsylvania to the east, West Virginia to the southeast, Kentucky to the southwest, Indiana to the west, and Michigan to the northwest. Of the 50 U.S. states, it is the 34th-larg"
+      },
+      "wikimedia": {
+        "fileTitle": "File:State of Ohio waste characterization study - DPLA - 5ed3375f579555cb4eca42f08202fc02.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/State_of_Ohio_waste_characterization_study_-_DPLA_-_5ed3375f579555cb4eca42f08202fc02.jpg/960px-State_of_Ohio_waste_characterization_study_-_DPLA_-_5ed3375f579555cb4eca42f08202fc02.jpg",
+        "attribution": "Engineering Solutions &amp; Design, Inc",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=40.2253569,-82.6881395",
+        "embedUrl": "https://maps.google.com/maps?q=40.2253569,-82.6881395&z=12&output=embed"
+      },
+      "year": "1837"
+    }
+  ]
+}

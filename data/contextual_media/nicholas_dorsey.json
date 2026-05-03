@@ -1,0 +1,61 @@
+{
+  "personId": "nicholas_dorsey",
+  "personName": "Nicholas Dorsey Jr.",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "baltimore-county-maryland-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "baltimore-county-maryland",
+      "badge": "Birth Place",
+      "name": "Baltimore County, Maryland",
+      "relevance": "",
+      "featured": true,
+      "lat": 39.4445243,
+      "lng": -76.6483482,
+      "wikipedia": {
+        "title": "Baltimore County, Maryland",
+        "url": "https://en.wikipedia.org/wiki/Baltimore_County%2C_Maryland",
+        "summary": "Baltimore County is the third-most populous county in the U.S. state of Maryland. The county is part of the Central Maryland region of the state. Baltimore County partly surrounds but does not include the independent city of Baltimore. It is part of the Northeast megalopolis, which stretches from No"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Baltimore County, Maryland LOC 81690004.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Baltimore_County%2C_Maryland_LOC_81690004.jpg/960px-Baltimore_County%2C_Maryland_LOC_81690004.jpg",
+        "attribution": "United States. Soil Conservation Service; Geological Survey (U.S.)",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=39.4445243,-76.6483482",
+        "embedUrl": "https://maps.google.com/maps?q=39.4445243,-76.6483482&z=12&output=embed"
+      },
+      "year": "1712"
+    },
+    {
+      "id": "carroll-county-maryland-residence",
+      "type": "town",
+      "canonicalPlaceId": "carroll-county-maryland",
+      "badge": "Residence",
+      "name": "Carroll County, Maryland",
+      "relevance": "",
+      "featured": false,
+      "lat": 39.5685399,
+      "lng": -77.026707,
+      "wikipedia": {
+        "title": "Carroll County, Maryland",
+        "url": "https://en.wikipedia.org/wiki/Carroll_County%2C_Maryland",
+        "summary": "Carroll County is a county located in the U.S. state of Maryland. As of the 2020 United States census, the population was 172,891. Its county seat is Westminster. The county is part of the Central Maryland region of the state. Carroll County is included in the Washington-Baltimore-Arlington, DC-MD-V"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Carroll County Courthouse - Westminster, Maryland 01.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Carroll_County_Courthouse_-_Westminster%2C_Maryland_01.jpg/960px-Carroll_County_Courthouse_-_Westminster%2C_Maryland_01.jpg",
+        "attribution": "Farragutful",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=39.5685399,-77.026707",
+        "embedUrl": "https://maps.google.com/maps?q=39.5685399,-77.026707&z=12&output=embed"
+      },
+      "year": "1780"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "personId": "elizabeth_alice_davis",
+  "personName": "Elizabeth Alice Davis",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "south-bend-blue-earth-mn-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "south-bend-blue-earth-mn",
+      "badge": "Birth Place",
+      "name": "South Bend, Blue Earth, MN",
+      "relevance": "",
+      "featured": true,
+      "lat": 44.1465861,
+      "lng": -94.0849391,
+      "wikimedia": {
+        "fileTitle": "File:Congregational Church, South Bend Township, Minnesota - DPLA - 646ad372b93ae047dff4a3cce91322d7.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Congregational_Church%2C_South_Bend_Township%2C_Minnesota_-_DPLA_-_646ad372b93ae047dff4a3cce91322d7.jpg/960px-Congregational_Church%2C_South_Bend_Township%2C_Minnesota_-_DPLA_-_646ad372b93ae047dff4a3cce91322d7.jpg",
+        "attribution": null,
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=44.1465861,-94.0849391",
+        "embedUrl": "https://maps.google.com/maps?q=44.1465861,-94.0849391&z=12&output=embed"
+      },
+      "year": "1858"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "version": "1.0.0",
+  "generated_at": "2026-05-03T14:16:05Z",
+  "source_commit": "bb77a68ac45547fe0bad6e182ec3b1a934f28ad0",
+  "source_clean": true,
+  "cutoff_rules": {
+    "status_whitelist": [
+      "verified",
+      "partially_verified",
+      "deep_verified"
+    ],
+    "exclude_status_living": true,
+    "include_if_birth_year_lt_1925_and_death_known": true,
+    "include_if_birth_year_lt_1900": true,
+    "include_if_earliest_source_year_lt_1900": true,
+    "drop_all_source_urls": true,
+    "drop_all_external_ids": true
+  },
+  "counts": {
+    "persons_in_private_tree": 2613,
+    "persons_eligible": 1552,
+    "persons_excluded": 1061,
+    "contextual_media_files_shipped": 925,
+    "places_shipped": 578,
+    "places_rejected_by_name_filter": 0,
+    "collision_review_count": 224,
+    "collision_review_confirmed_count": 224
+  }
+}

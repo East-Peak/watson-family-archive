@@ -1,0 +1,61 @@
+{
+  "personId": "gladys_martin",
+  "personName": "Gladys Martin",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "lawrence-illinois-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "lawrence-illinois",
+      "badge": "Birth Place",
+      "name": "Lawrence, Illinois",
+      "relevance": "",
+      "featured": true,
+      "lat": 38.710333,
+      "lng": -87.7143359,
+      "wikipedia": {
+        "title": "Lawrence, Illinois",
+        "url": "https://en.wikipedia.org/wiki/Lawrence%2C_Illinois",
+        "summary": "Lawrence is an unincorporated community and census-designated place in Chemung Township, McHenry County, Illinois, United States. Lawrence is 2 miles (3.2\u00a0km) northwest of Harvard. It was named a CDP before the 2020 census, at which time it had a population of 220."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Lawrence County Courthouse in Lawrenceville.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Lawrence_County_Courthouse_in_Lawrenceville.jpg/960px-Lawrence_County_Courthouse_in_Lawrenceville.jpg",
+        "attribution": "Ed Brumley",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=38.710333,-87.7143359",
+        "embedUrl": "https://maps.google.com/maps?q=38.710333,-87.7143359&z=12&output=embed"
+      },
+      "year": "1894"
+    },
+    {
+      "id": "illinois-residence",
+      "type": "town",
+      "canonicalPlaceId": "illinois",
+      "badge": "Residence",
+      "name": "Illinois",
+      "relevance": "",
+      "featured": false,
+      "lat": 40.0796606,
+      "lng": -89.4337288,
+      "wikipedia": {
+        "title": "Illinois",
+        "url": "https://en.wikipedia.org/wiki/Illinois",
+        "summary": "Illinois is a state in the Midwestern region of the United States. It borders on Lake Michigan to its northeast, the Mississippi River to its west, and the Wabash and Ohio rivers to its south. Of the fifty U.S. states, Illinois has the fifth-largest gross domestic product (GDP), the sixth-largest po"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Skyline de Chicago desde el centro, Illinois, Estados Unidos, 2012-10-20, DD 06.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Skyline_de_Chicago_desde_el_centro%2C_Illinois%2C_Estados_Unidos%2C_2012-10-20%2C_DD_06.jpg/960px-Skyline_de_Chicago_desde_el_centro%2C_Illinois%2C_Estados_Unidos%2C_2012-10-20%2C_DD_06.jpg",
+        "attribution": "Diego Delso",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=40.0796606,-89.4337288",
+        "embedUrl": "https://maps.google.com/maps?q=40.0796606,-89.4337288&z=12&output=embed"
+      },
+      "year": "1894"
+    }
+  ]
+}

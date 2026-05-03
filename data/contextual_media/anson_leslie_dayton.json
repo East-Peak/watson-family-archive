@@ -1,0 +1,34 @@
+{
+  "personId": "anson_leslie_dayton",
+  "personName": "Anson Leslie Dayton",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "chicago-death",
+      "type": "town",
+      "canonicalPlaceId": "chicago",
+      "badge": "Death",
+      "name": "Chicago",
+      "relevance": "",
+      "featured": true,
+      "lat": 41.8755616,
+      "lng": -87.6244212,
+      "wikipedia": {
+        "title": "Chicago",
+        "url": "https://en.wikipedia.org/wiki/Chicago",
+        "summary": "Chicago is the most populous city in the U.S. state of Illinois and in the Midwestern United States. Located on the western shore of Lake Michigan, it is the third-most populous city in the United States, with a population of 2.74 million at the 2020 census. The Chicago metropolitan area has 9.41 mi"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Chicago Union Station 1943.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Chicago_Union_Station_1943.jpg/960px-Chicago_Union_Station_1943.jpg",
+        "attribution": "Jack Delano",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=41.8755616,-87.6244212",
+        "embedUrl": "https://maps.google.com/maps?q=41.8755616,-87.6244212&z=12&output=embed"
+      },
+      "year": "1904"
+    }
+  ]
+}

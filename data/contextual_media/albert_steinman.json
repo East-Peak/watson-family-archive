@@ -1,0 +1,34 @@
+{
+  "personId": "albert_steinman",
+  "personName": "Albert Steinman",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "switzerland-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "switzerland",
+      "badge": "Birth Place",
+      "name": "Switzerland",
+      "relevance": "",
+      "featured": true,
+      "lat": 46.7985624,
+      "lng": 8.2319736,
+      "wikipedia": {
+        "title": "Switzerland",
+        "url": "https://en.wikipedia.org/wiki/Switzerland",
+        "summary": "Switzerland, officially the Swiss Confederation, is a landlocked country located at the intersection of Central, Western, and Southern Europe. It is bordered by Germany to the north, France to the west, Austria and Liechtenstein to the east, and Italy to the south. Switzerland is geographically divi"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Val\u00e8re castle in Sion, Switzerland, Photo by Giles Laurent.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Val%C3%A8re_castle_in_Sion%2C_Switzerland%2C_Photo_by_Giles_Laurent.jpg/960px-Val%C3%A8re_castle_in_Sion%2C_Switzerland%2C_Photo_by_Giles_Laurent.jpg",
+        "attribution": "Giles Laurent",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=46.7985624,8.2319736",
+        "embedUrl": "https://maps.google.com/maps?q=46.7985624,8.2319736&z=12&output=embed"
+      },
+      "year": "1844"
+    }
+  ]
+}

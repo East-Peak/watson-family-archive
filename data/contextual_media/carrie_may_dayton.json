@@ -1,0 +1,61 @@
+{
+  "personId": "carrie_may_dayton",
+  "personName": "Carrie May Dayton",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "sterling-illinois-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "sterling-illinois",
+      "badge": "Birth Place",
+      "name": "Sterling, Illinois",
+      "relevance": "",
+      "featured": true,
+      "lat": 41.788253,
+      "lng": -89.6953656,
+      "wikipedia": {
+        "title": "Sterling, Illinois",
+        "url": "https://en.wikipedia.org/wiki/Sterling%2C_Illinois",
+        "summary": "Sterling is a city in Whiteside County, Illinois, United States, along the Rock River. The population was 14,782 at the 2020 census, down from 15,370 in 2010. Formerly nicknamed \"Hardware Capital of the World\", the city has long been associated with manufacturing and the steel industry."
+      },
+      "wikimedia": {
+        "fileTitle": "File:TMart Tree, Sterling Illinois (7174746737).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/TMart_Tree%2C_Sterling_Illinois_%287174746737%29.jpg/960px-TMart_Tree%2C_Sterling_Illinois_%287174746737%29.jpg",
+        "attribution": "Wayne  Wilkinson",
+        "license": "CC BY 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=41.788253,-89.6953656",
+        "embedUrl": "https://maps.google.com/maps?q=41.788253,-89.6953656&z=12&output=embed"
+      },
+      "year": "1864"
+    },
+    {
+      "id": "south-pasadena-ca-death",
+      "type": "town",
+      "canonicalPlaceId": "south-pasadena-ca",
+      "badge": "Death",
+      "name": "South Pasadena, CA",
+      "relevance": "",
+      "featured": false,
+      "lat": 34.1133062,
+      "lng": -118.1478291,
+      "wikipedia": {
+        "title": "South Pasadena, California",
+        "url": "https://en.wikipedia.org/wiki/South_Pasadena%2C_California",
+        "summary": "South Pasadena is a city in Los Angeles County, California, United States. As of the 2020 census, it had a population of 26,943, up from 25,619 at the 2010 census."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Southpasadena ca cityhall.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Southpasadena_ca_cityhall.jpg/960px-Southpasadena_ca_cityhall.jpg",
+        "attribution": "The original uploader was Geographer at English Wikipedia.",
+        "license": "CC BY 2.5"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=34.1133062,-118.1478291",
+        "embedUrl": "https://maps.google.com/maps?q=34.1133062,-118.1478291&z=12&output=embed"
+      },
+      "year": "1939"
+    }
+  ]
+}

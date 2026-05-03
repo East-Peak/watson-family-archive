@@ -1,0 +1,56 @@
+{
+  "personId": "nancy_ford",
+  "personName": "Nancy Ann Ford",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "crab-orchard-lincoln-kentucky-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "crab-orchard-lincoln-kentucky",
+      "badge": "Birth Place",
+      "name": "Crab Orchard, Lincoln, Kentucky",
+      "relevance": "",
+      "featured": true,
+      "lat": 37.4645267,
+      "lng": -84.5066044,
+      "wikimedia": {
+        "fileTitle": "File:KYMap-doton-CrabOrchard.PNG",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/c/ce/KYMap-doton-CrabOrchard.PNG",
+        "attribution": "The original uploader was Seth Ilys at English Wikipedia.",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=37.4645267,-84.5066044",
+        "embedUrl": "https://maps.google.com/maps?q=37.4645267,-84.5066044&z=12&output=embed"
+      },
+      "year": "1786"
+    },
+    {
+      "id": "jefferson-indiana-death",
+      "type": "town",
+      "canonicalPlaceId": "jefferson-indiana",
+      "badge": "Death",
+      "name": "Jefferson, Indiana",
+      "relevance": "",
+      "featured": false,
+      "lat": 38.8166724,
+      "lng": -85.4299489,
+      "wikipedia": {
+        "title": "Jefferson, Indiana",
+        "url": "https://en.wikipedia.org/wiki/Jefferson%2C_Indiana",
+        "summary": "Jefferson is an unincorporated community in Washington Township, Clinton County, Indiana. The town is named for U.S. President Thomas Jefferson."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Jefferson County Indiana Courthouse.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Jefferson_County_Indiana_Courthouse.jpg",
+        "attribution": "Photo by Calvin Beale, as an employee of the Economic Research Service, part of the United States Department of Agriculture.",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=38.8166724,-85.4299489",
+        "embedUrl": "https://maps.google.com/maps?q=38.8166724,-85.4299489&z=12&output=embed"
+      },
+      "year": "1850"
+    }
+  ]
+}

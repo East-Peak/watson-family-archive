@@ -1,0 +1,56 @@
+{
+  "personId": "charles_w_meadows",
+  "personName": "Charles W Meadows",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "texas-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "texas",
+      "badge": "Birth Place",
+      "name": "Texas",
+      "relevance": "",
+      "featured": true,
+      "lat": 31.2638905,
+      "lng": -98.5456116,
+      "wikipedia": {
+        "title": "Texas",
+        "url": "https://en.wikipedia.org/wiki/Texas",
+        "summary": "Texas is the most populous state in the Southern United States. It borders Louisiana to the east, Arkansas to the northeast, Oklahoma to the north, New Mexico to the west, and an international border with the Mexican states of Chihuahua, Coahuila, Nuevo Le\u00f3n, and Tamaulipas to the south and southwes"
+      },
+      "wikimedia": {
+        "fileTitle": "File:University of North Texas September 2015 40 (pedestrian bridge).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/University_of_North_Texas_September_2015_40_%28pedestrian_bridge%29.jpg/960px-University_of_North_Texas_September_2015_40_%28pedestrian_bridge%29.jpg",
+        "attribution": "Michael Barera",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=31.2638905,-98.5456116",
+        "embedUrl": "https://maps.google.com/maps?q=31.2638905,-98.5456116&z=12&output=embed"
+      },
+      "year": "1894"
+    },
+    {
+      "id": "justice-precinct-6-eastland-tx-residence",
+      "type": "town",
+      "canonicalPlaceId": "justice-precinct-6-eastland-tx",
+      "badge": "Residence",
+      "name": "Justice Precinct 6, Eastland, TX",
+      "relevance": "",
+      "featured": false,
+      "lat": 32.2978594,
+      "lng": -98.8630896,
+      "wikimedia": {
+        "fileTitle": "File:1940 Census Enumeration District Descriptions - Texas - Eastland County - ED 67-21, ED 67-22, ED 67-23 - NARA - 5882622.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/1940_Census_Enumeration_District_Descriptions_-_Texas_-_Eastland_County_-_ED_67-21%2C_ED_67-22%2C_ED_67-23_-_NARA_-_5882622.jpg/960px-1940_Census_Enumeration_District_Descriptions_-_Texas_-_Eastland_County_-_ED_67-21%2C_ED_67-22%2C_ED_67-23_-_NARA_-_5882622.jpg",
+        "attribution": "Unknown authorUnknown author or not provided",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=32.2978594,-98.8630896",
+        "embedUrl": "https://maps.google.com/maps?q=32.2978594,-98.8630896&z=12&output=embed"
+      },
+      "year": "1900"
+    }
+  ]
+}

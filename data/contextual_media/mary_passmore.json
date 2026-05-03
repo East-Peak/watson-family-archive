@@ -1,0 +1,55 @@
+{
+  "personId": "mary_passmore",
+  "personName": "Mary Passmore",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "cecil-county-maryland-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "cecil-county-maryland",
+      "badge": "Birth Place",
+      "name": "Cecil County, Maryland",
+      "relevance": "",
+      "featured": true,
+      "lat": 39.5729428,
+      "lng": -75.9381806,
+      "wikipedia": {
+        "title": "Cecil County, Maryland",
+        "url": "https://en.wikipedia.org/wiki/Cecil_County%2C_Maryland",
+        "summary": "Cecil County is located in the U.S. state of Maryland at the northeastern corner of the state, bordering both Pennsylvania and Delaware. As of the 2020 United States census, the population was 103,725. The county seat is Elkton. The county is part of the Mid-Eastern Shore region of the state."
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=39.5729428,-75.9381806",
+        "embedUrl": "https://maps.google.com/maps?q=39.5729428,-75.9381806&z=12&output=embed"
+      },
+      "year": "1788"
+    },
+    {
+      "id": "butler-county-ohio-death",
+      "type": "town",
+      "canonicalPlaceId": "butler-county-ohio",
+      "badge": "Death",
+      "name": "Butler County, Ohio",
+      "relevance": "",
+      "featured": false,
+      "lat": 39.4233043,
+      "lng": -84.5936897,
+      "wikipedia": {
+        "title": "Butler County, Ohio",
+        "url": "https://en.wikipedia.org/wiki/Butler_County%2C_Ohio",
+        "summary": "Butler County is a county located in the southwestern part of the U.S. state of Ohio. As of the 2020 census, the population was 390,357, making it the seventh-most populous county in Ohio. Its county seat and most populous city is Hamilton. It is named for General Richard Butler, who died in 1791 du"
+      },
+      "wikimedia": {
+        "fileTitle": "File:ButlerCountyOhioCourthouse.JPG",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/ButlerCountyOhioCourthouse.JPG/960px-ButlerCountyOhioCourthouse.JPG",
+        "attribution": "Photo by Greg Hume (Greg5030)",
+        "license": "CC BY 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=39.4233043,-84.5936897",
+        "embedUrl": "https://maps.google.com/maps?q=39.4233043,-84.5936897&z=12&output=embed"
+      },
+      "year": "1863"
+    }
+  ]
+}

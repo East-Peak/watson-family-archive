@@ -1,0 +1,51 @@
+{
+  "personId": "anne_boteler",
+  "personName": "Anne Boteler",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "brantfield-hertfordshire-england-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "brantfield-hertfordshire-england",
+      "badge": "Birth Place",
+      "name": "Brantfield, Hertfordshire, England",
+      "relevance": "",
+      "featured": true,
+      "lat": 51.8400523,
+      "lng": -0.0978552,
+      "wikimedia": {
+        "fileTitle": "File:Genealogical memoirs of the extinct family of Chester of Chicheley their ancestors and descendants (IA genealogicalmemo01wate 0).pdf",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Genealogical_memoirs_of_the_extinct_family_of_Chester_of_Chicheley_their_ancestors_and_descendants_%28IA_genealogicalmemo01wate_0%29.pdf/page1-960px-Genealogical_memoirs_of_the_extinct_family_of_Chester_of_Chicheley_their_ancestors_and_descendants_%28IA_genealogicalmemo01wate_0%29.pdf.jpg",
+        "attribution": "Waters, Robert Edmond Chester, 1828-",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=51.8400523,-0.0978552",
+        "embedUrl": "https://maps.google.com/maps?q=51.8400523,-0.0978552&z=12&output=embed"
+      },
+      "year": "1575"
+    },
+    {
+      "id": "wykeham-lincolnshire-death",
+      "type": "town",
+      "canonicalPlaceId": "wykeham-lincolnshire",
+      "badge": "Death",
+      "name": "Wykeham, Lincolnshire",
+      "relevance": "",
+      "featured": false,
+      "lat": 52.8191946,
+      "lng": -0.1096407,
+      "wikimedia": {
+        "fileTitle": "File:Wykeham Chapel - geograph.org.uk - 184064.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Wykeham_Chapel_-_geograph.org.uk_-_184064.jpg",
+        "attribution": "Kate Jewell",
+        "license": "CC BY-SA 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=52.8191946,-0.1096407",
+        "embedUrl": "https://maps.google.com/maps?q=52.8191946,-0.1096407&z=12&output=embed"
+      },
+      "year": "1633"
+    }
+  ]
+}

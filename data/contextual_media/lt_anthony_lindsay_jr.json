@@ -1,0 +1,83 @@
+{
+  "personId": "lt_anthony_lindsay_jr",
+  "personName": "Anthony C. Lindsay Jr.",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "prince-george-s-county-maryland-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "prince-george-s-county-maryland",
+      "badge": "Birth Place",
+      "name": "Prince George's County, Maryland",
+      "relevance": "",
+      "featured": true,
+      "lat": 38.803929,
+      "lng": -76.8518695,
+      "wikipedia": {
+        "title": "Prince George's County, Maryland",
+        "url": "https://en.wikipedia.org/wiki/Prince_George's_County%2C_Maryland",
+        "summary": "Prince George's County is located in the U.S. state of Maryland bordering the eastern portion of Washington, D.C. As of the 2020 U.S. census, the population was 967,201, making it the second-most populous county in Maryland, behind neighboring Montgomery County. The 2020 census counted an increase o"
+      },
+      "wikimedia": {
+        "fileTitle": "File:P.G. County, Maryland Infobox Montage 1.png",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/8/83/P.G._County%2C_Maryland_Infobox_Montage_1.png",
+        "attribution": "Illegitimate Barrister\n\nBen Schumin - File:Prince Georges Plaza station.jpg\nBen Schumin - File:Boulevard at the Capital Centre.jpg\nAndrew Bossi - File:MD725 at MD717 02.JPG\nKen Lund - File:Exit 9, Andrews AFB, I-295 NB (2853558846).jpg\nTheodore J. Hull - File:Adelphi Sign.jpg\nSallicio - File:PGcourthouse1.JPG\nFlugKerl2 - File:Patuxent Square Laurel MD.jpg",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=38.803929,-76.8518695",
+        "embedUrl": "https://maps.google.com/maps?q=38.803929,-76.8518695&z=12&output=embed"
+      },
+      "year": "1736"
+    },
+    {
+      "id": "scott-county-kentucky-death",
+      "type": "town",
+      "canonicalPlaceId": "scott-county-kentucky",
+      "badge": "Death",
+      "name": "Scott County, Kentucky",
+      "relevance": "",
+      "featured": false,
+      "lat": 38.2776401,
+      "lng": -84.5816131,
+      "wikipedia": {
+        "title": "Scott County, Kentucky",
+        "url": "https://en.wikipedia.org/wiki/Scott_County%2C_Kentucky",
+        "summary": "Scott County is a county located in the central part of the U.S. state of Kentucky. As of the 2020 census, the population was 57,155. Scott County is part of the Lexington-Fayette, Kentucky Metropolitan Statistical Area. Its county seat and largest city is Georgetown."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Scott county kentucky courthouse.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Scott_county_kentucky_courthouse.jpg/960px-Scott_county_kentucky_courthouse.jpg",
+        "attribution": "W.marsh",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=38.2776401,-84.5816131",
+        "embedUrl": "https://maps.google.com/maps?q=38.2776401,-84.5816131&z=12&output=embed"
+      },
+      "year": "1808"
+    },
+    {
+      "id": "lindsay-cemetery-scott-county-kentucky-residence",
+      "type": "town",
+      "canonicalPlaceId": "lindsay-cemetery-scott-county-kentucky",
+      "badge": "Residence",
+      "name": "Lindsay Cemetery, Scott County, Kentucky",
+      "relevance": "",
+      "featured": false,
+      "lat": 38.2882634,
+      "lng": -84.7031268,
+      "wikimedia": {
+        "fileTitle": "File:A young people's history of Kentucky for schools and general reading (IA youngpeopleshist00thom).pdf",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/A_young_people%27s_history_of_Kentucky_for_schools_and_general_reading_%28IA_youngpeopleshist00thom%29.pdf/page1-700px-A_young_people%27s_history_of_Kentucky_for_schools_and_general_reading_%28IA_youngpeopleshist00thom%29.pdf.jpg",
+        "attribution": "Thompson, Edwin Porter, 1834- [from old catalog]",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=38.2882634,-84.7031268",
+        "embedUrl": "https://maps.google.com/maps?q=38.2882634,-84.7031268&z=12&output=embed"
+      },
+      "year": "1808"
+    }
+  ]
+}

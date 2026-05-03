@@ -1,0 +1,56 @@
+{
+  "personId": "charlotte_green",
+  "personName": "Charlotte Green",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "northampton-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "northampton",
+      "badge": "Birth Place",
+      "name": "Northampton",
+      "relevance": "",
+      "featured": true,
+      "lat": 52.2343297,
+      "lng": -0.9028043,
+      "wikipedia": {
+        "title": "Northampton",
+        "url": "https://en.wikipedia.org/wiki/Northampton",
+        "summary": "Northampton is a town and civil parish in Northamptonshire, England. It is the county town of Northamptonshire and the administrative centre of the unitary authority of West Northamptonshire. The town is situated on the River Nene, 60 miles (97\u00a0km) north-west of London and 50 miles (80\u00a0km) south-eas"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Northampton massachusetts main street 20040912.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/8/85/Northampton_massachusetts_main_street_20040912.jpg",
+        "attribution": null,
+        "license": "CC BY-SA 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=52.2343297,-0.9028043",
+        "embedUrl": "https://maps.google.com/maps?q=52.2343297,-0.9028043&z=12&output=embed"
+      },
+      "year": "1827"
+    },
+    {
+      "id": "bromyard-herefordshire-england-death",
+      "type": "town",
+      "canonicalPlaceId": "bromyard-herefordshire-england",
+      "badge": "Death",
+      "name": "Bromyard, Herefordshire, England",
+      "relevance": "",
+      "featured": false,
+      "lat": 52.1884704,
+      "lng": -2.5107318,
+      "wikimedia": {
+        "fileTitle": "File:Bay Horse Inn, at Bromyard, Herefordshire.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Bay_Horse_Inn%2C_at_Bromyard%2C_Herefordshire.jpg/960px-Bay_Horse_Inn%2C_at_Bromyard%2C_Herefordshire.jpg",
+        "attribution": "Stephen Lea",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=52.1884704,-2.5107318",
+        "embedUrl": "https://maps.google.com/maps?q=52.1884704,-2.5107318&z=12&output=embed"
+      },
+      "year": "1874"
+    }
+  ]
+}

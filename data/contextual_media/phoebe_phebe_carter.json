@@ -1,0 +1,51 @@
+{
+  "personId": "phoebe_phebe_carter",
+  "personName": "Phoebe Carter",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "killingworth-middlesex-connecticut-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "killingworth-middlesex-connecticut",
+      "badge": "Birth Place",
+      "name": "Killingworth, Middlesex, Connecticut",
+      "relevance": "",
+      "featured": true,
+      "lat": 41.3581545,
+      "lng": -72.5637023,
+      "wikimedia": {
+        "fileTitle": "File:Historic American Buildings Survey Harold H. Davis, Photographer February 1937 GENERAL VIEW SHOWING FRONT AND SIDE - North Congregational Church, Killingworth, Middlesex County, HABS CONN,4-KILWO,1-1.tif",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Historic_American_Buildings_Survey_Harold_H._Davis%2C_Photographer_February_1937_GENERAL_VIEW_SHOWING_FRONT_AND_SIDE_-_North_Congregational_Church%2C_Killingworth%2C_Middlesex_County%2C_HABS_CONN%2C4-KILWO%2C1-1.tif/lossy-page1-960px-thumbnail.tif.jpg",
+        "attribution": null,
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=41.3581545,-72.5637023",
+        "embedUrl": "https://maps.google.com/maps?q=41.3581545,-72.5637023&z=12&output=embed"
+      },
+      "year": "1761"
+    },
+    {
+      "id": "whiting-addison-vermont-death",
+      "type": "town",
+      "canonicalPlaceId": "whiting-addison-vermont",
+      "badge": "Death",
+      "name": "Whiting, Addison, Vermont",
+      "relevance": "",
+      "featured": false,
+      "lat": 43.8641679,
+      "lng": -73.200708,
+      "wikimedia": {
+        "fileTitle": "File:Whiting-vt-library.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Whiting-vt-library.jpg/960px-Whiting-vt-library.jpg",
+        "attribution": "Jessamyn West",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.8641679,-73.200708",
+        "embedUrl": "https://maps.google.com/maps?q=43.8641679,-73.200708&z=12&output=embed"
+      },
+      "year": "1818"
+    }
+  ]
+}

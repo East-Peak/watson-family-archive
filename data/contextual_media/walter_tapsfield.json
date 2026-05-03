@@ -1,0 +1,39 @@
+{
+  "personId": "walter_tapsfield",
+  "personName": "Walter Tapsfield",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "st-saviours-surrey-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "st-saviours-surrey",
+      "badge": "Birth Place",
+      "name": "St Saviours, Surrey",
+      "relevance": "",
+      "featured": true,
+      "year": "1870"
+    },
+    {
+      "id": "croydon-surrey-england-death",
+      "type": "town",
+      "canonicalPlaceId": "croydon-surrey-england",
+      "badge": "Death",
+      "name": "Croydon, Surrey, England",
+      "relevance": "",
+      "featured": false,
+      "lat": 51.2973191,
+      "lng": -0.0708474,
+      "wikimedia": {
+        "fileTitle": "File:Charles Lindbergh arrived at Croydon Field, Surrey, England, May 29, 1927.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Charles_Lindbergh_arrived_at_Croydon_Field%2C_Surrey%2C_England%2C_May_29%2C_1927.jpg",
+        "attribution": "Pacific and Atlantic photos inc.",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=51.2973191,-0.0708474",
+        "embedUrl": "https://maps.google.com/maps?q=51.2973191,-0.0708474&z=12&output=embed"
+      },
+      "year": "1933"
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+{
+  "personId": "tulley_m_andes",
+  "personName": "Tulley Martin Andes",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "kentucky-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "kentucky",
+      "badge": "Birth Place",
+      "name": "Kentucky",
+      "relevance": "",
+      "featured": true,
+      "lat": 37.5726028,
+      "lng": -85.1551411,
+      "wikipedia": {
+        "title": "Kentucky",
+        "url": "https://en.wikipedia.org/wiki/Kentucky",
+        "summary": "Kentucky, officially the Commonwealth of Kentucky, is a landlocked state in the Southeastern region of the United States. It borders Illinois, Indiana, and Ohio to the north, West Virginia to the northeast, Virginia to the east, Tennessee to the south, and Missouri to the west. Its northern border i"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Kentucky Scenic Byway signage on Kentucky Route 63 in Temple Hill, Kentucky.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Kentucky_Scenic_Byway_signage_on_Kentucky_Route_63_in_Temple_Hill%2C_Kentucky.jpg",
+        "attribution": "K-Johnson 127",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=37.5726028,-85.1551411",
+        "embedUrl": "https://maps.google.com/maps?q=37.5726028,-85.1551411&z=12&output=embed"
+      },
+      "year": "1898"
+    },
+    {
+      "id": "san-luis-obispo-california-death",
+      "type": "town",
+      "canonicalPlaceId": "san-luis-obispo-california",
+      "badge": "Death",
+      "name": "San Luis Obispo, California",
+      "relevance": "",
+      "featured": false,
+      "lat": 35.3540209,
+      "lng": -120.375716,
+      "wikipedia": {
+        "title": "San Luis Obispo, California",
+        "url": "https://en.wikipedia.org/wiki/San_Luis_Obispo%2C_California",
+        "summary": "San Luis Obispo is a city in and the county seat of San Luis Obispo County, California, United States. Located on the Central Coast of California, San Luis Obispo is roughly halfway between the San Francisco Bay Area in the north and Greater Los Angeles in the south. The population was 47,063 at the"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Bed Bath & Beyond, San Luis Obispo, California (LOC).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Bed_Bath_%26_Beyond%2C_San_Luis_Obispo%2C_California_%28LOC%29.jpg/960px-Bed_Bath_%26_Beyond%2C_San_Luis_Obispo%2C_California_%28LOC%29.jpg",
+        "attribution": "The Library of Congress",
+        "license": "No restrictions"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=35.3540209,-120.375716",
+        "embedUrl": "https://maps.google.com/maps?q=35.3540209,-120.375716&z=12&output=embed"
+      },
+      "year": "1969"
+    },
+    {
+      "id": "laurel-county-kentucky-residence",
+      "type": "town",
+      "canonicalPlaceId": "laurel-county-kentucky",
+      "badge": "Residence",
+      "name": "Laurel County, Kentucky",
+      "relevance": "",
+      "featured": false,
+      "lat": 37.1000973,
+      "lng": -84.1148273,
+      "wikipedia": {
+        "title": "Laurel County, Kentucky",
+        "url": "https://en.wikipedia.org/wiki/Laurel_County%2C_Kentucky",
+        "summary": "Laurel County is a county located in the southeastern portion of the U.S. state of Kentucky. As of the 2020 census, the population was 62,613. Its county seat is London. After a special election in January 2016 alcohol sales are permitted only in the city limits of London. The ordinance went into ef"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Laurel County Kentucky Courthouse.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Laurel_County_Kentucky_Courthouse.jpg/960px-Laurel_County_Kentucky_Courthouse.jpg",
+        "attribution": "W.marsh",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=37.1000973,-84.1148273",
+        "embedUrl": "https://maps.google.com/maps?q=37.1000973,-84.1148273&z=12&output=embed"
+      },
+      "year": "1900"
+    },
+    {
+      "id": "sangamon-illinois-residence",
+      "type": "town",
+      "canonicalPlaceId": "sangamon-illinois",
+      "badge": "Residence",
+      "name": "Sangamon, Illinois",
+      "relevance": "",
+      "featured": false,
+      "lat": 39.7623668,
+      "lng": -89.6454905,
+      "wikipedia": {
+        "title": "Sangamon, Illinois",
+        "url": "https://en.wikipedia.org/wiki/Sangamon%2C_Illinois",
+        "summary": "Sangamon is an unincorporated community in Oakley Township, Macon County, Illinois, United States. Sangamon is located along the Norfolk Southern Railway, 5.5 miles (8.9\u00a0km) east-northeast of downtown Decatur."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Sangamon County Illinois 1839.png",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/0/06/Sangamon_County_Illinois_1839.png",
+        "attribution": "Illinois_Locator_Map.PNG: US Census, Ruhrfisch\nderivative work: Fishal (talk)",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=39.7623668,-89.6454905",
+        "embedUrl": "https://maps.google.com/maps?q=39.7623668,-89.6454905&z=12&output=embed"
+      },
+      "year": "1930"
+    },
+    {
+      "id": "los-angeles-ca-residence",
+      "type": "town",
+      "canonicalPlaceId": "los-angeles-ca",
+      "badge": "Residence",
+      "name": "Los Angeles, CA",
+      "relevance": "",
+      "featured": false,
+      "lat": 34.0536909,
+      "lng": -118.242766,
+      "wikipedia": {
+        "title": "Los Angeles",
+        "url": "https://en.wikipedia.org/wiki/Los_Angeles",
+        "summary": "Los Angeles is the most populous city in the U.S. state of California, and the commercial, financial, and cultural center of Southern California. With an estimated 3.88 million residents within the city limits as of 2024, it is the second-most populous city in the United States, behind New York City"
+      },
+      "wikimedia": {
+        "fileTitle": "File:USS Los Angeles (CA-135) in the Far East, 13 October 1952 (NH 97386).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/USS_Los_Angeles_%28CA-135%29_in_the_Far_East%2C_13_October_1952_%28NH_97386%29.jpg/960px-USS_Los_Angeles_%28CA-135%29_in_the_Far_East%2C_13_October_1952_%28NH_97386%29.jpg",
+        "attribution": "Unknown authorUnknown author",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=34.0536909,-118.242766",
+        "embedUrl": "https://maps.google.com/maps?q=34.0536909,-118.242766&z=12&output=embed"
+      },
+      "year": "1950"
+    }
+  ]
+}

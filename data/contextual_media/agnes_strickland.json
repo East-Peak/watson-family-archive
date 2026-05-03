@@ -1,0 +1,56 @@
+{
+  "personId": "agnes_strickland",
+  "personName": "Agnes Strickland",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "ramsbottom-lancashire-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "ramsbottom-lancashire",
+      "badge": "Birth Place",
+      "name": "Ramsbottom, Lancashire",
+      "relevance": "",
+      "featured": true,
+      "lat": 53.7851173,
+      "lng": -2.3932308,
+      "wikimedia": {
+        "fileTitle": "File:Kay Brow, Ramsbottom, Lancashire - geograph.org.uk - 2478629.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Kay_Brow%2C_Ramsbottom%2C_Lancashire_-_geograph.org.uk_-_2478629.jpg/960px-Kay_Brow%2C_Ramsbottom%2C_Lancashire_-_geograph.org.uk_-_2478629.jpg",
+        "attribution": "Robert Wade",
+        "license": "CC BY-SA 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=53.7851173,-2.3932308",
+        "embedUrl": "https://maps.google.com/maps?q=53.7851173,-2.3932308&z=12&output=embed"
+      },
+      "year": "1795"
+    },
+    {
+      "id": "fife-scotland-death",
+      "type": "town",
+      "canonicalPlaceId": "fife-scotland",
+      "badge": "Death",
+      "name": "Fife, Scotland",
+      "relevance": "",
+      "featured": false,
+      "lat": 56.3333331,
+      "lng": -3.0000001,
+      "wikipedia": {
+        "title": "Fife",
+        "url": "https://en.wikipedia.org/wiki/Fife",
+        "summary": "Fife is a council area and lieutenancy area in Scotland. A peninsula, it is bordered by the Firth of Tay to the north, the North Sea to the east, the Firth of Forth to the south, Clackmannanshire to the south-west, and Perth and Kinross to the west. The largest settlement is the city of Dunfermline,"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Fife House, Glenrothes.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Fife_House%2C_Glenrothes.jpg/960px-Fife_House%2C_Glenrothes.jpg",
+        "attribution": "Kilnburn (talk) 20:14, 1 July 2009 (UTC)",
+        "license": "Attribution"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=56.3333331,-3.0000001",
+        "embedUrl": "https://maps.google.com/maps?q=56.3333331,-3.0000001&z=12&output=embed"
+      },
+      "year": "1869"
+    }
+  ]
+}

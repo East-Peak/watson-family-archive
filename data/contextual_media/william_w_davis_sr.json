@@ -1,0 +1,125 @@
+{
+  "personId": "william_w_davis_sr",
+  "personName": "William W. Davis",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "rhiwlas-north-wales-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "rhiwlas-north-wales",
+      "badge": "Birth Place",
+      "name": "Rhiwlas, North Wales",
+      "relevance": "",
+      "featured": true,
+      "year": "1829"
+    },
+    {
+      "id": "alameda-california-death",
+      "type": "town",
+      "canonicalPlaceId": "alameda-california",
+      "badge": "Death",
+      "name": "Alameda, California",
+      "relevance": "",
+      "featured": false,
+      "lat": 37.6090291,
+      "lng": -121.899142,
+      "wikipedia": {
+        "title": "Alameda, California",
+        "url": "https://en.wikipedia.org/wiki/Alameda%2C_California",
+        "summary": "Alameda is a city in Alameda County, California, United States, located in the East Bay region of the Bay Area. The city is built on an informal archipelago in San Francisco Bay, consisting of Alameda Island, Bay Farm Island and Coast Guard Island, along with other smaller islands. As of the 2020 ce"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Alameda City Hall (Alameda, CA) 2.JPG",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Alameda_City_Hall_%28Alameda%2C_CA%29_2.JPG/960px-Alameda_City_Hall_%28Alameda%2C_CA%29_2.JPG",
+        "attribution": "Sanfranman59",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=37.6090291,-121.899142",
+        "embedUrl": "https://maps.google.com/maps?q=37.6090291,-121.899142&z=12&output=embed"
+      },
+      "year": "1905"
+    },
+    {
+      "id": "south-bend-blue-earth-mn-residence",
+      "type": "town",
+      "canonicalPlaceId": "south-bend-blue-earth-mn",
+      "badge": "Residence",
+      "name": "South Bend, Blue Earth, MN",
+      "relevance": "",
+      "featured": false,
+      "lat": 44.1465861,
+      "lng": -94.0849391,
+      "wikimedia": {
+        "fileTitle": "File:Congregational Church, South Bend Township, Minnesota - DPLA - 646ad372b93ae047dff4a3cce91322d7.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Congregational_Church%2C_South_Bend_Township%2C_Minnesota_-_DPLA_-_646ad372b93ae047dff4a3cce91322d7.jpg/960px-Congregational_Church%2C_South_Bend_Township%2C_Minnesota_-_DPLA_-_646ad372b93ae047dff4a3cce91322d7.jpg",
+        "attribution": null,
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=44.1465861,-94.0849391",
+        "embedUrl": "https://maps.google.com/maps?q=44.1465861,-94.0849391&z=12&output=embed"
+      },
+      "year": "1850"
+    },
+    {
+      "id": "judson-blue-earth-minnesota-residence",
+      "type": "town",
+      "canonicalPlaceId": "judson-blue-earth-minnesota",
+      "badge": "Residence",
+      "name": "Judson, Blue Earth, Minnesota",
+      "relevance": "",
+      "featured": false,
+      "lat": 44.1963199,
+      "lng": -94.1956576,
+      "wikimedia": {
+        "fileTitle": "File:Standard Atlas, Blue Earth County, Minnesota - DPLA - 05b5a43b2b3d3d0bcb7e286688424403 (page 46).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Standard_Atlas%2C_Blue_Earth_County%2C_Minnesota_-_DPLA_-_05b5a43b2b3d3d0bcb7e286688424403_%28page_46%29.jpg/960px-Standard_Atlas%2C_Blue_Earth_County%2C_Minnesota_-_DPLA_-_05b5a43b2b3d3d0bcb7e286688424403_%28page_46%29.jpg",
+        "attribution": "Compiled and published by George A. Ogle &amp; Company, Publishers and Engravers",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=44.1963199,-94.1956576",
+        "embedUrl": "https://maps.google.com/maps?q=44.1963199,-94.1956576&z=12&output=embed"
+      },
+      "year": "1880"
+    },
+    {
+      "id": "minneapolis-residence",
+      "type": "town",
+      "canonicalPlaceId": "minneapolis",
+      "badge": "Residence",
+      "name": "Minneapolis",
+      "relevance": "",
+      "featured": false,
+      "lat": 44.9772995,
+      "lng": -93.2654692,
+      "wikipedia": {
+        "title": "Minneapolis",
+        "url": "https://en.wikipedia.org/wiki/Minneapolis",
+        "summary": "Minneapolis is a city in Hennepin County, Minnesota, United States, and its county seat. With a population of 429,954 as of the 2020 census, it is the state's most populous city. Located in the state's center near the eastern border, it occupies both banks of the Upper Mississippi River and adjoins "
+      },
+      "wikimedia": {
+        "fileTitle": "File:Downtown minneapolis kansas 2009.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Downtown_minneapolis_kansas_2009.jpg/960px-Downtown_minneapolis_kansas_2009.jpg",
+        "attribution": "shannonpatric17",
+        "license": "CC BY 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=44.9772995,-93.2654692",
+        "embedUrl": "https://maps.google.com/maps?q=44.9772995,-93.2654692&z=12&output=embed"
+      },
+      "year": "1900"
+    },
+    {
+      "id": "records-or-other-vital-records-to-confirm-death-date-residence",
+      "type": "town",
+      "canonicalPlaceId": "records-or-other-vital-records-to-confirm-death-date",
+      "badge": "Residence",
+      "name": "records or other vital records to confirm death date",
+      "relevance": "",
+      "featured": false,
+      "year": "1905"
+    }
+  ]
+}

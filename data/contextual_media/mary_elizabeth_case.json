@@ -1,0 +1,29 @@
+{
+  "personId": "mary_elizabeth_case",
+  "personName": "Mary Elizabeth Case",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "evergreen-cemetery-salem-washington-new-york-residence",
+      "type": "town",
+      "canonicalPlaceId": "evergreen-cemetery-salem-washington-new-york",
+      "badge": "Residence",
+      "name": "Evergreen Cemetery, Salem, Washington, New York",
+      "relevance": "",
+      "featured": true,
+      "lat": 43.1608392,
+      "lng": -73.3452411,
+      "wikimedia": {
+        "fileTitle": "File:Evergreen Cemetery Bisbee.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Evergreen_Cemetery_Bisbee.jpg/960px-Evergreen_Cemetery_Bisbee.jpg",
+        "attribution": "The original uploader was Randomgbear at English Wikipedia.",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.1608392,-73.3452411",
+        "embedUrl": "https://maps.google.com/maps?q=43.1608392,-73.3452411&z=12&output=embed"
+      },
+      "year": "1902"
+    }
+  ]
+}

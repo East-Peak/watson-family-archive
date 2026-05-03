@@ -1,0 +1,83 @@
+{
+  "personId": "john_rankin_gamble",
+  "personName": "John Rankin Gamble",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "genesse-new-york-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "genesse-new-york",
+      "badge": "Birth Place",
+      "name": "\"Genesse, New York\"",
+      "relevance": "",
+      "featured": true,
+      "lat": 42.123911,
+      "lng": -77.9501139,
+      "wikimedia": {
+        "fileTitle": "File:Report of the proceedings at an Indian council, at Cattaraugus, in the State of New York- held 6 Month, 1843 (IA reportofpro00frie).pdf",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Report_of_the_proceedings_at_an_Indian_council%2C_at_Cattaraugus%2C_in_the_State_of_New_York-_held_6_Month%2C_1843_%28IA_reportofpro00frie%29.pdf/page1-629px-Report_of_the_proceedings_at_an_Indian_council%2C_at_Cattaraugus%2C_in_the_State_of_New_York-_held_6_Month%2C_1843_%28IA_reportofpro00frie%29.pdf.jpg",
+        "attribution": "Friends, Society of (Hicksite) Joint Committee on Indian Affairs. [from old catalog]",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=42.123911,-77.9501139",
+        "embedUrl": "https://maps.google.com/maps?q=42.123911,-77.9501139&z=12&output=embed"
+      },
+      "year": "1848"
+    },
+    {
+      "id": "yankton-south-dakota-death",
+      "type": "town",
+      "canonicalPlaceId": "yankton-south-dakota",
+      "badge": "Death",
+      "name": "Yankton, South Dakota",
+      "relevance": "",
+      "featured": false,
+      "lat": 42.8712938,
+      "lng": -97.3967011,
+      "wikipedia": {
+        "title": "Yankton, South Dakota",
+        "url": "https://en.wikipedia.org/wiki/Yankton%2C_South_Dakota",
+        "summary": "Yankton is a city in and the county seat of Yankton County, South Dakota, United States. It became a city in 1889."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Milwaukee Public Museum November 2022 078 (A Prairie River- Near Yankton, South Dakota).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Milwaukee_Public_Museum_November_2022_078_%28A_Prairie_River-_Near_Yankton%2C_South_Dakota%29.jpg/960px-Milwaukee_Public_Museum_November_2022_078_%28A_Prairie_River-_Near_Yankton%2C_South_Dakota%29.jpg",
+        "attribution": "Michael Barera",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=42.8712938,-97.3967011",
+        "embedUrl": "https://maps.google.com/maps?q=42.8712938,-97.3967011&z=12&output=embed"
+      },
+      "year": "1891"
+    },
+    {
+      "id": "fox-lake-wisconsin-marriage",
+      "type": "building",
+      "canonicalPlaceId": "fox-lake-wisconsin",
+      "badge": "Marriage",
+      "name": "Fox Lake, Wisconsin",
+      "relevance": "",
+      "featured": false,
+      "lat": 43.565543,
+      "lng": -88.9064984,
+      "wikipedia": {
+        "title": "Fox Lake, Wisconsin",
+        "url": "https://en.wikipedia.org/wiki/Fox_Lake%2C_Wisconsin",
+        "summary": "Fox Lake is a city in Dodge County, Wisconsin, United States. The population was 1,604 at the 2020 census. The city is located within the Town of Fox Lake."
+      },
+      "wikimedia": {
+        "fileTitle": "File:FoxLakeWisconsinDowntown1.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/FoxLakeWisconsinDowntown1.jpg/960px-FoxLakeWisconsinDowntown1.jpg",
+        "attribution": "Royalbroil",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.565543,-88.9064984",
+        "embedUrl": "https://maps.google.com/maps?q=43.565543,-88.9064984&z=12&output=embed"
+      },
+      "year": "1875"
+    }
+  ]
+}

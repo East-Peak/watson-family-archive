@@ -1,0 +1,29 @@
+{
+  "personId": "laura_etta_cravens",
+  "personName": "Laura Etta Cravens",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "paola-miami-kansas-marriage",
+      "type": "building",
+      "canonicalPlaceId": "paola-miami-kansas",
+      "badge": "Marriage",
+      "name": "Paola, Miami, Kansas",
+      "relevance": "",
+      "featured": true,
+      "lat": 38.5723318,
+      "lng": -94.8786484,
+      "wikimedia": {
+        "fileTitle": "File:Downtown paola kansas2 2009.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Downtown_paola_kansas2_2009.jpg/960px-Downtown_paola_kansas2_2009.jpg",
+        "attribution": "Ichabod",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=38.5723318,-94.8786484",
+        "embedUrl": "https://maps.google.com/maps?q=38.5723318,-94.8786484&z=12&output=embed"
+      },
+      "year": "1890"
+    }
+  ]
+}

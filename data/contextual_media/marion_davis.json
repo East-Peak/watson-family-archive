@@ -1,0 +1,66 @@
+{
+  "personId": "marion_davis",
+  "personName": "Marion Davis",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "colton-san-bernardino-california-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "colton-san-bernardino-california",
+      "badge": "Birth Place",
+      "name": "Colton, San Bernardino, California",
+      "relevance": "",
+      "featured": true,
+      "lat": 34.0739016,
+      "lng": -117.3136547,
+      "wikimedia": {
+        "fileTitle": "File:Colton California Aerial (50637134478).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Colton_California_Aerial_%2850637134478%29.jpg/960px-Colton_California_Aerial_%2850637134478%29.jpg",
+        "attribution": "formulanone",
+        "license": "CC BY-SA 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=34.0739016,-117.3136547",
+        "embedUrl": "https://maps.google.com/maps?q=34.0739016,-117.3136547&z=12&output=embed"
+      },
+      "year": "1888"
+    },
+    {
+      "id": "imperial-county-california-death",
+      "type": "town",
+      "canonicalPlaceId": "imperial-county-california",
+      "badge": "Death",
+      "name": "Imperial County, California",
+      "relevance": "",
+      "featured": false,
+      "lat": 33.0305487,
+      "lng": -115.3595666,
+      "wikipedia": {
+        "title": "Imperial County, California",
+        "url": "https://en.wikipedia.org/wiki/Imperial_County%2C_California",
+        "summary": "Imperial County is located on the southeast border of the U.S. state of California. As of the 2020 census, the population was 179,702, ranking as the least populous county in Southern California. The county seat and largest city is El Centro. Imperial is the most recent California county to be estab"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Imperial County Superior Courthouse El Centro Night.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Imperial_County_Superior_Courthouse_El_Centro_Night.jpg",
+        "attribution": null,
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=33.0305487,-115.3595666",
+        "embedUrl": "https://maps.google.com/maps?q=33.0305487,-115.3595666&z=12&output=embed"
+      },
+      "year": "1962"
+    },
+    {
+      "id": "cremated-ashes-to-family-residence",
+      "type": "town",
+      "canonicalPlaceId": "cremated-ashes-to-family",
+      "badge": "Residence",
+      "name": "Cremated, ashes to family",
+      "relevance": "",
+      "featured": false,
+      "year": "1962"
+    }
+  ]
+}

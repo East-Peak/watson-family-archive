@@ -1,0 +1,61 @@
+{
+  "personId": "frank_meadows",
+  "personName": "Frank Meadows",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "kentucky-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "kentucky",
+      "badge": "Birth Place",
+      "name": "Kentucky",
+      "relevance": "",
+      "featured": true,
+      "lat": 37.5726028,
+      "lng": -85.1551411,
+      "wikipedia": {
+        "title": "Kentucky",
+        "url": "https://en.wikipedia.org/wiki/Kentucky",
+        "summary": "Kentucky, officially the Commonwealth of Kentucky, is a landlocked state in the Southeastern region of the United States. It borders Illinois, Indiana, and Ohio to the north, West Virginia to the northeast, Virginia to the east, Tennessee to the south, and Missouri to the west. Its northern border i"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Kentucky Scenic Byway signage on Kentucky Route 63 in Temple Hill, Kentucky.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Kentucky_Scenic_Byway_signage_on_Kentucky_Route_63_in_Temple_Hill%2C_Kentucky.jpg",
+        "attribution": "K-Johnson 127",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=37.5726028,-85.1551411",
+        "embedUrl": "https://maps.google.com/maps?q=37.5726028,-85.1551411&z=12&output=embed"
+      },
+      "year": "1861"
+    },
+    {
+      "id": "pawnee-oklahoma-residence",
+      "type": "town",
+      "canonicalPlaceId": "pawnee-oklahoma",
+      "badge": "Residence",
+      "name": "Pawnee, Oklahoma",
+      "relevance": "",
+      "featured": false,
+      "lat": 36.3151645,
+      "lng": -96.7200995,
+      "wikipedia": {
+        "title": "Pawnee, Oklahoma",
+        "url": "https://en.wikipedia.org/wiki/Pawnee%2C_Oklahoma",
+        "summary": "Pawnee is a city in and the county seat of Pawnee County, Oklahoma, United States. The town is northeast of Stillwater at the junction of U.S. Route 64 and State Highway 18."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Pawnee Bill Museum Entrance, Pawnee, Oklahoma.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Pawnee_Bill_Museum_Entrance%2C_Pawnee%2C_Oklahoma.jpg/960px-Pawnee_Bill_Museum_Entrance%2C_Pawnee%2C_Oklahoma.jpg",
+        "attribution": "Smallboy944",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=36.3151645,-96.7200995",
+        "embedUrl": "https://maps.google.com/maps?q=36.3151645,-96.7200995&z=12&output=embed"
+      },
+      "year": "1937"
+    }
+  ]
+}

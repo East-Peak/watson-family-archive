@@ -1,0 +1,56 @@
+{
+  "personId": "florence_m_watson",
+  "personName": "Florence M. Watson",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "northwich-cheshire-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "northwich-cheshire",
+      "badge": "Birth Place",
+      "name": "Northwich, Cheshire",
+      "relevance": "",
+      "featured": true,
+      "lat": 53.2602539,
+      "lng": -2.5145104,
+      "wikimedia": {
+        "fileTitle": "File:Chemical works near Northwich, Cheshire - geograph.org.uk - 2588136.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/4/43/Chemical_works_near_Northwich%2C_Cheshire_-_geograph.org.uk_-_2588136.jpg",
+        "attribution": "Roger  Kidd",
+        "license": "CC BY-SA 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=53.2602539,-2.5145104",
+        "embedUrl": "https://maps.google.com/maps?q=53.2602539,-2.5145104&z=12&output=embed"
+      },
+      "year": "1869"
+    },
+    {
+      "id": "lancashire-death",
+      "type": "town",
+      "canonicalPlaceId": "lancashire",
+      "badge": "Death",
+      "name": "Lancashire",
+      "relevance": "",
+      "featured": false,
+      "lat": 53.8611712,
+      "lng": -2.5650945,
+      "wikipedia": {
+        "title": "Lancashire",
+        "url": "https://en.wikipedia.org/wiki/Lancashire",
+        "summary": "Lancashire is a ceremonial county in North West England. It is bordered by Cumbria to the north, North Yorkshire and West Yorkshire to the east, Greater Manchester and Merseyside to the south, and the Irish Sea to the west. The largest settlement is the city of Preston."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Lancashire 1610 Speed Hondius - Restoration.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Lancashire_1610_Speed_Hondius_-_Restoration.jpg/960px-Lancashire_1610_Speed_Hondius_-_Restoration.jpg",
+        "attribution": "Jodocus Hondius, engraved by John Speed, and restored by Adam Cuerden\n\n\n\n\n\n\nThis  is a retouched picture, which means that it has been digitally altered from its original version. Modifications: Dirt cleaned up, levels adjusted, rotated..",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=53.8611712,-2.5650945",
+        "embedUrl": "https://maps.google.com/maps?q=53.8611712,-2.5650945&z=12&output=embed"
+      },
+      "year": "1903"
+    }
+  ]
+}

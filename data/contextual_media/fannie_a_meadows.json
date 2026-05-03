@@ -1,0 +1,34 @@
+{
+  "personId": "fannie_a_meadows",
+  "personName": "Fannie A Meadows",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "missouri-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "missouri",
+      "badge": "Birth Place",
+      "name": "Missouri",
+      "relevance": "",
+      "featured": true,
+      "lat": 38.7604815,
+      "lng": -92.5617875,
+      "wikipedia": {
+        "title": "Missouri",
+        "url": "https://en.wikipedia.org/wiki/Missouri",
+        "summary": "Missouri is a landlocked state in the Midwestern region of the United States. Ranking 21st in land area, it borders Iowa to the north, Illinois, Kentucky and Tennessee to the east, Arkansas to the south and Oklahoma, Kansas, and Nebraska to the west. With over six million residents, it is the 19th-m"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Benton Social History of Missouri 01.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Benton_Social_History_of_Missouri_01.jpg/960px-Benton_Social_History_of_Missouri_01.jpg",
+        "attribution": "OlyScientist",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=38.7604815,-92.5617875",
+        "embedUrl": "https://maps.google.com/maps?q=38.7604815,-92.5617875&z=12&output=embed"
+      },
+      "year": "1866"
+    }
+  ]
+}

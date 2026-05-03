@@ -1,0 +1,34 @@
+{
+  "personId": "ernest_steinman",
+  "personName": "Ernest Steinman",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "virginia-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "virginia",
+      "badge": "Birth Place",
+      "name": "Virginia",
+      "relevance": "",
+      "featured": true,
+      "lat": 37.1232245,
+      "lng": -78.4927721,
+      "wikipedia": {
+        "title": "Virginia",
+        "url": "https://en.wikipedia.org/wiki/Virginia",
+        "summary": "Virginia, officially the Commonwealth of Virginia, is a state in the Southeastern and Mid-Atlantic regions of the United States between the Atlantic Coast and the Appalachian Mountains. It borders Kentucky to the west, Tennessee to the south-west, North Carolina to the south, West Virginia to the no"
+      },
+      "wikimedia": {
+        "fileTitle": "File:George Charles Beresford - Virginia Woolf in 1902 - Restoration.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/George_Charles_Beresford_-_Virginia_Woolf_in_1902_-_Restoration.jpg/960px-George_Charles_Beresford_-_Virginia_Woolf_in_1902_-_Restoration.jpg",
+        "attribution": "George Charles Beresford / Adam Cuerden",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=37.1232245,-78.4927721",
+        "embedUrl": "https://maps.google.com/maps?q=37.1232245,-78.4927721&z=12&output=embed"
+      },
+      "year": "1870"
+    }
+  ]
+}

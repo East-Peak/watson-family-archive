@@ -1,0 +1,51 @@
+{
+  "personId": "mahulda_dyer",
+  "personName": "Mahulda A Dyer",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "georgia-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "georgia",
+      "badge": "Birth Place",
+      "name": "Georgia",
+      "relevance": "",
+      "featured": true,
+      "lat": 32.3293809,
+      "lng": -83.1137366,
+      "wikimedia": {
+        "fileTitle": "File:20110421 Tbilisi Georgia Panoramic.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/20110421_Tbilisi_Georgia_Panoramic.jpg/960px-20110421_Tbilisi_Georgia_Panoramic.jpg",
+        "attribution": "User:Ggia",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=32.3293809,-83.1137366",
+        "embedUrl": "https://maps.google.com/maps?q=32.3293809,-83.1137366&z=12&output=embed"
+      },
+      "year": "1837"
+    },
+    {
+      "id": "dawnville-whitfield-georgia-death",
+      "type": "town",
+      "canonicalPlaceId": "dawnville-whitfield-georgia",
+      "badge": "Death",
+      "name": "Dawnville, Whitfield, Georgia",
+      "relevance": "",
+      "featured": false,
+      "lat": 34.8192462,
+      "lng": -84.8791091,
+      "wikimedia": {
+        "fileTitle": "File:A. D. Strickland Store.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/A._D._Strickland_Store.jpg/960px-A._D._Strickland_Store.jpg",
+        "attribution": "JDR4ever",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=34.8192462,-84.8791091",
+        "embedUrl": "https://maps.google.com/maps?q=34.8192462,-84.8791091&z=12&output=embed"
+      },
+      "year": "1912"
+    }
+  ]
+}

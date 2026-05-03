@@ -1,0 +1,44 @@
+{
+  "personId": "edward_dorsey_ii",
+  "personName": "Edward Dorsey II",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "lower-norfolk-county-virginia-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "lower-norfolk-county-virginia",
+      "badge": "Birth Place",
+      "name": "Lower Norfolk County, Virginia",
+      "relevance": "",
+      "featured": true,
+      "year": "1646"
+    },
+    {
+      "id": "baltimore-county-maryland-death",
+      "type": "town",
+      "canonicalPlaceId": "baltimore-county-maryland",
+      "badge": "Death",
+      "name": "Baltimore County, Maryland",
+      "relevance": "",
+      "featured": false,
+      "lat": 39.4445243,
+      "lng": -76.6483482,
+      "wikipedia": {
+        "title": "Baltimore County, Maryland",
+        "url": "https://en.wikipedia.org/wiki/Baltimore_County%2C_Maryland",
+        "summary": "Baltimore County is the third-most populous county in the U.S. state of Maryland. The county is part of the Central Maryland region of the state. Baltimore County partly surrounds but does not include the independent city of Baltimore. It is part of the Northeast megalopolis, which stretches from No"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Baltimore County, Maryland LOC 81690004.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Baltimore_County%2C_Maryland_LOC_81690004.jpg/960px-Baltimore_County%2C_Maryland_LOC_81690004.jpg",
+        "attribution": "United States. Soil Conservation Service; Geological Survey (U.S.)",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=39.4445243,-76.6483482",
+        "embedUrl": "https://maps.google.com/maps?q=39.4445243,-76.6483482&z=12&output=embed"
+      },
+      "year": "1705"
+    }
+  ]
+}

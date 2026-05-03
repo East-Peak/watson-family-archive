@@ -1,0 +1,51 @@
+{
+  "personId": "gerritje_gerrits",
+  "personName": "Gerritje Gerrits",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "amsterdam-north-holland-netherlands-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "amsterdam-north-holland-netherlands",
+      "badge": "Birth Place",
+      "name": "Amsterdam, North Holland, Netherlands",
+      "relevance": "",
+      "featured": true,
+      "lat": 52.3730796,
+      "lng": 4.8924534,
+      "wikimedia": {
+        "fileTitle": "File:Colorful canal houses at golden hour in Damrak avenue Amsterdam the Netherlands.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Colorful_canal_houses_at_golden_hour_in_Damrak_avenue_Amsterdam_the_Netherlands.jpg/960px-Colorful_canal_houses_at_golden_hour_in_Damrak_avenue_Amsterdam_the_Netherlands.jpg",
+        "attribution": "Basile Morin",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=52.3730796,4.8924534",
+        "embedUrl": "https://maps.google.com/maps?q=52.3730796,4.8924534&z=12&output=embed"
+      },
+      "year": "1655"
+    },
+    {
+      "id": "kingston-ulster-new-york-colony-death",
+      "type": "town",
+      "canonicalPlaceId": "kingston-ulster-new-york-colony",
+      "badge": "Death",
+      "name": "Kingston, Ulster, New York Colony",
+      "relevance": "",
+      "featured": false,
+      "lat": 42.0424942,
+      "lng": -74.1180016,
+      "wikimedia": {
+        "fileTitle": "File:The Dutch records of Kingston, Ulster County, New York (IA dutchrecordsofki00king).pdf",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/The_Dutch_records_of_Kingston%2C_Ulster_County%2C_New_York_%28IA_dutchrecordsofki00king%29.pdf/page1-829px-The_Dutch_records_of_Kingston%2C_Ulster_County%2C_New_York_%28IA_dutchrecordsofki00king%29.pdf.jpg",
+        "attribution": "Kingston, N.Y. [from old catalog]\nNew York state historical association. [from old catalog]\nOppenheim, Samuel, 1859- [from old catalog] tr",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=42.0424942,-74.1180016",
+        "embedUrl": "https://maps.google.com/maps?q=42.0424942,-74.1180016&z=12&output=embed"
+      },
+      "year": "1714"
+    }
+  ]
+}

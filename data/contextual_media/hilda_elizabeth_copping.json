@@ -1,0 +1,56 @@
+{
+  "personId": "hilda_elizabeth_copping",
+  "personName": "Hilda Elizabeth Copping",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "essex-england-death",
+      "type": "town",
+      "canonicalPlaceId": "essex-england",
+      "badge": "Death",
+      "name": "Essex, England",
+      "relevance": "",
+      "featured": true,
+      "lat": 51.7704679,
+      "lng": 0.4646698,
+      "wikipedia": {
+        "title": "Essex",
+        "url": "https://en.wikipedia.org/wiki/Essex",
+        "summary": "Essex is a ceremonial county in the East of England. It is bordered by Cambridgeshire and Suffolk to the north, the North Sea to the east, Kent across the Thames Estuary to the south, Greater London to the south-west, and Hertfordshire to the west. The largest settlement is Southend-on-Sea."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Epping Forest High Beach Essex England - spring pond 05.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Epping_Forest_High_Beach_Essex_England_-_spring_pond_05.jpg/960px-Epping_Forest_High_Beach_Essex_England_-_spring_pond_05.jpg",
+        "attribution": "Acabashi",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=51.7704679,0.4646698",
+        "embedUrl": "https://maps.google.com/maps?q=51.7704679,0.4646698&z=12&output=embed"
+      },
+      "year": "1982"
+    },
+    {
+      "id": "st-nicholas-chapel-marriage",
+      "type": "building",
+      "canonicalPlaceId": "st-nicholas-chapel",
+      "badge": "Marriage",
+      "name": "St Nicholas Chapel",
+      "relevance": "",
+      "featured": false,
+      "lat": 51.5541248,
+      "lng": 0.044734,
+      "wikimedia": {
+        "fileTitle": "File:Gipping - Chapel of St Nicholas.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/0/08/Gipping_-_Chapel_of_St_Nicholas.jpg",
+        "attribution": "mym",
+        "license": "CC BY-SA 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=51.5541248,0.044734",
+        "embedUrl": "https://maps.google.com/maps?q=51.5541248,0.044734&z=12&output=embed"
+      },
+      "year": "1927"
+    }
+  ]
+}

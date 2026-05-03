@@ -1,0 +1,77 @@
+{
+  "personId": "elizabeth_baxter",
+  "personName": "Elizabeth Baxter",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "wales-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "wales",
+      "badge": "Birth Place",
+      "name": "Wales",
+      "relevance": "",
+      "featured": true,
+      "lat": 52.2928116,
+      "lng": -3.73893,
+      "wikipedia": {
+        "title": "Wales",
+        "url": "https://en.wikipedia.org/wiki/Wales",
+        "summary": "Wales is a country that is part of the United Kingdom. Located on the island of Great Britain, it is bordered by the Irish Sea to the north and west, England to the east, the Bristol Channel to the south, and the Celtic Sea to the south-west. As of 2021, it had a population of 3.2 million. It has a "
+      },
+      "wikimedia": {
+        "fileTitle": "File:Wales Site.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Wales_Site.jpg",
+        "attribution": "Unknown authorUnknown author",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=52.2928116,-3.73893",
+        "embedUrl": "https://maps.google.com/maps?q=52.2928116,-3.73893&z=12&output=embed"
+      },
+      "year": "1800"
+    },
+    {
+      "id": "berlin-green-lake-wisconsin-marriage",
+      "type": "building",
+      "canonicalPlaceId": "berlin-green-lake-wisconsin",
+      "badge": "Marriage",
+      "name": "Berlin, Green Lake, Wisconsin",
+      "relevance": "",
+      "featured": false,
+      "lat": 43.9684264,
+      "lng": -88.9466233,
+      "wikimedia": {
+        "fileTitle": "File:Bird's eye view of the city of Berlin, Green Lake Co., Wisconsin 1867. LOC 73694536.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Bird%27s_eye_view_of_the_city_of_Berlin%2C_Green_Lake_Co.%2C_Wisconsin_1867._LOC_73694536.jpg/960px-Bird%27s_eye_view_of_the_city_of_Berlin%2C_Green_Lake_Co.%2C_Wisconsin_1867._LOC_73694536.jpg",
+        "attribution": "Ruger, A.; Chicago Lithographing Co.",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.9684264,-88.9466233",
+        "embedUrl": "https://maps.google.com/maps?q=43.9684264,-88.9466233&z=12&output=embed"
+      }
+    },
+    {
+      "id": "burlington-racine-wisconsin-residence",
+      "type": "town",
+      "canonicalPlaceId": "burlington-racine-wisconsin",
+      "badge": "Residence",
+      "name": "Burlington, Racine, Wisconsin",
+      "relevance": "",
+      "featured": false,
+      "lat": 42.7017952,
+      "lng": -87.8519059,
+      "wikimedia": {
+        "fileTitle": "File:Burlington Town Hall in Racine County, Wisconsin.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Burlington_Town_Hall_in_Racine_County%2C_Wisconsin.jpg/960px-Burlington_Town_Hall_in_Racine_County%2C_Wisconsin.jpg",
+        "attribution": "Wikideas1",
+        "license": "CC0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=42.7017952,-87.8519059",
+        "embedUrl": "https://maps.google.com/maps?q=42.7017952,-87.8519059&z=12&output=embed"
+      },
+      "year": "1880"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "personId": "john_dowell_1656",
+  "personName": "John Dowell",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "ottery-st-mary-devon-england-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "ottery-st-mary-devon-england",
+      "badge": "Birth Place",
+      "name": "Ottery St Mary, Devon, England",
+      "relevance": "",
+      "featured": true,
+      "lat": 50.7465954,
+      "lng": -3.2724332,
+      "wikimedia": {
+        "fileTitle": "File:St. Mary, Ottery St. Mary, Devon - geograph.org.uk - 1597769.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/2/27/St._Mary%2C_Ottery_St._Mary%2C_Devon_-_geograph.org.uk_-_1597769.jpg",
+        "attribution": "nick macneill",
+        "license": "CC BY-SA 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=50.7465954,-3.2724332",
+        "embedUrl": "https://maps.google.com/maps?q=50.7465954,-3.2724332&z=12&output=embed"
+      },
+      "year": "1656"
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "personId": "elizabeth_wright_powell",
+  "personName": "Elizabeth \"Bessie\" Wright Powell",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "elkland-township-tuscola-county-michigan-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "elkland-township-tuscola-county-michigan",
+      "badge": "Birth Place",
+      "name": "Elkland Township, Tuscola County, Michigan",
+      "relevance": "",
+      "featured": true,
+      "lat": 43.6190919,
+      "lng": -83.1746993,
+      "wikipedia": {
+        "title": "Elkland Township, Michigan",
+        "url": "https://en.wikipedia.org/wiki/Elkland_Township%2C_Michigan",
+        "summary": "Elkland Township is a civil township of Tuscola County in the U.S. state of Michigan. The population was 3,532 at the 2020 census."
+      },
+      "wikimedia": {
+        "fileTitle": "File:2021-10-19 11 36 49 View north along Pennsylvania State Route 154 at State Route 4008 in Elkland Township, Sullivan County, Pennsylvania.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/2021-10-19_11_36_49_View_north_along_Pennsylvania_State_Route_154_at_State_Route_4008_in_Elkland_Township%2C_Sullivan_County%2C_Pennsylvania.jpg/960px-2021-10-19_11_36_49_View_north_along_Pennsylvania_State_Route_154_at_State_Route_4008_in_Elkland_Township%2C_Sullivan_County%2C_Pennsylvania.jpg",
+        "attribution": "Famartin",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.6190919,-83.1746993",
+        "embedUrl": "https://maps.google.com/maps?q=43.6190919,-83.1746993&z=12&output=embed"
+      },
+      "year": "1874"
+    },
+    {
+      "id": "newport-perry-pennsylvania-death",
+      "type": "town",
+      "canonicalPlaceId": "newport-perry-pennsylvania",
+      "badge": "Death",
+      "name": "Newport, Perry, Pennsylvania",
+      "relevance": "",
+      "featured": false,
+      "lat": 40.4778612,
+      "lng": -77.1305373,
+      "wikimedia": {
+        "fileTitle": "File:Newport, Pennsylvania.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Newport%2C_Pennsylvania.jpg/960px-Newport%2C_Pennsylvania.jpg",
+        "attribution": "Doug Kerr",
+        "license": "CC BY-SA 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=40.4778612,-77.1305373",
+        "embedUrl": "https://maps.google.com/maps?q=40.4778612,-77.1305373&z=12&output=embed"
+      },
+      "year": "1951"
+    },
+    {
+      "id": "michigan-residence",
+      "type": "town",
+      "canonicalPlaceId": "michigan",
+      "badge": "Residence",
+      "name": "Michigan",
+      "relevance": "",
+      "featured": false,
+      "lat": 43.6211955,
+      "lng": -84.6824346,
+      "wikipedia": {
+        "title": "Michigan",
+        "url": "https://en.wikipedia.org/wiki/Michigan",
+        "summary": "Michigan is a peninsular state in the Great Lakes region of the Upper Midwestern United States. It shares water and land boundaries with Minnesota to the northwest, Wisconsin to the west, Indiana and Illinois to the southwest, Ohio to the southeast, and the Canadian province of Ontario to the east, "
+      },
+      "wikimedia": {
+        "fileTitle": "File:Lenawee County Courthouse Adrian Michigan.JPG",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Lenawee_County_Courthouse_Adrian_Michigan.JPG/960px-Lenawee_County_Courthouse_Adrian_Michigan.JPG",
+        "attribution": "Dwight Burdette",
+        "license": "CC BY 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.6211955,-84.6824346",
+        "embedUrl": "https://maps.google.com/maps?q=43.6211955,-84.6824346&z=12&output=embed"
+      },
+      "year": "1874"
+    }
+  ]
+}

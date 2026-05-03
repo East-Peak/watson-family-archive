@@ -1,0 +1,105 @@
+{
+  "personId": "elmer_ord_slater",
+  "personName": "Elmer Ord Slater",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "creston-union-county-iowa-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "creston-union-county-iowa",
+      "badge": "Birth Place",
+      "name": "Creston, Union County, Iowa",
+      "relevance": "",
+      "featured": true,
+      "lat": 41.0585878,
+      "lng": -94.361397,
+      "wikimedia": {
+        "fileTitle": "File:Creston Iowa (1908).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Creston_Iowa_%281908%29.jpg/960px-Creston_Iowa_%281908%29.jpg",
+        "attribution": "Unknown authorUnknown author",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=41.0585878,-94.361397",
+        "embedUrl": "https://maps.google.com/maps?q=41.0585878,-94.361397&z=12&output=embed"
+      },
+      "year": "1886"
+    },
+    {
+      "id": "mission-viejo-ca-death",
+      "type": "town",
+      "canonicalPlaceId": "mission-viejo-ca",
+      "badge": "Death",
+      "name": "Mission Viejo, CA",
+      "relevance": "",
+      "featured": false,
+      "lat": 33.5965685,
+      "lng": -117.659405,
+      "wikipedia": {
+        "title": "Mission Viejo, California",
+        "url": "https://en.wikipedia.org/wiki/Mission_Viejo%2C_California",
+        "summary": "Mission Viejo is a commuter city in the Saddleback Valley in Orange County, California, United States. Mission Viejo is considered one of the largest master-planned communities ever built under a single project in the United States and is rivaled only by Highlands Ranch, Colorado in size. Its popula"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Mission Viejo, CA, USA - panoramio.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Mission_Viejo%2C_CA%2C_USA_-_panoramio.jpg/960px-Mission_Viejo%2C_CA%2C_USA_-_panoramio.jpg",
+        "attribution": "peter boy12qq12",
+        "license": "CC BY 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=33.5965685,-117.659405",
+        "embedUrl": "https://maps.google.com/maps?q=33.5965685,-117.659405&z=12&output=embed"
+      },
+      "year": "1980"
+    },
+    {
+      "id": "california-marriage",
+      "type": "building",
+      "canonicalPlaceId": "california",
+      "badge": "Marriage",
+      "name": "California",
+      "relevance": "",
+      "featured": false,
+      "lat": 36.7014631,
+      "lng": -118.755997,
+      "wikipedia": {
+        "title": "California",
+        "url": "https://en.wikipedia.org/wiki/California",
+        "summary": "California is a state in the Western United States that lies on the Pacific Coast. It borders Oregon to the north, Nevada and Arizona to the east, and shares an international border with the Mexican state of Baja California to the south. With almost 40\u00a0million residents across an area of 163,696 squ"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Los Angeles (California, USA), South Olive Street -- 2012 -- 4847.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Los_Angeles_%28California%2C_USA%29%2C_South_Olive_Street_--_2012_--_4847.jpg/960px-Los_Angeles_%28California%2C_USA%29%2C_South_Olive_Street_--_2012_--_4847.jpg",
+        "attribution": "Dietmar Rabich",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=36.7014631,-118.755997",
+        "embedUrl": "https://maps.google.com/maps?q=36.7014631,-118.755997&z=12&output=embed"
+      },
+      "year": "1914"
+    },
+    {
+      "id": "forest-lawn-memorial-park-glendale-ca-residence",
+      "type": "town",
+      "canonicalPlaceId": "forest-lawn-memorial-park-glendale-ca",
+      "badge": "Residence",
+      "name": "Forest Lawn Memorial Park, Glendale, CA",
+      "relevance": "",
+      "featured": false,
+      "lat": 34.1245374,
+      "lng": -118.2454971,
+      "wikimedia": {
+        "fileTitle": "File:2013 - View N from East of the Great Mausoleum, Forest Lawn Memorial Park, Glendale, CA - panoramio.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/2013_-_View_N_from_East_of_the_Great_Mausoleum%2C_Forest_Lawn_Memorial_Park%2C_Glendale%2C_CA_-_panoramio.jpg/960px-2013_-_View_N_from_East_of_the_Great_Mausoleum%2C_Forest_Lawn_Memorial_Park%2C_Glendale%2C_CA_-_panoramio.jpg",
+        "attribution": "Chris English",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=34.1245374,-118.2454971",
+        "embedUrl": "https://maps.google.com/maps?q=34.1245374,-118.2454971&z=12&output=embed"
+      },
+      "year": "1980"
+    }
+  ]
+}

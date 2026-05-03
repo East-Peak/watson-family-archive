@@ -1,0 +1,29 @@
+{
+  "personId": "william_shinn_1817",
+  "personName": "William Shinn",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "clermont-ohio-marriage",
+      "type": "building",
+      "canonicalPlaceId": "clermont-ohio",
+      "badge": "Marriage",
+      "name": "Clermont, Ohio",
+      "relevance": "",
+      "featured": true,
+      "lat": 39.0678155,
+      "lng": -84.1566341,
+      "wikimedia": {
+        "fileTitle": "File:Clermont County, Ohio Courthouse.JPG",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Clermont_County%2C_Ohio_Courthouse.JPG/960px-Clermont_County%2C_Ohio_Courthouse.JPG",
+        "attribution": "Aesopposea",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=39.0678155,-84.1566341",
+        "embedUrl": "https://maps.google.com/maps?q=39.0678155,-84.1566341&z=12&output=embed"
+      },
+      "year": "1837"
+    }
+  ]
+}

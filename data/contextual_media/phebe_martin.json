@@ -1,0 +1,61 @@
+{
+  "personId": "phebe_martin",
+  "personName": "Phebe Martin",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "vermont-per-census-records-and-vt-birth-record-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "vermont-per-census-records-and-vt-birth-record",
+      "badge": "Birth Place",
+      "name": "Vermont per census records and VT birth record)",
+      "relevance": "",
+      "featured": true,
+      "year": "1810"
+    },
+    {
+      "id": "south-hero-grand-isle-vermont-marriage",
+      "type": "building",
+      "canonicalPlaceId": "south-hero-grand-isle-vermont",
+      "badge": "Marriage",
+      "name": "South Hero, Grand Isle, Vermont",
+      "relevance": "",
+      "featured": false,
+      "lat": 44.64843,
+      "lng": -73.3005593,
+      "wikimedia": {
+        "fileTitle": "File:Island House, South side of U.S. Route 2 at intersection of road to Allen's Point, South Hero, Grand Isle County, VT HABS VT,7-HEROS,1-1.tif",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Island_House%2C_South_side_of_U.S._Route_2_at_intersection_of_road_to_Allen%27s_Point%2C_South_Hero%2C_Grand_Isle_County%2C_VT_HABS_VT%2C7-HEROS%2C1-1.tif/lossy-page1-960px-Island_House%2C_South_side_of_U.S._Route_2_at_intersection_of_road_to_Allen%27s_Point%2C_South_Hero%2C_Grand_Isle_County%2C_VT_HABS_VT%2C7-HEROS%2C1-1.tif.jpg",
+        "attribution": null,
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=44.64843,-73.3005593",
+        "embedUrl": "https://maps.google.com/maps?q=44.64843,-73.3005593&z=12&output=embed"
+      },
+      "year": "1833"
+    },
+    {
+      "id": "clintonville-old-cemetery-clintonville-clinton-new-york-residence",
+      "type": "town",
+      "canonicalPlaceId": "clintonville-old-cemetery-clintonville-clinton-new-york",
+      "badge": "Residence",
+      "name": "Clintonville Old Cemetery, Clintonville, Clinton, New York",
+      "relevance": "",
+      "featured": false,
+      "lat": 44.7278943,
+      "lng": -73.6686982,
+      "wikimedia": {
+        "fileTitle": "File:Otsego County, New York; geographical and historical, from the earliest settlement to the present time, with county and township maps from original drawings (IA otsegocountynewy00baco).pdf",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Otsego_County%2C_New_York%3B_geographical_and_historical%2C_from_the_earliest_settlement_to_the_present_time%2C_with_county_and_township_maps_from_original_drawings_%28IA_otsegocountynewy00baco%29.pdf/page1-829px-thumbnail.pdf.jpg",
+        "attribution": "Bacon, Edwin F[axon], 1832- [from old catalog]",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=44.7278943,-73.6686982",
+        "embedUrl": "https://maps.google.com/maps?q=44.7278943,-73.6686982&z=12&output=embed"
+      },
+      "year": "1898"
+    }
+  ]
+}

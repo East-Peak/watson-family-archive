@@ -1,0 +1,78 @@
+{
+  "personId": "mary_colley",
+  "personName": "Mary Elizabeth Bullock",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "tennessee-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "tennessee",
+      "badge": "Birth Place",
+      "name": "Tennessee",
+      "relevance": "",
+      "featured": true,
+      "lat": 35.7730076,
+      "lng": -86.2820081,
+      "wikipedia": {
+        "title": "Tennessee",
+        "url": "https://en.wikipedia.org/wiki/Tennessee",
+        "summary": "Tennessee, officially the State of Tennessee, is a landlocked state in the Southeastern region of the United States. It borders Kentucky to the north, Virginia to the northeast, North Carolina to the east, Georgia, Alabama, and Mississippi to the south, Arkansas to the southwest, and Missouri to the"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Mountaintop Tennessee 3.png",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Mountaintop_Tennessee_3.png",
+        "attribution": "Roastedbeanz1",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=35.7730076,-86.2820081",
+        "embedUrl": "https://maps.google.com/maps?q=35.7730076,-86.2820081&z=12&output=embed"
+      },
+      "year": "1830"
+    },
+    {
+      "id": "graves-kentucky-death",
+      "type": "town",
+      "canonicalPlaceId": "graves-kentucky",
+      "badge": "Death",
+      "name": "Graves, Kentucky",
+      "relevance": "",
+      "featured": false,
+      "lat": 36.7244966,
+      "lng": -88.6569094,
+      "wikimedia": {
+        "fileTitle": "File:Dublin, Graves County, Kentucky.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Dublin%2C_Graves_County%2C_Kentucky.jpg/960px-Dublin%2C_Graves_County%2C_Kentucky.jpg",
+        "attribution": "Unknown photographer",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=36.7244966,-88.6569094",
+        "embedUrl": "https://maps.google.com/maps?q=36.7244966,-88.6569094&z=12&output=embed"
+      },
+      "year": "1896"
+    },
+    {
+      "id": "cuba-graves-kentucky-residence",
+      "type": "town",
+      "canonicalPlaceId": "cuba-graves-kentucky",
+      "badge": "Residence",
+      "name": "Cuba, Graves, Kentucky",
+      "relevance": "",
+      "featured": false,
+      "lat": 36.5850582,
+      "lng": -88.6292168,
+      "wikimedia": {
+        "fileTitle": "File:Havana - Cuba - Man giving a V sign - 1326.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Havana_-_Cuba_-_Man_giving_a_V_sign_-_1326.jpg/960px-Havana_-_Cuba_-_Man_giving_a_V_sign_-_1326.jpg",
+        "attribution": "Jorge Royan",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=36.5850582,-88.6292168",
+        "embedUrl": "https://maps.google.com/maps?q=36.5850582,-88.6292168&z=12&output=embed"
+      },
+      "year": "1870"
+    }
+  ]
+}

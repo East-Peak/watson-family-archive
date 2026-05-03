@@ -1,0 +1,33 @@
+{
+  "personId": "sylvester_morton_rogers",
+  "personName": "Sylvester Morton Rogers",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "wichita-kansas-marriage",
+      "type": "building",
+      "canonicalPlaceId": "wichita-kansas",
+      "badge": "Marriage",
+      "name": "Wichita, Kansas",
+      "relevance": "",
+      "featured": true,
+      "lat": 37.6922361,
+      "lng": -97.3375448,
+      "wikipedia": {
+        "title": "Wichita, Kansas",
+        "url": "https://en.wikipedia.org/wiki/Wichita%2C_Kansas",
+        "summary": "Wichita is the most populous city in the U.S. state of Kansas and the county seat of Sedgwick County. As of the 2020 census, the population of the city was 397,532, and the Wichita metropolitan area had a population of 647,610. It is located in south-central Kansas along the Arkansas River."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Petroleum Building, Wichita, Kansas 01.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Petroleum_Building%2C_Wichita%2C_Kansas_01.jpg/960px-Petroleum_Building%2C_Wichita%2C_Kansas_01.jpg",
+        "attribution": "Myotus",
+        "license": "CC BY 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=37.6922361,-97.3375448",
+        "embedUrl": "https://maps.google.com/maps?q=37.6922361,-97.3375448&z=12&output=embed"
+      }
+    }
+  ]
+}

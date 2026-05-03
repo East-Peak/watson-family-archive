@@ -1,0 +1,51 @@
+{
+  "personId": "katherine_haukins",
+  "personName": "Katherine Haukins",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "york-yorkshire-england-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "york-yorkshire-england",
+      "badge": "Birth Place",
+      "name": "York, Yorkshire, England",
+      "relevance": "",
+      "featured": true,
+      "lat": 53.9590555,
+      "lng": -1.0815361,
+      "wikimedia": {
+        "fileTitle": "File:York Minster Nave 2, Nth Yorkshire, UK - Diliff.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/York_Minster_Nave_2%2C_Nth_Yorkshire%2C_UK_-_Diliff.jpg/960px-York_Minster_Nave_2%2C_Nth_Yorkshire%2C_UK_-_Diliff.jpg",
+        "attribution": "Diliff",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=53.9590555,-1.0815361",
+        "embedUrl": "https://maps.google.com/maps?q=53.9590555,-1.0815361&z=12&output=embed"
+      },
+      "year": "1602"
+    },
+    {
+      "id": "corby-lincolnshire-england-death",
+      "type": "town",
+      "canonicalPlaceId": "corby-lincolnshire-england",
+      "badge": "Death",
+      "name": "Corby, Lincolnshire, England",
+      "relevance": "",
+      "featured": false,
+      "lat": 52.813391,
+      "lng": -0.5197684,
+      "wikimedia": {
+        "fileTitle": "File:Willoughby Memorial Library at Corby Glen, near Bourne, Lincolnshire - geograph.org.uk - 4310577.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Willoughby_Memorial_Library_at_Corby_Glen%2C_near_Bourne%2C_Lincolnshire_-_geograph.org.uk_-_4310577.jpg/960px-Willoughby_Memorial_Library_at_Corby_Glen%2C_near_Bourne%2C_Lincolnshire_-_geograph.org.uk_-_4310577.jpg",
+        "attribution": "Rex Needle",
+        "license": "CC BY-SA 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=52.813391,-0.5197684",
+        "embedUrl": "https://maps.google.com/maps?q=52.813391,-0.5197684&z=12&output=embed"
+      },
+      "year": "1661"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "personId": "joshua_meadows",
+  "personName": "Joshua Joseph Meadows",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "pine-mountain-harris-georgia-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "pine-mountain-harris-georgia",
+      "badge": "Birth Place",
+      "name": "Pine Mountain, Harris, Georgia",
+      "relevance": "",
+      "featured": true,
+      "lat": 32.8648522,
+      "lng": -84.8540982,
+      "wikimedia": {
+        "fileTitle": "File:Pine Mountain Georgia 1.JPG",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Pine_Mountain_Georgia_1.JPG/960px-Pine_Mountain_Georgia_1.JPG",
+        "attribution": "Rivers Langley; SaveRivers",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=32.8648522,-84.8540982",
+        "embedUrl": "https://maps.google.com/maps?q=32.8648522,-84.8540982&z=12&output=embed"
+      },
+      "year": "1824"
+    },
+    {
+      "id": "pike-county-alabama-death",
+      "type": "town",
+      "canonicalPlaceId": "pike-county-alabama",
+      "badge": "Death",
+      "name": "Pike County, Alabama",
+      "relevance": "",
+      "featured": false,
+      "lat": 31.7615793,
+      "lng": -85.9259465,
+      "wikipedia": {
+        "title": "Pike County, Alabama",
+        "url": "https://en.wikipedia.org/wiki/Pike_County%2C_Alabama",
+        "summary": "Pike County is a county located in the U.S. state of Alabama. As of the 2020 census the population was 33,009. Its county seat is Troy. Its name is in honor of General Zebulon Pike, of New Jersey, who led an expedition to southern Colorado and encountered Pikes Peak in 1806."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Pike County Alabama Courthouse.JPG",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Pike_County_Alabama_Courthouse.JPG/960px-Pike_County_Alabama_Courthouse.JPG",
+        "attribution": "Rivers Langley; SaveRivers",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=31.7615793,-85.9259465",
+        "embedUrl": "https://maps.google.com/maps?q=31.7615793,-85.9259465&z=12&output=embed"
+      },
+      "year": "1865"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "personId": "joseph_whatson",
+  "personName": "Joseph Whatson",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "suffolk-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "suffolk",
+      "badge": "Birth Place",
+      "name": "Suffolk",
+      "relevance": "",
+      "featured": true,
+      "lat": 52.2410014,
+      "lng": 1.0465716,
+      "wikipedia": {
+        "title": "Suffolk",
+        "url": "https://en.wikipedia.org/wiki/Suffolk",
+        "summary": "Suffolk is a ceremonial county in the East of England and East Anglia. It is bordered by Norfolk to the north, the North Sea to the east, Essex to the south, and Cambridgeshire to the west. Ipswich is the largest settlement."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Downtown Suffolk, VA.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Downtown_Suffolk%2C_VA.jpg/960px-Downtown_Suffolk%2C_VA.jpg",
+        "attribution": "User: Kubigula",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=52.2410014,1.0465716",
+        "embedUrl": "https://maps.google.com/maps?q=52.2410014,1.0465716&z=12&output=embed"
+      },
+      "year": "1776"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "personId": "jaspar_jans_hoed",
+  "personName": "Jaspar Jans Hoed",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "kingston-new-york-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "kingston-new-york",
+      "badge": "Birth Place",
+      "name": "Kingston, New York",
+      "relevance": "",
+      "featured": true,
+      "lat": 41.9287812,
+      "lng": -74.0023825,
+      "wikipedia": {
+        "title": "Kingston, New York",
+        "url": "https://en.wikipedia.org/wiki/Kingston%2C_New_York",
+        "summary": "Kingston is a city in and the county seat of Ulster County, New York, United States. The population was 24,069 at the 2020 census, while the Kingston metropolitan statistical area had 177,749 residents. It is at the confluence of Rondout Creek and the Hudson River, 91 miles (146\u00a0km) north of New Yor"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Kingston New York Wikivoyage banner.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Kingston_New_York_Wikivoyage_banner.jpg/960px-Kingston_New_York_Wikivoyage_banner.jpg",
+        "attribution": "Andre Carrotflower",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=41.9287812,-74.0023825",
+        "embedUrl": "https://maps.google.com/maps?q=41.9287812,-74.0023825&z=12&output=embed"
+      },
+      "year": "1670"
+    },
+    {
+      "id": "new-york-death",
+      "type": "town",
+      "canonicalPlaceId": "new-york",
+      "badge": "Death",
+      "name": "New York",
+      "relevance": "",
+      "featured": false,
+      "lat": 40.7127281,
+      "lng": -74.0060152,
+      "wikimedia": {
+        "fileTitle": "File:Long Island City New York May 2015 panorama 3.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Long_Island_City_New_York_May_2015_panorama_3.jpg/960px-Long_Island_City_New_York_May_2015_panorama_3.jpg",
+        "attribution": "King of Hearts",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=40.7127281,-74.0060152",
+        "embedUrl": "https://maps.google.com/maps?q=40.7127281,-74.0060152&z=12&output=embed"
+      },
+      "year": "1740"
+    }
+  ]
+}

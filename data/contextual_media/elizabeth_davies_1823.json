@@ -1,0 +1,54 @@
+{
+  "personId": "elizabeth_davies_1823",
+  "personName": "Elizabeth Davies",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "rhiwlas-north-wales-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "rhiwlas-north-wales",
+      "badge": "Birth Place",
+      "name": "Rhiwlas, North Wales",
+      "relevance": "",
+      "featured": true,
+      "year": "1823"
+    },
+    {
+      "id": "williamsburg-iowa-death",
+      "type": "town",
+      "canonicalPlaceId": "williamsburg-iowa",
+      "badge": "Death",
+      "name": "Williamsburg, Iowa",
+      "relevance": "",
+      "featured": false,
+      "lat": 41.6612394,
+      "lng": -92.0095079,
+      "wikipedia": {
+        "title": "Williamsburg, Iowa",
+        "url": "https://en.wikipedia.org/wiki/Williamsburg%2C_Iowa",
+        "summary": "Williamsburg is a city in Iowa County, Iowa, United States. The population was 3,346 at the time of the 2020 census. Williamsburg is known for Holden's Foundation Seeds, a foundation seed corn company, and Kinze Manufacturing, Inc., a farm implement manufacturer."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Williamsburg High School (Iowa).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Williamsburg_High_School_%28Iowa%29.jpg/960px-Williamsburg_High_School_%28Iowa%29.jpg",
+        "attribution": "RickH86",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=41.6612394,-92.0095079",
+        "embedUrl": "https://maps.google.com/maps?q=41.6612394,-92.0095079&z=12&output=embed"
+      },
+      "year": "1910"
+    },
+    {
+      "id": "likely-oak-hill-cemetery-williamsburg-residence",
+      "type": "town",
+      "canonicalPlaceId": "likely-oak-hill-cemetery-williamsburg",
+      "badge": "Residence",
+      "name": "Likely Oak Hill Cemetery, Williamsburg",
+      "relevance": "",
+      "featured": false,
+      "year": "1910"
+    }
+  ]
+}

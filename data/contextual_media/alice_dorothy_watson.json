@@ -1,0 +1,51 @@
+{
+  "personId": "alice_dorothy_watson",
+  "personName": "Alice Dorothy Watson",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "la-plata-charles-county-maryland-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "la-plata-charles-county-maryland",
+      "badge": "Birth Place",
+      "name": "La Plata, Charles County, Maryland",
+      "relevance": "",
+      "featured": true,
+      "lat": 38.5260311,
+      "lng": -76.9766569,
+      "wikimedia": {
+        "fileTitle": "File:2002 La Plata Tornado Destruction.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/6/61/2002_La_Plata_Tornado_Destruction.jpg",
+        "attribution": "Barbara Watson (NOAA)",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=38.5260311,-76.9766569",
+        "embedUrl": "https://maps.google.com/maps?q=38.5260311,-76.9766569&z=12&output=embed"
+      },
+      "year": "1910"
+    },
+    {
+      "id": "likely-california-death",
+      "type": "town",
+      "canonicalPlaceId": "likely-california",
+      "badge": "Death",
+      "name": "Likely California",
+      "relevance": "",
+      "featured": false,
+      "lat": 41.2304507,
+      "lng": -120.5041193,
+      "wikimedia": {
+        "fileTitle": "File:Likely General Store - Likely California.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Likely_General_Store_-_Likely_California.jpg/960px-Likely_General_Store_-_Likely_California.jpg",
+        "attribution": "Ian Poellet",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=41.2304507,-120.5041193",
+        "embedUrl": "https://maps.google.com/maps?q=41.2304507,-120.5041193&z=12&output=embed"
+      },
+      "year": "1992"
+    }
+  ]
+}

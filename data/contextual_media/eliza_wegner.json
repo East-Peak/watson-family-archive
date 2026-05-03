@@ -1,0 +1,34 @@
+{
+  "personId": "eliza_wegner",
+  "personName": "Eliza Wegner",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "prussia-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "prussia",
+      "badge": "Birth Place",
+      "name": "Prussia",
+      "relevance": "",
+      "featured": true,
+      "lat": 41.3738765,
+      "lng": -94.506357,
+      "wikipedia": {
+        "title": "Prussia",
+        "url": "https://en.wikipedia.org/wiki/Prussia",
+        "summary": "Prussia was a German state centred on the North European Plain. It originated from the 1525 secularization act of the Prussian part of the State of the Teutonic Order. For centuries, the House of Hohenzollern ruled Prussia, expanding its size with the Prussian Army. Prussia, with its capital at K\u00f6ni"
+      },
+      "wikimedia": {
+        "fileTitle": "File:C. 1890 Prussia (1415-1890).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/C._1890_Prussia_%281415-1890%29.jpg/960px-C._1890_Prussia_%281415-1890%29.jpg",
+        "attribution": "Alexander Keith Johnston",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=41.3738765,-94.506357",
+        "embedUrl": "https://maps.google.com/maps?q=41.3738765,-94.506357&z=12&output=embed"
+      },
+      "year": "1852"
+    }
+  ]
+}

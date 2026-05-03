@@ -1,0 +1,78 @@
+{
+  "personId": "agnes_lach",
+  "personName": "Agnes Lach",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "russia-poland-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "russia-poland",
+      "badge": "Birth Place",
+      "name": "Russia Poland",
+      "relevance": "",
+      "featured": true,
+      "lat": 43.225693,
+      "lng": -75.06134,
+      "wikimedia": {
+        "fileTitle": "File:Poland Russia Locator.png",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Poland_Russia_Locator.png/960px-Poland_Russia_Locator.png",
+        "attribution": "Dancingwombatsrule",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.225693,-75.06134",
+        "embedUrl": "https://maps.google.com/maps?q=43.225693,-75.06134&z=12&output=embed"
+      },
+      "year": "1892"
+    },
+    {
+      "id": "maricopa-arizona-death",
+      "type": "town",
+      "canonicalPlaceId": "maricopa-arizona",
+      "badge": "Death",
+      "name": "Maricopa, Arizona",
+      "relevance": "",
+      "featured": false,
+      "lat": 33.34883,
+      "lng": -112.49123,
+      "wikipedia": {
+        "title": "Maricopa, Arizona",
+        "url": "https://en.wikipedia.org/wiki/Maricopa%2C_Arizona",
+        "summary": "Maricopa is a city in the Gila River Valley in Pinal County, Arizona, United States. With 76,654 residents as of 2024, Maricopa is the second largest incorporated municipality in Pinal County."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Maricopa Arizona.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Maricopa_Arizona.jpg/960px-Maricopa_Arizona.jpg",
+        "attribution": "Chris J",
+        "license": "CC BY-SA 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=33.34883,-112.49123",
+        "embedUrl": "https://maps.google.com/maps?q=33.34883,-112.49123&z=12&output=embed"
+      },
+      "year": "1975"
+    },
+    {
+      "id": "kronenwetter-marathon-wi-residence",
+      "type": "town",
+      "canonicalPlaceId": "kronenwetter-marathon-wi",
+      "badge": "Residence",
+      "name": "Kronenwetter, Marathon, WI",
+      "relevance": "",
+      "featured": false,
+      "lat": 44.8290497,
+      "lng": -89.659718,
+      "wikimedia": {
+        "fileTitle": "File:Kronenwetter Squad Car.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Kronenwetter_Squad_Car.jpg",
+        "attribution": "Superlouie50 (talk)",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=44.8290497,-89.659718",
+        "embedUrl": "https://maps.google.com/maps?q=44.8290497,-89.659718&z=12&output=embed"
+      },
+      "year": "1920"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "personId": "jacob_bachman",
+  "personName": "Jacob Bachman",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "schleitheim-die-schweiz-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "schleitheim-die-schweiz",
+      "badge": "Birth Place",
+      "name": "Schleitheim, die Schweiz",
+      "relevance": "",
+      "featured": true,
+      "year": "1637"
+    },
+    {
+      "id": "steffisburg-bern-switzerland-death",
+      "type": "town",
+      "canonicalPlaceId": "steffisburg-bern-switzerland",
+      "badge": "Death",
+      "name": "Steffisburg, Bern, Switzerland",
+      "relevance": "",
+      "featured": false,
+      "lat": 46.7774738,
+      "lng": 7.6354195,
+      "wikimedia": {
+        "fileTitle": "File:Steffisburg blick.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Steffisburg_blick.jpg/960px-Steffisburg_blick.jpg",
+        "attribution": "Clark park at de.wikipedia",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=46.7774738,7.6354195",
+        "embedUrl": "https://maps.google.com/maps?q=46.7774738,7.6354195&z=12&output=embed"
+      },
+      "year": "1720"
+    }
+  ]
+}

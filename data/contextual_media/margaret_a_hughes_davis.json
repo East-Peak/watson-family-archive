@@ -1,0 +1,17 @@
+{
+  "personId": "margaret_a_hughes_davis",
+  "personName": "Margaret A. Hughes Davis",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "filter-11-results-reviewed-all-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "filter-11-results-reviewed-all",
+      "badge": "Birth Place",
+      "name": "filter: 11 results \u2014 reviewed all",
+      "relevance": "",
+      "featured": true,
+      "year": "1845"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "personId": "ann_ridgley",
+  "personName": "Ann Ridgley",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "queen-caroline-parish-anne-arundel-county-province-of-maryland-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "queen-caroline-parish-anne-arundel-county-province-of-maryland",
+      "badge": "Birth Place",
+      "name": "Queen Caroline Parish, Anne Arundel County, Province of Maryland",
+      "relevance": "",
+      "featured": true,
+      "year": "1692"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "personId": "jane_evans_williams",
+  "personName": "Jane Evans",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "null-marriage",
+      "type": "building",
+      "canonicalPlaceId": "null",
+      "badge": "Marriage",
+      "name": "null",
+      "relevance": "",
+      "featured": true,
+      "lat": 40.788106,
+      "lng": 35.0218961,
+      "wikimedia": {
+        "fileTitle": "File:Null modem.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/5/58/Null_modem.jpg",
+        "attribution": "Dori",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=40.788106,35.0218961",
+        "embedUrl": "https://maps.google.com/maps?q=40.788106,35.0218961&z=12&output=embed"
+      }
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "personId": "joseph_bennett",
+  "personName": "Joseph Bennett",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "kentucky-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "kentucky",
+      "badge": "Birth Place",
+      "name": "Kentucky",
+      "relevance": "",
+      "featured": true,
+      "lat": 37.5726028,
+      "lng": -85.1551411,
+      "wikipedia": {
+        "title": "Kentucky",
+        "url": "https://en.wikipedia.org/wiki/Kentucky",
+        "summary": "Kentucky, officially the Commonwealth of Kentucky, is a landlocked state in the Southeastern region of the United States. It borders Illinois, Indiana, and Ohio to the north, West Virginia to the northeast, Virginia to the east, Tennessee to the south, and Missouri to the west. Its northern border i"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Kentucky Scenic Byway signage on Kentucky Route 63 in Temple Hill, Kentucky.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Kentucky_Scenic_Byway_signage_on_Kentucky_Route_63_in_Temple_Hill%2C_Kentucky.jpg",
+        "attribution": "K-Johnson 127",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=37.5726028,-85.1551411",
+        "embedUrl": "https://maps.google.com/maps?q=37.5726028,-85.1551411&z=12&output=embed"
+      },
+      "year": "1896"
+    },
+    {
+      "id": "jefferson-kentucky-death",
+      "type": "town",
+      "canonicalPlaceId": "jefferson-kentucky",
+      "badge": "Death",
+      "name": "Jefferson, Kentucky",
+      "relevance": "",
+      "featured": false,
+      "lat": 38.1787175,
+      "lng": -85.664528,
+      "wikipedia": {
+        "title": "Jeffersontown, Kentucky",
+        "url": "https://en.wikipedia.org/wiki/Jeffersontown%2C_Kentucky",
+        "summary": "Jeffersontown is a city in Jefferson County, Kentucky, United States. The population was 28,474 at the 2020 census. Jeffersontown is a major suburb of Louisville. When the Louisville Metro government was established in 2003, Jeffersontown chose to retain its status as an independent city. It is the "
+      },
+      "wikimedia": {
+        "fileTitle": "File:Jefferson County KY Courthouse 2.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Jefferson_County_KY_Courthouse_2.jpg/960px-Jefferson_County_KY_Courthouse_2.jpg",
+        "attribution": "Bedford at English Wikipedia",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=38.1787175,-85.664528",
+        "embedUrl": "https://maps.google.com/maps?q=38.1787175,-85.664528&z=12&output=embed"
+      },
+      "year": "1982"
+    },
+    {
+      "id": "knox-county-kentucky-residence",
+      "type": "town",
+      "canonicalPlaceId": "knox-county-kentucky",
+      "badge": "Residence",
+      "name": "Knox County, Kentucky",
+      "relevance": "",
+      "featured": false,
+      "lat": 36.8934427,
+      "lng": -83.8545725,
+      "wikipedia": {
+        "title": "Knox County, Kentucky",
+        "url": "https://en.wikipedia.org/wiki/Knox_County%2C_Kentucky",
+        "summary": "Knox County is a county located in Appalachia near the southeastern corner of the U.S. state of Kentucky. As of the 2020 census, the population was 30,193. Its county seat is Barbourville. The county is named for General Henry Knox. It is one of the few coal-producing counties in Kentucky that has n"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Knox County Kentucky Courthouse.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Knox_County_Kentucky_Courthouse.jpg/960px-Knox_County_Kentucky_Courthouse.jpg",
+        "attribution": "W.marsh",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=36.8934427,-83.8545725",
+        "embedUrl": "https://maps.google.com/maps?q=36.8934427,-83.8545725&z=12&output=embed"
+      },
+      "year": "1900"
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "personId": "basil_dorsey",
+  "personName": "Basil Dorsey",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "baltimore-maryland-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "baltimore-maryland",
+      "badge": "Birth Place",
+      "name": "Baltimore, Maryland",
+      "relevance": "",
+      "featured": true,
+      "lat": 39.2908816,
+      "lng": -76.610759,
+      "wikipedia": {
+        "title": "Baltimore",
+        "url": "https://en.wikipedia.org/wiki/Baltimore",
+        "summary": "Baltimore, also known as Baltimore City, is the most populous city in the U.S. state of Maryland. It is the 30th-most populous U.S. city with a population of 585,708 at the 2020 census and estimated at 568,271 in 2024, while the Baltimore metropolitan area at 2.86 million residents is the 22nd-large"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Baltimore, Maryland skyline.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Baltimore%2C_Maryland_skyline.jpg/960px-Baltimore%2C_Maryland_skyline.jpg",
+        "attribution": "Quintin Soloviev",
+        "license": "CC BY 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=39.2908816,-76.610759",
+        "embedUrl": "https://maps.google.com/maps?q=39.2908816,-76.610759&z=12&output=embed"
+      },
+      "year": "1777"
+    },
+    {
+      "id": "marshall-west-virginia-death",
+      "type": "town",
+      "canonicalPlaceId": "marshall-west-virginia",
+      "badge": "Death",
+      "name": "Marshall, West Virginia",
+      "relevance": "",
+      "featured": false,
+      "lat": 39.854861,
+      "lng": -80.6616946,
+      "wikipedia": {
+        "title": "Marshall, West Virginia",
+        "url": "https://en.wikipedia.org/wiki/Marshall%2C_West_Virginia",
+        "summary": "Marshall is an unincorporated community in Jackson County, West Virginia, United States. Marshall is located on U.S. Route 33 and Little Mill Creek, 9.5 miles (15.3\u00a0km) east of Ripley."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Marshall County Courthouse West Virginia.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Marshall_County_Courthouse_West_Virginia.jpg/960px-Marshall_County_Courthouse_West_Virginia.jpg",
+        "attribution": "Tim Kiser (w:User:Malepheasant)",
+        "license": "CC BY-SA 2.5"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=39.854861,-80.6616946",
+        "embedUrl": "https://maps.google.com/maps?q=39.854861,-80.6616946&z=12&output=embed"
+      },
+      "year": "1856"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "personId": "albert_ferdinand_wegner",
+  "personName": "Albert Ferdinand Wegner",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "pomerania-prussia-germany-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "pomerania-prussia-germany",
+      "badge": "Birth Place",
+      "name": "Pomerania, Prussia, Germany",
+      "relevance": "",
+      "featured": true,
+      "lat": 52.5172596,
+      "lng": 13.3927444,
+      "wikimedia": {
+        "fileTitle": "File:C. 1250 Pomerania Prussia and Poland.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/C._1250_Pomerania_Prussia_and_Poland.jpg/960px-C._1250_Pomerania_Prussia_and_Poland.jpg",
+        "attribution": "Gustav Droysen",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=52.5172596,13.3927444",
+        "embedUrl": "https://maps.google.com/maps?q=52.5172596,13.3927444&z=12&output=embed"
+      },
+      "year": "1866"
+    }
+  ]
+}

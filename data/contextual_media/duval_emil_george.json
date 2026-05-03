@@ -1,0 +1,88 @@
+{
+  "personId": "duval_emil_george",
+  "personName": "Duval Emil George",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "bayonne-hudson-new-jersey-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "bayonne-hudson-new-jersey",
+      "badge": "Birth Place",
+      "name": "Bayonne, Hudson, New Jersey",
+      "relevance": "",
+      "featured": true,
+      "lat": 40.6687141,
+      "lng": -74.1143091,
+      "wikimedia": {
+        "fileTitle": "File:Bayonne Bridge Collins Pk jeh.JPG",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Bayonne_Bridge_Collins_Pk_jeh.JPG/960px-Bayonne_Bridge_Collins_Pk_jeh.JPG",
+        "attribution": "Jim.henderson",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=40.6687141,-74.1143091",
+        "embedUrl": "https://maps.google.com/maps?q=40.6687141,-74.1143091&z=12&output=embed"
+      },
+      "year": "1909"
+    },
+    {
+      "id": "willis-montgomery-texas-death",
+      "type": "town",
+      "canonicalPlaceId": "willis-montgomery-texas",
+      "badge": "Death",
+      "name": "Willis, Montgomery, Texas",
+      "relevance": "",
+      "featured": false,
+      "lat": 30.4241219,
+      "lng": -95.4796587,
+      "wikimedia": {
+        "fileTitle": "File:City Hall of Willis, Texas, South View.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/City_Hall_of_Willis%2C_Texas%2C_South_View.jpg/960px-City_Hall_of_Willis%2C_Texas%2C_South_View.jpg",
+        "attribution": "HIM Nguyen",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=30.4241219,-95.4796587",
+        "embedUrl": "https://maps.google.com/maps?q=30.4241219,-95.4796587&z=12&output=embed"
+      },
+      "year": "1993"
+    },
+    {
+      "id": "brooklyn-new-york-marriage",
+      "type": "building",
+      "canonicalPlaceId": "brooklyn-new-york",
+      "badge": "Marriage",
+      "name": "Brooklyn, New York",
+      "relevance": "",
+      "featured": false,
+      "lat": 40.6526006,
+      "lng": -73.9497211,
+      "wikipedia": {
+        "title": "Brooklyn",
+        "url": "https://en.wikipedia.org/wiki/Brooklyn",
+        "summary": "Brooklyn is the most populous of the five boroughs of New York City, coextensive with Kings County, in the U.S. state of New York. Located at the westernmost end of Long Island and formerly an independent city, Brooklyn shares a land border with the borough and county of Queens. It has several bridg"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Brooklyn Botanic Garden New York May 2015 003.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Brooklyn_Botanic_Garden_New_York_May_2015_003.jpg/960px-Brooklyn_Botanic_Garden_New_York_May_2015_003.jpg",
+        "attribution": "King of Hearts",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=40.6526006,-73.9497211",
+        "embedUrl": "https://maps.google.com/maps?q=40.6526006,-73.9497211&z=12&output=embed"
+      },
+      "year": "1933"
+    },
+    {
+      "id": "not-specified-in-search-snippet-birth-6-jun-1909-death-15-mar-1993-residence",
+      "type": "town",
+      "canonicalPlaceId": "not-specified-in-search-snippet-birth-6-jun-1909-death-15-mar-1993",
+      "badge": "Residence",
+      "name": "not specified in search snippet, birth 6 Jun 1909, death 15 Mar 1993",
+      "relevance": "",
+      "featured": false,
+      "year": "1993"
+    }
+  ]
+}

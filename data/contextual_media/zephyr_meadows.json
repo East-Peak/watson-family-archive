@@ -1,0 +1,56 @@
+{
+  "personId": "zephyr_meadows",
+  "personName": "Zephyr Meadows",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "oklahoma-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "oklahoma",
+      "badge": "Birth Place",
+      "name": "Oklahoma",
+      "relevance": "",
+      "featured": true,
+      "lat": 34.9550817,
+      "lng": -97.2684063,
+      "wikipedia": {
+        "title": "Oklahoma",
+        "url": "https://en.wikipedia.org/wiki/Oklahoma",
+        "summary": "Oklahoma is a landlocked state in the South Central and Southwestern region of the United States. It borders Texas to the south and west, Kansas to the north, Missouri to the northeast, Arkansas to the southeast, New Mexico to the west, and Colorado to the northwest. Partially in the western extreme"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Child Labor in Oklahoma, United States 1916.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Child_Labor_in_Oklahoma%2C_United_States_1916.jpg/960px-Child_Labor_in_Oklahoma%2C_United_States_1916.jpg",
+        "attribution": "Preus  museum",
+        "license": "CC BY 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=34.9550817,-97.2684063",
+        "embedUrl": "https://maps.google.com/maps?q=34.9550817,-97.2684063&z=12&output=embed"
+      },
+      "year": "1897"
+    },
+    {
+      "id": "garfield-oklahoma-residence",
+      "type": "town",
+      "canonicalPlaceId": "garfield-oklahoma",
+      "badge": "Residence",
+      "name": "Garfield, Oklahoma",
+      "relevance": "",
+      "featured": false,
+      "lat": 36.3735486,
+      "lng": -97.7845975,
+      "wikimedia": {
+        "fileTitle": "File:Garfield County Oklahoma Wheat.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Garfield_County_Oklahoma_Wheat.jpg",
+        "attribution": "Kiddo27",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=36.3735486,-97.7845975",
+        "embedUrl": "https://maps.google.com/maps?q=36.3735486,-97.7845975&z=12&output=embed"
+      },
+      "year": "1950"
+    }
+  ]
+}

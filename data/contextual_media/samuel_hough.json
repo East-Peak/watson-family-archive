@@ -1,0 +1,56 @@
+{
+  "personId": "samuel_hough",
+  "personName": "Samuel Hough",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "cheshire-england-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "cheshire-england",
+      "badge": "Birth Place",
+      "name": "Cheshire, England",
+      "relevance": "",
+      "featured": true,
+      "lat": 53.2141028,
+      "lng": -2.4717701,
+      "wikipedia": {
+        "title": "Cheshire",
+        "url": "https://en.wikipedia.org/wiki/Cheshire",
+        "summary": "Cheshire is a ceremonial county in North West England. It is bordered by Merseyside to the north-west, Greater Manchester to the north-east, Derbyshire to the east, Staffordshire to the south-east, and Shropshire to the south; to the west it is bordered by the Welsh counties of Flintshire and Wrexha"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Chester Cathedral Cloister, Cheshire, UK - Diliff.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Chester_Cathedral_Cloister%2C_Cheshire%2C_UK_-_Diliff.jpg/960px-Chester_Cathedral_Cloister%2C_Cheshire%2C_UK_-_Diliff.jpg",
+        "attribution": "Diliff",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=53.2141028,-2.4717701",
+        "embedUrl": "https://maps.google.com/maps?q=53.2141028,-2.4717701&z=12&output=embed"
+      },
+      "year": "1665"
+    },
+    {
+      "id": "bucks-pennsylvania-death",
+      "type": "town",
+      "canonicalPlaceId": "bucks-pennsylvania",
+      "badge": "Death",
+      "name": "Bucks, Pennsylvania",
+      "relevance": "",
+      "featured": false,
+      "lat": 40.3451668,
+      "lng": -75.1263909,
+      "wikimedia": {
+        "fileTitle": "File:Old Bucks County, Pennsylvania, Courthouse 1906.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Old_Bucks_County%2C_Pennsylvania%2C_Courthouse_1906.jpg/960px-Old_Bucks_County%2C_Pennsylvania%2C_Courthouse_1906.jpg",
+        "attribution": "Unknown authorUnknown author",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=40.3451668,-75.1263909",
+        "embedUrl": "https://maps.google.com/maps?q=40.3451668,-75.1263909&z=12&output=embed"
+      },
+      "year": "1729"
+    }
+  ]
+}

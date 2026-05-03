@@ -1,0 +1,56 @@
+{
+  "personId": "robert_evan_million_i",
+  "personName": "Robert Evan Million I",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "northumberland-virginia-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "northumberland-virginia",
+      "badge": "Birth Place",
+      "name": "Northumberland, Virginia",
+      "relevance": "",
+      "featured": true,
+      "lat": 37.9314992,
+      "lng": -76.4836686,
+      "wikimedia": {
+        "fileTitle": "File:Northumberland House and Mantua, Virginia Historical Marker No. JT-12, Claraville, Virginia (14486109955).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Northumberland_House_and_Mantua%2C_Virginia_Historical_Marker_No._JT-12%2C_Claraville%2C_Virginia_%2814486109955%29.jpg/960px-Northumberland_House_and_Mantua%2C_Virginia_Historical_Marker_No._JT-12%2C_Claraville%2C_Virginia_%2814486109955%29.jpg",
+        "attribution": "Ken Lund from Reno, Nevada, USA",
+        "license": "CC BY-SA 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=37.9314992,-76.4836686",
+        "embedUrl": "https://maps.google.com/maps?q=37.9314992,-76.4836686&z=12&output=embed"
+      },
+      "year": "1695"
+    },
+    {
+      "id": "virginia-death",
+      "type": "town",
+      "canonicalPlaceId": "virginia",
+      "badge": "Death",
+      "name": "Virginia",
+      "relevance": "",
+      "featured": false,
+      "lat": 37.1232245,
+      "lng": -78.4927721,
+      "wikipedia": {
+        "title": "Virginia",
+        "url": "https://en.wikipedia.org/wiki/Virginia",
+        "summary": "Virginia, officially the Commonwealth of Virginia, is a state in the Southeastern and Mid-Atlantic regions of the United States between the Atlantic Coast and the Appalachian Mountains. It borders Kentucky to the west, Tennessee to the south-west, North Carolina to the south, West Virginia to the no"
+      },
+      "wikimedia": {
+        "fileTitle": "File:George Charles Beresford - Virginia Woolf in 1902 - Restoration.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/George_Charles_Beresford_-_Virginia_Woolf_in_1902_-_Restoration.jpg/960px-George_Charles_Beresford_-_Virginia_Woolf_in_1902_-_Restoration.jpg",
+        "attribution": "George Charles Beresford / Adam Cuerden",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=37.1232245,-78.4927721",
+        "embedUrl": "https://maps.google.com/maps?q=37.1232245,-78.4927721&z=12&output=embed"
+      },
+      "year": "1773"
+    }
+  ]
+}

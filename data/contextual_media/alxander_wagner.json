@@ -1,0 +1,105 @@
+{
+  "personId": "alxander_wagner",
+  "personName": "Alxander Wagner",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "lebanon-dodge-wi-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "lebanon-dodge-wi",
+      "badge": "Birth Place",
+      "name": "Lebanon, Dodge, WI",
+      "relevance": "",
+      "featured": true,
+      "lat": 43.2400321,
+      "lng": -88.5959276,
+      "wikimedia": {
+        "fileTitle": "File:LebanonWisconsinFireDepartment.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/LebanonWisconsinFireDepartment.jpg/960px-LebanonWisconsinFireDepartment.jpg",
+        "attribution": "Royalbroil",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.2400321,-88.5959276",
+        "embedUrl": "https://maps.google.com/maps?q=43.2400321,-88.5959276&z=12&output=embed"
+      },
+      "year": "1866"
+    },
+    {
+      "id": "milwaukee-wi-residence",
+      "type": "town",
+      "canonicalPlaceId": "milwaukee-wi",
+      "badge": "Residence",
+      "name": "Milwaukee, WI",
+      "relevance": "",
+      "featured": false,
+      "lat": 43.0386475,
+      "lng": -87.9090751,
+      "wikipedia": {
+        "title": "Milwaukee",
+        "url": "https://en.wikipedia.org/wiki/Milwaukee",
+        "summary": "Milwaukee is the most populous city in the U.S. state of Wisconsin. It is located on the western shore of Lake Michigan at the confluence of the Milwaukee, Menomonee, and Kinnickinnic Rivers. Milwaukee is the 31st-most populous city in the United States and the fifth-most populous city in the Midwes"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Men loading hardware into new GMC Model T truck Milwaukee WI 1936.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Men_loading_hardware_into_new_GMC_Model_T_truck_Milwaukee_WI_1936.jpg",
+        "attribution": "New York Public Library",
+        "license": "No restrictions"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.0386475,-87.9090751",
+        "embedUrl": "https://maps.google.com/maps?q=43.0386475,-87.9090751&z=12&output=embed"
+      },
+      "year": "1900"
+    },
+    {
+      "id": "north-milwaukee-wi-residence",
+      "type": "town",
+      "canonicalPlaceId": "north-milwaukee-wi",
+      "badge": "Residence",
+      "name": "North Milwaukee, WI",
+      "relevance": "",
+      "featured": false,
+      "lat": 43.1114067,
+      "lng": -87.9564739,
+      "wikimedia": {
+        "fileTitle": "File:North Old World 3rd Street, Milwaukee, WI.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/North_Old_World_3rd_Street%2C_Milwaukee%2C_WI.jpg/960px-North_Old_World_3rd_Street%2C_Milwaukee%2C_WI.jpg",
+        "attribution": "Gnome70",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.1114067,-87.9564739",
+        "embedUrl": "https://maps.google.com/maps?q=43.1114067,-87.9564739&z=12&output=embed"
+      },
+      "year": "1910"
+    },
+    {
+      "id": "los-angeles-ca-residence",
+      "type": "town",
+      "canonicalPlaceId": "los-angeles-ca",
+      "badge": "Residence",
+      "name": "Los Angeles, CA",
+      "relevance": "",
+      "featured": false,
+      "lat": 34.0536909,
+      "lng": -118.242766,
+      "wikipedia": {
+        "title": "Los Angeles",
+        "url": "https://en.wikipedia.org/wiki/Los_Angeles",
+        "summary": "Los Angeles is the most populous city in the U.S. state of California, and the commercial, financial, and cultural center of Southern California. With an estimated 3.88 million residents within the city limits as of 2024, it is the second-most populous city in the United States, behind New York City"
+      },
+      "wikimedia": {
+        "fileTitle": "File:USS Los Angeles (CA-135) in the Far East, 13 October 1952 (NH 97386).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/USS_Los_Angeles_%28CA-135%29_in_the_Far_East%2C_13_October_1952_%28NH_97386%29.jpg/960px-USS_Los_Angeles_%28CA-135%29_in_the_Far_East%2C_13_October_1952_%28NH_97386%29.jpg",
+        "attribution": "Unknown authorUnknown author",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=34.0536909,-118.242766",
+        "embedUrl": "https://maps.google.com/maps?q=34.0536909,-118.242766&z=12&output=embed"
+      },
+      "year": "1930"
+    }
+  ]
+}

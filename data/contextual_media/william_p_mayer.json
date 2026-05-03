@@ -1,0 +1,88 @@
+{
+  "personId": "william_p_mayer",
+  "personName": "William P. Mayer",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "kansas-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "kansas",
+      "badge": "Birth Place",
+      "name": "Kansas",
+      "relevance": "",
+      "featured": true,
+      "lat": 38.27312,
+      "lng": -98.5821872,
+      "wikipedia": {
+        "title": "Kansas",
+        "url": "https://en.wikipedia.org/wiki/Kansas",
+        "summary": "Kansas is a landlocked state in the Midwestern region of the United States. It borders Nebraska to the north; Colorado to the west; Oklahoma to the south; and Missouri to the east. Kansas is named after the Kansas River, in turn named after the Kansa people. Its capital is Topeka, and its most popul"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Crops Kansas AST 20010624.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Crops_Kansas_AST_20010624.jpg/960px-Crops_Kansas_AST_20010624.jpg",
+        "attribution": "NASA",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=38.27312,-98.5821872",
+        "embedUrl": "https://maps.google.com/maps?q=38.27312,-98.5821872&z=12&output=embed"
+      },
+      "year": "1865"
+    },
+    {
+      "id": "denver-colorado-death",
+      "type": "town",
+      "canonicalPlaceId": "denver-colorado",
+      "badge": "Death",
+      "name": "Denver, Colorado",
+      "relevance": "",
+      "featured": false,
+      "lat": 39.7392364,
+      "lng": -104.984862,
+      "wikipedia": {
+        "title": "Denver",
+        "url": "https://en.wikipedia.org/wiki/Denver",
+        "summary": "Denver is the capital and most populous city of the U.S. state of Colorado. Officially a consolidated city and county, it is located in the South Platte River valley on the western edge of the High Plains, and is just east of the Front Range of the Rocky Mountains (Rockies). Denver is the 19th-most "
+      },
+      "wikimedia": {
+        "fileTitle": "File:Denver Colorado 1898 - LOC - restoration1.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Denver_Colorado_1898_-_LOC_-_restoration1.jpg/960px-Denver_Colorado_1898_-_LOC_-_restoration1.jpg",
+        "attribution": "William Henry Jackson",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=39.7392364,-104.984862",
+        "embedUrl": "https://maps.google.com/maps?q=39.7392364,-104.984862&z=12&output=embed"
+      },
+      "year": "1934"
+    },
+    {
+      "id": "eagle-county-colorado-residence",
+      "type": "town",
+      "canonicalPlaceId": "eagle-county-colorado",
+      "badge": "Residence",
+      "name": "Eagle County, Colorado",
+      "relevance": "",
+      "featured": false,
+      "lat": 39.6161124,
+      "lng": -106.7172844,
+      "wikipedia": {
+        "title": "Eagle County, Colorado",
+        "url": "https://en.wikipedia.org/wiki/Eagle_County%2C_Colorado",
+        "summary": "Eagle County is a county located in the U.S. state of Colorado. As of the 2020 census, the population was 55,731. The county seat is the Town of Eagle and the most populous community is Edwards. The county is named for the Eagle River."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Rafting the Colorado River in Eagle County, Colorado.JPG",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Rafting_the_Colorado_River_in_Eagle_County%2C_Colorado.JPG/960px-Rafting_the_Colorado_River_in_Eagle_County%2C_Colorado.JPG",
+        "attribution": "Jeffrey Beall",
+        "license": "CC BY 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=39.6161124,-106.7172844",
+        "embedUrl": "https://maps.google.com/maps?q=39.6161124,-106.7172844&z=12&output=embed"
+      },
+      "year": "1934"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "personId": "orphire_gendron",
+  "personName": "Orphire Gendron",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "minnesota-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "minnesota",
+      "badge": "Birth Place",
+      "name": "Minnesota",
+      "relevance": "",
+      "featured": true,
+      "lat": 45.9896587,
+      "lng": -94.6113288,
+      "wikipedia": {
+        "title": "Minnesota",
+        "url": "https://en.wikipedia.org/wiki/Minnesota",
+        "summary": "Minnesota is a state in the Upper Midwestern region of the United States. It is bordered by the Canadian provinces of Manitoba and Ontario to the north and east and by the U.S. states of Wisconsin to the east, Iowa to the south, and North Dakota and South Dakota to the west. The northeast corner has"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Minnesota Welcomes You sign.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Minnesota_Welcomes_You_sign.jpg/960px-Minnesota_Welcomes_You_sign.jpg",
+        "attribution": "Lorie Shaull",
+        "license": "CC BY-SA 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=45.9896587,-94.6113288",
+        "embedUrl": "https://maps.google.com/maps?q=45.9896587,-94.6113288&z=12&output=embed"
+      },
+      "year": "1895"
+    }
+  ]
+}

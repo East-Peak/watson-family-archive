@@ -1,0 +1,71 @@
+{
+  "personId": "chris_graeve",
+  "personName": "Chris Graeve",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "prussia-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "prussia",
+      "badge": "Birth Place",
+      "name": "Prussia",
+      "relevance": "",
+      "featured": true,
+      "lat": 41.3738765,
+      "lng": -94.506357,
+      "wikipedia": {
+        "title": "Prussia",
+        "url": "https://en.wikipedia.org/wiki/Prussia",
+        "summary": "Prussia was a German state centred on the North European Plain. It originated from the 1525 secularization act of the Prussian part of the State of the Teutonic Order. For centuries, the House of Hohenzollern ruled Prussia, expanding its size with the Prussian Army. Prussia, with its capital at K\u00f6ni"
+      },
+      "wikimedia": {
+        "fileTitle": "File:C. 1890 Prussia (1415-1890).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/C._1890_Prussia_%281415-1890%29.jpg/960px-C._1890_Prussia_%281415-1890%29.jpg",
+        "attribution": "Alexander Keith Johnston",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=41.3738765,-94.506357",
+        "embedUrl": "https://maps.google.com/maps?q=41.3738765,-94.506357&z=12&output=embed"
+      },
+      "year": "1823"
+    },
+    {
+      "id": "philadelphia-14th-ward-pa-residence",
+      "type": "town",
+      "canonicalPlaceId": "philadelphia-14th-ward-pa",
+      "badge": "Residence",
+      "name": "Philadelphia 14th Ward, PA",
+      "relevance": "",
+      "featured": false,
+      "year": "1860"
+    },
+    {
+      "id": "philadelphia-residence",
+      "type": "town",
+      "canonicalPlaceId": "philadelphia",
+      "badge": "Residence",
+      "name": "Philadelphia",
+      "relevance": "",
+      "featured": false,
+      "lat": 39.9527237,
+      "lng": -75.1635262,
+      "wikipedia": {
+        "title": "Philadelphia",
+        "url": "https://en.wikipedia.org/wiki/Philadelphia",
+        "summary": "Philadelphia, colloquially referred to as Philly, is the most populous city in the U.S. state of Pennsylvania. It is the sixth-most populous city in the United States, with a population of 1.6 million at the 2020 census. The Philadelphia metropolitan area has 6.33 million residents and is the nation"
+      },
+      "wikimedia": {
+        "fileTitle": "File:City of Philadelphia from the top.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/City_of_Philadelphia_from_the_top.jpg/960px-City_of_Philadelphia_from_the_top.jpg",
+        "attribution": "Ginevrajocosa88",
+        "license": "CC0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=39.9527237,-75.1635262",
+        "embedUrl": "https://maps.google.com/maps?q=39.9527237,-75.1635262&z=12&output=embed"
+      },
+      "year": "1870"
+    }
+  ]
+}

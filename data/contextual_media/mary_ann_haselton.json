@@ -1,0 +1,23 @@
+{
+  "personId": "mary_ann_haselton",
+  "personName": "Mary Ann Haselton",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "au-sable-forks-jay-essex-ny-marriage",
+      "type": "building",
+      "canonicalPlaceId": "au-sable-forks-jay-essex-ny",
+      "badge": "Marriage",
+      "name": "Au Sable Forks, Jay, Essex, NY",
+      "relevance": "",
+      "featured": true,
+      "lat": 44.4398413,
+      "lng": -73.6769013,
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=44.4398413,-73.6769013",
+        "embedUrl": "https://maps.google.com/maps?q=44.4398413,-73.6769013&z=12&output=embed"
+      },
+      "year": "1852"
+    }
+  ]
+}

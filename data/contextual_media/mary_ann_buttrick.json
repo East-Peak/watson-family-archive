@@ -1,0 +1,50 @@
+{
+  "personId": "mary_ann_buttrick",
+  "personName": "Mary Ann Buttrick",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "south-plattsburgh-clinton-new-york-marriage",
+      "type": "building",
+      "canonicalPlaceId": "south-plattsburgh-clinton-new-york",
+      "badge": "Marriage",
+      "name": "South Plattsburgh, Clinton, New York",
+      "relevance": "",
+      "featured": true,
+      "lat": 44.6364332,
+      "lng": -73.487913,
+      "wikimedia": {
+        "fileTitle": "File:NORTH (SIDE) AND WEST (FRONT) ELEVATIONS OF BUILDING. VIEW TO SOUTH - Plattsburgh Air Force Base, Elementary School, New York Road, Plattsburgh, Clinton County, NY HAER NY-326-BO-3.tif",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/NORTH_%28SIDE%29_AND_WEST_%28FRONT%29_ELEVATIONS_OF_BUILDING._VIEW_TO_SOUTH_-_Plattsburgh_Air_Force_Base%2C_Elementary_School%2C_New_York_Road%2C_Plattsburgh%2C_Clinton_County%2C_NY_HAER_NY-326-BO-3.tif/lossy-page1-960px-thumbnail.tif.jpg",
+        "attribution": "Fraser, Clayton B., creator",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=44.6364332,-73.487913",
+        "embedUrl": "https://maps.google.com/maps?q=44.6364332,-73.487913&z=12&output=embed"
+      }
+    },
+    {
+      "id": "clintonville-old-cemetery-clintonville-clinton-new-york-residence",
+      "type": "town",
+      "canonicalPlaceId": "clintonville-old-cemetery-clintonville-clinton-new-york",
+      "badge": "Residence",
+      "name": "Clintonville Old Cemetery, Clintonville, Clinton, New York",
+      "relevance": "",
+      "featured": false,
+      "lat": 44.7278943,
+      "lng": -73.6686982,
+      "wikimedia": {
+        "fileTitle": "File:Otsego County, New York; geographical and historical, from the earliest settlement to the present time, with county and township maps from original drawings (IA otsegocountynewy00baco).pdf",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Otsego_County%2C_New_York%3B_geographical_and_historical%2C_from_the_earliest_settlement_to_the_present_time%2C_with_county_and_township_maps_from_original_drawings_%28IA_otsegocountynewy00baco%29.pdf/page1-829px-thumbnail.pdf.jpg",
+        "attribution": "Bacon, Edwin F[axon], 1832- [from old catalog]",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=44.7278943,-73.6686982",
+        "embedUrl": "https://maps.google.com/maps?q=44.7278943,-73.6686982&z=12&output=embed"
+      },
+      "year": "1904"
+    }
+  ]
+}

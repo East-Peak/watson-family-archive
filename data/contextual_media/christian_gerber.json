@@ -1,0 +1,27 @@
+{
+  "personId": "christian_gerber",
+  "personName": "Christian Gerber",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "steffinsburg-switzerland-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "steffinsburg-switzerland",
+      "badge": "Birth Place",
+      "name": "Steffinsburg, Switzerland",
+      "relevance": "",
+      "featured": true,
+      "year": "1635"
+    },
+    {
+      "id": "steffsburgh-switzerland-death",
+      "type": "town",
+      "canonicalPlaceId": "steffsburgh-switzerland",
+      "badge": "Death",
+      "name": "Steffsburgh, Switzerland",
+      "relevance": "",
+      "featured": false,
+      "year": "1734"
+    }
+  ]
+}

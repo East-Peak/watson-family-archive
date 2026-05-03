@@ -1,0 +1,61 @@
+{
+  "personId": "warner_ford_ii",
+  "personName": "Warner Ford II",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "stafford-culpeper-county-virginia-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "stafford-culpeper-county-virginia",
+      "badge": "Birth Place",
+      "name": "Stafford/Culpeper County, Virginia",
+      "relevance": "",
+      "featured": true,
+      "year": "1749"
+    },
+    {
+      "id": "port-royal-henry-kentucky-death",
+      "type": "town",
+      "canonicalPlaceId": "port-royal-henry-kentucky",
+      "badge": "Death",
+      "name": "Port Royal, Henry, Kentucky",
+      "relevance": "",
+      "featured": false,
+      "lat": 38.5553429,
+      "lng": -85.0802301,
+      "wikimedia": {
+        "fileTitle": "File:Port Royal battle plan.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/4/49/Port_Royal_battle_plan.jpg",
+        "attribution": "Unknown authorUnknown author",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=38.5553429,-85.0802301",
+        "embedUrl": "https://maps.google.com/maps?q=38.5553429,-85.0802301&z=12&output=embed"
+      },
+      "year": "1835"
+    },
+    {
+      "id": "henry-kentucky-residence",
+      "type": "town",
+      "canonicalPlaceId": "henry-kentucky",
+      "badge": "Residence",
+      "name": "Henry, Kentucky",
+      "relevance": "",
+      "featured": false,
+      "lat": 38.447983,
+      "lng": -85.1191168,
+      "wikimedia": {
+        "fileTitle": "File:Henry County, Kentucky courthouse.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Henry_County%2C_Kentucky_courthouse.jpg/960px-Henry_County%2C_Kentucky_courthouse.jpg",
+        "attribution": "W.marsh",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=38.447983,-85.1191168",
+        "embedUrl": "https://maps.google.com/maps?q=38.447983,-85.1191168&z=12&output=embed"
+      },
+      "year": "1835"
+    }
+  ]
+}

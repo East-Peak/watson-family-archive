@@ -1,0 +1,56 @@
+{
+  "personId": "william_watson_cheshire",
+  "personName": "William Watson",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "northwich-cheshire-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "northwich-cheshire",
+      "badge": "Birth Place",
+      "name": "Northwich, Cheshire",
+      "relevance": "",
+      "featured": true,
+      "lat": 53.2602539,
+      "lng": -2.5145104,
+      "wikimedia": {
+        "fileTitle": "File:Chemical works near Northwich, Cheshire - geograph.org.uk - 2588136.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/4/43/Chemical_works_near_Northwich%2C_Cheshire_-_geograph.org.uk_-_2588136.jpg",
+        "attribution": "Roger  Kidd",
+        "license": "CC BY-SA 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=53.2602539,-2.5145104",
+        "embedUrl": "https://maps.google.com/maps?q=53.2602539,-2.5145104&z=12&output=embed"
+      },
+      "year": "1865"
+    },
+    {
+      "id": "berkeley-ca-death",
+      "type": "town",
+      "canonicalPlaceId": "berkeley-ca",
+      "badge": "Death",
+      "name": "Berkeley, CA",
+      "relevance": "",
+      "featured": false,
+      "lat": 37.8708393,
+      "lng": -122.272863,
+      "wikipedia": {
+        "title": "Berkeley, California",
+        "url": "https://en.wikipedia.org/wiki/Berkeley%2C_California",
+        "summary": "Berkeley is a city on the eastern shore of San Francisco Bay in northern Alameda County, California, United States. It is named after the 18th-century Anglo-Irish bishop and philosopher George Berkeley. It borders the cities of Oakland and Emeryville to the south and the city of Albany and the uninc"
+      },
+      "wikimedia": {
+        "fileTitle": "File:3009. HEARST HALL UNIVERSITY OF CALIFORNIA BERKELEY CALIFORNIA (23603966761).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/3009._HEARST_HALL_UNIVERSITY_OF_CALIFORNIA_BERKELEY_CALIFORNIA_%2823603966761%29.jpg/960px-3009._HEARST_HALL_UNIVERSITY_OF_CALIFORNIA_BERKELEY_CALIFORNIA_%2823603966761%29.jpg",
+        "attribution": "Britton and Rey, Lithographers, San Francisco, CA",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=37.8708393,-122.272863",
+        "embedUrl": "https://maps.google.com/maps?q=37.8708393,-122.272863&z=12&output=embed"
+      },
+      "year": "1951"
+    }
+  ]
+}

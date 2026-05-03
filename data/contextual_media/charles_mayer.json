@@ -1,0 +1,61 @@
+{
+  "personId": "charles_mayer",
+  "personName": "Charles Mayer",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "kansas-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "kansas",
+      "badge": "Birth Place",
+      "name": "Kansas",
+      "relevance": "",
+      "featured": true,
+      "lat": 38.27312,
+      "lng": -98.5821872,
+      "wikipedia": {
+        "title": "Kansas",
+        "url": "https://en.wikipedia.org/wiki/Kansas",
+        "summary": "Kansas is a landlocked state in the Midwestern region of the United States. It borders Nebraska to the north; Colorado to the west; Oklahoma to the south; and Missouri to the east. Kansas is named after the Kansas River, in turn named after the Kansa people. Its capital is Topeka, and its most popul"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Crops Kansas AST 20010624.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Crops_Kansas_AST_20010624.jpg/960px-Crops_Kansas_AST_20010624.jpg",
+        "attribution": "NASA",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=38.27312,-98.5821872",
+        "embedUrl": "https://maps.google.com/maps?q=38.27312,-98.5821872&z=12&output=embed"
+      },
+      "year": "1868"
+    },
+    {
+      "id": "cherokee-county-kansas-death",
+      "type": "town",
+      "canonicalPlaceId": "cherokee-county-kansas",
+      "badge": "Death",
+      "name": "Cherokee County, Kansas",
+      "relevance": "",
+      "featured": false,
+      "lat": 37.1718068,
+      "lng": -94.8482069,
+      "wikipedia": {
+        "title": "Cherokee County, Kansas",
+        "url": "https://en.wikipedia.org/wiki/Cherokee_County%2C_Kansas",
+        "summary": "Cherokee County is a U.S. county located in Southeast Kansas. Its county seat is Columbus, and its most populous city is Baxter Springs. As of the 2020 census, the county population was 19,362. The county was named for the Cherokee tribe. Cherokee County is considered part of the Joplin, Missouri, m"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Habitat in Cherokee County, Kansas (6774973272).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Habitat_in_Cherokee_County%2C_Kansas_%286774973272%29.jpg/960px-Habitat_in_Cherokee_County%2C_Kansas_%286774973272%29.jpg",
+        "attribution": "USFWS Mountain Prairie",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=37.1718068,-94.8482069",
+        "embedUrl": "https://maps.google.com/maps?q=37.1718068,-94.8482069&z=12&output=embed"
+      },
+      "year": "1933"
+    }
+  ]
+}

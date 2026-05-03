@@ -1,0 +1,83 @@
+{
+  "personId": "arthur_m_wagner",
+  "personName": "Arthur M. Wagner",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "south-dakota-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "south-dakota",
+      "badge": "Birth Place",
+      "name": "South Dakota",
+      "relevance": "",
+      "featured": true,
+      "lat": 44.6471761,
+      "lng": -100.348761,
+      "wikipedia": {
+        "title": "South Dakota",
+        "url": "https://en.wikipedia.org/wiki/South_Dakota",
+        "summary": "South Dakota is a landlocked state in the Upper Midwest, North Central region of the United States. It is also part of the Great Plains. South Dakota is named after the Dakota Sioux tribe, which comprises a large portion of the population and has historically dominated the territory. South Dakota is"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Dust Bowl - Dallas, South Dakota 1936.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Dust_Bowl_-_Dallas%2C_South_Dakota_1936.jpg/960px-Dust_Bowl_-_Dallas%2C_South_Dakota_1936.jpg",
+        "attribution": "Sloan (?)",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=44.6471761,-100.348761",
+        "embedUrl": "https://maps.google.com/maps?q=44.6471761,-100.348761&z=12&output=embed"
+      },
+      "year": "1889"
+    },
+    {
+      "id": "los-angeles-ca-death",
+      "type": "town",
+      "canonicalPlaceId": "los-angeles-ca",
+      "badge": "Death",
+      "name": "Los Angeles, CA",
+      "relevance": "",
+      "featured": false,
+      "lat": 34.0536909,
+      "lng": -118.242766,
+      "wikipedia": {
+        "title": "Los Angeles",
+        "url": "https://en.wikipedia.org/wiki/Los_Angeles",
+        "summary": "Los Angeles is the most populous city in the U.S. state of California, and the commercial, financial, and cultural center of Southern California. With an estimated 3.88 million residents within the city limits as of 2024, it is the second-most populous city in the United States, behind New York City"
+      },
+      "wikimedia": {
+        "fileTitle": "File:USS Los Angeles (CA-135) in the Far East, 13 October 1952 (NH 97386).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/USS_Los_Angeles_%28CA-135%29_in_the_Far_East%2C_13_October_1952_%28NH_97386%29.jpg/960px-USS_Los_Angeles_%28CA-135%29_in_the_Far_East%2C_13_October_1952_%28NH_97386%29.jpg",
+        "attribution": "Unknown authorUnknown author",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=34.0536909,-118.242766",
+        "embedUrl": "https://maps.google.com/maps?q=34.0536909,-118.242766&z=12&output=embed"
+      },
+      "year": "1984"
+    },
+    {
+      "id": "brown-south-dakota-residence",
+      "type": "town",
+      "canonicalPlaceId": "brown-south-dakota",
+      "badge": "Residence",
+      "name": "Brown, South Dakota",
+      "relevance": "",
+      "featured": false,
+      "lat": 45.5832968,
+      "lng": -98.3674786,
+      "wikimedia": {
+        "fileTitle": "File:Brown County Courthouse (South Dakota).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Brown_County_Courthouse_%28South_Dakota%29.jpg/960px-Brown_County_Courthouse_%28South_Dakota%29.jpg",
+        "attribution": "WeaponizingArchitecture",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=45.5832968,-98.3674786",
+        "embedUrl": "https://maps.google.com/maps?q=45.5832968,-98.3674786&z=12&output=embed"
+      },
+      "year": "1984"
+    }
+  ]
+}

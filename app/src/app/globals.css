@@ -1,0 +1,159 @@
+@import "tailwindcss";
+
+@theme {
+  /* Default heraldic palette */
+  --color-shield: #161087;
+  --color-shield-deep: #0c0768;
+  --color-shield-darkest: #070440;
+  --color-oak: #5d8400;
+  --color-oak-light: #7c9602;
+  --color-oak-dark: #2d5016;
+  --color-trunk: #806600;
+  --color-trunk-light: #a0742c;
+  --color-cream: #f4efe6; /* Darkened slightly for richer contrast */
+  --color-parchment: #f0e9dc;
+
+  /* Typography */
+  --font-serif: var(--font-fraunces), Georgia, serif;
+}
+
+:root {
+  --background: #f8f6f0;
+  --foreground: #171717;
+  --site-header-height: 3.5rem;
+  --site-header-border: 1px;
+  --site-header-offset: calc(var(--site-header-height) + var(--site-header-border));
+  --safe-area-top: env(safe-area-inset-top, 0px);
+  --safe-area-right: env(safe-area-inset-right, 0px);
+  --safe-area-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-area-left: env(safe-area-inset-left, 0px);
+  --mobile-top-bar-height: 3.5rem;
+  --mobile-top-bar-offset: calc(var(--mobile-top-bar-height) + var(--safe-area-top));
+  --mobile-bottom-nav-height: 4.75rem;
+  --mobile-bottom-nav-offset: calc(var(--mobile-bottom-nav-height) + var(--safe-area-bottom));
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* AI response markdown formatting */
+.ai-markdown h3,
+.ai-markdown h4 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.ai-markdown p + p {
+  margin-top: 0.75rem;
+}
+
+.ai-markdown ul,
+.ai-markdown ol {
+  margin-top: 0.5rem;
+  margin-bottom: 0.75rem;
+  list-style-position: inside;
+}
+
+.ai-markdown li {
+  text-indent: -0.25rem;
+}
+
+/* Premium Visual Utilities */
+.bg-vignette {
+  background: radial-gradient(circle, rgba(255,255,255,0.7) 0%, rgba(240,233,220,1) 100%);
+}
+
+.bg-hero-gradient {
+  background: linear-gradient(135deg, #0f0a5c 0%, #161087 50%, #1b14a8 100%);
+}
+
+.bg-shield-deep-section {
+  background: linear-gradient(180deg, #0c0768 0%, #0e0875 100%);
+  box-shadow: inset 0 14px 28px -16px rgba(0, 0, 0, 0.55);
+}
+
+.bg-tour-section {
+  background: radial-gradient(ellipse at center top, #1b14a8 0%, #161087 55%, #0e0a55 100%);
+}
+
+.bg-footer-fade {
+  background: linear-gradient(180deg, #070440 0%, #03021c 100%);
+}
+
+.hairline-top {
+  position: relative;
+}
+
+.hairline-top::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.18) 50%, transparent 100%);
+  pointer-events: none;
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+}
+
+.text-glow {
+  text-shadow: 0 0 20px rgba(255,255,255,0.3);
+}
+
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.28) rgba(255, 255, 255, 0.05);
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 9999px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.22);
+  border: 2px solid transparent;
+  border-radius: 9999px;
+  background-clip: padding-box;
+}
+
+.custom-scrollbar:hover::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.38);
+  background-clip: padding-box;
+}
+
+/* Comment mode overlay — dims the page when the user is picking a target */
+body.comment-mode-active::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.08);
+  pointer-events: none;
+  z-index: 9990;
+}
+
+body.comment-mode-active {
+  cursor: crosshair;
+}
+
+body.comment-mode-active [data-comment-chrome] {
+  cursor: default;
+}

@@ -1,0 +1,104 @@
+{
+  "personId": "eugene_andes",
+  "personName": "Eugene Andes",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "illinois-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "illinois",
+      "badge": "Birth Place",
+      "name": "Illinois",
+      "relevance": "",
+      "featured": true,
+      "lat": 40.0796606,
+      "lng": -89.4337288,
+      "wikipedia": {
+        "title": "Illinois",
+        "url": "https://en.wikipedia.org/wiki/Illinois",
+        "summary": "Illinois is a state in the Midwestern region of the United States. It borders on Lake Michigan to its northeast, the Mississippi River to its west, and the Wabash and Ohio rivers to its south. Of the fifty U.S. states, Illinois has the fifth-largest gross domestic product (GDP), the sixth-largest po"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Skyline de Chicago desde el centro, Illinois, Estados Unidos, 2012-10-20, DD 06.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Skyline_de_Chicago_desde_el_centro%2C_Illinois%2C_Estados_Unidos%2C_2012-10-20%2C_DD_06.jpg/960px-Skyline_de_Chicago_desde_el_centro%2C_Illinois%2C_Estados_Unidos%2C_2012-10-20%2C_DD_06.jpg",
+        "attribution": "Diego Delso",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=40.0796606,-89.4337288",
+        "embedUrl": "https://maps.google.com/maps?q=40.0796606,-89.4337288&z=12&output=embed"
+      },
+      "year": "1923"
+    },
+    {
+      "id": "los-angeles-ca-death",
+      "type": "town",
+      "canonicalPlaceId": "los-angeles-ca",
+      "badge": "Death",
+      "name": "Los Angeles, CA",
+      "relevance": "",
+      "featured": false,
+      "lat": 34.0536909,
+      "lng": -118.242766,
+      "wikipedia": {
+        "title": "Los Angeles",
+        "url": "https://en.wikipedia.org/wiki/Los_Angeles",
+        "summary": "Los Angeles is the most populous city in the U.S. state of California, and the commercial, financial, and cultural center of Southern California. With an estimated 3.88 million residents within the city limits as of 2024, it is the second-most populous city in the United States, behind New York City"
+      },
+      "wikimedia": {
+        "fileTitle": "File:USS Los Angeles (CA-135) in the Far East, 13 October 1952 (NH 97386).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/USS_Los_Angeles_%28CA-135%29_in_the_Far_East%2C_13_October_1952_%28NH_97386%29.jpg/960px-USS_Los_Angeles_%28CA-135%29_in_the_Far_East%2C_13_October_1952_%28NH_97386%29.jpg",
+        "attribution": "Unknown authorUnknown author",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=34.0536909,-118.242766",
+        "embedUrl": "https://maps.google.com/maps?q=34.0536909,-118.242766&z=12&output=embed"
+      },
+      "year": "1987"
+    },
+    {
+      "id": "sangamon-illinois-residence",
+      "type": "town",
+      "canonicalPlaceId": "sangamon-illinois",
+      "badge": "Residence",
+      "name": "Sangamon, Illinois",
+      "relevance": "",
+      "featured": false,
+      "lat": 39.7623668,
+      "lng": -89.6454905,
+      "wikipedia": {
+        "title": "Sangamon, Illinois",
+        "url": "https://en.wikipedia.org/wiki/Sangamon%2C_Illinois",
+        "summary": "Sangamon is an unincorporated community in Oakley Township, Macon County, Illinois, United States. Sangamon is located along the Norfolk Southern Railway, 5.5 miles (8.9\u00a0km) east-northeast of downtown Decatur."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Sangamon County Illinois 1839.png",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/0/06/Sangamon_County_Illinois_1839.png",
+        "attribution": "Illinois_Locator_Map.PNG: US Census, Ruhrfisch\nderivative work: Fishal (talk)",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=39.7623668,-89.6454905",
+        "embedUrl": "https://maps.google.com/maps?q=39.7623668,-89.6454905&z=12&output=embed"
+      },
+      "year": "1930"
+    },
+    {
+      "id": "new-carlisle-saint-joseph-indiana-residence",
+      "type": "town",
+      "canonicalPlaceId": "new-carlisle-saint-joseph-indiana",
+      "badge": "Residence",
+      "name": "New Carlisle, Saint Joseph, Indiana",
+      "relevance": "",
+      "featured": false,
+      "lat": 41.7056871,
+      "lng": -86.5098231,
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=41.7056871,-86.5098231",
+        "embedUrl": "https://maps.google.com/maps?q=41.7056871,-86.5098231&z=12&output=embed"
+      },
+      "year": "1942"
+    }
+  ]
+}

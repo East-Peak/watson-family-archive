@@ -1,0 +1,29 @@
+{
+  "personId": "guy_william_reed",
+  "personName": "Guy William Reed",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "bay-city-bay-michigan-residence",
+      "type": "town",
+      "canonicalPlaceId": "bay-city-bay-michigan",
+      "badge": "Residence",
+      "name": "Bay City, Bay, Michigan",
+      "relevance": "",
+      "featured": true,
+      "lat": 43.5962107,
+      "lng": -83.8881711,
+      "wikimedia": {
+        "fileTitle": "File:Michigan Central Station, Bay City, Michigan.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Michigan_Central_Station%2C_Bay_City%2C_Michigan.jpg/960px-Michigan_Central_Station%2C_Bay_City%2C_Michigan.jpg",
+        "attribution": "Photographer, and color artist not provided",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.5962107,-83.8881711",
+        "embedUrl": "https://maps.google.com/maps?q=43.5962107,-83.8881711&z=12&output=embed"
+      },
+      "year": "1954"
+    }
+  ]
+}

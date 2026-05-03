@@ -1,0 +1,83 @@
+{
+  "personId": "john_w_slater",
+  "personName": "John W. Slater",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "hamilton-indiana-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "hamilton-indiana",
+      "badge": "Birth Place",
+      "name": "Hamilton, Indiana",
+      "relevance": "",
+      "featured": true,
+      "lat": 40.0749813,
+      "lng": -86.0498885,
+      "wikipedia": {
+        "title": "Hamilton, Indiana",
+        "url": "https://en.wikipedia.org/wiki/Hamilton%2C_Indiana",
+        "summary": "Hamilton is a town located on the border of Steuben County, Indiana and DeKalb County, Indiana. In Steuben County, it is in Otsego Township, and in DeKalb County it is in Franklin Township. The population was 1,529 at the 2020 census."
+      },
+      "wikimedia": {
+        "fileTitle": "File:History of Hamilton County, Indiana - DPLA - 7edea355885fc080b02e7b257afa09ad (page 232).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/History_of_Hamilton_County%2C_Indiana_-_DPLA_-_7edea355885fc080b02e7b257afa09ad_%28page_232%29.jpg/960px-History_of_Hamilton_County%2C_Indiana_-_DPLA_-_7edea355885fc080b02e7b257afa09ad_%28page_232%29.jpg",
+        "attribution": "Haines, John F., 1856-1938",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=40.0749813,-86.0498885",
+        "embedUrl": "https://maps.google.com/maps?q=40.0749813,-86.0498885&z=12&output=embed"
+      },
+      "year": "1850"
+    },
+    {
+      "id": "south-pasadena-ca-death",
+      "type": "town",
+      "canonicalPlaceId": "south-pasadena-ca",
+      "badge": "Death",
+      "name": "South Pasadena, CA",
+      "relevance": "",
+      "featured": false,
+      "lat": 34.1133062,
+      "lng": -118.1478291,
+      "wikipedia": {
+        "title": "South Pasadena, California",
+        "url": "https://en.wikipedia.org/wiki/South_Pasadena%2C_California",
+        "summary": "South Pasadena is a city in Los Angeles County, California, United States. As of the 2020 census, it had a population of 26,943, up from 25,619 at the 2010 census."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Southpasadena ca cityhall.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Southpasadena_ca_cityhall.jpg/960px-Southpasadena_ca_cityhall.jpg",
+        "attribution": "The original uploader was Geographer at English Wikipedia.",
+        "license": "CC BY 2.5"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=34.1133062,-118.1478291",
+        "embedUrl": "https://maps.google.com/maps?q=34.1133062,-118.1478291&z=12&output=embed"
+      },
+      "year": "1945"
+    },
+    {
+      "id": "forest-lawn-memorial-park-glendale-ca-residence",
+      "type": "town",
+      "canonicalPlaceId": "forest-lawn-memorial-park-glendale-ca",
+      "badge": "Residence",
+      "name": "Forest Lawn Memorial Park, Glendale, CA",
+      "relevance": "",
+      "featured": false,
+      "lat": 34.1245374,
+      "lng": -118.2454971,
+      "wikimedia": {
+        "fileTitle": "File:2013 - View N from East of the Great Mausoleum, Forest Lawn Memorial Park, Glendale, CA - panoramio.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/2013_-_View_N_from_East_of_the_Great_Mausoleum%2C_Forest_Lawn_Memorial_Park%2C_Glendale%2C_CA_-_panoramio.jpg/960px-2013_-_View_N_from_East_of_the_Great_Mausoleum%2C_Forest_Lawn_Memorial_Park%2C_Glendale%2C_CA_-_panoramio.jpg",
+        "attribution": "Chris English",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=34.1245374,-118.2454971",
+        "embedUrl": "https://maps.google.com/maps?q=34.1245374,-118.2454971&z=12&output=embed"
+      },
+      "year": "1945"
+    }
+  ]
+}

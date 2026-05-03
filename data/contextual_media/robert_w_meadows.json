@@ -1,0 +1,60 @@
+{
+  "personId": "robert_w_meadows",
+  "personName": "Robert W Meadows",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "kansas-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "kansas",
+      "badge": "Birth Place",
+      "name": "Kansas",
+      "relevance": "",
+      "featured": true,
+      "lat": 38.27312,
+      "lng": -98.5821872,
+      "wikipedia": {
+        "title": "Kansas",
+        "url": "https://en.wikipedia.org/wiki/Kansas",
+        "summary": "Kansas is a landlocked state in the Midwestern region of the United States. It borders Nebraska to the north; Colorado to the west; Oklahoma to the south; and Missouri to the east. Kansas is named after the Kansas River, in turn named after the Kansa people. Its capital is Topeka, and its most popul"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Crops Kansas AST 20010624.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Crops_Kansas_AST_20010624.jpg/960px-Crops_Kansas_AST_20010624.jpg",
+        "attribution": "NASA",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=38.27312,-98.5821872",
+        "embedUrl": "https://maps.google.com/maps?q=38.27312,-98.5821872&z=12&output=embed"
+      },
+      "year": "1882"
+    },
+    {
+      "id": "pawnee-oklahoma-marriage",
+      "type": "building",
+      "canonicalPlaceId": "pawnee-oklahoma",
+      "badge": "Marriage",
+      "name": "Pawnee, Oklahoma",
+      "relevance": "",
+      "featured": false,
+      "lat": 36.3151645,
+      "lng": -96.7200995,
+      "wikipedia": {
+        "title": "Pawnee, Oklahoma",
+        "url": "https://en.wikipedia.org/wiki/Pawnee%2C_Oklahoma",
+        "summary": "Pawnee is a city in and the county seat of Pawnee County, Oklahoma, United States. The town is northeast of Stillwater at the junction of U.S. Route 64 and State Highway 18."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Pawnee Bill Museum Entrance, Pawnee, Oklahoma.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Pawnee_Bill_Museum_Entrance%2C_Pawnee%2C_Oklahoma.jpg/960px-Pawnee_Bill_Museum_Entrance%2C_Pawnee%2C_Oklahoma.jpg",
+        "attribution": "Smallboy944",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=36.3151645,-96.7200995",
+        "embedUrl": "https://maps.google.com/maps?q=36.3151645,-96.7200995&z=12&output=embed"
+      }
+    }
+  ]
+}

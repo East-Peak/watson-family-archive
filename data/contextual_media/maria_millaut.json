@@ -1,0 +1,29 @@
+{
+  "personId": "maria_millaut",
+  "personName": "Maria Millaut",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "france-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "france",
+      "badge": "Birth Place",
+      "name": "France)",
+      "relevance": "",
+      "featured": true,
+      "lat": 46.603354,
+      "lng": 1.8883335,
+      "wikimedia": {
+        "fileTitle": "File:France cities.png",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/France_cities.png/960px-France_cities.png",
+        "attribution": "David Monniaux",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=46.603354,1.8883335",
+        "embedUrl": "https://maps.google.com/maps?q=46.603354,1.8883335&z=12&output=embed"
+      },
+      "year": "1675"
+    }
+  ]
+}

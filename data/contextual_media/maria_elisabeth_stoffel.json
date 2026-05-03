@@ -1,0 +1,27 @@
+{
+  "personId": "maria_elisabeth_stoffel",
+  "personName": "Maria Elisabeth Stoffel",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "darstein-pfalz-heiliges-r-misches-reich-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "darstein-pfalz-heiliges-r-misches-reich",
+      "badge": "Birth Place",
+      "name": "Darstein, Pfalz, Heiliges R\u00f6misches Reich",
+      "relevance": "",
+      "featured": true,
+      "year": "1713"
+    },
+    {
+      "id": "vorderweidenthal-pfalz-heiliges-r-misches-reich-death",
+      "type": "town",
+      "canonicalPlaceId": "vorderweidenthal-pfalz-heiliges-r-misches-reich",
+      "badge": "Death",
+      "name": "Vorderweidenthal, Pfalz, Heiliges R\u00f6misches Reich",
+      "relevance": "",
+      "featured": false,
+      "year": "1759"
+    }
+  ]
+}

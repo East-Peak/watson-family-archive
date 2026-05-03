@@ -1,0 +1,56 @@
+{
+  "personId": "august_melcher",
+  "personName": "August John Melcher",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "dodge-wisconsin-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "dodge-wisconsin",
+      "badge": "Birth Place",
+      "name": "Dodge, Wisconsin",
+      "relevance": "",
+      "featured": true,
+      "lat": 43.413614,
+      "lng": -88.7177834,
+      "wikipedia": {
+        "title": "Dodge, Wisconsin",
+        "url": "https://en.wikipedia.org/wiki/Dodge%2C_Wisconsin",
+        "summary": "Dodge is a town in Trempealeau County, Wisconsin, United States. The population was 414 at the 2000 census. The census-designated place of Dodge is located in the town. The unincorporated community of Pine Creek is also located in the town."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Horicon Marsh, Dodge, Wisconsin, U.S.A.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Horicon_Marsh%2C_Dodge%2C_Wisconsin%2C_U.S.A.jpg/960px-Horicon_Marsh%2C_Dodge%2C_Wisconsin%2C_U.S.A.jpg",
+        "attribution": "IIP Photo Archive",
+        "license": "CC BY-SA 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.413614,-88.7177834",
+        "embedUrl": "https://maps.google.com/maps?q=43.413614,-88.7177834&z=12&output=embed"
+      },
+      "year": "1859"
+    },
+    {
+      "id": "aberdeen-brown-south-dakota-death",
+      "type": "town",
+      "canonicalPlaceId": "aberdeen-brown-south-dakota",
+      "badge": "Death",
+      "name": "Aberdeen, Brown, South Dakota",
+      "relevance": "",
+      "featured": false,
+      "lat": 45.4649805,
+      "lng": -98.487813,
+      "wikimedia": {
+        "fileTitle": "File:Aberdeen, South Dakota 1910.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Aberdeen%2C_South_Dakota_1910.jpg/960px-Aberdeen%2C_South_Dakota_1910.jpg",
+        "attribution": "N. A. Brothers",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=45.4649805,-98.487813",
+        "embedUrl": "https://maps.google.com/maps?q=45.4649805,-98.487813&z=12&output=embed"
+      },
+      "year": "1948"
+    }
+  ]
+}

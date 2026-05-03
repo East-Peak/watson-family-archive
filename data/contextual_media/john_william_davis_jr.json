@@ -1,0 +1,83 @@
+{
+  "personId": "john_william_davis_jr",
+  "personName": "John William Davis Jr.",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "fox-lake-wisconsin-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "fox-lake-wisconsin",
+      "badge": "Birth Place",
+      "name": "Fox Lake, Wisconsin",
+      "relevance": "",
+      "featured": true,
+      "lat": 43.565543,
+      "lng": -88.9064984,
+      "wikipedia": {
+        "title": "Fox Lake, Wisconsin",
+        "url": "https://en.wikipedia.org/wiki/Fox_Lake%2C_Wisconsin",
+        "summary": "Fox Lake is a city in Dodge County, Wisconsin, United States. The population was 1,604 at the 2020 census. The city is located within the Town of Fox Lake."
+      },
+      "wikimedia": {
+        "fileTitle": "File:FoxLakeWisconsinDowntown1.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/FoxLakeWisconsinDowntown1.jpg/960px-FoxLakeWisconsinDowntown1.jpg",
+        "attribution": "Royalbroil",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.565543,-88.9064984",
+        "embedUrl": "https://maps.google.com/maps?q=43.565543,-88.9064984&z=12&output=embed"
+      },
+      "year": "1857"
+    },
+    {
+      "id": "san-bernardino-california-death",
+      "type": "town",
+      "canonicalPlaceId": "san-bernardino-california",
+      "badge": "Death",
+      "name": "San Bernardino, California",
+      "relevance": "",
+      "featured": false,
+      "lat": 34.8253019,
+      "lng": -116.0833144,
+      "wikipedia": {
+        "title": "San Bernardino, California",
+        "url": "https://en.wikipedia.org/wiki/San_Bernardino%2C_California",
+        "summary": "San Bernardino is a city in and the county seat of San Bernardino County, California, United States. Located in the Inland Empire region of Southern California, the city had a population of 222,101 in the 2020 census, making it the 18th-most populous city in California. The Riverside\u2013San Bernardino "
+      },
+      "wikimedia": {
+        "fileTitle": "File:Downtown San Bernardino.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Downtown_San_Bernardino.jpg",
+        "attribution": "House10902 (talk).",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=34.8253019,-116.0833144",
+        "embedUrl": "https://maps.google.com/maps?q=34.8253019,-116.0833144&z=12&output=embed"
+      },
+      "year": "1893"
+    },
+    {
+      "id": "portage-columbia-wisconsin-marriage",
+      "type": "building",
+      "canonicalPlaceId": "portage-columbia-wisconsin",
+      "badge": "Marriage",
+      "name": "Portage, Columbia, Wisconsin",
+      "relevance": "",
+      "featured": false,
+      "lat": 43.539494,
+      "lng": -89.461334,
+      "wikimedia": {
+        "fileTitle": "File:Bird's eye view of the city of Portage, Columbia Co., Wisconsin 1868. LOC 73694548.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Bird%27s_eye_view_of_the_city_of_Portage%2C_Columbia_Co.%2C_Wisconsin_1868._LOC_73694548.jpg/960px-Bird%27s_eye_view_of_the_city_of_Portage%2C_Columbia_Co.%2C_Wisconsin_1868._LOC_73694548.jpg",
+        "attribution": "Ruger, A.; Chicago Lithographing Co.",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.539494,-89.461334",
+        "embedUrl": "https://maps.google.com/maps?q=43.539494,-89.461334&z=12&output=embed"
+      },
+      "year": "1883"
+    }
+  ]
+}

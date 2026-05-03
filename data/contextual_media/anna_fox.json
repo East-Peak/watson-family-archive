@@ -1,0 +1,56 @@
+{
+  "personId": "anna_fox",
+  "personName": "Anna Fox",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "adams-county-pennsylvania-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "adams-county-pennsylvania",
+      "badge": "Birth Place",
+      "name": "Adams County, Pennsylvania",
+      "relevance": "",
+      "featured": true,
+      "lat": 39.8708972,
+      "lng": -77.2395963,
+      "wikipedia": {
+        "title": "Adams County, Pennsylvania",
+        "url": "https://en.wikipedia.org/wiki/Adams_County%2C_Pennsylvania",
+        "summary": "Adams County is a county in the Commonwealth of Pennsylvania. As of the 2020 census, the population was 103,852. Its county seat is Gettysburg. The county was created on January 22, 1800, from part of York County, and was named for John Adams, the second President of the United States."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Adams PA Courthouse 1.JPG",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Adams_PA_Courthouse_1.JPG/960px-Adams_PA_Courthouse_1.JPG",
+        "attribution": "Smallbones",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=39.8708972,-77.2395963",
+        "embedUrl": "https://maps.google.com/maps?q=39.8708972,-77.2395963&z=12&output=embed"
+      },
+      "year": "1796"
+    },
+    {
+      "id": "north-george-town-knox-township-columbiana-county-ohio-death",
+      "type": "town",
+      "canonicalPlaceId": "north-george-town-knox-township-columbiana-county-ohio",
+      "badge": "Death",
+      "name": "North George Town, Knox Township, Columbiana County, Ohio",
+      "relevance": "",
+      "featured": false,
+      "lat": 40.7787016,
+      "lng": -80.7648602,
+      "wikimedia": {
+        "fileTitle": "File:Historical collections of Coshocton County, Ohio (IA historicalcollec00hun).pdf",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Historical_collections_of_Coshocton_County%2C_Ohio_%28IA_historicalcollec00hun%29.pdf/page1-870px-Historical_collections_of_Coshocton_County%2C_Ohio_%28IA_historicalcollec00hun%29.pdf.jpg",
+        "attribution": "Hunt, William E. (William Ellis), 1833-1919",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=40.7787016,-80.7648602",
+        "embedUrl": "https://maps.google.com/maps?q=40.7787016,-80.7648602&z=12&output=embed"
+      },
+      "year": "1875"
+    }
+  ]
+}

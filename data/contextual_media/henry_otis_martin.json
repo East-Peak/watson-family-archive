@@ -1,0 +1,61 @@
+{
+  "personId": "henry_otis_martin",
+  "personName": "Henry Otis Martin",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "bradford-new-hampshire-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "bradford-new-hampshire",
+      "badge": "Birth Place",
+      "name": "Bradford, New Hampshire",
+      "relevance": "",
+      "featured": true,
+      "lat": 43.2694074,
+      "lng": -71.9588007,
+      "wikipedia": {
+        "title": "Bradford, New Hampshire",
+        "url": "https://en.wikipedia.org/wiki/Bradford%2C_New_Hampshire",
+        "summary": "Bradford is a town in Merrimack County, New Hampshire, United States. The population was 1,662 at the 2020 census. The main village of the town, where 372 people resided at the 2020 census, is defined as the Bradford census-designated place (CDP), and is located in the northeast part of the town, we"
+      },
+      "wikimedia": {
+        "fileTitle": "File:2011-07-24 \u2014 Bradford, New Hampshire \u2013 01.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/2011-07-24_%E2%80%94_Bradford%2C_New_Hampshire_%E2%80%93_01.jpg/960px-2011-07-24_%E2%80%94_Bradford%2C_New_Hampshire_%E2%80%93_01.jpg",
+        "attribution": "Dougtone",
+        "license": "CC BY-SA 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.2694074,-71.9588007",
+        "embedUrl": "https://maps.google.com/maps?q=43.2694074,-71.9588007&z=12&output=embed"
+      },
+      "year": "1863"
+    },
+    {
+      "id": "south-pasadena-ca-death",
+      "type": "town",
+      "canonicalPlaceId": "south-pasadena-ca",
+      "badge": "Death",
+      "name": "South Pasadena, CA",
+      "relevance": "",
+      "featured": false,
+      "lat": 34.1133062,
+      "lng": -118.1478291,
+      "wikipedia": {
+        "title": "South Pasadena, California",
+        "url": "https://en.wikipedia.org/wiki/South_Pasadena%2C_California",
+        "summary": "South Pasadena is a city in Los Angeles County, California, United States. As of the 2020 census, it had a population of 26,943, up from 25,619 at the 2010 census."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Southpasadena ca cityhall.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Southpasadena_ca_cityhall.jpg/960px-Southpasadena_ca_cityhall.jpg",
+        "attribution": "The original uploader was Geographer at English Wikipedia.",
+        "license": "CC BY 2.5"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=34.1133062,-118.1478291",
+        "embedUrl": "https://maps.google.com/maps?q=34.1133062,-118.1478291&z=12&output=embed"
+      },
+      "year": "1943"
+    }
+  ]
+}

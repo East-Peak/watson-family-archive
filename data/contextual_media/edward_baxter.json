@@ -1,0 +1,56 @@
+{
+  "personId": "edward_baxter",
+  "personName": "Edward Baxter",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "montgomeryshire-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "montgomeryshire",
+      "badge": "Birth Place",
+      "name": "Montgomeryshire",
+      "relevance": "",
+      "featured": true,
+      "lat": 52.6152731,
+      "lng": -3.4649973,
+      "wikipedia": {
+        "title": "Montgomeryshire",
+        "url": "https://en.wikipedia.org/wiki/Montgomeryshire",
+        "summary": "Montgomeryshire was one of the thirteen counties of Wales that existed from 1536 until their abolition in 1974, later becoming a district of Powys from 1974 to 1996. It was named after its county town, Montgomery, which in turn was named after one of William the Conqueror's main counsellors, Roger d"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Cyfronydd, Montgomeryshire. The Seat of Pryce Jones Esqr.jpeg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Cyfronydd%2C_Montgomeryshire._The_Seat_of_Pryce_Jones_Esqr.jpeg",
+        "attribution": "Greenwood, C. J., 19th. cent, lithographer\n\nShaw, I., artist.",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=52.6152731,-3.4649973",
+        "embedUrl": "https://maps.google.com/maps?q=52.6152731,-3.4649973&z=12&output=embed"
+      },
+      "year": "1837"
+    },
+    {
+      "id": "glen-dean-breckinridge-kentucky-death",
+      "type": "town",
+      "canonicalPlaceId": "glen-dean-breckinridge-kentucky",
+      "badge": "Death",
+      "name": "Glen Dean, Breckinridge, Kentucky",
+      "relevance": "",
+      "featured": false,
+      "lat": 37.6533888,
+      "lng": -86.5410927,
+      "wikimedia": {
+        "fileTitle": "File:Glen Dean Formation (Upper Mississippian; Wax South Outcrop, Rt. 88 roadcut, Hart County, Kentucky, USA) 12 (27483933647).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Glen_Dean_Formation_%28Upper_Mississippian%3B_Wax_South_Outcrop%2C_Rt._88_roadcut%2C_Hart_County%2C_Kentucky%2C_USA%29_12_%2827483933647%29.jpg/960px-Glen_Dean_Formation_%28Upper_Mississippian%3B_Wax_South_Outcrop%2C_Rt._88_roadcut%2C_Hart_County%2C_Kentucky%2C_USA%29_12_%2827483933647%29.jpg",
+        "attribution": "James St. John",
+        "license": "CC BY 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=37.6533888,-86.5410927",
+        "embedUrl": "https://maps.google.com/maps?q=37.6533888,-86.5410927&z=12&output=embed"
+      },
+      "year": "1911"
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "personId": "caroline_green",
+  "personName": "Caroline Green",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "england-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "england",
+      "badge": "Birth Place",
+      "name": "England",
+      "relevance": "",
+      "featured": true,
+      "lat": 52.5310214,
+      "lng": -1.2649062,
+      "wikipedia": {
+        "title": "England",
+        "url": "https://en.wikipedia.org/wiki/England",
+        "summary": "England is a country that is part of the United Kingdom. It is located on the island of Great Britain, of which it covers about 62%, and more than 100 smaller adjacent islands. England shares a land border with Scotland to the north and another land border with Wales to the west, and is surrounded b"
+      },
+      "wikimedia": {
+        "fileTitle": "File:England satellite image.png",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b1/England_satellite_image.png",
+        "attribution": "Jacques Descloitres, MODIS Land Rapid Response Team, NASA/GSFC",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=52.5310214,-1.2649062",
+        "embedUrl": "https://maps.google.com/maps?q=52.5310214,-1.2649062&z=12&output=embed"
+      },
+      "year": "1847"
+    },
+    {
+      "id": "new-york-residence",
+      "type": "town",
+      "canonicalPlaceId": "new-york",
+      "badge": "Residence",
+      "name": "New York",
+      "relevance": "",
+      "featured": false,
+      "lat": 40.7127281,
+      "lng": -74.0060152,
+      "wikimedia": {
+        "fileTitle": "File:Long Island City New York May 2015 panorama 3.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Long_Island_City_New_York_May_2015_panorama_3.jpg/960px-Long_Island_City_New_York_May_2015_panorama_3.jpg",
+        "attribution": "King of Hearts",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=40.7127281,-74.0060152",
+        "embedUrl": "https://maps.google.com/maps?q=40.7127281,-74.0060152&z=12&output=embed"
+      },
+      "year": "1870"
+    },
+    {
+      "id": "kansas-city-mo-residence",
+      "type": "town",
+      "canonicalPlaceId": "kansas-city-mo",
+      "badge": "Residence",
+      "name": "Kansas City, MO",
+      "relevance": "",
+      "featured": false,
+      "lat": 39.100105,
+      "lng": -94.5781416,
+      "wikipedia": {
+        "title": "Kansas City, Missouri",
+        "url": "https://en.wikipedia.org/wiki/Kansas_City%2C_Missouri",
+        "summary": "Kansas City, abbreviated KC or KCMO, is the largest city in the U.S. state of Missouri by both population and area. It is located on the Missouri River at its confluence with the Kansas River, within Jackson, Clay, Platte and Cass counties. It is the 38th-most populous city in the United States and "
+      },
+      "wikimedia": {
+        "fileTitle": "File:Hyatt Regency Crown Center Kansas City MO.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/8/81/Hyatt_Regency_Crown_Center_Kansas_City_MO.jpg",
+        "attribution": "user:Charvex",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=39.100105,-94.5781416",
+        "embedUrl": "https://maps.google.com/maps?q=39.100105,-94.5781416&z=12&output=embed"
+      },
+      "year": "1880"
+    }
+  ]
+}

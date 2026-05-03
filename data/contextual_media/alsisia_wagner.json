@@ -1,0 +1,34 @@
+{
+  "personId": "alsisia_wagner",
+  "personName": "Alsisia Wagner",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "germany-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "germany",
+      "badge": "Birth Place",
+      "name": "Germany",
+      "relevance": "",
+      "featured": true,
+      "lat": 51.1638175,
+      "lng": 10.4478313,
+      "wikipedia": {
+        "title": "Germany",
+        "url": "https://en.wikipedia.org/wiki/Germany",
+        "summary": "Germany, officially the Federal Republic of Germany, is a country in Western and Central Europe. It lies between the Baltic Sea and the North Sea to the north with the Alps to the south. Its sixteen constituent states have a total population of over 82 million, making it the most populous member sta"
+      },
+      "wikimedia": {
+        "fileTitle": "File:SonyCenterAtNight.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/SonyCenterAtNight.jpg/960px-SonyCenterAtNight.jpg",
+        "attribution": "Andreas Tille",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=51.1638175,10.4478313",
+        "embedUrl": "https://maps.google.com/maps?q=51.1638175,10.4478313&z=12&output=embed"
+      },
+      "year": "1825"
+    }
+  ]
+}

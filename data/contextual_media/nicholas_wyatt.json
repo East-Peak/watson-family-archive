@@ -1,0 +1,65 @@
+{
+  "personId": "nicholas_wyatt",
+  "personName": "Nicholas Wyatt",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "virginia-of-an-extramarital-liaison-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "virginia-of-an-extramarital-liaison",
+      "badge": "Birth Place",
+      "name": "Virginia of an extramarital liaison",
+      "relevance": "",
+      "featured": true
+    },
+    {
+      "id": "anne-arundel-md-death",
+      "type": "town",
+      "canonicalPlaceId": "anne-arundel-md",
+      "badge": "Death",
+      "name": "Anne Arundel, MD",
+      "relevance": "",
+      "featured": false,
+      "lat": 38.9722583,
+      "lng": -76.573454,
+      "wikimedia": {
+        "fileTitle": "File:PRIMROSE HILL, ANNAPOLIS, ANNE ARUNDEL COUNTY, MD.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/PRIMROSE_HILL%2C_ANNAPOLIS%2C_ANNE_ARUNDEL_COUNTY%2C_MD.jpg/960px-PRIMROSE_HILL%2C_ANNAPOLIS%2C_ANNE_ARUNDEL_COUNTY%2C_MD.jpg",
+        "attribution": "JERRYE &amp; ROY KLOTZ, M.D.",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=38.9722583,-76.573454",
+        "embedUrl": "https://maps.google.com/maps?q=38.9722583,-76.573454&z=12&output=embed"
+      },
+      "year": "1673"
+    },
+    {
+      "id": "virginia-colony-marriage",
+      "type": "building",
+      "canonicalPlaceId": "virginia-colony",
+      "badge": "Marriage",
+      "name": "Virginia Colony",
+      "relevance": "",
+      "featured": false,
+      "lat": 34.2877801,
+      "lng": -118.8584293,
+      "wikipedia": {
+        "title": "Colony of Virginia",
+        "url": "https://en.wikipedia.org/wiki/Colony_of_Virginia",
+        "summary": "The Colony of Virginia was a British colonial settlement in North America from 1606 to 1776. The first effort to create an English settlement in the area was chartered in 1584 and established in 1585; the resulting Roanoke Colony lasted for three attempts totaling six years. In 1590, the colony was "
+      },
+      "wikimedia": {
+        "fileTitle": "File:History of the First Discovery of Virginia 1747.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ec/History_of_the_First_Discovery_of_Virginia_1747.jpg",
+        "attribution": "William Parks",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=34.2877801,-118.8584293",
+        "embedUrl": "https://maps.google.com/maps?q=34.2877801,-118.8584293&z=12&output=embed"
+      },
+      "year": "1649"
+    }
+  ]
+}

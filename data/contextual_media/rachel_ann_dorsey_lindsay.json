@@ -1,0 +1,83 @@
+{
+  "personId": "rachel_ann_dorsey_lindsay",
+  "personName": "Rachel Ann Dorsey",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "baltimore-county-maryland-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "baltimore-county-maryland",
+      "badge": "Birth Place",
+      "name": "Baltimore County, Maryland",
+      "relevance": "",
+      "featured": true,
+      "lat": 39.4445243,
+      "lng": -76.6483482,
+      "wikipedia": {
+        "title": "Baltimore County, Maryland",
+        "url": "https://en.wikipedia.org/wiki/Baltimore_County%2C_Maryland",
+        "summary": "Baltimore County is the third-most populous county in the U.S. state of Maryland. The county is part of the Central Maryland region of the state. Baltimore County partly surrounds but does not include the independent city of Baltimore. It is part of the Northeast megalopolis, which stretches from No"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Baltimore County, Maryland LOC 81690004.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Baltimore_County%2C_Maryland_LOC_81690004.jpg/960px-Baltimore_County%2C_Maryland_LOC_81690004.jpg",
+        "attribution": "United States. Soil Conservation Service; Geological Survey (U.S.)",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=39.4445243,-76.6483482",
+        "embedUrl": "https://maps.google.com/maps?q=39.4445243,-76.6483482&z=12&output=embed"
+      },
+      "year": "1737"
+    },
+    {
+      "id": "scott-county-kentucky-death",
+      "type": "town",
+      "canonicalPlaceId": "scott-county-kentucky",
+      "badge": "Death",
+      "name": "Scott County, Kentucky",
+      "relevance": "",
+      "featured": false,
+      "lat": 38.2776401,
+      "lng": -84.5816131,
+      "wikipedia": {
+        "title": "Scott County, Kentucky",
+        "url": "https://en.wikipedia.org/wiki/Scott_County%2C_Kentucky",
+        "summary": "Scott County is a county located in the central part of the U.S. state of Kentucky. As of the 2020 census, the population was 57,155. Scott County is part of the Lexington-Fayette, Kentucky Metropolitan Statistical Area. Its county seat and largest city is Georgetown."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Scott county kentucky courthouse.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Scott_county_kentucky_courthouse.jpg/960px-Scott_county_kentucky_courthouse.jpg",
+        "attribution": "W.marsh",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=38.2776401,-84.5816131",
+        "embedUrl": "https://maps.google.com/maps?q=38.2776401,-84.5816131&z=12&output=embed"
+      },
+      "year": "1805"
+    },
+    {
+      "id": "lindsay-cemetery-scott-county-kentucky-residence",
+      "type": "town",
+      "canonicalPlaceId": "lindsay-cemetery-scott-county-kentucky",
+      "badge": "Residence",
+      "name": "Lindsay Cemetery, Scott County, Kentucky",
+      "relevance": "",
+      "featured": false,
+      "lat": 38.2882634,
+      "lng": -84.7031268,
+      "wikimedia": {
+        "fileTitle": "File:A young people's history of Kentucky for schools and general reading (IA youngpeopleshist00thom).pdf",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/A_young_people%27s_history_of_Kentucky_for_schools_and_general_reading_%28IA_youngpeopleshist00thom%29.pdf/page1-700px-A_young_people%27s_history_of_Kentucky_for_schools_and_general_reading_%28IA_youngpeopleshist00thom%29.pdf.jpg",
+        "attribution": "Thompson, Edwin Porter, 1834- [from old catalog]",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=38.2882634,-84.7031268",
+        "embedUrl": "https://maps.google.com/maps?q=38.2882634,-84.7031268&z=12&output=embed"
+      },
+      "year": "1805"
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "personId": "abner_lindsay",
+  "personName": "Abner Ford Lindsay",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "henry-kentucky-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "henry-kentucky",
+      "badge": "Birth Place",
+      "name": "Henry, Kentucky",
+      "relevance": "",
+      "featured": true,
+      "lat": 38.447983,
+      "lng": -85.1191168,
+      "wikimedia": {
+        "fileTitle": "File:Henry County, Kentucky courthouse.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Henry_County%2C_Kentucky_courthouse.jpg/960px-Henry_County%2C_Kentucky_courthouse.jpg",
+        "attribution": "W.marsh",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=38.447983,-85.1191168",
+        "embedUrl": "https://maps.google.com/maps?q=38.447983,-85.1191168&z=12&output=embed"
+      },
+      "year": "1822"
+    },
+    {
+      "id": "lawrence-illinois-death",
+      "type": "town",
+      "canonicalPlaceId": "lawrence-illinois",
+      "badge": "Death",
+      "name": "Lawrence, Illinois",
+      "relevance": "",
+      "featured": false,
+      "lat": 38.710333,
+      "lng": -87.7143359,
+      "wikipedia": {
+        "title": "Lawrence, Illinois",
+        "url": "https://en.wikipedia.org/wiki/Lawrence%2C_Illinois",
+        "summary": "Lawrence is an unincorporated community and census-designated place in Chemung Township, McHenry County, Illinois, United States. Lawrence is 2 miles (3.2\u00a0km) northwest of Harvard. It was named a CDP before the 2020 census, at which time it had a population of 220."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Lawrence County Courthouse in Lawrenceville.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Lawrence_County_Courthouse_in_Lawrenceville.jpg/960px-Lawrence_County_Courthouse_in_Lawrenceville.jpg",
+        "attribution": "Ed Brumley",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=38.710333,-87.7143359",
+        "embedUrl": "https://maps.google.com/maps?q=38.710333,-87.7143359&z=12&output=embed"
+      },
+      "year": "1893"
+    },
+    {
+      "id": "bond-township-lawrence-illinois-census-year-1870-residence",
+      "type": "town",
+      "canonicalPlaceId": "bond-township-lawrence-illinois-census-year-1870",
+      "badge": "Residence",
+      "name": "Bond Township, Lawrence, Illinois. Census year: 1870",
+      "relevance": "",
+      "featured": false,
+      "year": "1890"
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "personId": "stanley_gorney",
+  "personName": "Stanislaw \"Stanley\" Joseph Gorney",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "poland-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "poland",
+      "badge": "Birth Place",
+      "name": "Poland",
+      "relevance": "",
+      "featured": true,
+      "lat": 52.215933,
+      "lng": 19.134422,
+      "wikipedia": {
+        "title": "Poland",
+        "url": "https://en.wikipedia.org/wiki/Poland",
+        "summary": "Poland, officially the Republic of Poland, is a country in Central Europe. It extends from the Baltic Sea in the north to the Sudetes and Carpathian Mountains in the south. Poland borders Kaliningrad Oblast and Lithuania to the north; Belarus and Ukraine to the east; Slovakia and the Czech Republic "
+      },
+      "wikimedia": {
+        "fileTitle": "File:Krakow - Kosciol Mariacki.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Krakow_-_Kosciol_Mariacki.jpg/960px-Krakow_-_Kosciol_Mariacki.jpg",
+        "attribution": "Jar.ciurus",
+        "license": "CC BY-SA 3.0 pl"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=52.215933,19.134422",
+        "embedUrl": "https://maps.google.com/maps?q=52.215933,19.134422&z=12&output=embed"
+      },
+      "year": "1879"
+    },
+    {
+      "id": "chicago-death",
+      "type": "town",
+      "canonicalPlaceId": "chicago",
+      "badge": "Death",
+      "name": "Chicago",
+      "relevance": "",
+      "featured": false,
+      "lat": 41.8755616,
+      "lng": -87.6244212,
+      "wikipedia": {
+        "title": "Chicago",
+        "url": "https://en.wikipedia.org/wiki/Chicago",
+        "summary": "Chicago is the most populous city in the U.S. state of Illinois and in the Midwestern United States. Located on the western shore of Lake Michigan, it is the third-most populous city in the United States, with a population of 2.74 million at the 2020 census. The Chicago metropolitan area has 9.41 mi"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Chicago Union Station 1943.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Chicago_Union_Station_1943.jpg/960px-Chicago_Union_Station_1943.jpg",
+        "attribution": "Jack Delano",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=41.8755616,-87.6244212",
+        "embedUrl": "https://maps.google.com/maps?q=41.8755616,-87.6244212&z=12&output=embed"
+      },
+      "year": "1945"
+    },
+    {
+      "id": "chicago-ward-38-residence",
+      "type": "town",
+      "canonicalPlaceId": "chicago-ward-38",
+      "badge": "Residence",
+      "name": "Chicago, Ward 38",
+      "relevance": "",
+      "featured": false,
+      "lat": 41.8817866,
+      "lng": -87.7752575,
+      "wikimedia": {
+        "fileTitle": "File:James Ward Public School, Shields Avenue and 27th Street, Armour Square, Chicago, IL (54837986290).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/James_Ward_Public_School%2C_Shields_Avenue_and_27th_Street%2C_Armour_Square%2C_Chicago%2C_IL_%2854837986290%29.jpg/960px-James_Ward_Public_School%2C_Shields_Avenue_and_27th_Street%2C_Armour_Square%2C_Chicago%2C_IL_%2854837986290%29.jpg",
+        "attribution": "Warren LeMay from Chicago, IL, United States",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=41.8817866,-87.7752575",
+        "embedUrl": "https://maps.google.com/maps?q=41.8817866,-87.7752575&z=12&output=embed"
+      },
+      "year": "1940"
+    },
+    {
+      "id": "saint-adalbert-catholic-cemetery-niles-residence",
+      "type": "town",
+      "canonicalPlaceId": "saint-adalbert-catholic-cemetery-niles",
+      "badge": "Residence",
+      "name": "Saint Adalbert Catholic Cemetery, Niles",
+      "relevance": "",
+      "featured": false,
+      "year": "1945"
+    },
+    {
+      "id": "cook-county-residence",
+      "type": "town",
+      "canonicalPlaceId": "cook-county",
+      "badge": "Residence",
+      "name": "Cook County",
+      "relevance": "",
+      "featured": false,
+      "lat": 41.8197385,
+      "lng": -87.756525,
+      "wikipedia": {
+        "title": "Cook County, Illinois",
+        "url": "https://en.wikipedia.org/wiki/Cook_County%2C_Illinois",
+        "summary": "Cook County is the most populous county in the U.S. state of Illinois and the second-most-populous county in the United States, after Los Angeles County, California. More than 40 percent of all residents of Illinois live within Cook County. As of 2020, the population was 5,275,541. The county seat i"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Cook County Probate Judge 1946.png",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Cook_County_Probate_Judge_1946.png",
+        "attribution": "John M Wolfson",
+        "license": "CC0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=41.8197385,-87.756525",
+        "embedUrl": "https://maps.google.com/maps?q=41.8197385,-87.756525&z=12&output=embed"
+      },
+      "year": "1945"
+    }
+  ]
+}

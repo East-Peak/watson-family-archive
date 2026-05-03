@@ -1,0 +1,56 @@
+{
+  "personId": "gladys_e_watson",
+  "personName": "Gladys E Watson",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "detroit-michigan-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "detroit-michigan",
+      "badge": "Birth Place",
+      "name": "Detroit, Michigan",
+      "relevance": "",
+      "featured": true,
+      "lat": 42.3315509,
+      "lng": -83.0466403,
+      "wikipedia": {
+        "title": "Detroit",
+        "url": "https://en.wikipedia.org/wiki/Detroit",
+        "summary": "Detroit is the most populous city in the U.S. state of Michigan. It is situated on the bank of the Detroit River across from the Canadian city of Windsor, Ontario. It is the 26th-most populous city in the United States and the largest U.S. city on the Canada\u2013United States border, with a population o"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Bird's eye view of Detroit, Michigan, 1889 - . Calvert Lithographing Co..jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Bird%27s_eye_view_of_Detroit%2C_Michigan%2C_1889_-_._Calvert_Lithographing_Co..jpg/960px-Bird%27s_eye_view_of_Detroit%2C_Michigan%2C_1889_-_._Calvert_Lithographing_Co..jpg",
+        "attribution": "Calvert Lithographing Co. (image)\nAdam Cuerden (restoration)",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=42.3315509,-83.0466403",
+        "embedUrl": "https://maps.google.com/maps?q=42.3315509,-83.0466403&z=12&output=embed"
+      },
+      "year": "1895"
+    },
+    {
+      "id": "walnut-creek-contra-costa-california-death",
+      "type": "town",
+      "canonicalPlaceId": "walnut-creek-contra-costa-california",
+      "badge": "Death",
+      "name": "Walnut Creek, Contra Costa, California",
+      "relevance": "",
+      "featured": false,
+      "lat": 37.9020731,
+      "lng": -122.0618702,
+      "wikimedia": {
+        "fileTitle": "File:Three Creeks - Confluence of Alum and Big Walnut Creek 1.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Three_Creeks_-_Confluence_of_Alum_and_Big_Walnut_Creek_1.jpg/960px-Three_Creeks_-_Confluence_of_Alum_and_Big_Walnut_Creek_1.jpg",
+        "attribution": "Sixflashphoto",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=37.9020731,-122.0618702",
+        "embedUrl": "https://maps.google.com/maps?q=37.9020731,-122.0618702&z=12&output=embed"
+      },
+      "year": "1984"
+    }
+  ]
+}

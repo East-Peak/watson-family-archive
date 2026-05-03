@@ -1,0 +1,61 @@
+{
+  "personId": "joseph_otis",
+  "personName": "Joseph Lafayette Otis",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "new-hampshire-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "new-hampshire",
+      "badge": "Birth Place",
+      "name": "New Hampshire",
+      "relevance": "",
+      "featured": true,
+      "lat": 43.4849133,
+      "lng": -71.6553992,
+      "wikipedia": {
+        "title": "New Hampshire",
+        "url": "https://en.wikipedia.org/wiki/New_Hampshire",
+        "summary": "New Hampshire is a state in the New England region of the Northeastern United States. It borders Massachusetts to the south, Vermont to the west, Maine and the Gulf of Maine to the east, and the Canadian province of Quebec to the north. Of the 50 U.S. states, New Hampshire is the seventh-smallest by"
+      },
+      "wikimedia": {
+        "fileTitle": "File:US-Colonial (NH-179)-New Hampshire-29 Apr 1780 OBV.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/US-Colonial_%28NH-179%29-New_Hampshire-29_Apr_1780_OBV.jpg/960px-US-Colonial_%28NH-179%29-New_Hampshire-29_Apr_1780_OBV.jpg",
+        "attribution": "National Museum of American History",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.4849133,-71.6553992",
+        "embedUrl": "https://maps.google.com/maps?q=43.4849133,-71.6553992&z=12&output=embed"
+      },
+      "year": "1796"
+    },
+    {
+      "id": "jay-new-york-death",
+      "type": "town",
+      "canonicalPlaceId": "jay-new-york",
+      "badge": "Death",
+      "name": "Jay, New York",
+      "relevance": "",
+      "featured": false,
+      "lat": 44.375159,
+      "lng": -73.728218,
+      "wikipedia": {
+        "title": "Jay, New York",
+        "url": "https://en.wikipedia.org/wiki/Jay%2C_New_York",
+        "summary": "Jay is a town in Essex County, New York, United States. The population was 2,506 at the 2010 census. The town is named after John Jay, governor of New York when the town was formed."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Fort Jay New York September 2016 001.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Fort_Jay_New_York_September_2016_001.jpg/960px-Fort_Jay_New_York_September_2016_001.jpg",
+        "attribution": "King of Hearts",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=44.375159,-73.728218",
+        "embedUrl": "https://maps.google.com/maps?q=44.375159,-73.728218&z=12&output=embed"
+      },
+      "year": "1873"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "personId": "capt_john_norwood_sr",
+  "personName": "John Norwood Sr.",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "anne-arundel-md-death",
+      "type": "town",
+      "canonicalPlaceId": "anne-arundel-md",
+      "badge": "Death",
+      "name": "Anne Arundel, MD",
+      "relevance": "",
+      "featured": true,
+      "lat": 38.9722583,
+      "lng": -76.573454,
+      "wikimedia": {
+        "fileTitle": "File:PRIMROSE HILL, ANNAPOLIS, ANNE ARUNDEL COUNTY, MD.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/PRIMROSE_HILL%2C_ANNAPOLIS%2C_ANNE_ARUNDEL_COUNTY%2C_MD.jpg/960px-PRIMROSE_HILL%2C_ANNAPOLIS%2C_ANNE_ARUNDEL_COUNTY%2C_MD.jpg",
+        "attribution": "JERRYE &amp; ROY KLOTZ, M.D.",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=38.9722583,-76.573454",
+        "embedUrl": "https://maps.google.com/maps?q=38.9722583,-76.573454&z=12&output=embed"
+      },
+      "year": "1672"
+    },
+    {
+      "id": "st-nicholas-chapel-residence",
+      "type": "town",
+      "canonicalPlaceId": "st-nicholas-chapel",
+      "badge": "Residence",
+      "name": "St Nicholas Chapel",
+      "relevance": "",
+      "featured": false,
+      "lat": 51.5541248,
+      "lng": 0.044734,
+      "wikimedia": {
+        "fileTitle": "File:Gipping - Chapel of St Nicholas.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/0/08/Gipping_-_Chapel_of_St_Nicholas.jpg",
+        "attribution": "mym",
+        "license": "CC BY-SA 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=51.5541248,0.044734",
+        "embedUrl": "https://maps.google.com/maps?q=51.5541248,0.044734&z=12&output=embed"
+      },
+      "year": "1672"
+    }
+  ]
+}

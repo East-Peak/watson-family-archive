@@ -1,0 +1,61 @@
+{
+  "personId": "thomas_wheadon_jr",
+  "personName": "Thomas Wheadon Jr.",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "new-haven-connecticut-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "new-haven-connecticut",
+      "badge": "Birth Place",
+      "name": "New Haven, Connecticut",
+      "relevance": "",
+      "featured": true,
+      "lat": 41.3082138,
+      "lng": -72.9250518,
+      "wikipedia": {
+        "title": "New Haven, Connecticut",
+        "url": "https://en.wikipedia.org/wiki/New_Haven%2C_Connecticut",
+        "summary": "New Haven is a city in the U.S. state of Connecticut. It is located on New Haven Harbor on the northern shore of Long Island Sound. With a population of 134,023 at the 2020 census, it is the third-most populous city in Connecticut and the largest in the South Central Connecticut Planning Region, wit"
+      },
+      "wikimedia": {
+        "fileTitle": "File:New Haven, Connecticut - 6524772497.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/New_Haven%2C_Connecticut_-_6524772497.jpg/960px-New_Haven%2C_Connecticut_-_6524772497.jpg",
+        "attribution": "Dougtone",
+        "license": "CC BY-SA 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=41.3082138,-72.9250518",
+        "embedUrl": "https://maps.google.com/maps?q=41.3082138,-72.9250518&z=12&output=embed"
+      },
+      "year": "1663"
+    },
+    {
+      "id": "branford-connecticut-death",
+      "type": "town",
+      "canonicalPlaceId": "branford-connecticut",
+      "badge": "Death",
+      "name": "Branford, Connecticut",
+      "relevance": "",
+      "featured": false,
+      "lat": 41.2795414,
+      "lng": -72.8150989,
+      "wikipedia": {
+        "title": "Branford, Connecticut",
+        "url": "https://en.wikipedia.org/wiki/Branford%2C_Connecticut",
+        "summary": "Branford is a shoreline town located on Long Island Sound in New Haven County, Connecticut, United States, about 6 miles (10\u00a0km) east of downtown New Haven. The town is part of the South Central Connecticut Planning Region. Branford borders East Haven to the west, Guilford to the east, and North Bra"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Branford, Connecticut town hall and courthouse.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Branford%2C_Connecticut_town_hall_and_courthouse.jpg/960px-Branford%2C_Connecticut_town_hall_and_courthouse.jpg",
+        "attribution": "Kenneth Zirkel",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=41.2795414,-72.8150989",
+        "embedUrl": "https://maps.google.com/maps?q=41.2795414,-72.8150989&z=12&output=embed"
+      },
+      "year": "1707"
+    }
+  ]
+}

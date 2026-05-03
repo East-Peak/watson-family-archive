@@ -1,0 +1,115 @@
+{
+  "personId": "william_andes",
+  "personName": "William Terry Andes",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "laurel-county-kentucky-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "laurel-county-kentucky",
+      "badge": "Birth Place",
+      "name": "Laurel County, Kentucky",
+      "relevance": "",
+      "featured": true,
+      "lat": 37.1000973,
+      "lng": -84.1148273,
+      "wikipedia": {
+        "title": "Laurel County, Kentucky",
+        "url": "https://en.wikipedia.org/wiki/Laurel_County%2C_Kentucky",
+        "summary": "Laurel County is a county located in the southeastern portion of the U.S. state of Kentucky. As of the 2020 census, the population was 62,613. Its county seat is London. After a special election in January 2016 alcohol sales are permitted only in the city limits of London. The ordinance went into ef"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Laurel County Kentucky Courthouse.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Laurel_County_Kentucky_Courthouse.jpg/960px-Laurel_County_Kentucky_Courthouse.jpg",
+        "attribution": "W.marsh",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=37.1000973,-84.1148273",
+        "embedUrl": "https://maps.google.com/maps?q=37.1000973,-84.1148273&z=12&output=embed"
+      },
+      "year": "1868"
+    },
+    {
+      "id": "peoria-illinois-death",
+      "type": "town",
+      "canonicalPlaceId": "peoria-illinois",
+      "badge": "Death",
+      "name": "Peoria, Illinois",
+      "relevance": "",
+      "featured": false,
+      "lat": 40.6938609,
+      "lng": -89.5891008,
+      "wikipedia": {
+        "title": "Peoria, Illinois",
+        "url": "https://en.wikipedia.org/wiki/Peoria%2C_Illinois",
+        "summary": "Peoria is a city in Peoria County, Illinois, United States, and its county seat. Located on the Illinois River, the city had a population of 113,150 as of the 2020 census, making it the eighth-most populous city in Illinois. It is the principal city of the Peoria metropolitan area in Central Illinoi"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Greetings from Peoria, Illinois - Large Letter Postcard (7850186524).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Greetings_from_Peoria%2C_Illinois_-_Large_Letter_Postcard_%287850186524%29.jpg/960px-Greetings_from_Peoria%2C_Illinois_-_Large_Letter_Postcard_%287850186524%29.jpg",
+        "attribution": "Steve Shook from Moscow, Idaho, USA",
+        "license": "CC BY 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=40.6938609,-89.5891008",
+        "embedUrl": "https://maps.google.com/maps?q=40.6938609,-89.5891008&z=12&output=embed"
+      },
+      "year": "1944"
+    },
+    {
+      "id": "kentucky-residence",
+      "type": "town",
+      "canonicalPlaceId": "kentucky",
+      "badge": "Residence",
+      "name": "Kentucky",
+      "relevance": "",
+      "featured": false,
+      "lat": 37.5726028,
+      "lng": -85.1551411,
+      "wikipedia": {
+        "title": "Kentucky",
+        "url": "https://en.wikipedia.org/wiki/Kentucky",
+        "summary": "Kentucky, officially the Commonwealth of Kentucky, is a landlocked state in the Southeastern region of the United States. It borders Illinois, Indiana, and Ohio to the north, West Virginia to the northeast, Virginia to the east, Tennessee to the south, and Missouri to the west. Its northern border i"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Kentucky Scenic Byway signage on Kentucky Route 63 in Temple Hill, Kentucky.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Kentucky_Scenic_Byway_signage_on_Kentucky_Route_63_in_Temple_Hill%2C_Kentucky.jpg",
+        "attribution": "K-Johnson 127",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=37.5726028,-85.1551411",
+        "embedUrl": "https://maps.google.com/maps?q=37.5726028,-85.1551411&z=12&output=embed"
+      },
+      "year": "1868"
+    },
+    {
+      "id": "decatur-illinois-residence",
+      "type": "town",
+      "canonicalPlaceId": "decatur-illinois",
+      "badge": "Residence",
+      "name": "Decatur, Illinois",
+      "relevance": "",
+      "featured": false,
+      "lat": 39.8454163,
+      "lng": -88.9524151,
+      "wikipedia": {
+        "title": "Decatur, Illinois",
+        "url": "https://en.wikipedia.org/wiki/Decatur%2C_Illinois",
+        "summary": "Decatur is the largest city in Macon County, Illinois, United States, and its county seat. The city was founded in 1829 and is situated along the Sangamon River and Lake Decatur in Central Illinois. As of the 2020 census, it had a population of 70,522. It is the 17th-most populous city in Illinois a"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Decatur Illinois banner.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Decatur_Illinois_banner.jpg/960px-Decatur_Illinois_banner.jpg",
+        "attribution": "ZcarstvnzAuthor of original photo: n9qhf",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=39.8454163,-88.9524151",
+        "embedUrl": "https://maps.google.com/maps?q=39.8454163,-88.9524151&z=12&output=embed"
+      },
+      "year": "1944"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "personId": "pheba_a_foster",
+  "personName": "Pheba A Foster",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "victory-cayuga-new-york-death",
+      "type": "town",
+      "canonicalPlaceId": "victory-cayuga-new-york",
+      "badge": "Death",
+      "name": "Victory, Cayuga, New York",
+      "relevance": "",
+      "featured": true,
+      "lat": 43.197289,
+      "lng": -76.654393,
+      "wikimedia": {
+        "fileTitle": "File:NY370 East - Victory NY Sign (42756736492).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/NY370_East_-_Victory_NY_Sign_%2842756736492%29.jpg/960px-NY370_East_-_Victory_NY_Sign_%2842756736492%29.jpg",
+        "attribution": "formulanone from Huntsville, United States",
+        "license": "CC BY-SA 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.197289,-76.654393",
+        "embedUrl": "https://maps.google.com/maps?q=43.197289,-76.654393&z=12&output=embed"
+      },
+      "year": "1910"
+    },
+    {
+      "id": "sources-residence",
+      "type": "town",
+      "canonicalPlaceId": "sources",
+      "badge": "Residence",
+      "name": "sources)",
+      "relevance": "",
+      "featured": false,
+      "lat": 46.3052934,
+      "lng": -0.4393173,
+      "wikimedia": {
+        "fileTitle": "File:Anse Source d'Argent 2-La Digue.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Anse_Source_d%27Argent_2-La_Digue.jpg/960px-Anse_Source_d%27Argent_2-La_Digue.jpg",
+        "attribution": "Tobias Alt, Tobi 87",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=46.3052934,-0.4393173",
+        "embedUrl": "https://maps.google.com/maps?q=46.3052934,-0.4393173&z=12&output=embed"
+      },
+      "year": "1910"
+    }
+  ]
+}

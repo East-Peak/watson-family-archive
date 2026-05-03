@@ -1,0 +1,34 @@
+{
+  "personId": "jane_hughes",
+  "personName": "Jane Hughes",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "confirmed-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "confirmed",
+      "badge": "Birth Place",
+      "name": "confirmed",
+      "relevance": "",
+      "featured": true,
+      "lat": 32.8096735,
+      "lng": -98.1026291,
+      "wikipedia": {
+        "title": "Confirmation",
+        "url": "https://en.wikipedia.org/wiki/Confirmation",
+        "summary": "In Christian denominations that practice infant baptism, confirmation is seen as the sealing of the covenant created in baptism. Those being confirmed are known as confirmands. The ceremony typically involves laying on of hands."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Confirmation blessing.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Confirmation_blessing.jpg/960px-Confirmation_blessing.jpg",
+        "attribution": null,
+        "license": "CC BY 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=32.8096735,-98.1026291",
+        "embedUrl": "https://maps.google.com/maps?q=32.8096735,-98.1026291&z=12&output=embed"
+      },
+      "year": "1821"
+    }
+  ]
+}

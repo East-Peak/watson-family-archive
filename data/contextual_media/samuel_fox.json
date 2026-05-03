@@ -1,0 +1,56 @@
+{
+  "personId": "samuel_fox",
+  "personName": "Samuel Fox",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "cheshire-england-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "cheshire-england",
+      "badge": "Birth Place",
+      "name": "Cheshire, England",
+      "relevance": "",
+      "featured": true,
+      "lat": 53.2141028,
+      "lng": -2.4717701,
+      "wikipedia": {
+        "title": "Cheshire",
+        "url": "https://en.wikipedia.org/wiki/Cheshire",
+        "summary": "Cheshire is a ceremonial county in North West England. It is bordered by Merseyside to the north-west, Greater Manchester to the north-east, Derbyshire to the east, Staffordshire to the south-east, and Shropshire to the south; to the west it is bordered by the Welsh counties of Flintshire and Wrexha"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Chester Cathedral Cloister, Cheshire, UK - Diliff.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Chester_Cathedral_Cloister%2C_Cheshire%2C_UK_-_Diliff.jpg/960px-Chester_Cathedral_Cloister%2C_Cheshire%2C_UK_-_Diliff.jpg",
+        "attribution": "Diliff",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=53.2141028,-2.4717701",
+        "embedUrl": "https://maps.google.com/maps?q=53.2141028,-2.4717701&z=12&output=embed"
+      },
+      "year": "1820"
+    },
+    {
+      "id": "wayland-allegan-michigan-death",
+      "type": "town",
+      "canonicalPlaceId": "wayland-allegan-michigan",
+      "badge": "Death",
+      "name": "Wayland, Allegan, Michigan",
+      "relevance": "",
+      "featured": false,
+      "lat": 42.6745321,
+      "lng": -85.6457663,
+      "wikimedia": {
+        "fileTitle": "File:Wayland (1).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Wayland_%281%29.jpg/960px-Wayland_%281%29.jpg",
+        "attribution": "Gpwitteveen",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=42.6745321,-85.6457663",
+        "embedUrl": "https://maps.google.com/maps?q=42.6745321,-85.6457663&z=12&output=embed"
+      },
+      "year": "1895"
+    }
+  ]
+}

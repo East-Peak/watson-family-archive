@@ -1,0 +1,45 @@
+{
+  "personId": "henry_jackson",
+  "personName": "Henry Jackson",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "cobleskill-schoharie-county-new-york-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "cobleskill-schoharie-county-new-york",
+      "badge": "Birth Place",
+      "name": "Cobleskill, Schoharie County, New York",
+      "relevance": "",
+      "featured": true,
+      "lat": 42.677853,
+      "lng": -74.4854172,
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=42.677853,-74.4854172",
+        "embedUrl": "https://maps.google.com/maps?q=42.677853,-74.4854172&z=12&output=embed"
+      },
+      "year": "1804"
+    },
+    {
+      "id": "wyoming-wyoming-county-new-york-death",
+      "type": "town",
+      "canonicalPlaceId": "wyoming-wyoming-county-new-york",
+      "badge": "Death",
+      "name": "Wyoming, Wyoming County, New York",
+      "relevance": "",
+      "featured": false,
+      "lat": 42.8264498,
+      "lng": -78.0897329,
+      "wikimedia": {
+        "fileTitle": "File:Wyoming County Courthouse taken 2013.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Wyoming_County_Courthouse_taken_2013.jpg/960px-Wyoming_County_Courthouse_taken_2013.jpg",
+        "attribution": "Kenneth C. Zirkel",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=42.8264498,-78.0897329",
+        "embedUrl": "https://maps.google.com/maps?q=42.8264498,-78.0897329&z=12&output=embed"
+      },
+      "year": "1876"
+    }
+  ]
+}

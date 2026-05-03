@@ -1,0 +1,88 @@
+{
+  "personId": "cecilia_andes",
+  "personName": "Cecilia Andes",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "pennsylvania-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "pennsylvania",
+      "badge": "Birth Place",
+      "name": "Pennsylvania",
+      "relevance": "",
+      "featured": true,
+      "lat": 40.9699889,
+      "lng": -77.7278831,
+      "wikipedia": {
+        "title": "Pennsylvania",
+        "url": "https://en.wikipedia.org/wiki/Pennsylvania",
+        "summary": "Pennsylvania, officially the Commonwealth of Pennsylvania, is a state located in the Mid-Atlantic, Northeastern, Appalachian, and Great Lakes regions of the United States. It borders Delaware to its southeast, Maryland to its south, forming the Mason-Dixon Line, West Virginia to its southwest, Ohio "
+      },
+      "wikimedia": {
+        "fileTitle": "File:Pennsylvania Winter Sunset.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Pennsylvania_Winter_Sunset.jpg/960px-Pennsylvania_Winter_Sunset.jpg",
+        "attribution": "Andrew Crouthamel",
+        "license": "CC BY-SA 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=40.9699889,-77.7278831",
+        "embedUrl": "https://maps.google.com/maps?q=40.9699889,-77.7278831&z=12&output=embed"
+      },
+      "year": "1899"
+    },
+    {
+      "id": "los-angeles-ca-death",
+      "type": "town",
+      "canonicalPlaceId": "los-angeles-ca",
+      "badge": "Death",
+      "name": "Los Angeles, CA",
+      "relevance": "",
+      "featured": false,
+      "lat": 34.0536909,
+      "lng": -118.242766,
+      "wikipedia": {
+        "title": "Los Angeles",
+        "url": "https://en.wikipedia.org/wiki/Los_Angeles",
+        "summary": "Los Angeles is the most populous city in the U.S. state of California, and the commercial, financial, and cultural center of Southern California. With an estimated 3.88 million residents within the city limits as of 2024, it is the second-most populous city in the United States, behind New York City"
+      },
+      "wikimedia": {
+        "fileTitle": "File:USS Los Angeles (CA-135) in the Far East, 13 October 1952 (NH 97386).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/USS_Los_Angeles_%28CA-135%29_in_the_Far_East%2C_13_October_1952_%28NH_97386%29.jpg/960px-USS_Los_Angeles_%28CA-135%29_in_the_Far_East%2C_13_October_1952_%28NH_97386%29.jpg",
+        "attribution": "Unknown authorUnknown author",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=34.0536909,-118.242766",
+        "embedUrl": "https://maps.google.com/maps?q=34.0536909,-118.242766&z=12&output=embed"
+      },
+      "year": "1976"
+    },
+    {
+      "id": "sangamon-illinois-residence",
+      "type": "town",
+      "canonicalPlaceId": "sangamon-illinois",
+      "badge": "Residence",
+      "name": "Sangamon, Illinois",
+      "relevance": "",
+      "featured": false,
+      "lat": 39.7623668,
+      "lng": -89.6454905,
+      "wikipedia": {
+        "title": "Sangamon, Illinois",
+        "url": "https://en.wikipedia.org/wiki/Sangamon%2C_Illinois",
+        "summary": "Sangamon is an unincorporated community in Oakley Township, Macon County, Illinois, United States. Sangamon is located along the Norfolk Southern Railway, 5.5 miles (8.9\u00a0km) east-northeast of downtown Decatur."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Sangamon County Illinois 1839.png",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/0/06/Sangamon_County_Illinois_1839.png",
+        "attribution": "Illinois_Locator_Map.PNG: US Census, Ruhrfisch\nderivative work: Fishal (talk)",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=39.7623668,-89.6454905",
+        "embedUrl": "https://maps.google.com/maps?q=39.7623668,-89.6454905&z=12&output=embed"
+      },
+      "year": "1930"
+    }
+  ]
+}

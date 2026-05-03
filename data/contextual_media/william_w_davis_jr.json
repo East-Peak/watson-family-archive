@@ -1,0 +1,83 @@
+{
+  "personId": "william_w_davis_jr",
+  "personName": "William W. Davis Jr",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "south-bend-blue-earth-mn-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "south-bend-blue-earth-mn",
+      "badge": "Birth Place",
+      "name": "South Bend, Blue Earth, MN",
+      "relevance": "",
+      "featured": true,
+      "lat": 44.1465861,
+      "lng": -94.0849391,
+      "wikimedia": {
+        "fileTitle": "File:Congregational Church, South Bend Township, Minnesota - DPLA - 646ad372b93ae047dff4a3cce91322d7.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Congregational_Church%2C_South_Bend_Township%2C_Minnesota_-_DPLA_-_646ad372b93ae047dff4a3cce91322d7.jpg/960px-Congregational_Church%2C_South_Bend_Township%2C_Minnesota_-_DPLA_-_646ad372b93ae047dff4a3cce91322d7.jpg",
+        "attribution": null,
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=44.1465861,-94.0849391",
+        "embedUrl": "https://maps.google.com/maps?q=44.1465861,-94.0849391&z=12&output=embed"
+      },
+      "year": "1862"
+    },
+    {
+      "id": "blue-earth-county-minnesota-death",
+      "type": "town",
+      "canonicalPlaceId": "blue-earth-county-minnesota",
+      "badge": "Death",
+      "name": "Blue Earth County, Minnesota",
+      "relevance": "",
+      "featured": false,
+      "lat": 44.0109722,
+      "lng": -94.0560643,
+      "wikipedia": {
+        "title": "Blue Earth County, Minnesota",
+        "url": "https://en.wikipedia.org/wiki/Blue_Earth_County%2C_Minnesota",
+        "summary": "Blue Earth County is a county in the state of Minnesota. As of the 2020 census, the population was 69,112. Its county seat is Mankato. The county is named for the Blue Earth River and for the deposits of blue-green clay once evident along the banks of the Blue Earth River. Blue Earth County is part "
+      },
+      "wikimedia": {
+        "fileTitle": "File:Farmers tractorcade, Blue Earth County, Minnesota - DPLA - 07edbeb68c96a6e8b116f87bf398b52f.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Farmers_tractorcade%2C_Blue_Earth_County%2C_Minnesota_-_DPLA_-_07edbeb68c96a6e8b116f87bf398b52f.jpg/960px-Farmers_tractorcade%2C_Blue_Earth_County%2C_Minnesota_-_DPLA_-_07edbeb68c96a6e8b116f87bf398b52f.jpg",
+        "attribution": null,
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=44.0109722,-94.0560643",
+        "embedUrl": "https://maps.google.com/maps?q=44.0109722,-94.0560643&z=12&output=embed"
+      },
+      "year": "1940"
+    },
+    {
+      "id": "mankato-minnesota-marriage",
+      "type": "building",
+      "canonicalPlaceId": "mankato-minnesota",
+      "badge": "Marriage",
+      "name": "Mankato, Minnesota",
+      "relevance": "",
+      "featured": false,
+      "lat": 44.1658533,
+      "lng": -94.0028013,
+      "wikipedia": {
+        "title": "Mankato, Minnesota",
+        "url": "https://en.wikipedia.org/wiki/Mankato%2C_Minnesota",
+        "summary": "Mankato is a city in Blue Earth, Nicollet, and Le Sueur counties in the U.S. state of Minnesota. It is the county seat of Blue Earth County. It is the 21st-largest city in Minnesota and fourth-largest outside of the Minneapolis\u2013Saint Paul area, with a population of 44,488 at the 2020 census. The Man"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Mankato, Minnesota, 1890.png",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Mankato%2C_Minnesota%2C_1890.png",
+        "attribution": "Unknown authorUnknown author",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=44.1658533,-94.0028013",
+        "embedUrl": "https://maps.google.com/maps?q=44.1658533,-94.0028013&z=12&output=embed"
+      },
+      "year": "1893"
+    }
+  ]
+}

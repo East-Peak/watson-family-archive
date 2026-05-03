@@ -1,0 +1,51 @@
+{
+  "personId": "william_griffith_welsh",
+  "personName": "William Griffith",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "cardiganshire-ceredigion-wales-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "cardiganshire-ceredigion-wales",
+      "badge": "Birth Place",
+      "name": "Cardiganshire (Ceredigion), Wales",
+      "relevance": "",
+      "featured": true,
+      "lat": 52.4144637,
+      "lng": -4.0685073,
+      "wikimedia": {
+        "fileTitle": "File:Drawing of the font at St Padarn's Church, Llanbadarn Fawr, Cardiganshire (Ceredigion), from Tyrrell Green, \"Cardiganshire fonts\" (1914) 1(4) Transaction and archaeological record, Cardiganshire Antiquarian Society 9-26, at p. 24.pdf",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Drawing_of_the_font_at_St_Padarn%27s_Church%2C_Llanbadarn_Fawr%2C_Cardiganshire_%28Ceredigion%29%2C_from_Tyrrell_Green%2C_%22Cardiganshire_fonts%22_%281914%29_1%284%29_Transaction_and_archaeological_record%2C_Cardiganshire_Antiquarian_Society_9-26%2C_at_p._24.pdf/page1-960px-thumbnail.pdf.jpg",
+        "attribution": "Tyrrell Green",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=52.4144637,-4.0685073",
+        "embedUrl": "https://maps.google.com/maps?q=52.4144637,-4.0685073&z=12&output=embed"
+      },
+      "year": "1657"
+    },
+    {
+      "id": "anne-arundel-md-death",
+      "type": "town",
+      "canonicalPlaceId": "anne-arundel-md",
+      "badge": "Death",
+      "name": "Anne Arundel, MD",
+      "relevance": "",
+      "featured": false,
+      "lat": 38.9722583,
+      "lng": -76.573454,
+      "wikimedia": {
+        "fileTitle": "File:PRIMROSE HILL, ANNAPOLIS, ANNE ARUNDEL COUNTY, MD.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/PRIMROSE_HILL%2C_ANNAPOLIS%2C_ANNE_ARUNDEL_COUNTY%2C_MD.jpg/960px-PRIMROSE_HILL%2C_ANNAPOLIS%2C_ANNE_ARUNDEL_COUNTY%2C_MD.jpg",
+        "attribution": "JERRYE &amp; ROY KLOTZ, M.D.",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=38.9722583,-76.573454",
+        "embedUrl": "https://maps.google.com/maps?q=38.9722583,-76.573454&z=12&output=embed"
+      },
+      "year": "1699"
+    }
+  ]
+}

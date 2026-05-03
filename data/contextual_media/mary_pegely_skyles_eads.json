@@ -1,0 +1,29 @@
+{
+  "personId": "mary_pegely_skyles_eads",
+  "personName": "Mary Pegely Skyles Eads",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "la-plata-charles-county-maryland-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "la-plata-charles-county-maryland",
+      "badge": "Birth Place",
+      "name": "La Plata, Charles County, Maryland",
+      "relevance": "",
+      "featured": true,
+      "lat": 38.5260311,
+      "lng": -76.9766569,
+      "wikimedia": {
+        "fileTitle": "File:2002 La Plata Tornado Destruction.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/6/61/2002_La_Plata_Tornado_Destruction.jpg",
+        "attribution": "Barbara Watson (NOAA)",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=38.5260311,-76.9766569",
+        "embedUrl": "https://maps.google.com/maps?q=38.5260311,-76.9766569&z=12&output=embed"
+      },
+      "year": "1728"
+    }
+  ]
+}

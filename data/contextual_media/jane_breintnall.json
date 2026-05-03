@@ -1,0 +1,27 @@
+{
+  "personId": "jane_breintnall",
+  "personName": "Jane Breintnall",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "chester-county-province-of-pennsylvania-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "chester-county-province-of-pennsylvania",
+      "badge": "Birth Place",
+      "name": "Chester County, Province of Pennsylvania",
+      "relevance": "",
+      "featured": true,
+      "year": "1685"
+    },
+    {
+      "id": "philadelphia-province-of-pennsylvania-death",
+      "type": "town",
+      "canonicalPlaceId": "philadelphia-province-of-pennsylvania",
+      "badge": "Death",
+      "name": "Philadelphia, Province of Pennsylvania",
+      "relevance": "",
+      "featured": false,
+      "year": "1749"
+    }
+  ]
+}

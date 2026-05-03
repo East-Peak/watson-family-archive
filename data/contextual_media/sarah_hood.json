@@ -1,0 +1,56 @@
+{
+  "personId": "sarah_hood",
+  "personName": "Sarah Hood",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "spotsylvania-virginia-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "spotsylvania-virginia",
+      "badge": "Birth Place",
+      "name": "Spotsylvania, Virginia",
+      "relevance": "",
+      "featured": true,
+      "lat": 38.1880936,
+      "lng": -77.6741751,
+      "wikipedia": {
+        "title": "Spotsylvania Courthouse, Virginia",
+        "url": "https://en.wikipedia.org/wiki/Spotsylvania_Courthouse%2C_Virginia",
+        "summary": "Spotsylvania Courthouse is a census-designated place (CDP) and the county seat of Spotsylvania County, Virginia, United States, located 10 miles (16\u00a0km) southwest of Fredericksburg. Recognized by the U.S. Census Bureau as a census-designated place (CDP), the population was 5,610 at the 2020 census."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Spotsylvania County Courthouse (Built 1839), Spotsylvania Virginia.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/0/04/Spotsylvania_County_Courthouse_%28Built_1839%29%2C_Spotsylvania_Virginia.jpg",
+        "attribution": "Calvin Beale",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=38.1880936,-77.6741751",
+        "embedUrl": "https://maps.google.com/maps?q=38.1880936,-77.6741751&z=12&output=embed"
+      },
+      "year": "1731"
+    },
+    {
+      "id": "hampshire-virginia-death",
+      "type": "town",
+      "canonicalPlaceId": "hampshire-virginia",
+      "badge": "Death",
+      "name": "Hampshire, Virginia",
+      "relevance": "",
+      "featured": false,
+      "lat": 39.3015109,
+      "lng": -78.6212207,
+      "wikimedia": {
+        "fileTitle": "File:Attractive horses in rural Hampshire County, West Virginia LCCN2015631528.tif",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Attractive_horses_in_rural_Hampshire_County%2C_West_Virginia_LCCN2015631528.tif/lossy-page1-960px-Attractive_horses_in_rural_Hampshire_County%2C_West_Virginia_LCCN2015631528.tif.jpg",
+        "attribution": "Carol M. Highsmith",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=39.3015109,-78.6212207",
+        "embedUrl": "https://maps.google.com/maps?q=39.3015109,-78.6212207&z=12&output=embed"
+      },
+      "year": "1774"
+    }
+  ]
+}

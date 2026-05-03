@@ -1,0 +1,61 @@
+{
+  "personId": "joseph_ore",
+  "personName": "Joseph Ore",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "london-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "london",
+      "badge": "Birth Place",
+      "name": "London",
+      "relevance": "",
+      "featured": true,
+      "lat": 51.5074456,
+      "lng": -0.1277653,
+      "wikipedia": {
+        "title": "London",
+        "url": "https://en.wikipedia.org/wiki/London",
+        "summary": "London is the capital and largest city of both England and the United Kingdom, with a population of 9.1 million people in 2024. Its wider metropolitan area is the largest in Western Europe, with a population of 15.1\u00a0million. London stands on the River Thames in southeast England, at the head of a 50"
+      },
+      "wikimedia": {
+        "fileTitle": "File:London , Kodachrome by Chalmers Butterfield edit.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/London_%2C_Kodachrome_by_Chalmers_Butterfield_edit.jpg/960px-London_%2C_Kodachrome_by_Chalmers_Butterfield_edit.jpg",
+        "attribution": "Chalmers Butterfield",
+        "license": "CC BY 2.5"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=51.5074456,-0.1277653",
+        "embedUrl": "https://maps.google.com/maps?q=51.5074456,-0.1277653&z=12&output=embed"
+      },
+      "year": "1847"
+    },
+    {
+      "id": "surrey-england-residence",
+      "type": "town",
+      "canonicalPlaceId": "surrey-england",
+      "badge": "Residence",
+      "name": "Surrey, England",
+      "relevance": "",
+      "featured": false,
+      "lat": 51.2715316,
+      "lng": -0.3414524,
+      "wikipedia": {
+        "title": "Surrey",
+        "url": "https://en.wikipedia.org/wiki/Surrey",
+        "summary": "Surrey is a ceremonial county in South East England. It is bordered by Greater London to the northeast, Kent to the east, East and West Sussex to the south, and Hampshire and Berkshire to the west. The largest settlement is Woking."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Charlwood Pavilion at Charlwood, Surrey, England 01.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Charlwood_Pavilion_at_Charlwood%2C_Surrey%2C_England_01.jpg/960px-Charlwood_Pavilion_at_Charlwood%2C_Surrey%2C_England_01.jpg",
+        "attribution": "Acabashi",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=51.2715316,-0.3414524",
+        "embedUrl": "https://maps.google.com/maps?q=51.2715316,-0.3414524&z=12&output=embed"
+      },
+      "year": "1851"
+    }
+  ]
+}

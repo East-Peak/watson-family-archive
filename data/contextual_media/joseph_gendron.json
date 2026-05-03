@@ -1,0 +1,56 @@
+{
+  "personId": "joseph_gendron",
+  "personName": "Joseph Gendron",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "canada-french-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "canada-french",
+      "badge": "Birth Place",
+      "name": "Canada French",
+      "relevance": "",
+      "featured": true,
+      "lat": 43.2573161,
+      "lng": -79.8674673,
+      "wikimedia": {
+        "fileTitle": "File:Twisted Tea Original, Canada (French side), 2026-02-13.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Twisted_Tea_Original%2C_Canada_%28French_side%29%2C_2026-02-13.jpg/960px-Twisted_Tea_Original%2C_Canada_%28French_side%29%2C_2026-02-13.jpg",
+        "attribution": "Chris Woodrich",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.2573161,-79.8674673",
+        "embedUrl": "https://maps.google.com/maps?q=43.2573161,-79.8674673&z=12&output=embed"
+      },
+      "year": "1871"
+    },
+    {
+      "id": "yakima-washington-death",
+      "type": "town",
+      "canonicalPlaceId": "yakima-washington",
+      "badge": "Death",
+      "name": "Yakima, Washington",
+      "relevance": "",
+      "featured": false,
+      "lat": 46.601557,
+      "lng": -120.510842,
+      "wikipedia": {
+        "title": "Yakima, Washington",
+        "url": "https://en.wikipedia.org/wiki/Yakima%2C_Washington",
+        "summary": "Yakima is a city in and the county seat of Yakima County, Washington, United States, and the state's 11th most populous city. As of the 2020 census, the city had a total population of 96,968 and a metropolitan population of 256,728. The unincorporated suburban areas of West Valley and Terrace Height"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Greetings from Yakima, Washington - Large Letter Postcard (5348419927).jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Greetings_from_Yakima%2C_Washington_-_Large_Letter_Postcard_%285348419927%29.jpg/960px-Greetings_from_Yakima%2C_Washington_-_Large_Letter_Postcard_%285348419927%29.jpg",
+        "attribution": "Steve Shook from Moscow, Idaho, USA",
+        "license": "CC BY 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=46.601557,-120.510842",
+        "embedUrl": "https://maps.google.com/maps?q=46.601557,-120.510842&z=12&output=embed"
+      },
+      "year": "1956"
+    }
+  ]
+}

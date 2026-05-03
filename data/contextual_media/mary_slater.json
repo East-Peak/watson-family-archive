@@ -1,0 +1,34 @@
+{
+  "personId": "mary_slater",
+  "personName": "Mary Slater",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "newberry-county-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "newberry-county",
+      "badge": "Birth Place",
+      "name": "Newberry County",
+      "relevance": "",
+      "featured": true,
+      "lat": 34.3266879,
+      "lng": -81.5830086,
+      "wikipedia": {
+        "title": "Newberry County, South Carolina",
+        "url": "https://en.wikipedia.org/wiki/Newberry_County%2C_South_Carolina",
+        "summary": "Newberry County is a county located in the U.S. state of South Carolina. As of the 2020 census, its population was 37,719. Its county seat is Newberry. The name is of unknown origin, although one theory suggests that it was named by Quaker settlers in honor of their home of Newberry, a suburb of Lon"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Newberry County Courthouse.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Newberry_County_Courthouse.jpg/960px-Newberry_County_Courthouse.jpg",
+        "attribution": "NatalieMaynor",
+        "license": "CC BY 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=34.3266879,-81.5830086",
+        "embedUrl": "https://maps.google.com/maps?q=34.3266879,-81.5830086&z=12&output=embed"
+      },
+      "year": "1817"
+    }
+  ]
+}

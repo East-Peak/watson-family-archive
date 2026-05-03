@@ -1,0 +1,61 @@
+{
+  "personId": "ann_owen",
+  "personName": "Ann Owen",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "machynlleth-montgomeryshire-north-wales-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "machynlleth-montgomeryshire-north-wales",
+      "badge": "Birth Place",
+      "name": "Machynlleth, Montgomeryshire, North Wales",
+      "relevance": "",
+      "featured": true,
+      "year": "1831"
+    },
+    {
+      "id": "mount-pleasant-township-racine-county-wisconsin-death",
+      "type": "town",
+      "canonicalPlaceId": "mount-pleasant-township-racine-county-wisconsin",
+      "badge": "Death",
+      "name": "Mount Pleasant Township, Racine County, Wisconsin",
+      "relevance": "",
+      "featured": false,
+      "lat": 42.7303792,
+      "lng": -87.6803497,
+      "wikimedia": {
+        "fileTitle": "File:Pike River, Village of Mount Pleasant, Racine County, Wisconsin, section 206, Detailed PRoject Report (DPR), ecosystem restoration - USACE-p16021coll7-893.pdf",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Pike_River%2C_Village_of_Mount_Pleasant%2C_Racine_County%2C_Wisconsin%2C_section_206%2C_Detailed_PRoject_Report_%28DPR%29%2C_ecosystem_restoration_-_USACE-p16021coll7-893.pdf/page1-960px-Pike_River%2C_Village_of_Mount_Pleasant%2C_Racine_County%2C_Wisconsin%2C_section_206%2C_Detailed_PRoject_Report_%28DPR%29%2C_ecosystem_restoration_-_USACE-p16021coll7-893.pdf.jpg",
+        "attribution": "United States. Army. Corps of Engineers. Detroit District",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=42.7303792,-87.6803497",
+        "embedUrl": "https://maps.google.com/maps?q=42.7303792,-87.6803497&z=12&output=embed"
+      },
+      "year": "1910"
+    },
+    {
+      "id": "mound-cemetery-residence",
+      "type": "town",
+      "canonicalPlaceId": "mound-cemetery",
+      "badge": "Residence",
+      "name": "Mound Cemetery",
+      "relevance": "",
+      "featured": false,
+      "lat": 39.4202289,
+      "lng": -81.4518737,
+      "wikimedia": {
+        "fileTitle": "File:MoundCemetery01.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6a/MoundCemetery01.jpg",
+        "attribution": "The original uploader was ColWilliam at English Wikipedia.",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=39.4202289,-81.4518737",
+        "embedUrl": "https://maps.google.com/maps?q=39.4202289,-81.4518737&z=12&output=embed"
+      },
+      "year": "1910"
+    }
+  ]
+}

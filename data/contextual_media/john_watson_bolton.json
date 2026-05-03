@@ -1,0 +1,29 @@
+{
+  "personId": "john_watson_bolton",
+  "personName": "John Watson",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "bolton-lancashire-england-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "bolton-lancashire-england",
+      "badge": "Birth Place",
+      "name": "Bolton, Lancashire, England",
+      "relevance": "",
+      "featured": true,
+      "lat": 54.1066832,
+      "lng": -2.8028352,
+      "wikimedia": {
+        "fileTitle": "File:Bolton-By-Bowland, Lancashire (NeilClifton) Aug2005.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/5/55/Bolton-By-Bowland%2C_Lancashire_%28NeilClifton%29_Aug2005.jpg",
+        "attribution": "Dr Neil Clifton",
+        "license": "CC BY-SA 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=54.1066832,-2.8028352",
+        "embedUrl": "https://maps.google.com/maps?q=54.1066832,-2.8028352&z=12&output=embed"
+      },
+      "year": "1843"
+    }
+  ]
+}

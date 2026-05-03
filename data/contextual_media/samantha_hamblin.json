@@ -1,0 +1,29 @@
+{
+  "personId": "samantha_hamblin",
+  "personName": "Samantha Tydete Hamblin",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "whitley-kentucky-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "whitley-kentucky",
+      "badge": "Birth Place",
+      "name": "Whitley, Kentucky",
+      "relevance": "",
+      "featured": true,
+      "lat": 36.7324324,
+      "lng": -84.1512134,
+      "wikimedia": {
+        "fileTitle": "File:Whitley County, Kentucky Courthouse.JPG",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Whitley_County%2C_Kentucky_Courthouse.JPG/960px-Whitley_County%2C_Kentucky_Courthouse.JPG",
+        "attribution": "No machine-readable author provided. Blinutne assumed (based on copyright claims).",
+        "license": "CC BY-SA 3.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=36.7324324,-84.1512134",
+        "embedUrl": "https://maps.google.com/maps?q=36.7324324,-84.1512134&z=12&output=embed"
+      },
+      "year": "1857"
+    }
+  ]
+}

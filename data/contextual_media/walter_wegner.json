@@ -1,0 +1,83 @@
+{
+  "personId": "walter_wegner",
+  "personName": "Walter Wegner",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "wisconsin-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "wisconsin",
+      "badge": "Birth Place",
+      "name": "Wisconsin",
+      "relevance": "",
+      "featured": true,
+      "lat": 44.4308975,
+      "lng": -89.6884637,
+      "wikipedia": {
+        "title": "Wisconsin",
+        "url": "https://en.wikipedia.org/wiki/Wisconsin",
+        "summary": "Wisconsin is a state in the Upper Midwest and Great Lakes regions of the United States. It borders Minnesota to the west, Iowa to the southwest, Illinois to the south, Lake Michigan to the east, Michigan to the northeast, and Lake Superior to the north. With a population of about 6 million and an ar"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Beaver Dam, Wisconsin Downtown.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Beaver_Dam%2C_Wisconsin_Downtown.jpg/960px-Beaver_Dam%2C_Wisconsin_Downtown.jpg",
+        "attribution": "Downspec",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=44.4308975,-89.6884637",
+        "embedUrl": "https://maps.google.com/maps?q=44.4308975,-89.6884637&z=12&output=embed"
+      },
+      "year": "1901"
+    },
+    {
+      "id": "dodge-wisconsin-death",
+      "type": "town",
+      "canonicalPlaceId": "dodge-wisconsin",
+      "badge": "Death",
+      "name": "Dodge, Wisconsin",
+      "relevance": "",
+      "featured": false,
+      "lat": 43.413614,
+      "lng": -88.7177834,
+      "wikipedia": {
+        "title": "Dodge, Wisconsin",
+        "url": "https://en.wikipedia.org/wiki/Dodge%2C_Wisconsin",
+        "summary": "Dodge is a town in Trempealeau County, Wisconsin, United States. The population was 414 at the 2000 census. The census-designated place of Dodge is located in the town. The unincorporated community of Pine Creek is also located in the town."
+      },
+      "wikimedia": {
+        "fileTitle": "File:Horicon Marsh, Dodge, Wisconsin, U.S.A.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Horicon_Marsh%2C_Dodge%2C_Wisconsin%2C_U.S.A.jpg/960px-Horicon_Marsh%2C_Dodge%2C_Wisconsin%2C_U.S.A.jpg",
+        "attribution": "IIP Photo Archive",
+        "license": "CC BY-SA 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.413614,-88.7177834",
+        "embedUrl": "https://maps.google.com/maps?q=43.413614,-88.7177834&z=12&output=embed"
+      },
+      "year": "1997"
+    },
+    {
+      "id": "horicon-dodge-wisconsin-residence",
+      "type": "town",
+      "canonicalPlaceId": "horicon-dodge-wisconsin",
+      "badge": "Residence",
+      "name": "Horicon, Dodge, Wisconsin",
+      "relevance": "",
+      "featured": false,
+      "lat": 43.4513819,
+      "lng": -88.6312139,
+      "wikimedia": {
+        "fileTitle": "File:Horicon Marsh, Dodge, Wisconsin, U.S.A.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Horicon_Marsh%2C_Dodge%2C_Wisconsin%2C_U.S.A.jpg/960px-Horicon_Marsh%2C_Dodge%2C_Wisconsin%2C_U.S.A.jpg",
+        "attribution": "IIP Photo Archive",
+        "license": "CC BY-SA 2.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=43.4513819,-88.6312139",
+        "embedUrl": "https://maps.google.com/maps?q=43.4513819,-88.6312139&z=12&output=embed"
+      },
+      "year": "1997"
+    }
+  ]
+}

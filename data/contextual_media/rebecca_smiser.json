@@ -1,0 +1,60 @@
+{
+  "personId": "rebecca_smiser",
+  "personName": "Rebecca Smiser",
+  "generatedAt": "2026-03-25T18:00:54.935Z",
+  "items": [
+    {
+      "id": "kentucky-birthplace",
+      "type": "region",
+      "canonicalPlaceId": "kentucky",
+      "badge": "Birth Place",
+      "name": "Kentucky",
+      "relevance": "",
+      "featured": true,
+      "lat": 37.5726028,
+      "lng": -85.1551411,
+      "wikipedia": {
+        "title": "Kentucky",
+        "url": "https://en.wikipedia.org/wiki/Kentucky",
+        "summary": "Kentucky, officially the Commonwealth of Kentucky, is a landlocked state in the Southeastern region of the United States. It borders Illinois, Indiana, and Ohio to the north, West Virginia to the northeast, Virginia to the east, Tennessee to the south, and Missouri to the west. Its northern border i"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Kentucky Scenic Byway signage on Kentucky Route 63 in Temple Hill, Kentucky.jpg",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Kentucky_Scenic_Byway_signage_on_Kentucky_Route_63_in_Temple_Hill%2C_Kentucky.jpg",
+        "attribution": "K-Johnson 127",
+        "license": "CC BY-SA 4.0"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=37.5726028,-85.1551411",
+        "embedUrl": "https://maps.google.com/maps?q=37.5726028,-85.1551411&z=12&output=embed"
+      },
+      "year": "1804"
+    },
+    {
+      "id": "moultrie-county-illinois-marriage",
+      "type": "building",
+      "canonicalPlaceId": "moultrie-county-illinois",
+      "badge": "Marriage",
+      "name": "Moultrie County, Illinois",
+      "relevance": "",
+      "featured": false,
+      "lat": 39.6391442,
+      "lng": -88.6087498,
+      "wikipedia": {
+        "title": "Moultrie County, Illinois",
+        "url": "https://en.wikipedia.org/wiki/Moultrie_County%2C_Illinois",
+        "summary": "Moultrie County is a county in the U.S. state of Illinois. According to the 2020 United States census, its population was 14,526. Its county seat is Sullivan. The name is pronounced as in \"mole tree\", unlike the pronunciation of its namesake, the South Carolinian Revolutionary War hero William Moult"
+      },
+      "wikimedia": {
+        "fileTitle": "File:Moultrie County Illinois 1843.png",
+        "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Moultrie_County_Illinois_1843.png",
+        "attribution": "Illinois_Locator_Map.PNG: US Census, Ruhrfisch\nderivative work: Fishal (talk)",
+        "license": "Public domain"
+      },
+      "googleMaps": {
+        "url": "https://www.google.com/maps?q=39.6391442,-88.6087498",
+        "embedUrl": "https://maps.google.com/maps?q=39.6391442,-88.6087498&z=12&output=embed"
+      }
+    }
+  ]
+}
