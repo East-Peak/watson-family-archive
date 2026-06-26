@@ -33,9 +33,16 @@ interface RelationshipDisplayProps {
   variant?: 'default' | 'hero';
 }
 
-export default function RelationshipDisplay({ personId, personName, personSex, variant = 'default' }: RelationshipDisplayProps) {
+export default function RelationshipDisplay({
+  personId,
+  personName,
+  personSex,
+  variant = 'default',
+}: RelationshipDisplayProps) {
   const { me, setMe, isMe } = useMe();
-  const [relationship, setRelationship] = useState<RelationshipPath | null>(null);
+  const [relationship, setRelationship] = useState<RelationshipPath | null>(
+    null,
+  );
   const [loading, setLoading] = useState(false);
 
   // Fetch relationship path from Neo4j API when me changes
@@ -45,14 +52,17 @@ export default function RelationshipDisplay({ personId, personName, personSex, v
 
     setLoading(true);
     fetch(`/api/person/${me.id}/path/${personId}`)
-      .then(res => res.json())
+      .then((res) => res.json())
       .then((data: RelationshipPath) => {
         setRelationship(data);
         setLoading(false);
       })
-      .catch(err => {
+      .catch((err) => {
         console.error('Failed to fetch relationship:', err);
-        setRelationship({ connected: false, message: 'Error loading relationship' });
+        setRelationship({
+          connected: false,
+          message: 'Error loading relationship',
+        });
         setLoading(false);
       });
   }, [me, personId, isMe]);
@@ -81,18 +91,18 @@ export default function RelationshipDisplay({ personId, personName, personSex, v
     // Map of neutral → gendered terms (covers compound forms via substring replace)
     const genderMap: Array<[string, string, string]> = [
       // [neutral,         male,              female]
-      ['grandparent',    'grandfather',     'grandmother'],
-      ['grandchild',     'grandson',        'granddaughter'],
-      ['Grandparent',    'Grandfather',     'Grandmother'],
-      ['Grandchild',     'Grandson',        'Granddaughter'],
-      ['Parent',         'Father',          'Mother'],
-      ['Child',          'Son',             'Daughter'],
-      ['Sibling',        'Brother',         'Sister'],
-      ['Aunt/Uncle',     'Uncle',           'Aunt'],
-      ['Niece/Nephew',   'Nephew',          'Niece'],
-      ['Great-aunt/uncle', 'Great-uncle',   'Great-aunt'],
+      ['grandparent', 'grandfather', 'grandmother'],
+      ['grandchild', 'grandson', 'granddaughter'],
+      ['Grandparent', 'Grandfather', 'Grandmother'],
+      ['Grandchild', 'Grandson', 'Granddaughter'],
+      ['Parent', 'Father', 'Mother'],
+      ['Child', 'Son', 'Daughter'],
+      ['Sibling', 'Brother', 'Sister'],
+      ['Aunt/Uncle', 'Uncle', 'Aunt'],
+      ['Niece/Nephew', 'Nephew', 'Niece'],
+      ['Great-aunt/uncle', 'Great-uncle', 'Great-aunt'],
       ['Grand-niece/nephew', 'Grand-nephew', 'Grand-niece'],
-      ['Spouse',         'Husband',         'Wife'],
+      ['Spouse', 'Husband', 'Wife'],
     ];
 
     let result = label;
@@ -104,7 +114,9 @@ export default function RelationshipDisplay({ personId, personName, personSex, v
     }
 
     // Handle "Husband's/Wife's X" possessive labels
-    const possessiveMatch = result.match(/^(Husband's|Wife's|Spouse's)\s+(.+)$/);
+    const possessiveMatch = result.match(
+      /^(Husband's|Wife's|Spouse's)\s+(.+)$/,
+    );
     if (possessiveMatch) {
       const [, possessive, baseLabel] = possessiveMatch;
       return `${possessive} ${formatLabel(baseLabel)}`;
@@ -125,7 +137,9 @@ export default function RelationshipDisplay({ personId, personName, personSex, v
   // Determine ancestor/descendant from label (more reliable than edge types,
   // which can vary depending on graph traversal direction)
   const rawLabel = effectiveRelationship?.relationshipLabel || '';
-  const isDirectAncestor = /parent|grand(parent|father|mother)/i.test(rawLabel) && !/grand(child|son|daughter)/i.test(rawLabel);
+  const isDirectAncestor =
+    /parent|grand(parent|father|mother)/i.test(rawLabel) &&
+    !/grand(child|son|daughter)/i.test(rawLabel);
   const isDirectDescendant = /child|grand(child|son|daughter)/i.test(rawLabel);
 
   const isHero = variant === 'hero';
@@ -155,7 +169,10 @@ export default function RelationshipDisplay({ personId, personName, personSex, v
       <div className={isHero ? 'mt-2' : 'mb-3'}>
         <span className={`text-white/40 ${isHero ? 'text-sm' : 'text-xs'}`}>
           No connection to{' '}
-          <Link href={`/person/${me.id}`} className="text-amber-300/60 hover:underline">
+          <Link
+            href={`/person/${me.id}`}
+            className="text-amber-300/60 hover:underline"
+          >
             {me.name.split(' ')[0]}
           </Link>
         </span>
@@ -164,30 +181,35 @@ export default function RelationshipDisplay({ personId, personName, personSex, v
   }
 
   // Show the relationship
-  const formattedLabel = formatLabel(effectiveRelationship.relationshipLabel || '');
+  const formattedLabel = formatLabel(
+    effectiveRelationship.relationshipLabel || '',
+  );
   const relationshipPath = effectiveRelationship.path ?? [];
-  const hasRelationshipCaveat = Boolean(effectiveRelationship.relationshipCaveat);
-  const caveatText = 'Relationship label is conservative while this branch is under review.';
+  const hasRelationshipCaveat = Boolean(
+    effectiveRelationship.relationshipCaveat,
+  );
+  const caveatText =
+    'Relationship label is conservative while this branch is under review.';
 
   // Hero variant: clean subtitle with inline connection path
   if (isHero) {
     return (
       <div className="mt-2 mb-1">
         {/* Relationship as a clean subtitle */}
-        <p className={`text-lg font-medium ${
-          isDirectAncestor
-            ? 'text-emerald-300'
-            : isDirectDescendant
-            ? 'text-blue-300'
-            : 'text-purple-300'
-        }`}>
+        <p
+          className={`text-lg font-medium ${
+            isDirectAncestor
+              ? 'text-emerald-300'
+              : isDirectDescendant
+                ? 'text-blue-300'
+                : 'text-purple-300'
+          }`}
+        >
           Your {formattedLabel}
         </p>
 
         {hasRelationshipCaveat && (
-          <p className="mt-1 text-sm text-amber-200/80">
-            {caveatText}
-          </p>
+          <p className="mt-1 text-sm text-amber-200/80">{caveatText}</p>
         )}
 
         {/* Inline connection path: You → Scott → John Stuart Jr. */}
@@ -196,14 +218,26 @@ export default function RelationshipDisplay({ personId, personName, personSex, v
             {relationshipPath.map((step, idx) => (
               <React.Fragment key={step.id}>
                 {idx > 0 && (
-                  <svg className="w-3 h-3 text-white/25 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  <svg
+                    className="w-3 h-3 text-white/25 flex-shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 5l7 7-7 7"
+                    />
                   </svg>
                 )}
                 {idx === 0 ? (
                   <span className="text-white/60">You</span>
                 ) : idx === relationshipPath.length - 1 ? (
-                  <span className="text-white/60">{step.name.split(' ')[0]}</span>
+                  <span className="text-white/60">
+                    {step.name.split(' ')[0]}
+                  </span>
                 ) : (
                   <Link
                     href={`/person/${step.id}`}
@@ -224,20 +258,24 @@ export default function RelationshipDisplay({ personId, personName, personSex, v
   return (
     <div className="mb-3 space-y-2">
       <div className="flex flex-wrap items-center gap-2">
-        <div className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-sm ${
-          isDirectAncestor
-            ? 'bg-emerald-500/20 border border-emerald-500/40'
-            : isDirectDescendant
-            ? 'bg-blue-500/20 border border-blue-500/40'
-            : 'bg-purple-500/20 border border-purple-500/40'
-        }`}>
-          <span className={`font-medium ${
+        <div
+          className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-sm ${
             isDirectAncestor
-              ? 'text-emerald-300'
+              ? 'bg-emerald-500/20 border border-emerald-500/40'
               : isDirectDescendant
-              ? 'text-blue-300'
-              : 'text-purple-300'
-          }`}>
+                ? 'bg-blue-500/20 border border-blue-500/40'
+                : 'bg-purple-500/20 border border-purple-500/40'
+          }`}
+        >
+          <span
+            className={`font-medium ${
+              isDirectAncestor
+                ? 'text-emerald-300'
+                : isDirectDescendant
+                  ? 'text-blue-300'
+                  : 'text-purple-300'
+            }`}
+          >
             {formattedLabel}
           </span>
         </div>
@@ -250,9 +288,7 @@ export default function RelationshipDisplay({ personId, personName, personSex, v
       </div>
 
       {hasRelationshipCaveat && (
-        <p className="text-xs text-amber-200/80">
-          {caveatText}
-        </p>
+        <p className="text-xs text-amber-200/80">{caveatText}</p>
       )}
 
       {/* Inline connection path */}
@@ -260,9 +296,7 @@ export default function RelationshipDisplay({ personId, personName, personSex, v
         <div className="flex flex-wrap items-center gap-1 text-xs text-white/40">
           {relationshipPath.map((step, idx) => (
             <React.Fragment key={step.id}>
-              {idx > 0 && (
-                <span className="text-white/20">&rsaquo;</span>
-              )}
+              {idx > 0 && <span className="text-white/20">&rsaquo;</span>}
               {idx === 0 ? (
                 <span>You</span>
               ) : (

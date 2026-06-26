@@ -2,13 +2,14 @@ import { NextRequest, NextResponse } from 'next/server';
 import { executeQuery } from '@/lib/neo4j/client';
 import { siteConfig } from '@/lib/siteConfig';
 import { COUNTRY_PATTERNS } from '@/lib/collections';
+import { MAX_ANCESTRY_DEPTH } from '@/lib/neo4j/constants';
 
 const DEFAULT_TREE_ID = siteConfig.defaultTreeId;
 
 function extractCountry(birthPlace: string | null): string | null {
   if (!birthPlace) return null;
   for (const [key, config] of Object.entries(COUNTRY_PATTERNS)) {
-    if (config.patterns.some(p => birthPlace.includes(p))) {
+    if (config.patterns.some((p) => birthPlace.includes(p))) {
       return key;
     }
   }
@@ -24,7 +25,7 @@ export async function GET(request: NextRequest) {
     if (!personId) {
       return NextResponse.json(
         { error: 'personId is required' },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -37,7 +38,7 @@ export async function GET(request: NextRequest) {
     }>(
       `
       MATCH (t:Tree {id: $treeId})-[:CONTAINS]->(root:Person {id: $personId})
-      MATCH (root)-[:CHILD_OF*0..20]->(ancestor:Person)
+      MATCH (root)-[:CHILD_OF*0..${MAX_ANCESTRY_DEPTH}]->(ancestor:Person)
       WITH root, collect(DISTINCT ancestor) AS ancestors
       OPTIONAL MATCH (descendant:Person)-[:CHILD_OF*1..5]->(root)
       WITH ancestors, collect(DISTINCT descendant) AS descendants
@@ -45,7 +46,7 @@ export async function GET(request: NextRequest) {
       UNWIND lineage AS person
       RETURN DISTINCT person.id AS id, person.surname AS surname, person.birthPlace AS birthPlace
       `,
-      { treeId, personId }
+      { treeId, personId },
     );
 
     const ancestorIds: string[] = [];
@@ -73,7 +74,7 @@ export async function GET(request: NextRequest) {
     console.error('Error fetching viewer ancestors:', error);
     return NextResponse.json(
       { error: 'Failed to fetch ancestors' },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

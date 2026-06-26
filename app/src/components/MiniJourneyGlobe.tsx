@@ -22,8 +22,10 @@ import 'cesium/Build/Cesium/Widgets/widgets.css';
 import { generateArcPositions } from '@/components/globe/utils';
 import Link from 'next/link';
 
-// Cesium Ion access token (free tier)
-Ion.defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJiOTg2YTI5Ni02NjRiLTQ2MjItOWRjNC0xYTA4YzY2YjJlZmMiLCJpZCI6Mzc0NDE3LCJpYXQiOjE3NjczNzQ3MDR9.L5_FUAZv68o80_t9Nr50GWQLiElvnuIysi1akPfMeK0';
+// Cesium Ion access token, read from NEXT_PUBLIC_CESIUM_ION_TOKEN (set in
+// .env.local locally and in Vercel env for production). The token is
+// domain-restricted in Cesium Ion, so it is safe to expose as a NEXT_PUBLIC value.
+Ion.defaultAccessToken = process.env.NEXT_PUBLIC_CESIUM_ION_TOKEN ?? '';
 
 declare global {
   interface Window {
@@ -67,7 +69,11 @@ function getStopColor(index: number, total: number): Color {
   return STOP_COLORS[index % STOP_COLORS.length];
 }
 
-export default function MiniJourneyGlobe({ personId, journeyStops, className }: MiniJourneyGlobeProps) {
+export default function MiniJourneyGlobe({
+  personId,
+  journeyStops,
+  className,
+}: MiniJourneyGlobeProps) {
   const viewerRef = useRef<{ cesiumElement?: CesiumViewer } | null>(null);
 
   // Auto-fit camera to bounding box of all stops on mount
@@ -76,7 +82,10 @@ export default function MiniJourneyGlobe({ personId, journeyStops, className }: 
     if (!viewer || journeyStops.length === 0) return;
 
     // Compute bounding box
-    let west = Infinity, south = Infinity, east = -Infinity, north = -Infinity;
+    let west = Infinity,
+      south = Infinity,
+      east = -Infinity,
+      north = -Infinity;
     for (const stop of journeyStops) {
       if (stop.lng < west) west = stop.lng;
       if (stop.lng > east) east = stop.lng;
@@ -156,7 +165,6 @@ export default function MiniJourneyGlobe({ personId, journeyStops, className }: 
                   color={color}
                   outlineColor={Color.WHITE}
                   outlineWidth={2}
-
                 />
                 <LabelGraphics
                   text={label}
@@ -167,7 +175,6 @@ export default function MiniJourneyGlobe({ personId, journeyStops, className }: 
                   style={LabelStyle.FILL_AND_OUTLINE}
                   verticalOrigin={VerticalOrigin.BOTTOM}
                   pixelOffset={new Cartesian2(0, -14)}
-
                 />
               </Entity>
             );
@@ -177,8 +184,10 @@ export default function MiniJourneyGlobe({ personId, journeyStops, className }: 
           {journeyStops.slice(0, -1).map((from, index) => {
             const to = journeyStops[index + 1];
             const positions = generateArcPositions(
-              from.lat, from.lng,
-              to.lat, to.lng
+              from.lat,
+              from.lng,
+              to.lat,
+              to.lng,
             );
 
             return (
@@ -186,7 +195,9 @@ export default function MiniJourneyGlobe({ personId, journeyStops, className }: 
                 <PolylineGraphics
                   positions={positions}
                   width={2.5}
-                  material={Color.fromCssColorString('rgba(255, 150, 100, 0.6)')}
+                  material={Color.fromCssColorString(
+                    'rgba(255, 150, 100, 0.6)',
+                  )}
                 />
               </Entity>
             );
@@ -200,8 +211,18 @@ export default function MiniJourneyGlobe({ personId, journeyStops, className }: 
           href={`/globe?journey=${personId}`}
           className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-shield hover:text-white bg-shield/5 hover:bg-shield rounded-lg transition-all"
         >
-          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          <svg
+            className="w-4 h-4"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={1.5}
+              d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+            />
           </svg>
           View Full Globe
         </Link>

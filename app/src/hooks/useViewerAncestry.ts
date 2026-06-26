@@ -17,8 +17,10 @@ const EMPTY_SET = new Set<string>();
 export function useViewerAncestry(): ViewerAncestry {
   const { me } = useMe();
   const [ancestorIds, setAncestorIds] = useState<Set<string>>(EMPTY_SET);
-  const [ancestorSurnames, setAncestorSurnames] = useState<Set<string>>(EMPTY_SET);
-  const [ancestorCountries, setAncestorCountries] = useState<Set<string>>(EMPTY_SET);
+  const [ancestorSurnames, setAncestorSurnames] =
+    useState<Set<string>>(EMPTY_SET);
+  const [ancestorCountries, setAncestorCountries] =
+    useState<Set<string>>(EMPTY_SET);
   const [loading, setLoading] = useState(Boolean(me?.id));
   const [error, setError] = useState<string | null>(null);
 
@@ -48,11 +50,13 @@ export function useViewerAncestry(): ViewerAncestry {
           } catch {
             // Ignore secondary read failures — the status is enough context.
           }
-          throw new Error(`Viewer ancestry request failed (${res.status})${body ? `: ${body}` : ''}`);
+          throw new Error(
+            `Viewer ancestry request failed (${res.status})${body ? `: ${body}` : ''}`,
+          );
         }
         return res.json();
       })
-      .then(data => {
+      .then((data) => {
         if (cancelled) {
           return;
         }
@@ -61,9 +65,13 @@ export function useViewerAncestry(): ViewerAncestry {
         setAncestorSurnames(new Set(data?.ancestorSurnames ?? []));
         setAncestorCountries(new Set(data?.ancestorCountries ?? []));
       })
-      .catch(err => {
+      .catch((err) => {
         if (!cancelled) {
-          setError(err instanceof Error ? err.message : 'Failed to fetch viewer ancestry');
+          setError(
+            err instanceof Error
+              ? err.message
+              : 'Failed to fetch viewer ancestry',
+          );
           console.error('Failed to fetch viewer ancestry:', err);
         }
       })

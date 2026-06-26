@@ -9,6 +9,7 @@
 import { executeQuery } from '@/lib/neo4j/client';
 import { getPersonRecords } from '@/lib/neo4j/queries/records';
 import { getTreeStats } from '@/lib/neo4j/queries/tree';
+import { MAX_ANCESTRY_DEPTH } from '@/lib/neo4j/constants';
 
 // ---------------------------------------------------------------------------
 // Types
@@ -74,7 +75,7 @@ export async function handleSearchPeople(
   if (input.scope === 'viewer-ancestors' && context.viewerId) {
     matchClause = [
       'MATCH (t:Tree {id: $treeId})-[:CONTAINS]->(viewer:Person {id: $viewerId})',
-      'MATCH (viewer)-[:CHILD_OF*0..20]->(p:Person)',
+      `MATCH (viewer)-[:CHILD_OF*0..${MAX_ANCESTRY_DEPTH}]->(p:Person)`,
     ].join('\n');
     params.viewerId = context.viewerId;
   } else {
@@ -98,8 +99,8 @@ export async function handleSearchPeople(
     // Immigration means born outside the US and died/lived in the US
     conditions.push(
       'p.birthPlace IS NOT NULL AND p.deathPlace IS NOT NULL' +
-      ' AND NOT (toLower(p.birthPlace) CONTAINS \'united states\' OR toLower(p.birthPlace) CONTAINS \', usa\' OR toLower(p.birthPlace) CONTAINS \', us\')' +
-      ' AND (toLower(p.deathPlace) CONTAINS \'united states\' OR toLower(p.deathPlace) CONTAINS \', usa\' OR toLower(p.deathPlace) CONTAINS \', us\' OR toLower(p.deathPlace) CONTAINS \'new york\' OR toLower(p.deathPlace) CONTAINS \'pennsylvania\' OR toLower(p.deathPlace) CONTAINS \'ohio\' OR toLower(p.deathPlace) CONTAINS \'illinois\' OR toLower(p.deathPlace) CONTAINS \'michigan\' OR toLower(p.deathPlace) CONTAINS \'wisconsin\')',
+        " AND NOT (toLower(p.birthPlace) CONTAINS 'united states' OR toLower(p.birthPlace) CONTAINS ', usa' OR toLower(p.birthPlace) CONTAINS ', us')" +
+        " AND (toLower(p.deathPlace) CONTAINS 'united states' OR toLower(p.deathPlace) CONTAINS ', usa' OR toLower(p.deathPlace) CONTAINS ', us' OR toLower(p.deathPlace) CONTAINS 'new york' OR toLower(p.deathPlace) CONTAINS 'pennsylvania' OR toLower(p.deathPlace) CONTAINS 'ohio' OR toLower(p.deathPlace) CONTAINS 'illinois' OR toLower(p.deathPlace) CONTAINS 'michigan' OR toLower(p.deathPlace) CONTAINS 'wisconsin')",
     );
   }
 
@@ -122,14 +123,20 @@ export async function handleSearchPeople(
   if (input.place) {
     conditions.push(
       `(toLower(p.birthPlace) CONTAINS $placeLower` +
-      ` OR toLower(p.deathPlace) CONTAINS $placeLower` +
-      ` OR EXISTS { MATCH (p)-[:BORN_IN|DIED_IN|LIVED_IN]->(pl:Place) WHERE toLower(pl.name) CONTAINS $placeLower })`,
+        ` OR toLower(p.deathPlace) CONTAINS $placeLower` +
+        ` OR EXISTS { MATCH (p)-[:BORN_IN|DIED_IN|LIVED_IN]->(pl:Place) WHERE toLower(pl.name) CONTAINS $placeLower })`,
     );
     params.placeLower = input.place.toLowerCase();
   }
 
   // Only add name match if no structured filters are set and query isn't a generic topic/place word
-  const hasStructuredFilters = input.born_in_country || input.died_in_country || input.immigration || input.military || input.occupation || input.place;
+  const hasStructuredFilters =
+    input.born_in_country ||
+    input.died_in_country ||
+    input.immigration ||
+    input.military ||
+    input.occupation ||
+    input.place;
   if (!hasStructuredFilters && input.query && input.query.length > 1) {
     conditions.push(
       '(toLower(p.fullName) CONTAINS $queryLower OR toLower(p.surname) CONTAINS $queryLower)',
@@ -253,11 +260,7 @@ export async function handleFetchPerson(
   // Content handling by section
   if (person.biography) {
     const section = input.section;
-    if (
-      section &&
-      section !== 'summary' &&
-      section !== 'full'
-    ) {
+    if (section && section !== 'summary' && section !== 'full') {
       // Extract a specific section
       person.biography = extractSection(person.biography, section);
     } else if (section === 'full') {
@@ -330,7 +333,7 @@ export async function handleGetViewerLineage(
 
   const cypher = `
     MATCH (t:Tree {id: $treeId})-[:CONTAINS]->(viewer:Person {id: $viewerId})
-    MATCH path = (viewer)-[:CHILD_OF*0..20]->(ancestor:Person)
+    MATCH path = (viewer)-[:CHILD_OF*0..${MAX_ANCESTRY_DEPTH}]->(ancestor:Person)
     RETURN DISTINCT ancestor.id as id, ancestor.fullName as name,
       ancestor.birthYear as birthYear, ancestor.deathYear as deathYear,
       ancestor.birthPlace as birthPlace, ancestor.surname as surname,

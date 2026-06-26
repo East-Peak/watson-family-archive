@@ -52,7 +52,9 @@ export default function PersonSearch({
       }
     }
     // Sort by name
-    return Array.from(seen.values()).sort((a, b) => a.name.localeCompare(b.name));
+    return Array.from(seen.values()).sort((a, b) =>
+      a.name.localeCompare(b.name),
+    );
   }, [globeData]);
 
   // Debounce input
@@ -94,10 +96,13 @@ export default function PersonSearch({
     return allPeople.find((p) => p.id === highlightPerson) || null;
   }, [highlightPerson, allPeople]);
 
-  const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
-    setQuery(e.target.value);
-    setIsOpen(true);
-  }, []);
+  const handleInputChange = useCallback(
+    (e: React.ChangeEvent<HTMLInputElement>) => {
+      setQuery(e.target.value);
+      setIsOpen(true);
+    },
+    [],
+  );
 
   const handleSelect = useCallback(
     (person: PersonEntry) => {
@@ -121,18 +126,16 @@ export default function PersonSearch({
     }
   }, [query]);
 
-  const handleKeyDown = useCallback(
-    (e: React.KeyboardEvent) => {
-      if (e.key === 'Escape') {
-        setIsOpen(false);
-        inputRef.current?.blur();
-      }
-    },
-    [],
-  );
+  const handleKeyDown = useCallback((e: React.KeyboardEvent) => {
+    if (e.key === 'Escape') {
+      setIsOpen(false);
+      inputRef.current?.blur();
+    }
+  }, []);
 
   const formatLifespan = (person: PersonEntry): string => {
-    if (person.birth && person.death) return `${person.birth}\u2013${person.death}`;
+    if (person.birth && person.death)
+      return `${person.birth}\u2013${person.death}`;
     if (person.birth) return `b. ${person.birth}`;
     if (person.death) return `d. ${person.death}`;
     return '';
@@ -160,7 +163,12 @@ export default function PersonSearch({
             className="text-white/40 hover:text-white p-1 rounded transition-colors flex-shrink-0"
             title="Clear selection"
           >
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg
+              className="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -191,7 +199,12 @@ export default function PersonSearch({
               }}
               className="absolute right-2 top-1/2 -translate-y-1/2 text-white/30 hover:text-white/60 transition-colors"
             >
-              <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg
+                className="w-3.5 h-3.5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -216,9 +229,13 @@ export default function PersonSearch({
               onClick={() => handleSelect(person)}
               className="w-full text-left px-3 py-2 hover:bg-white/10 transition-colors border-b border-white/5 last:border-b-0"
             >
-              <div className="text-sm text-white font-medium truncate">{person.name}</div>
+              <div className="text-sm text-white font-medium truncate">
+                {person.name}
+              </div>
               {(person.birth || person.death) && (
-                <div className="text-xs text-white/40 mt-0.5">{formatLifespan(person)}</div>
+                <div className="text-xs text-white/40 mt-0.5">
+                  {formatLifespan(person)}
+                </div>
               )}
             </button>
           ))}

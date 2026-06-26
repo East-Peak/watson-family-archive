@@ -247,11 +247,14 @@ function detectCountry(value) {
   const text = getInputText(value);
   if (!text) return null;
 
-  return COUNTRY_DEFINITIONS.find(country => country.pattern.test(text)) || null;
+  return (
+    COUNTRY_DEFINITIONS.find((country) => country.pattern.test(text)) || null
+  );
 }
 
 export function inferCountry(value, options = {}) {
-  const format = options.format || (typeof value === 'string' ? 'name' : 'code');
+  const format =
+    options.format || (typeof value === 'string' ? 'name' : 'code');
   const country = detectCountry(value);
 
   if (!country) {

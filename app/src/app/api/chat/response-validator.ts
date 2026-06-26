@@ -15,7 +15,11 @@
  * Validation runs BEFORE source-link extraction per the pipeline spec.
  */
 
-import type { RetrievedContextBundle, RetrievedPerson, ValidationIssue } from './types';
+import type {
+  RetrievedContextBundle,
+  RetrievedPerson,
+  ValidationIssue,
+} from './types';
 
 export interface ValidationResult {
   text: string;
@@ -23,7 +27,8 @@ export interface ValidationResult {
   retried: boolean;
 }
 
-const CAVEAT = '\n\n*Note: Some claims could not be verified against the family tree data.*';
+const CAVEAT =
+  '\n\n*Note: Some claims could not be verified against the family tree data.*';
 
 // ---------------------------------------------------------------------------
 // Public API
@@ -40,7 +45,8 @@ export function validateAndRepairResponse(
   const issues: ValidationIssue[] = [];
 
   // Split into family section (validatable) and historical section (exempt)
-  const { familySection, historicalSection } = splitResponseSections(responseText);
+  const { familySection, historicalSection } =
+    splitResponseSections(responseText);
 
   if (familySection) {
     const sectionIssues = validateSection(familySection, bundle);
@@ -48,7 +54,7 @@ export function validateAndRepairResponse(
   }
 
   // Repair: strip sentences with unknown-person issues
-  const unknownPersonIssues = issues.filter(i => i.type === 'unknown-person');
+  const unknownPersonIssues = issues.filter((i) => i.type === 'unknown-person');
   let repairedText = responseText;
 
   if (unknownPersonIssues.length > 0) {
@@ -66,7 +72,11 @@ export function validateAndRepairResponse(
     repairedText = parts.join('\n\n') + CAVEAT;
   }
 
-  return { text: repairedText, issues, retried: unknownPersonIssues.length > 0 };
+  return {
+    text: repairedText,
+    issues,
+    retried: unknownPersonIssues.length > 0,
+  };
 }
 
 // ---------------------------------------------------------------------------
@@ -80,8 +90,12 @@ export function validateAndRepairResponse(
  * sentences that are clearly general-knowledge context (mentioning presidents,
  * wars, movements) after all the family-specific content.
  */
-function splitResponseSections(text: string): { familySection: string; historicalSection: string } {
-  const historicalMarker = /^(historical(ly)?[\s,:]|for historical context|in broader (historical )?context|to put this in (historical )?context)/im;
+function splitResponseSections(text: string): {
+  familySection: string;
+  historicalSection: string;
+} {
+  const historicalMarker =
+    /^(historical(ly)?[\s,:]|for historical context|in broader (historical )?context|to put this in (historical )?context)/im;
   const match = text.match(historicalMarker);
   if (!match || match.index === undefined) {
     return { familySection: text, historicalSection: '' };
@@ -96,7 +110,10 @@ function splitResponseSections(text: string): { familySection: string; historica
 // Section-level validation
 // ---------------------------------------------------------------------------
 
-function validateSection(text: string, bundle: RetrievedContextBundle): ValidationIssue[] {
+function validateSection(
+  text: string,
+  bundle: RetrievedContextBundle,
+): ValidationIssue[] {
   const issues: ValidationIssue[] = [];
 
   // Build name lookups from retrieved people
@@ -117,7 +134,12 @@ function validateSection(text: string, bundle: RetrievedContextBundle): Validati
       });
     } else if (person !== undefined) {
       // Person is known — check their factual claims in surrounding sentences
-      const claimIssues = validateClaimsForPerson(text, person, mention, bundle);
+      const claimIssues = validateClaimsForPerson(
+        text,
+        person,
+        mention,
+        bundle,
+      );
       issues.push(...claimIssues);
     }
     // undefined = skip (not a person-like mention)
@@ -136,7 +158,9 @@ function validateSection(text: string, bundle: RetrievedContextBundle): Validati
  * "John Barrett" matching "John Foly Barrett".
  * Using arrays prevents silent data loss when multiple people share a surname or first+last.
  */
-function buildKnownPeopleLookup(people: RetrievedPerson[]): Map<string, RetrievedPerson[]> {
+function buildKnownPeopleLookup(
+  people: RetrievedPerson[],
+): Map<string, RetrievedPerson[]> {
   const map = new Map<string, RetrievedPerson[]>();
 
   const add = (key: string, person: RetrievedPerson) => {
@@ -194,18 +218,66 @@ function isLikelyPersonName(candidate: string): boolean {
   // Must be 2+ words
   if (words.length < 2) return false;
 
-  // Exclude known place-name suffixes / adjectives
-  const placeWords = new Set([
-    'United', 'States', 'North', 'South', 'East', 'West', 'New', 'San',
-    'Los', 'Las', 'Civil', 'World', 'War', 'Coal', 'Mining', 'Historical',
-    'Census', 'Pennsylvania', 'California', 'Wisconsin', 'Illinois', 'Ohio',
-    'Scranton', 'Dunmore', 'Bavaria', 'Germany', 'Wales', 'Texas',
+  // Exclude known non-person tokens: place-name suffixes/adjectives, era
+  // labels, and genealogy record/document/collection terms. The record terms
+  // were surfaced by the HT-01 anti-hallucination eval: an LLM citing a real
+  // collection like "Veterans Schedule" or "Draft Registration" was being
+  // flagged as a hallucinated person. This denylist is a heuristic and
+  // inherently incomplete — no real person carries these as a name, so
+  // excluding them cannot mask a genuine hallucination.
+  const nonPersonWords = new Set([
+    // Places / directions / era labels
+    'United',
+    'States',
+    'North',
+    'South',
+    'East',
+    'West',
+    'New',
+    'San',
+    'Los',
+    'Las',
+    'Civil',
+    'World',
+    'War',
+    'Coal',
+    'Mining',
+    'Historical',
+    'Census',
+    'Pennsylvania',
+    'California',
+    'Wisconsin',
+    'Illinois',
+    'Ohio',
+    'Scranton',
+    'Dunmore',
+    'Bavaria',
+    'Germany',
+    'Wales',
+    'Texas',
+    // Record / document / collection / institution terms
+    'Veterans',
+    'Schedule',
+    'Administration',
+    'Federal',
+    'Registration',
+    'Records',
+    'Record',
+    'Index',
+    'Collection',
+    'Naturalization',
+    'Draft',
+    'Roll',
+    'Bureau',
+    'Passenger',
   ]);
 
-  if (words.some(w => placeWords.has(w))) return false;
+  if (words.some((w) => nonPersonWords.has(w))) return false;
 
   // All words should be title-cased
-  const allTitleCase = words.every(w => /^[A-Z][a-z]+$/.test(w) || /^[A-Z][a-z]*$/.test(w));
+  const allTitleCase = words.every(
+    (w) => /^[A-Z][a-z]+$/.test(w) || /^[A-Z][a-z]*$/.test(w),
+  );
   if (!allTitleCase) return false;
 
   return true;
@@ -258,7 +330,9 @@ function resolvePersonMention(
   const mentionFirst = mentionParts[0].toLowerCase();
   const mentionSurname = mentionParts[mentionParts.length - 1].toLowerCase();
 
-  const surnamePeople = allPeople.filter(p => p.surname.toLowerCase() === mentionSurname);
+  const surnamePeople = allPeople.filter(
+    (p) => p.surname.toLowerCase() === mentionSurname,
+  );
   for (const person of surnamePeople) {
     const personFirstName = person.fullName.split(/\s+/)[0].toLowerCase();
     if (personFirstName === mentionFirst) {
@@ -305,14 +379,17 @@ function getSentencesContaining(text: string, substring: string): string[] {
   // Split on sentence boundaries (period, exclamation, question mark followed by space or end)
   const sentences = text.split(/(?<=[.!?])\s+/);
   const lower = substring.toLowerCase();
-  return sentences.filter(s => s.toLowerCase().includes(lower));
+  return sentences.filter((s) => s.toLowerCase().includes(lower));
 }
 
 // ---------------------------------------------------------------------------
 // Individual claim checkers
 // ---------------------------------------------------------------------------
 
-function checkBirthYearClaim(sentence: string, person: RetrievedPerson): ValidationIssue[] {
+function checkBirthYearClaim(
+  sentence: string,
+  person: RetrievedPerson,
+): ValidationIssue[] {
   if (person.birthYear === null) return [];
 
   // Match "born in YYYY" or "(YYYY-" or "born YYYY"
@@ -327,12 +404,14 @@ function checkBirthYearClaim(sentence: string, person: RetrievedPerson): Validat
     if (match) {
       const claimed = parseInt(match[1], 10);
       if (claimed !== person.birthYear) {
-        return [{
-          type: 'unsupported-claim',
-          text: sentence.trim(),
-          personId: person.id,
-          detail: `Claimed birth year ${claimed} does not match ${person.fullName}'s birth year ${person.birthYear}`,
-        }];
+        return [
+          {
+            type: 'unsupported-claim',
+            text: sentence.trim(),
+            personId: person.id,
+            detail: `Claimed birth year ${claimed} does not match ${person.fullName}'s birth year ${person.birthYear}`,
+          },
+        ];
       }
     }
   }
@@ -340,7 +419,10 @@ function checkBirthYearClaim(sentence: string, person: RetrievedPerson): Validat
   return [];
 }
 
-function checkDeathYearClaim(sentence: string, person: RetrievedPerson): ValidationIssue[] {
+function checkDeathYearClaim(
+  sentence: string,
+  person: RetrievedPerson,
+): ValidationIssue[] {
   if (person.deathYear === null) return [];
 
   const deathPatterns = [
@@ -355,12 +437,14 @@ function checkDeathYearClaim(sentence: string, person: RetrievedPerson): Validat
     if (match) {
       const claimed = parseInt(match[1], 10);
       if (claimed !== person.deathYear) {
-        return [{
-          type: 'unsupported-claim',
-          text: sentence.trim(),
-          personId: person.id,
-          detail: `Claimed death year ${claimed} does not match ${person.fullName}'s death year ${person.deathYear}`,
-        }];
+        return [
+          {
+            type: 'unsupported-claim',
+            text: sentence.trim(),
+            personId: person.id,
+            detail: `Claimed death year ${claimed} does not match ${person.fullName}'s death year ${person.deathYear}`,
+          },
+        ];
       }
     }
   }
@@ -368,7 +452,10 @@ function checkDeathYearClaim(sentence: string, person: RetrievedPerson): Validat
   return [];
 }
 
-function checkBirthPlaceClaim(sentence: string, person: RetrievedPerson): ValidationIssue[] {
+function checkBirthPlaceClaim(
+  sentence: string,
+  person: RetrievedPerson,
+): ValidationIssue[] {
   if (!person.birthPlace) return [];
 
   // Match "born in [Place]" — extract the place string after "born in"
@@ -388,19 +475,26 @@ function checkBirthPlaceClaim(sentence: string, person: RetrievedPerson): Valida
 
   // Also allow if claim contains a city or state from the birth place
   const knownParts = person.birthPlace.split(/,\s*/);
-  if (knownParts.some(part => claimedLower.includes(part.trim().toLowerCase()))) {
+  if (
+    knownParts.some((part) => claimedLower.includes(part.trim().toLowerCase()))
+  ) {
     return [];
   }
 
-  return [{
-    type: 'unsupported-claim',
-    text: sentence.trim(),
-    personId: person.id,
-    detail: `Claimed birth place "${claimedPlace}" does not match ${person.fullName}'s birth place "${person.birthPlace}"`,
-  }];
+  return [
+    {
+      type: 'unsupported-claim',
+      text: sentence.trim(),
+      personId: person.id,
+      detail: `Claimed birth place "${claimedPlace}" does not match ${person.fullName}'s birth place "${person.birthPlace}"`,
+    },
+  ];
 }
 
-function checkDeathPlaceClaim(sentence: string, person: RetrievedPerson): ValidationIssue[] {
+function checkDeathPlaceClaim(
+  sentence: string,
+  person: RetrievedPerson,
+): ValidationIssue[] {
   if (!person.deathPlace) return [];
 
   // Match "died in [Place]" — extract the place string after "died in"
@@ -422,19 +516,26 @@ function checkDeathPlaceClaim(sentence: string, person: RetrievedPerson): Valida
 
   // Also allow if claim contains a city or state from the death place
   const knownParts = person.deathPlace.split(/,\s*/);
-  if (knownParts.some(part => claimedLower.includes(part.trim().toLowerCase()))) {
+  if (
+    knownParts.some((part) => claimedLower.includes(part.trim().toLowerCase()))
+  ) {
     return [];
   }
 
-  return [{
-    type: 'unsupported-claim',
-    text: sentence.trim(),
-    personId: person.id,
-    detail: `Claimed death place "${claimedPlace}" does not match ${person.fullName}'s death place "${person.deathPlace}"`,
-  }];
+  return [
+    {
+      type: 'unsupported-claim',
+      text: sentence.trim(),
+      personId: person.id,
+      detail: `Claimed death place "${claimedPlace}" does not match ${person.fullName}'s death place "${person.deathPlace}"`,
+    },
+  ];
 }
 
-function checkOccupationClaim(sentence: string, person: RetrievedPerson): ValidationIssue[] {
+function checkOccupationClaim(
+  sentence: string,
+  person: RetrievedPerson,
+): ValidationIssue[] {
   if (person.occupations.length === 0) return [];
 
   // Match "was a [occupation]" or "worked as [occupation]"
@@ -452,25 +553,33 @@ function checkOccupationClaim(sentence: string, person: RetrievedPerson): Valida
     const claimedOccupation = match[1].trim().toLowerCase();
 
     // Check if claimed occupation matches any known occupation (partial match OK)
-    const isKnown = person.occupations.some(occ => {
+    const isKnown = person.occupations.some((occ) => {
       const knownOcc = occ.toLowerCase();
-      return knownOcc.includes(claimedOccupation) || claimedOccupation.includes(knownOcc);
+      return (
+        knownOcc.includes(claimedOccupation) ||
+        claimedOccupation.includes(knownOcc)
+      );
     });
 
     if (!isKnown) {
-      return [{
-        type: 'unsupported-claim',
-        text: sentence.trim(),
-        personId: person.id,
-        detail: `Claimed occupation "${claimedOccupation}" is not in ${person.fullName}'s known occupation list: [${person.occupations.join(', ')}]`,
-      }];
+      return [
+        {
+          type: 'unsupported-claim',
+          text: sentence.trim(),
+          personId: person.id,
+          detail: `Claimed occupation "${claimedOccupation}" is not in ${person.fullName}'s known occupation list: [${person.occupations.join(', ')}]`,
+        },
+      ];
     }
   }
 
   return [];
 }
 
-function checkMilitaryServiceClaim(sentence: string, person: RetrievedPerson): ValidationIssue[] {
+function checkMilitaryServiceClaim(
+  sentence: string,
+  person: RetrievedPerson,
+): ValidationIssue[] {
   // Look for military service language near the person's name
   const militaryPatterns = [
     /\bserved\b/i,
@@ -480,29 +589,50 @@ function checkMilitaryServiceClaim(sentence: string, person: RetrievedPerson): V
     /\bdrafted\b/i,
   ];
 
-  const hasMilitaryClaim = militaryPatterns.some(p => p.test(sentence));
+  const hasMilitaryClaim = militaryPatterns.some((p) => p.test(sentence));
   if (!hasMilitaryClaim) return [];
 
   // Check if person has military evidence in lifeEvents or occupations
-  const militaryTerms = ['military', 'army', 'navy', 'marine', 'air force', 'soldier',
-    'enlisted', 'drafted', 'served', 'veteran', 'war', 'combat', 'regiment',
-    'infantry', 'cavalry', 'artillery', 'draft', 'service'];
+  const militaryTerms = [
+    'military',
+    'army',
+    'navy',
+    'marine',
+    'air force',
+    'soldier',
+    'enlisted',
+    'drafted',
+    'served',
+    'veteran',
+    'war',
+    'combat',
+    'regiment',
+    'infantry',
+    'cavalry',
+    'artillery',
+    'draft',
+    'service',
+  ];
 
-  const hasLifeEventEvidence = person.lifeEvents?.some(e =>
-    militaryTerms.some(term => e.event.toLowerCase().includes(term))
-  ) ?? false;
+  const hasLifeEventEvidence =
+    person.lifeEvents?.some((e) =>
+      militaryTerms.some((term) => e.event.toLowerCase().includes(term)),
+    ) ?? false;
 
-  const hasOccupationEvidence = person.occupations?.some(occ =>
-    militaryTerms.some(term => occ.toLowerCase().includes(term))
-  ) ?? false;
+  const hasOccupationEvidence =
+    person.occupations?.some((occ) =>
+      militaryTerms.some((term) => occ.toLowerCase().includes(term)),
+    ) ?? false;
 
   if (!hasLifeEventEvidence && !hasOccupationEvidence) {
-    return [{
-      type: 'unsupported-claim',
-      text: sentence.trim(),
-      personId: person.id,
-      detail: `Military service claim for ${person.fullName} is not supported by life events or occupations`,
-    }];
+    return [
+      {
+        type: 'unsupported-claim',
+        text: sentence.trim(),
+        personId: person.id,
+        detail: `Military service claim for ${person.fullName} is not supported by life events or occupations`,
+      },
+    ];
   }
 
   return [];
@@ -530,21 +660,37 @@ function checkKinshipClaim(
 
     // Try to resolve both names to known people
     const knownPeople = buildKnownPeopleLookup(bundle.people);
-    const personA = resolvePersonMention(personAName, knownPeople, bundle.people);
-    const personB = resolvePersonMention(personBName, knownPeople, bundle.people);
+    const personA = resolvePersonMention(
+      personAName,
+      knownPeople,
+      bundle.people,
+    );
+    const personB = resolvePersonMention(
+      personBName,
+      knownPeople,
+      bundle.people,
+    );
 
     // Only validate if both are known people
-    if (!personA || !personB || personA === undefined || personB === undefined) continue;
+    if (!personA || !personB || personA === undefined || personB === undefined)
+      continue;
 
     // Validate the claimed relationship
-    const isValid = validateRelationship(personA, personB, relationship, bundle);
+    const isValid = validateRelationship(
+      personA,
+      personB,
+      relationship,
+      bundle,
+    );
     if (!isValid) {
-      return [{
-        type: 'relationship-mismatch',
-        text: sentence.trim(),
-        personId: person.id,
-        detail: `Claimed ${relationship} relationship between "${personAName}" and "${personBName}" could not be verified`,
-      }];
+      return [
+        {
+          type: 'relationship-mismatch',
+          text: sentence.trim(),
+          personId: person.id,
+          detail: `Claimed ${relationship} relationship between "${personAName}" and "${personBName}" could not be verified`,
+        },
+      ];
     }
   }
 
@@ -562,9 +708,10 @@ function validateRelationship(
   bundle: RetrievedContextBundle,
 ): boolean {
   // Check relationshipPaths if available
-  const pathMatch = bundle.relationshipPaths.some(path =>
-    (path.from.id === personA.id && path.to.id === personB.id) ||
-    (path.from.id === personB.id && path.to.id === personA.id)
+  const pathMatch = bundle.relationshipPaths.some(
+    (path) =>
+      (path.from.id === personA.id && path.to.id === personB.id) ||
+      (path.from.id === personB.id && path.to.id === personA.id),
   );
   if (pathMatch) return true;
 
@@ -575,16 +722,16 @@ function validateRelationship(
 
   if (parentTerms.includes(relationship)) {
     // A's parent is B: check if B is in A's parents
-    if (personA.parents?.some(p => p.id === personB.id)) return true;
+    if (personA.parents?.some((p) => p.id === personB.id)) return true;
     // B's child is A: check if A is in B's children
-    if (personB.children?.some(c => c.id === personA.id)) return true;
+    if (personB.children?.some((c) => c.id === personA.id)) return true;
   }
 
   if (childTerms.includes(relationship)) {
     // A's child is B: check if B is in A's children
-    if (personA.children?.some(c => c.id === personB.id)) return true;
+    if (personA.children?.some((c) => c.id === personB.id)) return true;
     // B's parent is A: check if A is in B's parents
-    if (personB.parents?.some(p => p.id === personA.id)) return true;
+    if (personB.parents?.some((p) => p.id === personA.id)) return true;
   }
 
   if (spouseTerms.includes(relationship)) {
@@ -606,6 +753,6 @@ function validateRelationship(
 function stripSentencesContaining(text: string, name: string): string {
   const sentences = text.split(/(?<=[.!?])\s+/);
   const lower = name.toLowerCase();
-  const filtered = sentences.filter(s => !s.toLowerCase().includes(lower));
+  const filtered = sentences.filter((s) => !s.toLowerCase().includes(lower));
   return filtered.join(' ');
 }

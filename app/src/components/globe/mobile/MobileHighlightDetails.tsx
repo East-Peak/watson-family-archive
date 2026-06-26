@@ -38,8 +38,8 @@ export default function MobileHighlightDetails({
         )}
         {!isResolved && (
           <p className="mt-2 text-sm leading-6 text-white/60">
-            This highlighted person is not visible in the current globe data. Clear the highlight
-            or adjust your filters to continue.
+            This highlighted person is not visible in the current globe data.
+            Clear the highlight or adjust your filters to continue.
           </p>
         )}
       </div>
@@ -47,7 +47,8 @@ export default function MobileHighlightDetails({
       {isResolved && (
         <>
           <div className="rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-3 text-sm text-white/70">
-            {locationCount} location{locationCount === 1 ? '' : 's'} · {arcCount} migration{arcCount === 1 ? '' : 's'}
+            {locationCount} location{locationCount === 1 ? '' : 's'} ·{' '}
+            {arcCount} migration{arcCount === 1 ? '' : 's'}
           </div>
 
           <div className="grid grid-cols-2 gap-2">

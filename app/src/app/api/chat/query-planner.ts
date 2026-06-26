@@ -45,29 +45,36 @@ interface ViewerIdentity {
 // ---------------------------------------------------------------------------
 
 /** Pronouns that refer to the current page person or conversation referent. */
-const PRONOUN_PATTERNS = /\b(he|she|him|her|his|they|their|this person|them)\b/i;
+const PRONOUN_PATTERNS =
+  /\b(he|she|him|her|his|they|their|this person|them)\b/i;
 
 /** Viewer possessive patterns — "my", "me", "I" in lineage context. */
 const VIEWER_POSSESSIVE = /\b(my|me|mine|our|i)\b/i;
 
 /** Direct relationship terms that can be resolved deterministically. */
-const DIRECT_RELATIONSHIP_TERMS = /\b(father|mother|dad|mom|parent|parents|child|children|son|daughter|spouse|husband|wife)\b/i;
+const DIRECT_RELATIONSHIP_TERMS =
+  /\b(father|mother|dad|mom|parent|parents|child|children|son|daughter|spouse|husband|wife)\b/i;
 
 /** Ambiguous relationship terms that need clarification. */
-const AMBIGUOUS_RELATIONSHIP_TERMS = /\b(grandmother|grandfather|grandparent|grandparents|great[- ]?grandmother|great[- ]?grandfather|uncle|aunt|cousin)\b/i;
+const AMBIGUOUS_RELATIONSHIP_TERMS =
+  /\b(grandmother|grandfather|grandparent|grandparents|great[- ]?grandmother|great[- ]?grandfather|uncle|aunt|cousin)\b/i;
 
 /** Aggregate/lineage relationship terms — not direct lookups. */
-const LINEAGE_TERMS = /\b(ancestor|ancestors|lineage|bloodline|descendant|descendants|family line|family tree)\b/i;
+const LINEAGE_TERMS =
+  /\b(ancestor|ancestors|lineage|bloodline|descendant|descendants|family line|family tree)\b/i;
 
 /** Stats patterns — aggregate count questions. */
 const STATS_PATTERNS = /\b(how many|total|count|percentage|number of)\b/i;
-const STATS_SUBJECTS = /\b(people|person|ancestor|record|generation|place|countr|member)\b/i;
+const STATS_SUBJECTS =
+  /\b(people|person|ancestor|record|generation|place|countr|member)\b/i;
 
 /** Research-gap / tool-assisted patterns. */
-const RESEARCH_GAP_PATTERNS = /\b(missing|records?\s+missing|what.*search|source.*coverage|gaps?\b|records?\s+are\s+missing)\b/i;
+const RESEARCH_GAP_PATTERNS =
+  /\b(missing|records?\s+missing|what.*search|source.*coverage|gaps?\b|records?\s+are\s+missing)\b/i;
 
 /** Visible-set patterns for tree pages. */
-const VISIBLE_SET_PATTERNS = /\b(focused person|on screen|on the screen|visible|currently showing|displayed)\b/i;
+const VISIBLE_SET_PATTERNS =
+  /\b(focused person|on screen|on the screen|visible|currently showing|displayed)\b/i;
 
 /** "this person" pattern — refers to page context person. */
 const THIS_PERSON_PATTERN = /\b(this person|this individual)\b/i;
@@ -84,16 +91,24 @@ const OUT_OF_SCOPE_PATTERNS = [
 ];
 
 /** Genealogy/history indicators — anything related to family/history stays in scope. */
-const GENEALOGY_INDICATORS = /\b(ancestor|family|born|died|marriage|census|record|person|people|tree|lineage|history|historical|war|military|immigration|emigrat|occupation|church|burial|religion|quaker|father|mother|parent|child|spouse|grave|death|birth|wed|veteran|coal|mining|generation|welsh|irish|german|english|scranton|wales|england|scotland|ireland|germany)\b/i;
+const GENEALOGY_INDICATORS =
+  /\b(ancestor|family|born|died|marriage|census|record|person|people|tree|lineage|history|historical|war|military|immigration|emigrat|occupation|church|burial|religion|quaker|father|mother|parent|child|spouse|grave|death|birth|wed|veteran|coal|mining|generation|welsh|irish|german|english|scranton|wales|england|scotland|ireland|germany)\b/i;
 
 /** Named person references: "[Name]'s [relationship]". */
-const NAMED_POSSESSIVE_RELATIONSHIP = /\b(\w+(?:\s+\w+)?)'s\s+(father|mother|parent|parents|child|children|son|daughter|spouse|husband|wife)\b/i;
+const NAMED_POSSESSIVE_RELATIONSHIP =
+  /\b(\w+(?:\s+\w+)?)'s\s+(father|mother|parent|parents|child|children|son|daughter|spouse|husband|wife)\b/i;
 
 /** Viewer's own name + possessive relationship. */
-function isViewerPossessiveRelationship(message: string, viewer: ViewerIdentity | null): boolean {
+function isViewerPossessiveRelationship(
+  message: string,
+  viewer: ViewerIdentity | null,
+): boolean {
   if (!viewer) return false;
   const firstName = viewer.name.split(' ')[0];
-  const pattern = new RegExp(`\\b${firstName}'s\\s+(father|mother|parent|parents|child|children|son|daughter|spouse|husband|wife)\\b`, 'i');
+  const pattern = new RegExp(
+    `\\b${firstName}'s\\s+(father|mother|parent|parents|child|children|son|daughter|spouse|husband|wife)\\b`,
+    'i',
+  );
   return pattern.test(message);
 }
 
@@ -103,15 +118,14 @@ function isViewerPossessiveRelationship(message: string, viewer: ViewerIdentity 
 
 /**
  * Known ambiguous names in the tree — names that match multiple people.
- * In a real system this would come from the graph; hardcoded for now.
+ * Sourced from the graph at query time; no hardcoded people (an earlier
+ * placeholder map embedded living relatives' names + birth details, which has
+ * no place in the codebase and would leak into the public archive export).
  */
-const AMBIGUOUS_NAMES: Record<string, Array<{ id: string; name: string; distinguisher: string }>> = {
-  'john watson': [
-    { id: 'john_watson', name: 'John Watson', distinguisher: 'b. 1888, Merthyr Tydfil, Wales' },
-    { id: 'john_watson_jr', name: 'John Watson Jr', distinguisher: 'b. 1920, California' },
-    { id: 'john_watson_iii', name: 'John Watson III', distinguisher: 'b. 1950, California' },
-  ],
-};
+const AMBIGUOUS_NAMES: Record<
+  string,
+  Array<{ id: string; name: string; distinguisher: string }>
+> = {};
 
 // ---------------------------------------------------------------------------
 // Helpers
@@ -139,14 +153,18 @@ function hasAmbiguousRelationship(message: string): boolean {
 
 function isOutOfScope(message: string): boolean {
   if (GENEALOGY_INDICATORS.test(message)) return false;
-  return OUT_OF_SCOPE_PATTERNS.some(p => p.test(message));
+  return OUT_OF_SCOPE_PATTERNS.some((p) => p.test(message));
 }
 
-function isOnPersonPage(pageContext: PageContext | null): pageContext is PageContext & { type: 'person' } {
+function isOnPersonPage(
+  pageContext: PageContext | null,
+): pageContext is PageContext & { type: 'person' } {
   return pageContext?.type === 'person' && !!pageContext.personId;
 }
 
-function isOnTreePage(pageContext: PageContext | null): pageContext is PageContext & { type: 'tree' } {
+function isOnTreePage(
+  pageContext: PageContext | null,
+): pageContext is PageContext & { type: 'tree' } {
   return pageContext?.type === 'tree';
 }
 
@@ -264,9 +282,17 @@ function buildRetrievalSpec(
 
   // Attribute-based sort
   let sort: RetrievalSpec['sort'] | undefined;
-  if (terms.attributes.includes('oldest') || terms.attributes.includes('earliest') || terms.attributes.includes('first')) {
+  if (
+    terms.attributes.includes('oldest') ||
+    terms.attributes.includes('earliest') ||
+    terms.attributes.includes('first')
+  ) {
     sort = { field: 'birthYear', direction: 'asc' };
-  } else if (terms.attributes.includes('youngest') || terms.attributes.includes('latest') || terms.attributes.includes('last')) {
+  } else if (
+    terms.attributes.includes('youngest') ||
+    terms.attributes.includes('latest') ||
+    terms.attributes.includes('last')
+  ) {
     sort = { field: 'birthYear', direction: 'desc' };
   }
 
@@ -299,47 +325,91 @@ export function classifyQueryPlan(
 
   // 1a. Earliest Welsh ancestor (check before general oldest)
   if (viewer && isEarliestWelshAncestorQuestion(message)) {
-    return makePlan('deterministic-fact', viewerAnchor(viewer), 'viewer-ancestors', terms);
+    return makePlan(
+      'deterministic-fact',
+      viewerAnchor(viewer),
+      'viewer-ancestors',
+      terms,
+    );
   }
 
   // 1b. Oldest ancestor — but NOT if the query is about immigration/migration
   // "first ancestor who came to America" is an immigration question, not an age question
-  const hasImmigrationContext = /\b(came to|immigrat|emigrat|arrived|crossed|settled in|moved to|journey|voyage|ship)\b/i.test(message);
+  const hasImmigrationContext =
+    /\b(came to|immigrat|emigrat|arrived|crossed|settled in|moved to|journey|voyage|ship)\b/i.test(
+      message,
+    );
   if (viewer && isOldestAncestorQuestion(message) && !hasImmigrationContext) {
-    return makePlan('deterministic-fact', viewerAnchor(viewer), 'viewer-ancestors', terms);
+    return makePlan(
+      'deterministic-fact',
+      viewerAnchor(viewer),
+      'viewer-ancestors',
+      terms,
+    );
   }
 
   // 1c. Military ancestors
-  if (viewer && isMilitaryAncestorsQuestion(message) && (hasPossessive || hasLineageTerms(message))) {
-    return makePlan('deterministic-fact', viewerAnchor(viewer), 'viewer-ancestors', terms);
+  if (
+    viewer &&
+    isMilitaryAncestorsQuestion(message) &&
+    (hasPossessive || hasLineageTerms(message))
+  ) {
+    return makePlan(
+      'deterministic-fact',
+      viewerAnchor(viewer),
+      'viewer-ancestors',
+      terms,
+    );
   }
 
   // 1d. Direct relationship terms with viewer possessive: "Who is my father?"
-  if (viewer && hasPossessive && hasDirectRelationship(message) && !hasAmbiguousRelationship(message)) {
-    return makePlan('deterministic-fact', viewerAnchor(viewer), 'viewer-ancestors', terms);
+  if (
+    viewer &&
+    hasPossessive &&
+    hasDirectRelationship(message) &&
+    !hasAmbiguousRelationship(message)
+  ) {
+    return makePlan(
+      'deterministic-fact',
+      viewerAnchor(viewer),
+      'viewer-ancestors',
+      terms,
+    );
   }
 
   // 1e. Viewer's name + possessive relationship: "Who is Christine's father?"
   if (viewer && isViewerPossessiveRelationship(message, viewer)) {
-    return makePlan('deterministic-fact', viewerAnchor(viewer), 'viewer-ancestors', terms);
+    return makePlan(
+      'deterministic-fact',
+      viewerAnchor(viewer),
+      'viewer-ancestors',
+      terms,
+    );
   }
 
   // ─── 2. Visualization ────────────────────────────────────────────────────
 
   const chatIntent = classifyChatIntent(message);
   if (chatIntent === 'visualization') {
-    const anchor = viewer
-      ? viewerAnchor(viewer)
-      : noneAnchor();
+    const anchor = viewer ? viewerAnchor(viewer) : noneAnchor();
     return {
-      ...makePlan('visualization-tool', anchor, viewer ? 'viewer-ancestors' : 'none', terms),
+      ...makePlan(
+        'visualization-tool',
+        anchor,
+        viewer ? 'viewer-ancestors' : 'none',
+        terms,
+      ),
       enabledTools: ['control_visualization'],
     };
   }
 
   // ─── 3. Stats ────────────────────────────────────────────────────────────
 
-  if (STATS_PATTERNS.test(normalized) && STATS_SUBJECTS.test(normalized) && !hasPossessive) {
+  if (
+    STATS_PATTERNS.test(normalized) &&
+    STATS_SUBJECTS.test(normalized) &&
+    !hasPossessive
+  ) {
     return makePlan('stats', noneAnchor(), 'none', terms);
   }
 
@@ -357,14 +427,16 @@ export function classifyQueryPlan(
 
   // 4b. "this person" or pronouns on a person page
   if (isOnPersonPage(pageContext)) {
-    const usesPagePronouns = hasPronouns_ || THIS_PERSON_PATTERN.test(normalized);
+    const usesPagePronouns =
+      hasPronouns_ || THIS_PERSON_PATTERN.test(normalized);
     // If pronouns are used and conversation anchor was reset by a context marker,
     // prefer the page context over the conversation referent
     const anchorReset = anchorResetByContextMarker(anchorState, pageContext);
 
     if (usesPagePronouns || anchorReset) {
       // Check if asking about broader lineage — fall through to retrieval-qa
-      const asksAboutLineage = hasLineageTerms(message) && !hasDirectRelationship(message);
+      const asksAboutLineage =
+        hasLineageTerms(message) && !hasDirectRelationship(message);
 
       if (!asksAboutLineage) {
         return makePlan(
@@ -393,7 +465,8 @@ export function classifyQueryPlan(
   if (isOutOfScope(message)) {
     return makePlan('clarification', noneAnchor(), 'none', terms, {
       needsClarification: true,
-      clarificationReason: 'This question appears unrelated to family history. I\'m best at helping with family history — want to explore your ancestors?',
+      clarificationReason:
+        "This question appears unrelated to family history. I'm best at helping with family history — want to explore your ancestors?",
     });
   }
 
@@ -412,7 +485,12 @@ export function classifyQueryPlan(
   const searchDomain = resolveSearchDomain(message, anchor, viewer);
 
   // Build the plan
-  const plan = makePlan(anchor.plan.answerMode || 'retrieval-qa', anchor.anchor, searchDomain, terms);
+  const plan = makePlan(
+    anchor.plan.answerMode || 'retrieval-qa',
+    anchor.anchor,
+    searchDomain,
+    terms,
+  );
 
   // Add subject filter for cluster queries
   const surnameCluster = extractSurnameCluster(message, dictionaries);
@@ -470,7 +548,11 @@ function resolveRetrievalAnchor(
 
   // Viewer present + lineage context (ancestors, etc.) without possessive
   // "Did any ancestors fight at Gettysburg?" → viewer scoped
-  if (viewer && hasLineageTerms(message) && !hasExplicitNamedPerson(message, terms, dictionaries)) {
+  if (
+    viewer &&
+    hasLineageTerms(message) &&
+    !hasExplicitNamedPerson(message, terms, dictionaries)
+  ) {
     return {
       anchor: viewerAnchor(viewer),
       plan: {},
@@ -480,7 +562,10 @@ function resolveRetrievalAnchor(
   // Pronouns + conversation referent
   if (hasPronouns_ && anchorState?.lastResolvedPersonIds?.length) {
     // But if on a person page with a context marker reset, prefer page context
-    if (isOnPersonPage(pageContext) && anchorResetByContextMarker(anchorState, pageContext)) {
+    if (
+      isOnPersonPage(pageContext) &&
+      anchorResetByContextMarker(anchorState, pageContext)
+    ) {
       return {
         anchor: currentPageAnchor(pageContext),
         plan: { answerMode: 'page-anchored-qa' },
@@ -592,7 +677,9 @@ function hasExplicitNamedPerson(
   // as explicit person names. Unknown capitalized words (Gettysburg, etc.) are
   // more likely places or events, not people.
   if (hasLineageTerms(message)) {
-    const confirmedNames = terms.names.filter(n => dictionaries.surnames.has(n.toLowerCase()));
+    const confirmedNames = terms.names.filter((n) =>
+      dictionaries.surnames.has(n.toLowerCase()),
+    );
     return confirmedNames.length > 0;
   }
   return true;
@@ -611,7 +698,7 @@ function isSurnameClusterQuery(
   if (!cluster) return false;
   // If the query has names that are ONLY the cluster surname (no first name),
   // treat as cluster query. Also handle pluralized forms (Barretts → barrett).
-  const nonClusterNames = terms.names.filter(n => {
+  const nonClusterNames = terms.names.filter((n) => {
     const lower = n.toLowerCase();
     return lower !== cluster && lower !== cluster + 's';
   });
@@ -695,12 +782,9 @@ function makePlan(
     answerMode,
     anchor,
     searchDomain,
-    needsClarification: answerMode === 'clarification' || anchor.confidence === 'ambiguous',
-    constraints: [
-      ...terms.attributes,
-      ...terms.topics,
-      ...terms.places,
-    ],
+    needsClarification:
+      answerMode === 'clarification' || anchor.confidence === 'ambiguous',
+    constraints: [...terms.attributes, ...terms.topics, ...terms.places],
     ...overrides,
   };
 }

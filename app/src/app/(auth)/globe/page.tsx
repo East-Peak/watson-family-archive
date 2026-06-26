@@ -43,7 +43,12 @@ interface JourneyApiResponse {
 function GlobeV2PageContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
-  const { visualizationCommand, clearVisualizationCommand, isSidebarOpen, closeSidebar } = useChat();
+  const {
+    visualizationCommand,
+    clearVisualizationCommand,
+    isSidebarOpen,
+    closeSidebar,
+  } = useChat();
   const { me } = useMe();
   const {
     ancestorSurnames,
@@ -66,7 +71,11 @@ function GlobeV2PageContent() {
   );
 
   // URL-backed globe view state (for main globe, not journey mode)
-  const { state: viewState, setState: setViewState, resetState: resetViewState } = useGlobeViewState();
+  const {
+    state: viewState,
+    setState: setViewState,
+    resetState: resetViewState,
+  } = useGlobeViewState();
 
   usePageContext(pageContext);
   useMobileShellMode(immersiveChrome);
@@ -80,7 +89,11 @@ function GlobeV2PageContent() {
   // Handle visualization commands from AI chat
   useEffect(() => {
     if (!visualizationCommand) return;
-    if (visualizationCommand.target !== 'globe' && visualizationCommand.target !== 'both') return;
+    if (
+      visualizationCommand.target !== 'globe' &&
+      visualizationCommand.target !== 'both'
+    )
+      return;
 
     switch (visualizationCommand.action) {
       case 'filter':
@@ -94,14 +107,22 @@ function GlobeV2PageContent() {
       case 'showCollection':
         // Navigate to collection page
         if (visualizationCommand.params.collectionType) {
-          router.push(`/collection/${visualizationCommand.params.collectionType}`);
+          router.push(
+            `/collection/${visualizationCommand.params.collectionType}`,
+          );
         }
         break;
     }
 
     // Clear the command after handling
     clearVisualizationCommand();
-  }, [visualizationCommand, clearVisualizationCommand, router, setViewState, resetViewState]);
+  }, [
+    visualizationCommand,
+    clearVisualizationCommand,
+    router,
+    setViewState,
+    resetViewState,
+  ]);
 
   // Load journey data if journey param is present
   useEffect(() => {
@@ -113,7 +134,9 @@ function GlobeV2PageContent() {
 
     async function loadJourneyData() {
       try {
-        const res = await fetch(`/api/person/${encodeURIComponent(journeyPersonId!)}/journey`);
+        const res = await fetch(
+          `/api/person/${encodeURIComponent(journeyPersonId!)}/journey`,
+        );
 
         if (!res.ok) {
           console.error('Failed to fetch journey data');
@@ -125,7 +148,7 @@ function GlobeV2PageContent() {
 
         // Filter to only stops with coordinates
         const stopsWithCoords = data.stops.filter(
-          (stop) => stop.lat !== null && stop.lng !== null
+          (stop) => stop.lat !== null && stop.lng !== null,
         );
 
         if (stopsWithCoords.length > 0) {
@@ -169,8 +192,18 @@ function GlobeV2PageContent() {
           href="/"
           className="absolute top-4 left-4 z-50 hidden items-center gap-2 rounded-lg bg-black/50 px-4 py-2 text-white/60 backdrop-blur-sm transition-colors hover:text-white md:flex"
         >
-          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+          <svg
+            className="w-5 h-5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M10 19l-7-7m0 0l7-7m-7 7h18"
+            />
           </svg>
           Home
         </Link>
@@ -182,8 +215,18 @@ function GlobeV2PageContent() {
           href={`/person/${journeyMode.personId}`}
           className="absolute top-4 left-4 z-50 hidden items-center gap-2 rounded-lg bg-black/50 px-4 py-2 text-white/60 backdrop-blur-sm transition-colors hover:text-white md:flex"
         >
-          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+          <svg
+            className="w-5 h-5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M10 19l-7-7m0 0l7-7m-7 7h18"
+            />
           </svg>
           Back to Profile
         </Link>
@@ -209,11 +252,13 @@ function GlobeV2PageContent() {
 
 export default function GlobeV2Page() {
   return (
-    <Suspense fallback={
-      <div className="flex items-center justify-center h-full bg-black">
-        <div className="text-white/60 text-lg">Loading globe...</div>
-      </div>
-    }>
+    <Suspense
+      fallback={
+        <div className="flex items-center justify-center h-full bg-black">
+          <div className="text-white/60 text-lg">Loading globe...</div>
+        </div>
+      }
+    >
       <GlobeV2PageContent />
     </Suspense>
   );

@@ -18,7 +18,7 @@ interface JourneyStop {
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: Promise<{ id: string }> }
+  { params }: { params: Promise<{ id: string }> },
 ) {
   try {
     const { id } = await params;
@@ -82,7 +82,7 @@ export async function GET(
         dp.name as deathPlace, dp.latitude as deathLat, dp.longitude as deathLng,
         dp.city as deathCity, dp.state as deathState, dp.country as deathCountry
       `,
-      { treeId, personId: id }
+      { treeId, personId: id },
     );
 
     if (results.length === 0) {
@@ -127,8 +127,16 @@ export async function GET(
           country: evt.country,
           lat: evt.lat,
           lng: evt.lng,
-          source: isMarriage ? 'marriage' : isCensus ? 'census' : isOccupation ? 'occupation' : 'residence',
-          occupation: isOccupation ? evt.event?.replace('Began working as ', '') || null : null,
+          source: isMarriage
+            ? 'marriage'
+            : isCensus
+              ? 'census'
+              : isOccupation
+                ? 'occupation'
+                : 'residence',
+          occupation: isOccupation
+            ? evt.event?.replace('Began working as ', '') || null
+            : null,
         });
       }
     }
@@ -160,6 +168,9 @@ export async function GET(
     });
   } catch (error) {
     console.error('Error fetching journey:', error);
-    return NextResponse.json({ error: 'Failed to fetch journey' }, { status: 500 });
+    return NextResponse.json(
+      { error: 'Failed to fetch journey' },
+      { status: 500 },
+    );
   }
 }

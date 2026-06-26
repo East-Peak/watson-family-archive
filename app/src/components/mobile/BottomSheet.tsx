@@ -29,7 +29,9 @@ function getFocusableElements(container: HTMLElement): HTMLElement[] {
   ].join(',');
 
   return Array.from(container.querySelectorAll<HTMLElement>(selectors)).filter(
-    (element) => !element.hasAttribute('disabled') && element.getAttribute('aria-hidden') !== 'true',
+    (element) =>
+      !element.hasAttribute('disabled') &&
+      element.getAttribute('aria-hidden') !== 'true',
   );
 }
 
@@ -69,7 +71,9 @@ export default function BottomSheet({
     if (!open || !portalNode) return;
 
     previouslyFocusedRef.current =
-      document.activeElement instanceof HTMLElement ? document.activeElement : null;
+      document.activeElement instanceof HTMLElement
+        ? document.activeElement
+        : null;
 
     const bodyChildren = Array.from(document.body.children);
     const hiddenSiblings: Array<{
@@ -83,7 +87,10 @@ export default function BottomSheet({
       hiddenSiblings.push({
         element: child,
         previousAriaHidden: child.getAttribute('aria-hidden'),
-        previousInert: 'inert' in child ? Boolean((child as HTMLElement & { inert?: boolean }).inert) : false,
+        previousInert:
+          'inert' in child
+            ? Boolean((child as HTMLElement & { inert?: boolean }).inert)
+            : false,
       });
       child.setAttribute('aria-hidden', 'true');
       if ('inert' in child) {
@@ -131,17 +138,20 @@ export default function BottomSheet({
       document.removeEventListener('keydown', handleKeyDown);
       document.body.style.overflow = previousOverflow;
 
-      hiddenSiblings.forEach(({ element, previousAriaHidden, previousInert }) => {
-        if (previousAriaHidden === null) {
-          element.removeAttribute('aria-hidden');
-        } else {
-          element.setAttribute('aria-hidden', previousAriaHidden);
-        }
+      hiddenSiblings.forEach(
+        ({ element, previousAriaHidden, previousInert }) => {
+          if (previousAriaHidden === null) {
+            element.removeAttribute('aria-hidden');
+          } else {
+            element.setAttribute('aria-hidden', previousAriaHidden);
+          }
 
-        if ('inert' in element) {
-          (element as HTMLElement & { inert?: boolean }).inert = previousInert;
-        }
-      });
+          if ('inert' in element) {
+            (element as HTMLElement & { inert?: boolean }).inert =
+              previousInert;
+          }
+        },
+      );
 
       previouslyFocusedRef.current?.focus();
     };
@@ -168,8 +178,12 @@ export default function BottomSheet({
       >
         <div className="flex items-center justify-between border-b border-gray-200 px-5 py-4">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-shield/45">{eyebrow}</p>
-            <h2 id={titleId} className="text-lg font-semibold text-shield">{title}</h2>
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-shield/45">
+              {eyebrow}
+            </p>
+            <h2 id={titleId} className="text-lg font-semibold text-shield">
+              {title}
+            </h2>
           </div>
           <button
             ref={closeButtonRef}
@@ -178,8 +192,18 @@ export default function BottomSheet({
             aria-label={`Close ${title}`}
             className="rounded-full p-2 text-gray-500 transition-colors hover:bg-gray-100 hover:text-gray-700"
           >
-            <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            <svg
+              className="h-5 w-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
+              />
             </svg>
           </button>
         </div>

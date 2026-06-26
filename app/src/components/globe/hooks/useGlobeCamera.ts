@@ -41,7 +41,10 @@ export function serializeCamera(viewer: CesiumViewer): GlobeCameraState | null {
 /**
  * Restore the camera from a GlobeCameraState.
  */
-export function deserializeCamera(viewer: CesiumViewer, state: GlobeCameraState): void {
+export function deserializeCamera(
+  viewer: CesiumViewer,
+  state: GlobeCameraState,
+): void {
   viewer.camera.setView({
     destination: Cartographic.toCartesian(
       Cartographic.fromDegrees(state.lng, state.lat, state.height),
@@ -65,7 +68,8 @@ function getInitialDestination(globeData: GlobeData | null): Rectangle {
   let maxLng = -Infinity;
 
   for (const location of globeData.locations) {
-    if (!Number.isFinite(location.lat) || !Number.isFinite(location.lng)) continue;
+    if (!Number.isFinite(location.lat) || !Number.isFinite(location.lng))
+      continue;
 
     minLat = Math.min(minLat, location.lat);
     maxLat = Math.max(maxLat, location.lat);
@@ -101,7 +105,12 @@ export function useGlobeCamera({
   // Set initial camera view from URL state or by fitting the current dataset.
   useEffect(() => {
     const viewer = viewerRef.current?.cesiumElement;
-    if (!viewerReady || !viewer || journeyMode || hasSetInitialViewRef.current) {
+    if (
+      !viewerReady ||
+      !viewer ||
+      journeyMode ||
+      hasSetInitialViewRef.current
+    ) {
       return;
     }
 
@@ -128,7 +137,10 @@ export function useGlobeCamera({
 
     window.requestAnimationFrame(forceRender);
 
-    const renderKickDelays = Array.from({ length: 15 }, (_, index) => (index + 1) * 200);
+    const renderKickDelays = Array.from(
+      { length: 15 },
+      (_, index) => (index + 1) * 200,
+    );
     renderKickTimersRef.current = renderKickDelays.map((delay) =>
       window.setTimeout(forceRender, delay),
     );
@@ -136,7 +148,9 @@ export function useGlobeCamera({
     hasSetInitialViewRef.current = true;
 
     return () => {
-      renderKickTimersRef.current.forEach((timer) => window.clearTimeout(timer));
+      renderKickTimersRef.current.forEach((timer) =>
+        window.clearTimeout(timer),
+      );
       renderKickTimersRef.current = [];
     };
   }, [viewerRef, viewerReady, journeyMode, globeData, initialCamera]);

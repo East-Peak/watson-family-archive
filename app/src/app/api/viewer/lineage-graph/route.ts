@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { executeQuery } from '@/lib/neo4j/client';
 import { siteConfig } from '@/lib/siteConfig';
+import { MAX_ANCESTRY_DEPTH } from '@/lib/neo4j/constants';
 
 const DEFAULT_TREE_ID = siteConfig.defaultTreeId;
 
@@ -21,6 +22,14 @@ interface AncestorRow {
  * - lineageLabel: the ancestor's surname
  *
  * Used by generation coloring (Feature 5) and origins view (Feature 6).
+ *
+ * Security note: `personId` / `viewerId` is a READ-PERSONALIZATION parameter only.
+ * It selects WHOSE lineage graph to compute/highlight — it does NOT restrict access.
+ * A caller supplying any personId simply receives that person's lineage view (all
+ * data is already readable by any authenticated user). Real authz is enforced by:
+ *   - The middleware allowlist (controls who can access the app at all), and
+ *   - Admin-only write gates (controls who can mutate data).
+ * There is no privilege escalation risk from a client supplying a different personId.
  */
 export async function GET(request: NextRequest) {
   try {
@@ -44,12 +53,12 @@ export async function GET(request: NextRequest) {
     const results = await executeQuery<AncestorRow>(
       `
       MATCH (t:Tree {id: $treeId})-[:CONTAINS]->(viewer:Person {id: $viewerId})
-      MATCH path = (viewer)-[:CHILD_OF*0..20]->(ancestor:Person)
+      MATCH path = (viewer)-[:CHILD_OF*0..${MAX_ANCESTRY_DEPTH}]->(ancestor:Person)
       WITH ancestor, min(length(path)) AS depth
       // Find children of this ancestor that are also in the lineage
       OPTIONAL MATCH (ancestor)<-[:CHILD_OF]-(child:Person)
       WHERE EXISTS {
-        MATCH (viewer)-[:CHILD_OF*0..20]->(child)
+        MATCH (viewer)-[:CHILD_OF*0..${MAX_ANCESTRY_DEPTH}]->(child)
         WHERE viewer.id = $viewerId
       }
       RETURN

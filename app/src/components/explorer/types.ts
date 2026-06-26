@@ -49,8 +49,14 @@ export interface ExplorerRecord {
 }
 
 export type RecordSortField =
-  | 'type' | 'year' | 'collection' | 'place'
-  | 'participantCount' | 'tier' | 'evidenceClass' | 'linkedPeople';
+  | 'type'
+  | 'year'
+  | 'collection'
+  | 'place'
+  | 'participantCount'
+  | 'tier'
+  | 'evidenceClass'
+  | 'linkedPeople';
 
 export interface RecordsFilterOptions {
   types: string[];

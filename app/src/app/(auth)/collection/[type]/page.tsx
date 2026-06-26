@@ -46,9 +46,10 @@ export default function CollectionPage() {
   useEffect(() => {
     async function loadData() {
       try {
-        const url = hasViewer && me?.id
-          ? `/api/collection/${encodeURIComponent(type)}?viewerId=${encodeURIComponent(me.id)}`
-          : `/api/collection/${encodeURIComponent(type)}`;
+        const url =
+          hasViewer && me?.id
+            ? `/api/collection/${encodeURIComponent(type)}?viewerId=${encodeURIComponent(me.id)}`
+            : `/api/collection/${encodeURIComponent(type)}`;
         const res = await fetch(url);
 
         if (!res.ok) {
@@ -84,7 +85,9 @@ export default function CollectionPage() {
     return (
       <div className="min-h-full bg-cream flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-2xl font-bold text-gray-900 mb-4">{error || 'Collection not found'}</h1>
+          <h1 className="text-2xl font-bold text-gray-900 mb-4">
+            {error || 'Collection not found'}
+          </h1>
           <Link href="/" className="text-shield hover:underline">
             Return home
           </Link>
@@ -103,7 +106,10 @@ export default function CollectionPage() {
 
   // Decide which people list to show based on scope
   const isSurnameCollection = type.startsWith('surname-');
-  const showToggle = hasViewer && collection?.viewerCount !== null && collection?.viewerCount !== undefined;
+  const showToggle =
+    hasViewer &&
+    collection?.viewerCount !== null &&
+    collection?.viewerCount !== undefined;
   const effectiveScope: Scope = showToggle ? scope : 'all';
   const peopleToShow =
     effectiveScope === 'viewer' && collection?.viewerPeople
@@ -111,8 +117,8 @@ export default function CollectionPage() {
       : collection?.people || [];
   const countToShow =
     effectiveScope === 'viewer'
-      ? collection?.viewerCount ?? 0
-      : collection?.totalCount ?? 0;
+      ? (collection?.viewerCount ?? 0)
+      : (collection?.totalCount ?? 0);
 
   return (
     <main className="min-h-full bg-cream">
@@ -121,12 +127,24 @@ export default function CollectionPage() {
         <div className="max-w-6xl mx-auto px-6 py-8">
           {/* Breadcrumb */}
           <div className="flex items-center gap-2 text-sm text-white/70 mb-4">
-            <Link href="/" className="hover:text-white transition-colors">Home</Link>
+            <Link href="/" className="hover:text-white transition-colors">
+              Home
+            </Link>
             <span>/</span>
             {isSurnameCollection ? (
-              <Link href="/lines" className="hover:text-white transition-colors">Lines</Link>
+              <Link
+                href="/lines"
+                className="hover:text-white transition-colors"
+              >
+                Lines
+              </Link>
             ) : (
-              <Link href="/collections" className="hover:text-white transition-colors">Collections</Link>
+              <Link
+                href="/collections"
+                className="hover:text-white transition-colors"
+              >
+                Collections
+              </Link>
             )}
             <span>/</span>
             <span className="text-white">{collection?.title || type}</span>
@@ -135,7 +153,9 @@ export default function CollectionPage() {
           <div className="flex items-center gap-4 mt-4">
             <span className="text-5xl">{collection?.emoji}</span>
             <div>
-              <h1 className="text-3xl font-bold font-serif text-white">{collection?.title}</h1>
+              <h1 className="text-3xl font-bold font-serif text-white">
+                {collection?.title}
+              </h1>
               <p className="text-white/70 mt-1">{collection?.description}</p>
             </div>
           </div>
@@ -182,7 +202,9 @@ export default function CollectionPage() {
           <>
             <p className="text-gray-500 mb-8">
               {countToShow} {countToShow === 1 ? 'person' : 'people'}
-              {effectiveScope === 'viewer' ? ' in your direct line' : ' in this collection'}
+              {effectiveScope === 'viewer'
+                ? ' in your direct line'
+                : ' in this collection'}
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -192,7 +214,9 @@ export default function CollectionPage() {
                   href={`/person/${person.id}`}
                   className="bg-white border border-gray-200 rounded-xl p-5 hover:border-shield/30 hover:shadow-md transition-all"
                 >
-                  <h3 className="font-semibold text-lg text-gray-900">{person.fullName}</h3>
+                  <h3 className="font-semibold text-lg text-gray-900">
+                    {person.fullName}
+                  </h3>
                   <p className="text-gray-500 text-sm mt-1">
                     {person.birthYear && person.deathYear
                       ? `${person.birthYear}\u2013${person.deathYear}`

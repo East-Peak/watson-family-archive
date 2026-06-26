@@ -13,7 +13,7 @@ export function getDriver(): Driver {
 
     if (!uri || !user || !password) {
       throw new Error(
-        'Missing Neo4j credentials. Set NEO4J_URI, NEO4J_USER, and NEO4J_PASSWORD environment variables.'
+        'Missing Neo4j credentials. Set NEO4J_URI, NEO4J_USER, and NEO4J_PASSWORD environment variables.',
       );
     }
 
@@ -50,7 +50,7 @@ export async function closeDriver(): Promise<void> {
  */
 export async function executeQuery<T = Record<string, unknown>>(
   cypher: string,
-  params: Record<string, unknown> = {}
+  params: Record<string, unknown> = {},
 ): Promise<T[]> {
   const session = getDriver().session({ database: getDatabase() });
   try {
@@ -75,31 +75,6 @@ export async function executeQuery<T = Record<string, unknown>>(
 /**
  * Execute a write transaction (for mutations)
  */
-export async function executeWrite<T = Record<string, unknown>>(
-  cypher: string,
-  params: Record<string, unknown> = {}
-): Promise<T[]> {
-  const session = getDriver().session({ database: getDatabase() });
-  try {
-    const result = await session.executeWrite(async (tx) => {
-      return tx.run(cypher, params);
-    });
-    return result.records.map((record: Neo4jRecord) => {
-      const obj: Record<string, unknown> = {};
-      record.keys.forEach((key) => {
-        obj[String(key)] = toNativeTypes(record.get(key));
-      });
-      return obj as T;
-    });
-  } catch (error) {
-    if (process.env.NODE_ENV !== 'production') {
-      console.error('Neo4j write failed', { cypher, params, error });
-    }
-    throw error;
-  } finally {
-    await session.close();
-  }
-}
 
 /**
  * Convert Neo4j types to native JavaScript types
@@ -115,7 +90,11 @@ function toNativeTypes(value: unknown): unknown {
   }
 
   // Handle Neo4j Date/DateTime
-  if (neo4j.isDate(value) || neo4j.isDateTime(value) || neo4j.isLocalDateTime(value)) {
+  if (
+    neo4j.isDate(value) ||
+    neo4j.isDateTime(value) ||
+    neo4j.isLocalDateTime(value)
+  ) {
     return value.toString();
   }
 
@@ -123,7 +102,7 @@ function toNativeTypes(value: unknown): unknown {
   if (value && typeof value === 'object' && 'properties' in value) {
     const node = value as { properties: Record<string, unknown> };
     return Object.fromEntries(
-      Object.entries(node.properties).map(([k, v]) => [k, toNativeTypes(v)])
+      Object.entries(node.properties).map(([k, v]) => [k, toNativeTypes(v)]),
     );
   }
 
@@ -135,7 +114,7 @@ function toNativeTypes(value: unknown): unknown {
   // Handle plain objects
   if (value && typeof value === 'object') {
     return Object.fromEntries(
-      Object.entries(value).map(([k, v]) => [k, toNativeTypes(v)])
+      Object.entries(value).map(([k, v]) => [k, toNativeTypes(v)]),
     );
   }
 

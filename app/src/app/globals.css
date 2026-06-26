@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
   /* Default heraldic palette */
@@ -22,15 +22,21 @@
   --foreground: #171717;
   --site-header-height: 3.5rem;
   --site-header-border: 1px;
-  --site-header-offset: calc(var(--site-header-height) + var(--site-header-border));
+  --site-header-offset: calc(
+    var(--site-header-height) + var(--site-header-border)
+  );
   --safe-area-top: env(safe-area-inset-top, 0px);
   --safe-area-right: env(safe-area-inset-right, 0px);
   --safe-area-bottom: env(safe-area-inset-bottom, 0px);
   --safe-area-left: env(safe-area-inset-left, 0px);
   --mobile-top-bar-height: 3.5rem;
-  --mobile-top-bar-offset: calc(var(--mobile-top-bar-height) + var(--safe-area-top));
+  --mobile-top-bar-offset: calc(
+    var(--mobile-top-bar-height) + var(--safe-area-top)
+  );
   --mobile-bottom-nav-height: 4.75rem;
-  --mobile-bottom-nav-offset: calc(var(--mobile-bottom-nav-height) + var(--safe-area-bottom));
+  --mobile-bottom-nav-offset: calc(
+    var(--mobile-bottom-nav-height) + var(--safe-area-bottom)
+  );
 }
 
 @media (prefers-color-scheme: dark) {
@@ -69,7 +75,11 @@ body {
 
 /* Premium Visual Utilities */
 .bg-vignette {
-  background: radial-gradient(circle, rgba(255,255,255,0.7) 0%, rgba(240,233,220,1) 100%);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.7) 0%,
+    rgba(240, 233, 220, 1) 100%
+  );
 }
 
 .bg-hero-gradient {
@@ -82,7 +92,12 @@ body {
 }
 
 .bg-tour-section {
-  background: radial-gradient(ellipse at center top, #1b14a8 0%, #161087 55%, #0e0a55 100%);
+  background: radial-gradient(
+    ellipse at center top,
+    #1b14a8 0%,
+    #161087 55%,
+    #0e0a55 100%
+  );
 }
 
 .bg-footer-fade {
@@ -98,7 +113,12 @@ body {
   position: absolute;
   inset: 0 0 auto 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.18) 50%, transparent 100%);
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.18) 50%,
+    transparent 100%
+  );
   pointer-events: none;
 }
 
@@ -111,7 +131,7 @@ body {
 }
 
 .text-glow {
-  text-shadow: 0 0 20px rgba(255,255,255,0.3);
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
 }
 
 .custom-scrollbar {

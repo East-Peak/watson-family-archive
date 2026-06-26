@@ -19,7 +19,12 @@ export interface GlobeEvent {
   year: number | null;
 }
 
-export type ApproximatePrecision = 'exact' | 'city' | 'county' | 'state' | 'country';
+export type ApproximatePrecision =
+  | 'exact'
+  | 'city'
+  | 'county'
+  | 'state'
+  | 'country';
 
 export type EntityVisibility = 'full' | 'dimmed' | 'hidden';
 
@@ -49,8 +54,20 @@ export interface Location {
 
 export interface Arc {
   person_id: string;
-  from: { place: string; lat: number; lng: number; year?: number; eventType?: GlobeEventType };
-  to: { place: string; lat: number; lng: number; year?: number; eventType?: GlobeEventType };
+  from: {
+    place: string;
+    lat: number;
+    lng: number;
+    year?: number;
+    eventType?: GlobeEventType;
+  };
+  to: {
+    place: string;
+    lat: number;
+    lng: number;
+    year?: number;
+    eventType?: GlobeEventType;
+  };
 }
 
 export interface GlobeData {
@@ -97,7 +114,7 @@ export interface GlobeViewState {
   yearRange: [number, number] | null;
   eventTypes: string[];
   regions: string[];
-  highlightPerson: string | null;  // personId
+  highlightPerson: string | null; // personId
   viewMode: GlobeViewMode;
   showApproximate: boolean;
   showArcs: boolean;

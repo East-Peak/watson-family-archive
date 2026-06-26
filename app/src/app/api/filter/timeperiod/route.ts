@@ -14,7 +14,7 @@ export async function GET(request: NextRequest) {
     if (isNaN(fromYear) || isNaN(toYear)) {
       return NextResponse.json(
         { error: 'Invalid year parameters' },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -31,7 +31,7 @@ export async function GET(request: NextRequest) {
     console.error('Error filtering by time period:', error);
     return NextResponse.json(
       { error: 'Failed to filter by time period' },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

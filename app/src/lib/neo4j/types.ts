@@ -93,7 +93,13 @@ export interface ParentRelationship {
 export interface PersonWithFamily extends Neo4jPerson {
   father?: { id: string; name: string; birthYear?: number };
   mother?: { id: string; name: string; birthYear?: number };
-  spouses?: Array<{ id: string; name: string; birthYear?: number; marriageYear?: number; marriagePlace?: string }>;
+  spouses?: Array<{
+    id: string;
+    name: string;
+    birthYear?: number;
+    marriageYear?: number;
+    marriagePlace?: string;
+  }>;
   children?: Array<{ id: string; name: string; birthYear?: number }>;
   siblings?: Array<{ id: string; name: string; birthYear?: number }>;
 }

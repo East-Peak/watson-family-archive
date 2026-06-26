@@ -2,9 +2,13 @@
 
 import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
-import { signOut } from 'next-auth/react';
 import BottomSheet from '@/components/mobile/BottomSheet';
-import { useMe, hasViewerPerson, type AuthIdentity, type MePerson } from '@/components/MeProvider';
+import {
+  useMe,
+  hasViewerPerson,
+  type AuthIdentity,
+  type MePerson,
+} from '@/components/MeProvider';
 import { useKeyboardNav } from '@/hooks/useKeyboardNav';
 
 type MobilePresentation = 'sheet' | 'inline';
@@ -22,7 +26,6 @@ interface ViewerMenuContentProps {
   onAction?: () => void;
   onChangeViewer: () => void;
   onClearViewer: () => void;
-  onSignOut: () => void;
   activeIndex?: number;
   itemRefs?: React.MutableRefObject<(HTMLElement | null)[]>;
   onKeyDown?: (e: React.KeyboardEvent) => void;
@@ -41,7 +44,6 @@ function ViewerMenuContent({
   onAction,
   onChangeViewer,
   onClearViewer,
-  onSignOut,
   activeIndex = -1,
   itemRefs,
   onKeyDown,
@@ -59,16 +61,15 @@ function ViewerMenuContent({
   const dangerActionClass = isMobileMenu
     ? `${actionBaseClass} border-red-200/80 text-red-700 hover:bg-red-50`
     : `${actionBaseClass} text-red-600 hover:bg-red-50`;
-  const signOutClass = isMobileMenu
-    ? `${actionBaseClass} border-gray-200 text-gray-700 hover:bg-gray-50`
-    : `${actionBaseClass} border-t border-gray-100 text-gray-700 hover:bg-gray-50`;
 
   // Build ordered list of action items for keyboard nav indexing (dropdown only)
   let itemIndex = 0;
   const nextIndex = () => itemIndex++;
 
   const activeClass = (idx: number) =>
-    !isMobileMenu && idx === activeIndex ? 'bg-gray-100 ring-1 ring-inset ring-shield/20' : '';
+    !isMobileMenu && idx === activeIndex
+      ? 'bg-gray-100 ring-1 ring-inset ring-shield/20'
+      : '';
 
   const menuItemId = (idx: number) => `viewer-menu-item-${idx}`;
 
@@ -84,60 +85,60 @@ function ViewerMenuContent({
     >
       {authIdentity && (
         <div className={infoBlockClass}>
-          <p className="text-xs uppercase tracking-[0.2em] text-shield/45">Signed in as</p>
-          <p className={`truncate ${isMobileMenu ? 'mt-1 text-sm font-semibold text-shield' : 'text-sm font-medium text-gray-900'}`}>
+          <p className="text-xs uppercase tracking-[0.2em] text-shield/45">
+            Signed in as
+          </p>
+          <p
+            className={`truncate ${isMobileMenu ? 'mt-1 text-sm font-semibold text-shield' : 'text-sm font-medium text-gray-900'}`}
+          >
             {authIdentity.email}
           </p>
         </div>
       )}
 
       <div className={infoBlockClass}>
-        <p className="text-xs uppercase tracking-[0.2em] text-shield/45">Current viewer</p>
-        <p className={`truncate ${isMobileMenu ? 'mt-1 text-base font-semibold text-shield' : 'text-sm font-medium text-gray-900'}`}>
+        <p className="text-xs uppercase tracking-[0.2em] text-shield/45">
+          Current viewer
+        </p>
+        <p
+          className={`truncate ${isMobileMenu ? 'mt-1 text-base font-semibold text-shield' : 'text-sm font-medium text-gray-900'}`}
+        >
           {me.name}
         </p>
       </div>
 
       <div className={isMobileMenu ? 'space-y-2' : 'py-1'}>
-        {hasViewerPerson(me) && (() => {
-          const idx = nextIndex();
-          return (
-            <Link
-              href={`/person/${me.id}`}
-              onClick={onAction}
-              ref={(el) => setRef(el, idx)}
-              role="menuitem"
-              className={`${neutralActionClass} ${activeClass(idx)}`}
-            >
-              <span>Go to my profile</span>
-              {isMobileMenu && (
-                <svg className="h-4 w-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              )}
-            </Link>
-          );
-        })()}
+        {hasViewerPerson(me) &&
+          (() => {
+            const idx = nextIndex();
+            return (
+              <Link
+                href={`/person/${me.id}`}
+                onClick={onAction}
+                ref={(el) => setRef(el, idx)}
+                role="menuitem"
+                className={`${neutralActionClass} ${activeClass(idx)}`}
+              >
+                <span>Go to my profile</span>
+                {isMobileMenu && (
+                  <svg
+                    className="h-4 w-4 shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                )}
+              </Link>
+            );
+          })()}
 
-        {(() => {
-          const idx = nextIndex();
-          return (
-            <Link
-              href="/my-contributions"
-              onClick={onAction}
-              ref={(el) => setRef(el, idx)}
-              role="menuitem"
-              className={`${neutralActionClass} ${activeClass(idx)}`}
-            >
-              <span>My contributions</span>
-              {isMobileMenu && (
-                <svg className="h-4 w-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              )}
-            </Link>
-          );
-        })()}
 
         {(() => {
           const idx = nextIndex();
@@ -151,8 +152,18 @@ function ViewerMenuContent({
             >
               <span>Change viewer</span>
               {isMobileMenu && (
-                <svg className="h-4 w-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                <svg
+                  className="h-4 w-4 shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
                 </svg>
               )}
             </button>
@@ -171,33 +182,24 @@ function ViewerMenuContent({
             >
               <span>Clear viewer</span>
               {isMobileMenu && (
-                <svg className="h-4 w-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                <svg
+                  className="h-4 w-4 shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
                 </svg>
               )}
             </button>
           );
         })()}
 
-        {authIdentity && (() => {
-          const idx = nextIndex();
-          return (
-            <button
-              type="button"
-              onClick={onSignOut}
-              ref={(el) => setRef(el, idx)}
-              role="menuitem"
-              className={`${signOutClass} ${activeClass(idx)}`}
-            >
-              <span>Sign out</span>
-              {isMobileMenu && (
-                <svg className="h-4 w-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a2 2 0 01-2 2H6a2 2 0 01-2-2V7a2 2 0 012-2h5a2 2 0 012 2v1" />
-                </svg>
-              )}
-            </button>
-          );
-        })()}
       </div>
     </div>
   );
@@ -231,10 +233,9 @@ export default function ViewerBadge({
   // Compute dropdown item count based on current me/authIdentity state
   const dropdownItemCount =
     (me && hasViewerPerson(me) ? 1 : 0) + // Go to my profile
-    1 +                                     // My contributions
-    1 +                                     // Change viewer
-    1 +                                     // Clear viewer
-    (authIdentity ? 1 : 0);                 // Sign out
+    1 + // Change viewer
+    1 + // Clear viewer
+    (authIdentity ? 1 : 0); // Sign out
 
   const closeMenu = () => setOpen(false);
   const handleAction = () => {
@@ -249,19 +250,13 @@ export default function ViewerBadge({
     setMe(null);
     handleAction();
   };
-  const handleSignOut = () => {
-    handleAction();
-    void signOut({ redirectTo: '/signin' });
-  };
 
   // Build ordered actions matching the render order in ViewerMenuContent
   const buildMenuActions = () => {
     const actions: (() => void)[] = [];
     if (me && hasViewerPerson(me)) actions.push(handleAction); // Go to my profile — Link handles nav, just close
-    actions.push(handleAction);      // My contributions — Link handles nav
     actions.push(handleChangeViewer);
     actions.push(handleClearViewer);
-    if (authIdentity) actions.push(handleSignOut);
     return actions;
   };
 
@@ -293,8 +288,12 @@ export default function ViewerBadge({
       return (
         <div className="space-y-3">
           <div className="rounded-2xl border border-shield/10 bg-white px-4 py-4">
-            <p className="text-xs uppercase tracking-[0.2em] text-shield/45">Current viewer</p>
-            <p className="mt-1 text-sm font-semibold text-shield">No viewer selected</p>
+            <p className="text-xs uppercase tracking-[0.2em] text-shield/45">
+              Current viewer
+            </p>
+            <p className="mt-1 text-sm font-semibold text-shield">
+              No viewer selected
+            </p>
           </div>
           <button
             type="button"
@@ -305,8 +304,18 @@ export default function ViewerBadge({
             className="flex w-full items-center justify-between rounded-2xl border border-shield/10 bg-white px-4 py-3 text-sm font-semibold text-shield transition-colors hover:border-shield/20 hover:bg-shield/5"
           >
             <span>Set viewer</span>
-            <svg className="h-4 w-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            <svg
+              className="h-4 w-4 shrink-0"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M9 5l7 7-7 7"
+              />
             </svg>
           </button>
         </div>
@@ -324,8 +333,18 @@ export default function ViewerBadge({
         title="Set viewer"
         className={btnClass}
       >
-        <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+        <svg
+          className="h-4 w-4"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+          />
         </svg>
         {isMobileSheetTrigger ? (
           <span className="truncate">Viewer</span>
@@ -348,7 +367,6 @@ export default function ViewerBadge({
         onAction={onAction}
         onChangeViewer={handleChangeViewer}
         onClearViewer={handleClearViewer}
-        onSignOut={handleSignOut}
       />
     );
   }
@@ -365,15 +383,29 @@ export default function ViewerBadge({
         aria-expanded={isDropdown ? open : undefined}
         className={btnClass}
       >
-        <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+        <svg
+          className="h-4 w-4"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+          />
         </svg>
         {isMobileSheetTrigger ? (
           <span className="truncate">{shortName}</span>
         ) : (
           <>
-            <span className="hidden max-w-36 truncate xl:inline">Viewer: {shortName}</span>
-            <span className="hidden max-w-24 truncate md:inline xl:hidden">{shortName}</span>
+            <span className="hidden max-w-36 truncate xl:inline">
+              Viewer: {shortName}
+            </span>
+            <span className="hidden max-w-24 truncate md:inline xl:hidden">
+              {shortName}
+            </span>
           </>
         )}
         <svg
@@ -382,7 +414,12 @@ export default function ViewerBadge({
           stroke="currentColor"
           viewBox="0 0 24 24"
         >
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M19 9l-7 7-7-7"
+          />
         </svg>
       </button>
 
@@ -395,8 +432,7 @@ export default function ViewerBadge({
             onAction={handleAction}
             onChangeViewer={handleChangeViewer}
             onClearViewer={handleClearViewer}
-            onSignOut={handleSignOut}
-          />
+              />
         </BottomSheet>
       )}
 
@@ -406,7 +442,9 @@ export default function ViewerBadge({
           onKeyDown={handleKeyDown}
           tabIndex={-1}
           role="menu"
-          aria-activedescendant={activeIndex >= 0 ? `viewer-menu-item-${activeIndex}` : undefined}
+          aria-activedescendant={
+            activeIndex >= 0 ? `viewer-menu-item-${activeIndex}` : undefined
+          }
         >
           <ViewerMenuContent
             me={me}
@@ -415,8 +453,7 @@ export default function ViewerBadge({
             onAction={handleAction}
             onChangeViewer={handleChangeViewer}
             onClearViewer={handleClearViewer}
-            onSignOut={handleSignOut}
-            activeIndex={activeIndex}
+                activeIndex={activeIndex}
             itemRefs={menuItemRefs}
           />
         </div>

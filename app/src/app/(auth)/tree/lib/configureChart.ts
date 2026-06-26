@@ -6,7 +6,10 @@ interface ConfigureChartOptions {
   chart: FamilyChart;
   ancestryDepth: number;
   progenyDepth: number;
-  onCardClick: (event: MouseEvent, datum: import('family-chart').TreeDatum) => void;
+  onCardClick: (
+    event: MouseEvent,
+    datum: import('family-chart').TreeDatum,
+  ) => void;
 }
 
 export function configureFamilyChart({
@@ -28,10 +31,7 @@ export function configureFamilyChart({
   card
     .setStyle('rect')
     .setMiniTree(true)
-    .setCardDisplay([
-      ['first name', 'last name'],
-      ['birthday'],
-    ])
+    .setCardDisplay([['first name', 'last name'], ['birthday']])
     .setCardDim({ w: 240, h: 80, height_auto: true })
     .setCardInnerHtmlCreator(createFamilyCardInnerHtml)
     .setOnCardClick(onCardClick);

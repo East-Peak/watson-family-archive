@@ -2,15 +2,21 @@ import { Color, Rectangle } from 'cesium';
 import { REGION_COLOR_HEX } from './regions';
 
 export const REGION_COLORS: Record<string, Color> = Object.fromEntries(
-  Object.entries(REGION_COLOR_HEX).map(([region, hex]) => [region, Color.fromCssColorString(hex)]),
+  Object.entries(REGION_COLOR_HEX).map(([region, hex]) => [
+    region,
+    Color.fromCssColorString(hex),
+  ]),
 ) as Record<string, Color>;
 
-export const FAMILY_BRANCHES: Record<string, { label: string; surnames: string[] }> = {
-  'all': { label: 'All Families', surnames: [] },
+export const FAMILY_BRANCHES: Record<
+  string,
+  { label: string; surnames: string[] }
+> = {
+  all: { label: 'All Families', surnames: [] },
 };
 
 /** Legacy close-up of Marin County — kept for reference but no longer used as default. */
-export const MARIN_VIEW = Rectangle.fromDegrees(-123.10, 37.80, -122.30, 38.35);
+export const MARIN_VIEW = Rectangle.fromDegrees(-123.1, 37.8, -122.3, 38.35);
 
 /** Default globe view: North Atlantic showing US east coast + Western Europe.
  *  Shows the transatlantic migration corridor where most family events cluster. */
@@ -27,12 +33,12 @@ export const APPROXIMATE_RING_RADIUS: Record<string, number> = {
 
 /** Arc color by century of departure. */
 export const ERA_COLORS: Record<string, string> = {
-  pre1700: '#3b82f6',  // deep blue
-  '1700s': '#14b8a6',  // teal
-  '1800s': '#f59e0b',  // amber
-  '1900s': '#f97316',  // orange
-  '2000s': '#ef4444',  // red
-  unknown: '#6b7280',  // gray
+  pre1700: '#3b82f6', // deep blue
+  '1700s': '#14b8a6', // teal
+  '1800s': '#f59e0b', // amber
+  '1900s': '#f97316', // orange
+  '2000s': '#ef4444', // red
+  unknown: '#6b7280', // gray
 };
 
 /** Arc color by family surname (top surnames get distinct colors). */

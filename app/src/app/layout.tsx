@@ -1,25 +1,24 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono, Fraunces } from "next/font/google";
-import { Analytics } from "@vercel/analytics/next";
+import type { Metadata } from 'next';
+import { Geist, Geist_Mono, Fraunces } from 'next/font/google';
+import { Analytics } from '@vercel/analytics/next';
 
-import "./globals.css";
-import DevTools from "@/components/DevTools";
-import { siteConfig } from "@/lib/siteConfig";
+import './globals.css';
+import { siteConfig } from '@/lib/siteConfig';
 
 const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+  variable: '--font-geist-sans',
+  subsets: ['latin'],
 });
 
 const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  variable: '--font-geist-mono',
+  subsets: ['latin'],
 });
 
 const fraunces = Fraunces({
-  variable: "--font-fraunces",
-  subsets: ["latin"],
-  axes: ["SOFT", "WONK", "opsz"],
+  variable: '--font-fraunces',
+  subsets: ['latin'],
+  axes: ['SOFT', 'WONK', 'opsz'],
 });
 
 export const metadata: Metadata = {
@@ -38,7 +37,6 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${fraunces.variable} antialiased`}
       >
         {children}
-        <DevTools />
         <Analytics />
       </body>
     </html>

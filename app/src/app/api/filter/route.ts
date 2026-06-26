@@ -16,14 +16,15 @@ export async function GET(request: NextRequest) {
     const { searchParams } = new URL(request.url);
     const treeId = searchParams.get('treeId') || DEFAULT_TREE_ID;
 
-    const [occupations, religions, wars, legalStatuses, ethnicities, places] = await Promise.all([
-      listOccupations(treeId),
-      listReligions(treeId),
-      listWars(treeId),
-      listLegalStatuses(treeId),
-      listEthnicities(treeId),
-      listPlaces(treeId),
-    ]);
+    const [occupations, religions, wars, legalStatuses, ethnicities, places] =
+      await Promise.all([
+        listOccupations(treeId),
+        listReligions(treeId),
+        listWars(treeId),
+        listLegalStatuses(treeId),
+        listEthnicities(treeId),
+        listPlaces(treeId),
+      ]);
 
     return NextResponse.json({
       occupations,
@@ -37,7 +38,7 @@ export async function GET(request: NextRequest) {
     console.error('Error fetching filter options:', error);
     return NextResponse.json(
       { error: 'Failed to fetch filter options' },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

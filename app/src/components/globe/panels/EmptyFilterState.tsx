@@ -4,7 +4,10 @@ import type { GlobeViewState } from '../types';
 
 interface EmptyFilterStateProps {
   onReset: () => void;
-  viewState?: Pick<GlobeViewState, 'branch' | 'yearRange' | 'regions' | 'highlightPerson' | 'eventTypes'>;
+  viewState?: Pick<
+    GlobeViewState,
+    'branch' | 'yearRange' | 'regions' | 'highlightPerson' | 'eventTypes'
+  >;
   onClearFilter?: (partial: Partial<GlobeViewState>) => void;
 }
 
@@ -16,7 +19,9 @@ interface ActiveFilter {
   clear: Partial<GlobeViewState>;
 }
 
-function describeActiveFilters(viewState?: EmptyFilterStateProps['viewState']): ActiveFilter[] {
+function describeActiveFilters(
+  viewState?: EmptyFilterStateProps['viewState'],
+): ActiveFilter[] {
   if (!viewState) return [];
   const filters: ActiveFilter[] = [];
 
@@ -60,7 +65,11 @@ function describeActiveFilters(viewState?: EmptyFilterStateProps['viewState']): 
   return filters;
 }
 
-export default function EmptyFilterState({ onReset, viewState, onClearFilter }: EmptyFilterStateProps) {
+export default function EmptyFilterState({
+  onReset,
+  viewState,
+  onClearFilter,
+}: EmptyFilterStateProps) {
   const activeFilters = describeActiveFilters(viewState);
   const branchLabel = viewState?.branch === 'my-lines' ? 'Your Lines' : null;
 
@@ -68,10 +77,22 @@ export default function EmptyFilterState({ onReset, viewState, onClearFilter }: 
     <div className="absolute inset-0 z-10 flex items-center justify-center pointer-events-none">
       <div className="bg-black/80 backdrop-blur-md border border-white/10 rounded-2xl p-6 text-left pointer-events-auto max-w-sm">
         <div className="flex items-center gap-2 mb-3">
-          <svg className="w-5 h-5 text-white/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          <svg
+            className="w-5 h-5 text-white/40"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={1.5}
+              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+            />
           </svg>
-          <div className="text-white text-sm font-medium">No locations match</div>
+          <div className="text-white text-sm font-medium">
+            No locations match
+          </div>
         </div>
 
         {branchLabel && (
@@ -82,9 +103,14 @@ export default function EmptyFilterState({ onReset, viewState, onClearFilter }: 
 
         {activeFilters.length > 0 ? (
           <div className="space-y-2 mb-4">
-            <div className="text-white/40 text-xs uppercase tracking-wide">Active filters</div>
+            <div className="text-white/40 text-xs uppercase tracking-wide">
+              Active filters
+            </div>
             {activeFilters.map((f) => (
-              <div key={f.label} className="flex items-center justify-between gap-2 text-sm">
+              <div
+                key={f.label}
+                className="flex items-center justify-between gap-2 text-sm"
+              >
                 <div className="min-w-0 flex-1">
                   <span className="text-white/60">{f.label}: </span>
                   <span className="text-white/90 truncate">{f.detail}</span>

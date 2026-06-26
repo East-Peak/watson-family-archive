@@ -31,7 +31,9 @@ export default function MobileTimelineRangeControls({
   return (
     <section className="space-y-4">
       <div>
-        <h3 className="text-xs font-semibold uppercase tracking-[0.18em] text-shield/45">Year Range</h3>
+        <h3 className="text-xs font-semibold uppercase tracking-[0.18em] text-shield/45">
+          Year Range
+        </h3>
         <div className="mt-3 flex flex-wrap gap-2">
           {presets.map((preset) => {
             const isActive = rangesEqual(preset.range, yearRange);

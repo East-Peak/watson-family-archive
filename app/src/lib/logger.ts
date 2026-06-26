@@ -1,4 +1,3 @@
-import { createHash } from 'node:crypto';
 
 // Lowercased so matching is case-insensitive. Add freely — better to over-redact
 // than to leak. The Codex round 1 review specifically called out the gaps in
@@ -35,17 +34,15 @@ const SECRET_FIELDS = new Set([
   'email',
 ]);
 
-export function hashEmail(email: string): string {
-  const salt = process.env.AUTH_SECRET || 'dev';
-  const normalized = email.trim().toLowerCase();
-  return createHash('sha256').update(`${salt}:${normalized}`).digest('hex').slice(0, 16);
-}
 
 function isSecretKey(key: string): boolean {
   return SECRET_FIELDS.has(key.toLowerCase().replace(/[-_]/g, ''));
 }
 
-function sanitize(value: unknown, seen: WeakSet<object> = new WeakSet()): unknown {
+function sanitize(
+  value: unknown,
+  seen: WeakSet<object> = new WeakSet(),
+): unknown {
   if (value === null || value === undefined) return value;
   if (typeof value !== 'object') return value;
   if (seen.has(value as object)) return '[Circular]';
@@ -75,7 +72,11 @@ function sanitizeTop(data: Record<string, unknown>): Record<string, unknown> {
   return out;
 }
 
-function write(level: 'info' | 'warn' | 'error', event: string, data: Record<string, unknown>) {
+function write(
+  level: 'info' | 'warn' | 'error',
+  event: string,
+  data: Record<string, unknown>,
+) {
   let payload: string;
   try {
     payload = JSON.stringify({
@@ -100,7 +101,10 @@ function write(level: 'info' | 'warn' | 'error', event: string, data: Record<str
 }
 
 export const log = {
-  info: (event: string, data: Record<string, unknown> = {}) => write('info', event, data),
-  warn: (event: string, data: Record<string, unknown> = {}) => write('warn', event, data),
-  error: (event: string, data: Record<string, unknown> = {}) => write('error', event, data),
+  info: (event: string, data: Record<string, unknown> = {}) =>
+    write('info', event, data),
+  warn: (event: string, data: Record<string, unknown> = {}) =>
+    write('warn', event, data),
+  error: (event: string, data: Record<string, unknown> = {}) =>
+    write('error', event, data),
 };

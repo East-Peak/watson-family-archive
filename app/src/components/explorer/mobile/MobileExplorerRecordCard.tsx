@@ -1,6 +1,6 @@
 'use client';
 
-import { useId, useState } from 'react';
+import { memo, useId, useState } from 'react';
 import Link from 'next/link';
 import type { ExplorerRecord } from '../types';
 
@@ -23,15 +23,17 @@ const TIER_COLORS: Record<string, string> = {
 };
 
 function toTitleCase(value: string): string {
-  return value.replace(/_/g, ' ').replace(/\b\w/g, (char) => char.toUpperCase());
+  return value
+    .replace(/_/g, ' ')
+    .replace(/\b\w/g, (char) => char.toUpperCase());
 }
 
-export default function MobileExplorerRecordCard({ record }: { record: ExplorerRecord }) {
+function MobileExplorerRecordCard({ record }: { record: ExplorerRecord }) {
   const [participantsOpen, setParticipantsOpen] = useState(false);
   const participantsRegionId = useId();
   const typeColor = TYPE_COLORS[record.type] ?? TYPE_COLORS.other;
   const tierColor = record.tier
-    ? TIER_COLORS[record.tier] ?? 'bg-gray-100 text-gray-500 border-gray-200'
+    ? (TIER_COLORS[record.tier] ?? 'bg-gray-100 text-gray-500 border-gray-200')
     : null;
 
   return (
@@ -39,11 +41,15 @@ export default function MobileExplorerRecordCard({ record }: { record: ExplorerR
       <div className="flex items-start justify-between gap-3">
         <div className="min-w-0">
           <div className="flex flex-wrap items-center gap-2">
-            <span className={`rounded-full border px-2 py-1 text-xs font-semibold ${typeColor}`}>
+            <span
+              className={`rounded-full border px-2 py-1 text-xs font-semibold ${typeColor}`}
+            >
               {toTitleCase(record.type)}
             </span>
             {record.tier && tierColor && (
-              <span className={`rounded-full border px-2 py-1 text-xs font-semibold ${tierColor}`}>
+              <span
+                className={`rounded-full border px-2 py-1 text-xs font-semibold ${tierColor}`}
+              >
                 Tier {record.tier}
               </span>
             )}
@@ -57,7 +63,10 @@ export default function MobileExplorerRecordCard({ record }: { record: ExplorerR
             {record.collection}
           </h3>
           <p className="mt-1 text-sm text-slate-500">
-            {[record.year ?? 'Unknown year', record.place ?? 'Unknown place'].join(' · ')}
+            {[
+              record.year ?? 'Unknown year',
+              record.place ?? 'Unknown place',
+            ].join(' · ')}
           </p>
         </div>
 
@@ -92,19 +101,25 @@ export default function MobileExplorerRecordCard({ record }: { record: ExplorerR
           className="flex min-h-11 w-full items-center justify-between rounded-2xl border border-shield/10 bg-shield/[0.03] px-3 py-2 text-left text-sm font-semibold text-shield transition-colors hover:bg-shield/[0.05]"
         >
           <span>Participants ({record.participantCount})</span>
-          <span className="text-shield/55">{participantsOpen ? 'Hide' : 'Show'}</span>
+          <span className="text-shield/55">
+            {participantsOpen ? 'Hide' : 'Show'}
+          </span>
         </button>
 
         {participantsOpen && (
           <div id={participantsRegionId} className="mt-3 space-y-2">
             {record.participants.length === 0 ? (
-              <p className="text-sm text-slate-500">No participant data available.</p>
+              <p className="text-sm text-slate-500">
+                No participant data available.
+              </p>
             ) : (
               record.participants.map((participant, index) => {
                 const content = (
                   <div className="rounded-2xl border border-shield/10 bg-white px-3 py-2">
                     <div className="flex items-start justify-between gap-3">
-                      <p className="text-sm font-semibold text-shield">{participant.name}</p>
+                      <p className="text-sm font-semibold text-shield">
+                        {participant.name}
+                      </p>
                       {participant.role && (
                         <span className="rounded-full bg-shield/[0.05] px-2 py-0.5 text-[11px] text-shield/70">
                           {participant.role}
@@ -113,7 +128,9 @@ export default function MobileExplorerRecordCard({ record }: { record: ExplorerR
                     </div>
                     <div className="mt-1 flex flex-wrap gap-x-3 gap-y-1 text-xs text-slate-500">
                       {participant.age && <span>Age {participant.age}</span>}
-                      {participant.birthplace && <span>{participant.birthplace}</span>}
+                      {participant.birthplace && (
+                        <span>{participant.birthplace}</span>
+                      )}
                     </div>
                   </div>
                 );
@@ -137,3 +154,5 @@ export default function MobileExplorerRecordCard({ record }: { record: ExplorerR
     </article>
   );
 }
+
+export default memo(MobileExplorerRecordCard);

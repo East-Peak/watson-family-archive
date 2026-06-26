@@ -115,12 +115,22 @@ function containsAnyMarker(text: string, markers: string[]): boolean {
   return markers.some((marker) => text.includes(marker));
 }
 
-function isLikelyUnitedKingdomCoordinate(location: Pick<Location, 'lat' | 'lng'>): boolean {
-  return location.lat >= 49 && location.lat <= 61 && location.lng >= -11 && location.lng <= 4;
+function isLikelyUnitedKingdomCoordinate(
+  location: Pick<Location, 'lat' | 'lng'>,
+): boolean {
+  return (
+    location.lat >= 49 &&
+    location.lat <= 61 &&
+    location.lng >= -11 &&
+    location.lng <= 4
+  );
 }
 
-function inferUnitedKingdomRegion(location: Pick<Location, 'name' | 'city' | 'state'>): string {
-  const text = `${location.name} ${location.city} ${location.state}`.toLowerCase();
+function inferUnitedKingdomRegion(
+  location: Pick<Location, 'name' | 'city' | 'state'>,
+): string {
+  const text =
+    `${location.name} ${location.city} ${location.state}`.toLowerCase();
 
   if (containsAnyMarker(text, WALES_MARKERS)) return 'Wales';
   if (containsAnyMarker(text, SCOTLAND_MARKERS)) return 'Scotland';
@@ -130,7 +140,10 @@ function inferUnitedKingdomRegion(location: Pick<Location, 'name' | 'city' | 'st
 }
 
 export function getLocationRegion(
-  location: Pick<Location, 'country' | 'name' | 'city' | 'state' | 'lat' | 'lng'>,
+  location: Pick<
+    Location,
+    'country' | 'name' | 'city' | 'state' | 'lat' | 'lng'
+  >,
 ): string {
   const country = location.country.trim();
   if (!country) return '';

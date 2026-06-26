@@ -1,21 +1,19 @@
 'use client';
 
-import {
-  Entity,
-  EllipseGraphics,
-} from 'resium';
-import {
-  Cartesian3,
-  Color,
-  ColorMaterialProperty,
-} from 'cesium';
+import { Entity, EllipseGraphics } from 'resium';
+import { Cartesian3, Color, ColorMaterialProperty } from 'cesium';
 import type { FilteredLocation } from './types';
 import { APPROXIMATE_RING_RADIUS } from './constants';
 
 interface ApproximateRingsProps {
   locations: FilteredLocation[];
   isDensityMode: boolean;
-  getLocationColor: (location: Pick<FilteredLocation, 'country' | 'name' | 'city' | 'state' | 'lat' | 'lng'>) => Color;
+  getLocationColor: (
+    location: Pick<
+      FilteredLocation,
+      'country' | 'name' | 'city' | 'state' | 'lat' | 'lng'
+    >,
+  ) => Color;
 }
 
 export default function ApproximateRings({
@@ -26,7 +24,9 @@ export default function ApproximateRings({
   return (
     <>
       {locations.map((location) => {
-        const radius = APPROXIMATE_RING_RADIUS[location.precision] || APPROXIMATE_RING_RADIUS.city;
+        const radius =
+          APPROXIMATE_RING_RADIUS[location.precision] ||
+          APPROXIMATE_RING_RADIUS.city;
         if (radius === 0) return null;
 
         const baseColor = getLocationColor(location);
@@ -42,7 +42,9 @@ export default function ApproximateRings({
             <EllipseGraphics
               semiMajorAxis={radius}
               semiMinorAxis={radius}
-              material={new ColorMaterialProperty(baseColor.withAlpha(ringAlpha))}
+              material={
+                new ColorMaterialProperty(baseColor.withAlpha(ringAlpha))
+              }
               outline
               outlineColor={baseColor.withAlpha(outlineAlpha)}
               outlineWidth={1.5}

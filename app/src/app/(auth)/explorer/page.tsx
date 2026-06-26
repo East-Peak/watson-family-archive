@@ -14,6 +14,7 @@ import MobileExplorerSummaryBar from '@/components/explorer/mobile/MobileExplore
 import MobileExplorerFilterSheet from '@/components/explorer/mobile/MobileExplorerFilterSheet';
 import MobileExplorerPersonCard from '@/components/explorer/mobile/MobileExplorerPersonCard';
 import MobileExplorerRecordCard from '@/components/explorer/mobile/MobileExplorerRecordCard';
+import VirtualizedCardList from '@/components/explorer/VirtualizedCardList';
 import type { SortField, RecordSortField } from '@/components/explorer/types';
 
 const PEOPLE_SORT_LABELS: Record<SortField, string> = {
@@ -41,10 +42,15 @@ const RECORD_SORT_LABELS: Record<RecordSortField, string> = {
 };
 
 function toTitleCase(value: string): string {
-  return value.replace(/_/g, ' ').replace(/\b\w/g, (char) => char.toUpperCase());
+  return value
+    .replace(/_/g, ' ')
+    .replace(/\b\w/g, (char) => char.toUpperCase());
 }
 
-function formatExplorerSortSummary(viewMode: 'people' | 'records', viewState: ReturnType<typeof useExplorerViewState>['state']) {
+function formatExplorerSortSummary(
+  viewMode: 'people' | 'records',
+  viewState: ReturnType<typeof useExplorerViewState>['state'],
+) {
   if (viewMode === 'records') {
     const label = RECORD_SORT_LABELS[viewState.recordSortField];
     return `Sort: ${label}${viewState.recordSortDirection === 'desc' ? ' desc' : ''}`;
@@ -54,7 +60,9 @@ function formatExplorerSortSummary(viewMode: 'people' | 'records', viewState: Re
   return `Sort: ${label}${viewState.sortDirection === 'desc' ? ' desc' : ''}`;
 }
 
-function countActiveExplorerFilters(viewState: ReturnType<typeof useExplorerViewState>['state']) {
+function countActiveExplorerFilters(
+  viewState: ReturnType<typeof useExplorerViewState>['state'],
+) {
   if (viewState.viewMode === 'records') {
     let count = 0;
     if (viewState.recordQuery.trim()) count += 1;
@@ -72,20 +80,25 @@ function countActiveExplorerFilters(viewState: ReturnType<typeof useExplorerView
   count += viewState.countries.length;
   if (viewState.sex) count += 1;
   count += viewState.statuses.length;
-  if (viewState.completenessMin !== 0 || viewState.completenessMax !== 100) count += 1;
+  if (viewState.completenessMin !== 0 || viewState.completenessMax !== 100)
+    count += 1;
   if (viewState.validation) count += 1;
   if (viewState.hasSources) count += 1;
   return count;
 }
 
-function buildExplorerRouteContext(viewState: ReturnType<typeof useExplorerViewState>['state']): Record<string, unknown> {
+function buildExplorerRouteContext(
+  viewState: ReturnType<typeof useExplorerViewState>['state'],
+): Record<string, unknown> {
   if (viewState.viewMode === 'records') {
     const context: Record<string, unknown> = {
       view: 'Records',
     };
 
-    if (viewState.recordQuery.trim()) context.search = viewState.recordQuery.trim();
-    if (viewState.recordTypes.length > 0) context.recordTypes = viewState.recordTypes;
+    if (viewState.recordQuery.trim())
+      context.search = viewState.recordQuery.trim();
+    if (viewState.recordTypes.length > 0)
+      context.recordTypes = viewState.recordTypes;
     if (viewState.tiers.length > 0) context.tiers = viewState.tiers;
     if (viewState.yearMin !== 0 || viewState.yearMax !== 9999) {
       context.yearRange = {
@@ -93,9 +106,14 @@ function buildExplorerRouteContext(viewState: ReturnType<typeof useExplorerViewS
         ...(viewState.yearMax !== 9999 ? { endYear: viewState.yearMax } : {}),
       };
     }
-    if (viewState.collectionSearch.trim()) context.collectionSearch = viewState.collectionSearch.trim();
-    if (viewState.participantSearch.trim()) context.participantSearch = viewState.participantSearch.trim();
-    if (viewState.recordSortField !== 'year' || viewState.recordSortDirection !== 'asc') {
+    if (viewState.collectionSearch.trim())
+      context.collectionSearch = viewState.collectionSearch.trim();
+    if (viewState.participantSearch.trim())
+      context.participantSearch = viewState.participantSearch.trim();
+    if (
+      viewState.recordSortField !== 'year' ||
+      viewState.recordSortDirection !== 'asc'
+    ) {
       context.sort = {
         label: RECORD_SORT_LABELS[viewState.recordSortField],
         direction: viewState.recordSortDirection,
@@ -112,9 +130,15 @@ function buildExplorerRouteContext(viewState: ReturnType<typeof useExplorerViewS
   if (viewState.query.trim()) context.search = viewState.query.trim();
   if (viewState.countries.length > 0) context.countries = viewState.countries;
   if (viewState.centuries.length > 0) context.centuries = viewState.centuries;
-  if (viewState.statuses.length > 0) context.statuses = viewState.statuses.map((status) => toTitleCase(status));
+  if (viewState.statuses.length > 0)
+    context.statuses = viewState.statuses.map((status) => toTitleCase(status));
   if (viewState.sex) {
-    context.sex = viewState.sex === 'M' ? 'Male' : viewState.sex === 'F' ? 'Female' : 'Unknown';
+    context.sex =
+      viewState.sex === 'M'
+        ? 'Male'
+        : viewState.sex === 'F'
+          ? 'Female'
+          : 'Unknown';
   }
   if (viewState.completenessMin !== 0 || viewState.completenessMax !== 100) {
     context.completenessRange = {
@@ -122,9 +146,11 @@ function buildExplorerRouteContext(viewState: ReturnType<typeof useExplorerViewS
       max: viewState.completenessMax,
     };
   }
-  if (viewState.validation) context.validation = toTitleCase(viewState.validation);
+  if (viewState.validation)
+    context.validation = toTitleCase(viewState.validation);
   if (viewState.hasSources) {
-    context.hasSources = viewState.hasSources === 'yes' ? 'Has sources' : 'No sources';
+    context.hasSources =
+      viewState.hasSources === 'yes' ? 'Has sources' : 'No sources';
   }
   if (viewState.sortField !== 'fullName' || viewState.sortDirection !== 'asc') {
     context.sort = {
@@ -151,10 +177,19 @@ export default function ExplorerPage() {
 
   const isRecordsMode = viewState.viewMode === 'records';
   const activeResultLabel = isRecordsMode ? 'records' : 'people';
-  const routeContext = useMemo(() => buildExplorerRouteContext(viewState), [viewState]);
-  const activeFilterCount = useMemo(() => countActiveExplorerFilters(viewState), [viewState]);
+  const routeContext = useMemo(
+    () => buildExplorerRouteContext(viewState),
+    [viewState],
+  );
+  const activeFilterCount = useMemo(
+    () => countActiveExplorerFilters(viewState),
+    [viewState],
+  );
   const activeSummary = useMemo(() => {
-    const sortSummary = formatExplorerSortSummary(viewState.viewMode, viewState);
+    const sortSummary = formatExplorerSortSummary(
+      viewState.viewMode,
+      viewState,
+    );
     if (activeFilterCount < 1) return sortSummary;
     return `${activeFilterCount} filter${activeFilterCount === 1 ? '' : 's'} · ${sortSummary}`;
   }, [activeFilterCount, viewState]);
@@ -165,16 +200,15 @@ export default function ExplorerPage() {
     }
   }, [isMobile]);
 
-  const routeContextProvider = useCallback(
-    () => routeContext,
-    [routeContext],
-  );
+  const routeContextProvider = useCallback(() => routeContext, [routeContext]);
   useRouteContextProvider(routeContextProvider);
 
   const handleSort = useCallback(
     (field: SortField) => {
       if (viewState.sortField === field) {
-        setViewState({ sortDirection: viewState.sortDirection === 'asc' ? 'desc' : 'asc' });
+        setViewState({
+          sortDirection: viewState.sortDirection === 'asc' ? 'desc' : 'asc',
+        });
       } else {
         setViewState({ sortField: field, sortDirection: 'asc' });
       }
@@ -185,7 +219,10 @@ export default function ExplorerPage() {
   const handleRecordSort = useCallback(
     (field: RecordSortField) => {
       if (viewState.recordSortField === field) {
-        setViewState({ recordSortDirection: viewState.recordSortDirection === 'asc' ? 'desc' : 'asc' });
+        setViewState({
+          recordSortDirection:
+            viewState.recordSortDirection === 'asc' ? 'desc' : 'asc',
+        });
       } else {
         setViewState({ recordSortField: field, recordSortDirection: 'asc' });
       }
@@ -194,8 +231,12 @@ export default function ExplorerPage() {
   );
 
   const loading = isRecordsMode ? recordsResult.loading : peopleResult.loading;
-  const totalCount = isRecordsMode ? recordsResult.totalCount : peopleResult.totalCount;
-  const filteredCount = isRecordsMode ? recordsResult.filteredCount : peopleResult.filteredCount;
+  const totalCount = isRecordsMode
+    ? recordsResult.totalCount
+    : peopleResult.totalCount;
+  const filteredCount = isRecordsMode
+    ? recordsResult.filteredCount
+    : peopleResult.filteredCount;
   const activeReset = isRecordsMode ? resetRecordsState : resetPeopleState;
 
   if (loading || isMobile === null) {
@@ -219,38 +260,53 @@ export default function ExplorerPage() {
           onResetActive={activeReset}
         />
 
-        <div className="flex-1 overflow-y-auto md:hidden" data-testid="mobile-explorer-results">
-          <MobileExplorerSummaryBar
-            viewMode={viewState.viewMode}
-            resultCount={filteredCount}
-            resultLabel={activeResultLabel}
-            activeSummary={activeSummary}
-            onViewModeChange={(viewMode) => setViewState({ viewMode })}
-            onOpenFilters={() => setIsFilterSheetOpen(true)}
-          />
+        <MobileExplorerSummaryBar
+          viewMode={viewState.viewMode}
+          resultCount={filteredCount}
+          resultLabel={activeResultLabel}
+          activeSummary={activeSummary}
+          onViewModeChange={(viewMode) => setViewState({ viewMode })}
+          onOpenFilters={() => setIsFilterSheetOpen(true)}
+        />
 
-          <div className="space-y-3 px-4 py-4">
-            {isRecordsMode ? (
-              recordsResult.filteredData.length === 0 ? (
-                <div className="rounded-3xl border border-dashed border-shield/15 bg-white/70 px-4 py-10 text-center text-sm text-shield/50">
-                  No records match your filters.
-                </div>
-              ) : (
-                recordsResult.filteredData.map((record) => (
-                  <MobileExplorerRecordCard key={record.id} record={record} />
-                ))
-              )
-            ) : peopleResult.filteredData.length === 0 ? (
-              <div className="rounded-3xl border border-dashed border-shield/15 bg-white/70 px-4 py-10 text-center text-sm text-shield/50">
-                No people match your filters.
-              </div>
-            ) : (
-              peopleResult.filteredData.map((person) => (
-                <MobileExplorerPersonCard key={person.id} person={person} />
-              ))
-            )}
+        {(
+          isRecordsMode
+            ? recordsResult.filteredData.length === 0
+            : peopleResult.filteredData.length === 0
+        ) ? (
+          <div
+            className="flex-1 overflow-y-auto px-4 py-4"
+            data-testid="mobile-explorer-results"
+          >
+            <div className="rounded-3xl border border-dashed border-shield/15 bg-white/70 px-4 py-10 text-center text-sm text-shield/50">
+              {isRecordsMode
+                ? 'No records match your filters.'
+                : 'No people match your filters.'}
+            </div>
           </div>
-        </div>
+        ) : isRecordsMode ? (
+          <VirtualizedCardList
+            data-testid="mobile-explorer-results"
+            className="px-4 py-4"
+            items={recordsResult.filteredData}
+            renderItem={(record) => (
+              <div className="mb-3">
+                <MobileExplorerRecordCard record={record} />
+              </div>
+            )}
+          />
+        ) : (
+          <VirtualizedCardList
+            data-testid="mobile-explorer-results"
+            className="px-4 py-4"
+            items={peopleResult.filteredData}
+            renderItem={(person) => (
+              <div className="mb-3">
+                <MobileExplorerPersonCard person={person} />
+              </div>
+            )}
+          />
+        )}
       </main>
     );
   }

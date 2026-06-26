@@ -32,7 +32,9 @@ export function useTreeChartController({
   isSidebarOpen,
 }: UseTreeChartControllerArgs) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const chartRef = useRef<ReturnType<typeof import('family-chart').createChart> | null>(null);
+  const chartRef = useRef<ReturnType<
+    typeof import('family-chart').createChart
+  > | null>(null);
   const ancestryDepth = 5;
   const progenyDepth = 3;
 
@@ -42,56 +44,78 @@ export function useTreeChartController({
   const [drawerPersonId, setDrawerPersonId] = useState<string | null>(null);
   const [chartData, setChartData] = useState<FamilyChartDatum[]>([]);
   const [treeFocusPersonId, setTreeFocusPersonId] = useState<string | null>(
-    focusId ?? viewerId ?? siteConfig.rootPersonId ?? null
+    focusId ?? viewerId ?? siteConfig.rootPersonId ?? null,
   );
 
   const visiblePersonIds = useMemo(
-    () => collectVisiblePersonIds(chartData, treeFocusPersonId, ancestryDepth, progenyDepth),
-    [chartData, treeFocusPersonId]
+    () =>
+      collectVisiblePersonIds(
+        chartData,
+        treeFocusPersonId,
+        ancestryDepth,
+        progenyDepth,
+      ),
+    [chartData, treeFocusPersonId],
   );
 
-  const focusPerson = useCallback((personId: string, openDrawer: boolean = true) => {
-    if (openDrawer) {
-      setDrawerPersonId(personId);
-    }
-    setTreeFocusPersonId(personId);
-    if (chartRef.current) {
-      chartRef.current.updateMainId(personId);
-      chartRef.current.updateTree({ tree_position: 'main_to_middle', transition_time: 600 });
-    }
-  }, []);
+  const focusPerson = useCallback(
+    (personId: string, openDrawer: boolean = true) => {
+      if (openDrawer) {
+        setDrawerPersonId(personId);
+      }
+      setTreeFocusPersonId(personId);
+      if (chartRef.current) {
+        chartRef.current.updateMainId(personId);
+        chartRef.current.updateTree({
+          tree_position: 'main_to_middle',
+          transition_time: 600,
+        });
+      }
+    },
+    [],
+  );
 
   const handleCloseDrawer = useCallback(() => setDrawerPersonId(null), []);
 
-  const handleFocusPerson = useCallback((personId: string) => {
-    focusPerson(personId, true);
-  }, [focusPerson]);
+  const handleFocusPerson = useCallback(
+    (personId: string) => {
+      focusPerson(personId, true);
+    },
+    [focusPerson],
+  );
 
   const fitToScreen = useCallback(() => {
     if (chartRef.current) {
-      chartRef.current.updateTree({ tree_position: 'fit', transition_time: 800 });
+      chartRef.current.updateTree({
+        tree_position: 'fit',
+        transition_time: 800,
+      });
     }
   }, []);
 
-  const findPersonIdForBranch = useCallback((branch: string): string | null => {
-    const normalizedBranch = branch.trim().toLowerCase();
-    if (!normalizedBranch) return null;
+  const findPersonIdForBranch = useCallback(
+    (branch: string): string | null => {
+      const normalizedBranch = branch.trim().toLowerCase();
+      if (!normalizedBranch) return null;
 
-    const exactSurnameMatch = chartData.find((person) =>
-      person.data['last name']?.toLowerCase() === normalizedBranch
-    );
-    if (exactSurnameMatch) return exactSurnameMatch.id;
+      const exactSurnameMatch = chartData.find(
+        (person) =>
+          person.data['last name']?.toLowerCase() === normalizedBranch,
+      );
+      if (exactSurnameMatch) return exactSurnameMatch.id;
 
-    const partialSurnameMatch = chartData.find((person) =>
-      person.data['last name']?.toLowerCase().includes(normalizedBranch)
-    );
-    if (partialSurnameMatch) return partialSurnameMatch.id;
+      const partialSurnameMatch = chartData.find((person) =>
+        person.data['last name']?.toLowerCase().includes(normalizedBranch),
+      );
+      if (partialSurnameMatch) return partialSurnameMatch.id;
 
-    const fullNameMatch = chartData.find((person) =>
-      person.data._fullName?.toLowerCase().includes(normalizedBranch)
-    );
-    return fullNameMatch?.id ?? null;
-  }, [chartData]);
+      const fullNameMatch = chartData.find((person) =>
+        person.data._fullName?.toLowerCase().includes(normalizedBranch),
+      );
+      return fullNameMatch?.id ?? null;
+    },
+    [chartData],
+  );
 
   useEffect(() => {
     let cancelled = false;
@@ -135,13 +159,15 @@ export function useTreeChartController({
         });
 
         const configuredRootId = siteConfig.rootPersonId;
-        const mainId = focusId && data.find((person) => person.id === focusId)
-          ? focusId
-          : viewerId && data.find((person) => person.id === viewerId)
-            ? viewerId
-            : configuredRootId && data.find((person) => person.id === configuredRootId)
-              ? configuredRootId
-              : data[0]?.id;
+        const mainId =
+          focusId && data.find((person) => person.id === focusId)
+            ? focusId
+            : viewerId && data.find((person) => person.id === viewerId)
+              ? viewerId
+              : configuredRootId &&
+                  data.find((person) => person.id === configuredRootId)
+                ? configuredRootId
+                : data[0]?.id;
 
         chart.updateMainId(mainId);
         setTreeFocusPersonId(mainId ?? null);
@@ -149,7 +175,10 @@ export function useTreeChartController({
 
         setTimeout(() => {
           if (!cancelled) {
-            chart.updateTree({ tree_position: 'main_to_middle', transition_time: 800 });
+            chart.updateTree({
+              tree_position: 'main_to_middle',
+              transition_time: 800,
+            });
           }
         }, 200);
 
@@ -186,7 +215,10 @@ export function useTreeChartController({
       return;
     }
 
-    if (visualizationCommand.target !== 'tree' && visualizationCommand.target !== 'both') {
+    if (
+      visualizationCommand.target !== 'tree' &&
+      visualizationCommand.target !== 'both'
+    ) {
       return;
     }
 
@@ -204,7 +236,10 @@ export function useTreeChartController({
       case 'reset':
         if (viewerId) {
           focusPerson(viewerId, true);
-        } else if (siteConfig.rootPersonId && chartData.find((person) => person.id === siteConfig.rootPersonId)) {
+        } else if (
+          siteConfig.rootPersonId &&
+          chartData.find((person) => person.id === siteConfig.rootPersonId)
+        ) {
           focusPerson(siteConfig.rootPersonId, true);
         } else if (chartData[0]) {
           focusPerson(chartData[0].id, true);
@@ -221,7 +256,9 @@ export function useTreeChartController({
         } else if (visualizationCommand.params.personIds?.[0]) {
           focusPerson(visualizationCommand.params.personIds[0], true);
         } else if (visualizationCommand.params.branch) {
-          const branchPersonId = findPersonIdForBranch(visualizationCommand.params.branch);
+          const branchPersonId = findPersonIdForBranch(
+            visualizationCommand.params.branch,
+          );
           if (branchPersonId) {
             focusPerson(branchPersonId, true);
           }
@@ -230,7 +267,15 @@ export function useTreeChartController({
     }
 
     clearVisualizationCommand();
-  }, [visualizationCommand, clearVisualizationCommand, viewerId, chartData, push, focusPerson, findPersonIdForBranch]);
+  }, [
+    visualizationCommand,
+    clearVisualizationCommand,
+    viewerId,
+    chartData,
+    push,
+    focusPerson,
+    findPersonIdForBranch,
+  ]);
 
   return {
     containerRef,

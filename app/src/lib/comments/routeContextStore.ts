@@ -3,12 +3,16 @@ type GetRouteContext = () => Record<string, unknown>;
 let currentProvider: GetRouteContext | null = null;
 let currentRegistration = 0;
 
-export function setRouteContextProvider(provider: GetRouteContext | null): void {
+export function setRouteContextProvider(
+  provider: GetRouteContext | null,
+): void {
   currentRegistration += 1;
   currentProvider = provider;
 }
 
-export function registerRouteContextProvider(provider: GetRouteContext): () => void {
+export function registerRouteContextProvider(
+  provider: GetRouteContext,
+): () => void {
   const registration = ++currentRegistration;
   currentProvider = provider;
 

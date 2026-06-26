@@ -20,9 +20,13 @@ export default function MobileTimelineSummaryBar({
     >
       <div className="flex items-center gap-3">
         <div className="min-w-0 flex-1">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-shield/45">Timeline</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-shield/45">
+            Timeline
+          </p>
           <div className="mt-1 flex items-center gap-2 text-sm text-slate-600">
-            <span className="truncate font-medium text-shield">{branchLabel}</span>
+            <span className="truncate font-medium text-shield">
+              {branchLabel}
+            </span>
             <span className="text-slate-300">·</span>
             <span className="truncate">{yearRangeLabel}</span>
           </div>

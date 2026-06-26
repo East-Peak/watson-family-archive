@@ -1,33 +1,42 @@
-import type { NextConfig } from "next";
-import { existsSync, readFileSync } from "node:fs";
-import path from "node:path";
+import type { NextConfig } from 'next';
+import { existsSync, readFileSync } from 'node:fs';
+import path from 'node:path';
 
 function loadTreeIdentity() {
-  const configPath = path.resolve(process.cwd(), "../tree.config.json");
+  const configPath = path.resolve(process.cwd(), '../tree.config.json');
 
   if (!existsSync(configPath)) {
     return {
-      name: "Family Tree",
-      id: "family-tree",
-      rootPerson: "",
+      name: 'Family Tree',
+      id: 'family-tree',
+      rootPerson: '',
     };
   }
 
   try {
-    const parsed = JSON.parse(readFileSync(configPath, "utf8"));
+    const parsed = JSON.parse(readFileSync(configPath, 'utf8'));
     const tree = parsed?.tree ?? {};
 
     return {
-      name: typeof tree.name === "string" && tree.name.trim() ? tree.name.trim() : "Family Tree",
-      id: typeof tree.id === "string" && tree.id.trim() ? tree.id.trim() : "family-tree",
-      rootPerson: typeof tree.rootPerson === "string" ? tree.rootPerson.trim() : "",
+      name:
+        typeof tree.name === 'string' && tree.name.trim()
+          ? tree.name.trim()
+          : 'Family Tree',
+      id:
+        typeof tree.id === 'string' && tree.id.trim()
+          ? tree.id.trim()
+          : 'family-tree',
+      rootPerson:
+        typeof tree.rootPerson === 'string' ? tree.rootPerson.trim() : '',
     };
   } catch (error) {
-    console.warn(`Failed to read tree.config.json: ${error instanceof Error ? error.message : String(error)}`);
+    console.warn(
+      `Failed to read tree.config.json: ${error instanceof Error ? error.message : String(error)}`,
+    );
     return {
-      name: "Family Tree",
-      id: "family-tree",
-      rootPerson: "",
+      name: 'Family Tree',
+      id: 'family-tree',
+      rootPerson: '',
     };
   }
 }
@@ -60,22 +69,6 @@ const nextConfig: NextConfig = {
         pathname: '/**',
       },
     ],
-  },
-  async headers() {
-    return [
-      {
-        source: '/signin/:path*',
-        headers: [
-          { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
-        ],
-      },
-      {
-        source: '/request-access/:path*',
-        headers: [
-          { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
-        ],
-      },
-    ];
   },
 };
 

@@ -5,7 +5,12 @@ import EventTypeFilter from '@/components/globe/EventTypeFilter';
 import PersonSearch from '@/components/globe/PersonSearch';
 import { FAMILY_BRANCHES, REGION_COLORS } from '@/components/globe/constants';
 import { getRegionOptions } from '@/components/globe/regions';
-import type { ArcColorMode, GlobeData, GlobeViewMode, GlobeViewState } from '@/components/globe/types';
+import type {
+  ArcColorMode,
+  GlobeData,
+  GlobeViewMode,
+  GlobeViewState,
+} from '@/components/globe/types';
 
 const VIEW_MODES: {
   mode: GlobeViewMode;
@@ -17,25 +22,29 @@ const VIEW_MODES: {
     mode: 'pins',
     label: 'Pins',
     requiresViewer: false,
-    description: 'Individual places sized by how many people are visible in the current view.',
+    description:
+      'Individual places sized by how many people are visible in the current view.',
   },
   {
     mode: 'density',
     label: 'Density',
     requiresViewer: false,
-    description: 'Weighted bubbles that emphasize where the most in-view people cluster.',
+    description:
+      'Weighted bubbles that emphasize where the most in-view people cluster.',
   },
   {
     mode: 'generation',
     label: 'Generation',
     requiresViewer: true,
-    description: 'Recolors places by how many generations back each ancestor sits from the viewer.',
+    description:
+      'Recolors places by how many generations back each ancestor sits from the viewer.',
   },
   {
     mode: 'origins',
     label: 'Origins',
     requiresViewer: true,
-    description: 'One marker per terminal ancestor at their earliest mapped location.',
+    description:
+      'One marker per terminal ancestor at their earliest mapped location.',
   },
 ];
 
@@ -67,11 +76,18 @@ export default function MobileGlobeControls({
   onFitToView,
 }: MobileGlobeControlsProps) {
   const selectedBranch = viewState.branch || 'all';
-  const hasLoadedViewerAncestry = Boolean(viewerSurnames && viewerSurnames.size > 0);
+  const hasLoadedViewerAncestry = Boolean(
+    viewerSurnames && viewerSurnames.size > 0,
+  );
   const showMyLinesOption =
-    hasViewer || viewerAncestryLoading || Boolean(viewerAncestryError) || hasLoadedViewerAncestry;
+    hasViewer ||
+    viewerAncestryLoading ||
+    Boolean(viewerAncestryError) ||
+    hasLoadedViewerAncestry;
   const myLinesDisabled =
-    viewerAncestryLoading || Boolean(viewerAncestryError) || !hasLoadedViewerAncestry;
+    viewerAncestryLoading ||
+    Boolean(viewerAncestryError) ||
+    !hasLoadedViewerAncestry;
   const myLinesLabel = viewerAncestryLoading
     ? 'My Lines (loading...)'
     : viewerAncestryError
@@ -80,7 +96,9 @@ export default function MobileGlobeControls({
 
   const regionOptions = useMemo(() => getRegionOptions(globeData), [globeData]);
   const activeViewMode = useMemo(
-    () => VIEW_MODES.find(({ mode }) => mode === viewState.viewMode) ?? VIEW_MODES[0],
+    () =>
+      VIEW_MODES.find(({ mode }) => mode === viewState.viewMode) ??
+      VIEW_MODES[0],
     [viewState.viewMode],
   );
 
@@ -128,13 +146,19 @@ export default function MobileGlobeControls({
   return (
     <div className="space-y-5" data-testid="mobile-globe-controls">
       <section className="rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-3">
-        <div className="text-xs font-semibold uppercase tracking-[0.18em] text-white/45">Family Tree</div>
-        <div className="mt-2 text-sm text-white/80">{locationCount} locations</div>
+        <div className="text-xs font-semibold uppercase tracking-[0.18em] text-white/45">
+          Family Tree
+        </div>
+        <div className="mt-2 text-sm text-white/80">
+          {locationCount} locations
+        </div>
         <div className="text-sm text-white/80">{arcCount} migration paths</div>
       </section>
 
       <section>
-        <label className="text-xs font-semibold uppercase tracking-[0.18em] text-white/45">Filter by Family</label>
+        <label className="text-xs font-semibold uppercase tracking-[0.18em] text-white/45">
+          Filter by Family
+        </label>
         <select
           value={selectedBranch}
           onChange={handleBranchChange}
@@ -166,7 +190,9 @@ export default function MobileGlobeControls({
       />
 
       <section>
-        <div className="text-xs font-semibold uppercase tracking-[0.18em] text-white/45">View Mode</div>
+        <div className="text-xs font-semibold uppercase tracking-[0.18em] text-white/45">
+          View Mode
+        </div>
         <div className="mt-2 grid grid-cols-2 gap-2">
           {VIEW_MODES.map(({ mode, label, requiresViewer }) => {
             const isActive = viewState.viewMode === mode;
@@ -177,7 +203,9 @@ export default function MobileGlobeControls({
                 key={mode}
                 type="button"
                 disabled={isDisabled}
-                onClick={() => !isDisabled && onViewStateChange({ viewMode: mode })}
+                onClick={() =>
+                  !isDisabled && onViewStateChange({ viewMode: mode })
+                }
                 className={`rounded-xl px-3 py-2 text-sm font-medium transition-colors ${
                   isActive
                     ? 'bg-indigo-600 text-white'
@@ -191,7 +219,9 @@ export default function MobileGlobeControls({
             );
           })}
         </div>
-        <p className="mt-2 text-xs leading-5 text-white/60">{activeViewMode.description}</p>
+        <p className="mt-2 text-xs leading-5 text-white/60">
+          {activeViewMode.description}
+        </p>
         {hasActiveFilters && (
           <p className="mt-1 text-xs leading-5 text-white/40">
             {viewState.viewMode === 'density'
@@ -202,23 +232,30 @@ export default function MobileGlobeControls({
       </section>
 
       <section>
-        <div className="text-xs font-semibold uppercase tracking-[0.18em] text-white/45">Layers</div>
+        <div className="text-xs font-semibold uppercase tracking-[0.18em] text-white/45">
+          Layers
+        </div>
         <div className="mt-2 space-y-2">
           {[
             {
               label: 'Migration arcs',
               active: viewState.showArcs,
-              onToggle: () => onViewStateChange({ showArcs: !viewState.showArcs }),
+              onToggle: () =>
+                onViewStateChange({ showArcs: !viewState.showArcs }),
             },
             {
               label: 'Place labels',
               active: viewState.showLabels,
-              onToggle: () => onViewStateChange({ showLabels: !viewState.showLabels }),
+              onToggle: () =>
+                onViewStateChange({ showLabels: !viewState.showLabels }),
             },
             {
               label: 'Approximate rings',
               active: viewState.showApproximate,
-              onToggle: () => onViewStateChange({ showApproximate: !viewState.showApproximate }),
+              onToggle: () =>
+                onViewStateChange({
+                  showApproximate: !viewState.showApproximate,
+                }),
             },
           ].map(({ label, active, onToggle }) => (
             <button
@@ -256,7 +293,9 @@ export default function MobileGlobeControls({
       </section>
 
       <section>
-        <div className="text-xs font-semibold uppercase tracking-[0.18em] text-white/45">Locations by Region</div>
+        <div className="text-xs font-semibold uppercase tracking-[0.18em] text-white/45">
+          Locations by Region
+        </div>
         <div className="mt-2 space-y-2">
           {regionOptions.map((region) => {
             const color = REGION_COLORS[region] || REGION_COLORS.default;

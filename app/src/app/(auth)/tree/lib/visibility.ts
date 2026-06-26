@@ -4,7 +4,7 @@ export function collectVisiblePersonIds(
   data: FamilyChartDatum[],
   focusPersonId: string | null,
   ancestryDepth: number,
-  progenyDepth: number
+  progenyDepth: number,
 ): string[] {
   if (data.length === 0) {
     return [];
@@ -31,7 +31,9 @@ export function collectVisiblePersonIds(
       walkUp(parentId, depth - 1);
       const parentNode = nodeMap.get(parentId);
       parentNode?.rels.spouses.forEach((spouseId) => visibleIds.add(spouseId));
-      parentNode?.rels.children.forEach((siblingId) => visibleIds.add(siblingId));
+      parentNode?.rels.children.forEach((siblingId) =>
+        visibleIds.add(siblingId),
+      );
     });
   };
 
@@ -56,8 +58,12 @@ export function collectVisiblePersonIds(
   walkUp(focusPersonId, ancestryDepth);
   walkDown(focusPersonId, progenyDepth);
 
-  nodeMap.get(focusPersonId)?.rels.spouses.forEach((spouseId) => visibleIds.add(spouseId));
-  nodeMap.get(focusPersonId)?.rels.children.forEach((childId) => visibleIds.add(childId));
+  nodeMap
+    .get(focusPersonId)
+    ?.rels.spouses.forEach((spouseId) => visibleIds.add(spouseId));
+  nodeMap
+    .get(focusPersonId)
+    ?.rels.children.forEach((childId) => visibleIds.add(childId));
   nodeMap.get(focusPersonId)?.rels.parents.forEach((parentId) => {
     const parentNode = nodeMap.get(parentId);
     parentNode?.rels.children.forEach((siblingId) => visibleIds.add(siblingId));

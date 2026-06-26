@@ -29,13 +29,20 @@ const PROVIDER_LABELS: Record<string, string> = {
   other: 'View Source',
 };
 
-export default function HistoricalRecords({ sources, personName }: HistoricalRecordsProps) {
+export default function HistoricalRecords({
+  sources,
+  personName,
+}: HistoricalRecordsProps) {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(false);
-  const [selectedSource, setSelectedSource] = useState<ParsedSource | null>(null);
+  const [selectedSource, setSelectedSource] = useState<ParsedSource | null>(
+    null,
+  );
 
-  const sorted = [...(sources || [])].sort((a, b) => (a.year ?? 9999) - (b.year ?? 9999));
+  const sorted = [...(sources || [])].sort(
+    (a, b) => (a.year ?? 9999) - (b.year ?? 9999),
+  );
 
   const updateScrollState = () => {
     const el = scrollRef.current;
@@ -85,8 +92,18 @@ export default function HistoricalRecords({ sources, personName }: HistoricalRec
               className="p-1.5 rounded-full bg-white/80 border border-gray-200 hover:bg-gray-100 transition-colors disabled:opacity-30 disabled:cursor-default"
               aria-label="Scroll left"
             >
-              <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              <svg
+                className="w-4 h-4 text-gray-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M15 19l-7-7 7-7"
+                />
               </svg>
             </button>
             <button
@@ -95,8 +112,18 @@ export default function HistoricalRecords({ sources, personName }: HistoricalRec
               className="p-1.5 rounded-full bg-white/80 border border-gray-200 hover:bg-gray-100 transition-colors disabled:opacity-30 disabled:cursor-default"
               aria-label="Scroll right"
             >
-              <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              <svg
+                className="w-4 h-4 text-gray-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M9 5l7 7-7 7"
+                />
               </svg>
             </button>
           </div>
@@ -109,7 +136,12 @@ export default function HistoricalRecords({ sources, personName }: HistoricalRec
         style={{ scrollbarWidth: 'thin' }}
       >
         {sorted.map((source, idx) => (
-          <SourceCard key={idx} source={source} personName={personName} onSelect={() => setSelectedSource(source)} />
+          <SourceCard
+            key={idx}
+            source={source}
+            personName={personName}
+            onSelect={() => setSelectedSource(source)}
+          />
         ))}
       </div>
 
@@ -121,7 +153,15 @@ export default function HistoricalRecords({ sources, personName }: HistoricalRec
   );
 }
 
-function SourceCard({ source, personName, onSelect }: { source: ParsedSource; personName: string; onSelect: () => void }) {
+function SourceCard({
+  source,
+  personName,
+  onSelect,
+}: {
+  source: ParsedSource;
+  personName: string;
+  onSelect: () => void;
+}) {
   const icon = RECORD_TYPE_ICONS[source.recordType] || RECORD_TYPE_ICONS.other;
 
   // Wrap thumbnail in link if ARK exists
@@ -157,13 +197,20 @@ function SourceCard({ source, personName, onSelect }: { source: ParsedSource; pe
           {source.keyFacts.length > 0 && (
             <div className="mt-2 space-y-0.5">
               {source.keyFacts.slice(0, 2).map((fact, i) => (
-                <p key={i} className="text-xs text-gray-500 truncate">{fact}</p>
+                <p key={i} className="text-xs text-gray-500 truncate">
+                  {fact}
+                </p>
               ))}
             </div>
           )}
-          {source.recordType === 'census' && source.participants && source.participants.length >= 2 && (
-            <HouseholdTable participants={source.participants} focalName={personName} />
-          )}
+          {source.recordType === 'census' &&
+            source.participants &&
+            source.participants.length >= 2 && (
+              <HouseholdTable
+                participants={source.participants}
+                focalName={personName}
+              />
+            )}
           <a
             href={source.url}
             target="_blank"
@@ -172,8 +219,18 @@ function SourceCard({ source, personName, onSelect }: { source: ParsedSource; pe
             className="mt-3 inline-flex items-center gap-1.5 text-xs font-medium text-emerald-700 hover:text-emerald-800 transition-colors"
           >
             {PROVIDER_LABELS[source.provider] || 'View Source'}
-            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            <svg
+              className="w-3 h-3"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+              />
             </svg>
           </a>
         </div>
@@ -197,20 +254,30 @@ function SourceCard({ source, personName, onSelect }: { source: ParsedSource; pe
         {source.keyFacts.length > 0 && (
           <div className="mt-2 space-y-0.5">
             {source.keyFacts.slice(0, 2).map((fact, i) => (
-              <p key={i} className="text-xs text-gray-500 truncate">{fact}</p>
+              <p key={i} className="text-xs text-gray-500 truncate">
+                {fact}
+              </p>
             ))}
           </div>
         )}
-        {source.recordType === 'census' && source.participants && source.participants.length >= 2 && (
-          <HouseholdTable participants={source.participants} focalName={personName} />
-        )}
+        {source.recordType === 'census' &&
+          source.participants &&
+          source.participants.length >= 2 && (
+            <HouseholdTable
+              participants={source.participants}
+              focalName={personName}
+            />
+          )}
         <p className="mt-3 text-xs text-gray-400">No external link available</p>
       </div>
     </div>
   );
 }
 
-function HouseholdTable({ participants, focalName }: {
+function HouseholdTable({
+  participants,
+  focalName,
+}: {
   participants: NonNullable<ParsedSource['participants']>;
   focalName: string;
 }) {
@@ -219,11 +286,25 @@ function HouseholdTable({ participants, focalName }: {
   return (
     <div className="border-t border-gray-100 mt-2 pt-2">
       <button
-        onClick={(e) => { e.preventDefault(); e.stopPropagation(); setExpanded(!expanded); }}
+        onClick={(e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          setExpanded(!expanded);
+        }}
         className="flex items-center gap-1.5 text-xs text-indigo-600 hover:text-indigo-800 font-medium transition-colors"
       >
-        <svg className={`w-3 h-3 transition-transform ${expanded ? 'rotate-90' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+        <svg
+          className={`w-3 h-3 transition-transform ${expanded ? 'rotate-90' : ''}`}
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M9 5l7 7-7 7"
+          />
         </svg>
         Household ({participants.length})
       </button>
@@ -239,11 +320,17 @@ function HouseholdTable({ participants, focalName }: {
           </thead>
           <tbody>
             {participants.map((p, i) => {
-              const isFocal = p.name.toLowerCase() === focalName.toLowerCase() ||
+              const isFocal =
+                p.name.toLowerCase() === focalName.toLowerCase() ||
                 p.name.toLowerCase().includes(focalName.toLowerCase()) ||
                 focalName.toLowerCase().includes(p.name.toLowerCase());
               return (
-                <tr key={i} className={isFocal ? 'text-indigo-700 font-medium' : 'text-gray-600'}>
+                <tr
+                  key={i}
+                  className={
+                    isFocal ? 'text-indigo-700 font-medium' : 'text-gray-600'
+                  }
+                >
                   <td className="py-0.5">{p.name}</td>
                   <td className="py-0.5">{p.role || '--'}</td>
                   <td className="py-0.5 text-right">{p.age ?? '--'}</td>

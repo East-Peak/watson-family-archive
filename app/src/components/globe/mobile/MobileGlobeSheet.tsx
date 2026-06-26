@@ -2,7 +2,11 @@
 
 import { useEffect, useId, useRef, type ReactNode } from 'react';
 
-export type MobileGlobeSheetMode = 'controls' | 'location' | 'arc' | 'highlight';
+export type MobileGlobeSheetMode =
+  | 'controls'
+  | 'location'
+  | 'arc'
+  | 'highlight';
 export type MobileGlobeSheetSnap = 'collapsed' | 'half' | 'full';
 
 interface MobileGlobeSheetProps {
@@ -71,8 +75,14 @@ export default function MobileGlobeSheet({
       data-testid={`mobile-globe-sheet-${mode}`}
     >
       <div className="flex items-center gap-3 border-b border-white/10 px-4 py-3">
-        <div className="h-1.5 w-10 rounded-full bg-white/20" aria-hidden="true" />
-        <div id={titleId} className="min-w-0 flex-1 text-sm font-semibold text-white">
+        <div
+          className="h-1.5 w-10 rounded-full bg-white/20"
+          aria-hidden="true"
+        />
+        <div
+          id={titleId}
+          className="min-w-0 flex-1 text-sm font-semibold text-white"
+        >
           {title}
         </div>
         <button
@@ -82,12 +92,32 @@ export default function MobileGlobeSheet({
           className="rounded-full p-2 text-white/60 transition-colors hover:bg-white/10 hover:text-white"
         >
           {isFull ? (
-            <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
+            <svg
+              className="h-4 w-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M5 15l7-7 7 7"
+              />
             </svg>
           ) : (
-            <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+            <svg
+              className="h-4 w-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M19 9l-7 7-7-7"
+              />
             </svg>
           )}
         </button>
@@ -97,8 +127,18 @@ export default function MobileGlobeSheet({
           aria-label={`Close ${title}`}
           className="rounded-full p-2 text-white/60 transition-colors hover:bg-white/10 hover:text-white"
         >
-          <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+          <svg
+            className="h-4 w-4"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M6 18L18 6M6 6l12 12"
+            />
           </svg>
         </button>
       </div>

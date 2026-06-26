@@ -35,10 +35,17 @@ export default function JourneyCard({
     }
 
     if (stop.source === 'census') {
-      return age ? `${firstName} at age ${age} (Census)` : `${firstName} lived here (Census)`;
+      return age
+        ? `${firstName} at age ${age} (Census)`
+        : `${firstName} lived here (Census)`;
     }
 
-    if (isFirst && stop.year && birthYear && Math.abs(stop.year - birthYear) <= 1) {
+    if (
+      isFirst &&
+      stop.year &&
+      birthYear &&
+      Math.abs(stop.year - birthYear) <= 1
+    ) {
       return `${firstName} was born here`;
     }
 
@@ -92,9 +99,7 @@ export default function JourneyCard({
         <h3 className="text-xl font-semibold text-white mb-1 sm:text-2xl">
           {getLocation()}
         </h3>
-        <p className="text-white/50 text-sm mb-3">
-          {getSubLocation()}
-        </p>
+        <p className="text-white/50 text-sm mb-3">{getSubLocation()}</p>
 
         <p className="text-white/80">
           {getNarrative()}

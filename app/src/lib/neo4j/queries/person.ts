@@ -1,10 +1,51 @@
-import { executeQuery, executeWrite } from '../client';
-import type { Neo4jPerson, PersonWithFamily, TreeGraphNode, TreeGraphEdge } from '../types';
+import { executeQuery } from '../client';
+import type {
+  Neo4jPerson,
+  PersonWithFamily,
+  TreeGraphNode,
+  TreeGraphEdge,
+} from '../types';
+
+/**
+ * Fields that may be updated via the API.
+ * Excludes system-managed fields: id, createdAt, updatedAt.
+ */
+export const EDITABLE_PERSON_FIELDS: ReadonlySet<string> = new Set<string>([
+  'gedcomId',
+  'fullName',
+  'givenName',
+  'surname',
+  'suffix',
+  'nickname',
+  'title',
+  'sex',
+  'birthDate',
+  'birthYear',
+  'birthPlace',
+  'deathDate',
+  'deathYear',
+  'deathPlace',
+  'isLiving',
+  'biography',
+  'verificationStatus',
+  'confidenceGrade',
+  'wikitreeId',
+  'findagraveId',
+  'familysearchTreeId',
+  'sources',
+  'completenessScore',
+  'researchScore',
+  'validationStatus',
+  'completeness_tier',
+]);
 
 /**
  * Get a person by ID with their immediate family
  */
-export async function getPersonById(personId: string, treeId: string): Promise<PersonWithFamily | null> {
+export async function getPersonById(
+  personId: string,
+  treeId: string,
+): Promise<PersonWithFamily | null> {
   const results = await executeQuery<{ person: PersonWithFamily }>(
     `
     MATCH (t:Tree {id: $treeId})-[:CONTAINS]->(p:Person {id: $personId})
@@ -23,7 +64,7 @@ export async function getPersonById(personId: string, treeId: string): Promise<P
       collect(DISTINCT CASE WHEN child IS NOT NULL THEN {id: child.id, name: child.fullName, birthYear: child.birthYear} ELSE null END) as children,
       collect(DISTINCT CASE WHEN sibling IS NOT NULL THEN {id: sibling.id, name: sibling.fullName, birthYear: sibling.birthYear} ELSE null END) as siblings
     `,
-    { personId, treeId }
+    { personId, treeId },
   );
 
   if (results.length === 0) return null;
@@ -32,23 +73,32 @@ export async function getPersonById(personId: string, treeId: string): Promise<P
     person: Neo4jPerson;
     father: { id: string; name: string; birthYear?: number } | null;
     mother: { id: string; name: string; birthYear?: number } | null;
-    spouses: Array<{ id: string; name: string; birthYear?: number; marriageYear?: number } | null>;
+    spouses: Array<{
+      id: string;
+      name: string;
+      birthYear?: number;
+      marriageYear?: number;
+    } | null>;
     children: Array<{ id: string; name: string; birthYear?: number } | null>;
     siblings: Array<{ id: string; name: string; birthYear?: number } | null>;
   };
 
-  const byBirthYear = (
-    a: { birthYear?: number },
-    b: { birthYear?: number }
-  ) => (a.birthYear ?? 9999) - (b.birthYear ?? 9999);
+  const byBirthYear = (a: { birthYear?: number }, b: { birthYear?: number }) =>
+    (a.birthYear ?? 9999) - (b.birthYear ?? 9999);
 
   return {
     ...row.person,
     father: row.father || undefined,
     mother: row.mother || undefined,
-    spouses: row.spouses.filter((s): s is NonNullable<typeof s> => s !== null).sort(byBirthYear),
-    children: row.children.filter((c): c is NonNullable<typeof c> => c !== null).sort(byBirthYear),
-    siblings: row.siblings.filter((s): s is NonNullable<typeof s> => s !== null).sort(byBirthYear),
+    spouses: row.spouses
+      .filter((s): s is NonNullable<typeof s> => s !== null)
+      .sort(byBirthYear),
+    children: row.children
+      .filter((c): c is NonNullable<typeof c> => c !== null)
+      .sort(byBirthYear),
+    siblings: row.siblings
+      .filter((s): s is NonNullable<typeof s> => s !== null)
+      .sort(byBirthYear),
   };
 }
 
@@ -58,7 +108,7 @@ export async function getPersonById(personId: string, treeId: string): Promise<P
 export async function getAncestors(
   personId: string,
   treeId: string,
-  maxGenerations: number = 10
+  maxGenerations: number = 10,
 ): Promise<{ nodes: TreeGraphNode[]; edges: TreeGraphEdge[] }> {
   const results = await executeQuery<{
     id: string;
@@ -91,7 +141,7 @@ export async function getAncestors(
       CASE WHEN parent.sex = 'M' THEN 'father' ELSE 'mother' END as parentType
     ORDER BY generation, ancestor.birthYear
     `,
-    { personId, treeId }
+    { personId, treeId },
   );
 
   const nodesMap = new Map<string, TreeGraphNode>();
@@ -122,13 +172,16 @@ export async function getAncestors(
   // Add spouse relationships
   const personIds = Array.from(nodesMap.keys());
   if (personIds.length > 0) {
-    const spouseResults = await executeQuery<{ person1: string; person2: string }>(
+    const spouseResults = await executeQuery<{
+      person1: string;
+      person2: string;
+    }>(
       `
       MATCH (p1:Person)-[:SPOUSE_OF]-(p2:Person)
       WHERE p1.id IN $personIds AND p2.id IN $personIds AND p1.id < p2.id
       RETURN p1.id as person1, p2.id as person2
       `,
-      { personIds }
+      { personIds },
     );
 
     for (const row of spouseResults) {
@@ -152,7 +205,7 @@ export async function getAncestors(
 export async function getDescendants(
   personId: string,
   treeId: string,
-  maxGenerations: number = 10
+  maxGenerations: number = 10,
 ): Promise<{ nodes: TreeGraphNode[]; edges: TreeGraphEdge[] }> {
   const results = await executeQuery<{
     id: string;
@@ -183,7 +236,7 @@ export async function getDescendants(
       child.id as childId
     ORDER BY generation, descendant.birthYear
     `,
-    { personId, treeId }
+    { personId, treeId },
   );
 
   const nodesMap = new Map<string, TreeGraphNode>();
@@ -214,13 +267,16 @@ export async function getDescendants(
   // Add spouse relationships
   const personIds = Array.from(nodesMap.keys());
   if (personIds.length > 0) {
-    const spouseResults = await executeQuery<{ person1: string; person2: string }>(
+    const spouseResults = await executeQuery<{
+      person1: string;
+      person2: string;
+    }>(
       `
       MATCH (p1:Person)-[:SPOUSE_OF]-(p2:Person)
       WHERE p1.id IN $personIds AND p2.id IN $personIds AND p1.id < p2.id
       RETURN p1.id as person1, p2.id as person2
       `,
-      { personIds }
+      { personIds },
     );
 
     for (const row of spouseResults) {
@@ -244,7 +300,7 @@ export async function getDescendants(
 export async function searchPeople(
   query: string,
   treeId: string,
-  limit: number = 20
+  limit: number = 20,
 ): Promise<Neo4jPerson[]> {
   const queryLower = query.trim().toLowerCase();
   const terms = queryLower.split(/\s+/).filter(Boolean);
@@ -282,7 +338,17 @@ export async function searchPeople(
            ELSE 5 END
     LIMIT toInteger($candidateLimit)
     `,
-    { queryLower, treeId, given, surname, givenVariants, givenInitial, surnameInitial, candidateLimit, singleToken }
+    {
+      queryLower,
+      treeId,
+      given,
+      surname,
+      givenVariants,
+      givenInitial,
+      surnameInitial,
+      candidateLimit,
+      singleToken,
+    },
   );
 
   const queryNorm = normalizeName(queryLower);
@@ -300,7 +366,12 @@ export async function searchPeople(
 
     if (fullName === queryNorm && queryNorm) score = 100;
     else if (fullName.startsWith(queryNorm) && queryNorm) score = 90;
-    else if (surnameNorm && surnameName === surnameNorm && givenVariants.includes(givenName)) score = 85;
+    else if (
+      surnameNorm &&
+      surnameName === surnameNorm &&
+      givenVariants.includes(givenName)
+    )
+      score = 85;
     else if (givenVariants.includes(givenName) && givenName) score = 80;
     else if (nickname && givenVariants.includes(nickname)) score = 75;
     else if (surnameNorm && surnameName === surnameNorm) score = 70;
@@ -314,7 +385,8 @@ export async function searchPeople(
       const fuzzySurname = fuzzyScore(surnameNorm, surnameName);
       const fuzzyFull = fuzzyScore(queryNorm, fullName);
 
-      if (fuzzyGiven > 0 && fuzzySurname > 0) score = Math.max(score, 55 + fuzzyGiven + fuzzySurname);
+      if (fuzzyGiven > 0 && fuzzySurname > 0)
+        score = Math.max(score, 55 + fuzzyGiven + fuzzySurname);
       else if (fuzzyGiven > 0) score = Math.max(score, 40 + fuzzyGiven);
       else if (fuzzySurname > 0) score = Math.max(score, 38 + fuzzySurname);
       else if (fuzzyFull > 0) score = Math.max(score, 30 + fuzzyFull);
@@ -325,7 +397,10 @@ export async function searchPeople(
 
   return scored
     .filter((item) => item.score > 0)
-    .sort((a, b) => (b.score - a.score) || a.person.fullName.localeCompare(b.person.fullName))
+    .sort(
+      (a, b) =>
+        b.score - a.score || a.person.fullName.localeCompare(b.person.fullName),
+    )
     .slice(0, limit)
     .map((item) => item.person);
 }
@@ -336,7 +411,7 @@ export async function searchPeople(
 export async function searchByPlace(
   query: string,
   treeId: string,
-  limit: number = 20
+  limit: number = 20,
 ): Promise<Neo4jPerson[]> {
   const results = await executeQuery<{ person: Neo4jPerson }>(
     `
@@ -346,10 +421,10 @@ export async function searchByPlace(
     RETURN DISTINCT p as person
     LIMIT toInteger($limit)
     `,
-    { treeId, queryLower: query.toLowerCase().trim(), limit }
+    { treeId, queryLower: query.toLowerCase().trim(), limit },
   );
 
-  return results.map(r => r.person);
+  return results.map((r) => r.person);
 }
 
 /**
@@ -358,7 +433,7 @@ export async function searchByPlace(
 export async function searchByOccupation(
   query: string,
   treeId: string,
-  limit: number = 20
+  limit: number = 20,
 ): Promise<Neo4jPerson[]> {
   const results = await executeQuery<{ person: Neo4jPerson }>(
     `
@@ -367,10 +442,10 @@ export async function searchByOccupation(
     RETURN DISTINCT p as person
     LIMIT toInteger($limit)
     `,
-    { treeId, queryLower: query.toLowerCase().trim(), limit }
+    { treeId, queryLower: query.toLowerCase().trim(), limit },
   );
 
-  return results.map(r => r.person);
+  return results.map((r) => r.person);
 }
 
 /**
@@ -379,7 +454,7 @@ export async function searchByOccupation(
 export async function searchByContent(
   query: string,
   treeId: string,
-  limit: number = 10
+  limit: number = 10,
 ): Promise<Neo4jPerson[]> {
   const results = await executeQuery<{ person: Neo4jPerson }>(
     `
@@ -388,17 +463,17 @@ export async function searchByContent(
     RETURN p as person
     LIMIT toInteger($limit)
     `,
-    { treeId, queryLower: query.toLowerCase().trim(), limit }
+    { treeId, queryLower: query.toLowerCase().trim(), limit },
   );
 
-  return results.map(r => r.person);
+  return results.map((r) => r.person);
 }
 
 export async function getPeopleBySurname(
   surname: string,
   treeId: string,
   limit: number = 20,
-  excludeId?: string
+  excludeId?: string,
 ): Promise<Neo4jPerson[]> {
   const results = await executeQuery<{ person: Neo4jPerson }>(
     `
@@ -409,45 +484,45 @@ export async function getPeopleBySurname(
     ORDER BY CASE WHEN p.birthYear IS NULL THEN 1 ELSE 0 END, p.birthYear
     LIMIT toInteger($limit)
     `,
-    { surname, treeId, limit, excludeId }
+    { surname, treeId, limit, excludeId },
   );
 
   return results.map((result) => result.person);
 }
 
 const NICKNAME_MAP: Record<string, string[]> = {
-  'bill': ['william', 'will', 'billy'],
-  'will': ['william', 'bill', 'billy'],
-  'billy': ['william', 'bill', 'will'],
-  'bob': ['robert', 'rob', 'bobby'],
-  'rob': ['robert', 'bob', 'bobby'],
-  'bobby': ['robert', 'bob', 'rob'],
-  'liz': ['elizabeth', 'beth', 'lizzie', 'betty'],
-  'beth': ['elizabeth', 'liz', 'betty'],
-  'betty': ['elizabeth', 'beth', 'liz'],
-  'lizzie': ['elizabeth', 'liz', 'beth'],
-  'kate': ['katherine', 'catherine', 'kathy', 'katy'],
-  'kathy': ['katherine', 'catherine', 'kate', 'katy'],
-  'katy': ['katherine', 'catherine', 'kate', 'kathy'],
-  'jim': ['james', 'jimmy'],
-  'jimmy': ['james', 'jim'],
-  'jack': ['john', 'jon'],
-  'johnny': ['john', 'jon'],
-  'maggie': ['margaret', 'meg', 'peg', 'peggy'],
-  'meg': ['margaret', 'maggie', 'peggy'],
-  'peggy': ['margaret', 'meg', 'maggie'],
-  'nancy': ['ann', 'anne', 'anna'],
-  'ann': ['anne', 'anna', 'nancy'],
-  'ned': ['edward', 'ed'],
-  'ed': ['edward', 'eddie', 'ned'],
-  'eddie': ['edward', 'ed', 'ned'],
-  'frank': ['francis'],
-  'harry': ['henry'],
-  'hank': ['henry'],
-  'sue': ['susan', 'suzanne', 'susannah'],
-  'susan': ['sue', 'suzanne', 'susannah'],
-  'tom': ['thomas', 'tommy'],
-  'tommy': ['thomas', 'tom'],
+  bill: ['william', 'will', 'billy'],
+  will: ['william', 'bill', 'billy'],
+  billy: ['william', 'bill', 'will'],
+  bob: ['robert', 'rob', 'bobby'],
+  rob: ['robert', 'bob', 'bobby'],
+  bobby: ['robert', 'bob', 'rob'],
+  liz: ['elizabeth', 'beth', 'lizzie', 'betty'],
+  beth: ['elizabeth', 'liz', 'betty'],
+  betty: ['elizabeth', 'beth', 'liz'],
+  lizzie: ['elizabeth', 'liz', 'beth'],
+  kate: ['katherine', 'catherine', 'kathy', 'katy'],
+  kathy: ['katherine', 'catherine', 'kate', 'katy'],
+  katy: ['katherine', 'catherine', 'kate', 'kathy'],
+  jim: ['james', 'jimmy'],
+  jimmy: ['james', 'jim'],
+  jack: ['john', 'jon'],
+  johnny: ['john', 'jon'],
+  maggie: ['margaret', 'meg', 'peg', 'peggy'],
+  meg: ['margaret', 'maggie', 'peggy'],
+  peggy: ['margaret', 'meg', 'maggie'],
+  nancy: ['ann', 'anne', 'anna'],
+  ann: ['anne', 'anna', 'nancy'],
+  ned: ['edward', 'ed'],
+  ed: ['edward', 'eddie', 'ned'],
+  eddie: ['edward', 'ed', 'ned'],
+  frank: ['francis'],
+  harry: ['henry'],
+  hank: ['henry'],
+  sue: ['susan', 'suzanne', 'susannah'],
+  susan: ['sue', 'suzanne', 'susannah'],
+  tom: ['thomas', 'tommy'],
+  tommy: ['thomas', 'tom'],
 };
 
 function normalizeName(value: string): string {
@@ -480,7 +555,7 @@ function levenshtein(a: string, b: string): number {
       dp[i][j] = Math.min(
         dp[i - 1][j] + 1,
         dp[i][j - 1] + 1,
-        dp[i - 1][j - 1] + cost
+        dp[i - 1][j - 1] + cost,
       );
     }
   }
@@ -508,14 +583,24 @@ function expandGivenNameVariants(given: string): string[] {
 export async function findRelationshipPath(
   person1Id: string,
   person2Id: string,
-  treeId: string
+  treeId: string,
 ): Promise<{
-  pathNodes: Array<{ id: string; name: string; sex: string; birthYear?: number }>;
+  pathNodes: Array<{
+    id: string;
+    name: string;
+    sex: string;
+    birthYear?: number;
+  }>;
   relationshipTypes: string[];
   distance: number;
 } | null> {
   const results = await executeQuery<{
-    pathNodes: Array<{ id: string; name: string; sex: string; birthYear?: number }>;
+    pathNodes: Array<{
+      id: string;
+      name: string;
+      sex: string;
+      birthYear?: number;
+    }>;
     relationshipTypes: string[];
     distance: number;
   }>(
@@ -549,7 +634,7 @@ export async function findRelationshipPath(
       ] as relationshipTypes,
       length(path) as distance
     `,
-    { person1Id, person2Id, treeId }
+    { person1Id, person2Id, treeId },
   );
 
   if (results.length === 0) return null;
@@ -559,114 +644,15 @@ export async function findRelationshipPath(
 /**
  * Create a new person
  */
-export async function createPerson(
-  person: Omit<Neo4jPerson, 'createdAt' | 'updatedAt'>,
-  treeId: string
-): Promise<Neo4jPerson> {
-  const results = await executeWrite<{ person: Neo4jPerson }>(
-    `
-    MATCH (t:Tree {id: $treeId})
-    CREATE (p:Person {
-      id: $id,
-      fullName: $fullName,
-      givenName: $givenName,
-      surname: $surname,
-      suffix: $suffix,
-      nickname: $nickname,
-      sex: $sex,
-      birthDate: $birthDate,
-      birthYear: $birthYear,
-      birthPlace: $birthPlace,
-      deathDate: $deathDate,
-      deathYear: $deathYear,
-      deathPlace: $deathPlace,
-      isLiving: $isLiving,
-      verificationStatus: $verificationStatus,
-      gedcomId: $gedcomId,
-      wikitreeId: $wikitreeId,
-      findagraveId: $findagraveId,
-      createdAt: datetime(),
-      updatedAt: datetime()
-    })
-    CREATE (t)-[:CONTAINS]->(p)
-    RETURN p as person
-    `,
-    { ...person, treeId }
-  );
-
-  return results[0].person;
-}
 
 /**
  * Update a person
  */
-export async function updatePerson(
-  personId: string,
-  updates: Partial<Neo4jPerson>,
-  treeId: string
-): Promise<Neo4jPerson | null> {
-  const setClause = Object.keys(updates)
-    .filter((key) => key !== 'id' && key !== 'createdAt')
-    .map((key) => `p.${key} = $${key}`)
-    .join(', ');
-
-  if (!setClause) return null;
-
-  const results = await executeWrite<{ person: Neo4jPerson }>(
-    `
-    MATCH (t:Tree {id: $treeId})-[:CONTAINS]->(p:Person {id: $personId})
-    SET ${setClause}, p.updatedAt = datetime()
-    RETURN p as person
-    `,
-    { ...updates, personId, treeId }
-  );
-
-  return results.length > 0 ? results[0].person : null;
-}
 
 /**
  * Add parent-child relationship
  */
-export async function addParentChildRelationship(
-  parentId: string,
-  childId: string,
-  treeId: string,
-  type: 'biological' | 'adoptive' | 'step' = 'biological'
-): Promise<boolean> {
-  const results = await executeWrite(
-    `
-    MATCH (t:Tree {id: $treeId})-[:CONTAINS]->(parent:Person {id: $parentId})
-    MATCH (t)-[:CONTAINS]->(child:Person {id: $childId})
-    MERGE (parent)-[r:PARENT_OF {type: $type}]->(child)
-    MERGE (child)-[:CHILD_OF {type: $type}]->(parent)
-    RETURN count(*) as created
-    `,
-    { parentId, childId, treeId, type }
-  );
-
-  return results.length > 0;
-}
 
 /**
  * Add spouse relationship
  */
-export async function addSpouseRelationship(
-  person1Id: string,
-  person2Id: string,
-  treeId: string,
-  marriageYear?: number,
-  marriageDate?: string
-): Promise<boolean> {
-  const results = await executeWrite(
-    `
-    MATCH (t:Tree {id: $treeId})-[:CONTAINS]->(p1:Person {id: $person1Id})
-    MATCH (t)-[:CONTAINS]->(p2:Person {id: $person2Id})
-    MERGE (p1)-[r:SPOUSE_OF]->(p2)
-    SET r.marriageYear = $marriageYear, r.marriageDate = $marriageDate
-    RETURN count(*) as created
-    `,
-    { person1Id, person2Id, treeId, marriageYear, marriageDate }
-  );
-
-  return results.length > 0;
-}

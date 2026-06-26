@@ -25,11 +25,16 @@ const TIER_LABELS: Record<string, string> = {
   E: 'User tree / unsourced',
 };
 
-export default function RecordDetailModal({ source, onClose }: RecordDetailModalProps) {
+export default function RecordDetailModal({
+  source,
+  onClose,
+}: RecordDetailModalProps) {
   // Close on Escape
   useEffect(() => {
     if (!source) return;
-    const handler = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose(); };
+    const handler = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onClose();
+    };
     document.addEventListener('keydown', handler);
     return () => document.removeEventListener('keydown', handler);
   }, [source, onClose]);
@@ -57,17 +62,24 @@ export default function RecordDetailModal({ source, onClose }: RecordDetailModal
                 <span className="text-sm text-gray-500">{source.year}</span>
               )}
               {source.tier && (
-                <span className={`inline-flex items-center px-1.5 py-0.5 rounded text-xs font-bold ${
-                  source.tier === 'A' ? 'bg-green-100 text-green-700' :
-                  source.tier === 'B' ? 'bg-blue-100 text-blue-700' :
-                  source.tier === 'C' ? 'bg-amber-100 text-amber-700' :
-                  'bg-gray-100 text-gray-500'
-                }`}>
+                <span
+                  className={`inline-flex items-center px-1.5 py-0.5 rounded text-xs font-bold ${
+                    source.tier === 'A'
+                      ? 'bg-green-100 text-green-700'
+                      : source.tier === 'B'
+                        ? 'bg-blue-100 text-blue-700'
+                        : source.tier === 'C'
+                          ? 'bg-amber-100 text-amber-700'
+                          : 'bg-gray-100 text-gray-500'
+                  }`}
+                >
                   Tier {source.tier}
                 </span>
               )}
               {source.evidenceClass && (
-                <span className="text-xs text-gray-400 capitalize">{source.evidenceClass}</span>
+                <span className="text-xs text-gray-400 capitalize">
+                  {source.evidenceClass}
+                </span>
               )}
             </div>
           </div>
@@ -76,8 +88,18 @@ export default function RecordDetailModal({ source, onClose }: RecordDetailModal
             className="p-2 rounded-lg hover:bg-gray-100 transition-colors"
             aria-label="Close"
           >
-            <svg className="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            <svg
+              className="w-5 h-5 text-gray-500"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
+              />
             </svg>
           </button>
         </div>
@@ -92,15 +114,27 @@ export default function RecordDetailModal({ source, onClose }: RecordDetailModal
               className="flex items-center justify-center gap-2 w-full px-4 py-3 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl font-medium transition-colors shadow-sm"
             >
               {PROVIDER_LABELS[source.provider] || 'View Original Record'}
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              <svg
+                className="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                />
               </svg>
             </a>
           )}
 
           {/* Record metadata */}
           <div className="space-y-3">
-            <h3 className="text-xs font-bold text-gray-400 uppercase tracking-widest">Record Details</h3>
+            <h3 className="text-xs font-bold text-gray-400 uppercase tracking-widest">
+              Record Details
+            </h3>
             <dl className="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
               <dt className="text-gray-500">Type</dt>
               <dd className="text-gray-900 capitalize">{source.recordType}</dd>
@@ -109,13 +143,17 @@ export default function RecordDetailModal({ source, onClose }: RecordDetailModal
               {source.tier && (
                 <>
                   <dt className="text-gray-500">Tier</dt>
-                  <dd className="text-gray-900">{source.tier} — {TIER_LABELS[source.tier] || 'Other'}</dd>
+                  <dd className="text-gray-900">
+                    {source.tier} — {TIER_LABELS[source.tier] || 'Other'}
+                  </dd>
                 </>
               )}
               {source.record_id && (
                 <>
                   <dt className="text-gray-500">Record ID</dt>
-                  <dd className="text-gray-900 font-mono text-xs">{source.record_id}</dd>
+                  <dd className="text-gray-900 font-mono text-xs">
+                    {source.record_id}
+                  </dd>
                 </>
               )}
             </dl>
@@ -124,10 +162,15 @@ export default function RecordDetailModal({ source, onClose }: RecordDetailModal
           {/* Key facts */}
           {source.keyFacts.length > 0 && (
             <div className="space-y-3">
-              <h3 className="text-xs font-bold text-gray-400 uppercase tracking-widest">Key Facts</h3>
+              <h3 className="text-xs font-bold text-gray-400 uppercase tracking-widest">
+                Key Facts
+              </h3>
               <ul className="space-y-1.5">
                 {source.keyFacts.map((fact, i) => (
-                  <li key={i} className="text-sm text-gray-700 flex items-start gap-2">
+                  <li
+                    key={i}
+                    className="text-sm text-gray-700 flex items-start gap-2"
+                  >
                     <span className="text-emerald-500 mt-0.5 shrink-0">•</span>
                     {fact}
                   </li>
@@ -155,7 +198,10 @@ export default function RecordDetailModal({ source, onClose }: RecordDetailModal
                   </thead>
                   <tbody>
                     {source.participants.map((p, i) => (
-                      <tr key={i} className="border-b border-gray-50 text-gray-700">
+                      <tr
+                        key={i}
+                        className="border-b border-gray-50 text-gray-700"
+                      >
                         <td className="py-1.5 font-medium">{p.name}</td>
                         <td className="py-1.5">{p.role || '--'}</td>
                         <td className="py-1.5 text-right">{p.age ?? '--'}</td>
@@ -172,11 +218,15 @@ export default function RecordDetailModal({ source, onClose }: RecordDetailModal
           {/* Details (key-value pairs) */}
           {source.details && Object.keys(source.details).length > 0 && (
             <div className="space-y-3">
-              <h3 className="text-xs font-bold text-gray-400 uppercase tracking-widest">Additional Details</h3>
+              <h3 className="text-xs font-bold text-gray-400 uppercase tracking-widest">
+                Additional Details
+              </h3>
               <dl className="space-y-2 text-sm">
                 {Object.entries(source.details).map(([key, value]) => (
                   <div key={key} className="flex gap-2">
-                    <dt className="text-gray-500 capitalize shrink-0">{key.replace(/_/g, ' ')}</dt>
+                    <dt className="text-gray-500 capitalize shrink-0">
+                      {key.replace(/_/g, ' ')}
+                    </dt>
                     <dd className="text-gray-900">{String(value)}</dd>
                   </div>
                 ))}
@@ -187,8 +237,14 @@ export default function RecordDetailModal({ source, onClose }: RecordDetailModal
           {/* Image */}
           {source.imageUrl && (
             <div className="space-y-3">
-              <h3 className="text-xs font-bold text-gray-400 uppercase tracking-widest">Record Image</h3>
-              <a href={source.imageUrl} target="_blank" rel="noopener noreferrer">
+              <h3 className="text-xs font-bold text-gray-400 uppercase tracking-widest">
+                Record Image
+              </h3>
+              <a
+                href={source.imageUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <img
                   src={source.imageUrl}
                   alt={source.collection}

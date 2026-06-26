@@ -22,7 +22,7 @@ export function buildSystemPrompt(
   context: PageContext | undefined,
   stats: KnowledgeBaseStats,
   familyBranches?: FamilyBranches,
-  viewer?: ViewerIdentity
+  viewer?: ViewerIdentity,
 ): string {
   const contextDescription = getContextDescription(context);
   const branchList = familyBranches
@@ -230,7 +230,10 @@ You have wide latitude to discuss historical events, geography, cultural context
 }
 
 // Helper to add person-specific context when on a person page
-export function buildPersonContext(personBio: string | undefined, personName: string | undefined): string {
+export function buildPersonContext(
+  personBio: string | undefined,
+  personName: string | undefined,
+): string {
   if (!personBio) {
     return '';
   }

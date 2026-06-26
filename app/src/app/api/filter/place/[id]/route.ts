@@ -6,7 +6,7 @@ const DEFAULT_TREE_ID = siteConfig.defaultTreeId;
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: Promise<{ id: string }> }
+  { params }: { params: Promise<{ id: string }> },
 ) {
   try {
     const { id } = await params;
@@ -25,7 +25,7 @@ export async function GET(
     console.error('Error filtering by place:', error);
     return NextResponse.json(
       { error: 'Failed to filter by place' },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

@@ -3,10 +3,17 @@
 import MobileTreeFocusCard from './MobileTreeFocusCard';
 import MobileTreePersonSheet from './MobileTreePersonSheet';
 import MobileTreeRelationshipGroup from './MobileTreeRelationshipGroup';
-import type { MobileTreeFamilyMember, MobileTreePersonDetails } from './useMobileTreePerson';
+import type {
+  MobileTreeFamilyMember,
+  MobileTreePersonDetails,
+} from './useMobileTreePerson';
 
-function collectParents(person: MobileTreePersonDetails): MobileTreeFamilyMember[] {
-  return [person.father, person.mother].filter((member): member is MobileTreeFamilyMember => Boolean(member));
+function collectParents(
+  person: MobileTreePersonDetails,
+): MobileTreeFamilyMember[] {
+  return [person.father, person.mother].filter(
+    (member): member is MobileTreeFamilyMember => Boolean(member),
+  );
 }
 
 interface MobileTreeNavigatorProps {
@@ -65,7 +72,10 @@ export default function MobileTreeNavigator({
   }
 
   return (
-    <div data-testid="mobile-tree-navigator" className="md:hidden space-y-4 px-4 py-6">
+    <div
+      data-testid="mobile-tree-navigator"
+      className="md:hidden space-y-4 px-4 py-6"
+    >
       <MobileTreeFocusCard
         person={focusPerson}
         onOpenDetails={() => onOpenDetails(focusPerson.id)}

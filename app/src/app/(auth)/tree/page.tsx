@@ -9,7 +9,10 @@ import { useIsMobile } from '@/hooks/useIsMobile';
 import { useMe, hasViewerPerson } from '@/components/MeProvider';
 import { siteConfig } from '@/lib/siteConfig';
 import MobileTreeNavigator from '@/components/tree/mobile/MobileTreeNavigator';
-import { useMobileTreePerson, type MobileTreePersonDetails } from '@/components/tree/mobile/useMobileTreePerson';
+import {
+  useMobileTreePerson,
+  type MobileTreePersonDetails,
+} from '@/components/tree/mobile/useMobileTreePerson';
 import { useMobileTreeRouteState } from '@/components/tree/mobile/useMobileTreeRouteState';
 import { useTreeChartController } from './hooks/useTreeChartController';
 import { FAMILY_CHART_THEME_CSS } from './lib/themeCss';
@@ -17,19 +20,26 @@ import TreeSearch from './TreeSearch';
 
 import 'family-chart/styles/family-chart.css';
 
-function collectMobileVisiblePersonIds(person: MobileTreePersonDetails | null, fallbackFocusId: string | null) {
+function collectMobileVisiblePersonIds(
+  person: MobileTreePersonDetails | null,
+  fallbackFocusId: string | null,
+) {
   if (!person) {
     return fallbackFocusId ? [fallbackFocusId] : [];
   }
 
-  return Array.from(new Set([
-    person.id,
-    person.father?.id,
-    person.mother?.id,
-    ...person.spouses.map((spouse) => spouse.id),
-    ...person.children.map((child) => child.id),
-    ...person.siblings.map((sibling) => sibling.id),
-  ].filter((id): id is string => Boolean(id))));
+  return Array.from(
+    new Set(
+      [
+        person.id,
+        person.father?.id,
+        person.mother?.id,
+        ...person.spouses.map((spouse) => spouse.id),
+        ...person.children.map((child) => child.id),
+        ...person.siblings.map((sibling) => sibling.id),
+      ].filter((id): id is string => Boolean(id)),
+    ),
+  );
 }
 
 function findMobileBranchPersonId(
@@ -49,20 +59,29 @@ function findMobileBranchPersonId(
         ...person.children,
         ...person.siblings,
       ]
-        .filter((candidate): candidate is { id: string; name: string } => Boolean(candidate?.id && candidate.name))
+        .filter((candidate): candidate is { id: string; name: string } =>
+          Boolean(candidate?.id && candidate.name),
+        )
         .map((candidate) => [candidate.id, candidate]),
     ).values(),
   );
 
-  const getSurname = (name: string) => name.trim().toLowerCase().split(/\s+/).at(-1) ?? '';
+  const getSurname = (name: string) =>
+    name.trim().toLowerCase().split(/\s+/).at(-1) ?? '';
 
-  const exactSurnameMatch = candidates.find((candidate) => getSurname(candidate.name) === normalizedBranch);
+  const exactSurnameMatch = candidates.find(
+    (candidate) => getSurname(candidate.name) === normalizedBranch,
+  );
   if (exactSurnameMatch) return exactSurnameMatch.id;
 
-  const partialSurnameMatch = candidates.find((candidate) => getSurname(candidate.name).includes(normalizedBranch));
+  const partialSurnameMatch = candidates.find((candidate) =>
+    getSurname(candidate.name).includes(normalizedBranch),
+  );
   if (partialSurnameMatch) return partialSurnameMatch.id;
 
-  const fullNameMatch = candidates.find((candidate) => candidate.name.toLowerCase().includes(normalizedBranch));
+  const fullNameMatch = candidates.find((candidate) =>
+    candidate.name.toLowerCase().includes(normalizedBranch),
+  );
   return fullNameMatch?.id ?? null;
 }
 
@@ -70,7 +89,12 @@ function DesktopTreeChartContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const focusId = searchParams.get('focus');
-  const { visualizationCommand, clearVisualizationCommand, isSidebarOpen, closeSidebar } = useChat();
+  const {
+    visualizationCommand,
+    clearVisualizationCommand,
+    isSidebarOpen,
+    closeSidebar,
+  } = useChat();
   const { me } = useMe();
   const viewerId = hasViewerPerson(me) ? me.id : null;
 
@@ -101,16 +125,19 @@ function DesktopTreeChartContent() {
     }
   }, [drawerPersonId, closeSidebar]);
 
-  const pageContext = useMemo(() => ({
-    type: 'tree' as const,
-    focusPersonId: treeFocusPersonId ?? undefined,
-    visiblePersonIds,
-  }), [treeFocusPersonId, visiblePersonIds]);
+  const pageContext = useMemo(
+    () => ({
+      type: 'tree' as const,
+      focusPersonId: treeFocusPersonId ?? undefined,
+      visiblePersonIds,
+    }),
+    [treeFocusPersonId, visiblePersonIds],
+  );
 
   usePageContext(pageContext);
 
   const searchPeople = useMemo(() => {
-    return chartData.map(d => ({
+    return chartData.map((d) => ({
       id: d.id,
       name: `${d.data['first name']} ${d.data['last name']}`.trim(),
       birthYear: d.data.birthday || undefined,
@@ -125,7 +152,9 @@ function DesktopTreeChartContent() {
       >
         <div className="bg-white/95 backdrop-blur-md shadow-lg border border-shield/10 px-6 py-3 rounded-full flex justify-between items-center gap-6">
           <div className="flex items-center gap-3">
-            <h2 className="text-lg font-serif font-bold text-shield tracking-tight">Family Tree</h2>
+            <h2 className="text-lg font-serif font-bold text-shield tracking-tight">
+              Family Tree
+            </h2>
             {status === 'ready' && (
               <span className="text-xs font-medium px-2 py-0.5 rounded-full bg-shield/5 text-shield/70 border border-shield/10">
                 {nodeCount} people
@@ -137,7 +166,11 @@ function DesktopTreeChartContent() {
               <TreeSearch people={searchPeople} onSelect={handleFocusPerson} />
             )}
             <span className="text-xs text-gray-500 hidden sm:inline italic">
-              {typeof navigator !== 'undefined' && /Mac/.test(navigator.userAgent) ? '\u2318' : 'Ctrl'}+click for profile
+              {typeof navigator !== 'undefined' &&
+              /Mac/.test(navigator.userAgent)
+                ? '\u2318'
+                : 'Ctrl'}
+              +click for profile
             </span>
             <button
               onClick={fitToScreen}
@@ -218,16 +251,35 @@ function MobileTreeNavigatorContent() {
     fallbackFocusId,
   });
 
-  const { person: focusPerson, loading, error } = useMobileTreePerson(focusPersonId);
-  const { person: detailPerson, loading: detailLoading, error: detailError } = useMobileTreePerson(detailPersonId);
+  const {
+    person: focusPerson,
+    loading,
+    error,
+  } = useMobileTreePerson(focusPersonId);
+  const {
+    person: detailPerson,
+    loading: detailLoading,
+    error: detailError,
+  } = useMobileTreePerson(detailPersonId);
 
   useEffect(() => {
-    if (!error || !hasExplicitFocusParam || !defaultFocusPersonId || focusPersonId === defaultFocusPersonId) {
+    if (
+      !error ||
+      !hasExplicitFocusParam ||
+      !defaultFocusPersonId ||
+      focusPersonId === defaultFocusPersonId
+    ) {
       return;
     }
 
     replaceFocusPerson(defaultFocusPersonId);
-  }, [defaultFocusPersonId, error, focusPersonId, hasExplicitFocusParam, replaceFocusPerson]);
+  }, [
+    defaultFocusPersonId,
+    error,
+    focusPersonId,
+    hasExplicitFocusParam,
+    replaceFocusPerson,
+  ]);
 
   const recoveringInvalidFocus = Boolean(
     error &&
@@ -241,7 +293,10 @@ function MobileTreeNavigatorContent() {
       return;
     }
 
-    if (visualizationCommand.target !== 'tree' && visualizationCommand.target !== 'both') {
+    if (
+      visualizationCommand.target !== 'tree' &&
+      visualizationCommand.target !== 'both'
+    ) {
       return;
     }
 
@@ -249,7 +304,10 @@ function MobileTreeNavigatorContent() {
       visualizationCommand.params.personId ??
       visualizationCommand.params.personIds?.[0] ??
       null;
-    const branchPersonId = findMobileBranchPersonId(focusPerson, visualizationCommand.params.branch);
+    const branchPersonId = findMobileBranchPersonId(
+      focusPerson,
+      visualizationCommand.params.branch,
+    );
 
     if (
       visualizationCommand.action === 'filter' &&
@@ -279,7 +337,9 @@ function MobileTreeNavigatorContent() {
         break;
       case 'showCollection':
         if (visualizationCommand.params.collectionType) {
-          router.push(`/collection/${visualizationCommand.params.collectionType}`);
+          router.push(
+            `/collection/${visualizationCommand.params.collectionType}`,
+          );
         }
         break;
     }
@@ -296,26 +356,34 @@ function MobileTreeNavigatorContent() {
     visualizationCommand,
   ]);
 
-  const defaultFocusLabel = defaultFocusSource === 'viewer'
-    ? 'Return to viewer'
-    : defaultFocusSource === 'home'
-      ? 'Return to home person'
-      : null;
+  const defaultFocusLabel =
+    defaultFocusSource === 'viewer'
+      ? 'Return to viewer'
+      : defaultFocusSource === 'home'
+        ? 'Return to home person'
+        : null;
   const showRecoveryAction = Boolean(
     defaultFocusPersonId &&
     focusPerson?.id &&
     focusPerson.id !== defaultFocusPersonId,
   );
 
-  const effectiveFocusPersonId = error && hasExplicitFocusParam && defaultFocusPersonId
-    ? defaultFocusPersonId
-    : focusPerson?.id ?? focusPersonId ?? undefined;
+  const effectiveFocusPersonId =
+    error && hasExplicitFocusParam && defaultFocusPersonId
+      ? defaultFocusPersonId
+      : (focusPerson?.id ?? focusPersonId ?? undefined);
 
-  const pageContext = useMemo(() => ({
-    type: 'tree' as const,
-    focusPersonId: effectiveFocusPersonId,
-    visiblePersonIds: collectMobileVisiblePersonIds(focusPerson, effectiveFocusPersonId ?? null),
-  }), [effectiveFocusPersonId, focusPerson]);
+  const pageContext = useMemo(
+    () => ({
+      type: 'tree' as const,
+      focusPersonId: effectiveFocusPersonId,
+      visiblePersonIds: collectMobileVisiblePersonIds(
+        focusPerson,
+        effectiveFocusPersonId ?? null,
+      ),
+    }),
+    [effectiveFocusPersonId, focusPerson],
+  );
 
   usePageContext(pageContext);
 
@@ -352,12 +420,18 @@ function TreePageContent() {
   if (isMobile === null) {
     return (
       <div className="min-h-full bg-vignette flex items-center justify-center">
-        <div className="text-shield/60 font-serif text-xl animate-pulse">Loading family tree...</div>
+        <div className="text-shield/60 font-serif text-xl animate-pulse">
+          Loading family tree...
+        </div>
       </div>
     );
   }
 
-  return isMobile ? <MobileTreeNavigatorContent /> : <DesktopTreeChartContent />;
+  return isMobile ? (
+    <MobileTreeNavigatorContent />
+  ) : (
+    <DesktopTreeChartContent />
+  );
 }
 
 export default function TreePage() {
@@ -365,7 +439,9 @@ export default function TreePage() {
     <Suspense
       fallback={
         <div className="min-h-full bg-vignette flex items-center justify-center">
-          <div className="text-shield/60 font-serif text-xl animate-pulse">Loading family tree...</div>
+          <div className="text-shield/60 font-serif text-xl animate-pulse">
+            Loading family tree...
+          </div>
         </div>
       }
     >

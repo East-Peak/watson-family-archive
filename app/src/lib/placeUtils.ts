@@ -4,16 +4,57 @@
 
 // US state names for detection
 const US_STATES = new Set([
-  'alabama', 'alaska', 'arizona', 'arkansas', 'california', 'colorado',
-  'connecticut', 'delaware', 'florida', 'georgia', 'hawaii', 'idaho',
-  'illinois', 'indiana', 'iowa', 'kansas', 'kentucky', 'louisiana',
-  'maine', 'maryland', 'massachusetts', 'michigan', 'minnesota',
-  'mississippi', 'missouri', 'montana', 'nebraska', 'nevada',
-  'new hampshire', 'new jersey', 'new mexico', 'new york',
-  'north carolina', 'north dakota', 'ohio', 'oklahoma', 'oregon',
-  'pennsylvania', 'rhode island', 'south carolina', 'south dakota',
-  'tennessee', 'texas', 'utah', 'vermont', 'virginia', 'washington',
-  'west virginia', 'wisconsin', 'wyoming', 'district of columbia'
+  'alabama',
+  'alaska',
+  'arizona',
+  'arkansas',
+  'california',
+  'colorado',
+  'connecticut',
+  'delaware',
+  'florida',
+  'georgia',
+  'hawaii',
+  'idaho',
+  'illinois',
+  'indiana',
+  'iowa',
+  'kansas',
+  'kentucky',
+  'louisiana',
+  'maine',
+  'maryland',
+  'massachusetts',
+  'michigan',
+  'minnesota',
+  'mississippi',
+  'missouri',
+  'montana',
+  'nebraska',
+  'nevada',
+  'new hampshire',
+  'new jersey',
+  'new mexico',
+  'new york',
+  'north carolina',
+  'north dakota',
+  'ohio',
+  'oklahoma',
+  'oregon',
+  'pennsylvania',
+  'rhode island',
+  'south carolina',
+  'south dakota',
+  'tennessee',
+  'texas',
+  'utah',
+  'vermont',
+  'virginia',
+  'washington',
+  'west virginia',
+  'wisconsin',
+  'wyoming',
+  'district of columbia',
 ]);
 
 export interface ParsedPlace {
@@ -27,12 +68,17 @@ export interface ParsedPlace {
 export function parsePlace(place: string | undefined): ParsedPlace {
   if (!place) return { region: undefined, country: undefined };
 
-  const parts = place.split(',').map(p => p.trim());
+  const parts = place.split(',').map((p) => p.trim());
   const lastPart = parts[parts.length - 1]?.toLowerCase() || '';
 
   // Check if last part is USA variation
-  const isUSA = lastPart === 'usa' || lastPart === 'u.s.' || lastPart === 'u.s.a.' ||
-    lastPart === 'united states' || lastPart === 'united states of america' || lastPart === 'america';
+  const isUSA =
+    lastPart === 'usa' ||
+    lastPart === 'u.s.' ||
+    lastPart === 'u.s.a.' ||
+    lastPart === 'united states' ||
+    lastPart === 'united states of america' ||
+    lastPart === 'america';
 
   // Check if last part is a US state (means country was omitted)
   const isUSState = US_STATES.has(lastPart);
@@ -52,9 +98,16 @@ export function parsePlace(place: string | undefined): ParsedPlace {
   }
 
   // UK variations
-  const isUK = lastPart === 'uk' || lastPart === 'u.k.' || lastPart === 'united kingdom' ||
-    lastPart === 'great britain' || lastPart === 'britain' || lastPart === 'england' ||
-    lastPart === 'scotland' || lastPart === 'wales' || lastPart === 'ireland';
+  const isUK =
+    lastPart === 'uk' ||
+    lastPart === 'u.k.' ||
+    lastPart === 'united kingdom' ||
+    lastPart === 'great britain' ||
+    lastPart === 'britain' ||
+    lastPart === 'england' ||
+    lastPart === 'scotland' ||
+    lastPart === 'wales' ||
+    lastPart === 'ireland';
 
   if (isUK) {
     // Get the constituent country (England, Scotland, Wales) or county
@@ -69,7 +122,10 @@ export function parsePlace(place: string | undefined): ParsedPlace {
 /**
  * Build journey description from birth and death places
  */
-export function getJourneyDescription(birthPlace: string | undefined, deathPlace: string | undefined): string | undefined {
+export function getJourneyDescription(
+  birthPlace: string | undefined,
+  deathPlace: string | undefined,
+): string | undefined {
   const birth = parsePlace(birthPlace);
   const death = parsePlace(deathPlace);
 
@@ -81,7 +137,11 @@ export function getJourneyDescription(birthPlace: string | undefined, deathPlace
   }
 
   // Same country but different regions (e.g., Maryland to Kentucky)
-  if (birth.region && death.region && birth.region.toLowerCase() !== death.region.toLowerCase()) {
+  if (
+    birth.region &&
+    death.region &&
+    birth.region.toLowerCase() !== death.region.toLowerCase()
+  ) {
     return `Journeyed from ${birth.region} to ${death.region}`;
   }
 

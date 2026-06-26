@@ -12,6 +12,7 @@
 
 import { executeQuery } from '@/lib/neo4j/client';
 import { getPersonRecords } from '@/lib/neo4j/queries/records';
+import { MAX_ANCESTRY_DEPTH } from '@/lib/neo4j/constants';
 import type {
   QueryPlan,
   RetrievalSpec,
@@ -31,8 +32,14 @@ const FALLBACK_THRESHOLD = 3;
 
 /** Trigger words that activate eager record fetching */
 const EAGER_RECORD_TRIGGERS = [
-  'records', 'evidence', 'sources', 'census', 'proof',
-  'documented', 'confidence', 'verified',
+  'records',
+  'evidence',
+  'sources',
+  'census',
+  'proof',
+  'documented',
+  'confidence',
+  'verified',
 ];
 
 // ---------------------------------------------------------------------------
@@ -97,7 +104,7 @@ export async function executeRetrieval(
       const stage2People = stage2Rows.slice(0, STAGE_2_CAP).map(mapRowToPerson);
 
       // Deduplicate by ID
-      const existingIds = new Set(candidates.map(c => c.id));
+      const existingIds = new Set(candidates.map((c) => c.id));
       for (const person of stage2People) {
         if (!existingIds.has(person.id)) {
           candidates.push(person);
@@ -114,7 +121,7 @@ export async function executeRetrieval(
     plan.anchor.confidence === 'resolved'
   ) {
     const anchorId = plan.anchor.personId;
-    const alreadyIncluded = candidates.some(c => c.id === anchorId);
+    const alreadyIncluded = candidates.some((c) => c.id === anchorId);
     if (!alreadyIncluded) {
       const anchorRows = await executeQuery<Neo4jPersonRow>(
         buildNamedPersonFetchCypher(),
@@ -145,7 +152,9 @@ function buildCypherFromSpec(
   const lines: string[] = [];
 
   // --- MATCH clause from search domain ---
-  lines.push(buildMatchClause(plan.searchDomain, treeId, plan, viewerId, params));
+  lines.push(
+    buildMatchClause(plan.searchDomain, treeId, plan, viewerId, params),
+  );
 
   // --- Hard filter WHERE clauses ---
   const whereConditions: string[] = [];
@@ -155,7 +164,10 @@ function buildCypherFromSpec(
   }
 
   // --- subjectFilter as hard WHERE clause ---
-  const subjectCondition = buildSubjectFilterCondition(plan.subjectFilter, params);
+  const subjectCondition = buildSubjectFilterCondition(
+    plan.subjectFilter,
+    params,
+  );
   if (subjectCondition) whereConditions.push(subjectCondition);
 
   if (whereConditions.length > 0) {
@@ -175,21 +187,32 @@ function buildCypherFromSpec(
   const boostExpressions = buildBoostExpressions(spec.softBoosts, params);
   lines.push(`WITH p, bp, dp, mp, mr, spouse,`);
   lines.push(`  collect(DISTINCT occ.title) as occupations,`);
-  lines.push(`  collect(DISTINCT {event: le.event, year: le.yearInt}) as lifeEvents,`);
-  lines.push(`  collect(DISTINCT {id: parent.id, name: parent.fullName}) as parents`);
+  lines.push(
+    `  collect(DISTINCT {event: le.event, year: le.yearInt}) as lifeEvents,`,
+  );
+  lines.push(
+    `  collect(DISTINCT {id: parent.id, name: parent.fullName}) as parents`,
+  );
 
   // --- Boost score computation ---
   if (boostExpressions.length > 0) {
-    lines.push(`WITH p, bp, dp, mp, mr, spouse, occupations, lifeEvents, parents,`);
+    lines.push(
+      `WITH p, bp, dp, mp, mr, spouse, occupations, lifeEvents, parents,`,
+    );
     lines.push(`  (${boostExpressions.join(' + ')}) as boostScore`);
   } else {
-    lines.push(`WITH p, bp, dp, mp, mr, spouse, occupations, lifeEvents, parents, 0 as boostScore`);
+    lines.push(
+      `WITH p, bp, dp, mp, mr, spouse, occupations, lifeEvents, parents, 0 as boostScore`,
+    );
   }
 
   // --- RETURN ---
   // Single-person focus: fetch full markdown content. Multi-person: cap at 8000 chars.
-  const isSinglePersonFocus = plan.anchor.confidence === 'resolved' &&
-    ['named-person', 'current-page-person', 'conversation-referent'].includes(plan.anchor.type);
+  const isSinglePersonFocus =
+    plan.anchor.confidence === 'resolved' &&
+    ['named-person', 'current-page-person', 'conversation-referent'].includes(
+      plan.anchor.type,
+    );
   const contentExpr = isSinglePersonFocus
     ? `p.markdownContent`
     : `left(p.markdownContent, 8000)`;
@@ -207,7 +230,9 @@ function buildCypherFromSpec(
   lines.push(`  occupations,`);
   lines.push(`  lifeEvents,`);
   lines.push(`  parents,`);
-  lines.push(`  CASE WHEN spouse IS NOT NULL THEN {id: spouse.id, name: spouse.fullName} ELSE null END as spouseData,`);
+  lines.push(
+    `  CASE WHEN spouse IS NOT NULL THEN {id: spouse.id, name: spouse.fullName} ELSE null END as spouseData,`,
+  );
   lines.push(`  p.birthPlace as birthPlace,`);
   lines.push(`  p.deathPlace as deathPlace,`);
   lines.push(`  boostScore`);
@@ -247,7 +272,7 @@ function buildMatchClause(
       params.viewerId = viewerId || plan.anchor.personId;
       return [
         `MATCH (t:Tree {id: $treeId})-[:CONTAINS]->(viewer:Person {id: $viewerId})`,
-        `MATCH (viewer)-[:CHILD_OF*0..20]->(p:Person)`,
+        `MATCH (viewer)-[:CHILD_OF*0..${MAX_ANCESTRY_DEPTH}]->(p:Person)`,
         `WITH DISTINCT p`,
       ].join('\n');
     }
@@ -255,7 +280,7 @@ function buildMatchClause(
       params.anchorId = plan.anchor.personId;
       return [
         `MATCH (t:Tree {id: $treeId})-[:CONTAINS]->(anchor:Person {id: $anchorId})`,
-        `MATCH (anchor)-[:CHILD_OF*0..20]->(p:Person)`,
+        `MATCH (anchor)-[:CHILD_OF*0..${MAX_ANCESTRY_DEPTH}]->(p:Person)`,
         `WITH DISTINCT p`,
       ].join('\n');
     }
@@ -276,7 +301,7 @@ function buildMatchClause(
       params.anchorId = plan.anchor.personId;
       return [
         `MATCH (t:Tree {id: $treeId})-[:CONTAINS]->(anchor:Person {id: $anchorId})`,
-        `OPTIONAL MATCH (anchor)-[:CHILD_OF*0..20]->(ancestor:Person)`,
+        `OPTIONAL MATCH (anchor)-[:CHILD_OF*0..${MAX_ANCESTRY_DEPTH}]->(ancestor:Person)`,
         // Descendants: cap at 6 generations to prevent exponential expansion
         `OPTIONAL MATCH (descendant:Person)-[:CHILD_OF*0..6]->(anchor)`,
         `OPTIONAL MATCH (anchor)-[:SPOUSE_OF]-(spouse_ext:Person)`,
@@ -533,19 +558,32 @@ function buildFallbackCypher(
   const lines: string[] = [];
 
   // Apply the same search domain constraint
-  lines.push(buildMatchClause(plan.searchDomain, treeId, plan, viewerId, params));
+  lines.push(
+    buildMatchClause(plan.searchDomain, treeId, plan, viewerId, params),
+  );
 
   // Preserve subjectFilter from Stage 1 so fallback doesn't widen to unrelated people
-  const subjectCondition = buildSubjectFilterCondition(plan.subjectFilter, params);
+  const subjectCondition = buildSubjectFilterCondition(
+    plan.subjectFilter,
+    params,
+  );
   if (subjectCondition) {
     lines.push(`WHERE ${subjectCondition}`);
     lines.push(`  AND (toLower(p.fullName) CONTAINS $searchTerm`);
-    lines.push(`   OR (p.biography IS NOT NULL AND toLower(p.biography) CONTAINS $searchTerm)`);
-    lines.push(`   OR (p.markdownContent IS NOT NULL AND toLower(p.markdownContent) CONTAINS $searchTerm))`);
+    lines.push(
+      `   OR (p.biography IS NOT NULL AND toLower(p.biography) CONTAINS $searchTerm)`,
+    );
+    lines.push(
+      `   OR (p.markdownContent IS NOT NULL AND toLower(p.markdownContent) CONTAINS $searchTerm))`,
+    );
   } else {
     lines.push(`WHERE toLower(p.fullName) CONTAINS $searchTerm`);
-    lines.push(`   OR (p.biography IS NOT NULL AND toLower(p.biography) CONTAINS $searchTerm)`);
-    lines.push(`   OR (p.markdownContent IS NOT NULL AND toLower(p.markdownContent) CONTAINS $searchTerm)`);
+    lines.push(
+      `   OR (p.biography IS NOT NULL AND toLower(p.biography) CONTAINS $searchTerm)`,
+    );
+    lines.push(
+      `   OR (p.markdownContent IS NOT NULL AND toLower(p.markdownContent) CONTAINS $searchTerm)`,
+    );
   }
 
   // Minimal enrichment for fallback
@@ -559,9 +597,15 @@ function buildFallbackCypher(
 
   lines.push(`WITH p, bp, dp, mp, mr, spouse,`);
   lines.push(`  collect(DISTINCT occ.title) as occupations,`);
-  lines.push(`  collect(DISTINCT {event: le.event, year: le.yearInt}) as lifeEvents,`);
-  lines.push(`  collect(DISTINCT {id: parent.id, name: parent.fullName}) as parents`);
-  lines.push(`WITH p, bp, dp, mp, mr, spouse, occupations, lifeEvents, parents, 0 as boostScore`);
+  lines.push(
+    `  collect(DISTINCT {event: le.event, year: le.yearInt}) as lifeEvents,`,
+  );
+  lines.push(
+    `  collect(DISTINCT {id: parent.id, name: parent.fullName}) as parents`,
+  );
+  lines.push(
+    `WITH p, bp, dp, mp, mr, spouse, occupations, lifeEvents, parents, 0 as boostScore`,
+  );
 
   lines.push(`RETURN`);
   lines.push(`  p.id as id, p.fullName as fullName, p.surname as surname,`);
@@ -569,14 +613,18 @@ function buildFallbackCypher(
   lines.push(`  COALESCE(bp.name, p.birthPlace) as birthPlaceName,`);
   lines.push(`  COALESCE(dp.name, p.deathPlace) as deathPlaceName,`);
   lines.push(`  CASE WHEN p.biography IS NOT NULL THEN p.biography`);
-  lines.push(`       WHEN p.markdownContent IS NOT NULL THEN left(p.markdownContent, 2000)`);
+  lines.push(
+    `       WHEN p.markdownContent IS NOT NULL THEN left(p.markdownContent, 2000)`,
+  );
   lines.push(`       ELSE null END as biography,`);
   lines.push(`  mp.name as marriagePlace,`);
   lines.push(`  mr.marriageYear as marriageYear,`);
   lines.push(`  occupations,`);
   lines.push(`  lifeEvents,`);
   lines.push(`  parents,`);
-  lines.push(`  CASE WHEN spouse IS NOT NULL THEN {id: spouse.id, name: spouse.fullName} ELSE null END as spouseData,`);
+  lines.push(
+    `  CASE WHEN spouse IS NOT NULL THEN {id: spouse.id, name: spouse.fullName} ELSE null END as spouseData,`,
+  );
   lines.push(`  p.birthPlace as birthPlace,`);
   lines.push(`  p.deathPlace as deathPlace,`);
   lines.push(`  boostScore`);
@@ -617,23 +665,25 @@ async function fetchRecordContext(
 ): Promise<void> {
   const anchorId = plan.anchor.personId;
   const isResolved = plan.anchor.confidence === 'resolved' && anchorId;
-  const isEager = message ? EAGER_RECORD_TRIGGERS.some(t => message.toLowerCase().includes(t)) : false;
+  const isEager = message
+    ? EAGER_RECORD_TRIGGERS.some((t) => message.toLowerCase().includes(t))
+    : false;
 
   if (!isResolved) return;
 
   if (isEager) {
     // Eager: fetch for up to 3 top candidates
-    const targetIds = candidates.slice(0, 3).map(c => c.id);
+    const targetIds = candidates.slice(0, 3).map((c) => c.id);
     for (const id of targetIds) {
       const records = await getPersonRecords(id, treeId);
-      const person = candidates.find(c => c.id === id);
+      const person = candidates.find((c) => c.id === id);
       if (person) {
         person.records = records.map(mapRecordToSummary);
       }
     }
   } else {
     // Lazy: only the anchor person
-    const anchorPerson = candidates.find(c => c.id === anchorId);
+    const anchorPerson = candidates.find((c) => c.id === anchorId);
     if (anchorPerson) {
       const records = await getPersonRecords(anchorId, treeId);
       anchorPerson.records = records.map(mapRecordToSummary);
@@ -658,11 +708,13 @@ function mapRowToPerson(row: Neo4jPersonRow): RetrievedPerson {
     marriagePlace: row.marriagePlace || null,
     marriageYear: row.marriageYear || null,
     occupations: (row.occupations || []).filter(Boolean),
-    lifeEvents: (row.lifeEvents || []).filter(le => le && le.event),
-    parents: row.parents?.length ? row.parents.filter(p => p && p.id) : undefined,
+    lifeEvents: (row.lifeEvents || []).filter((le) => le && le.event),
+    parents: row.parents?.length
+      ? row.parents.filter((p) => p && p.id)
+      : undefined,
     spouse: row.spouseData || undefined,
-    children: undefined,  // populated by separate query if needed
-    records: undefined,   // populated by record context fetch
+    children: undefined, // populated by separate query if needed
+    records: undefined, // populated by record context fetch
   };
 }
 

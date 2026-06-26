@@ -1,5 +1,6 @@
 'use client';
 
+import { memo } from 'react';
 import Link from 'next/link';
 import type { ExplorerPerson } from './types';
 
@@ -19,9 +20,7 @@ const STATUS_COLORS: Record<string, string> = {
 };
 
 function toTitleCase(str: string): string {
-  return str
-    .replace(/_/g, ' ')
-    .replace(/\b\w/g, (c) => c.toUpperCase());
+  return str.replace(/_/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
 }
 
 function formatBirthDeath(year: number | null, place: string | null): string {
@@ -32,31 +31,47 @@ function formatBirthDeath(year: number | null, place: string | null): string {
   return parts.join(', ');
 }
 
-export default function TableRow({ person }: TableRowProps) {
+function TableRow({ person }: TableRowProps) {
   const statusColor =
     STATUS_COLORS[person.status] ?? 'bg-gray-100 text-gray-500 border-gray-200';
-  const completenessPercent = Math.max(0, Math.min(100, person.completenessScore));
+  const completenessPercent = Math.max(
+    0,
+    Math.min(100, person.completenessScore),
+  );
 
   return (
     <tr className="border-b border-stone-100 even:bg-stone-50/50 hover:bg-amber-50/40 transition-colors">
-      <td className="px-3 py-2 whitespace-nowrap">
-        <Link
-          href={`/person/${person.id}`}
-          className="text-indigo-700 hover:text-indigo-900 transition-colors font-medium"
-        >
-          {person.fullName}
-        </Link>
-        {person.maidenName && (
-          <span className="ml-1 text-shield/40 text-xs">(nee {person.maidenName})</span>
-        )}
+      <td className="px-3 py-2 whitespace-nowrap overflow-hidden">
+        <span className="block truncate" title={person.fullName}>
+          <Link
+            href={`/person/${person.id}`}
+            className="text-indigo-700 hover:text-indigo-900 transition-colors font-medium"
+          >
+            {person.fullName}
+          </Link>
+          {person.maidenName && (
+            <span className="ml-1 text-shield/40 text-xs">
+              (nee {person.maidenName})
+            </span>
+          )}
+        </span>
       </td>
-      <td className="px-3 py-2 text-shield/60 text-sm whitespace-nowrap">
+      <td
+        className="px-3 py-2 text-shield/60 text-sm whitespace-nowrap truncate"
+        title={formatBirthDeath(person.birthYear, person.birthPlace)}
+      >
         {formatBirthDeath(person.birthYear, person.birthPlace)}
       </td>
-      <td className="px-3 py-2 text-shield/60 text-sm whitespace-nowrap">
+      <td
+        className="px-3 py-2 text-shield/60 text-sm whitespace-nowrap truncate"
+        title={formatBirthDeath(person.deathYear, person.deathPlace)}
+      >
         {formatBirthDeath(person.deathYear, person.deathPlace)}
       </td>
-      <td className="px-3 py-2 text-shield/60 text-sm whitespace-nowrap">
+      <td
+        className="px-3 py-2 text-shield/60 text-sm whitespace-nowrap truncate"
+        title={person.originCountry ?? '--'}
+      >
         {person.originCountry ?? '--'}
       </td>
       <td className="px-3 py-2 text-shield/60 text-sm text-center">
@@ -88,14 +103,15 @@ export default function TableRow({ person }: TableRowProps) {
       <td className="px-3 py-2 text-shield/60 text-sm text-center tabular-nums">
         <span className="group/src relative cursor-default">
           {person.sourceCount}
-          {person.recordCounts && Object.keys(person.recordCounts).length > 0 && (
-            <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-1 hidden group-hover/src:block bg-gray-900 text-white text-xs rounded px-2 py-1 whitespace-nowrap z-20">
-              {Object.entries(person.recordCounts)
-                .sort(([, a], [, b]) => b - a)
-                .map(([type, count]) => `${count} ${type}`)
-                .join(', ')}
-            </span>
-          )}
+          {person.recordCounts &&
+            Object.keys(person.recordCounts).length > 0 && (
+              <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-1 hidden group-hover/src:block bg-gray-900 text-white text-xs rounded px-2 py-1 whitespace-nowrap z-20">
+                {Object.entries(person.recordCounts)
+                  .sort(([, a], [, b]) => b - a)
+                  .map(([type, count]) => `${count} ${type}`)
+                  .join(', ')}
+              </span>
+            )}
         </span>
       </td>
       <td className="px-3 py-2 text-shield/60 text-sm text-center tabular-nums">
@@ -112,7 +128,11 @@ export default function TableRow({ person }: TableRowProps) {
             strokeWidth={2.5}
             aria-label="Pass"
           >
-            <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M5 13l4 4L19 7"
+            />
           </svg>
         ) : (
           <svg
@@ -134,3 +154,5 @@ export default function TableRow({ person }: TableRowProps) {
     </tr>
   );
 }
+
+export default memo(TableRow);

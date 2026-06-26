@@ -83,7 +83,9 @@ export function MiniPedigreeTree({
           maxGenerations: String(maxGenerations),
         });
 
-        const response = await fetch(`/api/tree/${siteConfig.defaultTreeId}/graph?${params}`);
+        const response = await fetch(
+          `/api/tree/${siteConfig.defaultTreeId}/graph?${params}`,
+        );
         if (!response.ok) throw new Error('Failed to load tree data');
 
         const data = await response.json();
@@ -129,9 +131,15 @@ export function MiniPedigreeTree({
       return unique;
     };
 
-    const parents = uniqueByDisplayKey((rootNode.parentIds ?? []).filter((id) => nodeMap.has(id)));
-    const children = uniqueByDisplayKey((rootNode.childIds ?? []).filter((id) => nodeMap.has(id)));
-    const spouses = uniqueByDisplayKey((rootNode.partnerIds ?? []).filter((id) => nodeMap.has(id)));
+    const parents = uniqueByDisplayKey(
+      (rootNode.parentIds ?? []).filter((id) => nodeMap.has(id)),
+    );
+    const children = uniqueByDisplayKey(
+      (rootNode.childIds ?? []).filter((id) => nodeMap.has(id)),
+    );
+    const spouses = uniqueByDisplayKey(
+      (rootNode.partnerIds ?? []).filter((id) => nodeMap.has(id)),
+    );
 
     const centerX = MINI_CARD.width + MINI_CARD.hGap * 2;
     const parentX = 0;
@@ -223,9 +231,15 @@ export function MiniPedigreeTree({
       return unique;
     };
 
-    const parents = uniqueByDisplayKey((rootNode.parentIds ?? []).filter((id) => nodeMap.has(id)));
-    const children = uniqueByDisplayKey((rootNode.childIds ?? []).filter((id) => nodeMap.has(id)));
-    const spouses = uniqueByDisplayKey((rootNode.partnerIds ?? []).filter((id) => nodeMap.has(id)));
+    const parents = uniqueByDisplayKey(
+      (rootNode.parentIds ?? []).filter((id) => nodeMap.has(id)),
+    );
+    const children = uniqueByDisplayKey(
+      (rootNode.childIds ?? []).filter((id) => nodeMap.has(id)),
+    );
+    const spouses = uniqueByDisplayKey(
+      (rootNode.partnerIds ?? []).filter((id) => nodeMap.has(id)),
+    );
 
     const edgesLocal: MiniTreeEdge[] = [];
     for (const parentId of parents) {
@@ -286,20 +300,26 @@ export function MiniPedigreeTree({
     });
   }, [dimensions]);
 
-  const handleMouseDown = useCallback((e: React.MouseEvent) => {
-    if (e.button !== 0) return;
-    setIsDragging(true);
-    setDragStart({ x: e.clientX - transform.x, y: e.clientY - transform.y });
-  }, [transform.x, transform.y]);
+  const handleMouseDown = useCallback(
+    (e: React.MouseEvent) => {
+      if (e.button !== 0) return;
+      setIsDragging(true);
+      setDragStart({ x: e.clientX - transform.x, y: e.clientY - transform.y });
+    },
+    [transform.x, transform.y],
+  );
 
-  const handleMouseMove = useCallback((e: React.MouseEvent) => {
-    if (!isDragging) return;
-    setTransform((prev) => ({
-      ...prev,
-      x: e.clientX - dragStart.x,
-      y: e.clientY - dragStart.y,
-    }));
-  }, [isDragging, dragStart]);
+  const handleMouseMove = useCallback(
+    (e: React.MouseEvent) => {
+      if (!isDragging) return;
+      setTransform((prev) => ({
+        ...prev,
+        x: e.clientX - dragStart.x,
+        y: e.clientY - dragStart.y,
+      }));
+    },
+    [isDragging, dragStart],
+  );
 
   const handleMouseUp = useCallback(() => {
     setIsDragging(false);
@@ -309,9 +329,13 @@ export function MiniPedigreeTree({
     if (layoutNodes.length === 0) return;
 
     const minX = Math.min(...layoutNodes.map((n) => n.x ?? 0));
-    const maxX = Math.max(...layoutNodes.map((n) => (n.x ?? 0) + MINI_CARD.width));
+    const maxX = Math.max(
+      ...layoutNodes.map((n) => (n.x ?? 0) + MINI_CARD.width),
+    );
     const minY = Math.min(...layoutNodes.map((n) => n.y ?? 0));
-    const maxY = Math.max(...layoutNodes.map((n) => (n.y ?? 0) + MINI_CARD.height));
+    const maxY = Math.max(
+      ...layoutNodes.map((n) => (n.y ?? 0) + MINI_CARD.height),
+    );
 
     const treeWidth = maxX - minX + 40;
     const treeHeight = maxY - minY + 40;
@@ -337,7 +361,9 @@ export function MiniPedigreeTree({
 
   const renderConnections = () => {
     const elements: React.ReactElement[] = [];
-    const nodePositions = new Map(layoutNodes.map((n) => [n.id, { x: n.x ?? 0, y: n.y ?? 0 }]));
+    const nodePositions = new Map(
+      layoutNodes.map((n) => [n.id, { x: n.x ?? 0, y: n.y ?? 0 }]),
+    );
     const seen = new Set<string>();
 
     for (const edge of localEdges) {
@@ -366,7 +392,7 @@ export function MiniPedigreeTree({
           strokeLinecap="round"
           strokeLinejoin="round"
           opacity={0.7}
-        />
+        />,
       );
     }
 
@@ -375,7 +401,10 @@ export function MiniPedigreeTree({
 
   if (isLoading) {
     return (
-      <div className={`flex items-center justify-center ${className}`} style={{ height }}>
+      <div
+        className={`flex items-center justify-center ${className}`}
+        style={{ height }}
+      >
         <div className="text-gray-400 text-sm">Loading family tree...</div>
       </div>
     );
@@ -383,7 +412,10 @@ export function MiniPedigreeTree({
 
   if (error) {
     return (
-      <div className={`flex items-center justify-center ${className}`} style={{ height }}>
+      <div
+        className={`flex items-center justify-center ${className}`}
+        style={{ height }}
+      >
         <div className="text-red-500 text-sm">{error}</div>
       </div>
     );
@@ -415,16 +447,19 @@ export function MiniPedigreeTree({
           cursor: isDragging ? 'grabbing' : 'grab',
         }}
       >
-        <g transform={`translate(${transform.x}, ${transform.y}) scale(${transform.scale})`}>
+        <g
+          transform={`translate(${transform.x}, ${transform.y}) scale(${transform.scale})`}
+        >
           {renderConnections()}
 
           {layoutNodes.map((node) => {
             const isFocusPerson = node.id === personId;
-            const palette = node.sex === 'F'
-              ? MINI_TREE_COLORS.female
-              : node.sex === 'M'
-                ? MINI_TREE_COLORS.male
-                : MINI_TREE_COLORS.unknown;
+            const palette =
+              node.sex === 'F'
+                ? MINI_TREE_COLORS.female
+                : node.sex === 'M'
+                  ? MINI_TREE_COLORS.male
+                  : MINI_TREE_COLORS.unknown;
 
             return (
               <g
@@ -459,7 +494,8 @@ export function MiniPedigreeTree({
                     fontSize={9}
                     fill="#6b7280"
                   >
-                    {node.birthYear}{node.deathYear ? `-${node.deathYear}` : ''}
+                    {node.birthYear}
+                    {node.deathYear ? `-${node.deathYear}` : ''}
                   </text>
                 )}
               </g>
@@ -474,8 +510,18 @@ export function MiniPedigreeTree({
           className="w-8 h-8 bg-white/90 hover:bg-white border border-gray-300 rounded-lg shadow-sm flex items-center justify-center text-gray-600 hover:text-gray-900 transition-colors"
           title="Zoom in"
         >
-          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v12M6 12h12" />
+          <svg
+            className="w-4 h-4"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M12 6v12M6 12h12"
+            />
           </svg>
         </button>
         <button
@@ -483,8 +529,18 @@ export function MiniPedigreeTree({
           className="w-8 h-8 bg-white/90 hover:bg-white border border-gray-300 rounded-lg shadow-sm flex items-center justify-center text-gray-600 hover:text-gray-900 transition-colors"
           title="Zoom out"
         >
-          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 12h12" />
+          <svg
+            className="w-4 h-4"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M6 12h12"
+            />
           </svg>
         </button>
         <button
@@ -492,8 +548,18 @@ export function MiniPedigreeTree({
           className="w-8 h-8 bg-white/90 hover:bg-white border border-gray-300 rounded-lg shadow-sm flex items-center justify-center text-gray-600 hover:text-gray-900 transition-colors"
           title="Fit to screen"
         >
-          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
+          <svg
+            className="w-4 h-4"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"
+            />
           </svg>
         </button>
       </div>

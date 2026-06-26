@@ -1,6 +1,13 @@
 'use client';
 
-import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
+import {
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+  type ReactNode,
+} from 'react';
 import type { GlobeData } from './types';
 
 // --- Constants ---
@@ -45,15 +52,20 @@ function computeHistogram(globeData: GlobeData | null): Map<number, number> {
   return counts;
 }
 
-function getHistogramBars(histogram: Map<number, number>): { decade: number; count: number; pct: number }[] {
+function getHistogramBars(
+  histogram: Map<number, number>,
+): { decade: number; count: number; pct: number }[] {
   const bars: { decade: number; count: number; pct: number }[] = [];
   const maxCount = Math.max(...Array.from(histogram.values()), 1);
 
   const domainYears = Array.from(histogram.keys());
-  const minYear = domainYears.length > 0 ? Math.min(...domainYears) : DEFAULT_MIN_YEAR;
-  const maxYear = domainYears.length > 0 ? Math.max(...domainYears) : DEFAULT_MAX_YEAR;
+  const minYear =
+    domainYears.length > 0 ? Math.min(...domainYears) : DEFAULT_MIN_YEAR;
+  const maxYear =
+    domainYears.length > 0 ? Math.max(...domainYears) : DEFAULT_MAX_YEAR;
   const domainStart = Math.floor(minYear / DECADE_SIZE) * DECADE_SIZE;
-  const domainEnd = Math.ceil(maxYear / DECADE_SIZE) * DECADE_SIZE + DECADE_SIZE;
+  const domainEnd =
+    Math.ceil(maxYear / DECADE_SIZE) * DECADE_SIZE + DECADE_SIZE;
 
   for (let decade = domainStart; decade < domainEnd; decade += DECADE_SIZE) {
     const count = histogram.get(decade) || 0;
@@ -153,13 +165,21 @@ export default function TimelineSlider({
   onChange,
   controlsTrigger,
 }: TimelineSliderProps) {
-  const [domainMin, domainMax] = useMemo(() => deriveYearDomain(globeData), [globeData]);
+  const [domainMin, domainMax] = useMemo(
+    () => deriveYearDomain(globeData),
+    [globeData],
+  );
   const [localRange, setLocalRange] = useState<[number, number]>(() =>
-    clampRangeToDomain(yearRange || [domainMin, domainMax], domainMin, domainMax),
+    clampRangeToDomain(
+      yearRange || [domainMin, domainMax],
+      domainMin,
+      domainMax,
+    ),
   );
   const [isPlaying, setIsPlaying] = useState(false);
   const [playSpeed, setPlaySpeed] = useState<1 | 2 | 3>(1);
-  const [playbackSessionWindow, setPlaybackSessionWindow] = useState<PlaybackWindow | null>(null);
+  const [playbackSessionWindow, setPlaybackSessionWindow] =
+    useState<PlaybackWindow | null>(null);
   const playRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const localRangeRef = useRef<[number, number]>(localRange);
@@ -212,7 +232,10 @@ export default function TimelineSlider({
 
   const histogram = useMemo(() => computeHistogram(globeData), [globeData]);
   const bars = useMemo(() => getHistogramBars(histogram), [histogram]);
-  const tickYears = useMemo(() => getTickYears(domainMin, domainMax), [domainMin, domainMax]);
+  const tickYears = useMemo(
+    () => getTickYears(domainMin, domainMax),
+    [domainMin, domainMax],
+  );
 
   // Debounced commit to parent
   const commitRange = useCallback(
@@ -230,7 +253,11 @@ export default function TimelineSlider({
     (e: React.ChangeEvent<HTMLInputElement>) => {
       const newStart = parseInt(e.target.value, 10);
       const clamped = Math.min(newStart, localRange[1] - DECADE_SIZE);
-      const next = clampRangeToDomain([clamped, localRange[1]], domainMin, domainMax);
+      const next = clampRangeToDomain(
+        [clamped, localRange[1]],
+        domainMin,
+        domainMax,
+      );
       setLocalRange(next);
       commitRange(next);
     },
@@ -242,7 +269,11 @@ export default function TimelineSlider({
     (e: React.ChangeEvent<HTMLInputElement>) => {
       const newEnd = parseInt(e.target.value, 10);
       const clamped = Math.max(newEnd, localRange[0] + DECADE_SIZE);
-      const next = clampRangeToDomain([localRange[0], clamped], domainMin, domainMax);
+      const next = clampRangeToDomain(
+        [localRange[0], clamped],
+        domainMin,
+        domainMax,
+      );
       setLocalRange(next);
       commitRange(next);
     },
@@ -279,14 +310,23 @@ export default function TimelineSlider({
         playRef.current = null;
       }
     };
-  }, [isPlaying, playSpeed, emitRangeChange, activePlaybackWindow, buildPlaybackRange]);
+  }, [
+    isPlaying,
+    playSpeed,
+    emitRangeChange,
+    activePlaybackWindow,
+    buildPlaybackRange,
+  ]);
 
   const handlePlayPause = useCallback(() => {
     if (!isPlaying) {
       setPlaybackSessionWindow(livePlaybackWindow);
       // If at full range, start from beginning
       if (localRange[0] <= domainMin && localRange[1] >= domainMax) {
-        const next = buildPlaybackRange(livePlaybackWindow.min, livePlaybackWindow);
+        const next = buildPlaybackRange(
+          livePlaybackWindow.min,
+          livePlaybackWindow,
+        );
         localRangeRef.current = next;
         setLocalRange(next);
         emitRangeChange(next);
@@ -393,7 +433,9 @@ export default function TimelineSlider({
                 className="flex-1 transition-opacity duration-100"
                 style={{
                   height: `${Math.max(pct * 100, count > 0 ? 4 : 0)}%`,
-                  backgroundColor: inRange ? 'rgba(99, 102, 241, 0.5)' : 'rgba(255, 255, 255, 0.1)',
+                  backgroundColor: inRange
+                    ? 'rgba(99, 102, 241, 0.5)'
+                    : 'rgba(255, 255, 255, 0.1)',
                   borderRadius: '2px 2px 0 0',
                 }}
                 title={`${decade}s: ${count} events`}

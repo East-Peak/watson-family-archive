@@ -11,14 +11,22 @@ import {
   type Viewer as CesiumViewer,
 } from 'cesium';
 
-// Cesium Ion access token (free tier)
-Ion.defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJiOTg2YTI5Ni02NjRiLTQ2MjItOWRjNC0xYTA4YzY2YjJlZmMiLCJpZCI6Mzc0NDE3LCJpYXQiOjE3NjczNzQ3MDR9.L5_FUAZv68o80_t9Nr50GWQLiElvnuIysi1akPfMeK0';
+// Cesium Ion access token, read from NEXT_PUBLIC_CESIUM_ION_TOKEN (set in
+// .env.local locally and in Vercel env for production). The token is
+// domain-restricted in Cesium Ion, so it is safe to expose as a NEXT_PUBLIC value.
+Ion.defaultAccessToken = process.env.NEXT_PUBLIC_CESIUM_ION_TOKEN ?? '';
 import 'cesium/Build/Cesium/Widgets/widgets.css';
 import JourneyPlayer from './JourneyPlayer';
 import JourneyCard from './JourneyCard';
 import { REGION_COLORS } from './globe/constants';
 import { getLocationRegion } from './globe/regions';
-import type { Arc, GlobeViewState, JourneyModeData, Location, Person } from './globe/types';
+import type {
+  Arc,
+  GlobeViewState,
+  JourneyModeData,
+  Location,
+  Person,
+} from './globe/types';
 import { useGlobeFilteredData } from './globe/hooks/useGlobeFilteredData';
 import { useGlobeCamera } from './globe/hooks/useGlobeCamera';
 import { useJourneyPlayback } from './globe/hooks/useJourneyPlayback';
@@ -73,7 +81,13 @@ if (typeof window !== 'undefined') {
 }
 
 /** Default event types matching useGlobeViewState defaults */
-const DEFAULT_EVENT_TYPES = ['birth', 'death', 'marriage', 'census', 'residence'];
+const DEFAULT_EVENT_TYPES = [
+  'birth',
+  'death',
+  'marriage',
+  'census',
+  'residence',
+];
 
 interface CesiumGlobeProps {
   onPersonSelect?: (personId: string) => void;
@@ -130,13 +144,21 @@ export default function CesiumGlobe({
       window.matchMedia('(max-width: 767px)').matches);
   const viewerRef = useRef<{ cesiumElement?: CesiumViewer } | null>(null);
   const [mountedViewer, setMountedViewer] = useState<CesiumViewer | null>(null);
-  const [selectedLocationId, setSelectedLocationId] = useState<number | null>(null);
+  const [selectedLocationId, setSelectedLocationId] = useState<number | null>(
+    null,
+  );
   const [selectedPersonId, setSelectedPersonId] = useState<string | null>(null);
-  const [hoveredLocationId, setHoveredLocationId] = useState<number | null>(null);
+  const [hoveredLocationId, setHoveredLocationId] = useState<number | null>(
+    null,
+  );
   const [selectedArc, setSelectedArc] = useState<Arc | null>(null);
-  const [mobileSheetMode, setMobileSheetMode] = useState<MobileGlobeSheetMode>('controls');
-  const [mobileSheetSnap, setMobileSheetSnap] = useState<MobileGlobeSheetSnap>('collapsed');
-  const [lastControlsSnap, setLastControlsSnap] = useState<'half' | 'full'>('half');
+  const [mobileSheetMode, setMobileSheetMode] =
+    useState<MobileGlobeSheetMode>('controls');
+  const [mobileSheetSnap, setMobileSheetSnap] =
+    useState<MobileGlobeSheetSnap>('collapsed');
+  const [lastControlsSnap, setLastControlsSnap] = useState<'half' | 'full'>(
+    'half',
+  );
   const prevMobileHighlightRef = useRef<string | null | undefined>(undefined);
 
   const { globeData, filteredLocations, filteredArcs } = useGlobeFilteredData({
@@ -171,7 +193,10 @@ export default function CesiumGlobe({
     handleJourneyClose,
   } = useJourneyPlayback({ journeyMode, viewerRef, onJourneyClose });
 
-  const personHighlight = usePersonHighlight(viewState.highlightPerson, globeData);
+  const personHighlight = usePersonHighlight(
+    viewState.highlightPerson,
+    globeData,
+  );
   const { fitToLocations, fitToVisible } = useFitCamera({ viewerRef });
 
   // Auto-fly to person locations when a person is selected via search
@@ -191,7 +216,12 @@ export default function CesiumGlobe({
       }
     }
     prevHighlightRef.current = viewState.highlightPerson;
-  }, [viewState.highlightPerson, personHighlight, filteredLocations, fitToLocations]);
+  }, [
+    viewState.highlightPerson,
+    personHighlight,
+    filteredLocations,
+    fitToLocations,
+  ]);
 
   // Active filters check
   const hasActiveFilters = useMemo(() => {
@@ -205,7 +235,13 @@ export default function CesiumGlobe({
       hasNonDefaultEvents ||
       (viewState.branch !== '' && viewState.branch !== 'all')
     );
-  }, [viewState.regions, viewState.highlightPerson, viewState.yearRange, viewState.eventTypes, viewState.branch]);
+  }, [
+    viewState.regions,
+    viewState.highlightPerson,
+    viewState.yearRange,
+    viewState.eventTypes,
+    viewState.branch,
+  ]);
 
   const handleFitToView = useCallback(() => {
     fitToVisible(filteredLocations);
@@ -263,8 +299,14 @@ export default function CesiumGlobe({
   const selectedLocation = useMemo(() => {
     if (selectedLocationId === null) return null;
 
-    const location = filteredLocations.find((entry) => entry.id === selectedLocationId) ?? null;
-    if (!location || location.visibility !== 'full' || location.visiblePeopleCount === 0) {
+    const location =
+      filteredLocations.find((entry) => entry.id === selectedLocationId) ??
+      null;
+    if (
+      !location ||
+      location.visibility !== 'full' ||
+      location.visiblePeopleCount === 0
+    ) {
       return null;
     }
 
@@ -312,10 +354,16 @@ export default function CesiumGlobe({
   }, [mobileSheetMode]);
 
   const waitingOnViewerLines =
-    viewState.branch === 'my-lines' && Boolean(viewerId) && viewerAncestryLoading;
+    viewState.branch === 'my-lines' &&
+    Boolean(viewerId) &&
+    viewerAncestryLoading;
 
   const isEmptyState = useMemo(
-    () => globeData !== null && fullLocationCount === 0 && hasActiveFilters && !waitingOnViewerLines,
+    () =>
+      globeData !== null &&
+      fullLocationCount === 0 &&
+      hasActiveFilters &&
+      !waitingOnViewerLines,
     [globeData, fullLocationCount, hasActiveFilters, waitingOnViewerLines],
   );
 
@@ -372,7 +420,10 @@ export default function CesiumGlobe({
       const picked = mountedViewer.scene.pick(movement.endPosition);
       if (defined(picked) && defined(picked.id)) {
         const entity = picked.id;
-        if (entity.name && locationNameToId.has(entity.name._value || entity.name)) {
+        if (
+          entity.name &&
+          locationNameToId.has(entity.name._value || entity.name)
+        ) {
           const name = entity.name._value || entity.name;
           setHoveredLocationId(locationNameToId.get(name) || null);
         } else {
@@ -446,7 +497,13 @@ export default function CesiumGlobe({
     }
 
     prevMobileHighlightRef.current = viewState.highlightPerson;
-  }, [isMobile, journeyMode, mobileSheetMode, restoreControlsSheet, viewState.highlightPerson]);
+  }, [
+    isMobile,
+    journeyMode,
+    mobileSheetMode,
+    restoreControlsSheet,
+    viewState.highlightPerson,
+  ]);
 
   useEffect(() => {
     if (
@@ -471,7 +528,10 @@ export default function CesiumGlobe({
   ]);
 
   useEffect(() => {
-    if (typeof window === 'undefined' || window.location.hostname !== 'localhost') {
+    if (
+      typeof window === 'undefined' ||
+      window.location.hostname !== 'localhost'
+    ) {
       return;
     }
 
@@ -485,37 +545,54 @@ export default function CesiumGlobe({
     };
   }, [mountedViewer]);
 
-  const getLocationColor = useCallback((location: Pick<Location, 'country' | 'name' | 'city' | 'state' | 'lat' | 'lng'>): Color => {
-    const region = getLocationRegion(location);
-    return REGION_COLORS[region] || REGION_COLORS['default'];
-  }, []);
+  const getLocationColor = useCallback(
+    (
+      location: Pick<
+        Location,
+        'country' | 'name' | 'city' | 'state' | 'lat' | 'lng'
+      >,
+    ): Color => {
+      const region = getLocationRegion(location);
+      return REGION_COLORS[region] || REGION_COLORS['default'];
+    },
+    [],
+  );
 
-  const handleLocationClick = useCallback((location: Location) => {
-    setSelectedLocationId(location.id);
-    setSelectedPersonId(null);
-    setSelectedArc(null);
-    if (isMobile) {
-      setMobileSheetMode('location');
-      setMobileSheetSnap('half');
-    }
-    onCloseSidebar?.();
-  }, [isMobile, onCloseSidebar]);
+  const handleLocationClick = useCallback(
+    (location: Location) => {
+      setSelectedLocationId(location.id);
+      setSelectedPersonId(null);
+      setSelectedArc(null);
+      if (isMobile) {
+        setMobileSheetMode('location');
+        setMobileSheetSnap('half');
+      }
+      onCloseSidebar?.();
+    },
+    [isMobile, onCloseSidebar],
+  );
 
-  const handlePersonClick = useCallback((person: Person) => {
-    setSelectedPersonId(person.id);
-    onCloseSidebar?.();
-    if (onPersonSelect) {
-      onPersonSelect(person.id);
-    }
-  }, [onPersonSelect, onCloseSidebar]);
+  const handlePersonClick = useCallback(
+    (person: Person) => {
+      setSelectedPersonId(person.id);
+      onCloseSidebar?.();
+      if (onPersonSelect) {
+        onPersonSelect(person.id);
+      }
+    },
+    [onPersonSelect, onCloseSidebar],
+  );
 
-  const handleMobilePersonHighlight = useCallback((person: Person) => {
-    setSelectedLocationId(null);
-    setSelectedArc(null);
-    setSelectedPersonId(null);
-    onViewStateChange({ highlightPerson: person.id });
-    onCloseSidebar?.();
-  }, [onCloseSidebar, onViewStateChange]);
+  const handleMobilePersonHighlight = useCallback(
+    (person: Person) => {
+      setSelectedLocationId(null);
+      setSelectedArc(null);
+      setSelectedPersonId(null);
+      onViewStateChange({ highlightPerson: person.id });
+      onCloseSidebar?.();
+    },
+    [onCloseSidebar, onViewStateChange],
+  );
 
   const closePanel = useCallback(() => {
     setSelectedLocationId(null);
@@ -537,16 +614,19 @@ export default function CesiumGlobe({
     restoreControlsSheet();
   }, [restoreControlsSheet]);
 
-  const handleArcClick = useCallback((arc: Arc) => {
-    setSelectedArc(arc);
-    setSelectedLocationId(null);
-    setSelectedPersonId(null);
-    if (isMobile) {
-      setMobileSheetMode('arc');
-      setMobileSheetSnap('half');
-    }
-    onCloseSidebar?.();
-  }, [isMobile, onCloseSidebar]);
+  const handleArcClick = useCallback(
+    (arc: Arc) => {
+      setSelectedArc(arc);
+      setSelectedLocationId(null);
+      setSelectedPersonId(null);
+      if (isMobile) {
+        setMobileSheetMode('arc');
+        setMobileSheetSnap('half');
+      }
+      onCloseSidebar?.();
+    },
+    [isMobile, onCloseSidebar],
+  );
 
   const handleYearRangeChange = useCallback(
     (yearRange: [number, number] | null) => {
@@ -599,7 +679,10 @@ export default function CesiumGlobe({
         >
           <ViewerMountObserver onViewerReady={setMountedViewer} />
           {isOriginsMode && (
-            <OriginPins originPins={vizMode.originPins} onLocationClick={handleLocationClick} />
+            <OriginPins
+              originPins={vizMode.originPins}
+              onLocationClick={handleLocationClick}
+            />
           )}
           {isDensityMode && <DensityLayer bubbles={vizMode.densityBubbles} />}
           {!isDensityMode && !isOriginsMode && (
@@ -698,11 +781,12 @@ export default function CesiumGlobe({
             <div>Has active filters: {hasActiveFilters ? 'yes' : 'no'}</div>
             <div>Empty state: {isEmptyState ? 'yes' : 'no'}</div>
             <div>
-              Locations: {fullLocationCount} full / {dimmedLocationCount} dimmed / {hiddenLocationCount}{' '}
-              hidden
+              Locations: {fullLocationCount} full / {dimmedLocationCount} dimmed
+              / {hiddenLocationCount} hidden
             </div>
             <div>
-              Arcs: {fullArcCount} full / {dimmedArcCount} dimmed / {hiddenArcCount} hidden
+              Arcs: {fullArcCount} full / {dimmedArcCount} dimmed /{' '}
+              {hiddenArcCount} hidden
             </div>
           </aside>
         )}
@@ -713,31 +797,39 @@ export default function CesiumGlobe({
             onClearFilter={onViewStateChange}
           />
         )}
-        {!journeyMode && !isMobile && personHighlight.isActive && personHighlight.personName && viewState.highlightPerson && (
-          <PersonHighlightCard
-            personName={personHighlight.personName}
-            birthYear={personHighlight.birthYear}
-            deathYear={personHighlight.deathYear}
-            locationCount={personHighlight.locationIds.size}
-            arcCount={personHighlight.arcIndices.size}
-            highlightPersonId={viewState.highlightPerson}
-            onClear={() => onViewStateChange({ highlightPerson: null })}
-          />
+        {!journeyMode &&
+          !isMobile &&
+          personHighlight.isActive &&
+          personHighlight.personName &&
+          viewState.highlightPerson && (
+            <PersonHighlightCard
+              personName={personHighlight.personName}
+              birthYear={personHighlight.birthYear}
+              deathYear={personHighlight.deathYear}
+              locationCount={personHighlight.locationIds.size}
+              arcCount={personHighlight.arcIndices.size}
+              highlightPersonId={viewState.highlightPerson}
+              onClear={() => onViewStateChange({ highlightPerson: null })}
+            />
+          )}
+        {selectedArc && !journeyMode && !isMobile && (
+          <ArcDetailsPanel arc={selectedArc} onClose={closePanel} />
         )}
-        {selectedArc && !journeyMode && !isMobile && <ArcDetailsPanel arc={selectedArc} onClose={closePanel} />}
 
         {isMobile && !journeyMode && mobileSheetSnap !== 'collapsed' && (
           <MobileGlobeSheet
             mode={mobileSheetMode}
             snap={mobileSheetSnap}
             title={mobileSheetTitle}
-            onClose={mobileSheetMode === 'controls'
-              ? collapseControlsSheet
-              : mobileSheetMode === 'location'
-                ? closeLocationDetail
-                : mobileSheetMode === 'arc'
-                  ? closeArcDetail
-                  : closeHighlightDetail}
+            onClose={
+              mobileSheetMode === 'controls'
+                ? collapseControlsSheet
+                : mobileSheetMode === 'location'
+                  ? closeLocationDetail
+                  : mobileSheetMode === 'arc'
+                    ? closeArcDetail
+                    : closeHighlightDetail
+            }
             onToggleSnap={handleSheetSnapToggle}
           >
             {mobileSheetMode === 'controls' && (
@@ -761,7 +853,9 @@ export default function CesiumGlobe({
                 onPersonHighlight={handleMobilePersonHighlight}
               />
             )}
-            {mobileSheetMode === 'arc' && selectedArc && <MobileArcDetails arc={selectedArc} />}
+            {mobileSheetMode === 'arc' && selectedArc && (
+              <MobileArcDetails arc={selectedArc} />
+            )}
             {mobileSheetMode === 'highlight' && viewState.highlightPerson && (
               <MobileHighlightDetails
                 personName={personHighlight.personName}
@@ -792,8 +886,18 @@ export default function CesiumGlobe({
                 className="inline-flex h-8 flex-shrink-0 items-center gap-2 rounded-full bg-white/10 px-3 text-xs font-medium text-white transition-colors hover:bg-white/20"
                 data-testid="mobile-globe-controls-trigger"
               >
-                <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M7 12h10M10 18h4" />
+                <svg
+                  className="h-4 w-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 6h16M7 12h10M10 18h4"
+                  />
                 </svg>
                 <span>Controls</span>
               </button>

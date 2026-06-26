@@ -14,7 +14,7 @@ export interface RecordGapAnalysis {
 
 export async function analyzeRecordGaps(
   personId: string,
-  treeId: string
+  treeId: string,
 ): Promise<RecordGapAnalysis> {
   const cypher = `
     MATCH (t:Tree {id: $treeId})-[:CONTAINS]->(p:Person {id: $personId})
@@ -65,8 +65,13 @@ export async function analyzeRecordGaps(
   if (!hasType('census')) missingTypes.push('census');
   if (!hasType('military')) missingTypes.push('military');
 
-  const US_CENSUS_YEARS = [1790, 1800, 1810, 1820, 1830, 1840, 1850, 1860, 1870, 1880, 1890, 1900, 1910, 1920, 1930, 1940, 1950];
-  const censusYears = row.recordYears.filter((y): y is number => y !== null && US_CENSUS_YEARS.includes(y));
+  const US_CENSUS_YEARS = [
+    1790, 1800, 1810, 1820, 1830, 1840, 1850, 1860, 1870, 1880, 1890, 1900,
+    1910, 1920, 1930, 1940, 1950,
+  ];
+  const censusYears = row.recordYears.filter(
+    (y): y is number => y !== null && US_CENSUS_YEARS.includes(y),
+  );
   const missingCensusYears: number[] = [];
 
   if (birth && death) {
@@ -88,23 +93,35 @@ export async function analyzeRecordGaps(
   const suggestions: string[] = [];
 
   if (missingTypes.includes('birth') && birth) {
-    suggestions.push(`Search for birth record (~${birth}). Try state vital records or church records for the birth location.`);
+    suggestions.push(
+      `Search for birth record (~${birth}). Try state vital records or church records for the birth location.`,
+    );
   }
   if (missingTypes.includes('death') && death) {
-    suggestions.push(`Search for death record (~${death}). Try state death index, SSDI, or Find a Grave.`);
+    suggestions.push(
+      `Search for death record (~${death}). Try state death index, SSDI, or Find a Grave.`,
+    );
   }
   if (missingTypes.includes('marriage')) {
-    suggestions.push(`No marriage record found. Search state marriage records or church registers.`);
+    suggestions.push(
+      `No marriage record found. Search state marriage records or church registers.`,
+    );
   }
   for (const cy of missingCensusYears.slice(0, 5)) {
     const age = birth ? cy - birth : '?';
-    suggestions.push(`Missing ${cy} Census (would be ~${age} years old). Search FamilySearch ${cy} Census collection.`);
+    suggestions.push(
+      `Missing ${cy} Census (would be ~${age} years old). Search FamilySearch ${cy} Census collection.`,
+    );
   }
   if (missingCensusYears.length > 5) {
-    suggestions.push(`... and ${missingCensusYears.length - 5} more missing census years.`);
+    suggestions.push(
+      `... and ${missingCensusYears.length - 5} more missing census years.`,
+    );
   }
   if (row.records.length === 0) {
-    suggestions.push(`No records linked to this person yet. Start with census records for the most coverage.`);
+    suggestions.push(
+      `No records linked to this person yet. Start with census records for the most coverage.`,
+    );
   }
 
   return {
@@ -150,7 +167,12 @@ export async function getTreeResearchStats(treeId: string): Promise<{
     peopleWithThisCount: number;
   }>(cypher, { treeId });
 
-  const first = rows[0] || { totalPeople: 0, withRecords: 0, withoutRecords: 0, avgRecords: 0 };
+  const first = rows[0] || {
+    totalPeople: 0,
+    withRecords: 0,
+    withoutRecords: 0,
+    avgRecords: 0,
+  };
 
   return {
     totalPeople: first.totalPeople,

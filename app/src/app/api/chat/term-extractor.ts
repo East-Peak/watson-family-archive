@@ -5,31 +5,123 @@ import type { GraphDictionaries, QueryTerms } from './types';
 // ---------------------------------------------------------------------------
 
 const STOP_WORDS = new Set([
-  'the', 'a', 'an', 'is', 'are', 'was', 'were', 'do', 'does', 'did',
-  'my', 'me', 'i', 'of', 'in', 'on', 'at', 'to', 'for', 'and', 'or',
-  'but', 'about', 'tell', 'show', 'who', 'what', 'when', 'where', 'how',
-  'why', 'can', 'could', 'would', 'should', 'has', 'have', 'had', 'be',
-  'been', 'being', 'this', 'that', 'these', 'those', 'it', 'its', 'any',
-  'some', 'there', 'than', 'then',
+  'the',
+  'a',
+  'an',
+  'is',
+  'are',
+  'was',
+  'were',
+  'do',
+  'does',
+  'did',
+  'my',
+  'me',
+  'i',
+  'of',
+  'in',
+  'on',
+  'at',
+  'to',
+  'for',
+  'and',
+  'or',
+  'but',
+  'about',
+  'tell',
+  'show',
+  'who',
+  'what',
+  'when',
+  'where',
+  'how',
+  'why',
+  'can',
+  'could',
+  'would',
+  'should',
+  'has',
+  'have',
+  'had',
+  'be',
+  'been',
+  'being',
+  'this',
+  'that',
+  'these',
+  'those',
+  'it',
+  'its',
+  'any',
+  'some',
+  'there',
+  'than',
+  'then',
 ]);
 
 const RELATIONSHIP_TERMS = new Set([
-  'father', 'mother', 'parent', 'parents', 'grandfather', 'grandmother',
-  'grandparent', 'grandparents', 'ancestor', 'ancestors', 'child', 'children',
-  'son', 'daughter', 'sibling', 'brother', 'sister', 'spouse', 'husband',
-  'wife', 'uncle', 'aunt', 'cousin', 'family', 'lineage', 'line',
-  'descendant', 'descendants',
+  'father',
+  'mother',
+  'parent',
+  'parents',
+  'grandfather',
+  'grandmother',
+  'grandparent',
+  'grandparents',
+  'ancestor',
+  'ancestors',
+  'child',
+  'children',
+  'son',
+  'daughter',
+  'sibling',
+  'brother',
+  'sister',
+  'spouse',
+  'husband',
+  'wife',
+  'uncle',
+  'aunt',
+  'cousin',
+  'family',
+  'lineage',
+  'line',
+  'descendant',
+  'descendants',
 ]);
 
 const ATTRIBUTE_TERMS = new Set([
-  'oldest', 'youngest', 'earliest', 'latest', 'first', 'last', 'longest',
-  'shortest', 'long-lived', 'centenarian',
+  'oldest',
+  'youngest',
+  'earliest',
+  'latest',
+  'first',
+  'last',
+  'longest',
+  'shortest',
+  'long-lived',
+  'centenarian',
 ]);
 
 const TOPIC_TERMS = new Set([
-  'military', 'war', 'ww1', 'wwi', 'ww2', 'wwii', 'veteran', 'veterans',
-  'served', 'service', 'immigration', 'emigrated', 'emigration', 'census',
-  'religion', 'quaker', 'burial', 'occupation',
+  'military',
+  'war',
+  'ww1',
+  'wwi',
+  'ww2',
+  'wwii',
+  'veteran',
+  'veterans',
+  'served',
+  'service',
+  'immigration',
+  'emigrated',
+  'emigration',
+  'census',
+  'religion',
+  'quaker',
+  'burial',
+  'occupation',
 ]);
 
 // Adjective → canonical place name
@@ -56,12 +148,12 @@ function tokenise(message: string): string[] {
   return message
     .toLowerCase()
     .split(/[\s\p{P}]+/u)
-    .filter(t => t.length > 0);
+    .filter((t) => t.length > 0);
 }
 
 /** Return the original-case tokens from the raw message, one per whitespace split. */
 function originalTokens(message: string): string[] {
-  return message.split(/\s+/).filter(t => t.length > 0);
+  return message.split(/\s+/).filter((t) => t.length > 0);
 }
 
 /**
@@ -90,11 +182,18 @@ export function extractQueryTerms(
   dictionaries: GraphDictionaries,
 ): QueryTerms {
   if (!message.trim()) {
-    return { names: [], places: [], attributes: [], relationships: [], topics: [], raw: [] };
+    return {
+      names: [],
+      places: [],
+      attributes: [],
+      relationships: [],
+      topics: [],
+      raw: [],
+    };
   }
 
   const tokens = tokenise(message);
-  const nonStop = tokens.filter(t => !STOP_WORDS.has(t));
+  const nonStop = tokens.filter((t) => !STOP_WORDS.has(t));
 
   const names: string[] = [];
   const places: string[] = [];
@@ -160,7 +259,7 @@ export function extractQueryTerms(
   const dedup = (arr: string[]) => [...new Set(arr)];
 
   return {
-    names: dedup(names.filter(n => !occupationTokens.has(n))),
+    names: dedup(names.filter((n) => !occupationTokens.has(n))),
     places: dedup(places),
     attributes: dedup(attributes),
     relationships: dedup(relationships),

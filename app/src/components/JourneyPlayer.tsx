@@ -39,7 +39,8 @@ export default function JourneyPlayer({
   onSpeedChange,
   onClose,
 }: JourneyPlayerProps) {
-  const progress = stops.length > 1 ? (currentIndex / (stops.length - 1)) * 100 : 0;
+  const progress =
+    stops.length > 1 ? (currentIndex / (stops.length - 1)) * 100 : 0;
 
   // Calculate age at current stop
   return (
@@ -72,7 +73,8 @@ export default function JourneyPlayer({
           {/* Year markers below progress bar */}
           <div className="flex justify-between mt-2 text-xs text-white/40">
             {stops.map((stop, idx) => {
-              const position = stops.length > 1 ? (idx / (stops.length - 1)) * 100 : 50;
+              const position =
+                stops.length > 1 ? (idx / (stops.length - 1)) * 100 : 50;
               const isActive = idx === currentIndex;
               const isPast = idx < currentIndex;
               return (
@@ -80,10 +82,16 @@ export default function JourneyPlayer({
                   key={idx}
                   onClick={() => onIndexChange(idx)}
                   className={`absolute transition-all ${
-                    isActive ? 'text-white font-medium scale-110' :
-                    isPast ? 'text-white/60' : 'text-white/40 hover:text-white/70'
+                    isActive
+                      ? 'text-white font-medium scale-110'
+                      : isPast
+                        ? 'text-white/60'
+                        : 'text-white/40 hover:text-white/70'
                   }`}
-                  style={{ left: `${position}%`, transform: `translateX(-50%) ${isActive ? 'scale(1.1)' : ''}` }}
+                  style={{
+                    left: `${position}%`,
+                    transform: `translateX(-50%) ${isActive ? 'scale(1.1)' : ''}`,
+                  }}
                 >
                   {stop.year || '?'}
                 </button>
@@ -98,7 +106,11 @@ export default function JourneyPlayer({
           <div className="flex-1">
             <h2 className="text-lg font-semibold text-white">{personName}</h2>
             <p className="text-white/50 text-sm">
-              {birthYear && deathYear ? `${birthYear}–${deathYear}` : birthYear ? `b. ${birthYear}` : ''}
+              {birthYear && deathYear
+                ? `${birthYear}–${deathYear}`
+                : birthYear
+                  ? `b. ${birthYear}`
+                  : ''}
             </p>
           </div>
 
@@ -110,8 +122,18 @@ export default function JourneyPlayer({
               disabled={currentIndex === 0}
               className="p-2 text-white/70 hover:text-white disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
             >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M15 19l-7-7 7-7"
+                />
               </svg>
             </button>
 
@@ -121,11 +143,19 @@ export default function JourneyPlayer({
               className="p-3 rounded-full bg-white text-black hover:bg-white/90 transition-colors"
             >
               {isPlaying ? (
-                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <svg
+                  className="w-6 h-6"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
                   <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z" />
                 </svg>
               ) : (
-                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <svg
+                  className="w-6 h-6"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
                   <path d="M8 5v14l11-7z" />
                 </svg>
               )}
@@ -133,12 +163,24 @@ export default function JourneyPlayer({
 
             {/* Next */}
             <button
-              onClick={() => onIndexChange(Math.min(stops.length - 1, currentIndex + 1))}
+              onClick={() =>
+                onIndexChange(Math.min(stops.length - 1, currentIndex + 1))
+              }
               disabled={currentIndex === stops.length - 1}
               className="p-2 text-white/70 hover:text-white disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
             >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M9 5l7 7-7 7"
+                />
               </svg>
             </button>
           </div>
@@ -167,8 +209,18 @@ export default function JourneyPlayer({
               onClick={onClose}
               className="p-2 text-white/50 hover:text-white transition-colors"
             >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              <svg
+                className="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
               </svg>
             </button>
           </div>

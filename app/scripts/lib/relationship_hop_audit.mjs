@@ -1,5 +1,9 @@
 import { fuzzyNameMatch } from './fuzzy_names.mjs';
-import { canonicalSurname, CONFIDENCE, matchPerson } from './person-matcher.mjs';
+import {
+  canonicalSurname,
+  CONFIDENCE,
+  matchPerson,
+} from './person-matcher.mjs';
 
 export function getParentSnapshot(frontmatter) {
   const father = frontmatter?.parents?.father || null;
@@ -23,7 +27,8 @@ export function getParentRole(frontmatter, parentSlug) {
 
 function formatSharedParent(sharedParentIds) {
   if (sharedParentIds.length === 0) return 'no recorded parents';
-  if (sharedParentIds.length === 1) return `shared parent ${sharedParentIds[0]}`;
+  if (sharedParentIds.length === 1)
+    return `shared parent ${sharedParentIds[0]}`;
   return `shared parents ${sharedParentIds.join(', ')}`;
 }
 
@@ -48,8 +53,14 @@ function extractBirthState(frontmatter) {
   const place = frontmatter?.birth?.place;
   if (!place) return null;
 
-  const parts = String(place).split(',').map((part) => part.trim()).filter(Boolean);
-  while (parts.length > 1 && COUNTRY_TOKENS.has(parts[parts.length - 1].toLowerCase())) {
+  const parts = String(place)
+    .split(',')
+    .map((part) => part.trim())
+    .filter(Boolean);
+  while (
+    parts.length > 1 &&
+    COUNTRY_TOKENS.has(parts[parts.length - 1].toLowerCase())
+  ) {
     parts.pop();
   }
 
@@ -92,7 +103,9 @@ function isStrictParentRole(role) {
 function getSuspiciousDiscoveredRoles(frontmatter) {
   return getDiscoveredRoles(frontmatter).filter((role) => {
     if (isStrictParentRole(role)) return false;
-    return /(step|grand|other|\?|wife|husband|head|in-law|boarder|lodger|sister|brother|daughter|son)/i.test(role);
+    return /(step|grand|other|\?|wife|husband|head|in-law|boarder|lodger|sister|brother|daughter|son)/i.test(
+      role,
+    );
   });
 }
 
@@ -128,47 +141,65 @@ function summarizeIdentityComparison({
   const matcherResult = matchPerson(
     { slug: sourceRoleParentId, frontmatter: sourceRoleParentFrontmatter },
     { slug: candidateParentId, frontmatter: candidateParentFrontmatter },
-    { parentsByChild: new Map() }
+    { parentsByChild: new Map() },
   );
 
-  const givenA = String(sourceRoleParentFrontmatter?.name?.given || '').toLowerCase().trim();
-  const givenB = String(candidateParentFrontmatter?.name?.given || '').toLowerCase().trim();
-  const givenFuzzy = givenA && givenB ? fuzzyNameMatch(givenA, givenB) : { match: false, method: 'none', score: 0 };
+  const givenA = String(sourceRoleParentFrontmatter?.name?.given || '')
+    .toLowerCase()
+    .trim();
+  const givenB = String(candidateParentFrontmatter?.name?.given || '')
+    .toLowerCase()
+    .trim();
+  const givenFuzzy =
+    givenA && givenB
+      ? fuzzyNameMatch(givenA, givenB)
+      : { match: false, method: 'none', score: 0 };
 
   const surnameA = canonicalSurname(sourceRoleParentFrontmatter);
   const surnameB = canonicalSurname(candidateParentFrontmatter);
-  const surnameFuzzy = surnameA && surnameB ? fuzzyNameMatch(surnameA, surnameB) : { match: false, method: 'none', score: 0 };
+  const surnameFuzzy =
+    surnameA && surnameB
+      ? fuzzyNameMatch(surnameA, surnameB)
+      : { match: false, method: 'none', score: 0 };
 
   const birthYearA = extractBirthYear(sourceRoleParentFrontmatter);
   const birthYearB = extractBirthYear(candidateParentFrontmatter);
   const birthYearGap =
-    birthYearA != null && birthYearB != null ? Math.abs(birthYearA - birthYearB) : null;
+    birthYearA != null && birthYearB != null
+      ? Math.abs(birthYearA - birthYearB)
+      : null;
 
   const birthStateA = extractBirthState(sourceRoleParentFrontmatter);
   const birthStateB = extractBirthState(candidateParentFrontmatter);
 
-  const sharedSpouses = getSpouseSlugs(sourceRoleParentFrontmatter).filter((slug) =>
-    getSpouseSlugs(candidateParentFrontmatter).includes(slug)
+  const sharedSpouses = getSpouseSlugs(sourceRoleParentFrontmatter).filter(
+    (slug) => getSpouseSlugs(candidateParentFrontmatter).includes(slug),
   );
-  const sharedChildren = getChildSlugs(sourceRoleParentFrontmatter).filter((slug) =>
-    getChildSlugs(candidateParentFrontmatter).includes(slug)
+  const sharedChildren = getChildSlugs(sourceRoleParentFrontmatter).filter(
+    (slug) => getChildSlugs(candidateParentFrontmatter).includes(slug),
   );
-  const pidA = sourceRoleParentFrontmatter?.external_ids?.familysearch_tree || null;
-  const pidB = candidateParentFrontmatter?.external_ids?.familysearch_tree || null;
+  const pidA =
+    sourceRoleParentFrontmatter?.external_ids?.familysearch_tree || null;
+  const pidB =
+    candidateParentFrontmatter?.external_ids?.familysearch_tree || null;
   const pidMatch = Boolean(pidA && pidB && pidA === pidB);
 
   const givenMatches = Boolean(
-    (givenA && givenB && givenA === givenB) || givenFuzzy.match
+    (givenA && givenB && givenA === givenB) || givenFuzzy.match,
   );
   const surnameMatches = Boolean(
-    (surnameA && surnameB && surnameA === surnameB) || surnameFuzzy.match
+    (surnameA && surnameB && surnameA === surnameB) || surnameFuzzy.match,
   );
 
   const corroborators = [];
-  if (birthYearGap != null && birthYearGap <= 3) corroborators.push(`birth_year_gap:${birthYearGap}`);
-  if (birthStateA && birthStateB && birthStateA === birthStateB) corroborators.push(`birth_state:${birthStateA}`);
-  if (sharedSpouses.length > 0) corroborators.push(`shared_spouse:${sharedSpouses.join(',')}`);
-  if (sharedChildren.length > 0) corroborators.push(`shared_child:${sharedChildren.join(',')}`);
+  if (birthYearGap != null && birthYearGap <= 3)
+    corroborators.push(`birth_year_gap:${birthYearGap}`);
+  if (birthStateA && birthStateB && birthStateA === birthStateB)
+    corroborators.push(`birth_state:${birthStateA}`);
+  if (sharedSpouses.length > 0)
+    corroborators.push(`shared_spouse:${sharedSpouses.join(',')}`);
+  if (sharedChildren.length > 0)
+    corroborators.push(`shared_child:${sharedChildren.join(',')}`);
   if (pidMatch) corroborators.push(`pid_match:${pidA}`);
 
   const matcherConfidenceRank = {
@@ -178,12 +209,12 @@ function summarizeIdentityComparison({
     [CONFIDENCE.SKIP]: 0,
   };
 
-  const probableDuplicateIdentity = surnameMatches &&
+  const probableDuplicateIdentity =
+    surnameMatches &&
     givenMatches &&
-    (
-      matcherConfidenceRank[matcherResult.confidence] >= matcherConfidenceRank[CONFIDENCE.MEDIUM] ||
-      corroborators.length >= 2
-    );
+    (matcherConfidenceRank[matcherResult.confidence] >=
+      matcherConfidenceRank[CONFIDENCE.MEDIUM] ||
+      corroborators.length >= 2);
 
   return {
     existingParentId: sourceRoleParentId,
@@ -191,10 +222,14 @@ function summarizeIdentityComparison({
     matcherConfidence: matcherResult.confidence,
     matcherSignals: matcherResult.signals,
     givenMatch: givenMatches
-      ? (givenA === givenB ? 'exact' : givenFuzzy.method)
+      ? givenA === givenB
+        ? 'exact'
+        : givenFuzzy.method
       : null,
     surnameMatch: surnameMatches
-      ? (surnameA === surnameB ? 'exact' : surnameFuzzy.method)
+      ? surnameA === surnameB
+        ? 'exact'
+        : surnameFuzzy.method
       : null,
     corroborators,
     probableDuplicateIdentity,
@@ -211,17 +246,22 @@ function summarizeHouseholdMiswire({
 }) {
   if (!candidateParentFrontmatter) return null;
 
-  const suspiciousDiscoveredRoles = getSuspiciousDiscoveredRoles(candidateParentFrontmatter);
-  const spouseOverlap = getSpouseSlugs(candidateParentFrontmatter).filter((slug) =>
-    sourceParents.knownParents.includes(slug) || siblingParents.knownParents.includes(slug)
+  const suspiciousDiscoveredRoles = getSuspiciousDiscoveredRoles(
+    candidateParentFrontmatter,
   );
-  const childOverlap = getChildSlugs(candidateParentFrontmatter).filter((slug) =>
-    slug === sourceSlug || slug === siblingSlug
+  const spouseOverlap = getSpouseSlugs(candidateParentFrontmatter).filter(
+    (slug) =>
+      sourceParents.knownParents.includes(slug) ||
+      siblingParents.knownParents.includes(slug),
+  );
+  const childOverlap = getChildSlugs(candidateParentFrontmatter).filter(
+    (slug) => slug === sourceSlug || slug === siblingSlug,
   );
   const censusOnly = hasOnlyHouseholdStyleSources(candidateParentFrontmatter);
   const autoGenerated = candidateParentFrontmatter?.status === 'auto_generated';
 
-  const probableHouseholdMiswire = autoGenerated &&
+  const probableHouseholdMiswire =
+    autoGenerated &&
     censusOnly &&
     childOverlap.length > 0 &&
     (suspiciousDiscoveredRoles.length > 0 || spouseOverlap.length > 0);
@@ -261,10 +301,16 @@ export function classifyRelationshipHopCandidate({
 }) {
   const sourceParents = getParentSnapshot(sourceFrontmatter);
   const siblingParents = getParentSnapshot(siblingFrontmatter);
-  const candidateRoleInSibling = getParentRole(siblingFrontmatter, candidateParentId);
-  const candidateRoleInSource = getParentRole(sourceFrontmatter, candidateParentId);
+  const candidateRoleInSibling = getParentRole(
+    siblingFrontmatter,
+    candidateParentId,
+  );
+  const candidateRoleInSource = getParentRole(
+    sourceFrontmatter,
+    candidateParentId,
+  );
   const sharedParentIds = sourceParents.knownParents.filter((parentId) =>
-    siblingParents.knownParents.includes(parentId)
+    siblingParents.knownParents.includes(parentId),
   );
 
   const duplicateIdentity = summarizeIdentityComparison({
@@ -282,11 +328,17 @@ export function classifyRelationshipHopCandidate({
     candidateParentFrontmatter,
   });
 
-  if (!candidateRoleInSibling && householdMiswireSignals?.probableHouseholdMiswire) {
-    const roleText = householdMiswireSignals.suspiciousDiscoveredRoles.join(', ') || 'non-parent household role';
-    const spouseText = householdMiswireSignals.spouseOverlap.length > 0
-      ? ` spouse overlap with ${householdMiswireSignals.spouseOverlap.join(', ')}`
-      : '';
+  if (
+    !candidateRoleInSibling &&
+    householdMiswireSignals?.probableHouseholdMiswire
+  ) {
+    const roleText =
+      householdMiswireSignals.suspiciousDiscoveredRoles.join(', ') ||
+      'non-parent household role';
+    const spouseText =
+      householdMiswireSignals.spouseOverlap.length > 0
+        ? ` spouse overlap with ${householdMiswireSignals.spouseOverlap.join(', ')}`
+        : '';
 
     return {
       classification: 'probable_household_miswire',

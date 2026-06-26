@@ -29,14 +29,20 @@ const MAX_MESSAGES = 50;
 const CONVERSATION_VERSION = 1;
 
 function isMobileViewport(): boolean {
-  if (typeof window === 'undefined' || typeof window.matchMedia !== 'function') {
+  if (
+    typeof window === 'undefined' ||
+    typeof window.matchMedia !== 'function'
+  ) {
     return false;
   }
 
   return window.matchMedia('(max-width: 767px)').matches;
 }
 
-function mobileShellChromeEquals(a: MobileShellChrome, b: MobileShellChrome): boolean {
+function mobileShellChromeEquals(
+  a: MobileShellChrome,
+  b: MobileShellChrome,
+): boolean {
   return a.mode === b.mode && a.immersiveExitHref === b.immersiveExitHref;
 }
 
@@ -72,11 +78,14 @@ export function deriveRouteContext(pathname: string): RouteContext {
 function toTitleCase(slug: string): string {
   return slug
     .split('-')
-    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
     .join(' ');
 }
 
-export function buildMarkerText(ctx: RouteContext, personName?: string): string {
+export function buildMarkerText(
+  ctx: RouteContext,
+  personName?: string,
+): string {
   switch (ctx.type) {
     case 'person':
       return personName
@@ -127,8 +136,13 @@ function loadMessages(): SidebarMessage[] {
     const raw = localStorage.getItem(MESSAGES_KEY);
     if (!raw) return [];
     const parsed = JSON.parse(raw) as SidebarConversation;
-    if (parsed.version !== CONVERSATION_VERSION || !Array.isArray(parsed.messages)) {
-      console.warn('[ChatProvider] Conversation version mismatch or corrupt data — resetting.');
+    if (
+      parsed.version !== CONVERSATION_VERSION ||
+      !Array.isArray(parsed.messages)
+    ) {
+      console.warn(
+        '[ChatProvider] Conversation version mismatch or corrupt data — resetting.',
+      );
       return [];
     }
     const msgs = parsed.messages;
@@ -137,7 +151,9 @@ function loadMessages(): SidebarMessage[] {
     }
     return msgs;
   } catch {
-    console.warn('[ChatProvider] Corrupt localStorage conversation — resetting.');
+    console.warn(
+      '[ChatProvider] Corrupt localStorage conversation — resetting.',
+    );
     return [];
   }
 }
@@ -213,10 +229,14 @@ export function ChatProvider({ children }: ChatProviderProps) {
   const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(false);
 
   // Conversation messages — lazy init from localStorage
-  const [messages, setMessages] = useState<SidebarMessage[]>(() => loadMessages());
+  const [messages, setMessages] = useState<SidebarMessage[]>(() =>
+    loadMessages(),
+  );
 
   // Page context supplied by individual pages
-  const [pageContext, setPageContextState] = useState<PageContext | undefined>(undefined);
+  const [pageContext, setPageContextState] = useState<PageContext | undefined>(
+    undefined,
+  );
 
   // Visualization command passthrough
   const [visualizationCommand, setVisualizationCommandState] =
@@ -251,7 +271,7 @@ export function ChatProvider({ children }: ChatProviderProps) {
   }, []);
 
   const toggleSidebar = useCallback(() => {
-    setIsSidebarOpen(prev => {
+    setIsSidebarOpen((prev) => {
       const next = !prev;
       saveSidebarOpen(next);
       return next;
@@ -261,16 +281,19 @@ export function ChatProvider({ children }: ChatProviderProps) {
   // ── Conversation actions ─────────────────────────────────────────────────────
 
   const addMessage = useCallback((msg: SidebarMessage) => {
-    setMessages(prev => {
+    setMessages((prev) => {
       const next = [...prev, msg];
-      const trimmed = next.length > MAX_MESSAGES ? next.slice(next.length - MAX_MESSAGES) : next;
+      const trimmed =
+        next.length > MAX_MESSAGES
+          ? next.slice(next.length - MAX_MESSAGES)
+          : next;
       saveMessages(trimmed);
       return trimmed;
     });
   }, []);
 
   const replaceLastMessage = useCallback((msg: SidebarMessage) => {
-    setMessages(prev => {
+    setMessages((prev) => {
       if (prev.length === 0) return [msg];
       const next = [...prev.slice(0, -1), msg];
       saveMessages(next);
@@ -292,10 +315,7 @@ export function ChatProvider({ children }: ChatProviderProps) {
   // Effective context: pageContext fields override routeContext only when
   // pageContext.sourcePathname matches current pathname
   const effectiveContext: PageContext = (() => {
-    if (
-      pageContext &&
-      pageContext.sourcePathname === pathname
-    ) {
+    if (pageContext && pageContext.sourcePathname === pathname) {
       return pageContext;
     }
     // Fall back to routeContext — cast to PageContext shape
@@ -304,9 +324,12 @@ export function ChatProvider({ children }: ChatProviderProps) {
 
   // ── Visualization command ────────────────────────────────────────────────────
 
-  const setVisualizationCommand = useCallback((cmd: VisualizationCommand | null) => {
-    setVisualizationCommandState(cmd);
-  }, []);
+  const setVisualizationCommand = useCallback(
+    (cmd: VisualizationCommand | null) => {
+      setVisualizationCommandState(cmd);
+    },
+    [],
+  );
 
   const clearVisualizationCommand = useCallback(() => {
     setVisualizationCommandState(null);
@@ -342,28 +365,34 @@ export function ChatProvider({ children }: ChatProviderProps) {
 
   const mobileShellMode = mobileShellChrome.mode;
 
-  const setMobileShellChrome = useCallback((chrome: MobileShellChrome) => {
-    setMobileShellModeOverride((current) => {
-      if (
-        current?.pathname === pathname &&
-        mobileShellChromeEquals(current.chrome, chrome)
-      ) {
-        return current;
-      }
+  const setMobileShellChrome = useCallback(
+    (chrome: MobileShellChrome) => {
+      setMobileShellModeOverride((current) => {
+        if (
+          current?.pathname === pathname &&
+          mobileShellChromeEquals(current.chrome, chrome)
+        ) {
+          return current;
+        }
 
-      return { pathname, chrome };
-    });
-  }, [pathname]);
+        return { pathname, chrome };
+      });
+    },
+    [pathname],
+  );
 
   const clearMobileShellChrome = useCallback(() => {
-    setMobileShellModeOverride((current) => (
-      current?.pathname === pathname ? null : current
-    ));
+    setMobileShellModeOverride((current) =>
+      current?.pathname === pathname ? null : current,
+    );
   }, [pathname]);
 
-  const setMobileShellMode = useCallback((mode: MobileShellMode) => {
-    setMobileShellChrome({ mode });
-  }, [setMobileShellChrome]);
+  const setMobileShellMode = useCallback(
+    (mode: MobileShellMode) => {
+      setMobileShellChrome({ mode });
+    },
+    [setMobileShellChrome],
+  );
 
   const clearMobileShellMode = useCallback(() => {
     clearMobileShellChrome();
@@ -401,12 +430,17 @@ export function ChatProvider({ children }: ChatProviderProps) {
   }, [defaultMobileShellMode, pathname]);
 
   useEffect(() => {
-    if (typeof window === 'undefined' || typeof window.matchMedia !== 'function') {
+    if (
+      typeof window === 'undefined' ||
+      typeof window.matchMedia !== 'function'
+    ) {
       return;
     }
 
     const mediaQuery = window.matchMedia('(max-width: 767px)');
-    const handleViewportChange = (event: MediaQueryListEvent | MediaQueryList) => {
+    const handleViewportChange = (
+      event: MediaQueryListEvent | MediaQueryList,
+    ) => {
       if (!event.matches || defaultMobileShellMode !== 'standard') {
         return;
       }
@@ -435,7 +469,7 @@ export function ChatProvider({ children }: ChatProviderProps) {
     prevPathnameRef.current = pathname;
 
     // Only insert markers when conversation is non-empty
-    setMessages(current => {
+    setMessages((current) => {
       if (current.length === 0) return current;
 
       const ctx = deriveRouteContext(pathname);
@@ -454,7 +488,10 @@ export function ChatProvider({ children }: ChatProviderProps) {
         timestamp: Date.now(),
       };
       const next = [...current, marker];
-      const trimmed = next.length > MAX_MESSAGES ? next.slice(next.length - MAX_MESSAGES) : next;
+      const trimmed =
+        next.length > MAX_MESSAGES
+          ? next.slice(next.length - MAX_MESSAGES)
+          : next;
       saveMessages(trimmed);
       return trimmed;
     });
@@ -479,15 +516,21 @@ export function ChatProvider({ children }: ChatProviderProps) {
 
     pendingPersonMarkerPathnameRef.current = null;
 
-    setMessages(current => {
+    setMessages((current) => {
       if (current.length === 0) return current;
       const marker: SidebarMessage = {
         type: 'context-marker',
-        content: buildMarkerText({ type: 'person', personId: pageContext.personId ?? '' }, pageContext.personName),
+        content: buildMarkerText(
+          { type: 'person', personId: pageContext.personId ?? '' },
+          pageContext.personName,
+        ),
         timestamp: Date.now(),
       };
       const next = [...current, marker];
-      const trimmed = next.length > MAX_MESSAGES ? next.slice(next.length - MAX_MESSAGES) : next;
+      const trimmed =
+        next.length > MAX_MESSAGES
+          ? next.slice(next.length - MAX_MESSAGES)
+          : next;
       saveMessages(trimmed);
       return trimmed;
     });
@@ -495,30 +538,34 @@ export function ChatProvider({ children }: ChatProviderProps) {
 
   // ── insertGenericPersonMarkerIfPending ───────────────────────────────────────
 
-  const insertGenericPersonMarkerIfPending = useCallback((): SidebarMessage | null => {
-    if (pendingPersonMarkerPathnameRef.current === null) return null;
-    if (pendingPersonMarkerPathnameRef.current !== pathname) {
+  const insertGenericPersonMarkerIfPending =
+    useCallback((): SidebarMessage | null => {
+      if (pendingPersonMarkerPathnameRef.current === null) return null;
+      if (pendingPersonMarkerPathnameRef.current !== pathname) {
+        pendingPersonMarkerPathnameRef.current = null;
+        return null;
+      }
       pendingPersonMarkerPathnameRef.current = null;
-      return null;
-    }
-    pendingPersonMarkerPathnameRef.current = null;
 
-    const marker: SidebarMessage = {
-      type: 'context-marker',
-      content: `[Context: Now viewing a person's profile.]`,
-      timestamp: Date.now(),
-    };
+      const marker: SidebarMessage = {
+        type: 'context-marker',
+        content: `[Context: Now viewing a person's profile.]`,
+        timestamp: Date.now(),
+      };
 
-    setMessages(current => {
-      if (current.length === 0) return current;
-      const next = [...current, marker];
-      const trimmed = next.length > MAX_MESSAGES ? next.slice(next.length - MAX_MESSAGES) : next;
-      saveMessages(trimmed);
-      return trimmed;
-    });
+      setMessages((current) => {
+        if (current.length === 0) return current;
+        const next = [...current, marker];
+        const trimmed =
+          next.length > MAX_MESSAGES
+            ? next.slice(next.length - MAX_MESSAGES)
+            : next;
+        saveMessages(trimmed);
+        return trimmed;
+      });
 
-    return marker;
-  }, [pathname]);
+      return marker;
+    }, [pathname]);
 
   // ─────────────────────────────────────────────────────────────────────────────
 

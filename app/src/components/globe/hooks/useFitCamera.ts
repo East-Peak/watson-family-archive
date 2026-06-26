@@ -64,7 +64,9 @@ export function useFitCamera({ viewerRef }: UseFitCameraOptions) {
    */
   const fitToVisible = useCallback(
     (filteredLocations: FilteredLocation[]) => {
-      const fullLocations = filteredLocations.filter((loc) => loc.visibility === 'full');
+      const fullLocations = filteredLocations.filter(
+        (loc) => loc.visibility === 'full',
+      );
       if (fullLocations.length === 0) return;
       fitToLocations(fullLocations);
     },

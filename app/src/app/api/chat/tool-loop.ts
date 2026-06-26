@@ -10,24 +10,43 @@
  *   - timeoutMs (default 45 000 ms) caps wall-clock time for the whole loop
  */
 
-import type { VisualizationCommand, VisualizationFeedback, PageContext } from '@/types/visualization';
+import Anthropic from '@anthropic-ai/sdk';
+import type {
+  Message,
+  ContentBlock,
+  ToolUseBlock,
+  TextBlock,
+  MessageParam,
+  Tool,
+  ToolResultBlockParam,
+} from '@anthropic-ai/sdk/resources/messages';
+import type {
+  VisualizationCommand,
+  VisualizationFeedback,
+  PageContext,
+} from '@/types/visualization';
 import { parseVisualizationCommand } from './tools';
+import type { ToolContext, ToolResult } from './tool-handlers';
 
 // ---------------------------------------------------------------------------
 // Types
 // ---------------------------------------------------------------------------
 
 interface ToolLoopOptions {
-  anthropic: any; // Anthropic client instance
+  anthropic: Anthropic;
   model: string;
   systemPrompt: string;
-  tools: any[];
-  messages: Array<{ role: string; content: any }>;
+  tools: Tool[];
+  messages: MessageParam[];
   toolHandlers: Record<
     string,
-    (input: any, ctx: any) => Promise<{ data: unknown; personIds?: string[] }>
+    (input: unknown, ctx: ToolContext) => Promise<ToolResult>
   >;
-  requestContext: { treeId: string; viewerId?: string; pageContext?: PageContext };
+  requestContext: {
+    treeId: string;
+    viewerId?: string;
+    pageContext?: PageContext;
+  };
   maxToolCalls?: number;
   timeoutMs?: number;
 }
@@ -63,7 +82,9 @@ const DEFAULT_TIMEOUT_MS = 45_000;
 // Implementation
 // ---------------------------------------------------------------------------
 
-export async function runToolLoop(options: ToolLoopOptions): Promise<ToolLoopResult> {
+export async function runToolLoop(
+  options: ToolLoopOptions,
+): Promise<ToolLoopResult> {
   const {
     anthropic,
     model,
@@ -87,7 +108,7 @@ export async function runToolLoop(options: ToolLoopOptions): Promise<ToolLoopRes
   const startTime = Date.now();
 
   // Captured on every iteration so the break path can extract the final text
-  let lastResponse: any = null;
+  let lastResponse: Message | null = null;
   let budgetExhausted = false;
 
   while (true) {
@@ -102,8 +123,8 @@ export async function runToolLoop(options: ToolLoopOptions): Promise<ToolLoopRes
     lastResponse = response;
 
     // Identify tool_use blocks
-    const toolUseBlocks = (response.content as any[]).filter(
-      (b: any) => b.type === 'tool_use'
+    const toolUseBlocks = response.content.filter(
+      (b: ContentBlock): b is ToolUseBlock => b.type === 'tool_use',
     );
 
     // No tool calls or Opus signalled end_turn → extract text and return
@@ -124,12 +145,19 @@ export async function runToolLoop(options: ToolLoopOptions): Promise<ToolLoopRes
     if (overBudget || overTime) {
       if (budgetExhausted) {
         // Second violation — model ignored our stop request. Hard break.
-        console.warn('[Tool Loop] Hard break — model ignored budget/timeout stop after grace turn');
+        console.warn(
+          '[Tool Loop] Hard break — model ignored budget/timeout stop after grace turn',
+        );
         break;
       }
 
       budgetExhausted = true;
-      messages.push({ role: 'assistant', content: response.content });
+      // response.content is ContentBlock[] (response type); cast to the MessageParam
+      // content type so we can replay the assistant turn in the next request.
+      messages.push({
+        role: 'assistant',
+        content: response.content as MessageParam['content'],
+      });
       messages.push({
         role: 'user',
         content: overBudget
@@ -143,7 +171,7 @@ export async function runToolLoop(options: ToolLoopOptions): Promise<ToolLoopRes
     // Execute each tool call
     // -----------------------------------------------------------------------
 
-    const toolResults: any[] = [];
+    const toolResults: ToolResultBlockParam[] = [];
 
     for (const block of toolUseBlocks) {
       // Handle visualization commands inline — they're UI-forwarded commands,
@@ -154,15 +182,20 @@ export async function runToolLoop(options: ToolLoopOptions): Promise<ToolLoopRes
         let ackMessage: string;
 
         if (!requestContext.pageContext) {
-          ackMessage = 'Visualization command rejected. No page context available.';
+          ackMessage =
+            'Visualization command rejected. No page context available.';
           if (!visualizationFeedback) {
             visualizationFeedback = {
               status: 'rejected',
-              reason: 'That command is not supported on this page, or it was missing required parameters.',
+              reason:
+                'That command is not supported on this page, or it was missing required parameters.',
             };
           }
         } else {
-          const cmd = parseVisualizationCommand(block.input, requestContext.pageContext);
+          const cmd = parseVisualizationCommand(
+            block.input,
+            requestContext.pageContext,
+          );
           if (cmd && !visualizationCommand) {
             // First valid command — apply it
             visualizationCommand = cmd;
@@ -170,14 +203,17 @@ export async function runToolLoop(options: ToolLoopOptions): Promise<ToolLoopRes
             ackMessage = `Visualization command "${cmd.action}" applied to the ${cmd.target}. The user will see the result.`;
           } else if (cmd && visualizationCommand) {
             // Valid command but one was already applied — ignore it
-            ackMessage = 'Ignored: only one visualization command is applied per turn. The first command was already applied.';
+            ackMessage =
+              'Ignored: only one visualization command is applied per turn. The first command was already applied.';
           } else {
             // Invalid command (wrong page, missing params, etc.)
-            ackMessage = 'Visualization command rejected. That command is not supported on this page, or it was missing required parameters.';
+            ackMessage =
+              'Visualization command rejected. That command is not supported on this page, or it was missing required parameters.';
             if (!visualizationFeedback) {
               visualizationFeedback = {
                 status: 'rejected',
-                reason: 'That command is not supported on this page, or it was missing required parameters.',
+                reason:
+                  'That command is not supported on this page, or it was missing required parameters.',
               };
             }
           }
@@ -212,7 +248,9 @@ export async function runToolLoop(options: ToolLoopOptions): Promise<ToolLoopRes
 
         // Collect rich person data for the validator
         if (result.data) {
-          const people = Array.isArray(result.data) ? result.data : [result.data];
+          const people = Array.isArray(result.data)
+            ? result.data
+            : [result.data];
           for (const p of people) {
             if (p && p.id && !toolResultPeople.has(p.id)) {
               toolResultPeople.set(p.id, {
@@ -246,7 +284,12 @@ export async function runToolLoop(options: ToolLoopOptions): Promise<ToolLoopRes
 
     // Append the assistant turn (with tool_use blocks) and the user turn
     // (with tool results) so the next iteration has full context
-    messages.push({ role: 'assistant', content: response.content });
+    // response.content is ContentBlock[] (response type); cast to the MessageParam
+    // content type so we can replay the assistant turn in the next request.
+    messages.push({
+      role: 'assistant',
+      content: response.content as MessageParam['content'],
+    });
     messages.push({ role: 'user', content: toolResults });
   }
 
@@ -254,18 +297,19 @@ export async function runToolLoop(options: ToolLoopOptions): Promise<ToolLoopRes
   // Extract text from the final response
   // -------------------------------------------------------------------------
 
-  const textBlocks = ((lastResponse?.content ?? []) as any[]).filter(
-    (b: any) => b.type === 'text'
+  const textBlocks = (lastResponse?.content ?? []).filter(
+    (b: ContentBlock): b is TextBlock => b.type === 'text',
   );
   const text = textBlocks
-    .map((b: any) => b.text as string)
+    .map((b: TextBlock) => b.text)
     .join('\n')
     .trim();
 
   if (visualizationToolAttempted && !visualizationFeedback) {
     visualizationFeedback = {
       status: 'rejected',
-      reason: 'That command is not supported on this page, or it was missing required parameters.',
+      reason:
+        'That command is not supported on this page, or it was missing required parameters.',
     };
   }
 

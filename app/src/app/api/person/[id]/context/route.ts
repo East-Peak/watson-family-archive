@@ -3,7 +3,7 @@ import { getPersonContextualMedia } from '@/lib/neo4j';
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: Promise<{ id: string }> }
+  { params }: { params: Promise<{ id: string }> },
 ) {
   try {
     const { id } = await params;
@@ -15,7 +15,7 @@ export async function GET(
     console.error('Error fetching contextual media:', error);
     return NextResponse.json(
       { error: 'Failed to fetch contextual media' },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

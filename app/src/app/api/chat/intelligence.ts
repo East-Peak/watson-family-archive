@@ -73,34 +73,49 @@ const OLDEST_ANCESTOR_PATTERNS = [
 ];
 
 const WELSH_PATTERNS = [/\bwelsh\b/, /\bwales\b/];
-const MILITARY_PATTERNS = [/\bmilitary\b/, /\bwar\b/, /\bveteran(s)?\b/, /\bserved\b/, /\bservice\b/];
+const MILITARY_PATTERNS = [
+  /\bmilitary\b/,
+  /\bwar\b/,
+  /\bveteran(s)?\b/,
+  /\bserved\b/,
+  /\bservice\b/,
+];
 
 export function classifyChatIntent(message: string): ChatIntent {
   const normalized = message.toLowerCase();
   const hasQuestionMark = normalized.includes('?');
   const visualizationScore = VISUALIZATION_PATTERNS.reduce(
     (score, pattern) => (pattern.test(normalized) ? score + 1 : score),
-    0
+    0,
   );
-  const questionScore = QUESTION_PATTERNS.reduce(
-    (score, pattern) => (pattern.test(normalized) ? score + 1 : score),
-    0
-  ) + (hasQuestionMark ? 1 : 0);
+  const questionScore =
+    QUESTION_PATTERNS.reduce(
+      (score, pattern) => (pattern.test(normalized) ? score + 1 : score),
+      0,
+    ) + (hasQuestionMark ? 1 : 0);
 
   if (visualizationScore > 0 && questionScore > 0) return 'mixed';
   if (visualizationScore > 0) return 'visualization';
   return 'question';
 }
 
-export function inferHistoricalContextUsage(message: string, responseText?: string): boolean {
+export function inferHistoricalContextUsage(
+  message: string,
+  responseText?: string,
+): boolean {
   const combined = `${message} ${responseText || ''}`.toLowerCase();
   return HISTORICAL_CONTEXT_PATTERNS.some((pattern) => pattern.test(combined));
 }
 
-export function shouldUseViewerScope(message: string, hasViewer: boolean): boolean {
+export function shouldUseViewerScope(
+  message: string,
+  hasViewer: boolean,
+): boolean {
   if (!hasViewer) return false;
   const normalized = message.toLowerCase();
-  const hasPossessiveReference = VIEWER_POSSESSIVE_PATTERNS.some((pattern) => pattern.test(normalized));
+  const hasPossessiveReference = VIEWER_POSSESSIVE_PATTERNS.some((pattern) =>
+    pattern.test(normalized),
+  );
   if (!hasPossessiveReference) return false;
   return LINEAGE_REFERENCE_PATTERNS.some((pattern) => pattern.test(normalized));
 }
@@ -112,22 +127,30 @@ export function isOldestAncestorQuestion(message: string): boolean {
 
 export function isEarliestWelshAncestorQuestion(message: string): boolean {
   const normalized = message.toLowerCase();
-  return isOldestAncestorQuestion(normalized) && WELSH_PATTERNS.some((pattern) => pattern.test(normalized));
+  return (
+    isOldestAncestorQuestion(normalized) &&
+    WELSH_PATTERNS.some((pattern) => pattern.test(normalized))
+  );
 }
 
 export function isMilitaryAncestorsQuestion(message: string): boolean {
   const normalized = message.toLowerCase();
-  const hasMilitaryReference = MILITARY_PATTERNS.some((pattern) => pattern.test(normalized));
+  const hasMilitaryReference = MILITARY_PATTERNS.some((pattern) =>
+    pattern.test(normalized),
+  );
   if (!hasMilitaryReference) return false;
   // Military questions are viewer-scoped even without explicit lineage words —
   // "Who served in the military?" implicitly asks about the viewer's family
-  const hasQuestionOrCommand = /\b(who|which|what|how many|are there|were there|did any|did anyone|show|list|tell|served)\b/.test(normalized);
+  const hasQuestionOrCommand =
+    /\b(who|which|what|how many|are there|were there|did any|did anyone|show|list|tell|served)\b/.test(
+      normalized,
+    );
   return hasQuestionOrCommand;
 }
 
 export function dedupeSourcePeople(
   people: Array<{ id: string; name: string }>,
-  limit: number = 6
+  limit: number = 6,
 ): ChatSourcePerson[] {
   const deduped = new Map<string, ChatSourcePerson>();
 

@@ -39,21 +39,33 @@ export default function MobileTreeFocusCard({
   onReturnToDefault,
 }: MobileTreeFocusCardProps) {
   const relationshipCounts = [
-    person.father || person.mother ? `${Number(Boolean(person.father)) + Number(Boolean(person.mother))} parents` : null,
-    person.spouses.length > 0 ? `${person.spouses.length} spouse${person.spouses.length === 1 ? '' : 's'}` : null,
-    person.children.length > 0 ? `${person.children.length} child${person.children.length === 1 ? '' : 'ren'}` : null,
-    person.siblings.length > 0 ? `${person.siblings.length} sibling${person.siblings.length === 1 ? '' : 's'}` : null,
+    person.father || person.mother
+      ? `${Number(Boolean(person.father)) + Number(Boolean(person.mother))} parents`
+      : null,
+    person.spouses.length > 0
+      ? `${person.spouses.length} spouse${person.spouses.length === 1 ? '' : 's'}`
+      : null,
+    person.children.length > 0
+      ? `${person.children.length} child${person.children.length === 1 ? '' : 'ren'}`
+      : null,
+    person.siblings.length > 0
+      ? `${person.siblings.length} sibling${person.siblings.length === 1 ? '' : 's'}`
+      : null,
   ].filter(Boolean);
 
   return (
     <section className="rounded-3xl border border-shield/10 bg-white/96 p-5 shadow-[0_20px_50px_rgba(22,16,135,0.12)]">
       <div className="flex items-start justify-between gap-4">
         <div className="min-w-0">
-          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-shield/45">Viewing</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-shield/45">
+            Viewing
+          </p>
           <h1 className="mt-2 whitespace-normal break-words font-serif text-2xl font-semibold leading-tight text-shield">
             {person.name}
           </h1>
-          <p className="mt-1 text-sm text-slate-600">{getLifespanLabel(person)}</p>
+          <p className="mt-1 text-sm text-slate-600">
+            {getLifespanLabel(person)}
+          </p>
           {person.birthPlace && (
             <p className="mt-1 text-sm text-slate-500">{person.birthPlace}</p>
           )}

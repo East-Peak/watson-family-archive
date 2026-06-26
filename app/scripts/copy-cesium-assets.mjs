@@ -3,7 +3,13 @@ import path from 'node:path';
 import process from 'node:process';
 
 const projectRoot = path.resolve(process.cwd());
-const sourceDir = path.join(projectRoot, 'node_modules', 'cesium', 'Build', 'Cesium');
+const sourceDir = path.join(
+  projectRoot,
+  'node_modules',
+  'cesium',
+  'Build',
+  'Cesium',
+);
 const targetDir = path.join(projectRoot, 'public', 'cesium');
 
 async function pathExists(target) {

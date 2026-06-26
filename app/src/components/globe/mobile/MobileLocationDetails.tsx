@@ -14,7 +14,9 @@ export default function MobileLocationDetails({
   return (
     <div className="space-y-4" data-testid="mobile-location-details">
       <div>
-        <h2 className="font-serif text-xl font-bold text-white">{location.name}</h2>
+        <h2 className="font-serif text-xl font-bold text-white">
+          {location.name}
+        </h2>
         <p className="mt-1 text-sm text-white/65">
           {location.country}
           {location.state ? ` · ${location.state}` : ''}
@@ -27,9 +29,13 @@ export default function MobileLocationDetails({
       </div>
 
       <div className="rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-3 text-sm text-white/70">
-        {location.visiblePeopleCount} visible {location.visiblePeopleCount === 1 ? 'person' : 'people'}
+        {location.visiblePeopleCount} visible{' '}
+        {location.visiblePeopleCount === 1 ? 'person' : 'people'}
         {location.visiblePeopleCount < location.people.length && (
-          <span className="text-white/40"> of {location.people.length} total</span>
+          <span className="text-white/40">
+            {' '}
+            of {location.people.length} total
+          </span>
         )}
       </div>
 

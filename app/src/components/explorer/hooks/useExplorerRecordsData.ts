@@ -174,7 +174,8 @@ export function useExplorerRecordsData(
 
       // Collection substring filter
       if (collectionLower) {
-        if (!record.collection.toLowerCase().includes(collectionLower)) return false;
+        if (!record.collection.toLowerCase().includes(collectionLower))
+          return false;
       }
 
       // Participant name substring filter

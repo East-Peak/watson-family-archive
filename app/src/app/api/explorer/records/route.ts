@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import { executeQuery } from '@/lib/neo4j/client';
 import { siteConfig } from '@/lib/siteConfig';
+import { cacheGraphRead } from '@/lib/cache/graphCache';
 
 const DEFAULT_TREE_ID = siteConfig.defaultTreeId;
 
@@ -48,16 +49,19 @@ function parseParticipantsJson(raw: string | null): Participant[] {
       age: p.age != null ? String(p.age) : null,
       occupation: (p.occupation as string) || null,
       birthplace: (p.birthplace as string) || null,
-      matchedSlug: (p.matched_slug as string) || (p.matchedSlug as string) || null,
+      matchedSlug:
+        (p.matched_slug as string) || (p.matchedSlug as string) || null,
     }));
   } catch {
     return [];
   }
 }
 
-export async function GET() {
-  try {
-    const rows = await executeQuery<Neo4jRecordRow>(
+// Whole-tree record inventory — identical for every authed user and
+// rebuildable, so the Neo4j read is cached (shared Redis graph cache).
+const getExplorerRecords = cacheGraphRead(
+  (treeId: string) =>
+    executeQuery<Neo4jRecordRow>(
       `
       MATCH (r:Record)
       OPTIONAL MATCH (:Tree {id: $treeId})-[:CONTAINS]->(p:Person)-[e:EVIDENCED_BY]->(r)
@@ -65,19 +69,26 @@ export async function GET() {
       RETURN r, linkedPeople
       ORDER BY r.year
       `,
-      { treeId: DEFAULT_TREE_ID }
-    );
+      { treeId },
+    ),
+  ['explorer-records'],
+);
+
+export async function GET() {
+  try {
+    const rows = await getExplorerRecords(DEFAULT_TREE_ID);
 
     const records = rows.map((row) => {
       const r = row.r;
       const participants = parseParticipantsJson(r.participants);
       // Filter out nulls from CASE WHEN (unmatched optional matches produce null entries)
       const linkedPeople = (row.linkedPeople || []).filter(
-        (lp): lp is LinkedPerson => lp !== null
+        (lp): lp is LinkedPerson => lp !== null,
       );
 
       // Derive primary participant from the first participant entry
-      const primaryParticipant = participants.length > 0 ? participants[0].name : null;
+      const primaryParticipant =
+        participants.length > 0 ? participants[0].name : null;
 
       return {
         id: r.id || '',
@@ -102,7 +113,7 @@ export async function GET() {
     console.error('Explorer Records API error:', error);
     return NextResponse.json(
       { error: 'Failed to load explorer records data' },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

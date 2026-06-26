@@ -20,13 +20,16 @@ import type {
 } from '@/types/person';
 import { getPersonRecords, getRecordsByIds } from '@/lib/neo4j/queries/records';
 import type { RecordNodeResult } from '@/lib/neo4j/queries/records';
+import { cacheGraphRead } from '@/lib/cache/graphCache';
 
 let photosCachePromise: Promise<PhotosJson> | null = null;
 
 async function readPhotosJson(): Promise<PhotosJson> {
   if (!photosCachePromise) {
     const filePath = path.join(process.cwd(), 'public', 'data', 'photos.json');
-    photosCachePromise = readFile(filePath, 'utf-8').then((contents) => JSON.parse(contents) as PhotosJson);
+    photosCachePromise = readFile(filePath, 'utf-8').then(
+      (contents) => JSON.parse(contents) as PhotosJson,
+    );
   }
 
   return photosCachePromise;
@@ -44,12 +47,15 @@ const EMPTY_PHOTOS_JSON: PhotosJson = {
  */
 export function mergeRecordData(
   sources: ParsedSource[],
-  records: RecordNodeResult[]
+  records: RecordNodeResult[],
 ): ParsedSource[] {
   const recordMap = new Map(records.map((r) => [r.record.id, r]));
   const seenRecordIds = new Set<string>();
 
-  const enrichSource = (source: ParsedSource, match: RecordNodeResult): ParsedSource => ({
+  const enrichSource = (
+    source: ParsedSource,
+    match: RecordNodeResult,
+  ): ParsedSource => ({
     ...source,
     participants: match.participants.map((p) => ({
       name: p.name,
@@ -72,7 +78,9 @@ export function mergeRecordData(
       seenRecordIds.add(source.record_id);
     }
 
-    const match = source.record_id ? recordMap.get(source.record_id) : undefined;
+    const match = source.record_id
+      ? recordMap.get(source.record_id)
+      : undefined;
     merged.push(match ? enrichSource(source, match) : source);
   }
 
@@ -97,8 +105,18 @@ export function mergeRecordData(
   return merged;
 }
 
-export async function buildPersonProfile(personId: string, treeId: string): Promise<PersonProfile | null> {
-  const [personData, enrichedData, timelineData, contextualMedia, photosData, personRecords] = await Promise.all([
+async function fetchPersonProfile(
+  personId: string,
+  treeId: string,
+): Promise<PersonProfile | null> {
+  const [
+    personData,
+    enrichedData,
+    timelineData,
+    contextualMedia,
+    photosData,
+    personRecords,
+  ] = await Promise.all([
     getPersonById(personId, treeId),
     getEnrichedPerson(personId, treeId),
     getPersonTimeline(personId, treeId),
@@ -140,17 +158,28 @@ export async function buildPersonProfile(personId: string, treeId: string): Prom
     confidenceGrade: personData.confidenceGrade || null,
     wikitreeId: personData.wikitreeId || null,
     findagraveId: personData.findagraveId || null,
-    familysearchTreeId: enrichedData?.familysearchTreeId || personData?.familysearchTreeId || null,
+    familysearchTreeId:
+      enrichedData?.familysearchTreeId ||
+      personData?.familysearchTreeId ||
+      null,
   };
 
   const family: FamilyRelationships = {
     id: personData.id,
     name: personData.fullName,
     father: personData.father
-      ? { id: personData.father.id, name: personData.father.name, birthYear: personData.father.birthYear || null }
+      ? {
+          id: personData.father.id,
+          name: personData.father.name,
+          birthYear: personData.father.birthYear || null,
+        }
       : null,
     mother: personData.mother
-      ? { id: personData.mother.id, name: personData.mother.name, birthYear: personData.mother.birthYear || null }
+      ? {
+          id: personData.mother.id,
+          name: personData.mother.name,
+          birthYear: personData.mother.birthYear || null,
+        }
       : null,
     spouses: (personData.spouses || []).map((spouse) => ({
       id: spouse.id,
@@ -182,9 +211,10 @@ export async function buildPersonProfile(personId: string, treeId: string): Prom
       lat: event.lat ?? null,
       lng: event.lng ?? null,
       source: null,
-      occupation: event.type === 'occupation'
-        ? event.description.replace('Began working as ', '')
-        : null,
+      occupation:
+        event.type === 'occupation'
+          ? event.description.replace('Began working as ', '')
+          : null,
     }));
 
   // Deduplicate journey stops by coordinates + year to avoid stacked pins
@@ -198,15 +228,19 @@ export async function buildPersonProfile(personId: string, treeId: string): Prom
 
   const biography: Biography | null = enrichedData
     ? {
-        notes: enrichedData.markdownContent ? [enrichedData.markdownContent] : [],
-        occupations: enrichedData.occupations?.map((occupation) => occupation.title) || [],
-        timelineHighlights: timelineData.length > 0
-          ? timelineData.map((event) => ({
-              year: event.year || 0,
-              event: event.description,
-              location: event.place || '',
-            }))
+        notes: enrichedData.markdownContent
+          ? [enrichedData.markdownContent]
           : [],
+        occupations:
+          enrichedData.occupations?.map((occupation) => occupation.title) || [],
+        timelineHighlights:
+          timelineData.length > 0
+            ? timelineData.map((event) => ({
+                year: event.year || 0,
+                event: event.description,
+                location: event.place || '',
+              }))
+            : [],
         verifiedFacts: [],
         keySources: [],
         externalLinks: [],
@@ -251,17 +285,21 @@ export async function buildPersonProfile(personId: string, treeId: string): Prom
       try {
         const raw = enrichedData?.sources;
         const parsed = raw ? JSON.parse(raw) : [];
-        const baseSources: ParsedSource[] = parsed.map((s: Record<string, unknown>) => ({
-          collection: (s.collection as string) ?? '',
-          provider: (s.provider as string) ?? 'familysearch',
-          url: (s.url as string) ?? (s.ark as string) ?? null,
-          recordType: (s.recordType as string) ?? (s.record_type as string) ?? 'other',
-          year: (s.year as number) ?? null,
-          keyFacts: (s.keyFacts as string[]) ?? (s.key_facts as string[]) ?? [],
-          imageUrl: (s.imageUrl as string) ?? (s.image_url as string) ?? null,
-          added: (s.added as string) ?? null,
-          record_id: (s.record_id as string) ?? undefined,
-        }));
+        const baseSources: ParsedSource[] = parsed.map(
+          (s: Record<string, unknown>) => ({
+            collection: (s.collection as string) ?? '',
+            provider: (s.provider as string) ?? 'familysearch',
+            url: (s.url as string) ?? (s.ark as string) ?? null,
+            recordType:
+              (s.recordType as string) ?? (s.record_type as string) ?? 'other',
+            year: (s.year as number) ?? null,
+            keyFacts:
+              (s.keyFacts as string[]) ?? (s.key_facts as string[]) ?? [],
+            imageUrl: (s.imageUrl as string) ?? (s.image_url as string) ?? null,
+            added: (s.added as string) ?? null,
+            record_id: (s.record_id as string) ?? undefined,
+          }),
+        );
 
         // Start with EVIDENCED_BY records, then fetch any remaining by record_id
         const records = [...personRecords];
@@ -270,12 +308,25 @@ export async function buildPersonProfile(personId: string, treeId: string): Prom
           .map((s) => s.record_id)
           .filter((id): id is string => id != null && !coveredIds.has(id));
         if (missingIds.length > 0) {
-          const fallbackRecords = await getRecordsByIds(missingIds).catch(() => []);
+          const fallbackRecords = await getRecordsByIds(missingIds).catch(
+            () => [],
+          );
           records.push(...fallbackRecords);
         }
 
         return mergeRecordData(baseSources, records);
-      } catch { return []; }
+      } catch {
+        return [];
+      }
     })(),
   };
 }
+
+/**
+ * Full person profile (family context, photos, sources, records). Cached
+ * (shared Redis graph cache), keyed by person + tree: identical for every user
+ * and rebuildable. Skips the multiple Neo4j reads + file reads on a cache hit.
+ */
+export const buildPersonProfile = cacheGraphRead(fetchPersonProfile, [
+  'person-profile',
+]);

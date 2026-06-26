@@ -1,5 +1,10 @@
 // Neo4j client and utilities
-export { getDriver, closeDriver, executeQuery, executeWrite, verifyConnectivity } from './client';
+export {
+  getDriver,
+  closeDriver,
+  executeQuery,
+  verifyConnectivity,
+} from './client';
 
 // Types
 export * from './types';

@@ -23,13 +23,15 @@ export default function Skeleton({
 
   const animationStyles = {
     pulse: 'animate-pulse',
-    shimmer: 'animate-shimmer bg-gradient-to-r from-gray-200 via-gray-100 to-gray-200 bg-[length:200%_100%]',
+    shimmer:
+      'animate-shimmer bg-gradient-to-r from-gray-200 via-gray-100 to-gray-200 bg-[length:200%_100%]',
     none: '',
   };
 
   const style: React.CSSProperties = {};
   if (width) style.width = typeof width === 'number' ? `${width}px` : width;
-  if (height) style.height = typeof height === 'number' ? `${height}px` : height;
+  if (height)
+    style.height = typeof height === 'number' ? `${height}px` : height;
 
   return (
     <div
@@ -94,14 +96,14 @@ export function PageLoadingSkeleton() {
 
           {/* Stats grid */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {[1, 2, 3, 4].map(i => (
+            {[1, 2, 3, 4].map((i) => (
               <StatsCardSkeleton key={i} />
             ))}
           </div>
 
           {/* Content cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[1, 2, 3].map(i => (
+            {[1, 2, 3].map((i) => (
               <PersonCardSkeleton key={i} />
             ))}
           </div>

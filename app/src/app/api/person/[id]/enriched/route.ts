@@ -6,7 +6,7 @@ const DEFAULT_TREE_ID = siteConfig.defaultTreeId;
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: Promise<{ id: string }> }
+  { params }: { params: Promise<{ id: string }> },
 ) {
   try {
     const { id } = await params;
@@ -16,10 +16,7 @@ export async function GET(
     const person = await getEnrichedPerson(id, treeId);
 
     if (!person) {
-      return NextResponse.json(
-        { error: 'Person not found' },
-        { status: 404 }
-      );
+      return NextResponse.json({ error: 'Person not found' }, { status: 404 });
     }
 
     return NextResponse.json(person);
@@ -27,7 +24,7 @@ export async function GET(
     console.error('Error fetching enriched person:', error);
     return NextResponse.json(
       { error: 'Failed to fetch enriched person' },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

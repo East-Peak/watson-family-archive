@@ -44,7 +44,7 @@ export function searchVectorStore(
   queryEmbedding: number[],
   vectorStore: VectorStore,
   limit: number = 10,
-  minScore: number = 0.3
+  minScore: number = 0.3,
 ): SearchResult[] {
   const results: SearchResult[] = [];
 
@@ -61,9 +61,7 @@ export function searchVectorStore(
   }
 
   // Sort by score descending and return top results
-  return results
-    .sort((a, b) => b.score - a.score)
-    .slice(0, limit);
+  return results.sort((a, b) => b.score - a.score).slice(0, limit);
 }
 
 // Cache the embedding pipeline
@@ -75,13 +73,18 @@ export async function createQueryEmbedding(query: string): Promise<number[]> {
   const { pipeline } = await import('@xenova/transformers');
 
   if (!embeddingPipeline) {
-    embeddingPipeline = await pipeline('feature-extraction', 'Xenova/all-MiniLM-L6-v2');
+    embeddingPipeline = await pipeline(
+      'feature-extraction',
+      'Xenova/all-MiniLM-L6-v2',
+    );
   }
 
-  const output = await (embeddingPipeline as (text: string, options: { pooling: string; normalize: boolean }) => Promise<{ data: Float32Array }>)(
-    query,
-    { pooling: 'mean', normalize: true }
-  );
+  const output = await (
+    embeddingPipeline as (
+      text: string,
+      options: { pooling: string; normalize: boolean },
+    ) => Promise<{ data: Float32Array }>
+  )(query, { pooling: 'mean', normalize: true });
 
   return Array.from(output.data);
 }
@@ -90,7 +93,7 @@ export async function createQueryEmbedding(query: string): Promise<number[]> {
 export async function vectorSearch(
   query: string,
   vectorStore: VectorStore,
-  limit: number = 10
+  limit: number = 10,
 ): Promise<SearchResult[]> {
   const queryEmbedding = await createQueryEmbedding(query);
   return searchVectorStore(queryEmbedding, vectorStore, limit);

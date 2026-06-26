@@ -1,16 +1,26 @@
 import type { GlobeViewState } from '@/components/globe/types';
 
-const DEFAULT_EVENT_TYPES = ['birth', 'death', 'marriage', 'census', 'residence'];
+const DEFAULT_EVENT_TYPES = [
+  'birth',
+  'death',
+  'marriage',
+  'census',
+  'residence',
+];
 
 function hasDefaultEventTypes(eventTypes: string[]): boolean {
   if (eventTypes.length !== DEFAULT_EVENT_TYPES.length) {
     return false;
   }
 
-  return DEFAULT_EVENT_TYPES.every((eventType) => eventTypes.includes(eventType));
+  return DEFAULT_EVENT_TYPES.every((eventType) =>
+    eventTypes.includes(eventType),
+  );
 }
 
-export function buildGlobeRouteContext(state: GlobeViewState): Record<string, unknown> {
+export function buildGlobeRouteContext(
+  state: GlobeViewState,
+): Record<string, unknown> {
   const routeContext: Record<string, unknown> = {};
 
   if (state.branch && state.branch !== 'all') {

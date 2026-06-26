@@ -27,7 +27,7 @@ export async function generateMetadata({
              p.deathYear as deathYear, p.birthPlace as birthPlace,
              p.surname as surname
       `,
-      { treeId: TREE_ID, id }
+      { treeId: TREE_ID, id },
     );
 
     const person = results[0];
@@ -35,8 +35,12 @@ export async function generateMetadata({
       return { title: 'Person Not Found' };
     }
 
-    const lifespan = [person.birthYear, person.deathYear].filter(Boolean).join('–');
-    const title = lifespan ? `${person.fullName} (${lifespan})` : person.fullName;
+    const lifespan = [person.birthYear, person.deathYear]
+      .filter(Boolean)
+      .join('–');
+    const title = lifespan
+      ? `${person.fullName} (${lifespan})`
+      : person.fullName;
 
     const descParts: string[] = [];
     if (person.birthYear && person.birthPlace) {

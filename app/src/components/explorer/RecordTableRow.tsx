@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { memo, useState } from 'react';
 import Link from 'next/link';
 import type { ExplorerRecord } from './types';
 
@@ -27,25 +27,23 @@ const TIER_COLORS: Record<string, string> = {
 };
 
 function toTitleCase(str: string): string {
-  return str
-    .replace(/_/g, ' ')
-    .replace(/\b\w/g, (c) => c.toUpperCase());
+  return str.replace(/_/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
 }
 
-export default function RecordTableRow({ record }: RecordTableRowProps) {
+function RecordTableRow({ record }: RecordTableRowProps) {
   const [expanded, setExpanded] = useState<boolean>(false);
 
-  const typeColor =
-    TYPE_COLORS[record.type] ?? TYPE_COLORS.other;
+  const typeColor = TYPE_COLORS[record.type] ?? TYPE_COLORS.other;
   const tierColor = record.tier
-    ? TIER_COLORS[record.tier] ?? 'bg-gray-100 text-gray-500 border-gray-200'
+    ? (TIER_COLORS[record.tier] ?? 'bg-gray-100 text-gray-500 border-gray-200')
     : null;
 
-  const participantTooltip = record.participants
-    .slice(0, 5)
-    .map((p) => p.name)
-    .join(', ')
-    + (record.participants.length > 5
+  const participantTooltip =
+    record.participants
+      .slice(0, 5)
+      .map((p) => p.name)
+      .join(', ') +
+    (record.participants.length > 5
       ? ` (+${record.participants.length - 5} more)`
       : '');
 
@@ -56,13 +54,14 @@ export default function RecordTableRow({ record }: RecordTableRowProps) {
         onClick={() => setExpanded(!expanded)}
       >
         {/* Type */}
-        <td className="px-3 py-2 whitespace-nowrap">
-          <span className="inline-flex items-center gap-1.5">
-            <span className="text-shield/40 text-xs leading-none">
+        <td className="px-3 py-2">
+          <span className="flex items-center gap-1.5 min-w-0">
+            <span className="text-shield/40 text-xs leading-none shrink-0">
               {expanded ? '▾' : '▸'}
             </span>
             <span
-              className={`inline-flex items-center px-2 py-0.5 rounded border text-xs font-medium ${typeColor}`}
+              className={`inline-flex items-center px-2 py-0.5 rounded border text-xs font-medium truncate ${typeColor}`}
+              title={toTitleCase(record.type)}
             >
               {toTitleCase(record.type)}
             </span>
@@ -71,7 +70,7 @@ export default function RecordTableRow({ record }: RecordTableRowProps) {
                 href={record.ark}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-shield/30 hover:text-indigo-600 transition-colors"
+                className="text-shield/30 hover:text-indigo-600 transition-colors shrink-0"
                 onClick={(e) => e.stopPropagation()}
                 title="View on FamilySearch"
               >
@@ -99,10 +98,7 @@ export default function RecordTableRow({ record }: RecordTableRowProps) {
         {/* Place */}
         <td className="px-3 py-2 text-shield/60 text-sm">
           {record.place ? (
-            <span
-              className="block max-w-[200px] truncate"
-              title={record.place}
-            >
+            <span className="block max-w-[200px] truncate" title={record.place}>
               {record.place}
             </span>
           ) : (
@@ -137,7 +133,9 @@ export default function RecordTableRow({ record }: RecordTableRowProps) {
 
         {/* Evidence */}
         <td className="px-3 py-2 text-center text-shield/60 text-xs capitalize">
-          {record.evidenceClass ? toTitleCase(record.evidenceClass) : (
+          {record.evidenceClass ? (
+            toTitleCase(record.evidenceClass)
+          ) : (
             <span className="text-shield/30 text-sm">--</span>
           )}
         </td>
@@ -157,9 +155,14 @@ export default function RecordTableRow({ record }: RecordTableRowProps) {
       {/* Expanded participant sub-table */}
       {expanded && (
         <tr>
-          <td colSpan={8} className="bg-amber-50/30 border-b border-amber-200/40 px-6 py-3">
+          <td
+            colSpan={8}
+            className="bg-amber-50/30 border-b border-amber-200/40 px-6 py-3"
+          >
             {record.participants.length === 0 ? (
-              <p className="text-shield/40 text-xs">No participant data available.</p>
+              <p className="text-shield/40 text-xs">
+                No participant data available.
+              </p>
             ) : (
               <table className="w-full text-xs text-shield/70">
                 <thead>
@@ -206,12 +209,8 @@ export default function RecordTableRow({ record }: RecordTableRowProps) {
                       <td className="px-2 py-1 whitespace-nowrap tabular-nums">
                         {p.age ?? '--'}
                       </td>
-                      <td className="px-2 py-1">
-                        {p.occupation ?? '--'}
-                      </td>
-                      <td className="px-2 py-1">
-                        {p.birthplace ?? '--'}
-                      </td>
+                      <td className="px-2 py-1">{p.occupation ?? '--'}</td>
+                      <td className="px-2 py-1">{p.birthplace ?? '--'}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -223,3 +222,5 @@ export default function RecordTableRow({ record }: RecordTableRowProps) {
     </>
   );
 }
+
+export default memo(RecordTableRow);

@@ -16,22 +16,42 @@ function MessageContent({ content }: { content: string }) {
         a: ({ href, children }) => {
           if (href?.startsWith('/person/')) {
             return (
-              <Link href={href} className="text-amber-700 hover:text-amber-900 underline">
+              <Link
+                href={href}
+                className="text-amber-700 hover:text-amber-900 underline"
+              >
                 {children}
               </Link>
             );
           }
           return (
-            <a href={href} className="text-amber-700 hover:text-amber-900 underline" target="_blank" rel="noopener noreferrer">
+            <a
+              href={href}
+              className="text-amber-700 hover:text-amber-900 underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               {children}
             </a>
           );
         },
-        h1: ({ children }) => <h1 className="text-base font-bold mt-3 mb-2">{children}</h1>,
-        h2: ({ children }) => <h2 className="text-sm font-bold mt-3 mb-1">{children}</h2>,
-        h3: ({ children }) => <h3 className="text-sm font-semibold mt-2 mb-1">{children}</h3>,
-        ul: ({ children }) => <ul className="list-disc list-inside my-1 space-y-0.5">{children}</ul>,
-        ol: ({ children }) => <ol className="list-decimal list-inside my-1 space-y-0.5">{children}</ol>,
+        h1: ({ children }) => (
+          <h1 className="text-base font-bold mt-3 mb-2">{children}</h1>
+        ),
+        h2: ({ children }) => (
+          <h2 className="text-sm font-bold mt-3 mb-1">{children}</h2>
+        ),
+        h3: ({ children }) => (
+          <h3 className="text-sm font-semibold mt-2 mb-1">{children}</h3>
+        ),
+        ul: ({ children }) => (
+          <ul className="list-disc list-inside my-1 space-y-0.5">{children}</ul>
+        ),
+        ol: ({ children }) => (
+          <ol className="list-decimal list-inside my-1 space-y-0.5">
+            {children}
+          </ol>
+        ),
         li: ({ children }) => <li className="ml-1">{children}</li>,
         p: ({ children }) => <p className="my-1.5">{children}</p>,
       }}
@@ -93,13 +113,17 @@ function SourceMetadata({ sources }: { sources: ChatSources }) {
   return (
     <div className="mt-2 text-xs text-gray-400 space-y-1.5">
       {confidence && (
-        <div className={`inline-flex items-center gap-1 px-1.5 py-0.5 rounded border ${CONFIDENCE_COLORS[confidence.level] ?? 'text-gray-600 bg-gray-50 border-gray-200'}`}>
+        <div
+          className={`inline-flex items-center gap-1 px-1.5 py-0.5 rounded border ${CONFIDENCE_COLORS[confidence.level] ?? 'text-gray-600 bg-gray-50 border-gray-200'}`}
+        >
           <span>{confidence.level}</span>
           <span className="opacity-70">{confidence.score.toFixed(2)}</span>
         </div>
       )}
       {viewerScoped && (
-        <p className="text-gray-400/70 text-[10px] italic">Based on your family records</p>
+        <p className="text-gray-400/70 text-[10px] italic">
+          Based on your family records
+        </p>
       )}
       {familyRecords.people.length > 0 && (
         <div className="flex flex-wrap gap-1 mt-1">
@@ -117,7 +141,9 @@ function SourceMetadata({ sources }: { sources: ChatSources }) {
       {confidence?.reasons && confidence.reasons.length > 0 && (
         <ul className="mt-1 space-y-0.5">
           {confidence.reasons.map((r) => (
-            <li key={r} className="text-gray-400">· {r}</li>
+            <li key={r} className="text-gray-400">
+              · {r}
+            </li>
           ))}
         </ul>
       )}
@@ -133,7 +159,9 @@ function LoadingDots() {
       <span className="w-2 h-2 rounded-full bg-amber-400 animate-bounce [animation-delay:-0.3s]" />
       <span className="w-2 h-2 rounded-full bg-amber-400 animate-bounce [animation-delay:-0.15s]" />
       <span className="w-2 h-2 rounded-full bg-amber-400 animate-bounce" />
-      <span className="text-xs text-gray-400 ml-1">Searching your family tree...</span>
+      <span className="text-xs text-gray-400 ml-1">
+        Searching your family tree...
+      </span>
     </div>
   );
 }
@@ -146,7 +174,11 @@ interface ChatMessagesProps {
   onUndoVisualization: (cmd: VisualizationCommand) => void;
 }
 
-export default function ChatMessages({ messages, isLoading, onUndoVisualization }: ChatMessagesProps) {
+export default function ChatMessages({
+  messages,
+  isLoading,
+  onUndoVisualization,
+}: ChatMessagesProps) {
   const bottomRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -188,11 +220,24 @@ export default function ChatMessages({ messages, isLoading, onUndoVisualization 
               )}
               {msg.visualizationFeedback?.status === 'rejected' && (
                 <div className="mt-2 flex items-center gap-2 text-xs text-amber-600 bg-amber-50 border border-amber-200/40 rounded px-2 py-1">
-                  <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M4.93 19h14.14a2 2 0 001.74-3l-7.07-12a2 2 0 00-3.48 0l-7.07 12a2 2 0 001.74 3z" />
+                  <svg
+                    className="w-4 h-4 flex-shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M12 8v4m0 4h.01M4.93 19h14.14a2 2 0 001.74-3l-7.07-12a2 2 0 00-3.48 0l-7.07 12a2 2 0 001.74 3z"
+                    />
                   </svg>
                   <span>
-                    Command not applied{msg.visualizationFeedback.reason ? `: ${msg.visualizationFeedback.reason}` : '.'}
+                    Command not applied
+                    {msg.visualizationFeedback.reason
+                      ? `: ${msg.visualizationFeedback.reason}`
+                      : '.'}
                   </span>
                 </div>
               )}

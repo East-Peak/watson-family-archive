@@ -8,7 +8,10 @@ interface ArcDetailsPanelProps {
   onClose: () => void;
 }
 
-export default function ArcDetailsPanel({ arc, onClose }: ArcDetailsPanelProps) {
+export default function ArcDetailsPanel({
+  arc,
+  onClose,
+}: ArcDetailsPanelProps) {
   return (
     <div className="absolute top-20 left-4 right-4 bg-black/90 backdrop-blur-sm rounded-lg p-4 text-white z-10 max-w-[calc(100vw-2rem)] sm:right-auto sm:max-w-sm">
       <div className="flex items-start justify-between mb-3">
@@ -17,8 +20,18 @@ export default function ArcDetailsPanel({ arc, onClose }: ArcDetailsPanelProps) 
           onClick={onClose}
           className="text-gray-400 hover:text-white p-1 -mr-2 -mt-1"
         >
-          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+          <svg
+            className="w-5 h-5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M6 18L18 6M6 6l12 12"
+            />
           </svg>
         </button>
       </div>
@@ -38,8 +51,18 @@ export default function ArcDetailsPanel({ arc, onClose }: ArcDetailsPanelProps) 
 
         {/* Arrow */}
         <div className="flex justify-center">
-          <svg className="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+          <svg
+            className="w-5 h-5 text-gray-500"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M19 14l-7 7m0 0l-7-7m7 7V3"
+            />
           </svg>
         </div>
 
@@ -58,10 +81,16 @@ export default function ArcDetailsPanel({ arc, onClose }: ArcDetailsPanelProps) 
         {/* Distance */}
         <div className="pt-2 border-t border-gray-700">
           <div className="text-sm text-gray-400">
-            Distance: {Math.round(haversineDistance(
-              arc.from.lat, arc.from.lng,
-              arc.to.lat, arc.to.lng,
-            )).toLocaleString()} km
+            Distance:{' '}
+            {Math.round(
+              haversineDistance(
+                arc.from.lat,
+                arc.from.lng,
+                arc.to.lat,
+                arc.to.lng,
+              ),
+            ).toLocaleString()}{' '}
+            km
           </div>
         </div>
 

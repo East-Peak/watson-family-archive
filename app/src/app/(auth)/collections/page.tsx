@@ -24,7 +24,7 @@ export default function CollectionsPage() {
         if (!res.ok) return;
         const data = await res.json();
         const nonSurname = (data.collections || []).filter(
-          (c: CollectionMeta) => !c.type.startsWith('surname-')
+          (c: CollectionMeta) => !c.type.startsWith('surname-'),
         );
         setCollections(nonSurname);
       } catch (err) {
@@ -55,7 +55,9 @@ export default function CollectionsPage() {
         {collections.length === 0 ? (
           <p className="text-gray-400 text-center py-12">
             No collections available yet.{' '}
-            <Link href="/" className="text-shield hover:underline">Back to home</Link>
+            <Link href="/" className="text-shield hover:underline">
+              Back to home
+            </Link>
           </p>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">

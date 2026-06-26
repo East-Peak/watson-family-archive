@@ -27,7 +27,10 @@ function normalizeVerification(verificationStatus: string | null): string {
   return (verificationStatus || '').trim().toUpperCase();
 }
 
-export function scoreLineageClaim(input: LineageConfidenceInput, threshold: number = 0.62): ChatConfidence {
+export function scoreLineageClaim(
+  input: LineageConfidenceInput,
+  threshold: number = 0.62,
+): ChatConfidence {
   let score = 0.2;
   const reasons: string[] = [];
 
@@ -56,7 +59,9 @@ export function scoreLineageClaim(input: LineageConfidenceInput, threshold: numb
 
   if (input.generation >= 4) {
     score += 0.15;
-    reasons.push(`Connected by ${input.generation} documented parent-child steps`);
+    reasons.push(
+      `Connected by ${input.generation} documented parent-child steps`,
+    );
   } else if (input.generation >= 2) {
     score += 0.1;
     reasons.push(`Connected by ${input.generation} parent-child steps`);
@@ -84,7 +89,9 @@ export function scoreLineageClaim(input: LineageConfidenceInput, threshold: numb
   if (input.ambiguityGapYears != null) {
     if (input.ambiguityGapYears <= 1) {
       score -= 0.18;
-      reasons.push('Earliest birth year is effectively tied with another ancestor');
+      reasons.push(
+        'Earliest birth year is effectively tied with another ancestor',
+      );
     } else if (input.ambiguityGapYears <= 3) {
       score -= 0.1;
       reasons.push('Earliest birth year is very close to another candidate');
@@ -110,7 +117,10 @@ interface MilitaryConfidenceInput {
   withWarCount: number;
 }
 
-export function scoreMilitaryLineageClaim(input: MilitaryConfidenceInput, threshold: number = 0.55): ChatConfidence {
+export function scoreMilitaryLineageClaim(
+  input: MilitaryConfidenceInput,
+  threshold: number = 0.55,
+): ChatConfidence {
   let score = 0.25;
   const reasons: string[] = [];
 
@@ -128,7 +138,9 @@ export function scoreMilitaryLineageClaim(input: MilitaryConfidenceInput, thresh
 
   const warLinkRatio = input.count > 0 ? input.withWarCount / input.count : 0;
   score += warLinkRatio * 0.2;
-  reasons.push(`${Math.round(warLinkRatio * 100)}% include explicit war-service links`);
+  reasons.push(
+    `${Math.round(warLinkRatio * 100)}% include explicit war-service links`,
+  );
 
   const finalScore = clamp01(score);
   return {

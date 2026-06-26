@@ -1,11 +1,22 @@
 'use client';
 
 import { useState, useCallback, useEffect, useRef } from 'react';
-import type { GlobeViewState, GlobeCameraState, GlobeViewMode, ArcColorMode } from '../types';
+import type {
+  GlobeViewState,
+  GlobeCameraState,
+  GlobeViewMode,
+  ArcColorMode,
+} from '../types';
 
 // --- Defaults ---
 
-export const DEFAULT_EVENT_TYPES = ['birth', 'death', 'marriage', 'census', 'residence'];
+export const DEFAULT_EVENT_TYPES = [
+  'birth',
+  'death',
+  'marriage',
+  'census',
+  'residence',
+];
 
 const DEFAULT_STATE: GlobeViewState = {
   branch: '',
@@ -35,13 +46,19 @@ function parseYearRange(value: string | null): [number, number] | null {
 
 function parseEventTypes(value: string | null): string[] {
   if (!value) return DEFAULT_EVENT_TYPES;
-  const types = value.split(',').map((t) => t.trim()).filter(Boolean);
+  const types = value
+    .split(',')
+    .map((t) => t.trim())
+    .filter(Boolean);
   return types.length > 0 ? types : DEFAULT_EVENT_TYPES;
 }
 
 function parseRegions(value: string | null): string[] {
   if (!value) return [];
-  return value.split(',').map((r) => r.trim()).filter(Boolean);
+  return value
+    .split(',')
+    .map((r) => r.trim())
+    .filter(Boolean);
 }
 
 function parseViewMode(value: string | null): GlobeViewMode {
@@ -107,14 +124,29 @@ function arraysEqual(a: string[], b: string[]): boolean {
   return sortedA.every((val, i) => val === sortedB[i]);
 }
 
-export function serializeStateToURL(state: GlobeViewState, existingSearch: string): string {
+export function serializeStateToURL(
+  state: GlobeViewState,
+  existingSearch: string,
+): string {
   const params = new URLSearchParams(existingSearch);
 
   // Preserve journey param — never touch it
   const journey = params.get('journey');
 
   // Start fresh for our params, but keep any params we don't own
-  const knownKeys = ['branch', 'year', 'events', 'region', 'person', 'view', 'approx', 'arcs', 'labels', 'arcColor', 'cam'];
+  const knownKeys = [
+    'branch',
+    'year',
+    'events',
+    'region',
+    'person',
+    'view',
+    'approx',
+    'arcs',
+    'labels',
+    'arcColor',
+    'cam',
+  ];
   knownKeys.forEach((key) => params.delete(key));
 
   // Only set non-default values
@@ -160,7 +192,12 @@ export function serializeStateToURL(state: GlobeViewState, existingSearch: strin
 
   if (state.camera) {
     const { lat, lng, height, heading, pitch } = state.camera;
-    params.set('cam', [lat, lng, height, heading, pitch].map((n) => Number(n.toFixed(4))).join(','));
+    params.set(
+      'cam',
+      [lat, lng, height, heading, pitch]
+        .map((n) => Number(n.toFixed(4)))
+        .join(','),
+    );
   }
 
   // Restore journey if it was present
@@ -202,7 +239,8 @@ export function useGlobeViewState(): UseGlobeViewStateReturn {
   const updateURL = useCallback((newState: GlobeViewState) => {
     const newSearch = serializeStateToURL(newState, window.location.search);
     const newURL = window.location.pathname + newSearch + window.location.hash;
-    const currentURL = window.location.pathname + window.location.search + window.location.hash;
+    const currentURL =
+      window.location.pathname + window.location.search + window.location.hash;
     if (currentURL !== newURL) {
       window.history.replaceState(null, '', newURL);
     }

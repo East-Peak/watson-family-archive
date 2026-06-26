@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { executeQuery } from '@/lib/neo4j/client';
 import { siteConfig } from '@/lib/siteConfig';
+import { cacheGraphRead } from '@/lib/cache/graphCache';
 import { normalizeLifeEventType } from '@/components/globe/eventNormalization';
 
 const DEFAULT_TREE_ID = siteConfig.defaultTreeId;
@@ -51,15 +52,28 @@ interface GlobeLocation {
 
 interface Arc {
   person_id: string;
-  from: { place: string; lat: number; lng: number; year?: number; eventType?: GlobeEventType };
-  to: { place: string; lat: number; lng: number; year?: number; eventType?: GlobeEventType };
+  from: {
+    place: string;
+    lat: number;
+    lng: number;
+    year?: number;
+    eventType?: GlobeEventType;
+  };
+  to: {
+    place: string;
+    lat: number;
+    lng: number;
+    year?: number;
+    eventType?: GlobeEventType;
+  };
 }
 
-export async function GET(request: NextRequest) {
-  try {
-    const { searchParams } = new URL(request.url);
-    const treeId = searchParams.get('treeId') || DEFAULT_TREE_ID;
-
+// Whole-tree globe data — locations and arc events are identical for every
+// authed user and rebuildable, so both Neo4j reads are cached together (shared
+// Redis graph cache). The two queries stay serial and in order (locations first,
+// then arcs). The route stays dynamic: only the AuraDB round-trips are memoized.
+const getGlobeData = cacheGraphRead(
+  async (treeId: string) => {
     // Get all locations with their associated people and events
     // Includes birth, death, marriage, life-event, residence, and burial places
     // LifeEvent queries return e.event text for normalization at the API layer
@@ -171,7 +185,7 @@ export async function GET(request: NextRequest) {
         'burial' as eventType, p.deathYear as eventYear,
         null as eventText
       `,
-      { treeId }
+      { treeId },
     );
 
     // Get ALL geocoded location events for multi-stop arc generation
@@ -251,8 +265,20 @@ export async function GET(request: NextRequest) {
              p.deathYear as eventYear, 'burial' as eventType,
              null as eventText
       `,
-      { treeId }
+      { treeId },
     );
+
+    return { results, arcEventResults };
+  },
+  ['globe'],
+);
+
+export async function GET(request: NextRequest) {
+  try {
+    const { searchParams } = new URL(request.url);
+    const treeId = searchParams.get('treeId') || DEFAULT_TREE_ID;
+
+    const { results, arcEventResults } = await getGlobeData(treeId);
 
     // Group by location (using lat/lng as key)
     const locationMap = new Map<string, GlobeLocation>();
@@ -304,7 +330,7 @@ export async function GET(request: NextRequest) {
 
       // Add paired event (deduplicate by type+year)
       const isDuplicate = person.events.some(
-        (e) => e.type === normalizedType && e.year === eventYear
+        (e) => e.type === normalizedType && e.year === eventYear,
       );
       if (!isDuplicate) {
         person.events.push({ type: normalizedType, year: eventYear });
@@ -318,7 +344,9 @@ export async function GET(request: NextRequest) {
           const yearA = a.year ?? Infinity;
           const yearB = b.year ?? Infinity;
           if (yearA !== yearB) return yearA - yearB;
-          return (eventTypePriority[a.type] ?? 5) - (eventTypePriority[b.type] ?? 5);
+          return (
+            (eventTypePriority[a.type] ?? 5) - (eventTypePriority[b.type] ?? 5)
+          );
         });
       });
     });
@@ -329,7 +357,13 @@ export async function GET(request: NextRequest) {
     // Event type sort priority for same-year events
     const personEvents = new Map<
       string,
-      Array<{ place: string; lat: number; lng: number; year: number | null; eventType: GlobeEventType }>
+      Array<{
+        place: string;
+        lat: number;
+        lng: number;
+        year: number | null;
+        eventType: GlobeEventType;
+      }>
     >();
 
     for (const r of arcEventResults) {
@@ -362,7 +396,10 @@ export async function GET(request: NextRequest) {
         const yearA = a.year ?? Infinity;
         const yearB = b.year ?? Infinity;
         if (yearA !== yearB) return yearA - yearB;
-        return (eventTypePriority[a.eventType] ?? 5) - (eventTypePriority[b.eventType] ?? 5);
+        return (
+          (eventTypePriority[a.eventType] ?? 5) -
+          (eventTypePriority[b.eventType] ?? 5)
+        );
       });
 
       // Deduplicate consecutive stops at the same location (same lat/lng rounded to 4 decimals)
@@ -406,7 +443,10 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({ locations, arcs });
   } catch (error) {
     console.error('Error fetching globe data:', error);
-    return NextResponse.json({ error: 'Failed to fetch globe data' }, { status: 500 });
+    return NextResponse.json(
+      { error: 'Failed to fetch globe data' },
+      { status: 500 },
+    );
   }
 }
 

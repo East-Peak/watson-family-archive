@@ -13,7 +13,8 @@ interface SearchResult {
 }
 
 export default function OnboardingModal() {
-  const { me, setMe, onboardingOpen, setOnboardingOpen, authIdentity } = useMe();
+  const { me, setMe, onboardingOpen, setOnboardingOpen, authIdentity } =
+    useMe();
   const [dismissed, setDismissed] = useState(false);
   const [query, setQuery] = useState('');
   const [results, setResults] = useState<SearchResult[]>([]);
@@ -54,14 +55,14 @@ export default function OnboardingModal() {
       setMe(mePerson);
       setOnboardingOpen(false);
     },
-    [setMe, setOnboardingOpen]
+    [setMe, setOnboardingOpen],
   );
 
   const onKeyboardSelect = useCallback(
     (index: number) => {
       if (results[index]) handleSelect(results[index]);
     },
-    [results, handleSelect]
+    [results, handleSelect],
   );
 
   const { activeIndex, handleKeyDown } = useKeyboardNav({
@@ -96,7 +97,9 @@ export default function OnboardingModal() {
     searchTimeout.current = setTimeout(async () => {
       setSearching(true);
       try {
-        const res = await fetch(`/api/search?q=${encodeURIComponent(value)}&limit=8`);
+        const res = await fetch(
+          `/api/search?q=${encodeURIComponent(value)}&limit=8`,
+        );
         if (res.ok) {
           const data = await res.json();
           setResults(data.results || []);
@@ -148,7 +151,9 @@ export default function OnboardingModal() {
             role="combobox"
             aria-expanded={results.length > 0}
             aria-controls="onboarding-results-listbox"
-            aria-activedescendant={activeIndex >= 0 ? `onboarding-result-${activeIndex}` : undefined}
+            aria-activedescendant={
+              activeIndex >= 0 ? `onboarding-result-${activeIndex}` : undefined
+            }
             aria-autocomplete="list"
           />
           {searching && (
@@ -160,11 +165,17 @@ export default function OnboardingModal() {
 
         {/* Results */}
         {results.length > 0 && (
-          <div className="mb-4 max-h-64 overflow-y-auto rounded-lg border border-gray-200" role="listbox" id="onboarding-results-listbox">
+          <div
+            className="mb-4 max-h-64 overflow-y-auto rounded-lg border border-gray-200"
+            role="listbox"
+            id="onboarding-results-listbox"
+          >
             {results.map((person, index) => (
               <button
                 key={person.id}
-                ref={(el) => { resultRefs.current[index] = el; }}
+                ref={(el) => {
+                  resultRefs.current[index] = el;
+                }}
                 onClick={() => handleSelect(person)}
                 role="option"
                 id={`onboarding-result-${index}`}
@@ -175,9 +186,13 @@ export default function OnboardingModal() {
                     : 'hover:bg-shield/5'
                 }`}
               >
-                <div className="font-medium text-gray-900 text-sm">{person.fullName}</div>
+                <div className="font-medium text-gray-900 text-sm">
+                  {person.fullName}
+                </div>
                 <div className="text-xs text-gray-500">
-                  {[person.birthYear, person.deathYear].filter(Boolean).join(' - ')}
+                  {[person.birthYear, person.deathYear]
+                    .filter(Boolean)
+                    .join(' - ')}
                 </div>
               </button>
             ))}
@@ -185,7 +200,9 @@ export default function OnboardingModal() {
         )}
 
         {query.length >= 2 && results.length === 0 && !searching && (
-          <p className="text-gray-500 text-xs mb-4">No results found. Try a different name.</p>
+          <p className="text-gray-500 text-xs mb-4">
+            No results found. Try a different name.
+          </p>
         )}
 
         {/* Skip / not-in-tree */}

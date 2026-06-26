@@ -1,6 +1,13 @@
 'use client';
 
-import React, { createContext, useContext, useState, useEffect, useCallback, ReactNode } from 'react';
+import React, {
+  createContext,
+  useContext,
+  useState,
+  useEffect,
+  useCallback,
+  ReactNode,
+} from 'react';
 import { siteConfig } from '@/lib/siteConfig';
 
 export interface MePerson {
@@ -13,7 +20,9 @@ export interface MePerson {
  * Returns true if the viewer is mapped to a real person in the tree.
  * Use this guard before building any URL or API call that needs me.id.
  */
-export function hasViewerPerson(me: MePerson | null): me is MePerson & { id: string } {
+export function hasViewerPerson(
+  me: MePerson | null,
+): me is MePerson & { id: string } {
   return me !== null && typeof me.id === 'string' && me.id.length > 0;
 }
 
@@ -105,7 +114,16 @@ export function MeProvider({ children, authIdentity = null }: MeProviderProps) {
   }
 
   return (
-    <MeContext.Provider value={{ me, setMe, isMe, onboardingOpen, setOnboardingOpen, authIdentity }}>
+    <MeContext.Provider
+      value={{
+        me,
+        setMe,
+        isMe,
+        onboardingOpen,
+        setOnboardingOpen,
+        authIdentity,
+      }}
+    >
       {children}
     </MeContext.Provider>
   );

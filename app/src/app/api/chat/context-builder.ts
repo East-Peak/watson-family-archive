@@ -58,13 +58,13 @@ function computeRelationshipPaths(
   if (!viewer) return [];
 
   const paths: RelationshipPath[] = [];
-  const viewerPerson = people.find(p => p.id === viewer.id);
+  const viewerPerson = people.find((p) => p.id === viewer.id);
 
   for (const person of people) {
     if (person.id === viewer.id) continue;
 
     // Check if person is a parent of the viewer
-    if (viewerPerson?.parents?.some(par => par.id === person.id)) {
+    if (viewerPerson?.parents?.some((par) => par.id === person.id)) {
       paths.push({
         from: { id: viewer.id, name: viewer.name },
         to: { id: person.id, name: person.fullName },
@@ -84,7 +84,7 @@ function computeRelationshipPaths(
     }
 
     // Check if person is a child of the viewer
-    if (viewerPerson?.children?.some(ch => ch.id === person.id)) {
+    if (viewerPerson?.children?.some((ch) => ch.id === person.id)) {
       paths.push({
         from: { id: viewer.id, name: viewer.name },
         to: { id: person.id, name: person.fullName },
@@ -94,7 +94,7 @@ function computeRelationshipPaths(
     }
 
     // Check if the viewer is in person's parents (viewer is parent of person)
-    if (person.parents?.some(par => par.id === viewer.id)) {
+    if (person.parents?.some((par) => par.id === viewer.id)) {
       paths.push({
         from: { id: viewer.id, name: viewer.name },
         to: { id: person.id, name: person.fullName },
@@ -120,7 +120,9 @@ export function renderContextBlock(bundle: RetrievedContextBundle): string {
   const lines: string[] = [];
 
   // Header
-  lines.push(`RETRIEVED CONTEXT (${people.length} people matching your query):`);
+  lines.push(
+    `RETRIEVED CONTEXT (${people.length} people matching your query):`,
+  );
   lines.push('');
 
   // Person entries

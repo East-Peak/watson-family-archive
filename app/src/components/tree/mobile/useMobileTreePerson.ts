@@ -34,12 +34,17 @@ function normalizeSex(raw: string | undefined | null): 'M' | 'F' | 'U' {
   return 'U';
 }
 
-function normalizeFamilyMember(member: {
-  id: string;
-  name?: string | null;
-  fullName?: string | null;
-  birthYear?: number;
-} | null | undefined): MobileTreeFamilyMember | undefined {
+function normalizeFamilyMember(
+  member:
+    | {
+        id: string;
+        name?: string | null;
+        fullName?: string | null;
+        birthYear?: number;
+      }
+    | null
+    | undefined,
+): MobileTreeFamilyMember | undefined {
   if (!member?.id) return undefined;
 
   return {
@@ -92,19 +97,33 @@ export function useMobileTreePerson(personId: string | null) {
           mother: normalizeFamilyMember(data.mother),
           spouses: (data.spouses ?? [])
             .map(normalizeFamilyMember)
-            .filter((member: MobileTreeFamilyMember | undefined): member is MobileTreeFamilyMember => Boolean(member)),
+            .filter(
+              (
+                member: MobileTreeFamilyMember | undefined,
+              ): member is MobileTreeFamilyMember => Boolean(member),
+            ),
           children: (data.children ?? [])
             .map(normalizeFamilyMember)
-            .filter((member: MobileTreeFamilyMember | undefined): member is MobileTreeFamilyMember => Boolean(member)),
+            .filter(
+              (
+                member: MobileTreeFamilyMember | undefined,
+              ): member is MobileTreeFamilyMember => Boolean(member),
+            ),
           siblings: (data.siblings ?? [])
             .map(normalizeFamilyMember)
-            .filter((member: MobileTreeFamilyMember | undefined): member is MobileTreeFamilyMember => Boolean(member)),
+            .filter(
+              (
+                member: MobileTreeFamilyMember | undefined,
+              ): member is MobileTreeFamilyMember => Boolean(member),
+            ),
         });
       })
       .catch((err) => {
         if (cancelled) return;
         setPerson(null);
-        setError(err instanceof Error ? err.message : 'Failed to load family details');
+        setError(
+          err instanceof Error ? err.message : 'Failed to load family details',
+        );
       })
       .finally(() => {
         if (!cancelled) {

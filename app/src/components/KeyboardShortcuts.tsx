@@ -8,7 +8,9 @@ interface KeyboardShortcutsProps {
   children: ReactNode;
 }
 
-export default function KeyboardShortcuts({ children }: KeyboardShortcutsProps) {
+export default function KeyboardShortcuts({
+  children,
+}: KeyboardShortcutsProps) {
   const { isSearchOpen, openSearch, closeSearch, toggleSidebar } = useChat();
 
   useEffect(() => {

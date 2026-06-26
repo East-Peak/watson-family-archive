@@ -1,6 +1,12 @@
 'use client';
 
-import React, { useEffect, useState, useMemo, useRef, useCallback } from 'react';
+import React, {
+  useEffect,
+  useState,
+  useMemo,
+  useRef,
+  useCallback,
+} from 'react';
 import Link from 'next/link';
 import { usePageContext } from '@/hooks/usePageContext';
 import { useRouteContextProvider } from '@/hooks/useRouteContextProvider';
@@ -44,8 +50,16 @@ const HISTORICAL_EVENTS = [
 ];
 
 const BRANCH_COLORS = [
-  '#3B82F6', '#F59E0B', '#EF4444', '#14B8A6', '#10B981',
-  '#EC4899', '#06B6D4', '#A855F7', '#8B5CF6', '#F97316',
+  '#3B82F6',
+  '#F59E0B',
+  '#EF4444',
+  '#14B8A6',
+  '#10B981',
+  '#EC4899',
+  '#06B6D4',
+  '#A855F7',
+  '#8B5CF6',
+  '#F97316',
 ];
 
 const ALL_BRANCH = 'all';
@@ -59,7 +73,11 @@ interface FamilyBranch {
 
 function sortYears(events: TimelineEvent[]): number[] {
   return Array.from(
-    new Set(events.map((event) => event.year).filter((year): year is number => Boolean(year))),
+    new Set(
+      events
+        .map((event) => event.year)
+        .filter((year): year is number => Boolean(year)),
+    ),
   ).sort((a, b) => a - b);
 }
 
@@ -80,7 +98,9 @@ function filterEventsByBranch(
     const viewerLineSurnames = Array.from(viewerSurnames ?? []);
     return events.filter((event) => {
       const eventSurname = event.surname?.toLowerCase() ?? '';
-      return viewerLineSurnames.some((surname) => surname && eventSurname.includes(surname));
+      return viewerLineSurnames.some(
+        (surname) => surname && eventSurname.includes(surname),
+      );
     });
   }
 
@@ -122,7 +142,8 @@ function normalizeYearRange(
   }
 
   const hasVisibleEvents = branchFilteredEvents.some(
-    (event) => event.year >= yearRange.startYear && event.year <= yearRange.endYear,
+    (event) =>
+      event.year >= yearRange.startYear && event.year <= yearRange.endYear,
   );
 
   return hasVisibleEvents ? yearRange : null;
@@ -135,11 +156,15 @@ function filterEventsByYearRange(
   if (!yearRange) return events;
 
   return events.filter(
-    (event) => event.year >= yearRange.startYear && event.year <= yearRange.endYear,
+    (event) =>
+      event.year >= yearRange.startYear && event.year <= yearRange.endYear,
   );
 }
 
-function buildRangePresets(minYear: number | null, maxYear: number | null): TimelineRangePreset[] {
+function buildRangePresets(
+  minYear: number | null,
+  maxYear: number | null,
+): TimelineRangePreset[] {
   if (typeof minYear !== 'number' || typeof maxYear !== 'number') {
     return [{ id: 'all', label: 'All years', range: null }];
   }
@@ -174,7 +199,9 @@ function buildRangePresets(minYear: number | null, maxYear: number | null): Time
   return presets;
 }
 
-function buildDecadeOptions(eventsByDecade: Record<number, TimelineEvent[]>): TimelineDecadeOption[] {
+function buildDecadeOptions(
+  eventsByDecade: Record<number, TimelineEvent[]>,
+): TimelineDecadeOption[] {
   return Object.keys(eventsByDecade)
     .map((decade) => Number(decade))
     .sort((a, b) => a - b)
@@ -255,46 +282,51 @@ export default function TimelinePage() {
     return branches;
   }, [events]);
 
-  const hasLoadedViewerAncestry = ancestorIds.size > 0 || ancestorSurnames.size > 0;
+  const hasLoadedViewerAncestry =
+    ancestorIds.size > 0 || ancestorSurnames.size > 0;
   const showMyLinesOption =
-    viewerAncestryLoading || Boolean(viewerAncestryError) || hasLoadedViewerAncestry;
+    viewerAncestryLoading ||
+    Boolean(viewerAncestryError) ||
+    hasLoadedViewerAncestry;
   const myLinesDisabled =
-    viewerAncestryLoading || Boolean(viewerAncestryError) || !hasLoadedViewerAncestry;
+    viewerAncestryLoading ||
+    Boolean(viewerAncestryError) ||
+    !hasLoadedViewerAncestry;
   const myLinesLabel = viewerAncestryLoading
     ? 'My Lines (loading...)'
     : viewerAncestryError
       ? 'My Lines (unavailable)'
       : 'My Lines';
 
-  const branchOptions = useMemo<TimelineBranchOption[]>(
-    () => {
-      const options: TimelineBranchOption[] = [
-        { value: ALL_BRANCH, label: familyBranches[ALL_BRANCH]?.label ?? 'All Families' },
-      ];
+  const branchOptions = useMemo<TimelineBranchOption[]>(() => {
+    const options: TimelineBranchOption[] = [
+      {
+        value: ALL_BRANCH,
+        label: familyBranches[ALL_BRANCH]?.label ?? 'All Families',
+      },
+    ];
 
-      if (showMyLinesOption) {
-        options.push({
-          value: MY_LINES_BRANCH,
-          label: myLinesLabel,
-          disabled: myLinesDisabled,
-        });
+    if (showMyLinesOption) {
+      options.push({
+        value: MY_LINES_BRANCH,
+        label: myLinesLabel,
+        disabled: myLinesDisabled,
+      });
+    }
+
+    Object.entries(familyBranches).forEach(([value, config]) => {
+      if (value === ALL_BRANCH) {
+        return;
       }
 
-      Object.entries(familyBranches).forEach(([value, config]) => {
-        if (value === ALL_BRANCH) {
-          return;
-        }
-
-        options.push({
-          value,
-          label: config.label,
-        });
+      options.push({
+        value,
+        label: config.label,
       });
+    });
 
-      return options;
-    },
-    [familyBranches, myLinesDisabled, myLinesLabel, showMyLinesOption],
-  );
+    return options;
+  }, [familyBranches, myLinesDisabled, myLinesLabel, showMyLinesOption]);
 
   useEffect(() => {
     if (branch === MY_LINES_BRANCH) {
@@ -307,7 +339,13 @@ export default function TimelinePage() {
     if (!(branch in familyBranches)) {
       setBranch(ALL_BRANCH);
     }
-  }, [branch, familyBranches, myLinesDisabled, showMyLinesOption, viewerAncestryLoading]);
+  }, [
+    branch,
+    familyBranches,
+    myLinesDisabled,
+    showMyLinesOption,
+    viewerAncestryLoading,
+  ]);
 
   useEffect(() => {
     async function loadData() {
@@ -332,7 +370,14 @@ export default function TimelinePage() {
   }, []);
 
   const branchFilteredEvents = useMemo(
-    () => filterEventsByBranch(events, branch, familyBranches, ancestorIds, ancestorSurnames),
+    () =>
+      filterEventsByBranch(
+        events,
+        branch,
+        familyBranches,
+        ancestorIds,
+        ancestorSurnames,
+      ),
     [ancestorIds, ancestorSurnames, branch, events, familyBranches],
   );
 
@@ -341,7 +386,8 @@ export default function TimelinePage() {
     [branchFilteredEvents],
   );
   const availableMinYear = branchFilteredYears[0] ?? null;
-  const availableMaxYear = branchFilteredYears[branchFilteredYears.length - 1] ?? null;
+  const availableMaxYear =
+    branchFilteredYears[branchFilteredYears.length - 1] ?? null;
 
   useEffect(() => {
     const normalized = normalizeYearRange(yearRange, branchFilteredEvents);
@@ -350,11 +396,9 @@ export default function TimelinePage() {
       (yearRange !== null && normalized === null) ||
       (yearRange !== null &&
         normalized !== null &&
-        (
-          yearRange.startYear !== normalized.startYear ||
+        (yearRange.startYear !== normalized.startYear ||
           yearRange.endYear !== normalized.endYear ||
-          yearRange.source !== normalized.source
-        ));
+          yearRange.source !== normalized.source));
 
     if (yearRangeChanged) {
       setYearRange(normalized);
@@ -428,9 +472,15 @@ export default function TimelinePage() {
   }, [isMobile]);
 
   const stats = useMemo(() => {
-    const births = filteredEvents.filter((event) => event.type === 'birth').length;
-    const deaths = filteredEvents.filter((event) => event.type === 'death').length;
-    const countries = new Set(filteredEvents.map((event) => event.country).filter(Boolean)).size;
+    const births = filteredEvents.filter(
+      (event) => event.type === 'birth',
+    ).length;
+    const deaths = filteredEvents.filter(
+      (event) => event.type === 'death',
+    ).length;
+    const countries = new Set(
+      filteredEvents.map((event) => event.country).filter(Boolean),
+    ).size;
     return { births, deaths, countries };
   }, [filteredEvents]);
 
@@ -443,7 +493,11 @@ export default function TimelinePage() {
     branchOptions.find((option) => option.value === branch)?.label ??
     familyBranches[branch]?.label ??
     'All Families';
-  const summaryYearRangeLabel = formatYearRangeLabel(yearRange, availableMinYear, availableMaxYear);
+  const summaryYearRangeLabel = formatYearRangeLabel(
+    yearRange,
+    availableMinYear,
+    availableMaxYear,
+  );
   const branchHint =
     branch === MY_LINES_BRANCH && viewerAncestryLoading
       ? 'Loading your ancestor lines...'
@@ -467,42 +521,48 @@ export default function TimelinePage() {
   );
   useRouteContextProvider(routeContextProvider);
 
-  const scrollToDecade = useCallback((decade: number) => {
-    setSelectedDecade(decade);
-    const element = document.getElementById(`decade-${decade}`);
-    if (!element) return;
+  const scrollToDecade = useCallback(
+    (decade: number) => {
+      setSelectedDecade(decade);
+      const element = document.getElementById(`decade-${decade}`);
+      if (!element) return;
 
-    const stickyOffset = isMobile
-      ? (summaryBarRef.current?.getBoundingClientRect().height ?? 0) + 72
-      : (
-          (document.querySelector('header')?.getBoundingClientRect().height ?? 0) +
+      const stickyOffset = isMobile
+        ? (summaryBarRef.current?.getBoundingClientRect().height ?? 0) + 72
+        : (document.querySelector('header')?.getBoundingClientRect().height ??
+            0) +
           (statsBarRef.current?.getBoundingClientRect().height ?? 0) +
           (decadeNavRef.current?.getBoundingClientRect().height ?? 0) +
-          16
-        );
+          16;
 
-    const targetTop = window.scrollY + element.getBoundingClientRect().top - stickyOffset;
-    window.scrollTo({ top: Math.max(0, targetTop), behavior: 'smooth' });
-  }, [isMobile]);
+      const targetTop =
+        window.scrollY + element.getBoundingClientRect().top - stickyOffset;
+      window.scrollTo({ top: Math.max(0, targetTop), behavior: 'smooth' });
+    },
+    [isMobile],
+  );
 
-  const getEventColor = useCallback((event: TimelineEvent) => {
-    if (branch === MY_LINES_BRANCH) {
-      return '#6D28D9';
-    }
-
-    if (branch !== ALL_BRANCH) {
-      return familyBranches[branch]?.color ?? '#3B82F6';
-    }
-
-    const surname = event.surname?.toLowerCase() ?? '';
-    for (const currentBranch of Object.values(familyBranches)) {
-      if (currentBranch.surnames.some((value) => surname.includes(value))) {
-        return currentBranch.color;
+  const getEventColor = useCallback(
+    (event: TimelineEvent) => {
+      if (branch === MY_LINES_BRANCH) {
+        return '#6D28D9';
       }
-    }
 
-    return '#6B7280';
-  }, [branch, familyBranches]);
+      if (branch !== ALL_BRANCH) {
+        return familyBranches[branch]?.color ?? '#3B82F6';
+      }
+
+      const surname = event.surname?.toLowerCase() ?? '';
+      for (const currentBranch of Object.values(familyBranches)) {
+        if (currentBranch.surnames.some((value) => surname.includes(value))) {
+          return currentBranch.color;
+        }
+      }
+
+      return '#6B7280';
+    },
+    [branch, familyBranches],
+  );
 
   if (loading || isMobile === null) {
     return (
@@ -519,7 +579,10 @@ export default function TimelinePage() {
           </div>
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
             {[...Array(9)].map((_, index) => (
-              <div key={index} className="rounded-xl border border-gray-200 bg-white p-4">
+              <div
+                key={index}
+                className="rounded-xl border border-gray-200 bg-white p-4"
+              >
                 <div className="flex items-start gap-3">
                   <Skeleton variant="circular" className="h-8 w-8" />
                   <div className="flex-1 space-y-2">
@@ -582,27 +645,38 @@ export default function TimelinePage() {
               <div className="flex items-center gap-8">
                 <div className="flex items-center gap-2">
                   <span className="text-green-600">+</span>
-                  <span className="font-medium text-gray-900">{stats.births}</span>
+                  <span className="font-medium text-gray-900">
+                    {stats.births}
+                  </span>
                   <span className="text-gray-500">births</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="text-red-500">-</span>
-                  <span className="font-medium text-gray-900">{stats.deaths}</span>
+                  <span className="font-medium text-gray-900">
+                    {stats.deaths}
+                  </span>
                   <span className="text-gray-500">deaths</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="text-shield">●</span>
-                  <span className="font-medium text-gray-900">{stats.countries}</span>
+                  <span className="font-medium text-gray-900">
+                    {stats.countries}
+                  </span>
                   <span className="text-gray-500">countries</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="text-shield">◆</span>
-                  <span className="font-medium text-gray-900">{decades.length}</span>
+                  <span className="font-medium text-gray-900">
+                    {decades.length}
+                  </span>
                   <span className="text-gray-500">decades</span>
                 </div>
               </div>
               <div className="flex items-center gap-2">
-                <label htmlFor="desktop-timeline-branch" className="hidden text-sm text-gray-500 sm:block">
+                <label
+                  htmlFor="desktop-timeline-branch"
+                  className="hidden text-sm text-gray-500 sm:block"
+                >
                   Family:
                 </label>
                 <select
@@ -613,7 +687,11 @@ export default function TimelinePage() {
                   className="cursor-pointer rounded border border-gray-300 bg-white px-3 py-1.5 text-sm text-gray-700"
                 >
                   {branchOptions.map((option) => (
-                    <option key={option.value} value={option.value} disabled={option.disabled}>
+                    <option
+                      key={option.value}
+                      value={option.value}
+                      disabled={option.disabled}
+                    >
                       {option.label}
                     </option>
                   ))}
@@ -644,7 +722,9 @@ export default function TimelinePage() {
                     }`}
                   >
                     {decade}s
-                    {count > 0 && <span className="ml-1 text-xs opacity-60">({count})</span>}
+                    {count > 0 && (
+                      <span className="ml-1 text-xs opacity-60">({count})</span>
+                    )}
                   </button>
                 );
               })}
@@ -666,9 +746,13 @@ export default function TimelinePage() {
           return (
             <div key={decade} id={`decade-${decade}`} className="mb-12">
               <div className="mb-6 flex items-center gap-4">
-                <h2 className="font-serif text-3xl font-bold text-shield">{decade}s</h2>
+                <h2 className="font-serif text-3xl font-bold text-shield">
+                  {decade}s
+                </h2>
                 <div className="h-px flex-1 bg-gradient-to-r from-gray-300 to-transparent" />
-                <span className="text-sm text-gray-500">{decadeEvents.length} events</span>
+                <span className="text-sm text-gray-500">
+                  {decadeEvents.length} events
+                </span>
               </div>
 
               {historicalInDecade.length > 0 && (
@@ -696,8 +780,12 @@ export default function TimelinePage() {
                       key={`${event.personId}-${event.type}-${index}`}
                       href={`/person/${event.personId}`}
                       className="group relative rounded-2xl border border-shield/10 bg-white/90 p-5 transition-all hover:-translate-y-1 hover:border-shield/40 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]"
-                      onMouseEnter={!isMobile ? () => setHoveredEvent(event) : undefined}
-                      onMouseLeave={!isMobile ? () => setHoveredEvent(null) : undefined}
+                      onMouseEnter={
+                        !isMobile ? () => setHoveredEvent(event) : undefined
+                      }
+                      onMouseLeave={
+                        !isMobile ? () => setHoveredEvent(null) : undefined
+                      }
                     >
                       <div
                         className="absolute -right-3 -top-3 flex h-10 w-10 items-center justify-center rounded-full text-xs font-bold text-white shadow-lg ring-4 ring-white"
@@ -751,7 +839,8 @@ export default function TimelinePage() {
         <div className="fixed bottom-20 left-1/2 z-50 -translate-x-1/2 rounded-lg border border-white/20 bg-shield px-4 py-2 shadow-xl">
           <p className="font-medium text-white">{hoveredEvent.personName}</p>
           <p className="text-sm text-white/70">
-            {hoveredEvent.type === 'birth' ? 'Born' : 'Died'} {hoveredEvent.year} in {hoveredEvent.location}
+            {hoveredEvent.type === 'birth' ? 'Born' : 'Died'}{' '}
+            {hoveredEvent.year} in {hoveredEvent.location}
           </p>
         </div>
       )}

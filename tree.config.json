@@ -1,8 +1,8 @@
 {
   "tree": {
     "name": "Watson Family Tree",
-    "rootPerson": "john_stuart_watson",
-    "id": "family-tree"
+    "id": "family-tree",
+    "rootPerson": "john_stuart_watson"
   },
   "paths": {
     "nodesDir": "data/verified_nodes",

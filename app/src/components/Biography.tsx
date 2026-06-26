@@ -53,13 +53,19 @@ export default function Biography({ markdown }: BiographyProps) {
               stroke="currentColor"
               viewBox="0 0 24 24"
             >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M19 9l-7 7-7-7"
+              />
             </svg>
           </button>
         )}
       </div>
 
-      <div className="prose prose-invert prose-lg max-w-none
+      <div
+        className="prose prose-invert prose-lg max-w-none
         prose-headings:text-white prose-headings:font-semibold
         prose-h2:text-xl prose-h2:mt-8 prose-h2:mb-4 prose-h2:text-cyan-400
         prose-h3:text-lg prose-h3:mt-6 prose-h3:mb-3
@@ -75,14 +81,16 @@ export default function Biography({ markdown }: BiographyProps) {
         prose-code:bg-gray-800 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:text-cyan-300 prose-code:before:content-none prose-code:after:content-none
         prose-pre:bg-gray-900 prose-pre:border prose-pre:border-gray-700 prose-pre:rounded-xl
         prose-hr:border-gray-700
-      ">
+      "
+      >
         <ReactMarkdown
           remarkPlugins={[remarkGfm]}
           components={{
             // Custom link handler for internal links
             a: ({ href, children, ...props }) => {
               // Convert .md links to app routes if they're internal
-              const isInternal = href?.endsWith('.md') && !href.startsWith('http');
+              const isInternal =
+                href?.endsWith('.md') && !href.startsWith('http');
               if (isInternal) {
                 return <span className="text-gray-500">{children}</span>;
               }
@@ -95,8 +103,18 @@ export default function Biography({ markdown }: BiographyProps) {
                   {...props}
                 >
                   {children}
-                  <svg className="w-3 h-3 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  <svg
+                    className="w-3 h-3 opacity-50"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                    />
                   </svg>
                 </a>
               );
@@ -105,14 +123,24 @@ export default function Biography({ markdown }: BiographyProps) {
             input: ({ type, checked, ...props }) => {
               if (type === 'checkbox') {
                 return (
-                  <span className={`inline-flex items-center justify-center w-5 h-5 mr-2 rounded border ${
-                    checked
-                      ? 'bg-emerald-500/20 border-emerald-500/50 text-emerald-400'
-                      : 'bg-gray-800 border-gray-600'
-                  }`}>
+                  <span
+                    className={`inline-flex items-center justify-center w-5 h-5 mr-2 rounded border ${
+                      checked
+                        ? 'bg-emerald-500/20 border-emerald-500/50 text-emerald-400'
+                        : 'bg-gray-800 border-gray-600'
+                    }`}
+                  >
                     {checked && (
-                      <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      <svg
+                        className="w-3 h-3"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                          clipRule="evenodd"
+                        />
                       </svg>
                     )}
                   </span>

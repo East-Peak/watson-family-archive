@@ -32,7 +32,9 @@ export interface RecordNodeResult {
   }>;
 }
 
-function parseParticipantsJson(raw: string | null): RecordNodeResult['participants'] {
+function parseParticipantsJson(
+  raw: string | null,
+): RecordNodeResult['participants'] {
   if (!raw) return [];
   try {
     const parsed = JSON.parse(raw);
@@ -43,12 +45,14 @@ function parseParticipantsJson(raw: string | null): RecordNodeResult['participan
       occupation: (p.occupation as string) || null,
       birthplace: (p.birthplace as string) || null,
     }));
-  } catch { return []; }
+  } catch {
+    return [];
+  }
 }
 
 export async function getPersonRecords(
   personId: string,
-  treeId: string = DEFAULT_TREE_ID
+  treeId: string = DEFAULT_TREE_ID,
 ): Promise<RecordNodeResult[]> {
   const raw = await executeQuery<{
     record: RecordNodeResult['record'];
@@ -63,7 +67,7 @@ export async function getPersonRecords(
       r.participants AS rawParticipants
     ORDER BY r.year
     `,
-    { personId, treeId }
+    { personId, treeId },
   );
 
   return raw.map((row) => ({
@@ -79,7 +83,7 @@ export async function getPersonRecords(
  * Fallback for when person sources have record_id but no edges exist yet.
  */
 export async function getRecordsByIds(
-  recordIds: string[]
+  recordIds: string[],
 ): Promise<RecordNodeResult[]> {
   if (recordIds.length === 0) return [];
   const raw = await executeQuery<{
@@ -96,7 +100,7 @@ export async function getRecordsByIds(
       r.participants AS rawParticipants
     ORDER BY r.year
     `,
-    { recordIds }
+    { recordIds },
   );
 
   return raw.map((row) => ({
@@ -108,14 +112,14 @@ export async function getRecordsByIds(
 
 export async function getPersonRecordCounts(
   personId: string,
-  treeId: string = DEFAULT_TREE_ID
+  treeId: string = DEFAULT_TREE_ID,
 ): Promise<Record<string, number>> {
   const rows = await executeQuery<{ type: string; count: number }>(
     `
     MATCH (t:Tree {id: $treeId})-[:CONTAINS]->(p:Person {id: $personId})-[:EVIDENCED_BY]->(r:Record)
     RETURN r.type AS type, count(r) AS count
     `,
-    { personId, treeId }
+    { personId, treeId },
   );
   const counts: Record<string, number> = {};
   for (const row of rows) {
@@ -125,18 +129,22 @@ export async function getPersonRecordCounts(
 }
 
 export async function getRecordStats(
-  treeId: string = DEFAULT_TREE_ID
+  treeId: string = DEFAULT_TREE_ID,
 ): Promise<{
   totalRecords: number;
   byType: Record<string, number>;
   byTier: Record<string, number>;
 }> {
-  const rows = await executeQuery<{ type: string; tier: string; count: number }>(
+  const rows = await executeQuery<{
+    type: string;
+    tier: string;
+    count: number;
+  }>(
     `
     MATCH (r:Record)
     RETURN r.type AS type, r.tier AS tier, count(r) AS count
     `,
-    { treeId }
+    { treeId },
   );
 
   let totalRecords = 0;
@@ -156,7 +164,7 @@ export async function getRecordStats(
 export async function searchRecords(
   query: string,
   treeId: string,
-  limit: number = 20
+  limit: number = 20,
 ): Promise<SearchRecordResult[]> {
   const queryLower = query.toLowerCase().trim();
   if (!queryLower || queryLower.length < 2) return [];
@@ -201,7 +209,7 @@ export async function searchRecords(
   return rows.map((row) => {
     const participants = parseParticipantsJson(row.rawParticipants);
     const matchedParticipant = participants.find(
-      (p) => p.name && p.name.toLowerCase().includes(queryLower)
+      (p) => p.name && p.name.toLowerCase().includes(queryLower),
     );
     return {
       id: row.id,
@@ -224,7 +232,7 @@ export async function searchRecords(
  */
 export async function getPersonRecordContext(
   personId: string,
-  treeId: string
+  treeId: string,
 ): Promise<string> {
   const records = await getPersonRecords(personId, treeId);
   if (records.length === 0) return '';
@@ -236,7 +244,9 @@ export async function getPersonRecordContext(
     const rel = r.rel;
     const participants = r.participants || [];
 
-    lines.push(`\n### ${rec.type.toUpperCase()} — ${rec.collection || 'Unknown Collection'} (${rec.year || '?'})`);
+    lines.push(
+      `\n### ${rec.type.toUpperCase()} — ${rec.collection || 'Unknown Collection'} (${rec.year || '?'})`,
+    );
     if (rec.place) lines.push(`Place: ${rec.place}`);
     if (rec.tier) lines.push(`Evidence Tier: ${rec.tier}`);
     if (rel.role) lines.push(`This person's role: ${rel.role}`);

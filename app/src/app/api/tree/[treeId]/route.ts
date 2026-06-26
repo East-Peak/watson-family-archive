@@ -1,19 +1,16 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { getTreeById, getTreeStats, updateTree } from '@/lib/neo4j';
+import { getTreeById, getTreeStats } from '@/lib/neo4j';
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: Promise<{ treeId: string }> }
+  { params }: { params: Promise<{ treeId: string }> },
 ) {
   try {
     const { treeId } = await params;
     const tree = await getTreeById(treeId);
 
     if (!tree) {
-      return NextResponse.json(
-        { error: 'Tree not found' },
-        { status: 404 }
-      );
+      return NextResponse.json({ error: 'Tree not found' }, { status: 404 });
     }
 
     // Get stats too
@@ -27,34 +24,8 @@ export async function GET(
     console.error('Error fetching tree:', error);
     return NextResponse.json(
       { error: 'Failed to fetch tree' },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }
 
-export async function PUT(
-  request: NextRequest,
-  { params }: { params: Promise<{ treeId: string }> }
-) {
-  try {
-    const { treeId } = await params;
-    const body = await request.json();
-
-    const updated = await updateTree(treeId, body);
-
-    if (!updated) {
-      return NextResponse.json(
-        { error: 'Tree not found or no updates provided' },
-        { status: 404 }
-      );
-    }
-
-    return NextResponse.json(updated);
-  } catch (error) {
-    console.error('Error updating tree:', error);
-    return NextResponse.json(
-      { error: 'Failed to update tree' },
-      { status: 500 }
-    );
-  }
-}

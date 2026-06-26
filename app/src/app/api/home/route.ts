@@ -52,14 +52,15 @@ export async function GET(request: NextRequest) {
     // When a viewer is set, scope stats to their direct ancestors.
     // 89 direct ancestors for 9 generations is normal — most of the 2094
     // people in the tree are collateral relatives (siblings, cousins, in-laws).
-    const statsResults = await executeQuery<{
-      totalIndividuals: number;
-      living: number;
-      earliestBirth: number;
-      latestBirth: number;
-    }>(
-      viewerId
-        ? `
+    const [statsResults, recordStats, treeStatsRaw] = await Promise.all([
+      executeQuery<{
+        totalIndividuals: number;
+        living: number;
+        earliestBirth: number;
+        latestBirth: number;
+      }>(
+        viewerId
+          ? `
           MATCH (t:Tree {id: $treeId})-[:CONTAINS]->(viewer:Person {id: $viewerId})
           MATCH path = (viewer)-[:CHILD_OF*0..]->(ancestor:Person)
           WITH collect(DISTINCT ancestor) as ancestors
@@ -71,7 +72,7 @@ export async function GET(request: NextRequest) {
             max(p.birthYear) as latestBirth
           RETURN totalIndividuals, living, earliestBirth, latestBirth
           `
-        : `
+          : `
           MATCH (t:Tree {id: $treeId})-[:CONTAINS]->(p:Person)
           WITH
             count(p) as totalIndividuals,
@@ -80,23 +81,8 @@ export async function GET(request: NextRequest) {
             max(p.birthYear) as latestBirth
           RETURN totalIndividuals, living, earliestBirth, latestBirth
           `,
-      viewerId ? { treeId, viewerId } : { treeId }
-    );
-
-    // Get top surnames
-    const surnameResults = await executeQuery<{ name: string; count: number }>(
-      `
-      MATCH (t:Tree {id: $treeId})-[:CONTAINS]->(p:Person)
-      WHERE p.surname IS NOT NULL AND p.surname <> ''
-      WITH p.surname as name, count(*) as count
-      ORDER BY count DESC
-      LIMIT 10
-      RETURN name, count
-      `,
-      { treeId }
-    );
-
-    const [recordStats, treeStatsRaw] = await Promise.all([
+        viewerId ? { treeId, viewerId } : { treeId },
+      ),
       getRecordStats(treeId),
       getTreeStats(treeId),
     ]);
@@ -127,27 +113,39 @@ export async function GET(request: NextRequest) {
         MATCH path = (viewer)-[:CHILD_OF*0..]->(ancestor:Person)
         RETURN DISTINCT ancestor.id as id
         `,
-        { treeId, viewerId }
+        { treeId, viewerId },
       );
-      ancestorIds = ancestorRows.map(r => r.id);
+      ancestorIds = ancestorRows.map((r) => r.id);
     }
     const ancestorFilter = viewerId ? 'AND p.id IN $ancestorIds' : '';
     const storyParams: Record<string, unknown> = viewerId
       ? { treeId, ancestorIds: ancestorIds || [] }
       : { treeId };
 
-    // Get spotlight ancestors - interesting people to feature
-    const spotlightResults = await executeQuery<{
-      id: string;
-      fullName: string;
-      sex: string;
-      birthYear?: number;
-      deathYear?: number;
-      birthPlace?: string;
-      deathPlace?: string;
-      occupation?: string;
-    }>(
-      `
+    // Get spotlight ancestors + all story counts — every read below is
+    // independent of the others, so run them in parallel.
+    const [
+      spotlightResults,
+      colonialResult,
+      immigrantResult,
+      longLivedResult,
+      quakerResult,
+      militaryResult,
+      englishResult,
+      welshResult,
+      earliestResult,
+    ] = await Promise.all([
+      executeQuery<{
+        id: string;
+        fullName: string;
+        sex: string;
+        birthYear?: number;
+        deathYear?: number;
+        birthPlace?: string;
+        deathPlace?: string;
+        occupation?: string;
+      }>(
+        `
       MATCH (t:Tree {id: $treeId})-[:CONTAINS]->(p:Person)
       WHERE p.isLiving = false
         AND p.birthYear IS NOT NULL
@@ -166,8 +164,123 @@ export async function GET(request: NextRequest) {
         COALESCE(dp.name, p.deathPlace) as deathPlace,
         o.name as occupation
       `,
-      viewerId ? { ...storyParams } : { treeId }
-    );
+        viewerId ? { ...storyParams } : { treeId },
+      ),
+      // Colonial ancestors
+      executeQuery<{
+        count: number;
+        exampleId: string;
+      }>(
+        `
+      MATCH (t:Tree {id: $treeId})-[:CONTAINS]->(p:Person)
+      WHERE p.birthYear IS NOT NULL AND p.birthYear < 1700 ${ancestorFilter}
+      WITH count(p) as count, collect(p.id)[0] as exampleId
+      RETURN count, exampleId
+      `,
+        storyParams,
+      ),
+      // Immigrants from Europe
+      executeQuery<{
+        count: number;
+        exampleId: string;
+      }>(
+        `
+      MATCH (t:Tree {id: $treeId})-[:CONTAINS]->(p:Person)
+      WHERE p.birthPlace IS NOT NULL AND p.deathPlace IS NOT NULL ${ancestorFilter}
+        AND (p.birthPlace CONTAINS 'England' OR p.birthPlace CONTAINS 'Wales'
+             OR p.birthPlace CONTAINS 'Scotland' OR p.birthPlace CONTAINS 'Ireland'
+             OR p.birthPlace CONTAINS 'Germany')
+        AND (p.deathPlace CONTAINS 'United States' OR p.deathPlace CONTAINS 'America'
+             OR p.deathPlace CONTAINS 'USA' OR NOT (p.deathPlace CONTAINS 'England'
+             OR p.deathPlace CONTAINS 'Wales' OR p.deathPlace CONTAINS 'Scotland'
+             OR p.deathPlace CONTAINS 'Ireland' OR p.deathPlace CONTAINS 'Germany'))
+      WITH count(p) as count, collect(p.id)[0] as exampleId
+      RETURN count, exampleId
+      `,
+        storyParams,
+      ),
+      // Long-lived
+      executeQuery<{
+        count: number;
+        exampleId: string;
+      }>(
+        `
+      MATCH (t:Tree {id: $treeId})-[:CONTAINS]->(p:Person)
+      WHERE p.birthYear IS NOT NULL AND p.deathYear IS NOT NULL ${ancestorFilter}
+        AND (p.deathYear - p.birthYear) >= 90
+      WITH count(p) as count, collect(p.id)[0] as exampleId
+      RETURN count, exampleId
+      `,
+        storyParams,
+      ),
+      // Quakers
+      executeQuery<{
+        count: number;
+        exampleId: string;
+      }>(
+        `
+      MATCH (t:Tree {id: $treeId})-[:CONTAINS]->(p:Person)-[:PRACTICED]->(r:Religion)
+      WHERE (toLower(r.name) CONTAINS 'quaker' OR toLower(r.name) CONTAINS 'society of friends') ${ancestorFilter}
+      WITH count(DISTINCT p) as count, collect(p.id)[0] as exampleId
+      RETURN count, exampleId
+      `,
+        storyParams,
+      ),
+      // Military service
+      executeQuery<{
+        count: number;
+        exampleId: string;
+      }>(
+        `
+      MATCH (t:Tree {id: $treeId})-[:CONTAINS]->(p:Person)-[:SERVED_IN]->(w:War)
+      WHERE 1=1 ${ancestorFilter}
+      WITH count(DISTINCT p) as count, collect(p.id)[0] as exampleId
+      RETURN count, exampleId
+      `,
+        storyParams,
+      ),
+      // English heritage
+      executeQuery<{
+        count: number;
+        exampleId: string;
+      }>(
+        `
+      MATCH (t:Tree {id: $treeId})-[:CONTAINS]->(p:Person)
+      WHERE p.birthPlace CONTAINS 'England' ${ancestorFilter}
+      WITH count(p) as count, collect(p.id)[0] as exampleId
+      RETURN count, exampleId
+      `,
+        storyParams,
+      ),
+      // Welsh heritage
+      executeQuery<{
+        count: number;
+        exampleId: string;
+      }>(
+        `
+      MATCH (t:Tree {id: $treeId})-[:CONTAINS]->(p:Person)
+      WHERE p.birthPlace CONTAINS 'Wales' ${ancestorFilter}
+      WITH count(p) as count, collect(p.id)[0] as exampleId
+      RETURN count, exampleId
+      `,
+        storyParams,
+      ),
+      // Earliest ancestor — scoped to viewer when set
+      executeQuery<{
+        id: string;
+        fullName: string;
+        birthYear: number;
+      }>(
+        `
+      MATCH (t:Tree {id: $treeId})-[:CONTAINS]->(p:Person)
+      WHERE p.birthYear IS NOT NULL ${ancestorFilter}
+      RETURN p.id as id, p.fullName as fullName, p.birthYear as birthYear
+      ORDER BY p.birthYear ASC
+      LIMIT 1
+      `,
+        storyParams,
+      ),
+    ]);
 
     // Transform spotlight results
     const spotlight: SpotlightPerson[] = spotlightResults.map((p) => {
@@ -208,15 +321,6 @@ export async function GET(request: NextRequest) {
     const stories: Story[] = [];
 
     // Colonial ancestors
-    const colonialResult = await executeQuery<{ count: number; exampleId: string }>(
-      `
-      MATCH (t:Tree {id: $treeId})-[:CONTAINS]->(p:Person)
-      WHERE p.birthYear IS NOT NULL AND p.birthYear < 1700 ${ancestorFilter}
-      WITH count(p) as count, collect(p.id)[0] as exampleId
-      RETURN count, exampleId
-      `,
-      storyParams
-    );
     if (colonialResult[0]?.count > 0) {
       stories.push({
         icon: '🏛️',
@@ -228,22 +332,6 @@ export async function GET(request: NextRequest) {
     }
 
     // Immigrants from Europe
-    const immigrantResult = await executeQuery<{ count: number; exampleId: string }>(
-      `
-      MATCH (t:Tree {id: $treeId})-[:CONTAINS]->(p:Person)
-      WHERE p.birthPlace IS NOT NULL AND p.deathPlace IS NOT NULL ${ancestorFilter}
-        AND (p.birthPlace CONTAINS 'England' OR p.birthPlace CONTAINS 'Wales'
-             OR p.birthPlace CONTAINS 'Scotland' OR p.birthPlace CONTAINS 'Ireland'
-             OR p.birthPlace CONTAINS 'Germany')
-        AND (p.deathPlace CONTAINS 'United States' OR p.deathPlace CONTAINS 'America'
-             OR p.deathPlace CONTAINS 'USA' OR NOT (p.deathPlace CONTAINS 'England'
-             OR p.deathPlace CONTAINS 'Wales' OR p.deathPlace CONTAINS 'Scotland'
-             OR p.deathPlace CONTAINS 'Ireland' OR p.deathPlace CONTAINS 'Germany'))
-      WITH count(p) as count, collect(p.id)[0] as exampleId
-      RETURN count, exampleId
-      `,
-      storyParams
-    );
     if (immigrantResult[0]?.count > 0) {
       stories.push({
         icon: '🚢',
@@ -255,16 +343,6 @@ export async function GET(request: NextRequest) {
     }
 
     // Long-lived
-    const longLivedResult = await executeQuery<{ count: number; exampleId: string }>(
-      `
-      MATCH (t:Tree {id: $treeId})-[:CONTAINS]->(p:Person)
-      WHERE p.birthYear IS NOT NULL AND p.deathYear IS NOT NULL ${ancestorFilter}
-        AND (p.deathYear - p.birthYear) >= 90
-      WITH count(p) as count, collect(p.id)[0] as exampleId
-      RETURN count, exampleId
-      `,
-      storyParams
-    );
     if (longLivedResult[0]?.count > 0) {
       stories.push({
         icon: '🎂',
@@ -276,35 +354,18 @@ export async function GET(request: NextRequest) {
     }
 
     // Quakers
-    const quakerResult = await executeQuery<{ count: number; exampleId: string }>(
-      `
-      MATCH (t:Tree {id: $treeId})-[:CONTAINS]->(p:Person)-[:PRACTICED]->(r:Religion)
-      WHERE (toLower(r.name) CONTAINS 'quaker' OR toLower(r.name) CONTAINS 'society of friends') ${ancestorFilter}
-      WITH count(DISTINCT p) as count, collect(p.id)[0] as exampleId
-      RETURN count, exampleId
-      `,
-      storyParams
-    );
     if (quakerResult[0]?.count > 0) {
       stories.push({
         icon: '⚜️',
         category: 'Faith',
         title: `${quakerResult[0].count} Quaker Ancestors`,
-        description: 'Family members who followed the Religious Society of Friends',
+        description:
+          'Family members who followed the Religious Society of Friends',
         collectionType: 'quakers',
       });
     }
 
     // Military service
-    const militaryResult = await executeQuery<{ count: number; exampleId: string }>(
-      `
-      MATCH (t:Tree {id: $treeId})-[:CONTAINS]->(p:Person)-[:SERVED_IN]->(w:War)
-      WHERE 1=1 ${ancestorFilter}
-      WITH count(DISTINCT p) as count, collect(p.id)[0] as exampleId
-      RETURN count, exampleId
-      `,
-      storyParams
-    );
     if (militaryResult[0]?.count > 0) {
       stories.push({
         icon: '🎖️',
@@ -316,15 +377,6 @@ export async function GET(request: NextRequest) {
     }
 
     // English heritage
-    const englishResult = await executeQuery<{ count: number; exampleId: string }>(
-      `
-      MATCH (t:Tree {id: $treeId})-[:CONTAINS]->(p:Person)
-      WHERE p.birthPlace CONTAINS 'England' ${ancestorFilter}
-      WITH count(p) as count, collect(p.id)[0] as exampleId
-      RETURN count, exampleId
-      `,
-      storyParams
-    );
     if (englishResult[0]?.count > 0) {
       stories.push({
         icon: '🏴󠁧󠁢󠁥󠁮󠁧󠁿',
@@ -336,15 +388,6 @@ export async function GET(request: NextRequest) {
     }
 
     // Welsh heritage
-    const welshResult = await executeQuery<{ count: number; exampleId: string }>(
-      `
-      MATCH (t:Tree {id: $treeId})-[:CONTAINS]->(p:Person)
-      WHERE p.birthPlace CONTAINS 'Wales' ${ancestorFilter}
-      WITH count(p) as count, collect(p.id)[0] as exampleId
-      RETURN count, exampleId
-      `,
-      storyParams
-    );
     if (welshResult[0]?.count > 0) {
       stories.push({
         icon: '🏴󠁧󠁢󠁷󠁬󠁳󠁿',
@@ -356,16 +399,6 @@ export async function GET(request: NextRequest) {
     }
 
     // Earliest ancestor — scoped to viewer when set
-    const earliestResult = await executeQuery<{ id: string; fullName: string; birthYear: number }>(
-      `
-      MATCH (t:Tree {id: $treeId})-[:CONTAINS]->(p:Person)
-      WHERE p.birthYear IS NOT NULL ${ancestorFilter}
-      RETURN p.id as id, p.fullName as fullName, p.birthYear as birthYear
-      ORDER BY p.birthYear ASC
-      LIMIT 1
-      `,
-      storyParams
-    );
     if (earliestResult[0]) {
       stories.push({
         icon: '📜',
@@ -384,6 +417,9 @@ export async function GET(request: NextRequest) {
     });
   } catch (error) {
     console.error('Error fetching home data:', error);
-    return NextResponse.json({ error: 'Failed to fetch home data' }, { status: 500 });
+    return NextResponse.json(
+      { error: 'Failed to fetch home data' },
+      { status: 500 },
+    );
   }
 }

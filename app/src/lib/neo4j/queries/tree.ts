@@ -1,5 +1,23 @@
-import { executeQuery, executeWrite } from '../client';
-import type { Neo4jTree, Neo4jPerson, TreeGraphData, TreeGraphNode, TreeGraphEdge } from '../types';
+import { executeQuery } from '../client';
+import { cacheGraphRead } from '@/lib/cache/graphCache';
+import type {
+  Neo4jTree,
+  Neo4jPerson,
+  TreeGraphData,
+  TreeGraphNode,
+  TreeGraphEdge,
+} from '../types';
+
+/**
+ * Fields that may be updated via the API.
+ * Excludes system-managed fields: id, createdAt, updatedAt.
+ */
+export const EDITABLE_TREE_FIELDS: ReadonlySet<string> = new Set<string>([
+  'name',
+  'description',
+  'isPublic',
+  'rootPersonId',
+]);
 
 /**
  * Get a tree by ID
@@ -10,7 +28,7 @@ export async function getTreeById(treeId: string): Promise<Neo4jTree | null> {
     MATCH (t:Tree {id: $treeId})
     RETURN t as tree
     `,
-    { treeId }
+    { treeId },
   );
 
   return results.length > 0 ? results[0].tree : null;
@@ -27,7 +45,7 @@ export async function getTreesForUser(userId: string): Promise<Neo4jTree[]> {
            CASE WHEN type(r) = 'OWNS' THEN 'owner' ELSE r.role END as role
     ORDER BY t.name
     `,
-    { userId }
+    { userId },
   );
 
   return results.map((r) => r.tree);
@@ -36,12 +54,12 @@ export async function getTreesForUser(userId: string): Promise<Neo4jTree[]> {
 /**
  * Get tree graph data for visualization
  */
-export async function getTreeGraphData(
+async function fetchTreeGraphData(
   treeId: string,
   rootPersonId?: string,
   viewMode: 'ancestors' | 'descendants' | 'full' = 'full',
   maxGenerations: number = 10,
-  branchFilter?: string
+  branchFilter?: string,
 ): Promise<TreeGraphData> {
   let query: string;
   const params: Record<string, unknown> = { treeId, maxGenerations };
@@ -203,11 +221,14 @@ export async function getTreeGraphData(
   const edges: TreeGraphEdge[] = [];
   const seenEdges = new Set<string>();
 
-  const personMap = new Map<string, {
-    spouseIds: string[];
-    parentIds: string[];
-    childIds: string[];
-  }>();
+  const personMap = new Map<
+    string,
+    {
+      spouseIds: string[];
+      parentIds: string[];
+      childIds: string[];
+    }
+  >();
 
   for (const row of results) {
     const spouseIds = row.spouseIds ?? [];
@@ -227,9 +248,18 @@ export async function getTreeGraphData(
       originCountry: row.originCountry ?? undefined,
       birthCountry: row.birthCountry ?? undefined,
       deathCountry: row.deathCountry ?? undefined,
-      siblingCount: row.siblingCount && row.siblingCount > 0 ? row.siblingCount : undefined,
-      childrenCount: row.childrenCount && row.childrenCount > 0 ? row.childrenCount : (childIds.length > 0 ? childIds.length : undefined),
-      childrenCountTotal: row.childrenCountTotal && row.childrenCountTotal > 0 ? row.childrenCountTotal : undefined,
+      siblingCount:
+        row.siblingCount && row.siblingCount > 0 ? row.siblingCount : undefined,
+      childrenCount:
+        row.childrenCount && row.childrenCount > 0
+          ? row.childrenCount
+          : childIds.length > 0
+            ? childIds.length
+            : undefined,
+      childrenCountTotal:
+        row.childrenCountTotal && row.childrenCountTotal > 0
+          ? row.childrenCountTotal
+          : undefined,
       hasParents: row.hasParents,
       hasChildren: row.hasChildren,
       parentIds: parentIds.length > 0 ? parentIds : undefined,
@@ -281,8 +311,17 @@ export async function getTreeGraphData(
   }
 
   // Build family nodes based on parent sets (two parents only) and spouse pairs
-  const familyMap = new Map<string, { id: string; partnerIds: string[]; childIds: Set<string>; generations: Set<number> }>();
-  const pendingSingleParentEdges: Array<{ parentId: string; childId: string }> = [];
+  const familyMap = new Map<
+    string,
+    {
+      id: string;
+      partnerIds: string[];
+      childIds: Set<string>;
+      generations: Set<number>;
+    }
+  >();
+  const pendingSingleParentEdges: Array<{ parentId: string; childId: string }> =
+    [];
   const partneredPeople = new Set<string>();
   const nodeById = new Map(nodes.map((node) => [node.id, node]));
 
@@ -363,9 +402,10 @@ export async function getTreeGraphData(
       }
     }
 
-    const familyGeneration = family.generations.size > 0
-      ? Math.max(...Array.from(family.generations.values()))
-      : undefined;
+    const familyGeneration =
+      family.generations.size > 0
+        ? Math.max(...Array.from(family.generations.values()))
+        : undefined;
 
     nodes.push({
       id: family.id,
@@ -425,16 +465,26 @@ export async function getTreeGraphData(
 }
 
 /**
+ * Cached whole-tree graph — identical for every user and rebuildable. Keyed by
+ * all query params (treeId, root person, view mode, generations, branch).
+ */
+export const getTreeGraphData = cacheGraphRead(fetchTreeGraphData, [
+  'tree-graph',
+]);
+
+/**
  * Get all people in a tree
  */
-export async function getAllPeopleInTree(treeId: string): Promise<Neo4jPerson[]> {
+export async function getAllPeopleInTree(
+  treeId: string,
+): Promise<Neo4jPerson[]> {
   const results = await executeQuery<{ person: Neo4jPerson }>(
     `
     MATCH (t:Tree {id: $treeId})-[:CONTAINS]->(p:Person)
     RETURN p as person
     ORDER BY p.surname, p.givenName
     `,
-    { treeId }
+    { treeId },
   );
 
   return results.map((r) => r.person);
@@ -479,105 +529,48 @@ export async function getTreeStats(treeId: string): Promise<{
     RETURN personCount, livingCount, oldestBirthYear, newestBirthYear, surnameCount,
            placeCount, countryCount, count(DISTINCT r) as recordCount
     `,
-    { treeId }
+    { treeId },
   );
 
-  return results[0] || {
-    personCount: 0,
-    livingCount: 0,
-    oldestBirthYear: null,
-    newestBirthYear: null,
-    surnameCount: 0,
-    placeCount: 0,
-    countryCount: 0,
-    recordCount: 0,
-  };
+  return (
+    results[0] || {
+      personCount: 0,
+      livingCount: 0,
+      oldestBirthYear: null,
+      newestBirthYear: null,
+      surnameCount: 0,
+      placeCount: 0,
+      countryCount: 0,
+      recordCount: 0,
+    }
+  );
 }
 
 /**
  * Create a new tree
  */
-export async function createTree(
-  tree: Omit<Neo4jTree, 'createdAt' | 'updatedAt'>,
-  ownerId: string
-): Promise<Neo4jTree> {
-  const results = await executeWrite<{ tree: Neo4jTree }>(
-    `
-    MATCH (u:User {id: $ownerId})
-    CREATE (t:Tree {
-      id: $id,
-      name: $name,
-      description: $description,
-      isPublic: $isPublic,
-      rootPersonId: $rootPersonId,
-      createdAt: datetime(),
-      updatedAt: datetime()
-    })
-    CREATE (u)-[:OWNS]->(t)
-    RETURN t as tree
-    `,
-    { ...tree, ownerId }
-  );
-
-  return results[0].tree;
-}
 
 /**
  * Update a tree
  */
-export async function updateTree(
-  treeId: string,
-  updates: Partial<Neo4jTree>
-): Promise<Neo4jTree | null> {
-  const setClause = Object.keys(updates)
-    .filter((key) => key !== 'id' && key !== 'createdAt')
-    .map((key) => `t.${key} = $${key}`)
-    .join(', ');
-
-  if (!setClause) return null;
-
-  const results = await executeWrite<{ tree: Neo4jTree }>(
-    `
-    MATCH (t:Tree {id: $treeId})
-    SET ${setClause}, t.updatedAt = datetime()
-    RETURN t as tree
-    `,
-    { ...updates, treeId }
-  );
-
-  return results.length > 0 ? results[0].tree : null;
-}
 
 /**
  * Delete a tree and all its contents
  */
-export async function deleteTree(treeId: string): Promise<boolean> {
-  await executeWrite(
-    `
-    MATCH (t:Tree {id: $treeId})
-    OPTIONAL MATCH (t)-[:CONTAINS]->(p:Person)
-    DETACH DELETE p
-    DETACH DELETE t
-    `,
-    { treeId }
-  );
-
-  return true;
-}
 
 /**
  * Check if user has access to tree
  */
 export async function checkTreeAccess(
   userId: string,
-  treeId: string
+  treeId: string,
 ): Promise<{ hasAccess: boolean; role: string | null }> {
   const results = await executeQuery<{ role: string }>(
     `
     MATCH (u:User {id: $userId})-[r:OWNS|COLLABORATES_ON]->(t:Tree {id: $treeId})
     RETURN CASE WHEN type(r) = 'OWNS' THEN 'owner' ELSE r.role END as role
     `,
-    { userId, treeId }
+    { userId, treeId },
   );
 
   if (results.length === 0) {
@@ -587,7 +580,7 @@ export async function checkTreeAccess(
       MATCH (t:Tree {id: $treeId})
       RETURN t.isPublic as isPublic
       `,
-      { treeId }
+      { treeId },
     );
 
     if (publicCheck.length > 0 && publicCheck[0].isPublic) {

@@ -1,7 +1,10 @@
-import { NextResponse, type NextRequest } from 'next/server';
+import { NextResponse } from 'next/server';
 
-// Public archive: no auth gating. Anyone can view.
-export default function middleware(_request: NextRequest) {
+// Public read-only viewer: every page and API route is public, so the edge
+// middleware is a no-op. The original enforced Auth.js sessions on API routes;
+// that whole auth subsystem is pruned from the public export, so there is
+// nothing to gate here.
+export default function middleware() {
   return NextResponse.next();
 }
 

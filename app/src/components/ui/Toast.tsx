@@ -1,6 +1,13 @@
 'use client';
 
-import { useEffect, useState, useCallback, createContext, useContext, type ReactNode } from 'react';
+import {
+  useEffect,
+  useState,
+  useCallback,
+  createContext,
+  useContext,
+  type ReactNode,
+} from 'react';
 
 interface ToastItem {
   id: number;
@@ -47,7 +54,13 @@ export function ToastProvider({ children }: { children: ReactNode }) {
   );
 }
 
-function ToastCard({ toast, onDismiss }: { toast: ToastItem; onDismiss: (id: number) => void }) {
+function ToastCard({
+  toast,
+  onDismiss,
+}: {
+  toast: ToastItem;
+  onDismiss: (id: number) => void;
+}) {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {

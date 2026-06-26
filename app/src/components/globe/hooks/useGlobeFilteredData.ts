@@ -54,7 +54,15 @@ function locationPassesBranch(
   viewerAncestorIds?: Set<string>,
 ): boolean {
   if (!branch || branch === 'all') return true;
-  return location.people.some((p) => personMatchesBranch(p.id, p.name, branch, viewerSurnames, viewerAncestorIds));
+  return location.people.some((p) =>
+    personMatchesBranch(
+      p.id,
+      p.name,
+      branch,
+      viewerSurnames,
+      viewerAncestorIds,
+    ),
+  );
 }
 
 /**
@@ -69,7 +77,13 @@ function arcPassesBranch(
 ): boolean {
   if (!branch || branch === 'all') return true;
   const name = personIdToName.get(arc.person_id) || '';
-  return personMatchesBranch(arc.person_id, name, branch, viewerSurnames, viewerAncestorIds);
+  return personMatchesBranch(
+    arc.person_id,
+    name,
+    branch,
+    viewerSurnames,
+    viewerAncestorIds,
+  );
 }
 
 /**
@@ -89,7 +103,12 @@ export function locationMatchesFilters(
   allEventTypesActive: boolean,
 ): boolean {
   return location.people.some((person) =>
-    personMatchesTimelineAndEventFilters(person, yearRange, eventTypes, allEventTypesActive),
+    personMatchesTimelineAndEventFilters(
+      person,
+      yearRange,
+      eventTypes,
+      allEventTypesActive,
+    ),
   );
 }
 
@@ -97,7 +116,10 @@ export function locationMatchesFilters(
  * Check if a location's country is in the selected regions.
  * Empty regions array means all regions are full (no filtering).
  */
-export function locationMatchesRegion(location: Location, regions: string[]): boolean {
+export function locationMatchesRegion(
+  location: Location,
+  regions: string[],
+): boolean {
   if (regions.length === 0) return true;
   return regions.includes(getLocationRegion(location));
 }
@@ -114,7 +136,11 @@ function personMatchesTimelineAndEventFilters(
   if (!hasYearFilter && !hasEventFilter) return true;
 
   return person.events.some((event) => {
-    const yearOk = !hasYearFilter || (event.year !== null && event.year >= yearRange![0] && event.year <= yearRange![1]);
+    const yearOk =
+      !hasYearFilter ||
+      (event.year !== null &&
+        event.year >= yearRange![0] &&
+        event.year <= yearRange![1]);
     const typeOk = !hasEventFilter || eventTypes.includes(event.type);
     return yearOk && typeOk;
   });
@@ -122,11 +148,22 @@ function personMatchesTimelineAndEventFilters(
 
 function personMatchesLocationView(
   person: Person,
-  viewState: Pick<GlobeViewState, 'branch' | 'yearRange' | 'eventTypes' | 'highlightPerson'>,
+  viewState: Pick<
+    GlobeViewState,
+    'branch' | 'yearRange' | 'eventTypes' | 'highlightPerson'
+  >,
   viewerSurnames?: Set<string>,
   viewerAncestorIds?: Set<string>,
 ): boolean {
-  if (!personMatchesBranch(person.id, person.name, viewState.branch, viewerSurnames, viewerAncestorIds)) {
+  if (
+    !personMatchesBranch(
+      person.id,
+      person.name,
+      viewState.branch,
+      viewerSurnames,
+      viewerAncestorIds,
+    )
+  ) {
     return false;
   }
 
@@ -144,12 +181,20 @@ function personMatchesLocationView(
 
 function locationHasVisiblePeople(
   location: Location,
-  viewState: Pick<GlobeViewState, 'branch' | 'yearRange' | 'eventTypes' | 'highlightPerson'>,
+  viewState: Pick<
+    GlobeViewState,
+    'branch' | 'yearRange' | 'eventTypes' | 'highlightPerson'
+  >,
   viewerSurnames?: Set<string>,
   viewerAncestorIds?: Set<string>,
 ): boolean {
   return location.people.some((person) =>
-    personMatchesLocationView(person, viewState, viewerSurnames, viewerAncestorIds),
+    personMatchesLocationView(
+      person,
+      viewState,
+      viewerSurnames,
+      viewerAncestorIds,
+    ),
   );
 }
 
@@ -177,15 +222,28 @@ export function arcMatchesFilters(
   if (!hasYearFilter && !hasEventFilter) return true;
 
   // Check from endpoint
-  const fromYearOk = !hasYearFilter || (arc.from.year != null && arc.from.year >= yearRange![0] && arc.from.year <= yearRange![1]);
-  const fromTypeOk = !hasEventFilter || (arc.from.eventType != null && eventTypes.includes(arc.from.eventType));
+  const fromYearOk =
+    !hasYearFilter ||
+    (arc.from.year != null &&
+      arc.from.year >= yearRange![0] &&
+      arc.from.year <= yearRange![1]);
+  const fromTypeOk =
+    !hasEventFilter ||
+    (arc.from.eventType != null && eventTypes.includes(arc.from.eventType));
 
   // Check to endpoint
-  const toYearOk = !hasYearFilter || (arc.to.year != null && arc.to.year >= yearRange![0] && arc.to.year <= yearRange![1]);
-  const toTypeOk = !hasEventFilter || (arc.to.eventType != null && eventTypes.includes(arc.to.eventType));
+  const toYearOk =
+    !hasYearFilter ||
+    (arc.to.year != null &&
+      arc.to.year >= yearRange![0] &&
+      arc.to.year <= yearRange![1]);
+  const toTypeOk =
+    !hasEventFilter ||
+    (arc.to.eventType != null && eventTypes.includes(arc.to.eventType));
 
   // Arc is full if BOTH endpoints pass their respective checks
-  const fromOk = (!hasYearFilter || fromYearOk) && (!hasEventFilter || fromTypeOk);
+  const fromOk =
+    (!hasYearFilter || fromYearOk) && (!hasEventFilter || fromTypeOk);
   const toOk = (!hasYearFilter || toYearOk) && (!hasEventFilter || toTypeOk);
 
   return fromOk && toOk;
@@ -207,7 +265,9 @@ function arcMatchesRegion(
   const fromLoc = locationsByCoord.get(fromKey);
   const toLoc = locationsByCoord.get(toKey);
 
-  const fromMatch = fromLoc ? regions.includes(getLocationRegion(fromLoc)) : false;
+  const fromMatch = fromLoc
+    ? regions.includes(getLocationRegion(fromLoc))
+    : false;
   const toMatch = toLoc ? regions.includes(getLocationRegion(toLoc)) : false;
 
   return fromMatch || toMatch;
@@ -215,7 +275,13 @@ function arcMatchesRegion(
 
 // --- Default event types (matching useGlobeViewState defaults) ---
 
-const DEFAULT_EVENT_TYPES = ['birth', 'death', 'marriage', 'census', 'residence'];
+const DEFAULT_EVENT_TYPES = [
+  'birth',
+  'death',
+  'marriage',
+  'census',
+  'residence',
+];
 
 function isAllEventTypesActive(eventTypes: string[]): boolean {
   if (eventTypes.length !== DEFAULT_EVENT_TYPES.length) return false;
@@ -226,12 +292,22 @@ function isAllEventTypesActive(eventTypes: string[]): boolean {
 
 export function computeLocationVisibility(
   location: Location,
-  viewState: Pick<GlobeViewState, 'branch' | 'yearRange' | 'eventTypes' | 'regions' | 'highlightPerson'>,
+  viewState: Pick<
+    GlobeViewState,
+    'branch' | 'yearRange' | 'eventTypes' | 'regions' | 'highlightPerson'
+  >,
   viewerSurnames?: Set<string>,
   viewerAncestorIds?: Set<string>,
 ): EntityVisibility {
   // Branch filter -> hidden
-  if (!locationPassesBranch(location, viewState.branch, viewerSurnames, viewerAncestorIds)) {
+  if (
+    !locationPassesBranch(
+      location,
+      viewState.branch,
+      viewerSurnames,
+      viewerAncestorIds,
+    )
+  ) {
     return 'hidden';
   }
 
@@ -242,7 +318,14 @@ export function computeLocationVisibility(
 
   // A location is only fully visible when at least one actual person survives
   // the combined branch + year/event + person filters together.
-  if (!locationHasVisiblePeople(location, viewState, viewerSurnames, viewerAncestorIds)) {
+  if (
+    !locationHasVisiblePeople(
+      location,
+      viewState,
+      viewerSurnames,
+      viewerAncestorIds,
+    )
+  ) {
     return 'dimmed';
   }
 
@@ -251,21 +334,39 @@ export function computeLocationVisibility(
 
 export function computeArcVisibility(
   arc: Arc,
-  viewState: Pick<GlobeViewState, 'branch' | 'yearRange' | 'eventTypes' | 'regions' | 'highlightPerson'>,
+  viewState: Pick<
+    GlobeViewState,
+    'branch' | 'yearRange' | 'eventTypes' | 'regions' | 'highlightPerson'
+  >,
   personIdToName: Map<string, string>,
   locationsByCoord: Map<string, Location>,
   viewerSurnames?: Set<string>,
   viewerAncestorIds?: Set<string>,
 ): EntityVisibility {
   // Branch filter -> hidden
-  if (!arcPassesBranch(arc, viewState.branch, personIdToName, viewerSurnames, viewerAncestorIds)) {
+  if (
+    !arcPassesBranch(
+      arc,
+      viewState.branch,
+      personIdToName,
+      viewerSurnames,
+      viewerAncestorIds,
+    )
+  ) {
     return 'hidden';
   }
 
   const allActive = isAllEventTypesActive(viewState.eventTypes);
 
   // Year/event filter -> dimmed
-  if (!arcMatchesFilters(arc, viewState.yearRange, viewState.eventTypes, allActive)) {
+  if (
+    !arcMatchesFilters(
+      arc,
+      viewState.yearRange,
+      viewState.eventTypes,
+      allActive,
+    )
+  ) {
     return 'dimmed';
   }
 
@@ -285,7 +386,10 @@ export function computeArcVisibility(
 // --- Hook options ---
 
 interface UseGlobeFilteredDataOptions {
-  viewState: Pick<GlobeViewState, 'branch' | 'yearRange' | 'eventTypes' | 'regions' | 'highlightPerson'>;
+  viewState: Pick<
+    GlobeViewState,
+    'branch' | 'yearRange' | 'eventTypes' | 'regions' | 'highlightPerson'
+  >;
   viewerSurnames?: Set<string>;
   viewerAncestorIds?: Set<string>;
 }
@@ -349,14 +453,24 @@ export function useGlobeFilteredData({
 
     return globeData.locations.map((location) => {
       const visiblePeople = location.people.filter((person) =>
-        personMatchesLocationView(person, viewState, viewerSurnames, viewerAncestorIds),
+        personMatchesLocationView(
+          person,
+          viewState,
+          viewerSurnames,
+          viewerAncestorIds,
+        ),
       );
 
       return {
         ...location,
         visiblePeople,
         visiblePeopleCount: visiblePeople.length,
-        visibility: computeLocationVisibility(location, viewState, viewerSurnames, viewerAncestorIds),
+        visibility: computeLocationVisibility(
+          location,
+          viewState,
+          viewerSurnames,
+          viewerAncestorIds,
+        ),
       };
     });
   }, [globeData, viewState, viewerSurnames, viewerAncestorIds]);
@@ -376,7 +490,14 @@ export function useGlobeFilteredData({
         viewerAncestorIds,
       ),
     }));
-  }, [globeData, viewState, personIdToName, locationsByCoord, viewerSurnames, viewerAncestorIds]);
+  }, [
+    globeData,
+    viewState,
+    personIdToName,
+    locationsByCoord,
+    viewerSurnames,
+    viewerAncestorIds,
+  ]);
 
   // Expose a branch setter for backward compatibility with the stats panel
   const setSelectedBranch = useMemo(() => {

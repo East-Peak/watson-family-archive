@@ -13,17 +13,21 @@ export function loadConfig() {
   if (!existsSync(CONFIG_PATH)) {
     throw new Error(
       `tree.config.json not found at ${CONFIG_PATH}.\n` +
-      `Copy tree.config.example.json to tree.config.json and edit it for your tree.`
+        `Copy tree.config.example.json to tree.config.json and edit it for your tree.`,
     );
   }
   try {
     _config = JSON.parse(readFileSync(CONFIG_PATH, 'utf8'));
   } catch (error) {
-    throw new Error(`Failed to parse tree.config.json at ${CONFIG_PATH}: ${error.message}`);
+    throw new Error(
+      `Failed to parse tree.config.json at ${CONFIG_PATH}: ${error.message}`,
+    );
   }
 
   if (!_config?.paths || typeof _config.paths !== 'object') {
-    throw new Error(`tree.config.json is missing a "paths" object: ${CONFIG_PATH}`);
+    throw new Error(
+      `tree.config.json is missing a "paths" object: ${CONFIG_PATH}`,
+    );
   }
 
   return _config;
@@ -64,7 +68,7 @@ export function getWikiTreeAppId() {
     .trim()
     .split(/\s+/)
     .filter(Boolean)
-    .map(token => token[0].toUpperCase() + token.slice(1).toLowerCase())
+    .map((token) => token[0].toUpperCase() + token.slice(1).toLowerCase())
     .join('');
 
   return normalized || 'GenealogyToolkit';

@@ -22,19 +22,19 @@ export interface FamilyData {
 }
 
 export interface RelationshipResult {
-  relationship: string;           // e.g., "2nd great-grandfather"
-  isDirectAncestor: boolean;      // true if target is in direct line above
-  isDirectDescendant: boolean;    // true if target is in direct line below
-  isBloodRelative: boolean;       // true if related by blood (not just marriage)
-  throughSpouse?: string;         // spouse name if related through marriage
-  path: PathStep[];               // the chain of people connecting them
-  generationsApart: number;       // total generations between the two
+  relationship: string; // e.g., "2nd great-grandfather"
+  isDirectAncestor: boolean; // true if target is in direct line above
+  isDirectDescendant: boolean; // true if target is in direct line below
+  isBloodRelative: boolean; // true if related by blood (not just marriage)
+  throughSpouse?: string; // spouse name if related through marriage
+  path: PathStep[]; // the chain of people connecting them
+  generationsApart: number; // total generations between the two
 }
 
 export interface PathStep {
   id: string;
   name: string;
-  relation: string;  // e.g., "father", "mother", "spouse", "child"
+  relation: string; // e.g., "father", "mother", "spouse", "child"
 }
 
 type RelationType = 'father' | 'mother' | 'child' | 'spouse' | 'sibling';
@@ -47,7 +47,9 @@ interface GraphEdge {
 /**
  * Build a bidirectional graph from family data
  */
-function buildFamilyGraph(families: Record<string, FamilyData>): Map<string, GraphEdge[]> {
+function buildFamilyGraph(
+  families: Record<string, FamilyData>,
+): Map<string, GraphEdge[]> {
   const graph = new Map<string, GraphEdge[]>();
 
   const addEdge = (fromId: string, toId: string, relation: RelationType) => {
@@ -56,7 +58,7 @@ function buildFamilyGraph(families: Record<string, FamilyData>): Map<string, Gra
     }
     // Avoid duplicates
     const edges = graph.get(fromId)!;
-    if (!edges.some(e => e.targetId === toId && e.relation === relation)) {
+    if (!edges.some((e) => e.targetId === toId && e.relation === relation)) {
       edges.push({ targetId: toId, relation });
     }
   };
@@ -118,7 +120,7 @@ function findPath(
   graph: Map<string, GraphEdge[]>,
   fromId: string,
   toId: string,
-  families: Record<string, FamilyData>
+  families: Record<string, FamilyData>,
 ): Array<{ id: string; name: string; relation: RelationType }> | null {
   if (fromId === toId) return [];
 
@@ -133,11 +135,14 @@ function findPath(
     for (const edge of edges) {
       if (visited.has(edge.targetId)) continue;
 
-      const newPath = [...current.path, { id: edge.targetId, relation: edge.relation }];
+      const newPath = [
+        ...current.path,
+        { id: edge.targetId, relation: edge.relation },
+      ];
 
       if (edge.targetId === toId) {
         // Found the target - enrich path with names
-        return newPath.map(step => ({
+        return newPath.map((step) => ({
           ...step,
           name: families[step.id]?.name || 'Unknown',
         }));
@@ -176,28 +181,47 @@ function getGreatPrefix(generations: number): string {
  */
 function getGenderedTerm(
   baseTerm: string,
-  targetSex: 'M' | 'F' | string | null
+  targetSex: 'M' | 'F' | string | null,
 ): string {
   const isMale = targetSex === 'M';
   const isFemale = targetSex === 'F';
 
   // Map base terms to gendered versions
-  const genderMap: Record<string, { male: string; female: string; neutral: string }> = {
-    'grandparent': { male: 'grandfather', female: 'grandmother', neutral: 'grandparent' },
-    'grandchild': { male: 'grandson', female: 'granddaughter', neutral: 'grandchild' },
-    'parent': { male: 'father', female: 'mother', neutral: 'parent' },
-    'child': { male: 'son', female: 'daughter', neutral: 'child' },
-    'sibling': { male: 'brother', female: 'sister', neutral: 'sibling' },
+  const genderMap: Record<
+    string,
+    { male: string; female: string; neutral: string }
+  > = {
+    grandparent: {
+      male: 'grandfather',
+      female: 'grandmother',
+      neutral: 'grandparent',
+    },
+    grandchild: {
+      male: 'grandson',
+      female: 'granddaughter',
+      neutral: 'grandchild',
+    },
+    parent: { male: 'father', female: 'mother', neutral: 'parent' },
+    child: { male: 'son', female: 'daughter', neutral: 'child' },
+    sibling: { male: 'brother', female: 'sister', neutral: 'sibling' },
     'aunt/uncle': { male: 'uncle', female: 'aunt', neutral: 'aunt/uncle' },
-    'niece/nephew': { male: 'nephew', female: 'niece', neutral: 'niece/nephew' },
-    'cousin': { male: 'cousin', female: 'cousin', neutral: 'cousin' },
-    'spouse': { male: 'husband', female: 'wife', neutral: 'spouse' },
+    'niece/nephew': {
+      male: 'nephew',
+      female: 'niece',
+      neutral: 'niece/nephew',
+    },
+    cousin: { male: 'cousin', female: 'cousin', neutral: 'cousin' },
+    spouse: { male: 'husband', female: 'wife', neutral: 'spouse' },
   };
 
   // Check if the base term contains a gendered word we can replace
   for (const [base, terms] of Object.entries(genderMap)) {
     if (baseTerm.includes(base)) {
-      const replacement = isMale ? terms.male : isFemale ? terms.female : terms.neutral;
+      const replacement = isMale
+        ? terms.male
+        : isFemale
+          ? terms.female
+          : terms.neutral;
       return baseTerm.replace(base, replacement);
     }
   }
@@ -212,7 +236,7 @@ function analyzeRelationship(
   path: Array<{ id: string; name: string; relation: RelationType }>,
   fromName: string,
   families: Record<string, FamilyData>,
-  targetSex: 'M' | 'F' | string | null = null
+  targetSex: 'M' | 'F' | string | null = null,
 ): RelationshipResult {
   if (path.length === 0) {
     return {
@@ -248,7 +272,7 @@ function analyzeRelationship(
   }
 
   // Count upward (to ancestors) and downward (to descendants) movements
-  let upCount = 0;   // Generations going up (to parents)
+  let upCount = 0; // Generations going up (to parents)
   let downCount = 0; // Generations going down (to children)
   let hasSibling = false;
 
@@ -265,8 +289,10 @@ function analyzeRelationship(
     }
   }
 
-  const isDirectAncestor = downCount === 0 && upCount > 0 && !hasSibling && !throughSpouse;
-  const isDirectDescendant = upCount === 0 && downCount > 0 && !hasSibling && !throughSpouse;
+  const isDirectAncestor =
+    downCount === 0 && upCount > 0 && !hasSibling && !throughSpouse;
+  const isDirectDescendant =
+    upCount === 0 && downCount > 0 && !hasSibling && !throughSpouse;
   const isBloodRelative = !throughSpouse;
 
   let relationship: string;
@@ -274,12 +300,17 @@ function analyzeRelationship(
   // Direct ancestor line (only going up)
   if (downCount === 0 && !hasSibling) {
     if (upCount === 1) {
-      const parentStep = analyzePath.find(s => s.relation === 'father' || s.relation === 'mother');
+      const parentStep = analyzePath.find(
+        (s) => s.relation === 'father' || s.relation === 'mother',
+      );
       relationship = parentStep?.relation === 'father' ? 'father' : 'mother';
     } else if (upCount === 2) {
       relationship = getGenderedTerm('grandparent', targetSex);
     } else {
-      relationship = getGenderedTerm(`${getGreatPrefix(upCount - 2)}grandparent`, targetSex);
+      relationship = getGenderedTerm(
+        `${getGreatPrefix(upCount - 2)}grandparent`,
+        targetSex,
+      );
     }
   }
   // Direct descendant line (only going down)
@@ -289,7 +320,10 @@ function analyzeRelationship(
     } else if (downCount === 2) {
       relationship = getGenderedTerm('grandchild', targetSex);
     } else {
-      relationship = getGenderedTerm(`${getGreatPrefix(downCount - 2)}grandchild`, targetSex);
+      relationship = getGenderedTerm(
+        `${getGreatPrefix(downCount - 2)}grandchild`,
+        targetSex,
+      );
     }
   }
   // Sibling
@@ -305,14 +339,20 @@ function analyzeRelationship(
       if (upCount === 1) {
         relationship = getGenderedTerm('aunt/uncle', targetSex);
       } else {
-        relationship = getGenderedTerm(`${getGreatPrefix(upCount - 1)}aunt/uncle`, targetSex);
+        relationship = getGenderedTerm(
+          `${getGreatPrefix(upCount - 1)}aunt/uncle`,
+          targetSex,
+        );
       }
     } else if (upCount === 0 && downCount > 0) {
       // Sibling's child = niece/nephew
       if (downCount === 1) {
         relationship = getGenderedTerm('niece/nephew', targetSex);
       } else {
-        relationship = getGenderedTerm(`${getGreatPrefix(downCount - 1)}niece/nephew`, targetSex);
+        relationship = getGenderedTerm(
+          `${getGreatPrefix(downCount - 1)}niece/nephew`,
+          targetSex,
+        );
       }
     } else {
       // Cousin calculation
@@ -320,10 +360,14 @@ function analyzeRelationship(
       const removed = Math.abs(upCount - downCount);
 
       if (cousinDegree === 1) {
-        relationship = removed === 0 ? '1st cousin' : `1st cousin ${removed}x removed`;
+        relationship =
+          removed === 0 ? '1st cousin' : `1st cousin ${removed}x removed`;
       } else {
         const degreeStr = getOrdinal(cousinDegree);
-        relationship = removed === 0 ? `${degreeStr} cousin` : `${degreeStr} cousin ${removed}x removed`;
+        relationship =
+          removed === 0
+            ? `${degreeStr} cousin`
+            : `${degreeStr} cousin ${removed}x removed`;
       }
     }
   }
@@ -334,13 +378,16 @@ function analyzeRelationship(
 
     if (cousinDegree === 1) {
       // First cousin = share grandparents
-      relationship = removed === 0 ? '1st cousin' : `1st cousin ${removed}x removed`;
+      relationship =
+        removed === 0 ? '1st cousin' : `1st cousin ${removed}x removed`;
     } else {
       const degreeStr = getOrdinal(cousinDegree);
-      relationship = removed === 0 ? `${degreeStr} cousin` : `${degreeStr} cousin ${removed}x removed`;
+      relationship =
+        removed === 0
+          ? `${degreeStr} cousin`
+          : `${degreeStr} cousin ${removed}x removed`;
     }
-  }
-  else {
+  } else {
     relationship = 'relative';
   }
 
@@ -365,19 +412,32 @@ function analyzeRelationship(
  */
 function buildPathSteps(
   path: Array<{ id: string; name: string; relation: RelationType }>,
-  fromName: string
+  fromName: string,
 ): PathStep[] {
-  const steps: PathStep[] = [{ id: 'self', name: fromName, relation: 'self' } as PathStep];
+  const steps: PathStep[] = [
+    { id: 'self', name: fromName, relation: 'self' } as PathStep,
+  ];
 
   for (const step of path) {
     let relationLabel: string;
     switch (step.relation) {
-      case 'father': relationLabel = 'Father'; break;
-      case 'mother': relationLabel = 'Mother'; break;
-      case 'child': relationLabel = 'Child'; break;
-      case 'spouse': relationLabel = 'Spouse'; break;
-      case 'sibling': relationLabel = 'Sibling'; break;
-      default: relationLabel = step.relation;
+      case 'father':
+        relationLabel = 'Father';
+        break;
+      case 'mother':
+        relationLabel = 'Mother';
+        break;
+      case 'child':
+        relationLabel = 'Child';
+        break;
+      case 'spouse':
+        relationLabel = 'Spouse';
+        break;
+      case 'sibling':
+        relationLabel = 'Sibling';
+        break;
+      default:
+        relationLabel = step.relation;
     }
     steps.push({ id: step.id, name: step.name, relation: relationLabel });
   }
@@ -392,7 +452,7 @@ export function calculateRelationship(
   fromId: string,
   toId: string,
   families: Record<string, FamilyData>,
-  targetSex: 'M' | 'F' | string | null = null
+  targetSex: 'M' | 'F' | string | null = null,
 ): RelationshipResult | null {
   const graph = buildFamilyGraph(families);
   const fromPerson = families[fromId];
@@ -414,7 +474,10 @@ export function calculateRelationship(
  * Format relationship for display
  * e.g., "Your 2nd great-grandfather" or "Christine's 1st cousin"
  */
-export function formatRelationship(result: RelationshipResult, ownerName: string): string {
+export function formatRelationship(
+  result: RelationshipResult,
+  ownerName: string,
+): string {
   if (result.relationship === 'yourself') {
     return 'This is you';
   }
@@ -435,7 +498,7 @@ export function formatRelationship(result: RelationshipResult, ownerName: string
  */
 export function getDirectAncestors(
   personId: string,
-  families: Record<string, FamilyData>
+  families: Record<string, FamilyData>,
 ): Set<string> {
   const ancestors = new Set<string>();
   const queue = [personId];
@@ -464,10 +527,12 @@ export function getDirectAncestors(
  */
 function getAncestorsWithDepth(
   personId: string,
-  families: Record<string, FamilyData>
+  families: Record<string, FamilyData>,
 ): Map<string, number> {
   const ancestors = new Map<string, number>();
-  const queue: Array<{ id: string; depth: number }> = [{ id: personId, depth: 0 }];
+  const queue: Array<{ id: string; depth: number }> = [
+    { id: personId, depth: 0 },
+  ];
 
   while (queue.length > 0) {
     const { id: currentId, depth } = queue.shift()!;
@@ -500,7 +565,7 @@ export interface CommonAncestorResult {
 export function findCommonAncestor(
   personAId: string,
   personBId: string,
-  families: Record<string, FamilyData>
+  families: Record<string, FamilyData>,
 ): CommonAncestorResult | null {
   // Get all ancestors of both people with their depth
   const ancestorsA = getAncestorsWithDepth(personAId, families);
@@ -543,7 +608,10 @@ export function findCommonAncestor(
     ancestor: {
       id: mrca.id,
       name: ancestorPerson.name,
-      birthYear: ancestorPerson.father?.birthYear || ancestorPerson.mother?.birthYear || null,
+      birthYear:
+        ancestorPerson.father?.birthYear ||
+        ancestorPerson.mother?.birthYear ||
+        null,
     },
     generationsFromA: mrca.depthA,
     generationsFromB: mrca.depthB,

@@ -1,7 +1,13 @@
 'use client';
 
 import { useState, useCallback, useEffect, useRef } from 'react';
-import type { ExplorerViewState, ExplorerViewMode, SortField, SortDirection, RecordSortField } from '../types';
+import type {
+  ExplorerViewState,
+  ExplorerViewMode,
+  SortField,
+  SortDirection,
+  RecordSortField,
+} from '../types';
 
 // --- Defaults ---
 
@@ -30,7 +36,9 @@ export const DEFAULT_EXPLORER_VIEW_STATE: ExplorerViewState = {
   recordSortDirection: 'asc',
 };
 
-export function resetPeopleExplorerState(state: ExplorerViewState): ExplorerViewState {
+export function resetPeopleExplorerState(
+  state: ExplorerViewState,
+): ExplorerViewState {
   return {
     ...state,
     query: DEFAULT_EXPLORER_VIEW_STATE.query,
@@ -48,7 +56,9 @@ export function resetPeopleExplorerState(state: ExplorerViewState): ExplorerView
   };
 }
 
-export function resetRecordsExplorerState(state: ExplorerViewState): ExplorerViewState {
+export function resetRecordsExplorerState(
+  state: ExplorerViewState,
+): ExplorerViewState {
   return {
     ...state,
     recordQuery: DEFAULT_EXPLORER_VIEW_STATE.recordQuery,
@@ -67,7 +77,10 @@ export function resetRecordsExplorerState(state: ExplorerViewState): ExplorerVie
 
 function parseCommaSeparated(value: string | null): string[] {
   if (!value) return [];
-  return value.split(',').map((v) => v.trim()).filter(Boolean);
+  return value
+    .split(',')
+    .map((v) => v.trim())
+    .filter(Boolean);
 }
 
 function parseCompleteness(value: string | null): { min: number; max: number } {
@@ -77,7 +90,8 @@ function parseCompleteness(value: string | null): { min: number; max: number } {
   if (!match) return defaults;
   const min = parseInt(match[1], 10);
   const max = parseInt(match[2], 10);
-  if (isNaN(min) || isNaN(max) || min < 0 || max > 100 || min > max) return defaults;
+  if (isNaN(min) || isNaN(max) || min < 0 || max > 100 || min > max)
+    return defaults;
   return { min, max };
 }
 
@@ -112,8 +126,14 @@ function parseViewMode(value: string | null): ExplorerViewMode {
 
 function parseRecordSortField(value: string | null): RecordSortField {
   const valid: RecordSortField[] = [
-    'type', 'year', 'collection', 'place',
-    'participantCount', 'tier', 'evidenceClass', 'linkedPeople',
+    'type',
+    'year',
+    'collection',
+    'place',
+    'participantCount',
+    'tier',
+    'evidenceClass',
+    'linkedPeople',
   ];
   if (value && valid.includes(value as RecordSortField)) {
     return value as RecordSortField;
@@ -121,7 +141,10 @@ function parseRecordSortField(value: string | null): RecordSortField {
   return 'year';
 }
 
-function parseIntWithDefault(value: string | null, defaultValue: number): number {
+function parseIntWithDefault(
+  value: string | null,
+  defaultValue: number,
+): number {
   if (!value) return defaultValue;
   const parsed = parseInt(value, 10);
   if (isNaN(parsed)) return defaultValue;
@@ -159,14 +182,35 @@ export function parseStateFromURL(search: string): ExplorerViewState {
 
 // --- URL Serialization ---
 
-export function serializeStateToURL(state: ExplorerViewState, existingSearch: string): string {
+export function serializeStateToURL(
+  state: ExplorerViewState,
+  existingSearch: string,
+): string {
   const params = new URLSearchParams(existingSearch);
 
   // Clear all owned keys before re-setting non-defaults
   const knownKeys = [
-    'q', 'century', 'country', 'sex', 'status', 'completeness', 'validation',
-    'sources', 'branch', 'sort', 'dir',
-    'view', 'rq', 'rt', 'tier', 'ymin', 'ymax', 'col', 'pname', 'rsort', 'rdir',
+    'q',
+    'century',
+    'country',
+    'sex',
+    'status',
+    'completeness',
+    'validation',
+    'sources',
+    'branch',
+    'sort',
+    'dir',
+    'view',
+    'rq',
+    'rt',
+    'tier',
+    'ymin',
+    'ymax',
+    'col',
+    'pname',
+    'rsort',
+    'rdir',
   ];
   knownKeys.forEach((key) => params.delete(key));
 
@@ -192,7 +236,10 @@ export function serializeStateToURL(state: ExplorerViewState, existingSearch: st
   }
 
   if (state.completenessMin !== 0 || state.completenessMax !== 100) {
-    params.set('completeness', `${state.completenessMin}-${state.completenessMax}`);
+    params.set(
+      'completeness',
+      `${state.completenessMin}-${state.completenessMax}`,
+    );
   }
 
   if (state.validation) {
@@ -292,7 +339,8 @@ export function useExplorerViewState(): UseExplorerViewStateReturn {
   const updateURL = useCallback((newState: ExplorerViewState) => {
     const newSearch = serializeStateToURL(newState, window.location.search);
     const newURL = window.location.pathname + newSearch + window.location.hash;
-    const currentURL = window.location.pathname + window.location.search + window.location.hash;
+    const currentURL =
+      window.location.pathname + window.location.search + window.location.hash;
     if (currentURL !== newURL) {
       window.history.replaceState(null, '', newURL);
     }

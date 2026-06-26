@@ -1,7 +1,12 @@
 'use client';
 
 import { useEffect, useMemo, useState } from 'react';
-import type { FilteredLocation, GlobeData, GlobeViewMode, Location } from '../types';
+import type {
+  FilteredLocation,
+  GlobeData,
+  GlobeViewMode,
+  Location,
+} from '../types';
 
 // --- Lineage graph types ---
 

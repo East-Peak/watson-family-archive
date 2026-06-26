@@ -1,12 +1,15 @@
 'use client';
 
 import { useMemo } from 'react';
-import {
-  Entity,
-  PolylineGraphics,
-} from 'resium';
+import { Entity, PolylineGraphics } from 'resium';
 import { Color } from 'cesium';
-import type { ArcColorMode, Arc, FilteredArc, GlobeData, JourneyModeData } from './types';
+import type {
+  ArcColorMode,
+  Arc,
+  FilteredArc,
+  GlobeData,
+  JourneyModeData,
+} from './types';
 import { generateArcPositions } from './utils';
 import { ERA_COLORS, FAMILY_ARC_COLORS } from './constants';
 
@@ -31,7 +34,8 @@ function getFamilyColor(personId: string, globeData: GlobeData): Color {
       if (person.id === personId) {
         const nameParts = person.name.trim().split(/\s+/);
         const surname = nameParts[nameParts.length - 1]?.toLowerCase() || '';
-        const colorHex = FAMILY_ARC_COLORS[surname] || FAMILY_ARC_COLORS.default;
+        const colorHex =
+          FAMILY_ARC_COLORS[surname] || FAMILY_ARC_COLORS.default;
         return Color.fromCssColorString(colorHex);
       }
     }
@@ -77,8 +81,10 @@ export default function MigrationArcs({
       {arcs.map((arc, index) => {
         const isPersonSelected = selectedPersonId === arc.person_id;
         const isArcSelected = selectedArc === arc;
-        const isJourneyPerson = journeyMode && arc.person_id === journeyMode.personId;
-        const isHighlighted = isPersonSelected || isArcSelected || isJourneyPerson;
+        const isJourneyPerson =
+          journeyMode && arc.person_id === journeyMode.personId;
+        const isHighlighted =
+          isPersonSelected || isArcSelected || isJourneyPerson;
         const isDimmed = arc.visibility === 'dimmed';
 
         let arcWidth = 1.5;
@@ -100,22 +106,29 @@ export default function MigrationArcs({
           arcColor = Color.fromCssColorString('#ff6b6b');
         } else if (isDimmed) {
           arcWidth = 1.5;
-          arcColor = Color.fromCssColorString(`rgba(255, 150, 100, ${DIMMED_OPACITY})`);
+          arcColor = Color.fromCssColorString(
+            `rgba(255, 150, 100, ${DIMMED_OPACITY})`,
+          );
         } else {
           // Normal state — apply color mode
           arcWidth = 1.5;
           if (arcColorMode === 'era') {
             arcColor = getEraColor(arc.from.year).withAlpha(0.6);
           } else if (arcColorMode === 'family' && familyColorMap) {
-            arcColor = (familyColorMap.get(arc.person_id) || Color.fromCssColorString(FAMILY_ARC_COLORS.default)).withAlpha(0.6);
+            arcColor = (
+              familyColorMap.get(arc.person_id) ||
+              Color.fromCssColorString(FAMILY_ARC_COLORS.default)
+            ).withAlpha(0.6);
           } else {
             arcColor = Color.fromCssColorString('rgba(255, 150, 100, 0.4)');
           }
         }
 
         const positions = generateArcPositions(
-          arc.from.lat, arc.from.lng,
-          arc.to.lat, arc.to.lng,
+          arc.from.lat,
+          arc.from.lng,
+          arc.to.lat,
+          arc.to.lng,
         );
 
         return (

@@ -50,7 +50,10 @@ const NEO4J_PASSWORD = process.env.NEO4J_PASSWORD || 'localdev';
 
 function normalizeUrl(url) {
   if (!url) return '';
-  return url.replace(/^https?:\/\/(www\.)?/, '').replace(/\/+$/, '').toLowerCase();
+  return url
+    .replace(/^https?:\/\/(www\.)?/, '')
+    .replace(/\/+$/, '')
+    .toLowerCase();
 }
 
 function extractSources(markdownBody) {
@@ -75,18 +78,29 @@ function extractSources(markdownBody) {
 
     const collection = titleMatch[1].trim();
 
-    const arkMatch = entry.match(/(?:FamilySearch\s+Ark|ARK):\s*(https?:\/\/www\.familysearch\.org\/ark:\/[^\s\r\n]+)/i);
+    const arkMatch = entry.match(
+      /(?:FamilySearch\s+Ark|ARK):\s*(https?:\/\/www\.familysearch\.org\/ark:\/[^\s\r\n]+)/i,
+    );
     const ark = arkMatch ? arkMatch[1].trim() : null;
 
     let recordType = 'other';
     const lc = collection.toLowerCase();
     if (lc.includes('census')) recordType = 'census';
-    else if (lc.includes('birth') || lc.includes('christening')) recordType = 'birth';
-    else if (lc.includes('death') || lc.includes('stillbirth')) recordType = 'death';
+    else if (lc.includes('birth') || lc.includes('christening'))
+      recordType = 'birth';
+    else if (lc.includes('death') || lc.includes('stillbirth'))
+      recordType = 'death';
     else if (lc.includes('marriage')) recordType = 'marriage';
-    else if (lc.includes('military') || lc.includes('draft')) recordType = 'military';
-    else if (lc.includes('immigration') || lc.includes('passenger')) recordType = 'immigration';
-    else if (lc.includes('grave') || lc.includes('burial') || lc.includes('cemetery')) recordType = 'burial';
+    else if (lc.includes('military') || lc.includes('draft'))
+      recordType = 'military';
+    else if (lc.includes('immigration') || lc.includes('passenger'))
+      recordType = 'immigration';
+    else if (
+      lc.includes('grave') ||
+      lc.includes('burial') ||
+      lc.includes('cemetery')
+    )
+      recordType = 'burial';
 
     let year = null;
     const yearMatch = collection.match(/(\d{4})/);
@@ -98,7 +112,12 @@ function extractSources(markdownBody) {
       const trimmed = line.trim();
       if (!trimmed || trimmed.startsWith('#')) continue;
       if (/^\d+\.\s+\*\*/.test(trimmed)) continue;
-      if (/^-\s+(?:FamilySearch\s+Ark|ARK|Added|Tier|Auto-generated|Discovered|Source)/i.test(trimmed)) continue;
+      if (
+        /^-\s+(?:FamilySearch\s+Ark|ARK|Added|Tier|Auto-generated|Discovered|Source)/i.test(
+          trimmed,
+        )
+      )
+        continue;
       if (/^-\s+/.test(trimmed)) {
         const fact = trimmed.replace(/^-\s+/, '').trim();
         if (fact && fact.length < 120) keyFacts.push(fact);
@@ -106,7 +125,10 @@ function extractSources(markdownBody) {
     }
 
     sources.push({
-      collection, ark, recordType, year,
+      collection,
+      ark,
+      recordType,
+      year,
       keyFacts: keyFacts.slice(0, 4),
       imageUrl: null,
     });
@@ -151,7 +173,8 @@ function parseVerifiedNode(filePath) {
   node.deathYear = extractYear(node.deathDate);
 
   // Origin country
-  node.originCountry = fm.origin_country || inferCountry(node.birthPlace, { format: 'name' });
+  node.originCountry =
+    fm.origin_country || inferCountry(node.birthPlace, { format: 'name' });
 
   // Bio tier
   node.bioTier = fm.bio_tier || '';
@@ -165,31 +188,38 @@ function parseVerifiedNode(filePath) {
   // Relationships — already resolved to slugs in frontmatter
   node.fatherSlug = fm.parents?.father || null;
   node.motherSlug = fm.parents?.mother || null;
-  node.spouseSlugs = (fm.spouses || []).map(s => typeof s === 'string' ? s : s.slug).filter(Boolean);
+  node.spouseSlugs = (fm.spouses || [])
+    .map((s) => (typeof s === 'string' ? s : s.slug))
+    .filter(Boolean);
   // Full spouse objects (for marriage place/date extraction in Phase 5)
-  node.spouseEntries = (fm.spouses || []).map(s => {
-    if (typeof s === 'string') return { slug: s };
-    return {
-      slug: s.slug || null,
-      marriage_date: s.marriage_date || null,
-      marriage_place: s.marriage_place || null,
-    };
-  }).filter(e => e.slug);
+  node.spouseEntries = (fm.spouses || [])
+    .map((s) => {
+      if (typeof s === 'string') return { slug: s };
+      return {
+        slug: s.slug || null,
+        marriage_date: s.marriage_date || null,
+        marriage_place: s.marriage_place || null,
+      };
+    })
+    .filter((e) => e.slug);
   node.childSlugs = (fm.children || []).filter(Boolean);
   node.siblingSlugs = (fm.siblings || []).filter(Boolean);
 
   // Discovered-from context
-  node.discoveredFrom = (fm.discovered_from || []).map(d => ({
+  node.discoveredFrom = (fm.discovered_from || []).map((d) => ({
     personSlug: d.person || null,
     role: d.role || '',
   }));
 
   // --- Body parsing (life events, occupations, biography remain in markdown) ---
   node.lifeEvents = parseLifeEvents(body);
-  node.occupations = fm.occupations?.length > 0 ? fm.occupations : extractOccupations(body, node.lifeEvents);
+  node.occupations =
+    fm.occupations?.length > 0
+      ? fm.occupations
+      : extractOccupations(body, node.lifeEvents);
   node.biography = extractBiography(body);
   // Primary: read from frontmatter (snake_case → camelCase mapping)
-  node.sources = (fm.sources || []).map(s => ({
+  node.sources = (fm.sources || []).map((s) => ({
     collection: s.collection || '',
     provider: s.provider || 'other',
     url: s.url || null,
@@ -209,7 +239,11 @@ function parseVerifiedNode(filePath) {
   // Generate synthetic source cards from external_ids
   if (node.findagraveId) {
     const fagUrl = `https://www.findagrave.com/memorial/${node.findagraveId}`;
-    if (!node.sources.some(s => s.url && normalizeUrl(s.url) === normalizeUrl(fagUrl))) {
+    if (
+      !node.sources.some(
+        (s) => s.url && normalizeUrl(s.url) === normalizeUrl(fagUrl),
+      )
+    ) {
       node.sources.push({
         collection: 'Find A Grave Memorial',
         provider: 'findagrave',
@@ -225,7 +259,11 @@ function parseVerifiedNode(filePath) {
 
   if (node.wikitreeId) {
     const wtUrl = `https://www.wikitree.com/wiki/${node.wikitreeId}`;
-    if (!node.sources.some(s => s.url && normalizeUrl(s.url) === normalizeUrl(wtUrl))) {
+    if (
+      !node.sources.some(
+        (s) => s.url && normalizeUrl(s.url) === normalizeUrl(wtUrl),
+      )
+    ) {
       node.sources.push({
         collection: 'WikiTree Profile',
         provider: 'wikitree',
@@ -241,7 +279,11 @@ function parseVerifiedNode(filePath) {
 
   if (node.familysearchTreeId) {
     const fsUrl = `https://www.familysearch.org/tree/person/details/${node.familysearchTreeId}`;
-    if (!node.sources.some(s => s.url && normalizeUrl(s.url) === normalizeUrl(fsUrl))) {
+    if (
+      !node.sources.some(
+        (s) => s.url && normalizeUrl(s.url) === normalizeUrl(fsUrl),
+      )
+    ) {
       node.sources.push({
         collection: 'FamilySearch Family Tree',
         provider: 'familysearch',
@@ -274,13 +316,21 @@ function parseLifeEvents(content) {
   const lines = content.split('\n');
   let inSection = false;
   for (const line of lines) {
-    if (/^## Life Events/i.test(line)) { inSection = true; continue; }
+    if (/^## Life Events/i.test(line)) {
+      inSection = true;
+      continue;
+    }
     if (inSection && /^## [^#]/.test(line)) break;
     if (!inSection) continue;
-    const match = line.match(/^\|\s*([^|]*)\|\s*([^|]*)\|\s*([^|]*)\|\s*([^|]*)\|\s*([^|]*)\|/);
+    const match = line.match(
+      /^\|\s*([^|]*)\|\s*([^|]*)\|\s*([^|]*)\|\s*([^|]*)\|\s*([^|]*)\|/,
+    );
     if (!match) continue;
-    const year = match[1].trim(), age = match[2].trim(), event = match[3].trim(),
-          location = match[4].trim(), source = match[5].trim();
+    const year = match[1].trim(),
+      age = match[2].trim(),
+      event = match[3].trim(),
+      location = match[4].trim(),
+      source = match[5].trim();
     if (year === 'Year' || year.startsWith('---') || !event) continue;
     events.push({ year, age, event, location, source });
   }
@@ -291,9 +341,15 @@ function extractOccupations(content, lifeEvents) {
   const occupations = new Set();
   for (const evt of lifeEvents) {
     const lower = evt.event.toLowerCase();
-    if (lower.includes('occupation') || lower.includes('employed') ||
-        lower.includes('worked as') || lower.includes('profession')) {
-      const occMatch = evt.event.match(/(?:occupation|employed|worked as|profession)[:\s]+(.+)/i);
+    if (
+      lower.includes('occupation') ||
+      lower.includes('employed') ||
+      lower.includes('worked as') ||
+      lower.includes('profession')
+    ) {
+      const occMatch = evt.event.match(
+        /(?:occupation|employed|worked as|profession)[:\s]+(.+)/i,
+      );
       if (occMatch) occupations.add(occMatch[1].trim());
       else occupations.add(evt.event);
     }
@@ -303,7 +359,10 @@ function extractOccupations(content, lifeEvents) {
   let inBio = false;
   const bioSection = [];
   for (const line of bioLines) {
-    if (/^## Biography|^## Summary/i.test(line)) { inBio = true; continue; }
+    if (/^## Biography|^## Summary/i.test(line)) {
+      inBio = true;
+      continue;
+    }
     if (inBio && /^## [^#]/.test(line)) break;
     if (inBio) bioSection.push(line);
   }
@@ -319,7 +378,8 @@ function extractOccupations(content, lifeEvents) {
         if (occ.length > 2 && occ.length < 50) occupations.add(occ);
       }
     }
-    const officePat = /(?:elected|appointed|served)\s+(?:as\s+)?(?:a\s+)?(.+?)(?:\.|,|\s+(?:in|of|from|for)\s+\d)/gi;
+    const officePat =
+      /(?:elected|appointed|served)\s+(?:as\s+)?(?:a\s+)?(.+?)(?:\.|,|\s+(?:in|of|from|for)\s+\d)/gi;
     let m;
     while ((m = officePat.exec(bio)) !== null) {
       const role = m[1].trim();
@@ -334,7 +394,10 @@ function extractBiography(content) {
   let inBio = false;
   const result = [];
   for (const line of lines) {
-    if (/^## Biography|^## Summary/i.test(line)) { inBio = true; continue; }
+    if (/^## Biography|^## Summary/i.test(line)) {
+      inBio = true;
+      continue;
+    }
     if (inBio && /^## [^#]/.test(line)) break;
     if (inBio) result.push(line);
   }
@@ -394,17 +457,23 @@ async function clearDatabase(session) {
 }
 
 async function createTreeNode(session) {
-  await runQuery(session, `
+  await runQuery(
+    session,
+    `
     MERGE (t:Tree {id: $treeId})
     SET t.name = $treeName, t.updatedAt = datetime()
-  `, { treeId: TREE_ID, treeName: TREE_NAME });
+  `,
+    { treeId: TREE_ID, treeName: TREE_NAME },
+  );
 }
 
 async function upsertPerson(session, node) {
   const birthYear = parseLooseInteger(node.birthYear);
   const deathYear = parseLooseInteger(node.deathYear);
 
-  await runQuery(session, `
+  await runQuery(
+    session,
+    `
     MERGE (p:Person {slug: $slug})
     SET p.id = $slug,
         p.fullName = $fullName,
@@ -437,54 +506,62 @@ async function upsertPerson(session, node) {
     WITH p
     MATCH (t:Tree {id: $treeId})
     MERGE (t)-[:CONTAINS]->(p)
-  `, {
-    slug: node.slug,
-    fullName: node.fullName || '',
-    givenName: extractGivenName(node.fullName),
-    surname: extractSurname(node.fullName),
-    sex: normalizeSex(node.sex),
-    birthDate: node.birthDate || '',
-    birthYear: birthYear != null ? neo4j.int(birthYear) : null,
-    birthPlace: node.birthPlace || '',
-    deathDate: node.deathDate || '',
-    deathYear: deathYear != null ? neo4j.int(deathYear) : null,
-    deathPlace: node.deathPlace || '',
-    maidenName: node.maidenName || '',
-    title: node.title || '',
-    religion: node.religion || '',
-    burial: node.burial || '',
-    originCountry: node.originCountry || '',
-    occupations: node.occupations || [],
-    biography: node.biography || '',
-    bioTier: node.bioTier || '',
-    status: node.status || '',
-    isCrossRef: node.isCrossRef || false,
-    gedcomId: node.gedcomId || '',
-    wikitreeId: node.wikitreeId || '',
-    findagraveId: node.findagraveId || '',
-    familysearchTreeId: node.familysearchTreeId || '',
-    sources: JSON.stringify(node.sources || []),
-    markdownContent: node.markdownContent || '',
-    treeId: TREE_ID,
-  });
+  `,
+    {
+      slug: node.slug,
+      fullName: node.fullName || '',
+      givenName: extractGivenName(node.fullName),
+      surname: extractSurname(node.fullName),
+      sex: normalizeSex(node.sex),
+      birthDate: node.birthDate || '',
+      birthYear: birthYear != null ? neo4j.int(birthYear) : null,
+      birthPlace: node.birthPlace || '',
+      deathDate: node.deathDate || '',
+      deathYear: deathYear != null ? neo4j.int(deathYear) : null,
+      deathPlace: node.deathPlace || '',
+      maidenName: node.maidenName || '',
+      title: node.title || '',
+      religion: node.religion || '',
+      burial: node.burial || '',
+      originCountry: node.originCountry || '',
+      occupations: node.occupations || [],
+      biography: node.biography || '',
+      bioTier: node.bioTier || '',
+      status: node.status || '',
+      isCrossRef: node.isCrossRef || false,
+      gedcomId: node.gedcomId || '',
+      wikitreeId: node.wikitreeId || '',
+      findagraveId: node.findagraveId || '',
+      familysearchTreeId: node.familysearchTreeId || '',
+      sources: JSON.stringify(node.sources || []),
+      markdownContent: node.markdownContent || '',
+      treeId: TREE_ID,
+    },
+  );
 
   // Occupation nodes
-  for (const occ of (node.occupations || [])) {
-    await runQuery(session, `
+  for (const occ of node.occupations || []) {
+    await runQuery(
+      session,
+      `
       MERGE (o:Occupation {title: $title})
       WITH o
       MATCH (p:Person {slug: $slug})
       MERGE (p)-[:HAD_OCCUPATION]->(o)
-    `, { title: occ, slug: node.slug });
+    `,
+      { title: occ, slug: node.slug },
+    );
   }
 
   // Life event nodes
-  for (const evt of (node.lifeEvents || [])) {
+  for (const evt of node.lifeEvents || []) {
     const evtYear = extractYear(evt.year);
     const evtCountry = inferCountry(evt.location, { format: 'name' });
 
     if (evt.location && evt.location.length > 1) {
-      await runQuery(session, `
+      await runQuery(
+        session,
+        `
         MATCH (p:Person {slug: $slug})
         MERGE (pl:Place {name: $location})
         ON CREATE SET pl.country = $country
@@ -493,70 +570,119 @@ async function upsertPerson(session, node) {
         })
         CREATE (p)-[:EXPERIENCED]->(e)
         CREATE (e)-[:OCCURRED_AT]->(pl)
-      `, {
-        slug: node.slug, location: evt.location, country: evtCountry,
-        event: evt.event, year: evt.year, yearInt: evtYear ? neo4j.int(evtYear) : null,
-        age: evt.age, source: evt.source,
-      });
+      `,
+        {
+          slug: node.slug,
+          location: evt.location,
+          country: evtCountry,
+          event: evt.event,
+          year: evt.year,
+          yearInt: evtYear ? neo4j.int(evtYear) : null,
+          age: evt.age,
+          source: evt.source,
+        },
+      );
 
       const lower = evt.event.toLowerCase();
-      if (lower.includes('census') || lower.includes('lived') || lower.includes('moved') ||
-          lower.includes('resided') || lower.includes('resident') || lower.includes('enumerat')) {
-        await runQuery(session, `
+      if (
+        lower.includes('census') ||
+        lower.includes('lived') ||
+        lower.includes('moved') ||
+        lower.includes('resided') ||
+        lower.includes('resident') ||
+        lower.includes('enumerat')
+      ) {
+        await runQuery(
+          session,
+          `
           MATCH (p:Person {slug: $slug})
           MATCH (pl:Place {name: $location})
           MERGE (p)-[r:LIVED_IN {year: $year}]->(pl)
           SET r.yearInt = $yearInt
-        `, { slug: node.slug, location: evt.location, year: evt.year, yearInt: evtYear ? neo4j.int(evtYear) : null });
+        `,
+          {
+            slug: node.slug,
+            location: evt.location,
+            year: evt.year,
+            yearInt: evtYear ? neo4j.int(evtYear) : null,
+          },
+        );
       }
     } else {
-      await runQuery(session, `
+      await runQuery(
+        session,
+        `
         MATCH (p:Person {slug: $slug})
         CREATE (e:LifeEvent {
           event: $event, year: $year, yearInt: $yearInt, age: $age, source: $source
         })
         CREATE (p)-[:EXPERIENCED]->(e)
-      `, {
-        slug: node.slug, event: evt.event, year: evt.year,
-        yearInt: evtYear ? neo4j.int(evtYear) : null, age: evt.age, source: evt.source,
-      });
+      `,
+        {
+          slug: node.slug,
+          event: evt.event,
+          year: evt.year,
+          yearInt: evtYear ? neo4j.int(evtYear) : null,
+          age: evt.age,
+          source: evt.source,
+        },
+      );
     }
   }
 
   // BORN_IN / DIED_IN places
   if (node.birthPlace) {
-    await runQuery(session, `
+    await runQuery(
+      session,
+      `
       MERGE (pl:Place {name: $place})
       ON CREATE SET pl.country = $country
       WITH pl
       MATCH (p:Person {slug: $slug})
       MERGE (p)-[:BORN_IN]->(pl)
-    `, { place: node.birthPlace, country: node.originCountry || '', slug: node.slug });
+    `,
+      {
+        place: node.birthPlace,
+        country: node.originCountry || '',
+        slug: node.slug,
+      },
+    );
   }
   if (node.deathPlace) {
     const deathCountry = inferCountry(node.deathPlace, { format: 'name' });
-    await runQuery(session, `
+    await runQuery(
+      session,
+      `
       MERGE (pl:Place {name: $place})
       ON CREATE SET pl.country = $country
       WITH pl
       MATCH (p:Person {slug: $slug})
       MERGE (p)-[:DIED_IN]->(pl)
-    `, { place: node.deathPlace, country: deathCountry, slug: node.slug });
+    `,
+      { place: node.deathPlace, country: deathCountry, slug: node.slug },
+    );
   }
   if (node.burial) {
     const burialCountry = inferCountry(node.burial, { format: 'name' });
-    await runQuery(session, `
+    await runQuery(
+      session,
+      `
       MERGE (pl:Place {name: $place})
       ON CREATE SET pl.country = $country
       WITH pl
       MATCH (p:Person {slug: $slug})
       MERGE (p)-[:BURIED_IN]->(pl)
-    `, { place: node.burial, country: burialCountry, slug: node.slug });
+    `,
+      { place: node.burial, country: burialCountry, slug: node.slug },
+    );
   }
 }
 
 async function createRelationships(session, nodes, nodeMap) {
-  let parentOf = 0, spouseOf = 0, discoveredRels = 0, siblingOf = 0;
+  let parentOf = 0,
+    spouseOf = 0,
+    discoveredRels = 0,
+    siblingOf = 0;
 
   for (const node of nodes) {
     if (node.isCrossRef) continue;
@@ -564,47 +690,63 @@ async function createRelationships(session, nodes, nodeMap) {
     // Parents (slugs already resolved in frontmatter)
     for (const parentSlug of [node.fatherSlug, node.motherSlug]) {
       if (!parentSlug || !nodeMap.has(parentSlug)) continue;
-      await runQuery(session, `
+      await runQuery(
+        session,
+        `
         MATCH (parent:Person {slug: $parentSlug})
         MATCH (child:Person {slug: $childSlug})
         MERGE (parent)-[:PARENT_OF]->(child)
         MERGE (child)-[:CHILD_OF]->(parent)
-      `, { parentSlug, childSlug: node.slug });
+      `,
+        { parentSlug, childSlug: node.slug },
+      );
       parentOf++;
     }
 
     // Spouses
     for (const spouseSlug of node.spouseSlugs) {
       if (!nodeMap.has(spouseSlug)) continue;
-      await runQuery(session, `
+      await runQuery(
+        session,
+        `
         MATCH (a:Person {slug: $aSlug})
         MATCH (b:Person {slug: $bSlug})
         MERGE (a)-[:SPOUSE_OF]->(b)
-      `, { aSlug: node.slug, bSlug: spouseSlug });
+      `,
+        { aSlug: node.slug, bSlug: spouseSlug },
+      );
       spouseOf++;
     }
 
     // Children
     for (const childSlug of node.childSlugs) {
       if (!nodeMap.has(childSlug)) continue;
-      await runQuery(session, `
+      await runQuery(
+        session,
+        `
         MATCH (parent:Person {slug: $parentSlug})
         MATCH (child:Person {slug: $childSlug})
         MERGE (parent)-[:PARENT_OF]->(child)
         MERGE (child)-[:CHILD_OF]->(parent)
-      `, { parentSlug: node.slug, childSlug });
+      `,
+        { parentSlug: node.slug, childSlug },
+      );
       parentOf++;
     }
 
     // Siblings
     for (const sibSlug of node.siblingSlugs) {
       if (!nodeMap.has(sibSlug)) continue;
-      await runQuery(session, `
+      await runQuery(
+        session,
+        `
         MATCH (a:Person {slug: $aSlug})
         MATCH (b:Person {slug: $bSlug})
         MERGE (a)-[:SIBLING_OF]->(b)
         MERGE (b)-[:SIBLING_OF]->(a)
-      `, { aSlug: node.slug, bSlug: sibSlug });
+      `,
+        { aSlug: node.slug, bSlug: sibSlug },
+      );
       siblingOf++;
     }
 
@@ -614,18 +756,21 @@ async function createRelationships(session, nodes, nodeMap) {
     // to discovering this node. Do NOT create PARENT_OF/CHILD_OF edges from it.
     // (Previous versions incorrectly created relationship edges here, causing
     // grandparents to appear as parents, etc.)
-    for (const disc of (node.discoveredFrom || [])) {
+    for (const disc of node.discoveredFrom || []) {
       const otherSlug = disc.personSlug;
       if (!otherSlug || !nodeMap.has(otherSlug)) continue;
 
       // Only create a lightweight DISCOVERED_FROM edge for provenance tracking
-      await runQuery(session, `
+      await runQuery(
+        session,
+        `
         MATCH (a:Person {slug: $aSlug})
         MATCH (b:Person {slug: $bSlug})
         MERGE (a)-[:DISCOVERED_FROM {role: $role}]->(b)
-      `, { aSlug: node.slug, bSlug: otherSlug, role: disc.role || '' });
+      `,
+        { aSlug: node.slug, bSlug: otherSlug, role: disc.role || '' },
+      );
       discoveredRels++;
-
     }
   }
 
@@ -636,12 +781,14 @@ async function createRelationships(session, nodes, nodeMap) {
 
 async function loadRecordNodes(session) {
   if (!existsSync(RECORDS_DIR)) {
-    console.log('  data/records/ directory not found. Skipping Record node import.');
+    console.log(
+      '  data/records/ directory not found. Skipping Record node import.',
+    );
     console.log(`    Expected: ${RECORDS_DIR}`);
     return { recordsCreated: 0, evidencedByCreated: 0 };
   }
 
-  const files = readdirSync(RECORDS_DIR).filter(f => f.endsWith('.md'));
+  const files = readdirSync(RECORDS_DIR).filter((f) => f.endsWith('.md'));
   if (files.length === 0) {
     console.log('  No record files found in data/records/. Skipping.');
     return { recordsCreated: 0, evidencedByCreated: 0 };
@@ -681,7 +828,7 @@ async function loadRecordNodes(session) {
       });
 
       // Participants → EVIDENCED_BY edges
-      for (const participant of (fm.participants || [])) {
+      for (const participant of fm.participants || []) {
         if (!participant.matched_slug) continue;
         const participantAge = parseLooseInteger(participant.age);
         evidencedByRows.push({
@@ -700,7 +847,7 @@ async function loadRecordNodes(session) {
 
   if (parseErrors.length > 0) {
     console.log(`  Parse errors: ${parseErrors.length}`);
-    parseErrors.forEach(e => console.log(`    ${e}`));
+    parseErrors.forEach((e) => console.log(`    ${e}`));
   }
 
   if (recordRows.length === 0) {
@@ -714,7 +861,9 @@ async function loadRecordNodes(session) {
 
   for (let i = 0; i < recordRows.length; i += BATCH_SIZE) {
     const batch = recordRows.slice(i, i + BATCH_SIZE);
-    await runQuery(session, `
+    await runQuery(
+      session,
+      `
       UNWIND $batch AS row
       MERGE (r:Record {id: row.id})
       SET r.ark          = row.ark,
@@ -728,9 +877,13 @@ async function loadRecordNodes(session) {
           r.place        = row.place,
           r.ingested     = row.ingested,
           r.participants = row.participants
-    `, { batch });
+    `,
+      { batch },
+    );
     recordsCreated += batch.length;
-    process.stdout.write(`  Records upserted: ${recordsCreated}/${recordRows.length}\r`);
+    process.stdout.write(
+      `  Records upserted: ${recordsCreated}/${recordRows.length}\r`,
+    );
   }
   console.log(`  Record nodes created/updated: ${recordsCreated}          `);
 
@@ -739,7 +892,9 @@ async function loadRecordNodes(session) {
 
   for (let i = 0; i < evidencedByRows.length; i += BATCH_SIZE) {
     const batch = evidencedByRows.slice(i, i + BATCH_SIZE);
-    await runQuery(session, `
+    await runQuery(
+      session,
+      `
       UNWIND $batch AS row
       MATCH (p:Person {slug: row.slug})
       MATCH (r:Record {id: row.recordId})
@@ -747,11 +902,17 @@ async function loadRecordNodes(session) {
       SET e.age        = row.age,
           e.occupation = row.occupation,
           e.birthplace = row.birthplace
-    `, { batch });
+    `,
+      { batch },
+    );
     evidencedByCreated += batch.length;
-    process.stdout.write(`  EVIDENCED_BY edges: ${evidencedByCreated}/${evidencedByRows.length}\r`);
+    process.stdout.write(
+      `  EVIDENCED_BY edges: ${evidencedByCreated}/${evidencedByRows.length}\r`,
+    );
   }
-  console.log(`  EVIDENCED_BY relationships created: ${evidencedByCreated}          `);
+  console.log(
+    `  EVIDENCED_BY relationships created: ${evidencedByCreated}          `,
+  );
 
   return { recordsCreated, evidencedByCreated };
 }
@@ -779,10 +940,14 @@ async function main() {
       const stderr = err.stderr?.toString() || '';
       // Extract critical count from output
       const criticalMatch = output.match(/CRITICAL:\s+(\d+)/);
-      const criticalCount = criticalMatch ? parseInt(criticalMatch[1]) : 'unknown';
+      const criticalCount = criticalMatch
+        ? parseInt(criticalMatch[1])
+        : 'unknown';
       console.error('\n!! VALIDATION FAILED !!');
       console.error(`Found ${criticalCount} critical issues.`);
-      console.error('Fix critical issues before rebuilding, or use --skip-validation to bypass.');
+      console.error(
+        'Fix critical issues before rebuilding, or use --skip-validation to bypass.',
+      );
       if (stderr) console.error(stderr);
       process.exit(1);
     }
@@ -792,7 +957,9 @@ async function main() {
 
   // Step 1: Parse all YAML frontmatter files
   console.log(`Parsing verified nodes from: ${VERIFIED_NODES_DIR}\n`);
-  const files = readdirSync(VERIFIED_NODES_DIR).filter(f => f.endsWith('.md') && !f.startsWith('_'));
+  const files = readdirSync(VERIFIED_NODES_DIR).filter(
+    (f) => f.endsWith('.md') && !f.startsWith('_'),
+  );
   console.log(`Found ${files.length} markdown files.`);
 
   const nodes = [];
@@ -814,27 +981,33 @@ async function main() {
   }
 
   const allNodes = [...nodes, ...crossRefs];
-  const nodeMap = new Map(allNodes.map(n => [n.slug, n]));
+  const nodeMap = new Map(allNodes.map((n) => [n.slug, n]));
 
   // Count relationships
-  let parentLinks = 0, spouseLinks = 0, childLinks = 0, discoveredLinks = 0;
+  let parentLinks = 0,
+    spouseLinks = 0,
+    childLinks = 0,
+    discoveredLinks = 0;
   for (const node of allNodes) {
     if (node.fatherSlug && nodeMap.has(node.fatherSlug)) parentLinks++;
     if (node.motherSlug && nodeMap.has(node.motherSlug)) parentLinks++;
     for (const s of node.spouseSlugs) if (nodeMap.has(s)) spouseLinks++;
     for (const c of node.childSlugs) if (nodeMap.has(c)) childLinks++;
-    for (const d of (node.discoveredFrom || [])) if (d.personSlug && nodeMap.has(d.personSlug)) discoveredLinks++;
+    for (const d of node.discoveredFrom || [])
+      if (d.personSlug && nodeMap.has(d.personSlug)) discoveredLinks++;
   }
 
   // Stats
-  const withBirth = nodes.filter(n => n.birthYear).length;
-  const withOcc = nodes.filter(n => n.occupations.length > 0).length;
-  const withEvents = nodes.filter(n => n.lifeEvents.length > 0).length;
-  const withBio = nodes.filter(n => n.biography).length;
-  const withCountry = nodes.filter(n => n.originCountry).length;
+  const withBirth = nodes.filter((n) => n.birthYear).length;
+  const withOcc = nodes.filter((n) => n.occupations.length > 0).length;
+  const withEvents = nodes.filter((n) => n.lifeEvents.length > 0).length;
+  const withBio = nodes.filter((n) => n.biography).length;
+  const withCountry = nodes.filter((n) => n.originCountry).length;
   const totalEvents = nodes.reduce((sum, n) => sum + n.lifeEvents.length, 0);
 
-  console.log(`\nParsed: ${nodes.length} nodes, ${crossRefs.length} cross-references`);
+  console.log(
+    `\nParsed: ${nodes.length} nodes, ${crossRefs.length} cross-references`,
+  );
   console.log(`\nRelationships (slug → exists in tree):`);
   console.log(`  Parent links: ${parentLinks}`);
   console.log(`  Spouse links: ${spouseLinks}`);
@@ -845,11 +1018,13 @@ async function main() {
   console.log(`  With origin country: ${withCountry}`);
   console.log(`  With biography: ${withBio}`);
   console.log(`  With occupations: ${withOcc}`);
-  console.log(`  With life events: ${withEvents} (${totalEvents} total events)`);
+  console.log(
+    `  With life events: ${withEvents} (${totalEvents} total events)`,
+  );
 
   if (errors.length > 0) {
     console.log(`\nParse errors: ${errors.length}`);
-    errors.forEach(e => console.log(`  ${e.file}: ${e.error}`));
+    errors.forEach((e) => console.log(`  ${e.file}: ${e.error}`));
   }
 
   if (DRY_RUN) {
@@ -859,7 +1034,10 @@ async function main() {
 
   // Step 2: Write to Neo4j
   console.log('\nConnecting to Neo4j...');
-  const driver = neo4j.driver(NEO4J_URI, neo4j.auth.basic(NEO4J_USER, NEO4J_PASSWORD));
+  const driver = neo4j.driver(
+    NEO4J_URI,
+    neo4j.auth.basic(NEO4J_USER, NEO4J_PASSWORD),
+  );
   const session = driver.session();
 
   try {
@@ -879,7 +1057,8 @@ async function main() {
     for (const node of nodes) {
       await upsertPerson(session, node);
       created++;
-      if (created % 50 === 0) process.stdout.write(`  ${created}/${nodes.length}\r`);
+      if (created % 50 === 0)
+        process.stdout.write(`  ${created}/${nodes.length}\r`);
     }
     console.log(`  Created/updated ${created} person nodes.`);
 
@@ -898,15 +1077,22 @@ async function main() {
     console.log(`  SIBLING_OF edges (explicit): ${relStats.siblingOf}`);
 
     // Infer SIBLING_OF from shared parents
-    const inferredSibResult = await runQuery(session, `
+    const inferredSibResult = await runQuery(
+      session,
+      `
       MATCH (a:Person)-[:CHILD_OF]->(parent:Person)<-[:CHILD_OF]-(b:Person)
       WHERE a.id < b.id AND NOT (a)-[:SIBLING_OF]-(b)
       MERGE (a)-[:SIBLING_OF]->(b)
       MERGE (b)-[:SIBLING_OF]->(a)
       RETURN count(*) as inferred
-    `, {});
-    const inferredSiblings = inferredSibResult.records[0]?.get('inferred')?.toNumber?.() ?? 0;
-    console.log(`  SIBLING_OF edges (inferred from shared parents): ${inferredSiblings}`);
+    `,
+      {},
+    );
+    const inferredSiblings =
+      inferredSibResult.records[0]?.get('inferred')?.toNumber?.() ?? 0;
+    console.log(
+      `  SIBLING_OF edges (inferred from shared parents): ${inferredSiblings}`,
+    );
 
     // ================================================================
     // Phase 4: Load places.json and update Place node coordinates
@@ -932,8 +1118,11 @@ async function main() {
       }
 
       // Get all Place nodes from Neo4j
-      const allPlacesResult = await runQuery(session, 'MATCH (pl:Place) RETURN pl.name as name');
-      const placeNames = allPlacesResult.records.map(r => r.get('name'));
+      const allPlacesResult = await runQuery(
+        session,
+        'MATCH (pl:Place) RETURN pl.name as name',
+      );
+      const placeNames = allPlacesResult.records.map((r) => r.get('name'));
 
       let geocoded = 0;
       let ungeocoded = 0;
@@ -949,17 +1138,21 @@ async function main() {
           }
         }
         if (entry && entry.lat != null && entry.lng != null) {
-          await runQuery(session, `
+          await runQuery(
+            session,
+            `
             MATCH (pl:Place {name: $placeName})
             SET pl.latitude = $lat, pl.longitude = $lng,
                 pl.isApproximate = $isApproximate, pl.precision = $precision
-          `, {
-            placeName,
-            lat: entry.lat,
-            lng: entry.lng,
-            isApproximate: entry.isApproximate ?? false,
-            precision: entry.precision || 'exact',
-          });
+          `,
+            {
+              placeName,
+              lat: entry.lat,
+              lng: entry.lng,
+              isApproximate: entry.isApproximate ?? false,
+              precision: entry.precision || 'exact',
+            },
+          );
           geocoded++;
         } else {
           ungeocoded++;
@@ -969,7 +1162,9 @@ async function main() {
       console.log(`  Place nodes geocoded: ${geocoded}`);
       console.log(`  Place nodes without coordinates: ${ungeocoded}`);
     } else {
-      console.log('  WARNING: places.json or place-aliases.json not found. Skipping geocoding.');
+      console.log(
+        '  WARNING: places.json or place-aliases.json not found. Skipping geocoding.',
+      );
       console.log(`    Expected: ${PLACES_PATH}`);
       console.log(`    Expected: ${ALIASES_PATH}`);
     }
@@ -977,7 +1172,9 @@ async function main() {
     // ================================================================
     // Phase 5: Create marriage Place nodes and MARRIED_AT relationships
     // ================================================================
-    console.log('\n--- Phase 5: Marriage places + MARRIED_AT relationships ---');
+    console.log(
+      '\n--- Phase 5: Marriage places + MARRIED_AT relationships ---',
+    );
     let marriagePlaces = 0;
     let marriageRels = 0;
 
@@ -995,7 +1192,7 @@ async function main() {
     for (const node of allNodes) {
       if (node.isCrossRef) continue;
 
-      for (const spouseEntry of (node.spouseEntries || [])) {
+      for (const spouseEntry of node.spouseEntries || []) {
         if (!spouseEntry.marriage_place) continue;
 
         const marriagePlace = spouseEntry.marriage_place;
@@ -1005,7 +1202,9 @@ async function main() {
 
         // Look up coordinates from places.json via alias map
         const canonicalId = aliasMapForMarriage[marriagePlace];
-        const placeEntry = canonicalId ? placesDataForMarriage[canonicalId] : null;
+        const placeEntry = canonicalId
+          ? placesDataForMarriage[canonicalId]
+          : null;
         const lat = placeEntry?.lat ?? null;
         const lng = placeEntry?.lng ?? null;
         const isApproximate = placeEntry?.isApproximate ?? false;
@@ -1013,49 +1212,61 @@ async function main() {
 
         // MERGE the Place node with coordinates + approximate metadata
         if (lat != null && lng != null) {
-          await runQuery(session, `
+          await runQuery(
+            session,
+            `
             MERGE (pl:Place {name: $marriagePlace})
             ON CREATE SET pl.country = $country, pl.latitude = $lat, pl.longitude = $lng,
                           pl.isApproximate = $isApproximate, pl.precision = $precision
             ON MATCH SET pl.latitude = coalesce(pl.latitude, $lat), pl.longitude = coalesce(pl.longitude, $lng),
                          pl.isApproximate = $isApproximate, pl.precision = $precision
-          `, {
-            marriagePlace,
-            country: placeCountry,
-            lat,
-            lng,
-            isApproximate,
-            precision,
-          });
+          `,
+            {
+              marriagePlace,
+              country: placeCountry,
+              lat,
+              lng,
+              isApproximate,
+              precision,
+            },
+          );
         } else {
-          await runQuery(session, `
+          await runQuery(
+            session,
+            `
             MERGE (pl:Place {name: $marriagePlace})
             ON CREATE SET pl.country = $country, pl.isApproximate = $isApproximate, pl.precision = $precision
-          `, {
-            marriagePlace,
-            country: placeCountry,
-            isApproximate,
-            precision,
-          });
+          `,
+            {
+              marriagePlace,
+              country: placeCountry,
+              isApproximate,
+              precision,
+            },
+          );
         }
         marriagePlaces++;
 
         // Create MARRIED_AT relationship from this person to the Place
         // Use CREATE (not MERGE) + spouseSlug to preserve same-place remarriages
         const spouseSlug = spouseEntry.slug || '';
-        await runQuery(session, `
+        await runQuery(
+          session,
+          `
           MATCH (p:Person {id: $personId})
           MATCH (pl:Place {name: $marriagePlace})
           CREATE (p)-[r:MARRIED_AT {spouseSlug: $spouseSlug}]->(pl)
           SET r.marriageDate = $marriageDate, r.marriageYear = $marriageYear, r.source = $source
-        `, {
-          personId: node.slug,
-          marriagePlace,
-          marriageDate,
-          marriageYear: marriageYear ? neo4j.int(marriageYear) : null,
-          source: '',
-          spouseSlug,
-        });
+        `,
+          {
+            personId: node.slug,
+            marriagePlace,
+            marriageDate,
+            marriageYear: marriageYear ? neo4j.int(marriageYear) : null,
+            source: '',
+            spouseSlug,
+          },
+        );
         marriageRels++;
       }
     }
@@ -1068,7 +1279,9 @@ async function main() {
     // ================================================================
     console.log('\n--- Phase 6: Contextual media import ---');
     if (existsSync(CONTEXTUAL_MEDIA_DIR)) {
-      const cmFiles = readdirSync(CONTEXTUAL_MEDIA_DIR).filter(f => f.endsWith('.json'));
+      const cmFiles = readdirSync(CONTEXTUAL_MEDIA_DIR).filter((f) =>
+        f.endsWith('.json'),
+      );
 
       if (cmFiles.length === 0) {
         console.log('  No contextual media JSON files found. Skipping.');
@@ -1102,15 +1315,21 @@ async function main() {
           importedPersonIds.push(personId);
 
           // Step 1: Delete existing ContextualMedia for this person
-          await runQuery(session, `
+          await runQuery(
+            session,
+            `
             MATCH (p:Person {id: $id})-[:HAS_CONTEXT]->(cm:ContextualMedia)
             DETACH DELETE cm
-          `, { id: personId });
+          `,
+            { id: personId },
+          );
 
           // Step 2: Create new ContextualMedia nodes from JSON items
-          for (const item of (cmData.items || [])) {
+          for (const item of cmData.items || []) {
             // Resolve canonicalPlaceId to enrichment data from places.json
-            const placeEntry = item.canonicalPlaceId ? cmPlacesData[item.canonicalPlaceId] : null;
+            const placeEntry = item.canonicalPlaceId
+              ? cmPlacesData[item.canonicalPlaceId]
+              : null;
 
             // Build the full set of properties
             const props = {
@@ -1149,50 +1368,68 @@ async function main() {
             if (item.lng != null) props.lng = item.lng;
             else if (placeEntry?.lng != null) props.lng = placeEntry.lng;
 
-            const googleMaps = item.googleMaps || placeEntry?.googleMaps || null;
+            const googleMaps =
+              item.googleMaps || placeEntry?.googleMaps || null;
             if (googleMaps) {
               props.googleMapsUrl = googleMaps.url || '';
               props.googleMapsEmbedUrl = googleMaps.embedUrl || '';
             }
 
             // Step 3: Create ContextualMedia node and HAS_CONTEXT relationship
-            await runQuery(session, `
+            await runQuery(
+              session,
+              `
               MATCH (p:Person {id: $personId})
               CREATE (cm:ContextualMedia)
               SET cm += $props
               CREATE (p)-[:HAS_CONTEXT]->(cm)
-            `, {
-              personId,
-              props,
-            });
+            `,
+              {
+                personId,
+                props,
+              },
+            );
 
             cmNodesCreated++;
           }
 
           cmPersonsProcessed++;
           if (cmPersonsProcessed % 100 === 0) {
-            process.stdout.write(`  Processed ${cmPersonsProcessed}/${cmFiles.length} people\r`);
+            process.stdout.write(
+              `  Processed ${cmPersonsProcessed}/${cmFiles.length} people\r`,
+            );
           }
         }
 
         // Manifest-based cleanup: remove ContextualMedia for people not in the import set
         if (importedPersonIds.length > 0) {
-          const cleanupResult = await runQuery(session, `
+          const cleanupResult = await runQuery(
+            session,
+            `
             MATCH (p:Person)-[:HAS_CONTEXT]->(cm:ContextualMedia)
             WHERE NOT p.id IN $importedPersonIds
             DETACH DELETE cm
             RETURN count(cm) as removed
-          `, { importedPersonIds });
-          const removed = cleanupResult.records[0]?.get('removed')?.toNumber?.() ?? 0;
+          `,
+            { importedPersonIds },
+          );
+          const removed =
+            cleanupResult.records[0]?.get('removed')?.toNumber?.() ?? 0;
           if (removed > 0) {
-            console.log(`  Cleaned up ${removed} orphaned ContextualMedia nodes`);
+            console.log(
+              `  Cleaned up ${removed} orphaned ContextualMedia nodes`,
+            );
           }
         }
 
-        console.log(`  Contextual media: ${cmPersonsProcessed} people, ${cmNodesCreated} items created`);
+        console.log(
+          `  Contextual media: ${cmPersonsProcessed} people, ${cmNodesCreated} items created`,
+        );
       }
     } else {
-      console.log('  WARNING: data/contextual_media/ directory not found. Skipping.');
+      console.log(
+        '  WARNING: data/contextual_media/ directory not found. Skipping.',
+      );
       console.log(`    Expected: ${CONTEXTUAL_MEDIA_DIR}`);
     }
 
@@ -1205,14 +1442,21 @@ async function main() {
       try {
         auditData = JSON.parse(readFileSync(ENRICHMENT_AUDIT_PATH, 'utf8'));
       } catch (err) {
-        console.log(`  WARNING: Could not parse enrichment_audit.json: ${err.message}`);
+        console.log(
+          `  WARNING: Could not parse enrichment_audit.json: ${err.message}`,
+        );
         auditData = null;
       }
 
       if (auditData && Array.isArray(auditData.people)) {
         const auditPeople = auditData.people;
         let scored = 0;
-        const tierCounts = { deep_verified: 0, verified: 0, partial: 0, stub: 0 };
+        const tierCounts = {
+          deep_verified: 0,
+          verified: 0,
+          partial: 0,
+          stub: 0,
+        };
 
         for (const entry of auditPeople) {
           if (!entry.slug) continue;
@@ -1231,19 +1475,23 @@ async function main() {
 
           tierCounts[completeness_tier]++;
 
-          await runQuery(session, `
+          await runQuery(
+            session,
+            `
             MATCH (p:Person {slug: $slug})
             SET p.completenessScore = $completenessScore,
                 p.researchScore = $researchScore,
                 p.validationStatus = $validationStatus,
                 p.completeness_tier = $completeness_tier
-          `, {
-            slug: entry.slug,
-            completenessScore: neo4j.int(completenessScore),
-            researchScore: neo4j.int(researchScore),
-            validationStatus,
-            completeness_tier,
-          });
+          `,
+            {
+              slug: entry.slug,
+              completenessScore: neo4j.int(completenessScore),
+              researchScore: neo4j.int(researchScore),
+              validationStatus,
+              completeness_tier,
+            },
+          );
 
           scored++;
         }
@@ -1255,11 +1503,17 @@ async function main() {
         console.log(`    partial (>=40):       ${tierCounts.partial}`);
         console.log(`    stub (<40):           ${tierCounts.stub}`);
       } else {
-        console.log('  WARNING: enrichment_audit.json has unexpected format. Skipping scores.');
+        console.log(
+          '  WARNING: enrichment_audit.json has unexpected format. Skipping scores.',
+        );
       }
     } else {
-      console.log('  WARNING: data/enrichment_audit.json not found. Skipping score import.');
-      console.log('    Run: node scripts/compute-enrichment-audit.mjs to generate it.');
+      console.log(
+        '  WARNING: data/enrichment_audit.json not found. Skipping score import.',
+      );
+      console.log(
+        '    Run: node scripts/compute-enrichment-audit.mjs to generate it.',
+      );
     }
 
     // ================================================================
@@ -1269,7 +1523,9 @@ async function main() {
     const recordStats = await loadRecordNodes(session);
 
     // Final stats
-    const result = await runQuery(session, `
+    const result = await runQuery(
+      session,
+      `
       MATCH (t:Tree {id: $treeId})-[:CONTAINS]->(p:Person)
       OPTIONAL MATCH (p)-[r:PARENT_OF|CHILD_OF|SPOUSE_OF|SIBLING_OF|RELATIVE_OF]-()
       WITH count(DISTINCT p) as people, count(DISTINCT r) as rels
@@ -1280,22 +1536,50 @@ async function main() {
         AND NOT (orphan)-[:SIBLING_OF]-()
         AND NOT (orphan)-[:RELATIVE_OF]-()
       RETURN people, rels, count(orphan) as orphans
-    `, { treeId: TREE_ID });
+    `,
+      { treeId: TREE_ID },
+    );
 
-    const placeResult = await runQuery(session, 'MATCH (pl:Place) RETURN count(pl) as places');
+    const placeResult = await runQuery(
+      session,
+      'MATCH (pl:Place) RETURN count(pl) as places',
+    );
     const places = placeResult.records[0]?.get('places')?.toNumber?.() ?? 0;
-    const geocodedPlaceResult = await runQuery(session, 'MATCH (pl:Place) WHERE pl.latitude IS NOT NULL RETURN count(pl) as geocoded');
-    const geocodedPlaces = geocodedPlaceResult.records[0]?.get('geocoded')?.toNumber?.() ?? 0;
-    const lifeEvtResult = await runQuery(session, 'MATCH (e:LifeEvent) RETURN count(e) as events');
-    const lifeEvents = lifeEvtResult.records[0]?.get('events')?.toNumber?.() ?? 0;
-    const marriedAtResult = await runQuery(session, 'MATCH ()-[r:MARRIED_AT]->() RETURN count(r) as rels');
-    const marriedAtRels = marriedAtResult.records[0]?.get('rels')?.toNumber?.() ?? 0;
-    const cmResult = await runQuery(session, 'MATCH (cm:ContextualMedia) RETURN count(cm) as items');
+    const geocodedPlaceResult = await runQuery(
+      session,
+      'MATCH (pl:Place) WHERE pl.latitude IS NOT NULL RETURN count(pl) as geocoded',
+    );
+    const geocodedPlaces =
+      geocodedPlaceResult.records[0]?.get('geocoded')?.toNumber?.() ?? 0;
+    const lifeEvtResult = await runQuery(
+      session,
+      'MATCH (e:LifeEvent) RETURN count(e) as events',
+    );
+    const lifeEvents =
+      lifeEvtResult.records[0]?.get('events')?.toNumber?.() ?? 0;
+    const marriedAtResult = await runQuery(
+      session,
+      'MATCH ()-[r:MARRIED_AT]->() RETURN count(r) as rels',
+    );
+    const marriedAtRels =
+      marriedAtResult.records[0]?.get('rels')?.toNumber?.() ?? 0;
+    const cmResult = await runQuery(
+      session,
+      'MATCH (cm:ContextualMedia) RETURN count(cm) as items',
+    );
     const cmItems = cmResult.records[0]?.get('items')?.toNumber?.() ?? 0;
-    const recordResult = await runQuery(session, 'MATCH (r:Record) RETURN count(r) as records');
-    const recordCount = recordResult.records[0]?.get('records')?.toNumber?.() ?? 0;
-    const evidencedByResult = await runQuery(session, 'MATCH ()-[e:EVIDENCED_BY]->() RETURN count(e) as rels');
-    const evidencedByCount = evidencedByResult.records[0]?.get('rels')?.toNumber?.() ?? 0;
+    const recordResult = await runQuery(
+      session,
+      'MATCH (r:Record) RETURN count(r) as records',
+    );
+    const recordCount =
+      recordResult.records[0]?.get('records')?.toNumber?.() ?? 0;
+    const evidencedByResult = await runQuery(
+      session,
+      'MATCH ()-[e:EVIDENCED_BY]->() RETURN count(e) as rels',
+    );
+    const evidencedByCount =
+      evidencedByResult.records[0]?.get('rels')?.toNumber?.() ?? 0;
 
     const record = result.records[0];
     const people = record?.get('people')?.toNumber?.() ?? 0;
@@ -1313,8 +1597,9 @@ async function main() {
     console.log(`  ContextualMedia: ${cmItems}`);
     console.log(`  Records: ${recordCount}`);
     console.log(`  EVIDENCED_BY: ${evidencedByCount}`);
-    console.log(`  Orphans: ${orphans} (${people > 0 ? ((orphans / people) * 100).toFixed(1) : 0}%)`);
-
+    console.log(
+      `  Orphans: ${orphans} (${people > 0 ? ((orphans / people) * 100).toFixed(1) : 0}%)`,
+    );
   } finally {
     await session.close();
     await driver.close();
@@ -1322,7 +1607,7 @@ async function main() {
   }
 }
 
-main().catch(err => {
+main().catch((err) => {
   console.error('Fatal error:', err);
   process.exit(1);
 });

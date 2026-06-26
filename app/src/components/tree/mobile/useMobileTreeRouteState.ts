@@ -22,7 +22,9 @@ export function useMobileTreeRouteState({
   const [detailPersonId, setDetailPersonId] = useState<string | null>(null);
 
   const rawFocusPersonId = searchParams.get('focus');
-  const requestedFocusPersonId = rawFocusPersonId?.trim() ? rawFocusPersonId.trim() : null;
+  const requestedFocusPersonId = rawFocusPersonId?.trim()
+    ? rawFocusPersonId.trim()
+    : null;
   const defaultFocusPersonId = viewerId ?? fallbackFocusId ?? null;
   const defaultFocusSource: MobileTreeDefaultFocusSource = viewerId
     ? 'viewer'
@@ -32,18 +34,25 @@ export function useMobileTreeRouteState({
   const focusPersonId = requestedFocusPersonId ?? defaultFocusPersonId;
   const view: MobileTreeView = 'navigator';
 
-  const buildHref = useCallback((nextFocusId: string) => {
-    const nextParams = new URLSearchParams(searchParamsString);
-    nextParams.set('focus', nextFocusId);
-    nextParams.set('view', 'navigator');
-    return `${pathname}?${nextParams.toString()}`;
-  }, [pathname, searchParamsString]);
+  const buildHref = useCallback(
+    (nextFocusId: string) => {
+      const nextParams = new URLSearchParams(searchParamsString);
+      nextParams.set('focus', nextFocusId);
+      nextParams.set('view', 'navigator');
+      return `${pathname}?${nextParams.toString()}`;
+    },
+    [pathname, searchParamsString],
+  );
 
   useEffect(() => {
     const nextParams = new URLSearchParams(searchParamsString);
     let changed = false;
 
-    if (!requestedFocusPersonId && defaultFocusPersonId && nextParams.get('focus') !== defaultFocusPersonId) {
+    if (
+      !requestedFocusPersonId &&
+      defaultFocusPersonId &&
+      nextParams.get('focus') !== defaultFocusPersonId
+    ) {
       nextParams.set('focus', defaultFocusPersonId);
       changed = true;
     }
@@ -56,21 +65,33 @@ export function useMobileTreeRouteState({
     if (changed) {
       router.replace(`${pathname}?${nextParams.toString()}`);
     }
-  }, [defaultFocusPersonId, pathname, requestedFocusPersonId, router, searchParamsString]);
+  }, [
+    defaultFocusPersonId,
+    pathname,
+    requestedFocusPersonId,
+    router,
+    searchParamsString,
+  ]);
 
   useEffect(() => {
     setDetailPersonId(null);
   }, [focusPersonId]);
 
-  const pushFocusPerson = useCallback((personId: string) => {
-    setDetailPersonId(null);
-    router.push(buildHref(personId));
-  }, [buildHref, router]);
+  const pushFocusPerson = useCallback(
+    (personId: string) => {
+      setDetailPersonId(null);
+      router.push(buildHref(personId));
+    },
+    [buildHref, router],
+  );
 
-  const replaceFocusPerson = useCallback((personId: string) => {
-    setDetailPersonId(null);
-    router.replace(buildHref(personId));
-  }, [buildHref, router]);
+  const replaceFocusPerson = useCallback(
+    (personId: string) => {
+      setDetailPersonId(null);
+      router.replace(buildHref(personId));
+    },
+    [buildHref, router],
+  );
 
   const openDetails = useCallback((personId: string) => {
     setDetailPersonId(personId);
@@ -84,37 +105,43 @@ export function useMobileTreeRouteState({
     setDetailPersonId(personId);
   }, []);
 
-  const viewHere = useCallback((personId: string) => {
-    setDetailPersonId(null);
-    router.push(buildHref(personId));
-  }, [buildHref, router]);
+  const viewHere = useCallback(
+    (personId: string) => {
+      setDetailPersonId(null);
+      router.push(buildHref(personId));
+    },
+    [buildHref, router],
+  );
 
-  return useMemo(() => ({
-    focusPersonId,
-    requestedFocusPersonId,
-    defaultFocusPersonId,
-    defaultFocusSource,
-    hasExplicitFocusParam: Boolean(requestedFocusPersonId),
-    view,
-    detailPersonId,
-    pushFocusPerson,
-    replaceFocusPerson,
-    openDetails,
-    closeDetails,
-    inspectPerson,
-    viewHere,
-  }), [
-    closeDetails,
-    defaultFocusPersonId,
-    defaultFocusSource,
-    detailPersonId,
-    focusPersonId,
-    requestedFocusPersonId,
-    replaceFocusPerson,
-    inspectPerson,
-    openDetails,
-    pushFocusPerson,
-    viewHere,
-    view,
-  ]);
+  return useMemo(
+    () => ({
+      focusPersonId,
+      requestedFocusPersonId,
+      defaultFocusPersonId,
+      defaultFocusSource,
+      hasExplicitFocusParam: Boolean(requestedFocusPersonId),
+      view,
+      detailPersonId,
+      pushFocusPerson,
+      replaceFocusPerson,
+      openDetails,
+      closeDetails,
+      inspectPerson,
+      viewHere,
+    }),
+    [
+      closeDetails,
+      defaultFocusPersonId,
+      defaultFocusSource,
+      detailPersonId,
+      focusPersonId,
+      requestedFocusPersonId,
+      replaceFocusPerson,
+      inspectPerson,
+      openDetails,
+      pushFocusPerson,
+      viewHere,
+      view,
+    ],
+  );
 }

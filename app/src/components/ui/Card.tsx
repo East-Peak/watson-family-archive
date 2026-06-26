@@ -40,7 +40,10 @@ export default function Card({
 
   if (href) {
     return (
-      <Link href={href} className={`block ${combinedClassName} hover:scale-[1.02]`}>
+      <Link
+        href={href}
+        className={`block ${combinedClassName} hover:scale-[1.02]`}
+      >
         {children}
       </Link>
     );
@@ -48,7 +51,10 @@ export default function Card({
 
   if (onClick) {
     return (
-      <button onClick={onClick} className={`w-full text-left ${combinedClassName} hover:scale-[1.02]`}>
+      <button
+        onClick={onClick}
+        className={`w-full text-left ${combinedClassName} hover:scale-[1.02]`}
+      >
         {children}
       </button>
     );
@@ -81,7 +87,9 @@ export function CardHeader({
         )}
         <div>
           <h3 className="font-semibold text-gray-900">{title}</h3>
-          {subtitle && <p className="text-gray-500 text-sm mt-0.5">{subtitle}</p>}
+          {subtitle && (
+            <p className="text-gray-500 text-sm mt-0.5">{subtitle}</p>
+          )}
         </div>
       </div>
       {action}
@@ -108,9 +116,13 @@ export function CardSection({
   };
 
   return (
-    <div className={`rounded-xl overflow-hidden border border-gray-200 ${className}`}>
+    <div
+      className={`rounded-xl overflow-hidden border border-gray-200 ${className}`}
+    >
       <div className={`${headerColors[headerColor]} px-4 py-2`}>
-        <h3 className="text-amber-400 text-sm font-medium uppercase tracking-wide">{title}</h3>
+        <h3 className="text-amber-400 text-sm font-medium uppercase tracking-wide">
+          {title}
+        </h3>
       </div>
       <div className="p-4 bg-white">{children}</div>
     </div>

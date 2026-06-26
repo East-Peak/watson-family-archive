@@ -1,10 +1,6 @@
 'use client';
 
-import {
-  Entity,
-  PointGraphics,
-  LabelGraphics,
-} from 'resium';
+import { Entity, PointGraphics, LabelGraphics } from 'resium';
 import {
   Cartesian3,
   Cartesian2,
@@ -20,13 +16,20 @@ interface OriginPinsProps {
   onLocationClick: (location: Location) => void;
 }
 
-export default function OriginPins({ originPins, onLocationClick }: OriginPinsProps) {
+export default function OriginPins({
+  originPins,
+  onLocationClick,
+}: OriginPinsProps) {
   return (
     <>
       {originPins.map((pin) => (
         <Entity
           key={`origin-${pin.personId}`}
-          position={Cartesian3.fromDegrees(pin.location.lng, pin.location.lat, 100)}
+          position={Cartesian3.fromDegrees(
+            pin.location.lng,
+            pin.location.lat,
+            100,
+          )}
           name={pin.personName}
           description={`${pin.lineageLabel} lineage${pin.earliestYear ? ` (${pin.earliestYear})` : ''}`}
           onClick={() => onLocationClick(pin.location)}

@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { executeQuery } from '@/lib/neo4j/client';
 import { siteConfig } from '@/lib/siteConfig';
+import { cacheGraphRead } from '@/lib/cache/graphCache';
 
 const DEFAULT_TREE_ID = siteConfig.defaultTreeId;
 
@@ -17,7 +18,9 @@ interface TimelineEvent {
   country: string | null;
 }
 
-function normalizeTimelineSurname(value: string | null | undefined): string | null {
+function normalizeTimelineSurname(
+  value: string | null | undefined,
+): string | null {
   const surname = value?.trim();
 
   if (!surname) {
@@ -35,16 +38,18 @@ function normalizeTimelineSurname(value: string | null | undefined): string | nu
   return surname;
 }
 
-export async function GET(request: NextRequest) {
-  try {
-    const { searchParams } = new URL(request.url);
-    const treeId = searchParams.get('treeId') || DEFAULT_TREE_ID;
-    const startYear = searchParams.get('startYear');
-    const endYear = searchParams.get('endYear');
-    const surname = searchParams.get('surname');
-
-    const events: TimelineEvent[] = [];
-
+// Whole-tree timeline events — births and deaths are identical for every authed
+// user and rebuildable, so both Neo4j reads are cached together (shared Redis
+// graph cache), keyed by the params that vary the result. Births stay first,
+// deaths second. The route stays dynamic: only the AuraDB round-trips are
+// memoized.
+const getTimelineEvents = cacheGraphRead(
+  async (
+    treeId: string,
+    startYear: string | null,
+    endYear: string | null,
+    surname: string | null,
+  ) => {
     // Build year filter
     let yearFilter = '';
     if (startYear || endYear) {
@@ -88,23 +93,8 @@ export async function GET(request: NextRequest) {
         bp.country as country
       ORDER BY year
       `,
-      { treeId, surname }
+      { treeId, surname },
     );
-
-    birthResults.forEach((r) => {
-      events.push({
-        year: r.year,
-        type: 'birth',
-        description: `${r.personName} was born`,
-        location: r.location,
-        personId: r.personId,
-        personName: r.personName,
-        surname: normalizeTimelineSurname(r.surname),
-        lat: r.lat,
-        lng: r.lng,
-        country: r.country,
-      });
-    });
 
     // Get death events
     const deathResults = await executeQuery<{
@@ -134,8 +124,45 @@ export async function GET(request: NextRequest) {
         dp.country as country
       ORDER BY year
       `,
-      { treeId, surname }
+      { treeId, surname },
     );
+
+    return { birthResults, deathResults };
+  },
+  ['timeline'],
+);
+
+export async function GET(request: NextRequest) {
+  try {
+    const { searchParams } = new URL(request.url);
+    const treeId = searchParams.get('treeId') || DEFAULT_TREE_ID;
+    const startYear = searchParams.get('startYear');
+    const endYear = searchParams.get('endYear');
+    const surname = searchParams.get('surname');
+
+    const events: TimelineEvent[] = [];
+
+    const { birthResults, deathResults } = await getTimelineEvents(
+      treeId,
+      startYear,
+      endYear,
+      surname,
+    );
+
+    birthResults.forEach((r) => {
+      events.push({
+        year: r.year,
+        type: 'birth',
+        description: `${r.personName} was born`,
+        location: r.location,
+        personId: r.personId,
+        personName: r.personName,
+        surname: normalizeTimelineSurname(r.surname),
+        lat: r.lat,
+        lng: r.lng,
+        country: r.country,
+      });
+    });
 
     deathResults.forEach((r) => {
       events.push({
@@ -158,6 +185,9 @@ export async function GET(request: NextRequest) {
     return NextResponse.json(events);
   } catch (error) {
     console.error('Error fetching timeline:', error);
-    return NextResponse.json({ error: 'Failed to fetch timeline' }, { status: 500 });
+    return NextResponse.json(
+      { error: 'Failed to fetch timeline' },
+      { status: 500 },
+    );
   }
 }

@@ -1,20 +1,20 @@
 const COUNTRY_FLAGS: Record<string, string> = {
   'United States': '🇺🇸',
   'United Kingdom': '🇬🇧',
-  'England': '🏴󠁧󠁢󠁥󠁮󠁧󠁿',
-  'Wales': '🏴󠁧󠁢󠁷󠁬󠁳󠁿',
-  'Scotland': '🏴󠁧󠁢󠁳󠁣󠁴󠁿',
-  'Ireland': '🇮🇪',
-  'Germany': '🇩🇪',
-  'France': '🇫🇷',
-  'Canada': '🇨🇦',
-  'Switzerland': '🇨🇭',
-  'Poland': '🇵🇱',
-  'Netherlands': '🇳🇱',
-  'Sweden': '🇸🇪',
-  'Norway': '🇳🇴',
-  'Italy': '🇮🇹',
-  'Australia': '🇦🇺',
+  England: '🏴󠁧󠁢󠁥󠁮󠁧󠁿',
+  Wales: '🏴󠁧󠁢󠁷󠁬󠁳󠁿',
+  Scotland: '🏴󠁧󠁢󠁳󠁣󠁴󠁿',
+  Ireland: '🇮🇪',
+  Germany: '🇩🇪',
+  France: '🇫🇷',
+  Canada: '🇨🇦',
+  Switzerland: '🇨🇭',
+  Poland: '🇵🇱',
+  Netherlands: '🇳🇱',
+  Sweden: '🇸🇪',
+  Norway: '🇳🇴',
+  Italy: '🇮🇹',
+  Australia: '🇦🇺',
 };
 
 function getFlag(country: string): string {
@@ -29,11 +29,14 @@ function getFlag(country: string): string {
   return '';
 }
 
-export function createFamilyCardInnerHtml(d: import('family-chart').TreeDatum): string {
+export function createFamilyCardInnerHtml(
+  d: import('family-chart').TreeDatum,
+): string {
   const data = d.data.data as Record<string, unknown>;
   const firstName = (data['first name'] as string) || '';
   const lastName = (data['last name'] as string) || '';
-  const fullName = (data['_fullName'] as string) || `${firstName} ${lastName}`.trim();
+  const fullName =
+    (data['_fullName'] as string) || `${firstName} ${lastName}`.trim();
   const birthday = (data['birthday'] as string) || '';
   const deathday = (data['deathday'] as string) || '';
   const isLiving = data['_isLiving'] as boolean;
@@ -53,8 +56,14 @@ export function createFamilyCardInnerHtml(d: import('family-chart').TreeDatum): 
     lifeSpan = `d. ${deathday}`;
   }
 
-  const accentColor = gender === 'M' ? '#4a42b0' : gender === 'F' ? '#7ba028' : '#9ca3af';
-  const accentBg = gender === 'M' ? 'rgba(74,66,176,0.08)' : gender === 'F' ? 'rgba(123,160,40,0.08)' : 'rgba(156,163,175,0.08)';
+  const accentColor =
+    gender === 'M' ? '#4a42b0' : gender === 'F' ? '#7ba028' : '#9ca3af';
+  const accentBg =
+    gender === 'M'
+      ? 'rgba(74,66,176,0.08)'
+      : gender === 'F'
+        ? 'rgba(123,160,40,0.08)'
+        : 'rgba(156,163,175,0.08)';
   const deceased = !isLiving;
 
   const photoHtml = avatar
@@ -132,12 +141,18 @@ export function createFamilyCardInnerHtml(d: import('family-chart').TreeDatum): 
           letter-spacing: -0.01em;
           margin-bottom: 4px;
         ">${fullName}</div>
-        ${lifeSpan ? `<div style="
+        ${
+          lifeSpan
+            ? `<div style="
           font-size: 11px;
           color: #6b7280;
           line-height: 1.4;
           margin-top: 2px;
-        ">${lifeSpan}${livingDot}</div>` : (isLiving ? `<div style="font-size:11px;color:#6b7280;line-height:1.4;margin-top:2px;">Living${livingDot}</div>` : '')}
+        ">${lifeSpan}${livingDot}</div>`
+            : isLiving
+              ? `<div style="font-size:11px;color:#6b7280;line-height:1.4;margin-top:2px;">Living${livingDot}</div>`
+              : ''
+        }
         ${migrationHtml}
       </div>
     </div>

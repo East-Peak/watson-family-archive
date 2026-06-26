@@ -1,6 +1,12 @@
 'use client';
 
-import { useCallback, useEffect, useRef, useState, type RefObject } from 'react';
+import {
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+  type RefObject,
+} from 'react';
 import { Cartesian3, type Viewer as CesiumViewer } from 'cesium';
 import type { JourneyStop } from '@/components/JourneyPlayer';
 import type { JourneyModeData } from '../types';
@@ -11,14 +17,22 @@ interface UseJourneyPlaybackOptions {
   onJourneyClose?: () => void;
 }
 
-function isSameLocation(stop1: JourneyStop | undefined, stop2: JourneyStop | undefined): boolean {
-  if (!stop1 || !stop2 || !stop1.lat || !stop1.lng || !stop2.lat || !stop2.lng) return false;
+function isSameLocation(
+  stop1: JourneyStop | undefined,
+  stop2: JourneyStop | undefined,
+): boolean {
+  if (!stop1 || !stop2 || !stop1.lat || !stop1.lng || !stop2.lat || !stop2.lng)
+    return false;
   const latDiff = Math.abs(stop1.lat - stop2.lat);
   const lngDiff = Math.abs(stop1.lng - stop2.lng);
   return latDiff < 0.1 && lngDiff < 0.1;
 }
 
-export function useJourneyPlayback({ journeyMode, viewerRef, onJourneyClose }: UseJourneyPlaybackOptions) {
+export function useJourneyPlayback({
+  journeyMode,
+  viewerRef,
+  onJourneyClose,
+}: UseJourneyPlaybackOptions) {
   const [journeyIndex, setJourneyIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const [playSpeed, setPlaySpeed] = useState<1 | 2 | 3>(1);
@@ -34,7 +48,8 @@ export function useJourneyPlayback({ journeyMode, viewerRef, onJourneyClose }: U
   useEffect(() => {
     if (journeyMode && viewerRef.current?.cesiumElement) {
       const stop = journeyMode.stops[journeyIndex];
-      const prevStop = journeyIndex > 0 ? journeyMode.stops[journeyIndex - 1] : null;
+      const prevStop =
+        journeyIndex > 0 ? journeyMode.stops[journeyIndex - 1] : null;
 
       if (stop?.lat && stop?.lng) {
         const viewer = viewerRef.current.cesiumElement;
@@ -61,13 +76,13 @@ export function useJourneyPlayback({ journeyMode, viewerRef, onJourneyClose }: U
 
           const currentStop = journeyMode.stops[prev];
           const nextStop = journeyMode.stops[prev + 1];
-          const sameLocation = currentStop && nextStop &&
+          const sameLocation =
+            currentStop &&
+            nextStop &&
             Math.abs((currentStop.lat || 0) - (nextStop.lat || 0)) < 0.1 &&
             Math.abs((currentStop.lng || 0) - (nextStop.lng || 0)) < 0.1;
 
-          const nextDelay = sameLocation
-            ? 800 / playSpeed
-            : 3500 / playSpeed;
+          const nextDelay = sameLocation ? 800 / playSpeed : 3500 / playSpeed;
 
           playTimeoutRef.current = setTimeout(advanceToNext, nextDelay);
           return prev + 1;
@@ -76,11 +91,15 @@ export function useJourneyPlayback({ journeyMode, viewerRef, onJourneyClose }: U
 
       const firstStop = journeyMode.stops[journeyIndex];
       const secondStop = journeyMode.stops[journeyIndex + 1];
-      const firstSameLocation = firstStop && secondStop &&
+      const firstSameLocation =
+        firstStop &&
+        secondStop &&
         Math.abs((firstStop.lat || 0) - (secondStop.lat || 0)) < 0.1 &&
         Math.abs((firstStop.lng || 0) - (secondStop.lng || 0)) < 0.1;
 
-      const initialDelay = firstSameLocation ? 800 / playSpeed : 3500 / playSpeed;
+      const initialDelay = firstSameLocation
+        ? 800 / playSpeed
+        : 3500 / playSpeed;
       playTimeoutRef.current = setTimeout(advanceToNext, initialDelay);
     }
 

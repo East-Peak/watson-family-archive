@@ -41,7 +41,11 @@ interface PersonDrawerProps {
   onFocusPerson?: (personId: string) => void;
 }
 
-export function PersonDrawer({ personId, onClose, onFocusPerson }: PersonDrawerProps) {
+export function PersonDrawer({
+  personId,
+  onClose,
+  onFocusPerson,
+}: PersonDrawerProps) {
   const router = useRouter();
   const [details, setDetails] = useState<PersonDetails | null>(null);
   const [loading, setLoading] = useState(false);
@@ -57,11 +61,11 @@ export function PersonDrawer({ personId, onClose, onFocusPerson }: PersonDrawerP
     setImageError(false);
 
     fetch(`/api/person/${personId}`)
-      .then(res => {
+      .then((res) => {
         if (!res.ok) throw new Error('Person not found');
         return res.json();
       })
-      .then(person => {
+      .then((person) => {
         setDetails({
           id: personId,
           name: person.fullName || 'Unknown',
@@ -106,8 +110,10 @@ export function PersonDrawer({ personId, onClose, onFocusPerson }: PersonDrawerP
 
   const getLifespan = () => {
     if (!details) return '';
-    if (details.isLiving) return details.birthYear ? `Born ${details.birthYear}` : 'Living';
-    if (details.birthYear && details.deathYear) return `${details.birthYear} \u2013 ${details.deathYear}`;
+    if (details.isLiving)
+      return details.birthYear ? `Born ${details.birthYear}` : 'Living';
+    if (details.birthYear && details.deathYear)
+      return `${details.birthYear} \u2013 ${details.deathYear}`;
     if (details.birthYear) return `Born ${details.birthYear}`;
     if (details.deathYear) return `Died ${details.deathYear}`;
     return 'Dates unknown';
@@ -134,12 +140,18 @@ export function PersonDrawer({ personId, onClose, onFocusPerson }: PersonDrawerP
         </div>
         {(relationship || member.birthYear) && (
           <div className="text-[11px] text-gray-500">
-            {relationship}{relationship && member.birthYear ? ' \u00b7 ' : ''}{member.birthYear ? `b. ${member.birthYear}` : ''}
+            {relationship}
+            {relationship && member.birthYear ? ' \u00b7 ' : ''}
+            {member.birthYear ? `b. ${member.birthYear}` : ''}
           </div>
         )}
       </div>
       <svg width="16" height="16" viewBox="0 0 20 20" fill="#9ca3af">
-        <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+        <path
+          fillRule="evenodd"
+          d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+          clipRule="evenodd"
+        />
       </svg>
     </button>
   );
@@ -156,13 +168,19 @@ export function PersonDrawer({ personId, onClose, onFocusPerson }: PersonDrawerP
       <div className="fixed top-0 right-0 bottom-0 w-[340px] bg-white shadow-[-4px_0_24px_rgba(0,0,0,0.15)] z-[61] flex flex-col animate-[slideInRight_0.2s_ease-out]">
         {/* Header */}
         <div className="flex items-center justify-between px-5 py-4 border-b border-gray-200">
-          <h2 className="text-base font-semibold text-gray-800">Person Details</h2>
+          <h2 className="text-base font-semibold text-gray-800">
+            Person Details
+          </h2>
           <button
             onClick={onClose}
             className="w-8 h-8 flex items-center justify-center rounded-md text-gray-500 hover:bg-gray-100 transition-colors"
           >
             <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
-              <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
+              <path
+                fillRule="evenodd"
+                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                clipRule="evenodd"
+              />
             </svg>
           </button>
         </div>
@@ -177,7 +195,10 @@ export function PersonDrawer({ personId, onClose, onFocusPerson }: PersonDrawerP
               <div className="text-center mb-6">
                 <div
                   className="w-[120px] h-[120px] rounded-xl overflow-hidden mx-auto mb-4 flex items-center justify-center"
-                  style={{ border: `3px solid ${accentColor}`, backgroundColor: accentBg }}
+                  style={{
+                    border: `3px solid ${accentColor}`,
+                    backgroundColor: accentBg,
+                  }}
                 >
                   {hasRealPhoto ? (
                     <img
@@ -187,19 +208,35 @@ export function PersonDrawer({ personId, onClose, onFocusPerson }: PersonDrawerP
                       onError={() => setImageError(true)}
                     />
                   ) : (
-                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke={accentColor} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" opacity="0.6">
-                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-                      <circle cx="12" cy="7" r="4"/>
+                    <svg
+                      width="48"
+                      height="48"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke={accentColor}
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      opacity="0.6"
+                    >
+                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                      <circle cx="12" cy="7" r="4" />
                     </svg>
                   )}
                 </div>
-                <h3 className="text-xl font-semibold text-gray-800 mb-1">{details.name}</h3>
+                <h3 className="text-xl font-semibold text-gray-800 mb-1">
+                  {details.name}
+                </h3>
                 <p className="text-sm text-gray-500">{getLifespan()}</p>
                 {details.birthPlace && (
-                  <p className="text-xs text-gray-400 mt-1">{details.birthPlace}</p>
+                  <p className="text-xs text-gray-400 mt-1">
+                    {details.birthPlace}
+                  </p>
                 )}
                 {details.occupation && (
-                  <p className="text-xs text-gray-400 mt-0.5">{details.occupation}</p>
+                  <p className="text-xs text-gray-400 mt-0.5">
+                    {details.occupation}
+                  </p>
                 )}
               </div>
 
@@ -216,10 +253,14 @@ export function PersonDrawer({ personId, onClose, onFocusPerson }: PersonDrawerP
               {/* Parents */}
               {(details.father || details.mother) && (
                 <div className="mb-5">
-                  <h4 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Parents</h4>
+                  <h4 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">
+                    Parents
+                  </h4>
                   <div className="-mx-3">
-                    {details.father && renderFamilyLink(details.father, 'Father')}
-                    {details.mother && renderFamilyLink(details.mother, 'Mother')}
+                    {details.father &&
+                      renderFamilyLink(details.father, 'Father')}
+                    {details.mother &&
+                      renderFamilyLink(details.mother, 'Mother')}
                   </div>
                 </div>
               )}
@@ -231,7 +272,7 @@ export function PersonDrawer({ personId, onClose, onFocusPerson }: PersonDrawerP
                     {details.spouses.length === 1 ? 'Spouse' : 'Spouses'}
                   </h4>
                   <div className="-mx-3">
-                    {details.spouses.map(spouse => renderFamilyLink(spouse))}
+                    {details.spouses.map((spouse) => renderFamilyLink(spouse))}
                   </div>
                 </div>
               )}
@@ -244,8 +285,10 @@ export function PersonDrawer({ personId, onClose, onFocusPerson }: PersonDrawerP
                   </h4>
                   <div className="-mx-3">
                     {[...details.children]
-                      .sort((a, b) => (a.birthYear ?? 9999) - (b.birthYear ?? 9999))
-                      .map(child => renderFamilyLink(child))}
+                      .sort(
+                        (a, b) => (a.birthYear ?? 9999) - (b.birthYear ?? 9999),
+                      )
+                      .map((child) => renderFamilyLink(child))}
                   </div>
                 </div>
               )}
@@ -258,14 +301,18 @@ export function PersonDrawer({ personId, onClose, onFocusPerson }: PersonDrawerP
                   </h4>
                   <div className="-mx-3">
                     {[...details.siblings]
-                      .sort((a, b) => (a.birthYear ?? 9999) - (b.birthYear ?? 9999))
-                      .map(sibling => renderFamilyLink(sibling))}
+                      .sort(
+                        (a, b) => (a.birthYear ?? 9999) - (b.birthYear ?? 9999),
+                      )
+                      .map((sibling) => renderFamilyLink(sibling))}
                   </div>
                 </div>
               )}
             </>
           ) : (
-            <div className="text-center py-10 text-gray-500">No details available</div>
+            <div className="text-center py-10 text-gray-500">
+              No details available
+            </div>
           )}
         </div>
       </div>

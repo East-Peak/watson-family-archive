@@ -31,15 +31,50 @@ export interface CollectionPerson {
 }
 
 // Country/region patterns to match in birthPlace strings
-export const COUNTRY_PATTERNS: Record<string, { label: string; emoji: string; patterns: string[] }> = {
-  wales: { label: 'Welsh', emoji: '\u{1F3F4}\u{E0067}\u{E0062}\u{E0077}\u{E006C}\u{E0073}\u{E007F}', patterns: ['Wales'] },
-  england: { label: 'English', emoji: '\u{1F3F4}\u{E0067}\u{E0062}\u{E0065}\u{E006E}\u{E0067}\u{E007F}', patterns: ['England'] },
-  scotland: { label: 'Scottish', emoji: '\u{1F3F4}\u{E0067}\u{E0062}\u{E0073}\u{E0063}\u{E0074}\u{E007F}', patterns: ['Scotland'] },
-  ireland: { label: 'Irish', emoji: '\u{1F1EE}\u{1F1EA}', patterns: ['Ireland'] },
-  germany: { label: 'German', emoji: '\u{1F1E9}\u{1F1EA}', patterns: ['Germany', 'Prussia', 'Bavaria', 'Saxony', 'Württemberg'] },
-  switzerland: { label: 'Swiss', emoji: '\u{1F1E8}\u{1F1ED}', patterns: ['Switzerland'] },
-  france: { label: 'French', emoji: '\u{1F1EB}\u{1F1F7}', patterns: ['France'] },
-  netherlands: { label: 'Dutch', emoji: '\u{1F1F3}\u{1F1F1}', patterns: ['Netherlands', 'Holland'] },
+export const COUNTRY_PATTERNS: Record<
+  string,
+  { label: string; emoji: string; patterns: string[] }
+> = {
+  wales: {
+    label: 'Welsh',
+    emoji: '\u{1F3F4}\u{E0067}\u{E0062}\u{E0077}\u{E006C}\u{E0073}\u{E007F}',
+    patterns: ['Wales'],
+  },
+  england: {
+    label: 'English',
+    emoji: '\u{1F3F4}\u{E0067}\u{E0062}\u{E0065}\u{E006E}\u{E0067}\u{E007F}',
+    patterns: ['England'],
+  },
+  scotland: {
+    label: 'Scottish',
+    emoji: '\u{1F3F4}\u{E0067}\u{E0062}\u{E0073}\u{E0063}\u{E0074}\u{E007F}',
+    patterns: ['Scotland'],
+  },
+  ireland: {
+    label: 'Irish',
+    emoji: '\u{1F1EE}\u{1F1EA}',
+    patterns: ['Ireland'],
+  },
+  germany: {
+    label: 'German',
+    emoji: '\u{1F1E9}\u{1F1EA}',
+    patterns: ['Germany', 'Prussia', 'Bavaria', 'Saxony', 'Württemberg'],
+  },
+  switzerland: {
+    label: 'Swiss',
+    emoji: '\u{1F1E8}\u{1F1ED}',
+    patterns: ['Switzerland'],
+  },
+  france: {
+    label: 'French',
+    emoji: '\u{1F1EB}\u{1F1F7}',
+    patterns: ['France'],
+  },
+  netherlands: {
+    label: 'Dutch',
+    emoji: '\u{1F1F3}\u{1F1F1}',
+    patterns: ['Netherlands', 'Holland'],
+  },
 };
 
 // Thematic collections that don't depend on data distribution
@@ -180,7 +215,9 @@ const THEMATIC_COLLECTIONS: Record<string, CollectionConfig> = {
 
 // Build a heritage collection query for a given country
 function buildHeritageQuery(patterns: string[]): string {
-  const conditions = patterns.map(p => `p.birthPlace CONTAINS '${p}'`).join(' OR ');
+  const conditions = patterns
+    .map((p) => `p.birthPlace CONTAINS '${p}'`)
+    .join(' OR ');
   return `
     MATCH (t:Tree {id: $treeId})-[:CONTAINS]->(p:Person)
     WHERE ${conditions}
@@ -192,12 +229,14 @@ function buildHeritageQuery(patterns: string[]): string {
 
 // Build an immigration collection query (born in X, died in US)
 function buildImmigrationQuery(patterns: string[]): string {
-  const birthConditions = patterns.map(p => `p.birthPlace CONTAINS '${p}'`).join(' OR ');
+  const birthConditions = patterns
+    .map((p) => `p.birthPlace CONTAINS '${p}'`)
+    .join(' OR ');
   return `
     MATCH (t:Tree {id: $treeId})-[:CONTAINS]->(p:Person)
     WHERE (${birthConditions})
       AND p.deathPlace IS NOT NULL
-      AND NOT (${patterns.map(p => `p.deathPlace CONTAINS '${p}'`).join(' OR ')})
+      AND NOT (${patterns.map((p) => `p.deathPlace CONTAINS '${p}'`).join(' OR ')})
     RETURN p.id as id, p.fullName as fullName, p.birthYear as birthYear,
            p.deathYear as deathYear, p.birthPlace as birthPlace, p.deathPlace as deathPlace
     ORDER BY p.birthYear
@@ -208,7 +247,9 @@ function buildImmigrationQuery(patterns: string[]): string {
  * Discover which heritage/immigration collections have enough data to display.
  * Queries Neo4j once for country distribution, returns only collections with 3+ people.
  */
-export async function discoverCollections(treeId?: string): Promise<Record<string, CollectionConfig>> {
+export async function discoverCollections(
+  treeId?: string,
+): Promise<Record<string, CollectionConfig>> {
   const resolvedTreeId = treeId ?? TREE_ID;
   const all: Record<string, CollectionConfig> = {};
 
@@ -219,7 +260,9 @@ export async function discoverCollections(treeId?: string): Promise<Record<strin
     RETURN p.birthPlace as birthPlace
   `;
 
-  const results = await executeQuery<{ birthPlace: string }>(countQuery, { treeId: resolvedTreeId });
+  const results = await executeQuery<{ birthPlace: string }>(countQuery, {
+    treeId: resolvedTreeId,
+  });
 
   // Count matches per country
   const countryCounts: Record<string, number> = {};
@@ -227,7 +270,7 @@ export async function discoverCollections(treeId?: string): Promise<Record<strin
 
   for (const { birthPlace } of results) {
     for (const [key, config] of Object.entries(COUNTRY_PATTERNS)) {
-      if (config.patterns.some(p => birthPlace.includes(p))) {
+      if (config.patterns.some((p) => birthPlace.includes(p))) {
         countryCounts[key] = (countryCounts[key] || 0) + 1;
       }
     }
@@ -240,14 +283,15 @@ export async function discoverCollections(treeId?: string): Promise<Record<strin
     RETURN p.birthPlace as birthPlace, p.deathPlace as deathPlace
   `;
 
-  const immResults = await executeQuery<{ birthPlace: string; deathPlace: string }>(
-    immigrationQuery, { treeId: resolvedTreeId }
-  );
+  const immResults = await executeQuery<{
+    birthPlace: string;
+    deathPlace: string;
+  }>(immigrationQuery, { treeId: resolvedTreeId });
 
   for (const { birthPlace, deathPlace } of immResults) {
     for (const [key, config] of Object.entries(COUNTRY_PATTERNS)) {
-      const bornThere = config.patterns.some(p => birthPlace.includes(p));
-      const diedThere = config.patterns.some(p => deathPlace.includes(p));
+      const bornThere = config.patterns.some((p) => birthPlace.includes(p));
+      const diedThere = config.patterns.some((p) => deathPlace.includes(p));
       if (bornThere && !diedThere) {
         immigrationCounts[key] = (immigrationCounts[key] || 0) + 1;
       }
@@ -302,12 +346,16 @@ const ALIASES: Record<string, string> = {
  * Get a specific collection config — tries discovered first, falls back to thematic.
  * Also supports dynamic surname collections (e.g. "surname-smith").
  */
-export async function getCollection(type: string, treeId?: string): Promise<CollectionConfig | null> {
+export async function getCollection(
+  type: string,
+  treeId?: string,
+): Promise<CollectionConfig | null> {
   // Resolve aliases
   const resolvedType = ALIASES[type] || type;
 
   // Check thematic first (no DB query needed)
-  if (THEMATIC_COLLECTIONS[resolvedType]) return THEMATIC_COLLECTIONS[resolvedType];
+  if (THEMATIC_COLLECTIONS[resolvedType])
+    return THEMATIC_COLLECTIONS[resolvedType];
 
   // Dynamic surname collection: "surname-smith" → people with surname "Smith"
   const surnameMatch = type.match(/^surname-(.+)$/);
@@ -359,24 +407,47 @@ export async function listCollections(options?: {
       // Convert the member query to a count query by replacing everything from RETURN onwards
       const returnIdx = config.query.lastIndexOf('RETURN');
       if (returnIdx === -1) continue;
-      const countQuery = config.query.substring(0, returnIdx) + 'RETURN count(DISTINCT p) as count';
-      const countResult = await executeQuery<{ count: number }>(
-        countQuery,
-        { treeId: resolvedTreeId, ...config.params }
-      );
+      const countQuery =
+        config.query.substring(0, returnIdx) +
+        'RETURN count(DISTINCT p) as count';
+      const countResult = await executeQuery<{ count: number }>(countQuery, {
+        treeId: resolvedTreeId,
+        ...config.params,
+      });
       const memberCount = countResult[0]?.count || 0;
       if (memberCount > 0) {
-        results.push({ type, title: config.title, emoji: config.emoji, description: config.description, category: config.category, memberCount });
+        results.push({
+          type,
+          title: config.title,
+          emoji: config.emoji,
+          description: config.description,
+          category: config.category,
+          memberCount,
+        });
       }
     } else {
-      results.push({ type, title: config.title, emoji: config.emoji, description: config.description, category: config.category });
+      results.push({
+        type,
+        title: config.title,
+        emoji: config.emoji,
+        description: config.description,
+        category: config.category,
+      });
     }
   }
 
   // Sort: heritage first (by memberCount desc), then immigration, then era, military, thematic
-  const categoryOrder = { heritage: 0, immigration: 1, era: 2, military: 3, thematic: 4 };
+  const categoryOrder = {
+    heritage: 0,
+    immigration: 1,
+    era: 2,
+    military: 3,
+    thematic: 4,
+  };
   results.sort((a, b) => {
-    const catDiff = (categoryOrder[a.category as keyof typeof categoryOrder] ?? 5) - (categoryOrder[b.category as keyof typeof categoryOrder] ?? 5);
+    const catDiff =
+      (categoryOrder[a.category as keyof typeof categoryOrder] ?? 5) -
+      (categoryOrder[b.category as keyof typeof categoryOrder] ?? 5);
     if (catDiff !== 0) return catDiff;
     return (b.memberCount ?? 0) - (a.memberCount ?? 0);
   });

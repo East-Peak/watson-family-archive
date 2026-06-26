@@ -175,18 +175,29 @@ export default function ExplorerHeader({
       {/* View mode toggle */}
       <div className="bg-amber-100/60 rounded-lg p-0.5 flex">
         <button
-          className={viewMode === 'people' ? 'bg-white shadow-sm text-shield font-medium px-3 py-1 rounded-md text-sm transition-all' : 'px-3 py-1 text-shield/50 hover:text-shield/70 text-sm transition-colors rounded-md'}
+          className={
+            viewMode === 'people'
+              ? 'bg-white shadow-sm text-shield font-medium px-3 py-1 rounded-md text-sm transition-all'
+              : 'px-3 py-1 text-shield/50 hover:text-shield/70 text-sm transition-colors rounded-md'
+          }
           onClick={() => onStateChange({ viewMode: 'people' })}
-        >People</button>
+        >
+          People
+        </button>
         <button
-          className={viewMode === 'records' ? 'bg-white shadow-sm text-shield font-medium px-3 py-1 rounded-md text-sm transition-all' : 'px-3 py-1 text-shield/50 hover:text-shield/70 text-sm transition-colors rounded-md'}
+          className={
+            viewMode === 'records'
+              ? 'bg-white shadow-sm text-shield font-medium px-3 py-1 rounded-md text-sm transition-all'
+              : 'px-3 py-1 text-shield/50 hover:text-shield/70 text-sm transition-colors rounded-md'
+          }
           onClick={() => onStateChange({ viewMode: 'records' })}
-        >Records</button>
+        >
+          Records
+        </button>
       </div>
 
       <div className="whitespace-nowrap text-sm text-shield/60">
-        Showing{' '}
-        <span className="text-shield font-medium">{filteredCount}</span>
+        Showing <span className="text-shield font-medium">{filteredCount}</span>
         {isFiltered && (
           <>
             {' '}

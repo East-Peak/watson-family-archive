@@ -1,10 +1,6 @@
 'use client';
 
-import {
-  Entity,
-  PointGraphics,
-  LabelGraphics,
-} from 'resium';
+import { Entity, PointGraphics, LabelGraphics } from 'resium';
 import {
   Cartesian3,
   Cartesian2,
@@ -26,7 +22,12 @@ interface LocationPinsProps {
   journeyMode: JourneyModeData | null;
   isGenerationMode: boolean;
   generationDepthMap: Map<string, number>;
-  getLocationColor: (location: Pick<Location, 'country' | 'name' | 'city' | 'state' | 'lat' | 'lng'>) => Color;
+  getLocationColor: (
+    location: Pick<
+      Location,
+      'country' | 'name' | 'city' | 'state' | 'lat' | 'lng'
+    >,
+  ) => Color;
   onLocationClick: (location: Location) => void;
   showLabels: boolean;
 }
@@ -64,7 +65,10 @@ export default function LocationPins({
           let minDepth: number | null = null;
           for (const person of location.people) {
             const depth = generationDepthMap.get(person.id);
-            if (depth !== undefined && (minDepth === null || depth < minDepth)) {
+            if (
+              depth !== undefined &&
+              (minDepth === null || depth < minDepth)
+            ) {
               minDepth = depth;
             }
           }
@@ -97,11 +101,19 @@ export default function LocationPins({
             key={location.id}
             position={Cartesian3.fromDegrees(location.lng, location.lat, 100)}
             name={location.name}
-            description={isDimmed ? 'Outside current filters' : `${visiblePeopleLabel} in current view`}
+            description={
+              isDimmed
+                ? 'Outside current filters'
+                : `${visiblePeopleLabel} in current view`
+            }
             onClick={!isDimmed ? () => onLocationClick(location) : undefined}
           >
             <PointGraphics
-              pixelSize={interacting ? 14 : Math.max(6, Math.min(12, visiblePeopleCount * 1.5))}
+              pixelSize={
+                interacting
+                  ? 14
+                  : Math.max(6, Math.min(12, visiblePeopleCount * 1.5))
+              }
               color={pointColor}
               outlineColor={outlineColor}
               outlineWidth={interacting ? 2 : 1}
@@ -120,19 +132,24 @@ export default function LocationPins({
               />
             )}
             {/* Always-on labels — only for locations with 2+ people, fades in as you zoom */}
-            {showLabels && !interacting && !isDimmed && location.visiblePeopleCount >= 2 && (
-              <LabelGraphics
-                text={location.city || location.name}
-                font={`${Math.max(11, Math.min(14, 10 + location.visiblePeopleCount))}px sans-serif`}
-                distanceDisplayCondition={new DistanceDisplayCondition(0, 5_000_000)}
-                fillColor={Color.WHITE.withAlpha(labelAlpha)}
-                outlineColor={Color.BLACK.withAlpha(labelAlpha * 0.8)}
-                outlineWidth={1.5}
-                style={LabelStyle.FILL_AND_OUTLINE}
-                verticalOrigin={VerticalOrigin.BOTTOM}
-                pixelOffset={new Cartesian2(0, -14)}
-              />
-            )}
+            {showLabels &&
+              !interacting &&
+              !isDimmed &&
+              location.visiblePeopleCount >= 2 && (
+                <LabelGraphics
+                  text={location.city || location.name}
+                  font={`${Math.max(11, Math.min(14, 10 + location.visiblePeopleCount))}px sans-serif`}
+                  distanceDisplayCondition={
+                    new DistanceDisplayCondition(0, 5_000_000)
+                  }
+                  fillColor={Color.WHITE.withAlpha(labelAlpha)}
+                  outlineColor={Color.BLACK.withAlpha(labelAlpha * 0.8)}
+                  outlineWidth={1.5}
+                  style={LabelStyle.FILL_AND_OUTLINE}
+                  verticalOrigin={VerticalOrigin.BOTTOM}
+                  pixelOffset={new Cartesian2(0, -14)}
+                />
+              )}
           </Entity>
         );
       })}

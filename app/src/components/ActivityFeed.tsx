@@ -13,11 +13,13 @@ export function EditorialCard({ entry }: { entry: FeedEntry }) {
       </div>
       <h4 className="font-serif text-lg text-shield mb-1">{entry.headline}</h4>
       {entry.body && (
-        <p className="text-gray-600 text-sm leading-relaxed mb-2">{entry.body}</p>
+        <p className="text-gray-600 text-sm leading-relaxed mb-2">
+          {entry.body}
+        </p>
       )}
       {entry.people && entry.people.length > 0 && (
         <div className="flex flex-wrap gap-1.5 mt-2">
-          {entry.people.map(slug => (
+          {entry.people.map((slug) => (
             <Link
               key={slug}
               href={`/person/${slug}`}
@@ -40,19 +42,24 @@ export function CompactEntry({ entry }: { entry: FeedEntry }) {
       <span className="text-gray-400 text-sm mt-0.5 flex-shrink-0">{icon}</span>
       <div className="min-w-0 flex-1">
         <span className="text-sm text-gray-900">{entry.headline}</span>
-        {entry.people && entry.people.length > 0 && entry.people.length <= 3 && (
-          <span className="text-sm text-gray-400 ml-1">
-            &mdash;{' '}
-            {entry.people.map((slug, i) => (
-              <span key={slug}>
-                <Link href={`/person/${slug}`} className="text-shield hover:underline">
-                  {slug.replace(/_/g, ' ')}
-                </Link>
-                {i < entry.people!.length - 1 ? ', ' : ''}
-              </span>
-            ))}
-          </span>
-        )}
+        {entry.people &&
+          entry.people.length > 0 &&
+          entry.people.length <= 3 && (
+            <span className="text-sm text-gray-400 ml-1">
+              &mdash;{' '}
+              {entry.people.map((slug, i) => (
+                <span key={slug}>
+                  <Link
+                    href={`/person/${slug}`}
+                    className="text-shield hover:underline"
+                  >
+                    {slug.replace(/_/g, ' ')}
+                  </Link>
+                  {i < entry.people!.length - 1 ? ', ' : ''}
+                </span>
+              ))}
+            </span>
+          )}
       </div>
     </div>
   );
@@ -60,10 +67,14 @@ export function CompactEntry({ entry }: { entry: FeedEntry }) {
 
 function categoryIcon(category: FeedEntry['category']) {
   switch (category) {
-    case 'person': return '\u{1F464}';
-    case 'research': return '\u{1F50D}';
-    case 'site-update': return '\u2699\uFE0F';
-    default: return '\u2022';
+    case 'person':
+      return '\u{1F464}';
+    case 'research':
+      return '\u{1F50D}';
+    case 'site-update':
+      return '\u2699\uFE0F';
+    default:
+      return '\u2022';
   }
 }
 

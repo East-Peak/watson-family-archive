@@ -1,4 +1,11 @@
-export type AppPageType = 'person' | 'globe' | 'timeline' | 'home' | 'collection' | 'tree' | 'explorer';
+export type AppPageType =
+  | 'person'
+  | 'globe'
+  | 'timeline'
+  | 'home'
+  | 'collection'
+  | 'tree'
+  | 'explorer';
 
 export interface PageContext {
   type: AppPageType;
@@ -10,7 +17,12 @@ export interface PageContext {
   sourcePathname?: string;
 }
 
-export type VisualizationAction = 'filter' | 'highlight' | 'focusOn' | 'showCollection' | 'reset';
+export type VisualizationAction =
+  | 'filter'
+  | 'highlight'
+  | 'focusOn'
+  | 'showCollection'
+  | 'reset';
 export type VisualizationTarget = 'globe' | 'tree' | 'both';
 
 export interface VisualizationCommandParams {

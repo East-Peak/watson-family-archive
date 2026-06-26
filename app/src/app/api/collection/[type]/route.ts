@@ -1,13 +1,19 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { executeQuery } from '@/lib/neo4j/client';
 import { siteConfig } from '@/lib/siteConfig';
-import { getCollection, discoverCollections, listCollections, type CollectionPerson } from '@/lib/collections';
+import {
+  getCollection,
+  discoverCollections,
+  listCollections,
+  type CollectionPerson,
+} from '@/lib/collections';
+import { MAX_ANCESTRY_DEPTH } from '@/lib/neo4j/constants';
 
 const DEFAULT_TREE_ID = siteConfig.defaultTreeId;
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: Promise<{ type: string }> }
+  { params }: { params: Promise<{ type: string }> },
 ) {
   try {
     const { type } = await params;
@@ -27,8 +33,11 @@ export async function GET(
     if (!config) {
       const all = await discoverCollections(treeId);
       return NextResponse.json(
-        { error: 'Collection not found', availableCollections: Object.keys(all) },
-        { status: 404 }
+        {
+          error: 'Collection not found',
+          availableCollections: Object.keys(all),
+        },
+        { status: 404 },
       );
     }
 
@@ -44,16 +53,16 @@ export async function GET(
       const ancestorRows = await executeQuery<{ id: string }>(
         `
         MATCH (t:Tree {id: $treeId})-[:CONTAINS]->(root:Person {id: $viewerId})
-        MATCH path = (root)-[:CHILD_OF*0..20]->(ancestor:Person)
+        MATCH path = (root)-[:CHILD_OF*0..${MAX_ANCESTRY_DEPTH}]->(ancestor:Person)
         RETURN DISTINCT ancestor.id as id
         `,
-        { treeId, viewerId }
+        { treeId, viewerId },
       );
-      viewerAncestorIds = new Set(ancestorRows.map(r => r.id));
+      viewerAncestorIds = new Set(ancestorRows.map((r) => r.id));
     }
 
     const viewerResults = viewerAncestorIds
-      ? allResults.filter(p => viewerAncestorIds!.has(p.id))
+      ? allResults.filter((p) => viewerAncestorIds!.has(p.id))
       : null;
 
     return NextResponse.json({
@@ -68,6 +77,9 @@ export async function GET(
     });
   } catch (error) {
     console.error('Error fetching collection:', error);
-    return NextResponse.json({ error: 'Failed to fetch collection' }, { status: 500 });
+    return NextResponse.json(
+      { error: 'Failed to fetch collection' },
+      { status: 500 },
+    );
   }
 }

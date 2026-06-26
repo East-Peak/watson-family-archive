@@ -65,7 +65,14 @@ export function useKeyboardNav({
         case 'ArrowDown': {
           e.preventDefault();
           setActiveIndex((prev) => {
-            const next = prev === -1 ? 0 : prev >= itemCount - 1 ? (loop ? 0 : prev) : prev + 1;
+            const next =
+              prev === -1
+                ? 0
+                : prev >= itemCount - 1
+                  ? loop
+                    ? 0
+                    : prev
+                  : prev + 1;
             activeIndexRef.current = next;
             return next;
           });
@@ -101,7 +108,7 @@ export function useKeyboardNav({
         }
       }
     },
-    [itemCount, isOpen, loop, onSelect, onEscape]
+    [itemCount, isOpen, loop, onSelect, onEscape],
   );
 
   return {

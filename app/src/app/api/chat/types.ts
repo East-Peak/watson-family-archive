@@ -10,40 +10,45 @@ export type { PageContext, SidebarMessage };
 export interface QueryPlan {
   // What kind of answer does this query need?
   answerMode:
-    | 'deterministic-fact'      // oldest ancestor, military list — use existing proven handlers
-    | 'retrieval-qa'            // open-ended question needing retrieval + LLM
-    | 'page-anchored-qa'        // question about the current page person (factual or summary)
-    | 'visualization-tool'      // "show me X on the globe/tree" — tool use
-    | 'stats'                   // "how many people are in the tree?" — aggregate query
-    | 'tool-assisted'           // query where the LLM may invoke tools (research-gap, etc.)
-    | 'clarification';          // can't determine intent — ask the user
+    | 'deterministic-fact' // oldest ancestor, military list — use existing proven handlers
+    | 'retrieval-qa' // open-ended question needing retrieval + LLM
+    | 'page-anchored-qa' // question about the current page person (factual or summary)
+    | 'visualization-tool' // "show me X on the globe/tree" — tool use
+    | 'stats' // "how many people are in the tree?" — aggregate query
+    | 'tool-assisted' // query where the LLM may invoke tools (research-gap, etc.)
+    | 'clarification'; // can't determine intent — ask the user
 
   // Who is the subject?
   anchor: {
-    type: 'viewer' | 'current-page-person' | 'named-person'
-        | 'conversation-referent' | 'visible-set' | 'none';
+    type:
+      | 'viewer'
+      | 'current-page-person'
+      | 'named-person'
+      | 'conversation-referent'
+      | 'visible-set'
+      | 'none';
     personId?: string;
     personName?: string;
-    visiblePersonIds?: string[];   // for tree-screen "who is on screen" questions
-    focusPersonId?: string;        // for tree-screen focused person
+    visiblePersonIds?: string[]; // for tree-screen "who is on screen" questions
+    focusPersonId?: string; // for tree-screen focused person
     confidence: 'resolved' | 'ambiguous' | 'unresolved';
     candidates?: Array<{ id: string; name: string; distinguisher: string }>;
   };
 
   // What subgraph should retrieval search?
   searchDomain:
-    | 'viewer-ancestors'        // CHILD_OF*0..20 from viewer
-    | 'person-ancestors'        // CHILD_OF*0..20 from a specific person
+    | 'viewer-ancestors' // CHILD_OF*0..20 from viewer
+    | 'person-ancestors' // CHILD_OF*0..20 from a specific person
     | 'person-immediate-family' // parents, spouse, children, siblings
-    | 'person-extended'         // ancestors + descendants + spouses
-    | 'page-visible-set'        // people currently visible on the tree/globe screen
-    | 'whole-tree'              // no constraint
-    | 'none';                   // no retrieval needed (stats, visualization)
+    | 'person-extended' // ancestors + descendants + spouses
+    | 'page-visible-set' // people currently visible on the tree/globe screen
+    | 'whole-tree' // no constraint
+    | 'none'; // no retrieval needed (stats, visualization)
 
   // Subject filter for cluster queries (separate from person anchors)
   subjectFilter?: {
     type: 'surname' | 'place' | 'topic';
-    value: string;               // "Gorney", "Wales", "military"
+    value: string; // "Gorney", "Wales", "military"
   };
 
   // Should the response ask for clarification before answering?
@@ -51,7 +56,7 @@ export interface QueryPlan {
   clarificationReason?: string;
 
   // Parsed query constraints (passed to retrieval)
-  constraints: string[];        // ["welsh", "military", "oldest"]
+  constraints: string[]; // ["welsh", "military", "oldest"]
 
   // Retrieval contract (when answerMode requires retrieval)
   retrievalSpec?: RetrievalSpec;
@@ -64,13 +69,25 @@ export interface QueryPlan {
 export interface RetrievalSpec {
   hardFilters: RetrievalFilter[];
   softBoosts: RetrievalFilter[];
-  sort?: { field: 'birthYear' | 'deathYear' | 'age' | 'fullName'; direction: 'asc' | 'desc' };
+  sort?: {
+    field: 'birthYear' | 'deathYear' | 'age' | 'fullName';
+    direction: 'asc' | 'desc';
+  };
   fallbackAllowed: boolean;
 }
 
 export interface RetrievalFilter {
-  type: 'surname' | 'birthPlace' | 'deathPlace' | 'birthYear' | 'deathYear'
-      | 'age' | 'occupation' | 'lifeEventType' | 'searchDomain' | 'hasRecord';
+  type:
+    | 'surname'
+    | 'birthPlace'
+    | 'deathPlace'
+    | 'birthYear'
+    | 'deathYear'
+    | 'age'
+    | 'occupation'
+    | 'lifeEventType'
+    | 'searchDomain'
+    | 'hasRecord';
   operator: 'equals' | 'contains' | 'gte' | 'lte' | 'exists';
   value: string | number | boolean;
 }
@@ -95,14 +112,14 @@ export interface RetrievedPerson {
   parents?: Array<{ id: string; name: string }>;
   spouse?: { id: string; name: string };
   children?: Array<{ id: string; name: string }>;
-  records?: RetrievedRecordSummary[];   // populated when record context is fetched
+  records?: RetrievedRecordSummary[]; // populated when record context is fetched
 }
 
 export interface RetrievedRecordSummary {
-  type: string;           // "census", "death", "military_draft"
-  collection: string;     // "1900 US Federal Census"
+  type: string; // "census", "death", "military_draft"
+  collection: string; // "1900 US Federal Census"
   year: number | null;
-  tier: string | null;    // "A", "B", "C", "D", "E"
+  tier: string | null; // "A", "B", "C", "D", "E"
   place: string | null;
   role: string | null;
   participantCount: number;
@@ -111,21 +128,21 @@ export interface RetrievedRecordSummary {
 export interface RelationshipPath {
   from: { id: string; name: string };
   to: { id: string; name: string };
-  description: string;    // "Christine's paternal great-grandfather"
+  description: string; // "Christine's paternal great-grandfather"
   hops: number;
 }
 
 export interface RetrievedContextBundle {
   people: RetrievedPerson[];
-  relationshipPaths: RelationshipPath[];  // viewer → retrieved person paths
+  relationshipPaths: RelationshipPath[]; // viewer → retrieved person paths
   queryPlan: QueryPlan;
 }
 
 export interface ValidationIssue {
   type: 'unknown-person' | 'unsupported-claim' | 'relationship-mismatch';
-  text: string;           // the problematic sentence/phrase
+  text: string; // the problematic sentence/phrase
   personId?: string;
-  detail: string;         // what was wrong
+  detail: string; // what was wrong
 }
 
 // ---------------------------------------------------------------------------
@@ -133,9 +150,9 @@ export interface ValidationIssue {
 // ---------------------------------------------------------------------------
 
 export interface GraphDictionaries {
-  places: Set<string>;       // from places.json
-  surnames: Set<string>;     // from distinct Person.surname
-  occupations: Set<string>;  // from distinct Occupation.title
+  places: Set<string>; // from places.json
+  surnames: Set<string>; // from distinct Person.surname
+  occupations: Set<string>; // from distinct Occupation.title
 }
 
 export interface QueryTerms {
@@ -152,8 +169,8 @@ export interface QueryTerms {
 // ---------------------------------------------------------------------------
 
 export interface ConversationAnchorState {
-  lastResolvedPersonIds: string[];    // person IDs from the last resolved anchor
-  lastQueryPlanSummary: string;       // "retrieval-qa about John Barrett"
-  lastContextMarker: string | null;   // "[Context: Now viewing John Barrett's profile]"
+  lastResolvedPersonIds: string[]; // person IDs from the last resolved anchor
+  lastQueryPlanSummary: string; // "retrieval-qa about John Barrett"
+  lastContextMarker: string | null; // "[Context: Now viewing John Barrett's profile]"
   turnIndex: number;
 }

@@ -2,7 +2,10 @@
 
 import Link from 'next/link';
 import BottomSheet from '@/components/mobile/BottomSheet';
-import type { MobileTreeFamilyMember, MobileTreePersonDetails } from './useMobileTreePerson';
+import type {
+  MobileTreeFamilyMember,
+  MobileTreePersonDetails,
+} from './useMobileTreePerson';
 
 function getLifespanLabel(person: MobileTreePersonDetails) {
   if (person.isLiving) {
@@ -33,7 +36,9 @@ function renderQuickHopSection(
 
   return (
     <section>
-      <h3 className="mb-2 text-xs font-semibold uppercase tracking-[0.18em] text-shield/45">{title}</h3>
+      <h3 className="mb-2 text-xs font-semibold uppercase tracking-[0.18em] text-shield/45">
+        {title}
+      </h3>
       <div className="space-y-2">
         {members.map((member) => (
           <button
@@ -44,12 +49,18 @@ function renderQuickHopSection(
             className="flex min-h-11 w-full items-center justify-between rounded-2xl border border-shield/10 bg-parchment/40 px-4 py-3 text-left transition-colors hover:bg-parchment/70"
           >
             <span>
-              <span className="block text-sm font-semibold text-slate-800">{member.name}</span>
+              <span className="block text-sm font-semibold text-slate-800">
+                {member.name}
+              </span>
               {member.birthYear && (
-                <span className="block text-xs text-slate-500">b. {member.birthYear}</span>
+                <span className="block text-xs text-slate-500">
+                  b. {member.birthYear}
+                </span>
               )}
             </span>
-            <span className="text-xs font-semibold uppercase tracking-[0.14em] text-shield/55">Inspect</span>
+            <span className="text-xs font-semibold uppercase tracking-[0.14em] text-shield/55">
+              Inspect
+            </span>
           </button>
         ))}
       </div>
@@ -87,7 +98,9 @@ export default function MobileTreePersonSheet({
       title={person?.name ?? 'Family Details'}
     >
       {loading && (
-        <div className="py-10 text-center text-sm text-slate-500">Loading family details...</div>
+        <div className="py-10 text-center text-sm text-slate-500">
+          Loading family details...
+        </div>
       )}
 
       {!loading && error && (
@@ -99,9 +112,15 @@ export default function MobileTreePersonSheet({
       {!loading && !error && person && (
         <div className="space-y-5">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-shield/45">Person</p>
-            <h2 className="mt-2 font-serif text-2xl font-semibold text-shield">{person.name}</h2>
-            <p className="mt-1 text-sm text-slate-600">{getLifespanLabel(person)}</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-shield/45">
+              Person
+            </p>
+            <h2 className="mt-2 font-serif text-2xl font-semibold text-shield">
+              {person.name}
+            </h2>
+            <p className="mt-1 text-sm text-slate-600">
+              {getLifespanLabel(person)}
+            </p>
             {person.birthPlace && (
               <p className="mt-1 text-sm text-slate-500">{person.birthPlace}</p>
             )}
@@ -132,10 +151,24 @@ export default function MobileTreePersonSheet({
           </div>
 
           <div className="space-y-4">
-            {renderQuickHopSection('Parents', [person.father, person.mother].filter((member): member is MobileTreeFamilyMember => Boolean(member)), onInspectPerson)}
+            {renderQuickHopSection(
+              'Parents',
+              [person.father, person.mother].filter(
+                (member): member is MobileTreeFamilyMember => Boolean(member),
+              ),
+              onInspectPerson,
+            )}
             {renderQuickHopSection('Spouses', person.spouses, onInspectPerson)}
-            {renderQuickHopSection('Children', person.children, onInspectPerson)}
-            {renderQuickHopSection('Siblings', person.siblings, onInspectPerson)}
+            {renderQuickHopSection(
+              'Children',
+              person.children,
+              onInspectPerson,
+            )}
+            {renderQuickHopSection(
+              'Siblings',
+              person.siblings,
+              onInspectPerson,
+            )}
           </div>
         </div>
       )}

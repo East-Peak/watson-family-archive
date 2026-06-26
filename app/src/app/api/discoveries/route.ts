@@ -23,7 +23,9 @@ export async function GET(request: NextRequest) {
     const cutoffStr = cutoff.toISOString().split('T')[0];
 
     const files = await readdir(VERIFIED_NODES_DIR);
-    const mdFiles = files.filter(f => f.endsWith('.md') && !f.startsWith('_'));
+    const mdFiles = files.filter(
+      (f) => f.endsWith('.md') && !f.startsWith('_'),
+    );
 
     const discoveries: Discovery[] = [];
 
@@ -36,23 +38,28 @@ export async function GET(request: NextRequest) {
 
       // Extract recently added sources from frontmatter sources array (preferred)
       // or fall back to body text parsing
-      const fmSources = fm.sources as Array<{ added?: string; collection?: string }> | undefined;
+      const fmSources = fm.sources as
+        | Array<{ added?: string; collection?: string }>
+        | undefined;
       let recentSourceNames: string[];
 
       if (Array.isArray(fmSources) && fmSources.length > 0) {
         recentSourceNames = fmSources
-          .filter((s: { added?: string; collection?: string }) =>
-            s.added && s.added >= cutoffStr
+          .filter(
+            (s: { added?: string; collection?: string }) =>
+              s.added && s.added >= cutoffStr,
           )
           .map((s: { collection?: string }) => s.collection || 'Unknown');
       } else {
         // Fallback: parse body text for auto-promoted sources
-        const sourceMatches = content.match(/Added: (\d{4}-\d{2}-\d{2}) \(auto-promoted from staging\)/g) || [];
-        const recentBodySources = sourceMatches
-          .filter(m => {
-            const dateMatch = m.match(/(\d{4}-\d{2}-\d{2})/);
-            return dateMatch && dateMatch[1] >= cutoffStr;
-          });
+        const sourceMatches =
+          content.match(
+            /Added: (\d{4}-\d{2}-\d{2}) \(auto-promoted from staging\)/g,
+          ) || [];
+        const recentBodySources = sourceMatches.filter((m) => {
+          const dateMatch = m.match(/(\d{4}-\d{2}-\d{2})/);
+          return dateMatch && dateMatch[1] >= cutoffStr;
+        });
 
         if (recentBodySources.length === 0) continue;
 
@@ -99,7 +106,7 @@ export async function GET(request: NextRequest) {
     console.error('Error fetching discoveries:', error);
     return NextResponse.json(
       { error: 'Failed to fetch discoveries' },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

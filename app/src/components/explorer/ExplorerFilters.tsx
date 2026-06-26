@@ -1,7 +1,11 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import type { ExplorerViewState, ExplorerFilterOptions, RecordsFilterOptions } from './types';
+import type {
+  ExplorerViewState,
+  ExplorerFilterOptions,
+  RecordsFilterOptions,
+} from './types';
 
 interface ExplorerFiltersProps {
   viewState: ExplorerViewState;
@@ -14,16 +18,31 @@ function toggleListItem(list: string[], item: string): string[] {
   return list.includes(item) ? list.filter((v) => v !== item) : [...list, item];
 }
 
-export default function ExplorerFilters({ viewState, filterOptions, onStateChange, recordsFilterOptions }: ExplorerFiltersProps) {
+export default function ExplorerFilters({
+  viewState,
+  filterOptions,
+  onStateChange,
+  recordsFilterOptions,
+}: ExplorerFiltersProps) {
   const [collapsed, setCollapsed] = useState(false);
   const [localQuery, setLocalQuery] = useState(viewState.query);
-  const [localRecordQuery, setLocalRecordQuery] = useState(viewState.recordQuery);
-  const [localCollectionSearch, setLocalCollectionSearch] = useState(viewState.collectionSearch);
-  const [localParticipantSearch, setLocalParticipantSearch] = useState(viewState.participantSearch);
+  const [localRecordQuery, setLocalRecordQuery] = useState(
+    viewState.recordQuery,
+  );
+  const [localCollectionSearch, setLocalCollectionSearch] = useState(
+    viewState.collectionSearch,
+  );
+  const [localParticipantSearch, setLocalParticipantSearch] = useState(
+    viewState.participantSearch,
+  );
   const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const recordDebounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const collectionDebounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const participantDebounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const collectionDebounceRef = useRef<ReturnType<typeof setTimeout> | null>(
+    null,
+  );
+  const participantDebounceRef = useRef<ReturnType<typeof setTimeout> | null>(
+    null,
+  );
 
   const isRecordsMode = viewState.viewMode === 'records';
 
@@ -62,19 +81,25 @@ export default function ExplorerFilters({ viewState, filterOptions, onStateChang
     }, 200);
   };
 
-  const handleCollectionSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleCollectionSearchChange = (
+    e: React.ChangeEvent<HTMLInputElement>,
+  ) => {
     const val = e.target.value;
     setLocalCollectionSearch(val);
-    if (collectionDebounceRef.current) clearTimeout(collectionDebounceRef.current);
+    if (collectionDebounceRef.current)
+      clearTimeout(collectionDebounceRef.current);
     collectionDebounceRef.current = setTimeout(() => {
       onStateChange({ collectionSearch: val });
     }, 200);
   };
 
-  const handleParticipantSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleParticipantSearchChange = (
+    e: React.ChangeEvent<HTMLInputElement>,
+  ) => {
     const val = e.target.value;
     setLocalParticipantSearch(val);
-    if (participantDebounceRef.current) clearTimeout(participantDebounceRef.current);
+    if (participantDebounceRef.current)
+      clearTimeout(participantDebounceRef.current);
     participantDebounceRef.current = setTimeout(() => {
       onStateChange({ participantSearch: val });
     }, 200);
@@ -89,8 +114,18 @@ export default function ExplorerFilters({ viewState, filterOptions, onStateChang
           title="Open filters"
         >
           {/* Filter funnel icon */}
-          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2a1 1 0 01-.293.707L13 13.414V19a1 1 0 01-.553.894l-4 2A1 1 0 017 21v-7.586L3.293 6.707A1 1 0 013 6V4z" />
+          <svg
+            className="w-4 h-4"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2a1 1 0 01-.293.707L13 13.414V19a1 1 0 01-.553.894l-4 2A1 1 0 017 21v-7.586L3.293 6.707A1 1 0 013 6V4z"
+            />
           </svg>
         </button>
       </div>
@@ -98,14 +133,16 @@ export default function ExplorerFilters({ viewState, filterOptions, onStateChang
   }
 
   const sectionClass = 'px-4 py-3 border-b border-amber-900/5';
-  const labelClass = 'text-xs text-shield/50 uppercase tracking-wider font-semibold';
+  const labelClass =
+    'text-xs text-shield/50 uppercase tracking-wider font-semibold';
   const inputClass =
     'mt-1.5 w-full bg-white/80 border border-amber-900/10 rounded-lg px-2.5 py-1.5 text-sm text-shield placeholder-shield/30 focus:outline-none focus:border-indigo-500/50 transition-colors';
   const checkboxClass =
     'rounded border-amber-900/15 bg-white/80 text-indigo-600 focus:ring-indigo-500/50 focus:ring-offset-0';
   const radioClass =
     'rounded-full border-amber-900/15 bg-white/80 text-indigo-600 focus:ring-indigo-500/50 focus:ring-offset-0';
-  const itemLabelClass = 'ml-2 text-sm text-shield/70 cursor-pointer select-none';
+  const itemLabelClass =
+    'ml-2 text-sm text-shield/70 cursor-pointer select-none';
 
   const tierOptions = ['A', 'B', 'C', 'D', 'E'];
 
@@ -114,18 +151,40 @@ export default function ExplorerFilters({ viewState, filterOptions, onStateChang
       {/* 1. Header */}
       <div className="flex items-center justify-between px-4 py-3 border-b border-amber-900/10 flex-shrink-0">
         <div className="flex items-center gap-2">
-          <svg className="w-4 h-4 text-shield/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2a1 1 0 01-.293.707L13 13.414V19a1 1 0 01-.553.894l-4 2A1 1 0 017 21v-7.586L3.293 6.707A1 1 0 013 6V4z" />
+          <svg
+            className="w-4 h-4 text-shield/40"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2a1 1 0 01-.293.707L13 13.414V19a1 1 0 01-.553.894l-4 2A1 1 0 017 21v-7.586L3.293 6.707A1 1 0 013 6V4z"
+            />
           </svg>
-          <span className="text-sm font-semibold text-shield tracking-wide">Filters</span>
+          <span className="text-sm font-semibold text-shield tracking-wide">
+            Filters
+          </span>
         </div>
         <button
           onClick={() => setCollapsed(true)}
           className="text-shield/40 hover:text-shield transition-colors"
           title="Collapse filters"
         >
-          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 19l-7-7 7-7M19 19l-7-7 7-7" />
+          <svg
+            className="w-4 h-4"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M11 19l-7-7 7-7M19 19l-7-7 7-7"
+            />
           </svg>
         </button>
       </div>
@@ -136,7 +195,9 @@ export default function ExplorerFilters({ viewState, filterOptions, onStateChang
 
           {/* 2. Search */}
           <div className={sectionClass}>
-            <label className={labelClass} htmlFor="explorer-record-search">Search</label>
+            <label className={labelClass} htmlFor="explorer-record-search">
+              Search
+            </label>
             <input
               id="explorer-record-search"
               type="text"
@@ -158,7 +219,14 @@ export default function ExplorerFilters({ viewState, filterOptions, onStateChang
                       type="checkbox"
                       className={checkboxClass}
                       checked={viewState.recordTypes.includes(type)}
-                      onChange={() => onStateChange({ recordTypes: toggleListItem(viewState.recordTypes, type) })}
+                      onChange={() =>
+                        onStateChange({
+                          recordTypes: toggleListItem(
+                            viewState.recordTypes,
+                            type,
+                          ),
+                        })
+                      }
                     />
                     <span className={itemLabelClass}>{type}</span>
                   </label>
@@ -177,7 +245,11 @@ export default function ExplorerFilters({ viewState, filterOptions, onStateChang
                     type="checkbox"
                     className={checkboxClass}
                     checked={viewState.tiers.includes(tier)}
-                    onChange={() => onStateChange({ tiers: toggleListItem(viewState.tiers, tier) })}
+                    onChange={() =>
+                      onStateChange({
+                        tiers: toggleListItem(viewState.tiers, tier),
+                      })
+                    }
                   />
                   <span className={itemLabelClass}>Tier {tier}</span>
                 </label>
@@ -193,10 +265,15 @@ export default function ExplorerFilters({ viewState, filterOptions, onStateChang
                 type="number"
                 value={viewState.yearMin || ''}
                 onChange={(e) => {
-                  const val = e.target.value === '' ? 0 : parseInt(e.target.value, 10);
+                  const val =
+                    e.target.value === '' ? 0 : parseInt(e.target.value, 10);
                   if (!isNaN(val)) onStateChange({ yearMin: val });
                 }}
-                placeholder={recordsFilterOptions?.yearRange ? String(recordsFilterOptions.yearRange[0]) : 'Min'}
+                placeholder={
+                  recordsFilterOptions?.yearRange
+                    ? String(recordsFilterOptions.yearRange[0])
+                    : 'Min'
+                }
                 className="w-full bg-white/80 border border-amber-900/10 rounded-lg px-2.5 py-1.5 text-sm text-shield placeholder-shield/30 focus:outline-none focus:border-indigo-500/50 transition-colors"
               />
               <span className="text-shield/30 text-sm">–</span>
@@ -204,23 +281,31 @@ export default function ExplorerFilters({ viewState, filterOptions, onStateChang
                 type="number"
                 value={viewState.yearMax < 9999 ? viewState.yearMax : ''}
                 onChange={(e) => {
-                  const val = e.target.value === '' ? 9999 : parseInt(e.target.value, 10);
+                  const val =
+                    e.target.value === '' ? 9999 : parseInt(e.target.value, 10);
                   if (!isNaN(val)) onStateChange({ yearMax: val });
                 }}
-                placeholder={recordsFilterOptions?.yearRange ? String(recordsFilterOptions.yearRange[1]) : 'Max'}
+                placeholder={
+                  recordsFilterOptions?.yearRange
+                    ? String(recordsFilterOptions.yearRange[1])
+                    : 'Max'
+                }
                 className="w-full bg-white/80 border border-amber-900/10 rounded-lg px-2.5 py-1.5 text-sm text-shield placeholder-shield/30 focus:outline-none focus:border-indigo-500/50 transition-colors"
               />
             </div>
             {recordsFilterOptions?.yearRange && (
               <div className="mt-1 text-xs text-shield/30">
-                Dataset: {recordsFilterOptions.yearRange[0]}–{recordsFilterOptions.yearRange[1]}
+                Dataset: {recordsFilterOptions.yearRange[0]}–
+                {recordsFilterOptions.yearRange[1]}
               </div>
             )}
           </div>
 
           {/* 6. Collection */}
           <div className={sectionClass}>
-            <label className={labelClass} htmlFor="explorer-collection-search">Collection</label>
+            <label className={labelClass} htmlFor="explorer-collection-search">
+              Collection
+            </label>
             <input
               id="explorer-collection-search"
               type="text"
@@ -233,7 +318,9 @@ export default function ExplorerFilters({ viewState, filterOptions, onStateChang
 
           {/* 7. Participant */}
           <div className={sectionClass}>
-            <label className={labelClass} htmlFor="explorer-participant-search">Participant</label>
+            <label className={labelClass} htmlFor="explorer-participant-search">
+              Participant
+            </label>
             <input
               id="explorer-participant-search"
               type="text"
@@ -250,7 +337,9 @@ export default function ExplorerFilters({ viewState, filterOptions, onStateChang
 
           {/* 2. Search */}
           <div className={sectionClass}>
-            <label className={labelClass} htmlFor="explorer-search">Search</label>
+            <label className={labelClass} htmlFor="explorer-search">
+              Search
+            </label>
             <input
               id="explorer-search"
               type="text"
@@ -272,7 +361,14 @@ export default function ExplorerFilters({ viewState, filterOptions, onStateChang
                       type="checkbox"
                       className={checkboxClass}
                       checked={viewState.centuries.includes(century)}
-                      onChange={() => onStateChange({ centuries: toggleListItem(viewState.centuries, century) })}
+                      onChange={() =>
+                        onStateChange({
+                          centuries: toggleListItem(
+                            viewState.centuries,
+                            century,
+                          ),
+                        })
+                      }
                     />
                     <span className={itemLabelClass}>{century}</span>
                   </label>
@@ -292,7 +388,14 @@ export default function ExplorerFilters({ viewState, filterOptions, onStateChang
                       type="checkbox"
                       className={checkboxClass}
                       checked={viewState.countries.includes(country)}
-                      onChange={() => onStateChange({ countries: toggleListItem(viewState.countries, country) })}
+                      onChange={() =>
+                        onStateChange({
+                          countries: toggleListItem(
+                            viewState.countries,
+                            country,
+                          ),
+                        })
+                      }
                     />
                     <span className={itemLabelClass}>{country}</span>
                   </label>
@@ -309,7 +412,9 @@ export default function ExplorerFilters({ viewState, filterOptions, onStateChang
                 { value: '', label: 'All' },
                 { value: 'M', label: 'Male' },
                 { value: 'F', label: 'Female' },
-                ...(filterOptions.sexValues.includes('') ? [{ value: 'unknown', label: 'Unknown' }] : []),
+                ...(filterOptions.sexValues.includes('')
+                  ? [{ value: 'unknown', label: 'Unknown' }]
+                  : []),
               ].map(({ value, label }) => (
                 <label key={value} className="flex items-center">
                   <input
@@ -336,9 +441,15 @@ export default function ExplorerFilters({ viewState, filterOptions, onStateChang
                       type="checkbox"
                       className={checkboxClass}
                       checked={viewState.statuses.includes(status)}
-                      onChange={() => onStateChange({ statuses: toggleListItem(viewState.statuses, status) })}
+                      onChange={() =>
+                        onStateChange({
+                          statuses: toggleListItem(viewState.statuses, status),
+                        })
+                      }
                     />
-                    <span className={itemLabelClass}>{status.replace(/_/g, ' ')}</span>
+                    <span className={itemLabelClass}>
+                      {status.replace(/_/g, ' ')}
+                    </span>
                   </label>
                 ))}
               </div>
@@ -352,7 +463,9 @@ export default function ExplorerFilters({ viewState, filterOptions, onStateChang
               <div>
                 <label className="flex items-center justify-between text-xs text-shield/50 mb-1">
                   <span>Min</span>
-                  <span className="text-indigo-600 font-medium">{viewState.completenessMin}%</span>
+                  <span className="text-indigo-600 font-medium">
+                    {viewState.completenessMin}%
+                  </span>
                 </label>
                 <input
                   type="range"
@@ -362,7 +475,10 @@ export default function ExplorerFilters({ viewState, filterOptions, onStateChang
                   value={viewState.completenessMin}
                   onChange={(e) => {
                     const val = Number(e.target.value);
-                    onStateChange({ completenessMin: val, completenessMax: Math.max(val, viewState.completenessMax) });
+                    onStateChange({
+                      completenessMin: val,
+                      completenessMax: Math.max(val, viewState.completenessMax),
+                    });
                   }}
                   className="w-full accent-indigo-500 cursor-pointer"
                 />
@@ -370,7 +486,9 @@ export default function ExplorerFilters({ viewState, filterOptions, onStateChang
               <div>
                 <label className="flex items-center justify-between text-xs text-shield/50 mb-1">
                   <span>Max</span>
-                  <span className="text-indigo-600 font-medium">{viewState.completenessMax}%</span>
+                  <span className="text-indigo-600 font-medium">
+                    {viewState.completenessMax}%
+                  </span>
                 </label>
                 <input
                   type="range"
@@ -380,7 +498,10 @@ export default function ExplorerFilters({ viewState, filterOptions, onStateChang
                   value={viewState.completenessMax}
                   onChange={(e) => {
                     const val = Number(e.target.value);
-                    onStateChange({ completenessMax: val, completenessMin: Math.min(val, viewState.completenessMin) });
+                    onStateChange({
+                      completenessMax: val,
+                      completenessMin: Math.min(val, viewState.completenessMin),
+                    });
                   }}
                   className="w-full accent-indigo-500 cursor-pointer"
                 />
@@ -437,7 +558,9 @@ export default function ExplorerFilters({ viewState, filterOptions, onStateChang
           {/* 10. Family Branch */}
           {filterOptions.surnames.length > 0 && (
             <div className={sectionClass}>
-              <label className={labelClass} htmlFor="explorer-branch">Family Branch</label>
+              <label className={labelClass} htmlFor="explorer-branch">
+                Family Branch
+              </label>
               <select
                 id="explorer-branch"
                 value={viewState.branch}
@@ -446,7 +569,9 @@ export default function ExplorerFilters({ viewState, filterOptions, onStateChang
               >
                 <option value="">All Families</option>
                 {filterOptions.surnames.map((surname) => (
-                  <option key={surname} value={surname}>{surname}</option>
+                  <option key={surname} value={surname}>
+                    {surname}
+                  </option>
                 ))}
               </select>
             </div>

@@ -20,7 +20,9 @@ interface UseViewerLinesOptions {
   minCount?: number;
 }
 
-export function useViewerLines(options?: UseViewerLinesOptions): ViewerLinesState {
+export function useViewerLines(
+  options?: UseViewerLinesOptions,
+): ViewerLinesState {
   const { me } = useMe();
   const [lines, setLines] = useState<AncestorLine[]>([]);
   const [loading, setLoading] = useState(true);
@@ -39,8 +41,8 @@ export function useViewerLines(options?: UseViewerLinesOptions): ViewerLinesStat
     setLoading(true);
 
     fetch(linesUrl)
-      .then(res => res.ok ? res.json() : null)
-      .then(data => {
+      .then((res) => (res.ok ? res.json() : null))
+      .then((data) => {
         if (!cancelled) {
           setLines(data?.lines ?? []);
         }

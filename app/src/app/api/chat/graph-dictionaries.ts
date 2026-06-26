@@ -14,7 +14,7 @@ const CACHE_TTL = 5 * 60 * 1000; // 5 minutes
 
 export async function getGraphDictionaries(): Promise<GraphDictionaries> {
   const now = Date.now();
-  if (cachedDictionaries && (now - cacheTimestamp) < CACHE_TTL) {
+  if (cachedDictionaries && now - cacheTimestamp < CACHE_TTL) {
     return cachedDictionaries;
   }
 
@@ -23,18 +23,18 @@ export async function getGraphDictionaries(): Promise<GraphDictionaries> {
       `MATCH (t:Tree {id: $treeId})-[:CONTAINS]->(p:Person)
        WHERE p.surname IS NOT NULL AND p.surname <> ''
        RETURN DISTINCT toLower(p.surname) as surname`,
-      { treeId: DEFAULT_TREE_ID }
+      { treeId: DEFAULT_TREE_ID },
     ),
     executeQuery<{ name: string }>(
       `MATCH (t:Tree {id: $treeId})-[:CONTAINS]->(p:Person)-[:BORN_IN|DIED_IN|LIVED_IN]->(pl:Place)
        WHERE pl.name IS NOT NULL
        RETURN DISTINCT toLower(pl.name) as name`,
-      { treeId: DEFAULT_TREE_ID }
+      { treeId: DEFAULT_TREE_ID },
     ),
     executeQuery<{ title: string }>(
       `MATCH (t:Tree {id: $treeId})-[:CONTAINS]->(p:Person)-[:HAD_OCCUPATION]->(o:Occupation)
        RETURN DISTINCT toLower(o.title) as title`,
-      { treeId: DEFAULT_TREE_ID }
+      { treeId: DEFAULT_TREE_ID },
     ),
   ]);
 
@@ -51,8 +51,8 @@ export async function getGraphDictionaries(): Promise<GraphDictionaries> {
 
   cachedDictionaries = {
     places,
-    surnames: new Set(surnameRows.map(r => r.surname)),
-    occupations: new Set(occupationRows.map(r => r.title)),
+    surnames: new Set(surnameRows.map((r) => r.surname)),
+    occupations: new Set(occupationRows.map((r) => r.title)),
   };
   cacheTimestamp = now;
 

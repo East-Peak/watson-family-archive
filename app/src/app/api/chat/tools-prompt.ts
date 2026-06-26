@@ -6,21 +6,30 @@ export interface ViewerIdentity {
   familyBranch?: string;
 }
 
-export function buildToolsSystemPrompt(viewer: ViewerIdentity | null, pageContext?: PageContext): string {
+export function buildToolsSystemPrompt(
+  viewer: ViewerIdentity | null,
+  pageContext?: PageContext,
+): string {
   const viewerSection = viewer
     ? `VIEWER: ${viewer.name} (id: ${viewer.id})
 When the user says "my," "me," or "I," they mean ${viewer.name}. Use get_viewer_lineage to find their ancestors when they ask about "my family."`
     : `VIEWER: Unknown`;
 
-  const pageContextSection = pageContext?.type === 'person' && pageContext.personName && pageContext.personId
-    ? `PAGE CONTEXT: Currently viewing ${pageContext.personName}'s profile (id: ${pageContext.personId}).
+  const pageContextSection =
+    pageContext?.type === 'person' &&
+    pageContext.personName &&
+    pageContext.personId
+      ? `PAGE CONTEXT: Currently viewing ${pageContext.personName}'s profile (id: ${pageContext.personId}).
 When the user says "he," "she," "this person," they mean ${pageContext.personName}.`
-    : '';
+      : '';
 
   const pageType = pageContext?.type;
-  const pageLabel = pageType === 'person' ? 'Person Profile'
-    : pageType ? pageType.charAt(0).toUpperCase() + pageType.slice(1)
-    : 'Unknown';
+  const pageLabel =
+    pageType === 'person'
+      ? 'Person Profile'
+      : pageType
+        ? pageType.charAt(0).toUpperCase() + pageType.slice(1)
+        : 'Unknown';
 
   const vizPages = new Set(['tree', 'globe']);
   const vizSection = vizPages.has(pageType ?? '')

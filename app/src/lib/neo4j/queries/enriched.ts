@@ -1,6 +1,7 @@
 import { executeQuery } from '../client';
 import type { Neo4jPerson } from '../types';
 import { siteConfig } from '@/lib/siteConfig';
+import { cacheGraphRead } from '@/lib/cache/graphCache';
 
 const DEFAULT_TREE_ID = siteConfig.defaultTreeId;
 
@@ -15,7 +16,12 @@ export interface EnrichedPerson extends Neo4jPerson {
   // NOTE: relationshipToStuart removed - use RelationshipDisplay component for dynamic calculation
   birthPlaceName?: string;
   deathPlaceName?: string;
-  occupations?: Array<{ title: string; category?: string; fromYear?: number; toYear?: number }>;
+  occupations?: Array<{
+    title: string;
+    category?: string;
+    fromYear?: number;
+    toYear?: number;
+  }>;
   religions?: Array<{ name: string; convertedYear?: number }>;
   wars?: Array<{ name: string; unit?: string; rank?: string }>;
   legalStatus?: { status: string; notes?: string };
@@ -40,9 +46,9 @@ export interface PersonSummary {
 // Get Enriched Person
 // ============================================
 
-export async function getEnrichedPerson(
+async function fetchEnrichedPerson(
   personId: string,
-  treeId: string = DEFAULT_TREE_ID
+  treeId: string = DEFAULT_TREE_ID,
 ): Promise<EnrichedPerson | null> {
   const results = await executeQuery<{
     person: Neo4jPerson;
@@ -51,7 +57,12 @@ export async function getEnrichedPerson(
     bioTier: string | null;
     birthPlace: string | null;
     deathPlace: string | null;
-    occupations: Array<{ title: string; category?: string; fromYear?: number; toYear?: number }>;
+    occupations: Array<{
+      title: string;
+      category?: string;
+      fromYear?: number;
+      toYear?: number;
+    }>;
     religions: Array<{ name: string; convertedYear?: number }>;
     wars: Array<{ name: string; unit?: string; rank?: string }>;
     legalStatus: { status: string; notes?: string } | null;
@@ -98,7 +109,7 @@ export async function getEnrichedPerson(
         dnaConfirmed: ethRel.dnaConfirmed
       } ELSE null END) as ethnicities
     `,
-    { personId, treeId }
+    { personId, treeId },
   );
 
   if (results.length === 0) return null;
@@ -111,84 +122,152 @@ export async function getEnrichedPerson(
     bioTier: row.bioTier ?? undefined,
     birthPlaceName: row.birthPlace ?? undefined,
     deathPlaceName: row.deathPlace ?? undefined,
-    occupations: row.occupations.filter((o): o is NonNullable<typeof o> => o !== null),
-    religions: row.religions.filter((r): r is NonNullable<typeof r> => r !== null),
+    occupations: row.occupations.filter(
+      (o): o is NonNullable<typeof o> => o !== null,
+    ),
+    religions: row.religions.filter(
+      (r): r is NonNullable<typeof r> => r !== null,
+    ),
     wars: row.wars.filter((w): w is NonNullable<typeof w> => w !== null),
     legalStatus: row.legalStatus ?? undefined,
-    ethnicities: row.ethnicities.filter((e): e is NonNullable<typeof e> => e !== null),
+    ethnicities: row.ethnicities.filter(
+      (e): e is NonNullable<typeof e> => e !== null,
+    ),
   };
 }
+
+/**
+ * Enriched single-person view. Cached (shared Redis graph cache), keyed by
+ * person + tree: identical for every user and rebuildable.
+ */
+export const getEnrichedPerson = cacheGraphRead(fetchEnrichedPerson, [
+  'enriched-person',
+]);
 
 // ============================================
 // List all filter options
 // ============================================
 
-export async function listOccupations(treeId: string = DEFAULT_TREE_ID): Promise<FilterResult[]> {
-  const results = await executeQuery<{ id: string; name: string; count: number }>(
+export async function listOccupations(
+  treeId: string = DEFAULT_TREE_ID,
+): Promise<FilterResult[]> {
+  const results = await executeQuery<{
+    id: string;
+    name: string;
+    count: number;
+  }>(
     `
     MATCH (t:Tree {id: $treeId})-[:CONTAINS]->(p:Person)-[:HAD_OCCUPATION]->(o:Occupation)
     RETURN o.id as id, o.title as name, count(DISTINCT p) as count
     ORDER BY count DESC
     `,
-    { treeId }
+    { treeId },
   );
-  return results.map(r => ({ id: r.id, name: r.name, count: Number(r.count) }));
+  return results.map((r) => ({
+    id: r.id,
+    name: r.name,
+    count: Number(r.count),
+  }));
 }
 
-export async function listReligions(treeId: string = DEFAULT_TREE_ID): Promise<FilterResult[]> {
-  const results = await executeQuery<{ id: string; name: string; count: number }>(
+export async function listReligions(
+  treeId: string = DEFAULT_TREE_ID,
+): Promise<FilterResult[]> {
+  const results = await executeQuery<{
+    id: string;
+    name: string;
+    count: number;
+  }>(
     `
     MATCH (t:Tree {id: $treeId})-[:CONTAINS]->(p:Person)-[:PRACTICED]->(r:Religion)
     RETURN r.id as id, r.name as name, count(DISTINCT p) as count
     ORDER BY count DESC
     `,
-    { treeId }
+    { treeId },
   );
-  return results.map(r => ({ id: r.id, name: r.name, count: Number(r.count) }));
+  return results.map((r) => ({
+    id: r.id,
+    name: r.name,
+    count: Number(r.count),
+  }));
 }
 
-export async function listWars(treeId: string = DEFAULT_TREE_ID): Promise<FilterResult[]> {
-  const results = await executeQuery<{ id: string; name: string; count: number }>(
+export async function listWars(
+  treeId: string = DEFAULT_TREE_ID,
+): Promise<FilterResult[]> {
+  const results = await executeQuery<{
+    id: string;
+    name: string;
+    count: number;
+  }>(
     `
     MATCH (t:Tree {id: $treeId})-[:CONTAINS]->(p:Person)-[:SERVED_IN]->(w:War)
     RETURN w.id as id, w.name as name, count(DISTINCT p) as count
     ORDER BY count DESC
     `,
-    { treeId }
+    { treeId },
   );
-  return results.map(r => ({ id: r.id, name: r.name, count: Number(r.count) }));
+  return results.map((r) => ({
+    id: r.id,
+    name: r.name,
+    count: Number(r.count),
+  }));
 }
 
-export async function listLegalStatuses(treeId: string = DEFAULT_TREE_ID): Promise<FilterResult[]> {
-  const results = await executeQuery<{ id: string; name: string; count: number }>(
+export async function listLegalStatuses(
+  treeId: string = DEFAULT_TREE_ID,
+): Promise<FilterResult[]> {
+  const results = await executeQuery<{
+    id: string;
+    name: string;
+    count: number;
+  }>(
     `
     MATCH (t:Tree {id: $treeId})-[:CONTAINS]->(p:Person)-[:HAD_STATUS]->(l:LegalStatus)
     RETURN l.id as id, l.status as name, count(DISTINCT p) as count
     ORDER BY count DESC
     `,
-    { treeId }
+    { treeId },
   );
-  return results.map(r => ({ id: r.id, name: r.name, count: Number(r.count) }));
+  return results.map((r) => ({
+    id: r.id,
+    name: r.name,
+    count: Number(r.count),
+  }));
 }
 
-export async function listEthnicities(treeId: string = DEFAULT_TREE_ID): Promise<FilterResult[]> {
-  const results = await executeQuery<{ id: string; name: string; count: number }>(
+export async function listEthnicities(
+  treeId: string = DEFAULT_TREE_ID,
+): Promise<FilterResult[]> {
+  const results = await executeQuery<{
+    id: string;
+    name: string;
+    count: number;
+  }>(
     `
     MATCH (t:Tree {id: $treeId})-[:CONTAINS]->(p:Person)-[:OF_ETHNICITY]->(e:Ethnicity)
     RETURN e.id as id, e.name as name, count(DISTINCT p) as count
     ORDER BY count DESC
     `,
-    { treeId }
+    { treeId },
   );
-  return results.map(r => ({ id: r.id, name: r.name, count: Number(r.count) }));
+  return results.map((r) => ({
+    id: r.id,
+    name: r.name,
+    count: Number(r.count),
+  }));
 }
 
 export async function listPlaces(
   treeId: string = DEFAULT_TREE_ID,
-  type?: string
+  type?: string,
 ): Promise<FilterResult[]> {
   const typeClause = type ? 'AND pl.type = $type' : '';
-  const results = await executeQuery<{ id: string; name: string; count: number }>(
+  const results = await executeQuery<{
+    id: string;
+    name: string;
+    count: number;
+  }>(
     `
     MATCH (t:Tree {id: $treeId})-[:CONTAINS]->(p:Person)-[:BORN_IN|DIED_IN|LIVED_IN]->(pl:Place)
     WHERE pl.id IS NOT NULL ${typeClause}
@@ -196,9 +275,13 @@ export async function listPlaces(
     ORDER BY count DESC
     LIMIT 100
     `,
-    { treeId, type }
+    { treeId, type },
   );
-  return results.map(r => ({ id: r.id, name: r.name, count: Number(r.count) }));
+  return results.map((r) => ({
+    id: r.id,
+    name: r.name,
+    count: Number(r.count),
+  }));
 }
 
 // ============================================
@@ -207,7 +290,7 @@ export async function listPlaces(
 
 export async function filterByOccupation(
   occupationId: string,
-  treeId: string = DEFAULT_TREE_ID
+  treeId: string = DEFAULT_TREE_ID,
 ): Promise<PersonSummary[]> {
   const results = await executeQuery<PersonSummary>(
     `
@@ -215,9 +298,9 @@ export async function filterByOccupation(
     RETURN p.id as id, p.fullName as fullName, p.birthYear as birthYear, p.deathYear as deathYear
     ORDER BY p.birthYear
     `,
-    { occupationId, treeId }
+    { occupationId, treeId },
   );
-  return results.map(r => ({
+  return results.map((r) => ({
     id: r.id,
     fullName: r.fullName,
     birthYear: r.birthYear ? Number(r.birthYear) : undefined,
@@ -227,7 +310,7 @@ export async function filterByOccupation(
 
 export async function filterByReligion(
   religionId: string,
-  treeId: string = DEFAULT_TREE_ID
+  treeId: string = DEFAULT_TREE_ID,
 ): Promise<PersonSummary[]> {
   const results = await executeQuery<PersonSummary>(
     `
@@ -235,9 +318,9 @@ export async function filterByReligion(
     RETURN p.id as id, p.fullName as fullName, p.birthYear as birthYear, p.deathYear as deathYear
     ORDER BY p.birthYear
     `,
-    { religionId, treeId }
+    { religionId, treeId },
   );
-  return results.map(r => ({
+  return results.map((r) => ({
     id: r.id,
     fullName: r.fullName,
     birthYear: r.birthYear ? Number(r.birthYear) : undefined,
@@ -247,7 +330,7 @@ export async function filterByReligion(
 
 export async function filterByWar(
   warId: string,
-  treeId: string = DEFAULT_TREE_ID
+  treeId: string = DEFAULT_TREE_ID,
 ): Promise<PersonSummary[]> {
   const results = await executeQuery<PersonSummary>(
     `
@@ -255,9 +338,9 @@ export async function filterByWar(
     RETURN p.id as id, p.fullName as fullName, p.birthYear as birthYear, p.deathYear as deathYear
     ORDER BY p.birthYear
     `,
-    { warId, treeId }
+    { warId, treeId },
   );
-  return results.map(r => ({
+  return results.map((r) => ({
     id: r.id,
     fullName: r.fullName,
     birthYear: r.birthYear ? Number(r.birthYear) : undefined,
@@ -267,7 +350,7 @@ export async function filterByWar(
 
 export async function filterByLegalStatus(
   statusId: string,
-  treeId: string = DEFAULT_TREE_ID
+  treeId: string = DEFAULT_TREE_ID,
 ): Promise<PersonSummary[]> {
   const results = await executeQuery<PersonSummary>(
     `
@@ -275,9 +358,9 @@ export async function filterByLegalStatus(
     RETURN p.id as id, p.fullName as fullName, p.birthYear as birthYear, p.deathYear as deathYear
     ORDER BY p.birthYear
     `,
-    { statusId, treeId }
+    { statusId, treeId },
   );
-  return results.map(r => ({
+  return results.map((r) => ({
     id: r.id,
     fullName: r.fullName,
     birthYear: r.birthYear ? Number(r.birthYear) : undefined,
@@ -287,7 +370,7 @@ export async function filterByLegalStatus(
 
 export async function filterByEthnicity(
   ethnicityId: string,
-  treeId: string = DEFAULT_TREE_ID
+  treeId: string = DEFAULT_TREE_ID,
 ): Promise<PersonSummary[]> {
   const results = await executeQuery<PersonSummary>(
     `
@@ -295,9 +378,9 @@ export async function filterByEthnicity(
     RETURN p.id as id, p.fullName as fullName, p.birthYear as birthYear, p.deathYear as deathYear
     ORDER BY p.birthYear
     `,
-    { ethnicityId, treeId }
+    { ethnicityId, treeId },
   );
-  return results.map(r => ({
+  return results.map((r) => ({
     id: r.id,
     fullName: r.fullName,
     birthYear: r.birthYear ? Number(r.birthYear) : undefined,
@@ -307,7 +390,7 @@ export async function filterByEthnicity(
 
 export async function filterByPlace(
   placeId: string,
-  treeId: string = DEFAULT_TREE_ID
+  treeId: string = DEFAULT_TREE_ID,
 ): Promise<PersonSummary[]> {
   const results = await executeQuery<PersonSummary>(
     `
@@ -315,9 +398,9 @@ export async function filterByPlace(
     RETURN DISTINCT p.id as id, p.fullName as fullName, p.birthYear as birthYear, p.deathYear as deathYear
     ORDER BY p.birthYear
     `,
-    { placeId, treeId }
+    { placeId, treeId },
   );
-  return results.map(r => ({
+  return results.map((r) => ({
     id: r.id,
     fullName: r.fullName,
     birthYear: r.birthYear ? Number(r.birthYear) : undefined,
@@ -328,7 +411,7 @@ export async function filterByPlace(
 export async function filterByTimePeriod(
   fromYear: number,
   toYear: number,
-  treeId: string = DEFAULT_TREE_ID
+  treeId: string = DEFAULT_TREE_ID,
 ): Promise<PersonSummary[]> {
   const results = await executeQuery<PersonSummary>(
     `
@@ -339,9 +422,9 @@ export async function filterByTimePeriod(
     RETURN p.id as id, p.fullName as fullName, p.birthYear as birthYear, p.deathYear as deathYear
     ORDER BY p.birthYear
     `,
-    { fromYear, toYear, treeId }
+    { fromYear, toYear, treeId },
   );
-  return results.map(r => ({
+  return results.map((r) => ({
     id: r.id,
     fullName: r.fullName,
     birthYear: r.birthYear ? Number(r.birthYear) : undefined,
@@ -365,7 +448,7 @@ export interface TimelineEvent {
 
 export async function getPersonTimeline(
   personId: string,
-  treeId: string = DEFAULT_TREE_ID
+  treeId: string = DEFAULT_TREE_ID,
 ): Promise<TimelineEvent[]> {
   const results = await executeQuery<{
     birthYear: number;
@@ -379,12 +462,37 @@ export async function getPersonTimeline(
     deathLng: number | null;
     burialLat: number | null;
     burialLng: number | null;
-    immigrations: Array<{ year: number; fromPlace: string; toPlace: string; ship: string; lat: number | null; lng: number | null }>;
+    immigrations: Array<{
+      year: number;
+      fromPlace: string;
+      toPlace: string;
+      ship: string;
+      lat: number | null;
+      lng: number | null;
+    }>;
     occupations: Array<{ title: string; fromYear: number; toYear: number }>;
-    wars: Array<{ name: string; fromYear: number; toYear: number; unit: string }>;
+    wars: Array<{
+      name: string;
+      fromYear: number;
+      toYear: number;
+      unit: string;
+    }>;
     religions: Array<{ name: string; convertedYear: number }>;
-    lifeEvents: Array<{ event: string; year: number; place: string | null; lat: number | null; lng: number | null; source: string | null }>;
-    marriages: Array<{ year: number | null; date: string | null; place: string | null; lat: number | null; lng: number | null }>;
+    lifeEvents: Array<{
+      event: string;
+      year: number;
+      place: string | null;
+      lat: number | null;
+      lng: number | null;
+      source: string | null;
+    }>;
+    marriages: Array<{
+      year: number | null;
+      date: string | null;
+      place: string | null;
+      lat: number | null;
+      lng: number | null;
+    }>;
   }>(
     `
     MATCH (t:Tree {id: $treeId})-[:CONTAINS]->(p:Person {id: $personId})
@@ -451,7 +559,7 @@ export async function getPersonTimeline(
         lng: mp.longitude
       } ELSE null END) as marriages
     `,
-    { personId, treeId }
+    { personId, treeId },
   );
 
   if (results.length === 0) return [];
@@ -472,7 +580,7 @@ export async function getPersonTimeline(
   }
 
   // Immigrations
-  for (const imm of row.immigrations.filter(i => i !== null)) {
+  for (const imm of row.immigrations.filter((i) => i !== null)) {
     events.push({
       year: imm.year ? Number(imm.year) : undefined,
       type: 'immigration',
@@ -484,7 +592,7 @@ export async function getPersonTimeline(
   }
 
   // Occupations
-  for (const occ of row.occupations.filter(o => o !== null)) {
+  for (const occ of row.occupations.filter((o) => o !== null)) {
     if (occ.fromYear) {
       events.push({
         year: Number(occ.fromYear),
@@ -495,7 +603,7 @@ export async function getPersonTimeline(
   }
 
   // Military service
-  for (const war of row.wars.filter(w => w !== null)) {
+  for (const war of row.wars.filter((w) => w !== null)) {
     if (war.fromYear) {
       events.push({
         year: Number(war.fromYear),
@@ -506,7 +614,7 @@ export async function getPersonTimeline(
   }
 
   // Religious conversion
-  for (const rel of row.religions.filter(r => r !== null)) {
+  for (const rel of row.religions.filter((r) => r !== null)) {
     if (rel.convertedYear) {
       events.push({
         year: Number(rel.convertedYear),
@@ -517,7 +625,7 @@ export async function getPersonTimeline(
   }
 
   // Life events (census records, residences, etc.)
-  for (const le of row.lifeEvents.filter(e => e !== null)) {
+  for (const le of row.lifeEvents.filter((e) => e !== null)) {
     events.push({
       year: le.year ? Number(le.year) : undefined,
       type: 'life_event',
@@ -529,7 +637,7 @@ export async function getPersonTimeline(
   }
 
   // Marriages
-  for (const mar of row.marriages.filter(m => m !== null)) {
+  for (const mar of row.marriages.filter((m) => m !== null)) {
     events.push({
       year: mar.year ? Number(mar.year) : undefined,
       date: mar.date ?? undefined,
@@ -567,15 +675,24 @@ export async function getPersonTimeline(
 
   // Sort by year, then by event type priority for same-year events
   const typePriority: Record<string, number> = {
-    birth: 0, immigration: 1, life_event: 2, occupation: 3,
-    religion: 4, marriage: 5, military: 6, death: 7, burial: 8,
+    birth: 0,
+    immigration: 1,
+    life_event: 2,
+    occupation: 3,
+    religion: 4,
+    marriage: 5,
+    military: 6,
+    death: 7,
+    burial: 8,
   };
   const effectivePriority = (e: TimelineEvent): number => {
     // Life events with "Died" or "Buried" descriptions should sort like death/burial
     if (e.type === 'life_event') {
       const desc = e.description.toLowerCase();
-      if (desc === 'died' || desc.startsWith('died ')) return typePriority.death;
-      if (desc === 'buried' || desc.startsWith('buried ')) return typePriority.burial;
+      if (desc === 'died' || desc.startsWith('died '))
+        return typePriority.death;
+      if (desc === 'buried' || desc.startsWith('buried '))
+        return typePriority.burial;
     }
     return typePriority[e.type] ?? 5;
   };
@@ -611,7 +728,9 @@ export interface GraphStats {
   };
 }
 
-export async function getGraphStats(treeId: string = DEFAULT_TREE_ID): Promise<GraphStats> {
+async function fetchGraphStats(
+  treeId: string = DEFAULT_TREE_ID,
+): Promise<GraphStats> {
   const results = await executeQuery<GraphStats>(
     `
     // Count persons - try Tree relationship first, fall back to all Person nodes
@@ -659,9 +778,15 @@ export async function getGraphStats(treeId: string = DEFAULT_TREE_ID): Promise<G
       }
     } as stats
     `,
-    { treeId }
+    { treeId },
   );
 
   const first = results[0] as unknown as { stats?: GraphStats } | undefined;
   return first?.stats ?? (results[0] as unknown as GraphStats);
 }
+
+/**
+ * Whole-tree aggregate stats. Cached (shared Redis graph cache): identical for
+ * every user and rebuildable, so safe to memoize. Used by `/api/stats`.
+ */
+export const getGraphStats = cacheGraphRead(fetchGraphStats, ['graph-stats']);

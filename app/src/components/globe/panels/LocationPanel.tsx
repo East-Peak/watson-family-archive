@@ -15,7 +15,8 @@ export default function LocationPanel({
   onPersonClick,
   onClose,
 }: LocationPanelProps) {
-  const peopleHeading = location.visiblePeopleCount === 1 ? 'Person In View' : 'People In View';
+  const peopleHeading =
+    location.visiblePeopleCount === 1 ? 'Person In View' : 'People In View';
 
   return (
     <div className="absolute top-6 left-4 right-4 bottom-28 bg-[#0f172a]/80 backdrop-blur-xl border border-white/10 rounded-3xl overflow-hidden shadow-[0_8px_32px_rgba(0,0,0,0.5)] z-20 flex flex-col sm:left-auto sm:right-6 sm:bottom-6 sm:w-[380px]">
@@ -23,7 +24,9 @@ export default function LocationPanel({
       <div className="bg-[#1e293b]/50 border-b border-white/10 p-4 z-10 shrink-0 sm:p-6">
         <div className="flex items-start justify-between">
           <div>
-            <h2 className="text-xl font-serif font-bold text-white tracking-tight sm:text-2xl">{location.name}</h2>
+            <h2 className="text-xl font-serif font-bold text-white tracking-tight sm:text-2xl">
+              {location.name}
+            </h2>
             <p className="text-blue-200/80 text-sm mt-1 font-medium">
               {location.country}
               {location.state && ` \u2022 ${location.state}`}
@@ -38,8 +41,18 @@ export default function LocationPanel({
             onClick={onClose}
             className="text-white/50 hover:text-white p-2 rounded-full hover:bg-white/10 transition-colors"
           >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            <svg
+              className="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
+              />
             </svg>
           </button>
         </div>
@@ -50,7 +63,10 @@ export default function LocationPanel({
         <h3 className="text-xs font-bold text-white/50 uppercase tracking-widest mb-4">
           {peopleHeading} ({location.visiblePeopleCount})
           {location.visiblePeopleCount < location.people.length && (
-            <span className="text-white/30 font-normal"> of {location.people.length}</span>
+            <span className="text-white/30 font-normal">
+              {' '}
+              of {location.people.length}
+            </span>
           )}
         </h3>
         <div className="space-y-3">
@@ -58,10 +74,11 @@ export default function LocationPanel({
             <button
               key={`${person.id}-${idx}`}
               onClick={() => onPersonClick(person)}
-              className={`w-full text-left p-4 rounded-2xl transition-all border ${selectedPersonId === person.id
+              className={`w-full text-left p-4 rounded-2xl transition-all border ${
+                selectedPersonId === person.id
                   ? 'bg-blue-600/20 border-blue-500/50 text-white shadow-[0_0_15px_rgba(59,130,246,0.2)]'
                   : 'bg-white/5 border-white/5 hover:bg-white/10 text-white hover:border-white/20'
-                }`}
+              }`}
             >
               <div className="font-serif font-bold text-lg">{person.name}</div>
               <div className="text-sm font-medium text-white/60 mt-1">

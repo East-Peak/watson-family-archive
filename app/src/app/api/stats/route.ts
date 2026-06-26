@@ -16,7 +16,7 @@ export async function GET(request: NextRequest) {
     console.error('Error fetching graph stats:', error);
     return NextResponse.json(
       { error: 'Failed to fetch graph stats' },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

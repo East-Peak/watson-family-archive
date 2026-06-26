@@ -16,10 +16,7 @@ import Footer from '@/components/Footer';
 import Skeleton, { PersonCardSkeleton } from '@/components/ui/Skeleton';
 import { usePageContext } from '@/hooks/usePageContext';
 import { useMe } from '@/components/MeProvider';
-import type {
-  PersonProfile,
-  TimelineEvent,
-} from '@/types/person';
+import type { PersonProfile, TimelineEvent } from '@/types/person';
 import {
   generateHook,
   formatLifespan,
@@ -28,7 +25,10 @@ import {
 import StorySection from '@/components/StorySection';
 import dynamic from 'next/dynamic';
 
-const MiniJourneyGlobe = dynamic(() => import('@/components/MiniJourneyGlobe'), { ssr: false });
+const MiniJourneyGlobe = dynamic(
+  () => import('@/components/MiniJourneyGlobe'),
+  { ssr: false },
+);
 
 const EMPTY_JOURNEY = [] as PersonProfile['journey'];
 const EMPTY_SURNAME_MATCHES = [] as PersonProfile['surnameMatches'];
@@ -77,14 +77,16 @@ export default function PersonPage() {
   const narrativeBio = profile?.narrativeBio ?? null;
   const bioTier = profile?.bioTier ?? null;
 
-
   const pageContext = useMemo(
-    () => person ? {
-      type: 'person' as const,
-      personId: person.id,
-      personName: person.fullName,
-    } : undefined,
-    [person]
+    () =>
+      person
+        ? {
+            type: 'person' as const,
+            personId: person.id,
+            personName: person.fullName,
+          }
+        : undefined,
+    [person],
   );
 
   usePageContext(pageContext);
@@ -134,45 +136,56 @@ export default function PersonPage() {
     }
 
     // Add journey stops - only within lifespan, skip if same year+place as birth/death
-    journey.forEach(j => {
+    journey.forEach((j) => {
       if (!isWithinLifespan(j.year)) return;
 
       // Skip if this duplicates the birth or death event (same year and overlapping place name)
-      const isDupOfBirthDeath = events.some(e =>
-        (e.type === 'birth' || e.type === 'death') &&
-        e.year === j.year &&
-        e.subtitle && j.place && (
-          e.subtitle.includes(j.place) || j.place.includes(e.subtitle)
-        )
+      const isDupOfBirthDeath = events.some(
+        (e) =>
+          (e.type === 'birth' || e.type === 'death') &&
+          e.year === j.year &&
+          e.subtitle &&
+          j.place &&
+          (e.subtitle.includes(j.place) || j.place.includes(e.subtitle)),
       );
       if (isDupOfBirthDeath) return;
 
       // Skip if we already have an event at this year with the same place
-      const isDupOfExisting = events.some(e =>
-        e.year === j.year && (e.title === j.place || e.subtitle === j.place)
+      const isDupOfExisting = events.some(
+        (e) =>
+          e.year === j.year && (e.title === j.place || e.subtitle === j.place),
       );
       if (isDupOfExisting) return;
 
       events.push({
         year: j.year,
         title: j.place,
-        subtitle: j.occupation ? `Working as ${j.occupation.toLowerCase()}` : undefined,
+        subtitle: j.occupation
+          ? `Working as ${j.occupation.toLowerCase()}`
+          : undefined,
         type: 'place',
         isOutsideLifespan: false,
       });
     });
 
     // Add timeline highlights - but skip birth/death/occupation since we already have those
-    biography?.timelineHighlights?.forEach(h => {
+    biography?.timelineHighlights?.forEach((h) => {
       // Skip birth/death events - we add those manually above
       const eventLower = h.event.toLowerCase();
-      if (eventLower === 'born' || eventLower === 'died' || eventLower === 'buried') return;
+      if (
+        eventLower === 'born' ||
+        eventLower === 'died' ||
+        eventLower === 'buried'
+      )
+        return;
 
       // Skip occupation events - they're already in journey
       if (eventLower.startsWith('began working as')) return;
 
       // Skip if we already have this exact year AND event
-      const isDuplicate = events.some(e => e.year === h.year && e.title === h.event);
+      const isDuplicate = events.some(
+        (e) => e.year === h.year && e.title === h.event,
+      );
       if (isDuplicate) return;
 
       const outside = !isWithinLifespan(h.year);
@@ -193,13 +206,27 @@ export default function PersonPage() {
 
     // Sort by year
     return events.sort((a, b) => (a.year || 0) - (b.year || 0));
-  }, [journey, biography, person?.birthYear, person?.deathYear, person?.birthPlace, person?.deathPlace, person?.isLiving]);
+  }, [
+    journey,
+    biography,
+    person?.birthYear,
+    person?.deathYear,
+    person?.birthPlace,
+    person?.deathPlace,
+    person?.isLiving,
+  ]);
 
   if (loading) {
     return (
       <div className="min-h-full bg-cream">
         {/* Hero skeleton */}
-        <section className="pt-8 pb-8 px-6" style={{ background: 'linear-gradient(135deg, #1e1496 0%, #2a1cb3 50%, #1e1496 100%)' }}>
+        <section
+          className="pt-8 pb-8 px-6"
+          style={{
+            background:
+              'linear-gradient(135deg, #1e1496 0%, #2a1cb3 50%, #1e1496 100%)',
+          }}
+        >
           <div className="max-w-4xl mx-auto">
             <div className="flex flex-col md:flex-row md:items-center gap-6 md:gap-8">
               <Skeleton className="w-28 h-32 md:w-32 md:h-36 rounded-2xl flex-shrink-0 mx-auto md:mx-0" />
@@ -244,13 +271,30 @@ export default function PersonPage() {
       <div className="min-h-full bg-cream">
         <div className="pt-16 flex flex-col items-center justify-center px-6">
           <div className="w-16 h-16 rounded-full bg-gray-200 flex items-center justify-center mb-4">
-            <svg className="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+            <svg
+              className="w-8 h-8 text-gray-400"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+              />
             </svg>
           </div>
-          <h1 className="text-2xl font-bold mb-2 text-gray-900">Person Not Found</h1>
-          <p className="text-gray-500 mb-6 text-center">The person you&apos;re looking for doesn&apos;t exist in the tree.</p>
-          <Link href="/" className="bg-oak text-white px-6 py-3 rounded-lg font-semibold hover:bg-oak-light transition-colors shadow-lg">
+          <h1 className="text-2xl font-bold mb-2 text-gray-900">
+            Person Not Found
+          </h1>
+          <p className="text-gray-500 mb-6 text-center">
+            The person you&apos;re looking for doesn&apos;t exist in the tree.
+          </p>
+          <Link
+            href="/"
+            className="bg-oak text-white px-6 py-3 rounded-lg font-semibold hover:bg-oak-light transition-colors shadow-lg"
+          >
             Back to Family Tree
           </Link>
         </div>
@@ -261,7 +305,7 @@ export default function PersonPage() {
   const lifespan = formatLifespan(person.birthYear, person.deathYear);
   const age = calculateAge(person.birthYear, person.deathYear);
 
-  const portrait = photos.find(p => p.isPortrait);
+  const portrait = photos.find((p) => p.isPortrait);
 
   return (
     <div
@@ -283,25 +327,56 @@ export default function PersonPage() {
         </div>
         {/* Action links */}
         <div className="max-w-4xl mx-auto mb-4 flex flex-wrap gap-2">
-          {journey.some(j => j.lat !== null && j.lng !== null) && (
+          {journey.some((j) => j.lat !== null && j.lng !== null) && (
             <Link
               href={`/globe?person=${person.id}`}
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 hover:bg-white/10 border border-white/20 text-sm text-white/70 hover:text-white transition-all"
             >
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              <svg
+                className="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={1.5}
+                  d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
               </svg>
               View on Globe
             </Link>
           )}
           {!isCurrentViewer && (
             <button
-              onClick={() => setMe({ id: person.id, name: person.fullName, familyBranch: person.surname?.toLowerCase() })}
+              onClick={() =>
+                setMe({
+                  id: person.id,
+                  name: person.fullName,
+                  familyBranch: person.surname?.toLowerCase(),
+                })
+              }
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 hover:bg-white/10 border border-white/20 text-sm text-white/70 hover:text-white transition-all"
             >
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+              <svg
+                className="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={1.5}
+                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={1.5}
+                  d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                />
               </svg>
               View tree as {person.fullName.split(' ')[0]}
             </button>
@@ -312,11 +387,31 @@ export default function PersonPage() {
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/15 hover:bg-red-500/15 border border-emerald-500/30 hover:border-red-500/30 text-sm text-emerald-300 hover:text-red-300 transition-all cursor-pointer group"
               title="Click to clear viewer"
             >
-              <svg className="w-4 h-4 group-hover:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              <svg
+                className="w-4 h-4 group-hover:hidden"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M5 13l4 4L19 7"
+                />
               </svg>
-              <svg className="w-4 h-4 hidden group-hover:inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              <svg
+                className="w-4 h-4 hidden group-hover:inline"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
               </svg>
               Viewing as {person.fullName.split(' ')[0]}
             </button>
@@ -340,7 +435,16 @@ export default function PersonPage() {
                 </div>
               ) : (
                 <div className="w-28 h-32 md:w-32 md:h-36 rounded-2xl ring-2 ring-white/20 bg-white/10 flex items-center justify-center">
-                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.4)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <svg
+                    width="48"
+                    height="48"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="rgba(255,255,255,0.4)"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
                     <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
                     <circle cx="12" cy="7" r="4" />
                   </svg>
@@ -362,7 +466,12 @@ export default function PersonPage() {
               </h1>
 
               {/* Relationship badge - prominent below name */}
-              <RelationshipDisplay personId={person.id} personName={person.fullName} personSex={person.sex} variant="hero" />
+              <RelationshipDisplay
+                personId={person.id}
+                personName={person.fullName}
+                personSex={person.sex}
+                variant="hero"
+              />
 
               <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 mb-3">
                 {lifespan && (
@@ -384,29 +493,42 @@ export default function PersonPage() {
                     <span className="text-white/70">years</span>
                   </div>
                 )}
-                {(biography?.researchedChildCount || (family?.children && family.children.length > 0)) && (
+                {(biography?.researchedChildCount ||
+                  (family?.children && family.children.length > 0)) && (
                   <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 text-sm">
                     <span className="font-semibold text-white">
                       {biography?.researchedChildCount
-                        ? (biography.researchedChildCountMin && biography.researchedChildCountMin !== biography.researchedChildCount
+                        ? biography.researchedChildCountMin &&
+                          biography.researchedChildCountMin !==
+                            biography.researchedChildCount
                           ? `${biography.researchedChildCountMin}-${biography.researchedChildCount}`
-                          : biography.researchedChildCount)
+                          : biography.researchedChildCount
                         : family?.children?.length}
                     </span>
                     <span className="text-white/70">
-                      {(biography?.researchedChildCount || family?.children?.length || 0) === 1 ? 'child' : 'children'}
+                      {(biography?.researchedChildCount ||
+                        family?.children?.length ||
+                        0) === 1
+                        ? 'child'
+                        : 'children'}
                     </span>
                   </div>
                 )}
                 {family?.siblings && family.siblings.length > 0 && (
                   <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 text-sm">
-                    <span className="font-semibold text-white">{family.siblings.length}</span>
-                    <span className="text-white/70">{family.siblings.length === 1 ? 'sibling' : 'siblings'}</span>
+                    <span className="font-semibold text-white">
+                      {family.siblings.length}
+                    </span>
+                    <span className="text-white/70">
+                      {family.siblings.length === 1 ? 'sibling' : 'siblings'}
+                    </span>
                   </div>
                 )}
                 {unifiedTimeline.length > 0 && (
                   <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 text-sm">
-                    <span className="font-semibold text-white">{unifiedTimeline.length}</span>
+                    <span className="font-semibold text-white">
+                      {unifiedTimeline.length}
+                    </span>
                     <span className="text-white/70">events</span>
                   </div>
                 )}
@@ -414,7 +536,6 @@ export default function PersonPage() {
             </div>
           </div>
         </div>
-
       </section>
 
       {/* Main Content - Two column on desktop */}
@@ -431,7 +552,6 @@ export default function PersonPage() {
               biography={biography}
             />
 
-
             {/* Timeline - Unified journey + events */}
             <PersonTimeline events={unifiedTimeline} sources={sources} />
 
@@ -441,17 +561,26 @@ export default function PersonPage() {
             />
 
             {/* Mini Journey Globe */}
-            {journey.filter(j => j.lat != null && j.lng != null).length >= 2 && (
+            {journey.filter((j) => j.lat != null && j.lng != null).length >=
+              2 && (
               <section className="bg-white/80 backdrop-blur-md rounded-2xl border border-white p-6 shadow-xl relative overflow-hidden">
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-shield/20 via-shield/40 to-shield/20"></div>
                 <div className="flex items-center justify-between mb-4 mt-2">
-                  <h2 className="text-sm font-bold text-shield uppercase tracking-widest">Journey</h2>
+                  <h2 className="text-sm font-bold text-shield uppercase tracking-widest">
+                    Journey
+                  </h2>
                 </div>
                 <MiniJourneyGlobe
                   personId={person.id}
-                  journeyStops={journey.filter(j => j.lat != null && j.lng != null).map(j => ({
-                    lat: j.lat!, lng: j.lng!, place: j.place, year: j.year, type: 'stop'
-                  }))}
+                  journeyStops={journey
+                    .filter((j) => j.lat != null && j.lng != null)
+                    .map((j) => ({
+                      lat: j.lat!,
+                      lng: j.lng!,
+                      place: j.place,
+                      year: j.year,
+                      type: 'stop',
+                    }))}
                 />
               </section>
             )}
@@ -461,38 +590,25 @@ export default function PersonPage() {
               <section>
                 <PhotoGallery
                   photos={photos}
-                  allPeople={surnameMatches.map(p => ({ id: p.id, fullName: p.fullName }))}
+                  allPeople={surnameMatches.map((p) => ({
+                    id: p.id,
+                    fullName: p.fullName,
+                  }))}
                 />
               </section>
             )}
 
             {/* Their World - Contextual Media */}
             {contextualMedia.length > 0 && (
-              <TheirWorld items={contextualMedia} personName={person.fullName} />
+              <TheirWorld
+                items={contextualMedia}
+                personName={person.fullName}
+              />
             )}
           </div>
 
           {/* Right column - Research */}
           <div className="space-y-12">
-            <section className="rounded-2xl border border-amber-200 bg-gradient-to-br from-amber-50 via-white to-parchment p-6 shadow-lg">
-              <p className="text-xs font-bold uppercase tracking-[0.18em] text-amber-800">
-                Family Memory
-              </p>
-              <h2 className="mt-3 font-serif text-2xl text-gray-900">
-                Share a memory of {person.givenName || person.fullName.split(' ')[0]}
-              </h2>
-              <p className="mt-3 text-sm leading-6 text-gray-600">
-                Stories, photos, and family details help keep this branch of the tree alive. Your submission goes straight to Stuart for review.
-              </p>
-              <Link
-                href={`/person/${person.id}/memories/compose`}
-                className="mt-5 inline-flex items-center gap-2 rounded-xl bg-amber-500 px-4 py-3 text-sm font-semibold text-white shadow-lg transition hover:bg-amber-600"
-              >
-                Share a memory
-                <span aria-hidden="true">→</span>
-              </Link>
-            </section>
-
             {/* Research & Sources */}
             <PersonResearch
               biography={biography}
@@ -510,14 +626,26 @@ export default function PersonPage() {
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-shield/20 via-shield/40 to-shield/20"></div>
 
                 <div className="flex items-center justify-between mb-4 mt-2">
-                  <h2 className="text-sm font-bold text-shield uppercase tracking-widest">Family</h2>
+                  <h2 className="text-sm font-bold text-shield uppercase tracking-widest">
+                    Family
+                  </h2>
                   <Link
                     href={`/tree?focus=${person.id}`}
                     className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-shield bg-shield/5 hover:bg-shield/10 rounded-lg transition-colors"
                   >
                     View Full Tree
-                    <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    <svg
+                      className="w-3 h-3"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                      />
                     </svg>
                   </Link>
                 </div>
@@ -530,7 +658,9 @@ export default function PersonPage() {
                     className="w-full h-full"
                   />
                 </div>
-                <p className="text-center text-xs text-gray-400 mt-2">Drag to pan, use buttons to zoom</p>
+                <p className="text-center text-xs text-gray-400 mt-2">
+                  Drag to pan, use buttons to zoom
+                </p>
               </section>
             )}
 
@@ -543,7 +673,9 @@ export default function PersonPage() {
                 </h2>
                 <div className="flex flex-wrap gap-2">
                   {surnameMatches
-                    .sort((a, b) => (a.birthYear || 9999) - (b.birthYear || 9999))
+                    .sort(
+                      (a, b) => (a.birthYear || 9999) - (b.birthYear || 9999),
+                    )
                     .slice(0, 8)
                     .map((relative) => (
                       <Link
@@ -553,7 +685,9 @@ export default function PersonPage() {
                       >
                         {relative.givenName || relative.fullName.split(' ')[0]}
                         {relative.birthYear && (
-                          <span className="opacity-60 ml-1">{relative.birthYear}</span>
+                          <span className="opacity-60 ml-1">
+                            {relative.birthYear}
+                          </span>
                         )}
                       </Link>
                     ))}

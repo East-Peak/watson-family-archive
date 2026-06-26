@@ -24,15 +24,24 @@ interface PhotoGalleryProps {
   allPeople?: Person[];
 }
 
-export default function PhotoGallery({ photos, allPeople = [] }: PhotoGalleryProps) {
+export default function PhotoGallery({
+  photos,
+  allPeople = [],
+}: PhotoGalleryProps) {
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
   // Separate photos from documents
   const visualPhotos = photos.filter((p) =>
-    ['photo', 'wedding', 'family_group', 'gravestone'].includes(p.type)
+    ['photo', 'wedding', 'family_group', 'gravestone'].includes(p.type),
   );
   const documents = photos.filter((p) =>
-    ['census', 'certificate', 'obituary', 'newspaper', 'legal_document'].includes(p.type)
+    [
+      'census',
+      'certificate',
+      'obituary',
+      'newspaper',
+      'legal_document',
+    ].includes(p.type),
   );
 
   const openLightbox = (index: number, isDocument: boolean) => {
@@ -64,7 +73,9 @@ export default function PhotoGallery({ photos, allPeople = [] }: PhotoGalleryPro
               >
                 <Image
                   src={photo.path}
-                  alt={photo.filename.replace(/\.(jpeg|jpg|png|pjpeg)$/i, '').replace(/_/g, ' ')}
+                  alt={photo.filename
+                    .replace(/\.(jpeg|jpg|png|pjpeg)$/i, '')
+                    .replace(/_/g, ' ')}
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
                   sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, 25vw"
@@ -73,10 +84,15 @@ export default function PhotoGallery({ photos, allPeople = [] }: PhotoGalleryPro
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors flex items-end">
                   <div className="p-3 opacity-0 group-hover:opacity-100 transition-opacity">
                     <p className="text-white text-sm font-medium truncate">
-                      {photo.filename.replace(/\.(jpeg|jpg|png|pjpeg)$/i, '').replace(/_/g, ' ').slice(0, 30)}
+                      {photo.filename
+                        .replace(/\.(jpeg|jpg|png|pjpeg)$/i, '')
+                        .replace(/_/g, ' ')
+                        .slice(0, 30)}
                     </p>
                     {photo.type !== 'photo' && (
-                      <span className="text-xs text-gray-300 capitalize">{photo.type.replace('_', ' ')}</span>
+                      <span className="text-xs text-gray-300 capitalize">
+                        {photo.type.replace('_', ' ')}
+                      </span>
                     )}
                   </div>
                 </div>
@@ -118,7 +134,9 @@ export default function PhotoGallery({ photos, allPeople = [] }: PhotoGalleryPro
                 ) : (
                   <Image
                     src={doc.path}
-                    alt={doc.filename.replace(/\.(jpeg|jpg|png|pjpeg|pdf)$/i, '').replace(/_/g, ' ')}
+                    alt={doc.filename
+                      .replace(/\.(jpeg|jpg|png|pjpeg|pdf)$/i, '')
+                      .replace(/_/g, ' ')}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                     sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, 25vw"
@@ -128,9 +146,14 @@ export default function PhotoGallery({ photos, allPeople = [] }: PhotoGalleryPro
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors flex items-end">
                   <div className="p-3 opacity-0 group-hover:opacity-100 transition-opacity">
                     <p className="text-white text-sm font-medium truncate">
-                      {doc.filename.replace(/\.(jpeg|jpg|png|pjpeg|pdf)$/i, '').replace(/_/g, ' ').slice(0, 30)}
+                      {doc.filename
+                        .replace(/\.(jpeg|jpg|png|pjpeg|pdf)$/i, '')
+                        .replace(/_/g, ' ')
+                        .slice(0, 30)}
                     </p>
-                    <span className="text-xs text-gray-300 capitalize">{doc.type.replace('_', ' ')}</span>
+                    <span className="text-xs text-gray-300 capitalize">
+                      {doc.type.replace('_', ' ')}
+                    </span>
                   </div>
                 </div>
                 {/* Type icon */}
@@ -153,7 +176,11 @@ export default function PhotoGallery({ photos, allPeople = [] }: PhotoGalleryPro
           photos={allMedia}
           currentIndex={lightboxIndex}
           onClose={() => setLightboxIndex(null)}
-          onPrev={() => setLightboxIndex((lightboxIndex - 1 + allMedia.length) % allMedia.length)}
+          onPrev={() =>
+            setLightboxIndex(
+              (lightboxIndex - 1 + allMedia.length) % allMedia.length,
+            )
+          }
           onNext={() => setLightboxIndex((lightboxIndex + 1) % allMedia.length)}
           allPeople={allPeople}
         />

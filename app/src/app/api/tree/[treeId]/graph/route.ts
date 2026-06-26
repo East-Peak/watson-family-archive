@@ -4,7 +4,7 @@ import { getTreeGraphData } from '@/lib/neo4j';
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: Promise<{ treeId: string }> }
+  { params }: { params: Promise<{ treeId: string }> },
 ) {
   try {
     const { treeId } = await params;
@@ -12,23 +12,30 @@ export async function GET(
 
     const rootPersonId = searchParams.get('rootPersonId') || undefined;
     const rawViewMode = searchParams.get('viewMode') || 'full';
-    const viewMode = (rawViewMode === 'ancestors' || rawViewMode === 'descendants' || rawViewMode === 'full')
-      ? rawViewMode
-      : 'full';
-    const parsedMaxGenerations = parseInt(searchParams.get('maxGenerations') || '10', 10);
+    const viewMode =
+      rawViewMode === 'ancestors' ||
+      rawViewMode === 'descendants' ||
+      rawViewMode === 'full'
+        ? rawViewMode
+        : 'full';
+    const parsedMaxGenerations = parseInt(
+      searchParams.get('maxGenerations') || '10',
+      10,
+    );
     const maxGenerations = Number.isFinite(parsedMaxGenerations)
       ? Math.min(Math.max(parsedMaxGenerations, 1), 20)
       : 10;
     const branchFilter = searchParams.get('branch') || undefined;
 
-    const effectiveViewMode = viewMode === 'full' || rootPersonId ? viewMode : 'full';
+    const effectiveViewMode =
+      viewMode === 'full' || rootPersonId ? viewMode : 'full';
 
     const graphData = await getTreeGraphData(
       treeId,
       rootPersonId,
       effectiveViewMode,
       maxGenerations,
-      branchFilter
+      branchFilter,
     );
 
     return NextResponse.json({
@@ -40,7 +47,7 @@ export async function GET(
     console.error('Error fetching tree graph:', error);
     return NextResponse.json(
       { error: 'Failed to fetch tree graph data' },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

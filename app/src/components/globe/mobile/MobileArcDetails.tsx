@@ -15,7 +15,9 @@ export default function MobileArcDetails({ arc }: MobileArcDetailsProps) {
   return (
     <div className="space-y-4" data-testid="mobile-arc-details">
       <div className="rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-3">
-        <div className="text-xs font-semibold uppercase tracking-[0.18em] text-white/45">From</div>
+        <div className="text-xs font-semibold uppercase tracking-[0.18em] text-white/45">
+          From
+        </div>
         <div className="mt-1 font-semibold text-white">{arc.from.place}</div>
         {arc.from.year && (
           <div className="mt-1 text-sm text-white/55">{arc.from.year}</div>
@@ -23,13 +25,25 @@ export default function MobileArcDetails({ arc }: MobileArcDetailsProps) {
       </div>
 
       <div className="flex justify-center text-white/35">
-        <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+        <svg
+          className="h-5 w-5"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M19 14l-7 7m0 0l-7-7m7 7V3"
+          />
         </svg>
       </div>
 
       <div className="rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-3">
-        <div className="text-xs font-semibold uppercase tracking-[0.18em] text-white/45">To</div>
+        <div className="text-xs font-semibold uppercase tracking-[0.18em] text-white/45">
+          To
+        </div>
         <div className="mt-1 font-semibold text-white">{arc.to.place}</div>
         {arc.to.year && (
           <div className="mt-1 text-sm text-white/55">{arc.to.year}</div>

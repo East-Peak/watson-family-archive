@@ -18,7 +18,10 @@ interface EventTypeFilterProps {
   onChange: (types: string[]) => void;
 }
 
-export default function EventTypeFilter({ activeTypes, onChange }: EventTypeFilterProps) {
+export default function EventTypeFilter({
+  activeTypes,
+  onChange,
+}: EventTypeFilterProps) {
   const toggle = useCallback(
     (type: string) => {
       if (activeTypes.includes(type)) {
@@ -42,7 +45,9 @@ export default function EventTypeFilter({ activeTypes, onChange }: EventTypeFilt
   return (
     <div className="space-y-2">
       <div className="flex items-center justify-between">
-        <span className="text-xs text-white/50 uppercase tracking-wider font-semibold">Event Types</span>
+        <span className="text-xs text-white/50 uppercase tracking-wider font-semibold">
+          Event Types
+        </span>
         {!allActive && (
           <button
             onClick={handleAllToggle}

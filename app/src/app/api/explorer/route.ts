@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import { executeQuery } from '@/lib/neo4j/client';
 import { siteConfig } from '@/lib/siteConfig';
+import { cacheGraphRead } from '@/lib/cache/graphCache';
 
 const DEFAULT_TREE_ID = siteConfig.defaultTreeId;
 
@@ -40,9 +41,12 @@ function countSources(sourcesJson: string | null): number {
   }
 }
 
-export async function GET() {
-  try {
-    const rows = await executeQuery<Neo4jExplorerRow>(
+// Whole-tree people list — identical for every authed user and rebuildable, so
+// the Neo4j read is cached (shared Redis graph cache). The route stays dynamic:
+// auth middleware runs per request; only the AuraDB round-trip is memoized.
+const getExplorerPeople = cacheGraphRead(
+  (treeId: string) =>
+    executeQuery<Neo4jExplorerRow>(
       `
       MATCH (t:Tree {id: $treeId})-[:CONTAINS]->(p:Person)
       OPTIONAL MATCH (p)-[:EVIDENCED_BY]->(r:Record)
@@ -56,8 +60,14 @@ export async function GET() {
       }, recordTypes
       ORDER BY p.fullName
       `,
-      { treeId: DEFAULT_TREE_ID }
-    );
+      { treeId },
+    ),
+  ['explorer-people'],
+);
+
+export async function GET() {
+  try {
+    const rows = await getExplorerPeople(DEFAULT_TREE_ID);
 
     const people = rows.map((row) => {
       const p = row.p;
@@ -73,8 +83,10 @@ export async function GET() {
         deathYear: typeof p.deathYear === 'number' ? p.deathYear : null,
         deathPlace: p.deathPlace || null,
         originCountry: p.originCountry || null,
-        completenessScore: typeof p.completenessScore === 'number' ? p.completenessScore : 0,
-        researchScore: typeof p.researchScore === 'number' ? p.researchScore : 0,
+        completenessScore:
+          typeof p.completenessScore === 'number' ? p.completenessScore : 0,
+        researchScore:
+          typeof p.researchScore === 'number' ? p.researchScore : 0,
         sourceCount: countSources(p.sources),
         validationStatus: p.validationStatus || 'pass',
         completeness_tier: p.completeness_tier || '',
@@ -95,6 +107,9 @@ export async function GET() {
     return NextResponse.json(people);
   } catch (error) {
     console.error('Explorer API error:', error);
-    return NextResponse.json({ error: 'Failed to load explorer data' }, { status: 500 });
+    return NextResponse.json(
+      { error: 'Failed to load explorer data' },
+      { status: 500 },
+    );
   }
 }

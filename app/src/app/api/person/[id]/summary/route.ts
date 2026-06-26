@@ -1,9 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server';
+import neo4j from 'neo4j-driver';
 import { getDriver } from '@/lib/neo4j';
 
 export async function GET(
   _request: NextRequest,
-  { params }: { params: Promise<{ id: string }> }
+  { params }: { params: Promise<{ id: string }> },
 ) {
   const { id } = await params;
   const driver = getDriver();
@@ -16,7 +17,7 @@ export async function GET(
               p.birthYear AS birthYear,
               p.deathYear AS deathYear,
               p.birthPlace AS birthPlace`,
-      { id }
+      { id },
     );
 
     if (result.records.length === 0) {
@@ -24,7 +25,7 @@ export async function GET(
     }
 
     const record = result.records[0];
-    const toNum = (v: unknown) => v != null && typeof (v as any).toNumber === 'function' ? (v as any).toNumber() : v ?? null;
+    const toNum = (v: unknown) => (neo4j.isInt(v) ? v.toNumber() : (v ?? null));
     return NextResponse.json({
       personId: id,
       fullName: record.get('fullName'),
@@ -34,7 +35,10 @@ export async function GET(
     });
   } catch (error) {
     console.error('Error fetching person summary:', error);
-    return NextResponse.json({ error: 'Failed to fetch person summary' }, { status: 500 });
+    return NextResponse.json(
+      { error: 'Failed to fetch person summary' },
+      { status: 500 },
+    );
   } finally {
     await session.close();
   }

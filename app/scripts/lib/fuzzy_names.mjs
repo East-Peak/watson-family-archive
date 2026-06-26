@@ -143,7 +143,8 @@ export function fuzzyNameMatch(name1, name2) {
 
   // Jaro-Winkler
   const jwScore = jaroWinkler(a, b);
-  if (jwScore > 0.85) return { match: true, method: 'jaro-winkler', score: jwScore };
+  if (jwScore > 0.85)
+    return { match: true, method: 'jaro-winkler', score: jwScore };
 
   // DM Soundex overlap
   const codesA = getDMSoundex(a);
@@ -169,7 +170,8 @@ export function fuzzyNameMatch(name1, name2) {
   for (const v of variants1) {
     if (v === b) return { match: true, method: 'slavic-variant', score: 0.9 };
     const vJw = jaroWinkler(v, b);
-    if (vJw > 0.85) return { match: true, method: 'slavic-variant+jw', score: vJw };
+    if (vJw > 0.85)
+      return { match: true, method: 'slavic-variant+jw', score: vJw };
   }
 
   return { match: false, method: 'none', score: jwScore };
@@ -200,11 +202,17 @@ export function scoreMatch(params, result, fuzzy = false) {
       if (fm.match) {
         score += 15;
         notes.push(`First name fuzzy (${fm.method}, ${fm.score.toFixed(2)})`);
-      } else if (pFirst.startsWith(rFirst.slice(0, 3)) || rFirst.startsWith(pFirst.slice(0, 3))) {
+      } else if (
+        pFirst.startsWith(rFirst.slice(0, 3)) ||
+        rFirst.startsWith(pFirst.slice(0, 3))
+      ) {
         score += 10;
         notes.push('First name partial');
       }
-    } else if (pFirst.startsWith(rFirst.slice(0, 3)) || rFirst.startsWith(pFirst.slice(0, 3))) {
+    } else if (
+      pFirst.startsWith(rFirst.slice(0, 3)) ||
+      rFirst.startsWith(pFirst.slice(0, 3))
+    ) {
       score += 10;
       notes.push('First name partial');
     }
@@ -229,16 +237,32 @@ export function scoreMatch(params, result, fuzzy = false) {
   // Birth year
   if (params.birthYear && result.birthYear) {
     const diff = Math.abs(params.birthYear - result.birthYear);
-    if (diff === 0) { score += 30; notes.push(`Birth year exact (${result.birthYear})`); }
-    else if (diff <= 2) { score += 15; notes.push(`Birth year close (${result.birthYear} vs ${params.birthYear})`); }
-    else if (diff <= 5) { score += 5; notes.push(`Birth year near (${result.birthYear} vs ${params.birthYear})`); }
+    if (diff === 0) {
+      score += 30;
+      notes.push(`Birth year exact (${result.birthYear})`);
+    } else if (diff <= 2) {
+      score += 15;
+      notes.push(
+        `Birth year close (${result.birthYear} vs ${params.birthYear})`,
+      );
+    } else if (diff <= 5) {
+      score += 5;
+      notes.push(
+        `Birth year near (${result.birthYear} vs ${params.birthYear})`,
+      );
+    }
   }
 
   // Death year
   if (params.deathYear && result.deathYear) {
     const diff = Math.abs(params.deathYear - result.deathYear);
-    if (diff === 0) { score += 15; notes.push(`Death year exact (${result.deathYear})`); }
-    else if (diff <= 2) { score += 5; notes.push('Death year close'); }
+    if (diff === 0) {
+      score += 15;
+      notes.push(`Death year exact (${result.deathYear})`);
+    } else if (diff <= 2) {
+      score += 5;
+      notes.push('Death year close');
+    }
   }
 
   // State/location bonus

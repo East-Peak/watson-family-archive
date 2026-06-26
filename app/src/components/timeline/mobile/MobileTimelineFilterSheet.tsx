@@ -59,7 +59,11 @@ export default function MobileTimelineFilterSheet({
             className="min-h-11 w-full rounded-2xl border border-shield/15 bg-white px-3 py-2 text-sm text-slate-700"
           >
             {branches.map((option) => (
-              <option key={option.value} value={option.value} disabled={option.disabled}>
+              <option
+                key={option.value}
+                value={option.value}
+                disabled={option.disabled}
+              >
                 {option.label}
               </option>
             ))}
@@ -76,7 +80,9 @@ export default function MobileTimelineFilterSheet({
 
         <section className="space-y-3">
           <div className="flex items-center justify-between gap-3">
-            <h3 className="text-xs font-semibold uppercase tracking-[0.18em] text-shield/45">Jump To Decade</h3>
+            <h3 className="text-xs font-semibold uppercase tracking-[0.18em] text-shield/45">
+              Jump To Decade
+            </h3>
             <button
               type="button"
               onClick={onReset}
@@ -101,7 +107,9 @@ export default function MobileTimelineFilterSheet({
                   }`}
                 >
                   {decade}s
-                  <span className={`ml-1 text-xs ${isActive ? 'text-white/75' : 'text-shield/55'}`}>
+                  <span
+                    className={`ml-1 text-xs ${isActive ? 'text-white/75' : 'text-shield/55'}`}
+                  >
                     ({count})
                   </span>
                 </button>

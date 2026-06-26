@@ -127,7 +127,10 @@ export function useExplorerFilteredData(
 
       // Surnames — track frequency for sorting
       if (person.surname) {
-        surnameFreq.set(person.surname, (surnameFreq.get(person.surname) ?? 0) + 1);
+        surnameFreq.set(
+          person.surname,
+          (surnameFreq.get(person.surname) ?? 0) + 1,
+        );
       }
     }
 
@@ -193,7 +196,8 @@ export function useExplorerFilteredData(
 
       // Country filter
       if (countries.length > 0) {
-        if (!person.originCountry || !countries.includes(person.originCountry)) return false;
+        if (!person.originCountry || !countries.includes(person.originCountry))
+          return false;
       }
 
       // Sex filter
@@ -207,7 +211,10 @@ export function useExplorerFilteredData(
       }
 
       // Completeness range
-      if (person.completenessScore < completenessMin || person.completenessScore > completenessMax) {
+      if (
+        person.completenessScore < completenessMin ||
+        person.completenessScore > completenessMax
+      ) {
         return false;
       }
 
@@ -245,7 +252,11 @@ export function useExplorerFilteredData(
         case 'researchScore':
           return (a.researchScore - b.researchScore) * dir;
         case 'validationStatus':
-          return compareNullableString(a.validationStatus, b.validationStatus, dir);
+          return compareNullableString(
+            a.validationStatus,
+            b.validationStatus,
+            dir,
+          );
         default:
           return 0;
       }

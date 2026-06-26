@@ -99,7 +99,7 @@ export function matchPerson(a, b, ctx) {
   //   - `prefix(value)` for numeric or composite values:
   //     `birth_year_close(2)`, `surname_fuzzy(wagner/whatson)`
   //   - `prefix:value` for slug-like singletons:
-  //     `shared_child:joan_carol_jandt`, `pid_match:GHW9-PK5`
+  //     `shared_child:jane_example_doe`, `pid_match:XXXX-XXX`
   //   - bare `prefix` for boolean signals:
   //     `surname_exact`, `surname_mismatch`, `given_exact`
   // Downstream consumers (Task 7 PID corroboration check, triage doc
@@ -108,10 +108,19 @@ export function matchPerson(a, b, ctx) {
   const birthB = extractYear(b.frontmatter?.birth?.date);
   if (birthA != null && birthB != null) {
     const gap = Math.abs(birthA - birthB);
-    if (gap === 0) { score += 15; signals.push('birth_year_exact'); }
-    else if (gap <= 1) { score += 12; signals.push(`birth_year_close(${gap})`); }
-    else if (gap <= 3) { score += 8; signals.push(`birth_year_close(${gap})`); }
-    else if (gap <= 5) { score += 4; signals.push(`birth_year_window(${gap})`); }
+    if (gap === 0) {
+      score += 15;
+      signals.push('birth_year_exact');
+    } else if (gap <= 1) {
+      score += 12;
+      signals.push(`birth_year_close(${gap})`);
+    } else if (gap <= 3) {
+      score += 8;
+      signals.push(`birth_year_close(${gap})`);
+    } else if (gap <= 5) {
+      score += 4;
+      signals.push(`birth_year_window(${gap})`);
+    }
   }
 
   // ── Relational pass (signal family 2) ────────────────────────────
@@ -121,19 +130,19 @@ export function matchPerson(a, b, ctx) {
   // (see the Bertha case in __fixtures__/person-matcher/).
   const childrenA = (a.frontmatter?.children || []).filter(Boolean);
   const childrenB = (b.frontmatter?.children || []).filter(Boolean);
-  const sharedChildren = childrenA.filter(c => childrenB.includes(c));
+  const sharedChildren = childrenA.filter((c) => childrenB.includes(c));
   for (const child of sharedChildren) {
     score += 30;
     signals.push(`shared_child:${child}`);
   }
 
   const spousesA = (a.frontmatter?.spouses || [])
-    .map(s => (typeof s === 'string' ? s : s?.slug))
+    .map((s) => (typeof s === 'string' ? s : s?.slug))
     .filter(Boolean);
   const spousesB = (b.frontmatter?.spouses || [])
-    .map(s => (typeof s === 'string' ? s : s?.slug))
+    .map((s) => (typeof s === 'string' ? s : s?.slug))
     .filter(Boolean);
-  const sharedSpouses = spousesA.filter(s => spousesB.includes(s));
+  const sharedSpouses = spousesA.filter((s) => spousesB.includes(s));
   for (const spouse of sharedSpouses) {
     score += 25;
     signals.push(`shared_spouse:${spouse}`);
@@ -221,13 +230,16 @@ export function matchPerson(a, b, ctx) {
     // Per-child scaling: cancel the shared_child boost at the same
     // rate it was applied. A couple with 5 shared children gets
     // -150, exactly canceling +150.
-    score += SEX_MISMATCH_PENALTY_PER_SHARED_CHILD * Math.max(1, sharedChildren.length);
+    score +=
+      SEX_MISMATCH_PENALTY_PER_SHARED_CHILD *
+      Math.max(1, sharedChildren.length);
     signals.push(`sex_mismatch(${sexA}/${sexB})`);
   }
 
-  const hasFuzzy = signals.some(s => s.startsWith('surname_'));
-  const hasRelational = signals.some(s =>
-    s.startsWith('shared_') || s.startsWith('discovered_from'));
+  const hasFuzzy = signals.some((s) => s.startsWith('surname_'));
+  const hasRelational = signals.some(
+    (s) => s.startsWith('shared_') || s.startsWith('discovered_from'),
+  );
   let match_type = 'surname_fuzzy';
   if (hasRelational && hasFuzzy) match_type = 'mixed';
   else if (hasRelational) match_type = 'relational';
@@ -271,21 +283,26 @@ export function scoreToConfidence(score, signals = []) {
   // birth_year_window (the +4 weak signal at 4-5 year gap) is
   // intentionally EXCLUDED from corroboration — a 5-year birth
   // discrepancy + a PID mistake should NOT auto-merge.
-  const hasPid = signals.some(s => s.startsWith('pid_match'));
-  const hasCorroborating = signals.some(s =>
-    s.startsWith('shared_child') ||
-    s.startsWith('shared_spouse') ||
-    s.startsWith('birth_year_exact') ||
-    s.startsWith('birth_year_close') ||
-    s.startsWith('birth_state'));
+  const hasPid = signals.some((s) => s.startsWith('pid_match'));
+  const hasCorroborating = signals.some(
+    (s) =>
+      s.startsWith('shared_child') ||
+      s.startsWith('shared_spouse') ||
+      s.startsWith('birth_year_exact') ||
+      s.startsWith('birth_year_close') ||
+      s.startsWith('birth_state'),
+  );
   // Sex mismatch vetoes the PID corroboration rule. A husband+wife
   // pair with a typo'd PID would otherwise be auto-promoted to HIGH
   // by the corroboration shortcut, even with the per-child dampener.
   // Sex disagreement is a strong-enough signal that we want it
   // surfaced for human review (MEDIUM at most), never auto-merged.
-  const hasSexMismatch = signals.some(s => s.startsWith('sex_mismatch'));
-  const hasParentRoleMismatch = signals.some(s => s.startsWith('parent_role_mismatch'));
-  if (hasPid && hasCorroborating && !hasSexMismatch && !hasParentRoleMismatch) return CONFIDENCE.HIGH;
+  const hasSexMismatch = signals.some((s) => s.startsWith('sex_mismatch'));
+  const hasParentRoleMismatch = signals.some((s) =>
+    s.startsWith('parent_role_mismatch'),
+  );
+  if (hasPid && hasCorroborating && !hasSexMismatch && !hasParentRoleMismatch)
+    return CONFIDENCE.HIGH;
 
   if (score >= THRESHOLDS.HIGH) return CONFIDENCE.HIGH;
   if (score >= THRESHOLDS.MEDIUM) return CONFIDENCE.MEDIUM;
@@ -337,8 +354,14 @@ function extractState(placeStr) {
   // "Grover, Marinette, Wisconsin" → "Wisconsin"
   // "Wisconsin, United States" → "Wisconsin" (country token stripped)
   // "Bourbon, Kentucky USA" → "Kentucky" (handles space-separated tail too)
-  const parts = String(placeStr).split(',').map(p => p.trim()).filter(Boolean);
-  while (parts.length > 1 && COUNTRY_TOKENS.has(parts[parts.length - 1].toLowerCase())) {
+  const parts = String(placeStr)
+    .split(',')
+    .map((p) => p.trim())
+    .filter(Boolean);
+  while (
+    parts.length > 1 &&
+    COUNTRY_TOKENS.has(parts[parts.length - 1].toLowerCase())
+  ) {
     parts.pop();
   }
   // Also handle the unsegmented "Kentucky USA" case where the country

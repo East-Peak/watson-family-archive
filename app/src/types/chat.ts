@@ -1,4 +1,7 @@
-import type { VisualizationCommand, VisualizationFeedback } from './visualization';
+import type {
+  VisualizationCommand,
+  VisualizationFeedback,
+} from './visualization';
 
 export type ChatIntent = 'question' | 'visualization' | 'mixed';
 

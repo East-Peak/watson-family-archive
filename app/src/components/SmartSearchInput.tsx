@@ -43,7 +43,10 @@ interface SmartSearchInputProps {
   onClose: () => void;
 }
 
-export default function SmartSearchInput({ isOpen, onClose }: SmartSearchInputProps) {
+export default function SmartSearchInput({
+  isOpen,
+  onClose,
+}: SmartSearchInputProps) {
   const [query, setQuery] = useState('');
   const [results, setResults] = useState<Person[]>([]);
   const [records, setRecords] = useState<SearchRecord[]>([]);
@@ -69,7 +72,7 @@ export default function SmartSearchInput({ isOpen, onClose }: SmartSearchInputPr
         }
       }
     },
-    [results, records, query, onClose, router]
+    [results, records, query, onClose, router],
   );
 
   const { activeIndex, handleKeyDown } = useKeyboardNav({
@@ -136,7 +139,9 @@ export default function SmartSearchInput({ isOpen, onClose }: SmartSearchInputPr
     searchTimeoutRef.current = setTimeout(async () => {
       setSearching(true);
       try {
-        const res = await fetch(`/api/search?q=${encodeURIComponent(query)}&limit=8`);
+        const res = await fetch(
+          `/api/search?q=${encodeURIComponent(query)}&limit=8`,
+        );
         if (res.ok) {
           const data = await res.json();
           setResults(data.results || []);
@@ -223,7 +228,11 @@ export default function SmartSearchInput({ isOpen, onClose }: SmartSearchInputPr
               role="combobox"
               aria-expanded={results.length > 0 || records.length > 0}
               aria-controls="smart-search-results-listbox"
-              aria-activedescendant={activeIndex >= 0 ? `smart-search-result-${activeIndex}` : undefined}
+              aria-activedescendant={
+                activeIndex >= 0
+                  ? `smart-search-result-${activeIndex}`
+                  : undefined
+              }
               aria-autocomplete="list"
             />
             <div className="absolute right-3 top-1/2 -translate-y-1/2 flex items-center gap-2">
@@ -242,7 +251,11 @@ export default function SmartSearchInput({ isOpen, onClose }: SmartSearchInputPr
             </div>
           ) : hasResults ? (
             // Person Results + Record Results
-            <div className="px-3 pb-3" role="listbox" id="smart-search-results-listbox">
+            <div
+              className="px-3 pb-3"
+              role="listbox"
+              id="smart-search-results-listbox"
+            >
               {results.length > 0 && (
                 <>
                   <div className="px-3 py-2 text-xs text-white/40 uppercase tracking-wide">
@@ -251,7 +264,9 @@ export default function SmartSearchInput({ isOpen, onClose }: SmartSearchInputPr
                   {results.map((person, i) => (
                     <button
                       key={person.id}
-                      ref={(el) => { resultRefs.current[i] = el; }}
+                      ref={(el) => {
+                        resultRefs.current[i] = el;
+                      }}
                       onClick={() => handleSelect(person.id)}
                       role="option"
                       id={`smart-search-result-${i}`}
@@ -269,14 +284,20 @@ export default function SmartSearchInput({ isOpen, onClose }: SmartSearchInputPr
                           {person.birthYear && person.deathYear
                             ? `${person.birthYear} – ${person.deathYear}`
                             : person.birthYear
-                            ? `b. ${person.birthYear}`
-                            : 'Dates unknown'}
+                              ? `b. ${person.birthYear}`
+                              : 'Dates unknown'}
                           {person.birthPlace && (
-                            <span className="ml-2 text-white/40">• {person.birthPlace.split(',')[0]}</span>
+                            <span className="ml-2 text-white/40">
+                              • {person.birthPlace.split(',')[0]}
+                            </span>
                           )}
-                          {person.sourceCount != null && person.sourceCount > 0 && (
-                            <span className="ml-2 text-white/40">• {person.sourceCount} source{person.sourceCount !== 1 ? 's' : ''}</span>
-                          )}
+                          {person.sourceCount != null &&
+                            person.sourceCount > 0 && (
+                              <span className="ml-2 text-white/40">
+                                • {person.sourceCount} source
+                                {person.sourceCount !== 1 ? 's' : ''}
+                              </span>
+                            )}
                         </div>
                       </div>
                       <svg
@@ -285,40 +306,63 @@ export default function SmartSearchInput({ isOpen, onClose }: SmartSearchInputPr
                         stroke="currentColor"
                         viewBox="0 0 24 24"
                       >
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M9 5l7 7-7 7"
+                        />
                       </svg>
                     </button>
                   ))}
                 </>
               )}
               {records.length > 0 && (
-                <div className={results.length > 0 ? 'border-t border-white/10 mt-2 pt-2' : ''}>
+                <div
+                  className={
+                    results.length > 0
+                      ? 'border-t border-white/10 mt-2 pt-2'
+                      : ''
+                  }
+                >
                   <div className="px-3 py-2 text-xs text-white/40 uppercase tracking-wide">
                     Records ({records.length})
                   </div>
                   {records.slice(0, 5).map((record, j) => {
                     const typeKey = record.type?.toLowerCase() ?? '';
-                    const colorClass = RECORD_TYPE_COLORS[typeKey] ?? 'bg-white/10 text-white/60 border-white/20';
+                    const colorClass =
+                      RECORD_TYPE_COLORS[typeKey] ??
+                      'bg-white/10 text-white/60 border-white/20';
                     const combinedIndex = results.length + j;
                     return (
                       <button
                         key={record.id}
-                        ref={(el) => { resultRefs.current[combinedIndex] = el; }}
+                        ref={(el) => {
+                          resultRefs.current[combinedIndex] = el;
+                        }}
                         onClick={() => {
                           onClose();
-                          router.push(`/explorer?view=records&rq=${encodeURIComponent(query)}`);
+                          router.push(
+                            `/explorer?view=records&rq=${encodeURIComponent(query)}`,
+                          );
                         }}
                         role="option"
                         id={`smart-search-result-${combinedIndex}`}
                         aria-selected={combinedIndex === activeIndex}
                         className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-white/10 transition-colors text-left group${combinedIndex === activeIndex ? ' bg-shield/10 ring-1 ring-shield/20' : ''}`}
                       >
-                        <span className={`px-2 py-0.5 text-xs font-medium border rounded capitalize flex-shrink-0 ${colorClass}`}>
+                        <span
+                          className={`px-2 py-0.5 text-xs font-medium border rounded capitalize flex-shrink-0 ${colorClass}`}
+                        >
                           {record.type}
                         </span>
                         <div className="flex-1 min-w-0">
                           <div className="text-white/80 text-sm truncate group-hover:text-white transition-colors">
-                            {record.year && <span className="text-white/50 mr-1.5">{record.year}</span>}
+                            {record.year && (
+                              <span className="text-white/50 mr-1.5">
+                                {record.year}
+                              </span>
+                            )}
                             {record.collection}
                           </div>
                           {record.matchedParticipant && (
@@ -333,7 +377,12 @@ export default function SmartSearchInput({ isOpen, onClose }: SmartSearchInputPr
                           stroke="currentColor"
                           viewBox="0 0 24 24"
                         >
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M9 5l7 7-7 7"
+                          />
                         </svg>
                       </button>
                     );
@@ -342,7 +391,9 @@ export default function SmartSearchInput({ isOpen, onClose }: SmartSearchInputPr
                     <button
                       onClick={() => {
                         onClose();
-                        router.push(`/explorer?view=records&rq=${encodeURIComponent(query)}`);
+                        router.push(
+                          `/explorer?view=records&rq=${encodeURIComponent(query)}`,
+                        );
                       }}
                       className="w-full px-3 py-2 text-xs text-white/40 hover:text-oak-light transition-colors text-left"
                     >
@@ -368,7 +419,12 @@ export default function SmartSearchInput({ isOpen, onClose }: SmartSearchInputPr
           ) : (
             // Empty state
             <div className="px-6 py-6 text-center text-white/50">
-              <p className="mb-2">Search {totalCount > 0 ? `${totalCount} family members` : 'family members'}</p>
+              <p className="mb-2">
+                Search{' '}
+                {totalCount > 0
+                  ? `${totalCount} family members`
+                  : 'family members'}
+              </p>
               <p className="text-sm text-white/40">Type a name to search</p>
             </div>
           )}
@@ -377,10 +433,17 @@ export default function SmartSearchInput({ isOpen, onClose }: SmartSearchInputPr
         {/* Footer hint */}
         <div className="px-6 py-3 border-t border-white/10 flex items-center justify-between">
           <span className="text-white/40 text-xs">
-            Press <kbd className="px-1.5 py-0.5 bg-white/10 rounded text-white/50">Esc</kbd> to close
+            Press{' '}
+            <kbd className="px-1.5 py-0.5 bg-white/10 rounded text-white/50">
+              Esc
+            </kbd>{' '}
+            to close
           </span>
           <span className="text-white/40 text-xs">
-            <kbd className="px-1.5 py-0.5 bg-white/10 rounded text-white/50">Enter</kbd> to select
+            <kbd className="px-1.5 py-0.5 bg-white/10 rounded text-white/50">
+              Enter
+            </kbd>{' '}
+            to select
           </span>
         </div>
       </div>

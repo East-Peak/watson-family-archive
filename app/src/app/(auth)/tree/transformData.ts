@@ -50,7 +50,7 @@ export interface FamilyChartDatum {
 export function transformData(apiNodes: ApiNode[]): FamilyChartDatum[] {
   // 1. Filter: only person nodes (skip family nodes)
   const personNodes = apiNodes.filter(
-    (n) => n.type === 'person' || n.type === undefined
+    (n) => n.type === 'person' || n.type === undefined,
   );
 
   // Build a lookup set so we can validate references
@@ -67,7 +67,9 @@ export function transformData(apiNodes: ApiNode[]): FamilyChartDatum[] {
   // Step 1: For each person, determine their valid parents (up to 2)
   const childToParents = new Map<string, string[]>();
   for (const node of personNodes) {
-    const validParents = (node.parentIds || []).filter((id) => personIdSet.has(id) && id !== node.id);
+    const validParents = (node.parentIds || []).filter(
+      (id) => personIdSet.has(id) && id !== node.id,
+    );
     if (validParents.length > 0) {
       childToParents.set(node.id, validParents.slice(0, 2));
     }
@@ -104,7 +106,7 @@ export function transformData(apiNodes: ApiNode[]): FamilyChartDatum[] {
 
   // Also add explicit partner relationships from the API
   for (const node of personNodes) {
-    for (const partnerId of (node.partnerIds || [])) {
+    for (const partnerId of node.partnerIds || []) {
       if (personIdSet.has(partnerId)) {
         addSpouse(node.id, partnerId);
       }
@@ -115,7 +117,8 @@ export function transformData(apiNodes: ApiNode[]): FamilyChartDatum[] {
   return personNodes.map((node) => {
     const nameParts = (node.name || '').trim().split(/\s+/);
     const firstName = nameParts.slice(0, -1).join(' ') || nameParts[0] || '';
-    const lastName = nameParts.length > 1 ? nameParts[nameParts.length - 1] : '';
+    const lastName =
+      nameParts.length > 1 ? nameParts[nameParts.length - 1] : '';
 
     const parents = childToParents.get(node.id) || [];
     const spouses = Array.from(spouseMap.get(node.id) || []);

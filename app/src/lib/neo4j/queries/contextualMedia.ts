@@ -68,16 +68,20 @@ interface ContextualMediaRecord {
 /**
  * Get contextual media items for a person from Neo4j
  */
-export async function getPersonContextualMedia(personId: string): Promise<ContextualMediaItem[]> {
+export async function getPersonContextualMedia(
+  personId: string,
+): Promise<ContextualMediaItem[]> {
   const query = `
     MATCH (p:Person {id: $personId})-[:HAS_CONTEXT]->(cm:ContextualMedia)
     RETURN cm
     ORDER BY cm.type, cm.name
   `;
 
-  const results = await executeQuery<ContextualMediaRecord>(query, { personId });
+  const results = await executeQuery<ContextualMediaRecord>(query, {
+    personId,
+  });
 
-  return results.map(row => {
+  return results.map((row) => {
     const cm = row.cm;
 
     const item: ContextualMediaItem = {
@@ -92,7 +96,11 @@ export async function getPersonContextualMedia(personId: string): Promise<Contex
     };
 
     // Reconstruct wikimedia object if any properties exist
-    if (cm.wikimediaImageUrl || cm.wikimediaThumbnailUrl || cm.wikimediaFileTitle) {
+    if (
+      cm.wikimediaImageUrl ||
+      cm.wikimediaThumbnailUrl ||
+      cm.wikimediaFileTitle
+    ) {
       item.wikimedia = {
         fileTitle: cm.wikimediaFileTitle || undefined,
         imageUrl: cm.wikimediaImageUrl || undefined,

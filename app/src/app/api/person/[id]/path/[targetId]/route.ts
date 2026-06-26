@@ -31,7 +31,7 @@ interface RelationshipCaveat {
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: Promise<{ id: string; targetId: string }> }
+  { params }: { params: Promise<{ id: string; targetId: string }> },
 ) {
   try {
     const { id, targetId } = await params;
@@ -42,14 +42,17 @@ export async function GET(
 
     if (!path) {
       return NextResponse.json(
-        { connected: false, message: 'No relationship found between these people' },
-        { status: 200 }
+        {
+          connected: false,
+          message: 'No relationship found between these people',
+        },
+        { status: 200 },
       );
     }
 
     const relationshipCaveat = await analyzeRelationshipPathCaveat(
       path.relationshipTypes,
-      path.pathNodes
+      path.pathNodes,
     );
 
     // Fall back to a conservative label when the chosen graph path uses an
@@ -71,7 +74,7 @@ export async function GET(
     console.error('Error finding relationship path:', error);
     return NextResponse.json(
       { error: 'Failed to find relationship path' },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }
@@ -84,23 +87,27 @@ function genderTerm(term: string, sex: string | null | undefined): string {
   if (!sex) return term;
 
   const genderMap: Record<string, { M: string; F: string }> = {
-    'Grandparent':        { M: 'Grandfather',      F: 'Grandmother' },
-    'Grandchild':         { M: 'Grandson',          F: 'Granddaughter' },
-    'grandparent':        { M: 'grandfather',       F: 'grandmother' },
-    'grandchild':         { M: 'grandson',          F: 'granddaughter' },
-    'Parent':             { M: 'Father',            F: 'Mother' },
-    'Child':              { M: 'Son',               F: 'Daughter' },
-    'Sibling':            { M: 'Brother',           F: 'Sister' },
-    'Aunt/Uncle':         { M: 'Uncle',             F: 'Aunt' },
-    'Niece/Nephew':       { M: 'Nephew',            F: 'Niece' },
-    'Great-aunt/uncle':   { M: 'Great-uncle',       F: 'Great-aunt' },
-    'Grand-niece/nephew': { M: 'Grand-nephew',      F: 'Grand-niece' },
-    'Spouse':             { M: 'Husband',            F: 'Wife' },
+    Grandparent: { M: 'Grandfather', F: 'Grandmother' },
+    Grandchild: { M: 'Grandson', F: 'Granddaughter' },
+    grandparent: { M: 'grandfather', F: 'grandmother' },
+    grandchild: { M: 'grandson', F: 'granddaughter' },
+    Parent: { M: 'Father', F: 'Mother' },
+    Child: { M: 'Son', F: 'Daughter' },
+    Sibling: { M: 'Brother', F: 'Sister' },
+    'Aunt/Uncle': { M: 'Uncle', F: 'Aunt' },
+    'Niece/Nephew': { M: 'Nephew', F: 'Niece' },
+    'Great-aunt/uncle': { M: 'Great-uncle', F: 'Great-aunt' },
+    'Grand-niece/nephew': { M: 'Grand-nephew', F: 'Grand-niece' },
+    Spouse: { M: 'Husband', F: 'Wife' },
   };
 
   // Exact match first
   if (genderMap[term]) {
-    return sex === 'M' ? genderMap[term].M : sex === 'F' ? genderMap[term].F : term;
+    return sex === 'M'
+      ? genderMap[term].M
+      : sex === 'F'
+        ? genderMap[term].F
+        : term;
   }
 
   // Partial match for compound terms like "Great-great-grandparent"
@@ -119,7 +126,7 @@ function genderTerm(term: string, sex: string | null | undefined): string {
  */
 function calculateRelationshipLabel(
   relationshipTypes: string[],
-  pathNodes: PathNode[]
+  pathNodes: PathNode[],
 ): string {
   // The target person is the last node in the path
   const targetSex = pathNodes[pathNodes.length - 1]?.sex || null;
@@ -143,8 +150,17 @@ function calculateRelationshipLabel(
   if (bloodTypes.length === 0) return genderTerm('Spouse', targetSex);
 
   // Standard in-law terms that people actually use
-  const standardInLawBases = ['Father', 'Mother', 'Brother', 'Sister', 'Son', 'Daughter',
-    'Parent', 'Sibling', 'Child'];
+  const standardInLawBases = [
+    'Father',
+    'Mother',
+    'Brother',
+    'Sister',
+    'Son',
+    'Daughter',
+    'Parent',
+    'Sibling',
+    'Child',
+  ];
 
   if (standardInLawBases.includes(bloodLabel)) {
     return bloodLabel + '-in-law';
@@ -154,16 +170,19 @@ function calculateRelationshipLabel(
   // use "Husband's/Wife's [Relationship]" — standard genealogy convention.
   // The spouse is the node right after the SPOUSE_OF edge.
   const spouseNode = pathNodes[spouseIdx + 1];
-  const spouseLabel = spouseNode?.sex === 'M' ? "Husband's"
-    : spouseNode?.sex === 'F' ? "Wife's"
-    : "Spouse's";
+  const spouseLabel =
+    spouseNode?.sex === 'M'
+      ? "Husband's"
+      : spouseNode?.sex === 'F'
+        ? "Wife's"
+        : "Spouse's";
 
   return `${spouseLabel} ${bloodLabel}`;
 }
 
 async function analyzeRelationshipPathCaveat(
   relationshipTypes: string[],
-  pathNodes: PathNode[]
+  pathNodes: PathNode[],
 ): Promise<RelationshipCaveat | null> {
   if (relationshipTypes.length < 2 || pathNodes.length < 3) {
     return null;
@@ -172,7 +191,10 @@ async function analyzeRelationshipPathCaveat(
   const frontmatterCache = new Map<string, Record<string, unknown> | null>();
 
   for (let i = 0; i < relationshipTypes.length - 1; i++) {
-    if (relationshipTypes[i] !== 'SIBLING_OF' || relationshipTypes[i + 1] !== 'CHILD_OF') {
+    if (
+      relationshipTypes[i] !== 'SIBLING_OF' ||
+      relationshipTypes[i + 1] !== 'CHILD_OF'
+    ) {
       continue;
     }
 
@@ -184,20 +206,25 @@ async function analyzeRelationshipPathCaveat(
       continue;
     }
 
-    const [sourceFrontmatter, siblingFrontmatter, candidateParentFrontmatter] = await Promise.all([
-      loadFrontmatter(sourceNode.id, frontmatterCache),
-      loadFrontmatter(siblingNode.id, frontmatterCache),
-      loadFrontmatter(candidateParentNode.id, frontmatterCache),
-    ]);
+    const [sourceFrontmatter, siblingFrontmatter, candidateParentFrontmatter] =
+      await Promise.all([
+        loadFrontmatter(sourceNode.id, frontmatterCache),
+        loadFrontmatter(siblingNode.id, frontmatterCache),
+        loadFrontmatter(candidateParentNode.id, frontmatterCache),
+      ]);
 
     if (!sourceFrontmatter || !siblingFrontmatter) {
       continue;
     }
 
-    const candidateRole = getParentRole(siblingFrontmatter, candidateParentNode.id);
-    const sourceParents = (sourceFrontmatter?.parents ?? null) as
-      | { father?: string | null; mother?: string | null }
-      | null;
+    const candidateRole = getParentRole(
+      siblingFrontmatter,
+      candidateParentNode.id,
+    );
+    const sourceParents = (sourceFrontmatter?.parents ?? null) as {
+      father?: string | null;
+      mother?: string | null;
+    } | null;
     const sourceRoleParentId = candidateRole
       ? sourceParents?.[candidateRole] || null
       : null;
@@ -232,20 +259,28 @@ async function analyzeRelationshipPathCaveat(
 
 async function loadFrontmatter(
   slug: string,
-  cache: Map<string, Record<string, unknown> | null>
+  cache: Map<string, Record<string, unknown> | null>,
 ): Promise<Record<string, unknown> | null> {
   if (cache.has(slug)) {
     return cache.get(slug) ?? null;
   }
 
   try {
-    const content = await readFile(join(VERIFIED_NODES_DIR, `${slug}.md`), 'utf-8');
+    const content = await readFile(
+      join(VERIFIED_NODES_DIR, `${slug}.md`),
+      'utf-8',
+    );
     const parsed = matter(content);
     const frontmatter = (parsed.data ?? {}) as Record<string, unknown>;
     cache.set(slug, frontmatter);
     return frontmatter;
   } catch (error) {
-    if (typeof error === 'object' && error && 'code' in error && error.code === 'ENOENT') {
+    if (
+      typeof error === 'object' &&
+      error &&
+      'code' in error &&
+      error.code === 'ENOENT'
+    ) {
       cache.set(slug, null);
       return null;
     }
@@ -263,7 +298,7 @@ function computeBloodLabel(types: string[]): string {
   // CHILD_OF = going UP one generation (toward ancestors)
   // PARENT_OF = going DOWN one generation (toward descendants)
   // SIBLING_OF = same generation (lateral)
-  let ups = 0;   // toward ancestors
+  let ups = 0; // toward ancestors
   let downs = 0; // toward descendants
   let laterals = 0;
 
@@ -337,6 +372,17 @@ function computeBloodLabel(types: string[]): string {
 }
 
 function getOrdinal(n: number): string {
-  const ordinals = ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'];
+  const ordinals = [
+    'First',
+    'Second',
+    'Third',
+    'Fourth',
+    'Fifth',
+    'Sixth',
+    'Seventh',
+    'Eighth',
+    'Ninth',
+    'Tenth',
+  ];
   return ordinals[n - 1] || `${n}th`;
 }

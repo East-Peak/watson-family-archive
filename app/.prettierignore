@@ -1,0 +1,25 @@
+# Build output
+.next/
+out/
+build/
+coverage/
+
+# Dependencies
+node_modules/
+
+# Vendored Cesium assets — never format
+public/cesium/
+
+# Backups and generated/build artifacts
+*.bak
+next-env.d.ts
+tsconfig.tsbuildinfo
+package-lock.json
+
+# Generated / data JSON
+data/
+src/**/*.generated.*
+
+# Whitespace-sensitive test fixtures — formatting can break parsing/golden tests
+scripts/__fixtures__/
+scripts/lib/__fixtures__/
