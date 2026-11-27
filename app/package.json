@@ -24,7 +24,7 @@
     "family-chart": "^0.9.0",
     "framer-motion": "^11.18.2",
     "gray-matter": "^4.0.3",
-    "js-yaml": "^4.2.0",
+    "js-yaml": "^4.3.2",
     "neo4j-driver": "^6.0.1",
     "next": "^16.1.1",
     "next-auth": "^5.0.0-beta.30",
